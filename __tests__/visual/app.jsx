@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom'
 
 import Home from '../../Home'
+import NoMatch from '../../NoMatch'
 
 import homeData from './data/home'
 
@@ -22,6 +23,8 @@ const App = () => (
           />
         )}
       />
+
+      <Route component={NoMatch} />
     </Switch>
   </Router>
 )
