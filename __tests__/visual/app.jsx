@@ -3,24 +3,33 @@ import { render } from 'react-dom'
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Switch,
 } from 'react-router-dom'
 
-import Home from '../../Home'
 import NoMatch from '../../NoMatch'
 
+import Home from '../../Home'
 import homeData from './data/home'
+
+import Menu from '../../Menu'
+import menuData from './data/menu'
 
 const App = () => (
   <Router>
     <Switch>
       <Route exact path="/"
         render={(props) => (
-          <Home
-            data={homeData}
-            {...props}
-          />
+          <div>
+            <Home
+              data={homeData}
+              {...props}
+            />
+            <Menu
+              data={menuData}
+              redirectTo={() => {}}
+              {...props}
+            />
+          </div>
         )}
       />
 
