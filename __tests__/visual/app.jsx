@@ -18,6 +18,8 @@ import Listing from '../../Listing'
 import listingData from './data/listing_data'
 import listingHeaders from './data/listing_headers'
 
+import AddButton from '../../AddButton'
+
 const App = () => (
   <Router>
     <Switch>
@@ -39,8 +41,10 @@ const App = () => (
               data={listingData}
               headers={listingHeaders}
               orderBy="date"
-              handleClick={() => {}}
+              handleClick={() => { }}
             />
+
+            <AddButton handleClick={() => {}} />
           </div>
         )}
       />

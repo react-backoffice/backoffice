@@ -11,4 +11,5 @@ Backoffice also uses `react-router-dom`, `,material-ui-icons` and some more OSS.
 * Home: Dashboard-like homepage
 * Menu: A menu that lists entries
 * Listing: Data-Table
+* AddButton: Button in the bottom right, that let's you link to a new page
 * NoMatch: A content-snippet for 404 pages
