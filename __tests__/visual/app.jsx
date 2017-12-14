@@ -14,6 +14,10 @@ import homeData from './data/home'
 import Menu from '../../Menu'
 import menuData from './data/menu'
 
+import Listing from '../../Listing'
+import listingData from './data/listing_data'
+import listingHeaders from './data/listing_headers'
+
 const App = () => (
   <Router>
     <Switch>
@@ -28,6 +32,14 @@ const App = () => (
               data={menuData}
               redirectTo={() => {}}
               {...props}
+            />
+
+            <Listing
+              title="Christmas Time"
+              data={listingData}
+              headers={listingHeaders}
+              orderBy="date"
+              handleClick={() => {}}
             />
           </div>
         )}
