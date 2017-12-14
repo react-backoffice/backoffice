@@ -5,6 +5,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom'
+import withStyles from 'material-ui/styles/withStyles'
 
 import NoMatch from '../../NoMatch'
 
@@ -18,33 +19,57 @@ import Listing from '../../Listing'
 import listingData from './data/listing_data'
 import listingHeaders from './data/listing_headers'
 
+import Drawer from '../../Drawer'
+
 import AddButton from '../../AddButton'
 
-const App = () => (
+const styles = (theme) => ({
+  root: {
+    display: 'flex',
+    background: '#f2f2f2',
+  },
+  content: {
+    paddingLeft: theme.spacing.unit * 4,
+    paddingRight: theme.spacing.unit * 4,
+    width: '100%',
+  }
+})
+
+let App = ({ classes }) => (
   <Router>
     <Switch>
       <Route exact path="/"
         render={(props) => (
-          <div>
-            <Home
-              data={homeData}
-              {...props}
-            />
-            <Menu
+          <div className={classes.root}>
+            <Drawer
+              open={true}
               data={menuData}
               redirectTo={() => {}}
+              handleDrawerClose={() => {}}
               {...props}
             />
 
-            <Listing
-              title="Christmas Time"
-              data={listingData}
-              headers={listingHeaders}
-              orderBy="date"
-              handleClick={() => { }}
-            />
+            <div className={classes.content}>
+              <Home
+                data={homeData}
+                {...props}
+              />
+              <Menu
+                data={menuData}
+                redirectTo={() => {}}
+                {...props}
+              />
 
-            <AddButton handleClick={() => {}} />
+              <Listing
+                title="Christmas Time"
+                data={listingData}
+                headers={listingHeaders}
+                orderBy="date"
+                handleClick={() => { }}
+              />
+            </div>
+
+            <AddButton handleClick={() => { }} />
           </div>
         )}
       />
@@ -53,6 +78,8 @@ const App = () => (
     </Switch>
   </Router>
 )
+
+App = withStyles(styles)(App)
 
 const appElement = document.querySelector('[data-react-app]')
 
