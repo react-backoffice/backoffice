@@ -7,6 +7,8 @@ import {
 } from 'react-router-dom'
 import withStyles from 'material-ui/styles/withStyles'
 
+import withRoot from '../../Base/withRoot'
+
 import NoMatch from '../../NoMatch'
 
 import Home from '../../Home'
@@ -26,11 +28,10 @@ import AddButton from '../../AddButton'
 const styles = (theme) => ({
   root: {
     display: 'flex',
-    background: '#f2f2f2',
+    height: '100vh',
   },
   content: {
-    paddingLeft: theme.spacing.unit * 4,
-    paddingRight: theme.spacing.unit * 4,
+    padding: theme.spacing.unit * 4,
     width: '100%',
   }
 })
@@ -80,6 +81,7 @@ let App = ({ classes }) => (
 )
 
 App = withStyles(styles)(App)
+App = withRoot(App)
 
 const appElement = document.querySelector('[data-react-app]')
 

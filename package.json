@@ -16,7 +16,9 @@
     "material-ui-icons": "^1.0.0-beta.17",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-router-dom": "^4.2.2"
+    "react-jss": "^8.1.0",
+    "react-router-dom": "^4.2.2",
+    "recompose": "^0.26.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
