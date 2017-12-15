@@ -51,6 +51,7 @@ let App = ({ classes }) => (
             />
 
             <div className={classes.content}>
+              <BackButton url={'/root'} />
               <Home
                 data={homeData}
                 {...props}
