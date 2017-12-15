@@ -41,6 +41,7 @@ const ListingBranch = ({
   orderBy,
   selected,
   rowsPerPage,
+  rowsPerPageOptions,
   page,
   handleSelectAllClick,
   handleRequestSort,
@@ -50,55 +51,53 @@ const ListingBranch = ({
   handleChangePage,
   handleChangeRowsPerPage,
   isSelected,
-}) => {
+}) => (
+  <Paper className={classes.root}>
+    <ListingToolbar title={title} numSelected={selected.length} />
 
-  return (
-    <Paper className={classes.root}>
-      <ListingToolbar title={title} numSelected={selected.length} />
+    <div className={classes.tableWrapper}>
+      <Table className={classes.table}>
+        <ListingHeader
+          headers={headers}
+          numSelected={selected.length}
+          order={order}
+          orderBy={orderBy}
+          onSelectAllClick={handleSelectAllClick}
+          onRequestSort={handleRequestSort}
+          rowCount={data.length}
+        />
 
-      <div className={classes.tableWrapper}>
-        <Table className={classes.table}>
-          <ListingHeader
-            headers={headers}
-            numSelected={selected.length}
-            order={order}
-            orderBy={orderBy}
-            onSelectAllClick={handleSelectAllClick}
-            onRequestSort={handleRequestSort}
-            rowCount={data.length}
-          />
-
-          <TableBody>
-            {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((n, index) => {
-              return (
-                <ListingLine
-                  key={index}
-                  data={n}
-                  headers={headers}
-                  handleCheckClick={handleCheckClick}
-                  handleClick={handleClick}
-                  handleKeyDown={handleKeyDown}
-                  isSelected={isSelected(n.id)}
-                />
-              )
-            })}
-          </TableBody>
-          <TableFooter>
-            <TableRow>
-              <TablePagination
-                count={data.length}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                onChangePage={handleChangePage}
-                onChangeRowsPerPage={handleChangeRowsPerPage}
+        <TableBody>
+          {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((n, index) => {
+            return (
+              <ListingLine
+                key={index}
+                data={n}
+                headers={headers}
+                handleCheckClick={handleCheckClick}
+                handleClick={handleClick}
+                handleKeyDown={handleKeyDown}
+                isSelected={isSelected(n.id)}
               />
-            </TableRow>
-          </TableFooter>
-        </Table>
-      </div>
-    </Paper>
-  )
-}
+            )
+          })}
+        </TableBody>
+        <TableFooter>
+          <TableRow>
+            <TablePagination
+              count={data.length}
+              rowsPerPage={rowsPerPage}
+              rowsPerPageOptions={rowsPerPageOptions}
+              page={page}
+              onChangePage={handleChangePage}
+              onChangeRowsPerPage={handleChangeRowsPerPage}
+            />
+          </TableRow>
+        </TableFooter>
+      </Table>
+    </div>
+  </Paper>
+)
 
 ListingBranch.propTypes = {
   title: PropTypes.string.isRequired,
@@ -108,6 +107,7 @@ ListingBranch.propTypes = {
   orderBy: PropTypes.string.isRequired,
   selected: PropTypes.arrayOf(PropTypes.string),
   rowsPerPage: PropTypes.number.isRequired,
+  rowsPerPageOptions: PropTypes.arrayOf(PropTypes.number),
   page: PropTypes.number.isRequired,
   handleSelectAllClick: PropTypes.func.isRequired,
   handleRequestSort: PropTypes.func.isRequired,
@@ -119,7 +119,7 @@ ListingBranch.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-ListingBranch.defaultData = {
+ListingBranch.defaultProps = {
   title: '',
   data: [],
   headers: [],
@@ -127,6 +127,7 @@ ListingBranch.defaultData = {
   orderBy: '',
   selected: [],
   rowsPerPage: 10,
+  rowsPerPageOptions: [10, 25, 50, 100],
   page: 0,
   handleSelectAllClick: () => {},
   handleRequestSort: () => {},
