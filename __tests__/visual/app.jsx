@@ -21,9 +21,13 @@ import Listing from '../../Listing'
 import listingData from './data/listing_data'
 import listingHeaders from './data/listing_headers'
 
+import Form from '../../Form'
+import formData from './data/form'
+
 import Drawer from '../../Drawer'
 import AddButton from '../../AddButton'
 import BackButton from '../../BackButton'
+
 
 const styles = (theme) => ({
   root: {
@@ -68,6 +72,14 @@ let App = ({ classes }) => (
                 headers={listingHeaders}
                 orderBy="date"
                 handleClick={() => { }}
+              />
+
+
+              <Form
+                data={{}}
+                form={formData}
+                onSubmit={() => { }}
+                submitText="Save the form"
               />
             </div>
 
