@@ -24,6 +24,7 @@ import listingHeaders from './data/listing_headers'
 import Form from '../../Form'
 import formData from './data/form'
 
+import Header from '../../Header'
 import Drawer from '../../Drawer'
 import AddButton from '../../AddButton'
 import BackButton from '../../BackButton'
@@ -45,45 +46,53 @@ let App = ({ classes }) => (
     <Switch>
       <Route exact path="/"
         render={(props) => (
-          <div className={classes.root}>
-            <Drawer
+          <div>
+            <Header
+              title="This is Backoffice"
+              handleDrawerOpen={() => { }}
+              onClick={() => { }}
               open={true}
-              data={menuData}
-              redirectTo={() => {}}
-              handleDrawerClose={() => {}}
-              {...props}
             />
 
-            <div className={classes.content}>
-              <BackButton url={'/root'} />
-              <Home
-                data={homeData}
-                {...props}
-              />
-              <Menu
+            <div className={classes.root}>
+              <Drawer
+                open={true}
                 data={menuData}
                 redirectTo={() => {}}
+                handleDrawerClose={() => {}}
                 {...props}
               />
 
-              <Listing
-                title="Christmas Time"
-                data={listingData}
-                headers={listingHeaders}
-                orderBy="date"
-                handleClick={() => { }}
-              />
+              <div className={classes.content}>
+                <BackButton url={'/root'} />
+                <Home
+                  data={homeData}
+                  {...props}
+                />
+                <Menu
+                  data={menuData}
+                  redirectTo={() => {}}
+                  {...props}
+                />
 
+                <Listing
+                  title="Christmas Time"
+                  data={listingData}
+                  headers={listingHeaders}
+                  orderBy="date"
+                  handleClick={() => { }}
+                />
 
-              <Form
-                data={{}}
-                form={formData}
-                onSubmit={() => { }}
-                submitText="Save the form"
-              />
+                <Form
+                  data={{}}
+                  form={formData}
+                  onSubmit={() => { }}
+                  submitText="Save the form"
+                />
+              </div>
+
+              <AddButton handleClick={() => { }} />
             </div>
-
-            <AddButton handleClick={() => { }} />
           </div>
         )}
       />
