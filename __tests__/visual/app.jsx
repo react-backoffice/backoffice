@@ -29,16 +29,35 @@ import Drawer from '../../Drawer'
 import AddButton from '../../AddButton'
 import BackButton from '../../BackButton'
 
+const drawerWidth = 280
 
 const styles = (theme) => ({
   root: {
+    position: 'relative',
     display: 'flex',
-    height: '100vh',
-  },
-  content: {
-    padding: theme.spacing.unit * 4,
     width: '100%',
-  }
+    height: '100%',
+    minHeight: '100vh',
+  },
+
+  content: {
+    width: '100%',
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.default,
+    padding: theme.spacing.unit * 3,
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    height: 'calc(100% - 56px)',
+    marginTop: 56,
+    [theme.breakpoints.up('sm')]: {
+      content: {
+        height: 'calc(100% - 64px)',
+        marginTop: 64,
+      },
+    },
+  },
 })
 
 let App = ({ classes }) => (
