@@ -15,7 +15,6 @@ const styles = (theme) => ({
     width: '100%',
   },
   appBar: {
-    position: 'absolute',
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -50,6 +49,7 @@ const styles = (theme) => ({
 const Header = ({
   title,
   open,
+  fixed,
   handleDrawerOpen,
   onClick,
   children,
@@ -60,6 +60,7 @@ const Header = ({
       className={classNames(classes.appBar, {
         [classes.appBarShift]: open,
       })}
+      position={fixed ? 'fixed' : 'static'}
     >
       <Toolbar>
         <IconButton
@@ -88,9 +89,10 @@ const Header = ({
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,
-  classes: PropTypes.object.isRequired,
+  fixed: PropTypes.bool.isRequired,
   handleDrawerOpen: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired,
+  classes: PropTypes.object.isRequired,
 }
 
 export default withStyles(styles)(Header)

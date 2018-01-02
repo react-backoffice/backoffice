@@ -50,6 +50,7 @@ const BaseBranch = ({
   open,
   title,
   menuData,
+  fixedHeader,
   onClick,
   handleDrawerOpen,
   handleDrawerClose,
@@ -64,6 +65,7 @@ const BaseBranch = ({
       handleDrawerOpen={handleDrawerOpen}
       onClick={onClick}
       open={open}
+      fixed={fixedHeader}
     >
       {rightContent ? rightContent : null}
     </Header>
