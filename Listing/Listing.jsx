@@ -160,6 +160,7 @@ const Listing = withListing(ListingBranch)
 
 Listing.propTypes = {
   orderBy: PropTypes.string.isRequired,
+  hasLoader: PropTypes.bool,
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   headers: PropTypes.arrayOf(PropTypes.object).isRequired,
 }

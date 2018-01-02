@@ -28,6 +28,8 @@ import Drawer from '../../Drawer'
 import AddButton from '../../AddButton'
 import BackButton from '../../BackButton'
 
+const noop = () => {}
+
 let App = () => (
   <Router>
     <Switch>
@@ -44,7 +46,7 @@ let App = () => (
             />
             <Menu
               data={menuData}
-              redirectTo={() => {}}
+              redirectTo={noop}
               {...props}
             />
 
@@ -53,17 +55,18 @@ let App = () => (
               data={listingData}
               headers={listingHeaders}
               orderBy="date"
-              handleClick={() => { }}
+              handleClick={noop}
+              hasLoader={true}
             />
 
             <Form
               data={{}}
               form={formData}
-              onSubmit={() => { }}
+              onSubmit={noop}
               submitText="Save the form"
             />
 
-            <AddButton handleClick={() => { }} />
+            <AddButton handleClick={noop} />
           </Base>
         )}
       />

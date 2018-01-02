@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Table, {
   TableBody,
-  TableCell,
   TableFooter,
   TableHead,
   TablePagination,
@@ -18,6 +17,7 @@ import Checkbox from 'material-ui/Checkbox'
 import ListingHeader from './ListingHeader'
 import ListingToolbar from './ListingToolbar'
 import ListingLine from './ListingLine'
+import ListingLoader from './ListingLoader'
 
 const styles = theme => ({
   root: {
@@ -51,11 +51,13 @@ const ListingBranch = ({
   handleChangePage,
   handleChangeRowsPerPage,
   isSelected,
+  hasLoader,
 }) => (
   <Paper className={classes.root}>
     <ListingToolbar title={title} numSelected={selected.length} />
 
     <div className={classes.tableWrapper}>
+
       <Table className={classes.table}>
         <ListingHeader
           headers={headers}
@@ -68,6 +70,10 @@ const ListingBranch = ({
         />
 
         <TableBody>
+          {hasLoader ? (
+            <ListingLoader cols={headers.length + 1} />
+          ) : null}
+
           {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((n, index) => {
             return (
               <ListingLine
@@ -109,6 +115,7 @@ ListingBranch.propTypes = {
   rowsPerPage: PropTypes.number.isRequired,
   rowsPerPageOptions: PropTypes.arrayOf(PropTypes.number),
   page: PropTypes.number.isRequired,
+  hasLoader: PropTypes.bool.isRequired,
   handleSelectAllClick: PropTypes.func.isRequired,
   handleRequestSort: PropTypes.func.isRequired,
   handleCheckClick: PropTypes.func.isRequired,
@@ -129,6 +136,7 @@ ListingBranch.defaultProps = {
   rowsPerPage: 10,
   rowsPerPageOptions: [10, 25, 50, 100],
   page: 0,
+  hasLoader: false,
   handleSelectAllClick: () => {},
   handleRequestSort: () => {},
   handleCheckClick: () => {},
