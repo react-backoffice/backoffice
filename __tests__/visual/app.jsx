@@ -5,9 +5,8 @@ import {
   Route,
   Switch,
 } from 'react-router-dom'
-import withStyles from 'material-ui/styles/withStyles'
 
-import withRoot from '../../Base/withRoot'
+import Base from '../../Base'
 
 import NoMatch from '../../NoMatch'
 
@@ -29,90 +28,43 @@ import Drawer from '../../Drawer'
 import AddButton from '../../AddButton'
 import BackButton from '../../BackButton'
 
-const drawerWidth = 280
-
-const styles = (theme) => ({
-  root: {
-    position: 'relative',
-    display: 'flex',
-    width: '100%',
-    height: '100%',
-    minHeight: '100vh',
-  },
-
-  content: {
-    width: '100%',
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    height: 'calc(100% - 56px)',
-    marginTop: 56,
-    [theme.breakpoints.up('sm')]: {
-      content: {
-        height: 'calc(100% - 64px)',
-        marginTop: 64,
-      },
-    },
-  },
-})
-
-let App = ({ classes }) => (
+let App = () => (
   <Router>
     <Switch>
       <Route exact path="/"
         render={(props) => (
-          <div>
-            <Header
-              title="This is Backoffice"
-              handleDrawerOpen={() => { }}
-              onClick={() => { }}
-              open={true}
+          <Base
+            title="This is Backoffice"
+            menuData={menuData}
+          >
+            <BackButton url={'/root'} />
+            <Home
+              data={homeData}
+              {...props}
+            />
+            <Menu
+              data={menuData}
+              redirectTo={() => {}}
+              {...props}
             />
 
-            <div className={classes.root}>
-              <Drawer
-                open={true}
-                data={menuData}
-                redirectTo={() => {}}
-                handleDrawerClose={() => {}}
-                {...props}
-              />
+            <Listing
+              title="Christmas Time"
+              data={listingData}
+              headers={listingHeaders}
+              orderBy="date"
+              handleClick={() => { }}
+            />
 
-              <div className={classes.content}>
-                <BackButton url={'/root'} />
-                <Home
-                  data={homeData}
-                  {...props}
-                />
-                <Menu
-                  data={menuData}
-                  redirectTo={() => {}}
-                  {...props}
-                />
+            <Form
+              data={{}}
+              form={formData}
+              onSubmit={() => { }}
+              submitText="Save the form"
+            />
 
-                <Listing
-                  title="Christmas Time"
-                  data={listingData}
-                  headers={listingHeaders}
-                  orderBy="date"
-                  handleClick={() => { }}
-                />
-
-                <Form
-                  data={{}}
-                  form={formData}
-                  onSubmit={() => { }}
-                  submitText="Save the form"
-                />
-              </div>
-
-              <AddButton handleClick={() => { }} />
-            </div>
-          </div>
+            <AddButton handleClick={() => { }} />
+          </Base>
         )}
       />
 
@@ -120,9 +72,6 @@ let App = ({ classes }) => (
     </Switch>
   </Router>
 )
-
-App = withStyles(styles)(App)
-App = withRoot(App)
 
 const appElement = document.querySelector('[data-react-app]')
 
