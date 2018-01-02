@@ -16,3 +16,4 @@ Backoffice also uses `react-router-dom`, `material-ui-icons` and some more OSS.
 * Drawer: Element that has an (off-canvas) menu
 * BackButton: A Button to go "back" to a given url
 * Form: Form components
+* ErrorSnackbar: Show an error in the left hand corner
