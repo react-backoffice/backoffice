@@ -31,6 +31,7 @@ FormFieldInput.propTypes = {
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.array,
+    PropTypes.number
   ]).isRequired,
   isMultiline: PropTypes.bool.isRequired,
   helperText: PropTypes.string,
