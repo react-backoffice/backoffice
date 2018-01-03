@@ -8,15 +8,22 @@ export default [{
     id: 'Text',
     title: 'Text Field',
     type: 'text',
-    width: 'mid'
+    width: 'mid',
+  }, {
+    id: 'select',
+    title: 'Select',
+    type: 'select',
+    options: ['Foo', 'Bar', 'Baz'],
+    width: 'mid',
   }, {
     id: 'multiline',
     title: 'Multiline',
     type: 'multiline',
   }, {
-    id: 'rules',
-    title: 'Rules',
+    id: 'list',
+    title: 'List',
     type: 'list',
+    width: 'mid',
     renderElement: (element) => (
       <div>{element}</div>
     )
