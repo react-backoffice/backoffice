@@ -64,6 +64,8 @@ const withForm = (Component) => class extends React.Component {
 
     data[fieldId] = value
 
+    this.props.onDataChanged(data)
+
     this.setState({
       data,
     })
@@ -86,9 +88,14 @@ const Form = withForm(FormBranch)
 Form.propTypes = {
   form: PropTypes.arrayOf(PropTypes.object).isRequired,
   data: PropTypes.object.isRequired,
+  onDataChanged: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
   submitText: PropTypes.string,
   fixedSubmit: PropTypes.bool,
+}
+
+Form.PropTypes = {
+  onDataChanged: () => {}
 }
 
 export default withRouter(Form)
