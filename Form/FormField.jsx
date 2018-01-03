@@ -3,8 +3,9 @@ import React from 'react'
 import FormFieldBranch from './FormFieldBranch'
 
 const withFormField = (Component) => class extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
+
     this.handleChange = this.handleChange.bind(this)
 
     this.state = {
@@ -14,11 +15,19 @@ const withFormField = (Component) => class extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.initialize(this.props)
+  }
+
   componentWillReceiveProps(nextProps) {
-    if (this.state.initialized === false && nextProps.value !== '') {
-      const isList = nextProps.type === 'list'
-      const listItems = isList ? nextProps.value : []
-      const value = !isList ? nextProps.value : ''
+    this.initialize(nextProps)
+  }
+
+  initialize(props) {
+    if (this.state.initialized === false && props.value) {
+      const isList = props.type === 'list'
+      const listItems = isList ? props.value : []
+      const value = !isList ? props.value : ''
 
       this.setState({
         listItems,
