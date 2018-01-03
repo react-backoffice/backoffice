@@ -5,6 +5,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom'
+import Typography from 'material-ui/Typography'
 
 import Base from '../../Base'
 
@@ -64,7 +65,11 @@ let App = () => (
               form={formData}
               onSubmit={noop}
               submitText="Save the form"
-            />
+            >
+              <Typography>
+                This is a very special form with additional content.
+              </Typography>
+            </Form>
 
             <AddButton handleClick={noop} />
           </Base>

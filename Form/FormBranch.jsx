@@ -35,6 +35,7 @@ const FormBranch = ({
   handleSubmit,
   onSubmit,
   submitText,
+  children,
   classes,
 }) => {
   const getId = (group, field) => {
@@ -80,6 +81,8 @@ const FormBranch = ({
   return (
     <form noValidate autoComplete="off">
       {elements}
+
+      {children}
 
       <FormSubmitButton
         onSubmit={handleSubmit}

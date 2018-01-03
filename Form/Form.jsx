@@ -94,7 +94,7 @@ Form.propTypes = {
   fixedSubmit: PropTypes.bool,
 }
 
-Form.PropTypes = {
+Form.defaultProps = {
   onDataChanged: () => {}
 }
 
