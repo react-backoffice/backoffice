@@ -21,9 +21,6 @@ const styles = (theme) => ({
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
   },
-  hide: {
-    display: 'none'
-  },
 })
 
 const FormBranch = ({
