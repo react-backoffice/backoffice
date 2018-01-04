@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 
 import { TYPES } from './constants'
-import FormFieldList from './FormFieldList'
 import FormFieldInput from './FormFieldInput'
 import FormFieldDate from './FormFieldDate'
 
@@ -51,8 +50,10 @@ const FormFieldBranch = ({ type, width, listItems, classes, ...props }) => {
   switch (type) {
     case TYPES.SELECT:
       return (
-        <FormFieldList
+        <FormFieldInput
           {...props}
+          select
+          selectOptions={props.selectOptions}
           classNames={classNames}
         />
       )

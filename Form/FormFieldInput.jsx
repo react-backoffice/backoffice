@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 import TextField from 'material-ui/TextField'
 
+import { MenuItem } from 'material-ui/Menu'
+
 const FormFieldInput = ({
   id,
   type,
@@ -12,6 +14,8 @@ const FormFieldInput = ({
   handleChange,
   helperText,
   defaultValue,
+  select,
+  options,
   required,
   error,
   classNames
@@ -26,11 +30,19 @@ const FormFieldInput = ({
     className={classNames.join(' ')}
     helperText={helperText}
     defaultValue={defaultValue}
+    select={select}
     required={required}
     error={error}
     margin="normal"
     fullWidth
-  />
+  >
+    {options ?
+        options.map((option, index) => (
+          <MenuItem value={option} key={index}>{option}</MenuItem>
+        ))
+      : null
+    }
+  </TextField>
 )
 
 FormFieldInput.propTypes = {
@@ -47,6 +59,8 @@ FormFieldInput.propTypes = {
   error: PropTypes.bool.isRequired,
   classNames: PropTypes.array.isRequired,
   handleChange: PropTypes.func.isRequired,
+  select: PropTypes.bool,
+  options: PropTypes.array,
 }
 
 FormFieldInput.defaultProps = {
