@@ -43,6 +43,9 @@ Dashboard-like homepage
 
 A menu that lists entries
 
+* `data: object[]`, data to render the menu
+* `redirectTo: function`, called when clicked on an item
+
 ### Listing
 
 Data-Table

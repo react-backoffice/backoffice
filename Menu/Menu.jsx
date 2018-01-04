@@ -45,6 +45,6 @@ const Menu = ({ data, redirectTo, classes }) => {
 Menu.propTypes = {
   redirectTo: PropTypes.func.isRequired,
   classes: PropTypes.object.isRequired,
-};
+}
 
-export default withStyles(styles)(Menu);
+export default withStyles(styles)(Menu)
