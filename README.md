@@ -1,10 +1,37 @@
 # Backoffice
 
-Framework based on [Material UI](https://material-ui-next.com), a Material UI
-React implementation that provided a couple of components you might want to use
-in a backoffice app.
+Backoffice is a Framework based on [Material UI](https://material-ui-next.com), a Material UI
+React implementation that provides a couple of components you might want to use in a backoffice app.
 
-Backoffice also uses `react-router-dom`, `material-ui-icons` and some more OSS.
+Backoffice also uses `react-router-dom`, `material-ui-icons`, `material-ui-picker` and some more OSS.
+
+## Purpose
+
+The purpose of Backoffice is to provide an easier to use framework to generate applications that are mainly designed for working with data.
+
+If you have a list of data and you want to be able to update and delete entries in the list as well as create new ones (CRUD) Backoffice helps you to build an application in "no time".
+
+## Usage
+
+### Installing
+
+If you use yarn, just run the following command in your project’s root directory.
+
+    yarn add backoffice
+
+### Using components
+
+You need to create your own React application, that takes care of routing (at least for now), handling state and so on.
+
+Within any of your components you can use a given component by importing it to your application:
+
+    import Menu from 'backoffice/Menu'
+
+You can then use the component within your render logic:
+
+    const MyMenu = ({ menuData, redirectTo }) => (
+      <Menu data={menuData} redirectTo={redirectTo} />
+    )
 
 ## Components
 
@@ -73,3 +100,7 @@ Show an error in the left hand corner
 
 * `open: boolean`, is the snackbar open?
 * `message: string`, message to show with snackbar
+
+## License
+
+This framework is licensed under [MIT](./LICENSE)
