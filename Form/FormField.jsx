@@ -7,6 +7,7 @@ const withFormField = (Component) => class extends React.Component {
     super(props)
 
     this.handleChange = this.handleChange.bind(this)
+    this.initialize = this.initialize.bind(this)
 
     this.state = {
       listItems: [],
@@ -24,7 +25,7 @@ const withFormField = (Component) => class extends React.Component {
   }
 
   initialize(props) {
-    if (this.state.initialized === false && props.value) {
+    if (this.state.initialized === false) {
       const isList = props.type === 'list'
       const listItems = isList ? props.value : []
       const value = !isList ? props.value : ''
@@ -39,7 +40,13 @@ const withFormField = (Component) => class extends React.Component {
 
   handleChange(fieldId) {
     return (event) => {
-      const value = event.target.value
+      let value
+
+      if (event.target) {
+        value = event.target.value
+      } else if (event._isAMomentObject) {
+        value = event.valueOf()
+      }
 
       this.setState({
         value,

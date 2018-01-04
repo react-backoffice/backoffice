@@ -5,15 +5,19 @@ import TextField from 'material-ui/TextField'
 
 const FormFieldInput = ({
   id,
+  type,
   title,
   value,
   isMultiline,
   handleChange,
   helperText,
+  defaultValue,
+  InputLabelProps,
   classNames
 }) => (
   <TextField
     id={id}
+    type={type}
     label={title}
     value={value}
     multiline={isMultiline}
@@ -21,6 +25,8 @@ const FormFieldInput = ({
     className={classNames.join(' ')}
     helperText={helperText}
     margin="normal"
+    defaultValue={defaultValue}
+    InputLabelProps={InputLabelProps}
     fullWidth
   />
 )

@@ -3,8 +3,10 @@ import PropTypes from 'prop-types'
 
 import { withStyles } from 'material-ui/styles'
 
+import { TYPES } from './constants'
 import FormFieldList from './FormFieldList'
 import FormFieldInput from './FormFieldInput'
+import FormFieldDate from './FormFieldDate'
 
 const styles = (theme) => ({
   headline: {
@@ -47,7 +49,7 @@ const FormFieldBranch = ({ type, width, listItems, classes, ...props }) => {
   let classNames = getClasses()
 
   switch (type) {
-    case 'select':
+    case TYPES.SELECT:
       return (
         <FormFieldList
           {...props}
@@ -55,7 +57,7 @@ const FormFieldBranch = ({ type, width, listItems, classes, ...props }) => {
         />
       )
       break
-    case 'list':
+    case TYPES.LIST:
       return (
         <div>
           <FormFieldInput
@@ -70,12 +72,39 @@ const FormFieldBranch = ({ type, width, listItems, classes, ...props }) => {
         </div>
       )
       break
-    case 'multiline':
+    case TYPES.MULTILINE:
       return (
         <FormFieldInput
           {...props}
           classNames={classNames}
           isMultiline
+        />
+      )
+      break
+    case TYPES.DATE:
+      return (
+        <FormFieldDate
+          {...props}
+          classNames={classNames}
+          type={TYPES.DATE}
+        />
+      )
+      break
+    case TYPES.TIME:
+      return (
+        <FormFieldDate
+          {...props}
+          classNames={classNames}
+          type={TYPES.TIME}
+        />
+      )
+      break
+    case TYPES.DATETIME:
+      return (
+        <FormFieldDate
+          {...props}
+          classNames={classNames}
+          type={TYPES.DATETIME}
         />
       )
       break

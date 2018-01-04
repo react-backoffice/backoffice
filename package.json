@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "dateformat": "^3.0.2",
     "keycode": "^2.1.9",
     "material-ui": "^1.0.0-beta.23",
     "material-ui-icons": "^1.0.0-beta.17",
+    "material-ui-pickers": "^1.0.0-beta.12",
+    "moment": "^2.20.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-jss": "^8.1.0",

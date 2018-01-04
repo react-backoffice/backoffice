@@ -5,7 +5,7 @@ export default [{
   title: 'Form',
   id: 'base',
   data: [{
-    id: 'Text',
+    id: 'text',
     title: 'Text Field',
     type: 'text',
     width: 'mid',
@@ -20,12 +20,34 @@ export default [{
     title: 'Multiline',
     type: 'multiline',
   }, {
+    id: 'date',
+    title: 'Date',
+    type: 'date',
+    format: 'DD.MM.YYYY',
+    value: 1514989682669,
+    width: 'small',
+  }, {
+    id: 'time',
+    title: 'Time',
+    type: 'time',
+    format: 'hh:mm a',
+    value: 1514989682669,
+    width: 'small',
+  }, {
+    id: 'datetime',
+    title: 'Datetime',
+    type: 'datetime',
+    format: 'DD.MM.YYYY, hh:mm a',
+    value: 1514989682669,
+    width: 'small',
+  }, {
     id: 'list',
     title: 'List',
     type: 'list',
     width: 'mid',
-    renderElement: (element) => (
-      <div>{element}</div>
+    value: ['Foo', 'Bar', 'Baz'],
+    renderElement: (element, index) => (
+      <div key={`form-list-${index}`}>{element}</div>
     )
   }],
 }]

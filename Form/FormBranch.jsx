@@ -43,7 +43,7 @@ const FormBranch = ({
   }
 
   const renderField = (group, field, index) => {
-    let value = data[field.id]
+    let value = data[field.id] || field.value
 
     return (
       <FormField

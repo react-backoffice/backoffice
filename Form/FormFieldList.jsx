@@ -11,22 +11,25 @@ const FormFieldList = ({
   title,
   value,
   options,
+  placeholder,
   handleChange,
   helperText,
   classNames,
 }) => (
   <FormControl className={classNames.join(' ')}>
     <InputLabel htmlFor={id}>{title}</InputLabel>
+
     <Select
       value={value}
       onChange={handleChange(id)}
-      input={<Input name="age" id={id} />}
+      input={<Input name={id} id={id} />}
     >
       {options ?
         options.map((option, index) => (
           <MenuItem value={option} key={index}>{option}</MenuItem>
         )) : null}
     </Select>
+
     {helperText ? (
       <FormHelperText>{helperText}</FormHelperText>
     ) : null}
