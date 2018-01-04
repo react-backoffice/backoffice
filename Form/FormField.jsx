@@ -76,13 +76,15 @@ const withFormField = (Component) => class extends React.Component {
         value = event.valueOf()
       }
 
+      const error = !this.isValid(value)
+
       this.setState({
         value,
-        error: !this.isValid(value)
+        error,
       })
 
 
-      this.props.handleChange(fieldId, value)
+      this.props.handleChange(fieldId, value, error)
     }).bind(this)
   }
 

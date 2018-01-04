@@ -59,10 +59,13 @@ const withForm = (Component) => class extends React.Component {
     this.props.onSubmit(data)
   }
 
-  updateFieldData(fieldId, value) {
+  updateFieldData(fieldId, value, error) {
     const data = Object.assign({}, this.state.data)
 
-    data[fieldId] = value
+    data[fieldId] = {
+      value,
+      error,
+    }
 
     this.props.onDataChanged(data)
 
