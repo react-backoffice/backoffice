@@ -9,12 +9,14 @@ export default [{
     title: 'Text Field',
     type: 'text',
     width: 'mid',
+    required: true,
   }, {
     id: 'select',
     title: 'Select',
     type: 'select',
     options: ['Foo', 'Bar', 'Baz'],
     width: 'mid',
+    required: true,
   }, {
     id: 'multiline',
     title: 'Multiline',
@@ -26,6 +28,7 @@ export default [{
     format: 'DD.MM.YYYY',
     value: 1514989682669,
     width: 'small',
+    validators: ['date'],
   }, {
     id: 'time',
     title: 'Time',
@@ -33,6 +36,7 @@ export default [{
     format: 'hh:mm a',
     value: 1514989682669,
     width: 'small',
+    validators: ['date'],
   }, {
     id: 'datetime',
     title: 'Datetime',
@@ -40,6 +44,7 @@ export default [{
     format: 'DD.MM.YYYY, hh:mm a',
     value: 1514989682669,
     width: 'small',
+    validators: ['date'],
   }, {
     id: 'list',
     title: 'List',

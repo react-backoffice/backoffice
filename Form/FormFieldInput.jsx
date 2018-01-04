@@ -12,7 +12,8 @@ const FormFieldInput = ({
   handleChange,
   helperText,
   defaultValue,
-  InputLabelProps,
+  required,
+  error,
   classNames
 }) => (
   <TextField
@@ -24,9 +25,10 @@ const FormFieldInput = ({
     onChange={handleChange(id)}
     className={classNames.join(' ')}
     helperText={helperText}
-    margin="normal"
     defaultValue={defaultValue}
-    InputLabelProps={InputLabelProps}
+    required={required}
+    error={error}
+    margin="normal"
     fullWidth
   />
 )
@@ -41,6 +43,8 @@ FormFieldInput.propTypes = {
   ]).isRequired,
   isMultiline: PropTypes.bool.isRequired,
   helperText: PropTypes.string,
+  required: PropTypes.bool.isRequired,
+  error: PropTypes.bool.isRequired,
   classNames: PropTypes.array.isRequired,
   handleChange: PropTypes.func.isRequired,
 }
@@ -52,6 +56,8 @@ FormFieldInput.defaultProps = {
   isMultiline: false,
   helperText: '',
   classNames: [],
+  required: false,
+  error: false,
   handleChange: () => {},
 }
 

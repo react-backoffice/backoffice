@@ -21,6 +21,7 @@ const FormFieldDate = ({
   title,
   value,
   format,
+  required,
   handleChange,
   helperText,
   classNames,
@@ -59,6 +60,7 @@ const FormFieldDate = ({
       value={new Date(value)}
       onChange={handleChange(id)}
       format={format}
+      required={required}
       keyboardIcon={<EventIcon />}
       className={classNames.join(' ')}
       helperText={helperText}
@@ -75,6 +77,7 @@ FormFieldDate.propTypes = {
     PropTypes.number,
   ]).isRequired,
   helperText: PropTypes.string,
+  required: PropTypes.bool.isRequired,
   classNames: PropTypes.array.isRequired,
   handleChange: PropTypes.func.isRequired,
 }
@@ -84,6 +87,7 @@ FormFieldDate.defaultProps = {
   title: '',
   value: +new Date(),
   helperText: '',
+  required: false,
   classNames: [],
   handleChange: () => {},
 }

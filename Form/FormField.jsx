@@ -1,6 +1,7 @@
 import React from 'react'
 
 import FormFieldBranch from './FormFieldBranch'
+import * as Validators from './validators'
 
 const withFormField = (Component) => class extends React.Component {
   constructor(props) {
@@ -38,8 +39,35 @@ const withFormField = (Component) => class extends React.Component {
     }
   }
 
+  isValid(value) {
+    let { validators, required } = this.props
+
+    if (!validators) {
+      validators = []
+    }
+
+    if (required) {
+      validators.push('required')
+    }
+
+    if (validators.length === 0) {
+      return true
+    }
+
+    const validatorFunctions = validators.map((validator) => Validators[validator])
+    const validState = validatorFunctions.map((validator) => {
+      if (typeof validator === 'function') {
+        return validator(value)
+      }
+
+      return true
+    });
+
+    return validState.indexOf(false) === -1
+  }
+
   handleChange(fieldId) {
-    return (event) => {
+    return ((event) => {
       let value
 
       if (event.target) {
@@ -50,10 +78,12 @@ const withFormField = (Component) => class extends React.Component {
 
       this.setState({
         value,
+        error: !this.isValid(value)
       })
 
+
       this.props.handleChange(fieldId, value)
-    }
+    }).bind(this)
   }
 
   render() {

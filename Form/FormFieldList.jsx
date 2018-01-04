@@ -11,12 +11,15 @@ const FormFieldList = ({
   title,
   value,
   options,
-  placeholder,
+  required,
   handleChange,
   helperText,
   classNames,
 }) => (
-  <FormControl className={classNames.join(' ')}>
+  <FormControl
+    required={required}
+    className={classNames.join(' ')}
+  >
     <InputLabel htmlFor={id}>{title}</InputLabel>
 
     <Select
@@ -45,6 +48,7 @@ FormFieldList.propTypes = {
   ]).isRequired,
   helperText: PropTypes.string,
   options: PropTypes.array.isRequired,
+  required: PropTypes.bool.isRequired,
   classNames: PropTypes.array.isRequired,
   handleChange: PropTypes.func.isRequired,
 }
@@ -56,6 +60,7 @@ FormFieldList.defaultProps = {
   helperText: '',
   classNames: [],
   options: [],
+  required: false,
   handleChange: () => { },
 }
 

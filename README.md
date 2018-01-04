@@ -93,6 +93,8 @@ Form components
 * `title: string`, label of field
 * `width: ENUM('small' | 'mid' | 'full')`, default: `full`
 * `value: string | string[]`, default value of a field
+* `required: boolean`, is filling this field required, default: false
+* `validators: ENUM('date', 'machinereadable')[]`, validate a field’s input value
 * `options: string[]`, options of a field of type `select`
 * `format: string`, formation of a field of type `date`, `time` or `datetime`, uses [Moment.js](https://momentjs.com/docs/#/parsing/string-format/)
 * `renderElement: function`, element that should be rendered of a field of type `list`
