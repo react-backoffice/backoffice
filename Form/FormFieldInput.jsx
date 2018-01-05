@@ -21,6 +21,7 @@ const FormFieldInput = ({
   classNames,
   onFocus,
   onBlur,
+  onKeyPress,
 }) => (
   <TextField
     id={id}
@@ -39,6 +40,7 @@ const FormFieldInput = ({
     fullWidth
     onFocus={onFocus}
     onBlur={onBlur}
+    onKeyPress={onKeyPress}
   >
     {options ?
         options.map((option, index) => (

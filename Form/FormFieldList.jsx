@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import FormFieldListBranch from './FormFieldListBranch'
 
@@ -19,6 +20,7 @@ const withFormFieldList = (Component) => class extends React.Component {
     this.handleClick = this.handleClick.bind(this)
     this.handleBlur = this.handleBlur.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
+    this.handleKeyPress = this.handleKeyPress.bind(this)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -68,6 +70,7 @@ const withFormFieldList = (Component) => class extends React.Component {
     return (event) => {
       this.setState({
         listItems: [...this.state.listItems, option],
+        value: '',
       })
     }
   }
@@ -95,6 +98,18 @@ const withFormFieldList = (Component) => class extends React.Component {
     }
   }
 
+  handleKeyPress(event) {
+    const { listItems, value } = this.state
+    const { completeFrom  } = this.props
+
+    if (event.which === 13 && completeFrom.length === 0) {
+      this.setState({
+        listItems: [...listItems, value],
+        value: ''
+      })
+    }
+  }
+
   render() {
     return (
       <Component
@@ -102,6 +117,7 @@ const withFormFieldList = (Component) => class extends React.Component {
         {...this.state}
         onClick={this.handleClick}
         onChange={this.handleChange}
+        onKeyPress={this.handleKeyPress}
         onBlur={this.handleBlur}
         onDelete={this.handleDelete}
       />
@@ -109,4 +125,16 @@ const withFormFieldList = (Component) => class extends React.Component {
   }
 }
 
-export default withFormFieldList(FormFieldListBranch)
+const FormFieldList = withFormFieldList(FormFieldListBranch)
+
+FormFieldList.propTypes = {
+  listItems: PropTypes.arrayOf(PropTypes.string).isRequired,
+  completeFrom: PropTypes.arrayOf(PropTypes.string).isRequired,
+}
+
+FormFieldList.defaultProps = {
+  listItems: [],
+  completeFrom: [],
+}
+
+export default FormFieldList

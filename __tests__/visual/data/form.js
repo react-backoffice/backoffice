@@ -54,5 +54,10 @@ export default [{
     width: 'mid',
     value: ['Foo', 'Bar', 'Baz'],
     completeFrom: ['Foo', 'Bar', 'Baz', 'Froot', 'Foobar', 'Barbaz', 'Foobaz'],
+  }, {
+    id: 'free-list',
+    title: 'Free List',
+    type: 'list',
+    width: 'mid',
   }],
 }]

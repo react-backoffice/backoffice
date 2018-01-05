@@ -13,9 +13,12 @@ const styles = (theme) => ({
   root: {
     position: 'relative',
     zIndex: 1,
+    display: 'inline-flex',
+    flexDirection: 'column',
   },
   list: {
     position: 'absolute',
+    top: theme.spacing.unit * 9,
     width: '100%',
     height: 0,
     opacity: 0,
@@ -84,7 +87,9 @@ const FormFieldListBranch = ({
         </List>
       </Paper>
 
-      {listItems ? listItems.map(renderListItem) : null}
+      <div>
+        {listItems ? listItems.map(renderListItem) : null}
+      </div>
     </div>
   )
 }
