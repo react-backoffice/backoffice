@@ -18,7 +18,9 @@ const FormFieldInput = ({
   options,
   required,
   error,
-  classNames
+  classNames,
+  onFocus,
+  onBlur,
 }) => (
   <TextField
     id={id}
@@ -35,6 +37,8 @@ const FormFieldInput = ({
     error={error}
     margin="normal"
     fullWidth
+    onFocus={onFocus}
+    onBlur={onBlur}
   >
     {options ?
         options.map((option, index) => (

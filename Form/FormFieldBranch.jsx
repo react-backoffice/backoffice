@@ -6,6 +6,7 @@ import { withStyles } from 'material-ui/styles'
 import { TYPES } from './constants'
 import FormFieldInput from './FormFieldInput'
 import FormFieldDate from './FormFieldDate'
+import FormFieldList from './FormFieldList'
 
 const styles = (theme) => ({
   headline: {
@@ -30,7 +31,7 @@ const styles = (theme) => ({
   }
 })
 
-const FormFieldBranch = ({ type, width, listItems, classes, ...props }) => {
+const FormFieldBranch = ({ type, width, classes, ...props }) => {
   const getClasses = () => {
     const classNames = [classes.field]
 
@@ -60,17 +61,10 @@ const FormFieldBranch = ({ type, width, listItems, classes, ...props }) => {
       break
     case TYPES.LIST:
       return (
-        <div>
-          <FormFieldInput
-            {...props}
-            classNames={classNames}
-          />
-
-          {listItems ?
-            listItems.map(props.renderElement) :
-            null
-          }
-        </div>
+        <FormFieldList
+          {...props}
+          classNames={classNames}
+        />
       )
       break
     case TYPES.MULTILINE:

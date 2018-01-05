@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Chip from 'material-ui/Chip'
+
 export default [{
   group: true,
   title: 'Form',
@@ -51,8 +53,6 @@ export default [{
     type: 'list',
     width: 'mid',
     value: ['Foo', 'Bar', 'Baz'],
-    renderElement: (element, index) => (
-      <div key={`form-list-${index}`}>{element}</div>
-    )
+    completeFrom: ['Foo', 'Bar', 'Baz', 'Froot', 'Foobar', 'Barbaz', 'Foobaz'],
   }],
 }]
