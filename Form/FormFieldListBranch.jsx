@@ -57,7 +57,7 @@ const FormFieldListBranch = ({
       <Chip
         key={`form-list-${index}`}
         label={element}
-        onRequestDelete={onDelete(element)}
+        onDelete={onDelete(element)}
         className={classes.selectedItem}
       />
     )
