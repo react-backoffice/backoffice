@@ -16,8 +16,12 @@ const styles = (theme) => ({
     width: '100%',
     height: '100%',
     minHeight: '100vh',
+    transition: '0.25s',
   },
-
+  appFrameWithCookieInfo: {
+    marginTop: theme.spacing.unit * 6,
+    minHeight: `calc(100vh - ${theme.spacing.unit * 6}px)`,
+  },
   content: {
     width: '100%',
     flexGrow: 1,
@@ -28,7 +32,7 @@ const styles = (theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     height: 'calc(100% - 56px)',
-    marginTop: 56,
+    marginTop: theme.spacing.unit * 8,
     [theme.breakpoints.up('sm')]: {
       content: {
         height: 'calc(100% - 64px)',
@@ -52,12 +56,14 @@ const BaseBranch = ({
   menuData,
   fixedHeader,
   onClick,
+  cookieInfoOpen,
   handleDrawerOpen,
   handleDrawerClose,
   redirectTo,
   rightContent,
   classes,
-  children
+  children,
+  ...rest
 }) => (
   <div>
     <Header
@@ -66,11 +72,14 @@ const BaseBranch = ({
       onClick={onClick}
       open={open}
       fixed={fixedHeader}
+      cookieInfoOpen={cookieInfoOpen}
     >
       {rightContent ? rightContent : null}
     </Header>
 
-    <div className={classes.appFrame}>
+    <div className={classNames(classes.appFrame, {
+      [classes.appFrameWithCookieInfo]: cookieInfoOpen
+    })}>
       <Drawer
         handleDrawerClose={handleDrawerClose}
         redirectTo={redirectTo}
@@ -83,7 +92,12 @@ const BaseBranch = ({
           [classes.contentShift]: open,
         })}
       >
-        {children}
+        {React.Children.map(children, (child) =>
+          React.cloneElement(child, {
+            cookieInfoOpen,
+            ...rest,
+          })
+        )}
       </main>
     </div>
   </div>

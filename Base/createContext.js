@@ -1,21 +1,21 @@
-import { create, SheetsRegistry } from 'jss';
-import preset from 'jss-preset-default';
-import { createMuiTheme } from 'material-ui/styles';
-import { blueGrey, orange } from 'material-ui/colors';
-import createGenerateClassName from 'material-ui/styles/createGenerateClassName';
+import { create, SheetsRegistry } from 'jss'
+import preset from 'jss-preset-default'
+import { createMuiTheme } from 'material-ui/styles'
+import { blueGrey, orange } from 'material-ui/colors'
+import createGenerateClassName from 'material-ui/styles/createGenerateClassName'
 
 const theme = createMuiTheme({
   palette: {
     primary: blueGrey,
     secondary: orange,
   },
-});
+})
 
 // Configure JSS
-const jss = create(preset());
-jss.options.createGenerateClassName = createGenerateClassName;
+const jss = create(preset())
+jss.options.createGenerateClassName = createGenerateClassName
 
-export const sheetsManager = new Map();
+export const sheetsManager = new Map()
 
 export default function createContext() {
   return {
@@ -25,5 +25,5 @@ export default function createContext() {
     sheetsManager,
     // This is needed in order to inject the critical CSS.
     sheetsRegistry: new SheetsRegistry(),
-  };
+  }
 }

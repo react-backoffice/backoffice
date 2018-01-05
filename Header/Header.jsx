@@ -19,6 +19,11 @@ const styles = (theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    transform: 'translate(0, 0)',
+    transition: '0.25s',
+  },
+  appBarWithCookieInfo: {
+    transform: `translate(0, ${theme.spacing.unit * 6}px)`,
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -51,6 +56,7 @@ const Header = ({
   open,
   fixed,
   handleDrawerOpen,
+  cookieInfoOpen,
   onClick,
   children,
   classes
@@ -59,6 +65,7 @@ const Header = ({
     <AppBar
       className={classNames(classes.appBar, {
         [classes.appBarShift]: open,
+        [classes.appBarWithCookieInfo]: cookieInfoOpen,
       })}
       position={fixed ? 'fixed' : 'static'}
     >
@@ -90,6 +97,7 @@ const Header = ({
 Header.propTypes = {
   title: PropTypes.string.isRequired,
   fixed: PropTypes.bool.isRequired,
+  cookieInfoOpen: PropTypes.bool.isRequired,
   handleDrawerOpen: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired,
   classes: PropTypes.object.isRequired,

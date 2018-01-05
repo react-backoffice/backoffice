@@ -46,6 +46,12 @@ A menu that lists entries
 * `data: object[]`, data to render the menu
 * `redirectTo: function`, called when clicked on an item
 
+### CookieInfo
+
+* `buttonText: string`, text to display on the button
+* Internal: `cookieInfoOpen: boolean`, state of the cookieInfo, handled by `Base`, default `false`
+* Internal: `onCookieInfoAccept: function`, when accepted, provided by `Base`
+
 ### Listing
 
 Data-Table

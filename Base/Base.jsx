@@ -12,12 +12,25 @@ const withBase = (Component) => class extends React.Component {
 
     this.state = {
       open: false,
+      cookieInfoOpen: this.getCookie(),
     }
 
+    this.handleCookieInfoAccept = this.handleCookieInfoAccept.bind(this)
     this.handleDrawerOpen = this.handleDrawerOpen.bind(this)
     this.handleDrawerClose = this.handleDrawerClose.bind(this)
     this.redirectTo = this.redirectTo.bind(this)
     this.onClick = this.onClick.bind(this)
+  }
+
+  getCookie() {
+    const value = '; ' + document.cookie
+    const parts = value.split('; cookie_concent=')
+
+    return !(
+      parts.length != 2 ?
+        undefined :
+        parts.pop().split(';').shift()
+    )
   }
 
   handleDrawerOpen() {
@@ -40,6 +53,12 @@ const withBase = (Component) => class extends React.Component {
     this.redirectTo('/')
   }
 
+  handleCookieInfoAccept() {
+    this.setState({
+      cookieInfoOpen: false,
+    })
+  }
+
   render() {
     return (
       <Component
@@ -48,6 +67,7 @@ const withBase = (Component) => class extends React.Component {
         onClick={this.onClick}
         handleDrawerOpen={this.handleDrawerOpen}
         handleDrawerClose={this.handleDrawerClose}
+        onCookieInfoAccept={this.handleCookieInfoAccept}
         redirectTo={this.redirectTo}
         rightContent={this.props.rightContent}
       />

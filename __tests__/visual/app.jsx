@@ -28,6 +28,7 @@ import Header from '../../Header'
 import Drawer from '../../Drawer'
 import AddButton from '../../AddButton'
 import BackButton from '../../BackButton'
+import CookieInfo from '../../CookieInfo'
 
 const noop = () => {}
 
@@ -40,6 +41,12 @@ let App = () => (
             title="This is Backoffice"
             menuData={menuData}
           >
+            <CookieInfo>
+              <Typography type="body1">
+                This is the cookie info
+              </Typography>
+            </CookieInfo>
+
             <BackButton url={'/root'} />
             <Home
               data={homeData}
