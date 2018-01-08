@@ -59,5 +59,16 @@ export default [{
     title: 'Free List',
     type: 'list',
     width: 'mid',
+  }, {
+    id: 'nested',
+    group: true,
+    title: 'Nested Form',
+    integrated: true,
+    isVisible: true,
+    data: [{
+      id: 'nested-text',
+      title: 'Nested Text',
+      type: 'text',
+    }],
   }],
 }]

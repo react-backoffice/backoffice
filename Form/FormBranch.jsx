@@ -2,22 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Typography from 'material-ui/Typography'
-import Divider from 'material-ui/Divider'
-import Paper from 'material-ui/Paper'
 
 import { withStyles } from 'material-ui/styles'
 
+import FormGroupWrapper from './FormGroupWrapper'
 import FormField from './FormField'
 import FormSubmitButton from './FormSubmitButton'
 
 const styles = (theme) => ({
-  group: {
-    marginTop: theme.spacing.unit,
-    marginBottom: theme.spacing.unit,
-    padding: theme.spacing.unit * 2,
-    paddingTop: theme.spacing.unit * 3,
-  },
-  groupTitle: {
+  title: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
   },
@@ -58,14 +51,21 @@ const FormBranch = ({
     return data.map((field, index) => {
       if (field.group) {
         return (
-          <Paper className={classes.group} key={index}>
+          <FormGroupWrapper
+            key={index}
+            isVisible={field.isVisible}
+            isPaper={!field.integrated}
+          >
             {field.title ? (
-              <Typography type="title" className={classes.groupTitle}>
+              <Typography
+                type={field.integrated ? 'subheading' : 'title'}
+                className={classes.title}
+              >
                 {field.title}
               </Typography>
             ) : ''}
             {generateFields(field.data, field)}
-          </Paper>
+          </FormGroupWrapper>
         )
       }
 
