@@ -45,7 +45,7 @@ const withFormFieldList = (Component) => class extends React.Component {
     })
 
     availableOptions = availableOptions.filter((option) => {
-      return option.substr(0, value.length).toLowerCase() === value
+      return option.toLowerCase().indexOf(value) > -1
     })
 
     return availableOptions
