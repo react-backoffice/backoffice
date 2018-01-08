@@ -95,7 +95,12 @@ const FormFieldListBranch = ({
 }
 
 FormFieldListBranch.propTypes = {
-  availableOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
+  availableOptions: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object,
+    ])
+  ).isRequired,
   listItems: PropTypes.arrayOf(PropTypes.string).isRequired,
   showMenu: PropTypes.bool.isRequired,
   renderElement: PropTypes.func,

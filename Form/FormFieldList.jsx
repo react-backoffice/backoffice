@@ -3,6 +3,16 @@ import PropTypes from 'prop-types'
 
 import FormFieldListBranch from './FormFieldListBranch'
 
+const replace = (string, search, replace) => {
+  if (!search) {
+    return string
+  }
+
+  search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')
+
+  return string.replace(new RegExp(search, 'gi'), replace)
+}
+
 const withFormFieldList = (Component) => class extends React.Component {
   constructor(props) {
     super(props)
@@ -44,13 +54,24 @@ const withFormFieldList = (Component) => class extends React.Component {
   getAvailableOptions(value) {
     const { completeFrom } = this.props
     const { listItems } = this.state
+    const lowerValue = value.toLowerCase()
 
     let availableOptions = completeFrom.filter((option) => {
       return listItems.indexOf(option) === -1
     })
 
     availableOptions = availableOptions.filter((option) => {
-      return option.toLowerCase().indexOf(value) > -1
+      return option.toLowerCase().indexOf(lowerValue) > -1
+    })
+
+    availableOptions = availableOptions.map((option) => {
+      const text = replace(option, lowerValue, `<b>${value}</b>`)
+
+      return (
+        <span
+          dangerouslySetInnerHTML={{ __html: text }}
+        ></span>
+      )
     })
 
     return availableOptions
