@@ -1,6 +1,5 @@
 import { create, SheetsRegistry } from 'jss'
-import preset from 'jss-preset-default'
-import { createMuiTheme } from 'material-ui/styles'
+import { jssPreset, createMuiTheme } from 'material-ui/styles'
 import { blueGrey, orange } from 'material-ui/colors'
 import createGenerateClassName from 'material-ui/styles/createGenerateClassName'
 
@@ -12,7 +11,7 @@ const theme = createMuiTheme({
 })
 
 // Configure JSS
-const jss = create(preset())
+const jss = create(jssPreset())
 jss.options.createGenerateClassName = createGenerateClassName
 
 export const sheetsManager = new Map()
