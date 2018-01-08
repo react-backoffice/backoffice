@@ -28,18 +28,17 @@ const FormBranch = ({
   children,
   classes,
 }) => {
-  const getId = (group, field) => {
-    return `${group.id}.${field.id}`
-  }
+  const renderField = (field, index) => {
+    let value = data[field.id] && data[field.id].value
 
-  const renderField = (group, field, index) => {
-    let value = data[field.id] || field.value
+    if (!value) {
+      value = field.value
+    }
 
     return (
       <FormField
         key={index}
         {...field}
-        id={getId(group, field)}
         fieldId={field.id}
         value={value}
         handleChange={updateFieldData}
@@ -69,7 +68,7 @@ const FormBranch = ({
         )
       }
 
-      return renderField(group, field, index)
+      return renderField(field, index)
     })
   }
 

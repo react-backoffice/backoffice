@@ -33,7 +33,7 @@ const FormFieldDate = ({
     case TYPES.TIME:
       Component = TimePicker
       break
-      case TYPES.DATE:
+    case TYPES.DATE:
       Component = DatePicker
       additionalAttributes = {
         leftArrowIcon: (<KeyboardArrowLeftIcon />),

@@ -118,7 +118,6 @@ const withFormFieldList = (Component) => class extends React.Component {
   }
 
   render() {
-
     return (
       <Component
         {...this.props}
