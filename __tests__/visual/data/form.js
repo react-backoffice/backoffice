@@ -24,6 +24,7 @@ export default [{
     id: 'multiline',
     title: 'Multiline',
     type: 'multiline',
+    rows: 5,
   }, {
     id: 'date',
     title: 'Date',

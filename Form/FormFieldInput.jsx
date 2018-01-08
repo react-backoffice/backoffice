@@ -28,6 +28,7 @@ const FormFieldInput = ({
   defaultValue,
   select,
   options,
+  rows,
   required,
   error,
   iconEnd,
@@ -51,6 +52,7 @@ const FormFieldInput = ({
     error={error}
     margin="normal"
     fullWidth
+    rows={rows}
     onFocus={onFocus}
     onBlur={onBlur}
     onKeyPress={onKeyPress}
@@ -75,6 +77,7 @@ FormFieldInput.propTypes = {
     PropTypes.array,
     PropTypes.number
   ]).isRequired,
+  rows: PropTypes.number,
   isMultiline: PropTypes.bool.isRequired,
   helperText: PropTypes.string,
   required: PropTypes.bool.isRequired,
