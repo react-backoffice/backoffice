@@ -114,6 +114,12 @@ Show an error in the left hand corner
 * `open: boolean`, is the snackbar open?
 * `message: string`, message to show with snackbar
 
+### Todos
+
+* Rename component Home to Dashboard
+* Form types: `checkbox`, `radio`, `email`, `url`, `password`
+* Tests
+
 ## License
 
 This framework is licensed under [MIT](./LICENSE)
