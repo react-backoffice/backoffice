@@ -13,7 +13,6 @@ const withFormField = (Component) => class extends React.Component {
     this.state = {
       listItems: [],
       value: '',
-      initialized: false
     }
   }
 
@@ -26,17 +25,14 @@ const withFormField = (Component) => class extends React.Component {
   }
 
   initialize(props) {
-    if (this.state.initialized === false) {
-      const isList = props.type === 'list'
-      const listItems = isList ? props.value : []
-      const value = !isList ? props.value : ''
+    const isList = props.type === 'list'
+    const listItems = isList ? props.value : []
+    const value = !isList ? props.value : ''
 
-      this.setState({
-        listItems,
-        value,
-        initialized: true
-      })
-    }
+    this.setState({
+      listItems,
+      value,
+    })
   }
 
   isValid(value) {
@@ -82,7 +78,6 @@ const withFormField = (Component) => class extends React.Component {
         value,
         error,
       })
-
 
       this.props.handleChange(fieldId, value, error)
     }).bind(this)
