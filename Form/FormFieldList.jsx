@@ -13,7 +13,7 @@ const withFormFieldList = (Component) => class extends React.Component {
       availableOptions: [],
       listItems: [],
       showMenu: false,
-      initialized: false,
+      dirty: false,
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -23,11 +23,16 @@ const withFormFieldList = (Component) => class extends React.Component {
     this.handleKeyPress = this.handleKeyPress.bind(this)
   }
 
+  componentDidMount() {
+    this.setState({
+      listItems: this.props.listItems,
+    })
+  }
+
   componentWillReceiveProps(nextProps) {
-    if (!this.state.initialized) {
+    if (!this.state.dirty) {
       this.setState({
         listItems: nextProps.listItems,
-        initialized: true,
       })
     }
   }
@@ -37,7 +42,7 @@ const withFormFieldList = (Component) => class extends React.Component {
   }
 
   getAvailableOptions(value) {
-    const { completeFrom  } = this.props
+    const { completeFrom } = this.props
     const { listItems } = this.state
 
     let availableOptions = completeFrom.filter((option) => {
@@ -70,6 +75,7 @@ const withFormFieldList = (Component) => class extends React.Component {
     return (event) => {
       this.setState({
         listItems: [...this.state.listItems, option],
+        dirty: true,
         value: '',
       })
     }
@@ -100,17 +106,19 @@ const withFormFieldList = (Component) => class extends React.Component {
 
   handleKeyPress(event) {
     const { listItems, value } = this.state
-    const { completeFrom  } = this.props
+    const { completeFrom } = this.props
 
     if (event.which === 13 && completeFrom.length === 0) {
       this.setState({
         listItems: [...listItems, value],
+        dirty: true,
         value: ''
       })
     }
   }
 
   render() {
+
     return (
       <Component
         {...this.props}
