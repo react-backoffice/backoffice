@@ -75,7 +75,7 @@ const FormFieldListBranch = ({
         [classes.listActive]: showMenu && availableOptions.length > 0
       })}>
         <List>
-          {availableOptions.map((option, index) => (
+          {availableOptions.slice(0, 10).map((option, index) => (
             <ListItem
               key={`form-field-list-${index}`}
               button
