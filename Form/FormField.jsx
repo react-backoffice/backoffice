@@ -13,6 +13,7 @@ const withFormField = (Component) => class extends React.Component {
     this.state = {
       listItems: [],
       value: '',
+      isDirty: false,
     }
   }
 
@@ -26,12 +27,17 @@ const withFormField = (Component) => class extends React.Component {
 
   initialize(props) {
     const isList = props.type === 'list'
-    const listItems = isList ? props.value : []
     const value = !isList ? props.value : ''
+    let listItems = []
+
+    if (this.state.isDirty === false && isList) {
+      listItems = props.value
+    }
 
     this.setState({
       listItems,
       value,
+      isDirty: true,
     })
   }
 
