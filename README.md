@@ -90,6 +90,8 @@ Form components
 * `id: string`, identifier of the group
 * `group: boolean`, group the following elements into one section
 * `title: string`, title of the group
+* `integrated: boolean`, is group integrated in parent (true) or wrapped in paper
+* `isVisible: boolean`, should group be visible?
 * `data: FormField[]`
 
 #### FormField
