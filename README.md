@@ -35,6 +35,11 @@ You can then use the component within your render logic:
 
 ## Components
 
+### Base
+
+* `fixedHeader: boolean`: Is header fixed?, default `true`
+* `hasHeader: boolean`: Is header included, default `true`
+
 ### Home
 
 Dashboard-like homepage

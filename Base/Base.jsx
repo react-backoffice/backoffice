@@ -83,10 +83,12 @@ Base.propTypes = {
   menuData: PropTypes.arrayOf(PropTypes.object).isRequired,
   rightContent: PropTypes.element,
   fixedHeader: PropTypes.bool,
+  hasHeader: PropTypes.bool,
 }
 
 Base.defaultProps = {
-  fixedHeader: true
+  fixedHeader: true,
+  hasHeader: true,
 }
 
 export default withRoot(Base)

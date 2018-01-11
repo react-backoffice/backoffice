@@ -61,31 +61,36 @@ const BaseBranch = ({
   handleDrawerClose,
   redirectTo,
   rightContent,
+  hasHeader,
   classes,
   children,
   ...rest
 }) => (
   <div>
-    <Header
-      title={title}
-      handleDrawerOpen={handleDrawerOpen}
-      onClick={onClick}
-      open={open}
-      fixed={fixedHeader}
-      cookieInfoOpen={cookieInfoOpen}
-    >
-      {rightContent ? rightContent : null}
-    </Header>
+    {hasHeader ? (
+      <Header
+        title={title}
+        handleDrawerOpen={handleDrawerOpen}
+        onClick={onClick}
+        open={open}
+        fixed={fixedHeader}
+        cookieInfoOpen={cookieInfoOpen}
+      >
+        {rightContent ? rightContent : null}
+      </Header>
+    ) : null}
 
     <div className={classNames(classes.appFrame, {
       [classes.appFrameWithCookieInfo]: cookieInfoOpen
     })}>
-      <Drawer
-        handleDrawerClose={handleDrawerClose}
-        redirectTo={redirectTo}
-        open={open}
-        data={menuData}
-      />
+      {hasHeader ? (
+        <Drawer
+          handleDrawerClose={handleDrawerClose}
+          redirectTo={redirectTo}
+          open={open}
+          data={menuData}
+        />
+      ) : null}
 
       <main
         className={classNames(classes.content, {
