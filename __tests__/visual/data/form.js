@@ -78,5 +78,10 @@ export default [{
     title: 'Email',
     type: 'email',
     width: 'mid',
+  }, {
+    id: 'password',
+    title: 'Password',
+    type: 'password',
+    width: 'mid',
   }],
 }]

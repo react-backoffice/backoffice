@@ -107,6 +107,7 @@ const FormFieldBranch = ({ type, width, classes, ...props }) => {
       return (
         <FormFieldInput
           {...props}
+          type={type}
           classNames={classNames}
         />
       )
