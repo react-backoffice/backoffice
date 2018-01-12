@@ -73,5 +73,10 @@ export default [{
       type: 'text',
       iconEnd: (<Icon />)
     }],
+  }, {
+    id: 'email',
+    title: 'Email',
+    type: 'email',
+    width: 'mid',
   }],
 }]

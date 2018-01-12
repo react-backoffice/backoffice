@@ -2,6 +2,7 @@ import React from 'react'
 
 import FormFieldBranch from './FormFieldBranch'
 import * as Validators from './validators'
+import { TYPES } from './constants';
 
 const withFormField = (Component) => class extends React.Component {
   constructor(props) {
@@ -42,7 +43,7 @@ const withFormField = (Component) => class extends React.Component {
   }
 
   isValid(value) {
-    let { validators, required } = this.props
+    let { type, validators, required } = this.props
 
     if (!validators) {
       validators = []
@@ -50,6 +51,10 @@ const withFormField = (Component) => class extends React.Component {
 
     if (required) {
       validators.push('required')
+    }
+
+    if (type === TYPES.EMAIL) {
+      validators.push('email')
     }
 
     if (validators.length === 0) {

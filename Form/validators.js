@@ -13,3 +13,9 @@ export const machinereadable = (value) =>
  * Check if value is a date
  */
 export const date = (value) => !isNaN(Date.parse(value))
+
+/**
+ * Check if value is email
+ */
+import Isemail from 'isemail'
+export const email = (value) => Isemail.validate(value)
