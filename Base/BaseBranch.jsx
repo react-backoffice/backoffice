@@ -94,7 +94,7 @@ const BaseBranch = ({
 
       <main
         className={classNames(classes.content, {
-          [classes.contentShift]: open,
+          [classes.contentShift]: open || hasHeader,
         })}
       >
         {React.Children.map(children, (child) =>

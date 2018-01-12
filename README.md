@@ -126,6 +126,7 @@ Show an error in the left hand corner
 * Rename component Home to Dashboard
 * Form types: `checkbox`, `radio`, `email`, `url`, `password`
 * Tests
+* Performance optimizing
 
 ## License
 
