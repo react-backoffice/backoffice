@@ -65,6 +65,17 @@ A menu that lists entries
 * Internal: `cookieInfoOpen: boolean`, state of the cookieInfo, handled by `Base`, default `false`
 * Internal: `onCookieInfoAccept: function`, when accepted, provided by `Base`
 
+### Confirm
+
+A dialog box to confirm something with a user
+
+* `open: boolean`, is the confirm dialog open, default `false`
+* `title: string`, title, optional
+* `description: string`, description text
+* `agreeText: string`, Text for agree button, default `Agree`
+* `disagreeText: string`, Text for disagree button, default `Disagree`
+* `onConfirm: function`, handler when user confirms dialog
+
 ### Listing
 
 Data-Table
