@@ -17,7 +17,7 @@ const styles = (theme) => ({
   avatar: {
     float: 'left',
     marginRight: theme.spacing.unit * 2,
-    backgroundColor: theme.palette.secondary[500],
+    backgroundColor: theme.palette.secondary.dark,
   },
   title: {
     marginBottom: 0,

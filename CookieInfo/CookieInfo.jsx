@@ -13,7 +13,7 @@ const styles = (theme) => ({
     right: 0,
     zIndex: 3000,
     display: 'flex',
-    backgroundColor: theme.palette.secondary['500'],
+    backgroundColor: theme.palette.secondary.main,
     paddingTop: theme.spacing.unit,
     paddingBottom: theme.spacing.unit,
     paddingLeft: theme.spacing.unit * 3,

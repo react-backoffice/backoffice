@@ -18,12 +18,12 @@ const toolbarStyles = theme => ({
   highlight:
     theme.palette.type === 'light'
       ? {
-        color: theme.palette.secondary.A700,
-        backgroundColor: theme.palette.secondary.A100,
+        color: theme.palette.secondary.dark,
+        backgroundColor: theme.palette.secondary.light,
       }
       : {
-        color: theme.palette.secondary.A100,
-        backgroundColor: theme.palette.secondary.A700,
+        color: theme.palette.secondary.light,
+        backgroundColor: theme.palette.secondary.dark,
       },
   spacer: {
     flex: '1 1 100%',
