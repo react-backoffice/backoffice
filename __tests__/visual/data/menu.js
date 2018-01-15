@@ -4,6 +4,11 @@ export default [{
   title: 'Dashboard',
   icon: null,
 }, {
+  type: 'link',
+  url: '/portfolio',
+  title: 'New portfolio',
+  disabled: true
+}, {
   type: 'divider',
 }, {
   type: 'link',

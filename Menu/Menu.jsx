@@ -31,6 +31,7 @@ const Menu = ({ data, redirectTo, classes }) => {
                   redirectTo={redirectTo}
                   url={item.url}
                   title={item.title}
+                  disabled={item.disabled}
                   icon={item.icon}
                 />
               )

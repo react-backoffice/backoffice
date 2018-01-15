@@ -57,6 +57,7 @@ A menu that lists entries
 * `url: string`, url to link to
 * `title: string`, title to display
 * `icon: ReactElement | null`, icon which should be displayed before title
+* `disabled: boolean`, if true, item will not be clickable
 
 ### CookieInfo
 
