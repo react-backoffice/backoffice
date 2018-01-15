@@ -1,13 +1,31 @@
-import { create, SheetsRegistry } from 'jss'
-import { jssPreset, createMuiTheme } from 'material-ui/styles'
-import { blueGrey, orange } from 'material-ui/colors'
+import {
+  create,
+  SheetsRegistry
+} from 'jss'
+import {
+  jssPreset,
+  createMuiTheme
+} from 'material-ui/styles'
+import {
+  blueGrey,
+  orange
+} from 'material-ui/colors'
 import createGenerateClassName from 'material-ui/styles/createGenerateClassName'
 
 const theme = createMuiTheme({
   palette: {
-    primary: blueGrey,
-    secondary: orange,
+    primary: {
+      light: blueGrey[300],
+      main: blueGrey[500],
+      dark: blueGrey[700],
+    },
+    secondary: {
+      light: orange[300],
+      main: orange[500],
+      dark: orange[700],
+    }
   },
+
 })
 
 // Configure JSS
