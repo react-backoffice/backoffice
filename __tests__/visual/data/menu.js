@@ -7,7 +7,7 @@ export default [{
   type: 'link',
   url: '/portfolio',
   title: 'New portfolio',
-  disabled: true
+  disabled: true,
 }, {
   type: 'divider',
 }, {

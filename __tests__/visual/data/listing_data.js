@@ -5,8 +5,8 @@ export default [{
   topics: [
     'Winter',
     'X-Mas',
-    'Presents'
-  ]
+    'Presents',
+  ],
 }, {
   id: '1',
   date: '12/02/2017',
@@ -14,8 +14,8 @@ export default [{
   topics: [
     'Presents',
     'Candels',
-    'Food'
-  ]
+    'Food',
+  ],
 }, {
   id: '2',
   date: '12/03/2017',
@@ -23,6 +23,6 @@ export default [{
   topics: [
     'Beverages',
     'Fireworks',
-    'Tree'
-  ]
+    'Tree',
+  ],
 }]

@@ -1,14 +1,14 @@
 import {
   create,
-  SheetsRegistry
+  SheetsRegistry,
 } from 'jss'
 import {
   jssPreset,
-  createMuiTheme
+  createMuiTheme,
 } from 'material-ui/styles'
 import {
   blueGrey,
-  orange
+  orange,
 } from 'material-ui/colors'
 import createGenerateClassName from 'material-ui/styles/createGenerateClassName'
 
@@ -23,7 +23,7 @@ const theme = createMuiTheme({
       light: orange[300],
       main: orange[500],
       dark: orange[700],
-    }
+    },
   },
 
 })

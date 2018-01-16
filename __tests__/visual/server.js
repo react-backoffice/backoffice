@@ -1,8 +1,10 @@
 const path = require('path')
-
 const express = require('express')
+const Log = require('log')
 
-const port = process.env.PORT || 9030;
+const log = new Log('info')
+
+const port = process.env.PORT || 9030
 
 class App {
   constructor() {
@@ -18,9 +20,7 @@ class App {
 
     router.get(
       '/*',
-      (req, res) => res.sendFile(
-        path.resolve(__dirname, './index.html')
-      )
+      (req, res) => res.sendFile(path.resolve(__dirname, './index.html')),
     )
 
     // Use the router
@@ -32,8 +32,8 @@ const app = new App().express
 
 app.listen(port, (err) => {
   if (err) {
-    return console.log(err);
+    return log.error(err)
   }
 
-  return console.log(`server is listening on ${port}`);
-});
+  return log.info(`server is listening on ${port}`)
+})

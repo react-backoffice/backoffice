@@ -5,7 +5,7 @@ import Button from 'material-ui/Button'
 import BackIcon from 'material-ui-icons/KeyboardArrowLeft'
 import withStyles from 'material-ui/styles/withStyles'
 
-const styles = (theme) => ({
+const styles = theme => ({
   leftIcon: {
     marginRight: theme.spacing.unit,
   },

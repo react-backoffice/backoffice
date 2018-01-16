@@ -7,11 +7,14 @@
   "scripts": {
     "start": "concurrently \"yarn server\" \"yarn js --watch\"",
     "server": "node __tests__/visual/server.js",
-    "js": "webpack"
+    "js": "webpack",
+    "js:lint": "eslint .",
+    "lint": "yarn js:lint"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "isemail": "^3.0.0",
+    "jss": "^9.5.1",
     "keycode": "^2.1.9",
     "material-ui": "^1.0.0-beta.23",
     "material-ui-icons": "^1.0.0-beta.17",
@@ -33,7 +36,13 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "concurrently": "^3.5.1",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
     "express": "^4.16.2",
+    "log": "^1.4.0",
     "webpack": "^3.10.0"
   }
 }

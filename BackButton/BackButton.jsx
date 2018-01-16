@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 
 import BackButtonBranch from './BackButtonBranch'
 
-const withBackButton = (Component) => class extends React.Component {
+const withBackButton = Component => class extends React.Component {
   constructor() {
     super()
 
@@ -17,7 +17,7 @@ const withBackButton = (Component) => class extends React.Component {
     history.push(url)
   }
 
-  render () {
+  render() {
     return (
       <Component
         {...this.props}
@@ -31,6 +31,7 @@ const BackButton = withBackButton(BackButtonBranch)
 
 BackButton.propTypes = {
   url: PropTypes.string.isRequired,
+  history: PropTypes.object.isRequired,
 }
 
 export default withRouter(BackButton)

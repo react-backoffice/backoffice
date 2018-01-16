@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Chip from 'material-ui/Chip'
 import Icon from 'material-ui-icons/Visibility'
 
 export default [{
@@ -71,7 +70,7 @@ export default [{
       id: 'nested-text',
       title: 'Nested Text',
       type: 'text',
-      iconEnd: (<Icon />)
+      iconEnd: (<Icon />),
     }],
   }, {
     id: 'email',
