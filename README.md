@@ -1,4 +1,4 @@
-# Backoffice
+![](.presentational/header.png)
 
 Backoffice is a Framework based on [Material UI](https://material-ui-next.com), a Material UI
 React implementation that provides a couple of components you might want to use in a backoffice app.
