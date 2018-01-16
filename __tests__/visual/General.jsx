@@ -3,7 +3,7 @@ import Typography from 'material-ui/Typography'
 import Button from 'material-ui/Button/Button'
 
 import CookieInfo from '../../CookieInfo'
-import Confirm from '../../Confirm/Confirm'
+import Confirm from '../../Confirm'
 
 class General extends React.Component {
   constructor() {
