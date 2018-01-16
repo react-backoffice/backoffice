@@ -7,6 +7,13 @@ import Dialog, {
   DialogContentText,
   DialogTitle,
 } from 'material-ui/Dialog'
+import withStyles from 'material-ui/styles/withStyles'
+
+const styles = (theme) => ({
+  primaryButton: {
+    color: theme.palette.primary.dark,
+  },
+})
 
 const ConfirmBranch = ({
   title,
@@ -16,6 +23,7 @@ const ConfirmBranch = ({
   agreeText,
   onClose,
   onConfirm,
+  classes,
 }) => (
   <Dialog
     open={open}
@@ -36,7 +44,12 @@ const ConfirmBranch = ({
       <Button onClick={onClose} color="primary">
         {disagreeText}
       </Button>
-      <Button onClick={onConfirm} color="primary" autoFocus>
+      <Button
+        onClick={onConfirm}
+        color="primary"
+        autoFocus
+        className={classes.primaryButton}
+      >
         {agreeText}
       </Button>
     </DialogActions>
@@ -51,6 +64,7 @@ ConfirmBranch.propTypes = {
   disagreeText: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
   onConfirm: PropTypes.func.isRequired,
+  classes: PropTypes.object.isRequired,
 }
 
-export default ConfirmBranch
+export default withStyles(styles)(ConfirmBranch)
