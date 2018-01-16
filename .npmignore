@@ -1,0 +1,6 @@
+__tests__/
+.presentational/
+.eslintignore
+.eslintrc.js
+.travis.yml
+webpack.config.js
