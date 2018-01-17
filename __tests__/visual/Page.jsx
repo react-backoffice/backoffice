@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 import Typography from 'material-ui/Typography'
+import withStyles from 'material-ui/styles/withStyles'
 
 import Home from '../../Home'
 import homeData from './data/home'
@@ -19,18 +21,22 @@ import BackButton from '../../BackButton'
 
 const noop = () => {}
 
-const Page = props => (
+const styles = theme => ({
+  headline: {
+    marginTop: theme.spacing.unit * 4,
+  },
+})
+
+const Page = ({ classes, ...props }) => (
   <Fragment>
-    <BackButton url="/root" />
     <Home
       data={homeData}
       {...props}
     />
-    <Menu
-      data={menuData}
-      redirectTo={noop}
-      {...props}
-    />
+
+    <Typography type="display1" className={classes.headline}>
+      Listing
+    </Typography>
 
     <Listing
       title="Christmas Time"
@@ -40,6 +46,10 @@ const Page = props => (
       handleClick={noop}
       hasLoader
     />
+
+    <Typography type="display1" className={classes.headline}>
+      Form
+    </Typography>
 
     <Form
       data={{}}
@@ -52,8 +62,27 @@ const Page = props => (
       </Typography>
     </Form>
 
+    <Typography type="display1" className={classes.headline}>
+      Menu
+    </Typography>
+
+    <Menu
+      data={menuData}
+      redirectTo={noop}
+      {...props}
+    />
+
     <AddButton handleClick={noop} />
+
+    <Typography type="display1" className={classes.headline}>
+      Back Button
+    </Typography>
+    <BackButton url="/root" />
   </Fragment>
 )
 
-export default Page
+Page.propTypes = {
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
+}
+
+export default withStyles(styles)(Page)

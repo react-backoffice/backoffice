@@ -31,6 +31,10 @@ class General extends React.Component {
           </Typography>
         </CookieInfo>
 
+
+        <Typography type="display1">
+          Confirm
+        </Typography>
         <Button onClick={this.handleOpenDialoge}>Open Dialog</Button>
         <Confirm
           open={this.state.dialogOpen}
