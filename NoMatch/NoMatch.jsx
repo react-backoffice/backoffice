@@ -27,7 +27,7 @@ const NoMatch = ({ classes }) => (
       </Typography>
       <Typography type="display1" paragraph>
         This URL does not exist, sorry. Please start over from
-        the <Link href="/">Dashboard</Link>.
+        the <Link href="/" to="/">Dashboard</Link>.
       </Typography>
     </div>
   </div>
