@@ -39,6 +39,7 @@ You can then use the component within your render logic:
 
 * `fixedHeader: boolean`: Is header fixed?, default `true`
 * `hasHeader: boolean`: Is header included, default `true`
+* `hasCookieInfo: boolean`: Is there a cookieinfo in the project, default: `false`
 
 ### Home
 
@@ -60,6 +61,9 @@ A menu that lists entries
 * `disabled: boolean`, if true, item will not be clickable
 
 ### CookieInfo
+
+Asks the user if they want to obey the fact that you are using cookies. Sets a cookie with the name `cookie_concent` and the value of `true` if the user accepts. Otherwise set to `false`.
+If you use CookieInfo please make sure to set the attribute `hasCookieInfo` to `Base`.
 
 * `buttonText: string`, text to display on the button
 * Internal: `cookieInfoOpen: boolean`, state of the cookieInfo, handled by `Base`, default `false`

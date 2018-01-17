@@ -6,13 +6,19 @@ import { withStyles } from 'material-ui/styles'
 import withRoot from './withRoot'
 import BaseBranch from './BaseBranch'
 
+import Cookie from '../CookieInfo/Cookie'
+
 const withBase = (Component) => class extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
       open: false,
-      cookieInfoOpen: this.getCookie(),
+      cookieInfoOpen: false,
+    }
+
+    if (props.hasCookieInfo && Cookie.getCookie() === undefined) {
+      Cookie.setCookie(false)
     }
 
     this.handleCookieInfoAccept = this.handleCookieInfoAccept.bind(this)
@@ -22,15 +28,10 @@ const withBase = (Component) => class extends React.Component {
     this.onClick = this.onClick.bind(this)
   }
 
-  getCookie() {
-    const value = '; ' + document.cookie
-    const parts = value.split('; cookie_concent=')
-
-    return !(
-      parts.length != 2 ?
-        undefined :
-        parts.pop().split(';').shift()
-    )
+  componentWillMount() {
+    this.setState({
+      cookieInfoOpen: this.props.hasCookieInfo && Cookie.getCookie() === false,
+    })
   }
 
   handleDrawerOpen() {
@@ -84,11 +85,13 @@ Base.propTypes = {
   rightContent: PropTypes.element,
   fixedHeader: PropTypes.bool,
   hasHeader: PropTypes.bool,
+  hasCookieInfo: PropTypes.bool,
 }
 
 Base.defaultProps = {
   fixedHeader: true,
   hasHeader: true,
+  hasCookieInfo: false,
 }
 
 export default withRoot(Base)

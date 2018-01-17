@@ -25,7 +25,7 @@ class General extends React.Component {
   render() {
     return (
       <Fragment>
-        <CookieInfo>
+        <CookieInfo {...this.props}>
           <Typography type="body1">
             This is the cookie info
           </Typography>

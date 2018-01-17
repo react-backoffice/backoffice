@@ -23,6 +23,7 @@ let App = () => (
           <Base
             title="This is Backoffice"
             menuData={menuData}
+            hasCookieInfo
           >
             <Page {...props} />
             <General {...props} />

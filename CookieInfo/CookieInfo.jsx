@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 import withStyles from 'material-ui/styles/withStyles'
-import Button from 'material-ui/Button/Button';
+import Button from 'material-ui/Button/Button'
+
+import Cookie from './Cookie'
 
 const styles = (theme) => ({
   root: {
@@ -44,17 +46,10 @@ class CookieInfo extends React.Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  setCookie() {
-    const exdate = new Date()
-    exdate.setDate(exdate.getDate() + 365)
-
-    document.cookie = `cookie_concent=1;expires=${exdate.toUTCString()};path=/`
-  }
-
   handleClick() {
     this.props.onCookieInfoAccept()
 
-    this.setCookie()
+    Cookie.setCookie(true)
   }
 
   render() {
