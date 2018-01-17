@@ -41,7 +41,7 @@ MenuItem.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
-  icon: PropTypes.node,
+  icon: PropTypes.func,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 

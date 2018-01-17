@@ -67,7 +67,7 @@ HomeCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   handleClick: PropTypes.func.isRequired,
-  icon: PropTypes.node,
+  icon: PropTypes.func,
   disabled: PropTypes.bool,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }

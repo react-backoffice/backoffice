@@ -1,3 +1,5 @@
+import BugIcon from 'material-ui-icons/BugReport'
+
 export default [{
   type: 'link',
   url: '/',
@@ -14,5 +16,5 @@ export default [{
   type: 'link',
   url: '/bug',
   title: 'Report a bug',
-  icon: null,
+  icon: BugIcon,
 }]
