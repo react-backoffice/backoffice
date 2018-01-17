@@ -9,6 +9,7 @@ import Typography from 'material-ui/Typography'
 import IconButton from 'material-ui/IconButton'
 
 import DeleteIcon from 'material-ui-icons/Delete'
+import ListingSearch from './ListingSearch'
 
 const toolbarStyles = theme => ({
   root: {
@@ -35,7 +36,12 @@ const toolbarStyles = theme => ({
   },
 })
 
-const ListingToolbar = ({ title, numSelected, classes }) => (
+const ListingToolbar = ({
+  title,
+  numSelected,
+  onFilter,
+  classes,
+}) => (
   <Toolbar
     className={classNames(classes.root, {
         [classes.highlight]: numSelected > 0,
@@ -44,27 +50,31 @@ const ListingToolbar = ({ title, numSelected, classes }) => (
     <div className={classes.title}>
       {numSelected > 0 ? (
         <Typography type="subheading">{numSelected} selected</Typography>
-        ) : (
-          <Typography type="title">{title}</Typography>
-        )}
+      ) : (
+        <Typography type="title">{title}</Typography>
+      )}
     </div>
     <div className={classes.spacer} />
     <div className={classes.actions}>
+
       {numSelected > 0 ? (
         <Tooltip title="Delete">
           <IconButton aria-label="Delete">
             <DeleteIcon />
           </IconButton>
         </Tooltip>
-        ) : ''}
+      ) : (
+        <ListingSearch onFilter={onFilter} />
+      )}
     </div>
   </Toolbar>
 )
 
 ListingToolbar.propTypes = {
   title: PropTypes.string.isRequired,
-  classes: PropTypes.objectOf(PropTypes.string).isRequired,
   numSelected: PropTypes.number.isRequired,
+  onFilter: PropTypes.func.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 export default withStyles(toolbarStyles)(ListingToolbar)

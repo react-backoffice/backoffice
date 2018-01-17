@@ -9,9 +9,11 @@ export default [{
   id: 'title',
   disablePadding: true,
   label: 'Title',
+  searchable: true,
 }, {
   id: 'topics',
   disablePadding: true,
   label: 'Topics',
   transformContent: data => data.join(', '),
+  searchable: true,
 }]

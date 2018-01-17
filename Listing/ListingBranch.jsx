@@ -47,10 +47,15 @@ const ListingBranch = ({
   handleChangePage,
   handleChangeRowsPerPage,
   isSelected,
+  onFilter,
   hasLoader,
 }) => (
   <Paper className={classes.root}>
-    <ListingToolbar title={title} numSelected={selected.length} />
+    <ListingToolbar
+      title={title}
+      numSelected={selected.length}
+      onFilter={onFilter}
+    />
 
     <div className={classes.tableWrapper}>
 
@@ -118,6 +123,7 @@ ListingBranch.propTypes = {
   handleChangePage: PropTypes.func.isRequired,
   handleChangeRowsPerPage: PropTypes.func.isRequired,
   isSelected: PropTypes.func,
+  onFilter: PropTypes.func,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
@@ -129,6 +135,7 @@ ListingBranch.defaultProps = {
   rowsPerPage: 10,
   rowsPerPageOptions: [10, 25, 50, 100],
   page: 0,
+  onFilter: () => {},
   isSelected: () => {},
 }
 

@@ -4,7 +4,7 @@ import keycode from 'keycode'
 
 import ListingBranch from './ListingBranch'
 
-const withListing = Component => class extends React.Component {
+const withListing = Component => class Listing extends React.Component {
   static propTypes = {
     orderBy: PropTypes.string.isRequired,
     hasLoader: PropTypes.bool,
@@ -14,6 +14,32 @@ const withListing = Component => class extends React.Component {
 
   static defaultProps = {
     hasLoader: false,
+  }
+
+  static getSearchableHeaders(headers) {
+    return headers
+      .filter(header => header.searchable)
+      .map(header => header.id)
+  }
+
+  static filterElement(element, value, searchables) {
+    const matches = Object.keys(element).map((key) => {
+      if (searchables.indexOf(key) > -1) {
+        let elementValue = element[key]
+
+        if (elementValue.constructor === Array) {
+          elementValue = elementValue.join(' ')
+        }
+
+        if (elementValue.toLowerCase().indexOf(value.toLowerCase()) > -1) {
+          return true
+        }
+      }
+
+      return false
+    })
+
+    return matches.indexOf(true) > -1
   }
 
   constructor(props, context) {
@@ -26,6 +52,8 @@ const withListing = Component => class extends React.Component {
       data: [],
       page: 0,
       rowsPerPage: 10,
+      searchable: [],
+      origData: null,
     }
 
     this.handleRequestSort = this.handleRequestSort.bind(this)
@@ -35,11 +63,13 @@ const withListing = Component => class extends React.Component {
     this.handleChangeRowsPerPage = this.handleChangeRowsPerPage.bind(this)
     this.handleChangePage = this.handleChangePage.bind(this)
     this.isSelected = this.isSelected.bind(this)
+    this.handleFilter = this.handleFilter.bind(this)
   }
 
   componentWillMount() {
     this.setState({
       data: this.sortData(this.props.data),
+      searchable: Listing.getSearchableHeaders(this.props.headers),
     })
   }
 
@@ -49,6 +79,7 @@ const withListing = Component => class extends React.Component {
     this.setState({
       data,
       orderBy: nextProps.orderBy,
+      searchable: Listing.getSearchableHeaders(nextProps.headers),
     })
   }
 
@@ -147,6 +178,34 @@ const withListing = Component => class extends React.Component {
     })
   }
 
+  handleFilter(value) {
+    const { searchable, origData, data } = this.state
+    let searchableData
+
+    if (origData && origData.constructor === Array) {
+      searchableData = [...origData]
+    } else {
+      searchableData = [...data]
+    }
+
+    if (!value) {
+      this.setState({
+        data: searchableData,
+      })
+
+      return
+    }
+
+    const newData = searchableData.filter(element => (
+      Listing.filterElement(element, value, searchable)
+    ))
+
+    this.setState({
+      data: newData,
+      origData: searchableData,
+    })
+  }
+
   isSelected(id) {
     return this.state.selected.indexOf(id) !== -1
   }
@@ -162,6 +221,7 @@ const withListing = Component => class extends React.Component {
         handleCheckClick={this.handleCheckClick}
         handleChangeRowsPerPage={this.handleChangeRowsPerPage}
         handleChangePage={this.handleChangePage}
+        onFilter={this.handleFilter}
         isSelected={this.isSelected}
       />
     )
