@@ -7,7 +7,7 @@ import Button from 'material-ui/Button/Button'
 
 import Cookie from './Cookie'
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     position: 'fixed',
     top: 0,
@@ -53,7 +53,12 @@ class CookieInfo extends React.Component {
   }
 
   render() {
-    const { cookieInfoOpen, buttonText, classes, children } = this.props
+    const {
+      cookieInfoOpen,
+      buttonText,
+      classes,
+      children,
+    } = this.props
     const className = classNames({
       [classes.root]: true,
       [classes.rootActive]: cookieInfoOpen,
@@ -74,17 +79,17 @@ class CookieInfo extends React.Component {
 }
 
 CookieInfo.propTypes = {
-  cookieInfoOpen: PropTypes.bool.isRequired,
-  onCookieInfoAccept: PropTypes.func.isRequired,
-  buttonText: PropTypes.string.isRequired,
-  children: PropTypes.object.isRequired,
-  classes: PropTypes.object.isRequired,
+  cookieInfoOpen: PropTypes.bool,
+  onCookieInfoAccept: PropTypes.func,
+  buttonText: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 CookieInfo.defaultProps = {
   cookieInfoOpen: false,
   onCookieInfoAccept: () => {},
-  buttonText: 'Accept'
+  buttonText: 'Accept',
 }
 
 export default withStyles(styles)(CookieInfo)

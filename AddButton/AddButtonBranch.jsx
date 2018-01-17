@@ -13,23 +13,21 @@ const styles = theme => ({
   },
 })
 
-const AddButton = ({ handleClick, classes }) => {
-  return (
-    <Button
-      fab
-      color="accent"
-      aria-label="add"
-      className={classes.button}
-      onClick={handleClick}
-    >
-      <AddIcon />
-    </Button>
-  )
-}
+const AddButton = ({ handleClick, classes }) => (
+  <Button
+    fab
+    color="accent"
+    aria-label="add"
+    className={classes.button}
+    onClick={handleClick}
+  >
+    <AddIcon />
+  </Button>
+)
 
 AddButton.propTypes = {
   handleClick: PropTypes.func.isRequired,
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 export default withStyles(styles)(AddButton)

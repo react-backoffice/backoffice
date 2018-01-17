@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 import Typography from 'material-ui/Typography'
 import withStyles from 'material-ui/styles/withStyles'
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     display: 'flex',
     justifyContent: 'center',
@@ -15,7 +15,7 @@ const styles = (theme) => ({
     paddingRight: theme.spacing.unit * 3,
     marginLeft: 'auto',
     marginRight: 'auto',
-    height: 'calc(100vh - 104px)'
+    height: 'calc(100vh - 104px)',
   },
 })
 
@@ -27,14 +27,14 @@ const NoMatch = ({ classes }) => (
       </Typography>
       <Typography type="display1" paragraph>
         This URL does not exist, sorry. Please start over from
-        the <Link to="/">Dashboard</Link>.
+        the <Link href="/">Dashboard</Link>.
       </Typography>
     </div>
   </div>
 )
 
 NoMatch.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 export default withStyles(styles)(NoMatch)

@@ -4,7 +4,11 @@ import { withRouter } from 'react-router-dom'
 
 import HomeBranch from './HomeBranch'
 
-const withHome = (Component) => class extends React.Component {
+const withHome = Component => class extends React.Component {
+  static propTypes = {
+    history: PropTypes.objectOf(PropTypes.any).isRequired,
+  }
+
   constructor() {
     super()
 
@@ -26,9 +30,5 @@ const withHome = (Component) => class extends React.Component {
 }
 
 const Home = withHome(HomeBranch)
-
-Home.propTypes = {
-  history: PropTypes.object.isRequired
-}
 
 export default withRouter(Home)

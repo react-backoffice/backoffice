@@ -1,10 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import keycode from 'keycode'
 
 import ListingBranch from './ListingBranch'
 
-const withListing = (Component) => class extends React.Component {
+const withListing = Component => class extends React.Component {
+  static propTypes = {
+    orderBy: PropTypes.string.isRequired,
+    hasLoader: PropTypes.bool,
+    data: PropTypes.arrayOf(PropTypes.object).isRequired,
+    headers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }
+
+  static defaultProps = {
+    hasLoader: false,
+  }
+
   constructor(props, context) {
     super(props, context)
 
@@ -14,7 +25,7 @@ const withListing = (Component) => class extends React.Component {
       selected: [],
       data: [],
       page: 0,
-      rowsPerPage: 10
+      rowsPerPage: 10,
     }
 
     this.handleRequestSort = this.handleRequestSort.bind(this)
@@ -28,27 +39,8 @@ const withListing = (Component) => class extends React.Component {
 
   componentWillMount() {
     this.setState({
-      data: this.sortData(this.props.data)
+      data: this.sortData(this.props.data),
     })
-  }
-
-  sortData(data) {
-    const { orderBy } = this.state
-    const { headers } = this.props
-    const orderByHeader = headers.filter((header) => header.id === orderBy)[0]
-    let transformData = orderByHeader.transformData
-
-    if (typeof transformData !== 'function') {
-      transformData = (data) => data
-    }
-
-    const transformedData = data.map((element) => {
-      element[orderBy] = transformData(element[orderBy])
-
-      return element
-    })
-
-    return transformedData.sort((a, b) => (a[orderBy] < b[orderBy] ? -1 : 1))
   }
 
   componentWillReceiveProps(nextProps) {
@@ -58,6 +50,26 @@ const withListing = (Component) => class extends React.Component {
       data,
       orderBy: nextProps.orderBy,
     })
+  }
+
+  sortData(data) {
+    const { orderBy } = this.state
+    const { headers } = this.props
+    const orderByHeader = headers.filter(header => header.id === orderBy)[0]
+    let { transformData } = orderByHeader
+
+    if (typeof transformData !== 'function') {
+      transformData = values => values
+    }
+
+    const transformedData = data.map((element) => {
+      const newElement = element
+      newElement[orderBy] = transformData(element[orderBy])
+
+      return newElement
+    })
+
+    return transformedData.sort((a, b) => (a[orderBy] < b[orderBy] ? -1 : 1))
   }
 
   handleRequestSort(event, property) {
@@ -76,21 +88,21 @@ const withListing = (Component) => class extends React.Component {
     this.setState({
       data,
       order,
-      orderBy
+      orderBy,
     })
   }
 
   handleSelectAllClick(event, checked) {
     if (checked) {
       this.setState({
-        selected: this.state.data.map(n => n.id)
+        selected: this.state.data.map(n => n.id),
       })
 
       return
     }
 
     this.setState({
-      selected: []
+      selected: [],
     })
   }
 
@@ -119,24 +131,24 @@ const withListing = (Component) => class extends React.Component {
     }
 
     this.setState({
-      selected: newSelected
+      selected: newSelected,
     })
   }
 
   handleChangePage(event, page) {
     this.setState({
-      page
+      page,
     })
   }
 
   handleChangeRowsPerPage(event) {
     this.setState({
-      rowsPerPage: event.target.value
+      rowsPerPage: event.target.value,
     })
   }
 
   isSelected(id) {
-    return this.state.selected.indexOf(id) !== -1;
+    return this.state.selected.indexOf(id) !== -1
   }
 
   render() {
@@ -149,20 +161,11 @@ const withListing = (Component) => class extends React.Component {
         handleKeyDown={this.handleKeyDown}
         handleCheckClick={this.handleCheckClick}
         handleChangeRowsPerPage={this.handleChangeRowsPerPage}
-        handleChangePage= {this.handleChangePage}
+        handleChangePage={this.handleChangePage}
         isSelected={this.isSelected}
       />
     )
   }
 }
 
-const Listing = withListing(ListingBranch)
-
-Listing.propTypes = {
-  orderBy: PropTypes.string.isRequired,
-  hasLoader: PropTypes.bool,
-  data: PropTypes.arrayOf(PropTypes.object).isRequired,
-  headers: PropTypes.arrayOf(PropTypes.object).isRequired,
-}
-
-export default Listing
+export default withListing(ListingBranch)

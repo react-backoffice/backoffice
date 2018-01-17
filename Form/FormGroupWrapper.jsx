@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import withStyles from 'material-ui/styles/withStyles'
 import Paper from 'material-ui/Paper'
 
-const styles = (theme) => ({
+const styles = theme => ({
   group: {
     marginTop: theme.spacing.unit,
     marginBottom: theme.spacing.unit,
@@ -20,35 +20,49 @@ const styles = (theme) => ({
   },
 })
 
-const FormGroupWrapper = ({ isPaper, isVisible, classes, children, ...rest }) => {
+const FormGroupWrapper = ({
+  isPaper,
+  isVisible,
+  classes,
+  children,
+  ...rest
+}) => {
   if (isPaper) {
     return (
-      <Paper className={classNames(classes.group, {
+      <Paper
+        className={classNames(classes.group, {
         [classes.hidden]: !isVisible,
-      })} {...rest}>
+      })}
+        {...rest}
+      >
         {children}
       </Paper>
     )
   }
 
   return (
-    <div className={classNames(classes.groupIntegrated, {
+    <div
+      className={classNames(classes.groupIntegrated, {
       [classes.hidden]: !isVisible,
-    })} {...rest}>
+    })}
+      {...rest}
+    >
       {children}
     </div>
   )
 }
 
 FormGroupWrapper.propTypes = {
-  isPaper: PropTypes.bool.isRequired,
-  isVisible: PropTypes.bool.isRequired,
-  classes: PropTypes.object.isRequired,
+  isPaper: PropTypes.bool,
+  isVisible: PropTypes.bool,
+  children: PropTypes.node,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 FormGroupWrapper.defaultProps = {
   isPaper: true,
   isVisible: true,
+  children: null,
 }
 
 export default withStyles(styles)(FormGroupWrapper)

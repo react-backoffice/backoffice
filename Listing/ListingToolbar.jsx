@@ -7,7 +7,6 @@ import Toolbar from 'material-ui/Toolbar'
 import Tooltip from 'material-ui/Tooltip'
 import Typography from 'material-ui/Typography'
 import IconButton from 'material-ui/IconButton'
-import Checkbox from 'material-ui/Checkbox'
 
 import DeleteIcon from 'material-ui-icons/Delete'
 
@@ -36,37 +35,35 @@ const toolbarStyles = theme => ({
   },
 })
 
-let ListingToolbar = ({ title, numSelected, classes }) => {
-  return (
-    <Toolbar
-      className={classNames(classes.root, {
+const ListingToolbar = ({ title, numSelected, classes }) => (
+  <Toolbar
+    className={classNames(classes.root, {
         [classes.highlight]: numSelected > 0,
       })}
-    >
-      <div className={classes.title}>
-        {numSelected > 0 ? (
-          <Typography type="subheading">{numSelected} selected</Typography>
+  >
+    <div className={classes.title}>
+      {numSelected > 0 ? (
+        <Typography type="subheading">{numSelected} selected</Typography>
         ) : (
           <Typography type="title">{title}</Typography>
         )}
-      </div>
-      <div className={classes.spacer} />
-      <div className={classes.actions}>
-        {numSelected > 0 ? (
-          <Tooltip title="Delete">
-            <IconButton aria-label="Delete">
-              <DeleteIcon />
-            </IconButton>
-          </Tooltip>
+    </div>
+    <div className={classes.spacer} />
+    <div className={classes.actions}>
+      {numSelected > 0 ? (
+        <Tooltip title="Delete">
+          <IconButton aria-label="Delete">
+            <DeleteIcon />
+          </IconButton>
+        </Tooltip>
         ) : ''}
-      </div>
-    </Toolbar>
-  )
-}
+    </div>
+  </Toolbar>
+)
 
 ListingToolbar.propTypes = {
   title: PropTypes.string.isRequired,
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
   numSelected: PropTypes.number.isRequired,
 }
 

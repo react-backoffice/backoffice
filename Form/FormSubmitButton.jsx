@@ -7,7 +7,7 @@ import { CircularProgress } from 'material-ui/Progress'
 import Button from 'material-ui/Button'
 import green from 'material-ui/colors/green'
 
-const styles = (theme) => ({
+const styles = theme => ({
   fixed: {
     position: 'fixed',
     right: theme.spacing.unit * 5,
@@ -49,7 +49,7 @@ const FormSubmitButton = ({
         disabled={disabled}
         onClick={onSubmit}
       >
-      {children}
+        {children}
       </Button>
 
       {loading ? (
@@ -64,13 +64,15 @@ FormSubmitButton.propTypes = {
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
   fixed: PropTypes.bool,
-  classes: PropTypes.object.isRequired,
+  children: PropTypes.node,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 FormSubmitButton.defaultProps = {
   disabled: false,
   loading: false,
   fixed: false,
+  children: null,
 }
 
 export default withStyles(styles)(FormSubmitButton)

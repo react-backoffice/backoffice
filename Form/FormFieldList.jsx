@@ -3,17 +3,28 @@ import PropTypes from 'prop-types'
 
 import FormFieldListBranch from './FormFieldListBranch'
 
-const replace = (string, search, replace) => {
-  if (!search) {
+const replace = (string, searchValue, replaceValue) => {
+  if (!searchValue) {
     return string
   }
 
-  search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')
+  const search = searchValue.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')
 
-  return string.replace(new RegExp(search, 'gi'), replace)
+  return string.replace(new RegExp(search, 'gi'), replaceValue)
 }
 
-const withFormFieldList = (Component) => class extends React.Component {
+const withFormFieldList = Component => class extends React.Component {
+  static propTypes = {
+    listItems: PropTypes.arrayOf(PropTypes.string),
+    completeFrom: PropTypes.arrayOf(PropTypes.string),
+    handleChange: PropTypes.func.isRequired,
+  }
+
+  static defaultProps = {
+    listItems: [],
+    completeFrom: [],
+  }
+
   constructor(props) {
     super(props)
 
@@ -33,7 +44,7 @@ const withFormFieldList = (Component) => class extends React.Component {
     this.handleKeyPress = this.handleKeyPress.bind(this)
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.setState({
       listItems: this.props.listItems,
     })
@@ -56,13 +67,11 @@ const withFormFieldList = (Component) => class extends React.Component {
     const { listItems } = this.state
     const lowerValue = value.toLowerCase()
 
-    let availableOptions = completeFrom.filter((option) => {
-      return listItems.indexOf(option) === -1
-    })
+    let availableOptions = completeFrom.filter(option => listItems.indexOf(option) === -1)
 
-    availableOptions = availableOptions.filter((option) => {
-      return option.toLowerCase().indexOf(lowerValue) > -1
-    })
+    availableOptions = availableOptions.filter(option => (
+      option.toLowerCase().indexOf(lowerValue) > -1
+    ))
 
     availableOptions = availableOptions.map((option) => {
       const text = replace(option, lowerValue, `<b>${value}</b>`)
@@ -70,7 +79,7 @@ const withFormFieldList = (Component) => class extends React.Component {
       return (
         <span
           dangerouslySetInnerHTML={{ __html: text }}
-        ></span>
+        />
       )
     })
 
@@ -80,7 +89,7 @@ const withFormFieldList = (Component) => class extends React.Component {
   handleChange(id) {
     return (event) => {
       const parentFunction = this.props.handleChange(id)
-      const value = event.target.value
+      const { value } = event.target
 
       this.setState({
         value,
@@ -93,7 +102,7 @@ const withFormFieldList = (Component) => class extends React.Component {
   }
 
   handleClick(option) {
-    return (event) => {
+    return () => {
       this.setState({
         listItems: [...this.state.listItems, option],
         dirty: true,
@@ -111,7 +120,7 @@ const withFormFieldList = (Component) => class extends React.Component {
   }
 
   handleDelete(option) {
-    return (event) => {
+    return () => {
       const listItems = [...this.state.listItems]
       const index = listItems.indexOf(option)
 
@@ -133,7 +142,7 @@ const withFormFieldList = (Component) => class extends React.Component {
       this.setState({
         listItems: [...listItems, value],
         dirty: true,
-        value: ''
+        value: '',
       })
     }
   }
@@ -154,15 +163,5 @@ const withFormFieldList = (Component) => class extends React.Component {
 }
 
 const FormFieldList = withFormFieldList(FormFieldListBranch)
-
-FormFieldList.propTypes = {
-  listItems: PropTypes.arrayOf(PropTypes.string).isRequired,
-  completeFrom: PropTypes.arrayOf(PropTypes.string).isRequired,
-}
-
-FormFieldList.defaultProps = {
-  listItems: [],
-  completeFrom: [],
-}
 
 export default FormFieldList

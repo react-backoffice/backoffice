@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   TableCell,
   TableRow,
@@ -7,21 +8,29 @@ import Checkbox from 'material-ui/Checkbox'
 
 
 class ListingLine extends React.Component {
+  static propTypes = {
+    headers: PropTypes.arrayOf(PropTypes.object).isRequired,
+    data: PropTypes.objectOf(PropTypes.any).isRequired,
+    handleClick: PropTypes.func.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    handleKeyDown: PropTypes.func.isRequired,
+    handleCheckClick: PropTypes.func.isRequired,
+  }
   renderCells(handleClick) {
     const { headers, data } = this.props
 
-    return headers.map((header, index) => {
+    return headers.map((header) => {
       const content = data[header.id]
-      let transformContent = header.transformContent
+      let { transformContent } = header
 
       if (typeof transformContent !== 'function') {
-        transformContent = (content) => content
+        transformContent = contentData => contentData
       }
 
       return (
         <TableCell
-          key={`${header.id}.${index}`}
-          padding={header.disablePadding ? "none" : "default"}
+          key={`header-${header.id}`}
+          padding={header.disablePadding ? 'none' : 'default'}
           numeric={header.numeric}
           onClick={() => handleClick(data.id)}
         >
@@ -38,7 +47,6 @@ class ListingLine extends React.Component {
       isSelected,
       handleKeyDown,
       handleCheckClick,
-      classes
     } = this.props
 
     return (
@@ -52,7 +60,7 @@ class ListingLine extends React.Component {
       >
         <TableCell
           padding="checkbox"
-          onClick={event => handleCheckClick(data.id)}
+          onClick={() => handleCheckClick(data.id)}
         >
           <Checkbox checked={isSelected} />
         </TableCell>

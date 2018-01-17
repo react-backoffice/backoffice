@@ -14,16 +14,14 @@ import listingHeaders from './data/listing_headers'
 import Form from '../../Form'
 import formData from './data/form'
 
-import Header from '../../Header'
-import Drawer from '../../Drawer'
 import AddButton from '../../AddButton'
 import BackButton from '../../BackButton'
 
 const noop = () => {}
 
-const Page = (props) => (
+const Page = props => (
   <Fragment>
-    <BackButton url={'/root'} />
+    <BackButton url="/root" />
     <Home
       data={homeData}
       {...props}
@@ -40,7 +38,7 @@ const Page = (props) => (
       headers={listingHeaders}
       orderBy="date"
       handleClick={noop}
-      hasLoader={true}
+      hasLoader
     />
 
     <Form

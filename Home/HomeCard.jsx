@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 import { withStyles } from 'material-ui/styles'
-import Card, { CardActions, CardContent } from 'material-ui/Card'
+import Card, { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
-import Avatar from 'material-ui/Avatar';
+import Avatar from 'material-ui/Avatar'
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     cursor: 'pointer',
   },
@@ -26,7 +26,7 @@ const styles = (theme) => ({
     opacity: 0.75,
     pointerEvents: 'none',
     filter: 'grayscale(30%)',
-  }
+  },
 })
 
 const HomeCard = ({
@@ -35,7 +35,7 @@ const HomeCard = ({
   handleClick,
   icon: Icon,
   disabled,
-  classes
+  classes,
 }) => {
   const rootClasses = classNames({
     [classes.root]: true,
@@ -67,12 +67,14 @@ HomeCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   handleClick: PropTypes.func.isRequired,
-  icon: PropTypes.func,
-  disabled: PropTypes.bool.isRequired,
-  classes: PropTypes.object.isRequired,
+  icon: PropTypes.node,
+  disabled: PropTypes.bool,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 HomeCard.defaultProps = {
+  description: null,
+  icon: null,
   disabled: false,
 }
 

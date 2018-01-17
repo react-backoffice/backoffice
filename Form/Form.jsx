@@ -1,12 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withRouter } from 'react-router'
+import { withRouter } from 'react-router-dom'
 
 import FormBranch from './FormBranch'
 
-const withForm = (Component) => class extends React.Component {
+const withForm = Component => class extends React.Component {
+  static propTypes = {
+    form: PropTypes.arrayOf(PropTypes.object).isRequired,
+    data: PropTypes.objectOf(PropTypes.any).isRequired,
+    onDataChanged: PropTypes.func,
+    onSubmit: PropTypes.func.isRequired,
+    submitText: PropTypes.string,
+    fixedSubmit: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    onDataChanged: () => {},
+    submitText: 'Save',
+    fixedSubmit: false,
+  }
+
   constructor(props, defaultProps) {
-    super(props, defaultProps);
+    super(props, defaultProps)
 
     this.state = {
       data: {},
@@ -21,13 +36,13 @@ const withForm = (Component) => class extends React.Component {
 
   componentWillMount() {
     this.setState({
-      data: this.props.data
+      data: this.props.data,
     })
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      data: nextProps.data
+      data: nextProps.data,
     })
   }
 
@@ -38,7 +53,7 @@ const withForm = (Component) => class extends React.Component {
   handleSubmit() {
     const {
       data,
-      loading
+      loading,
     } = this.state
 
     if (!loading) {
@@ -87,18 +102,5 @@ const withForm = (Component) => class extends React.Component {
 }
 
 const Form = withForm(FormBranch)
-
-Form.propTypes = {
-  form: PropTypes.arrayOf(PropTypes.object).isRequired,
-  data: PropTypes.object.isRequired,
-  onDataChanged: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
-  submitText: PropTypes.string,
-  fixedSubmit: PropTypes.bool,
-}
-
-Form.defaultProps = {
-  onDataChanged: () => {}
-}
 
 export default withRouter(Form)

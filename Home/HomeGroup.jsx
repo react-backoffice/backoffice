@@ -7,19 +7,18 @@ import Typography from 'material-ui/Typography'
 
 import HomeCard from './HomeCard'
 
-const styles = (theme) => ({
+const styles = theme => ({
   headline: {
     marginTop: theme.spacing.unit * 3,
-    marginBottom: theme.spacing.unit * 2
+    marginBottom: theme.spacing.unit * 2,
   },
 })
 
 const HomeGroup = ({
-  id,
   title,
   cards,
   handleClick,
-  classes
+  classes,
 }) => (
   <div>
     <div className={classes.headline}>
@@ -30,8 +29,8 @@ const HomeGroup = ({
 
     <Grid container>
 
-      {cards ? cards.map((card, index) => (
-        <Grid item xs={12} sm={4} key={`group-card-${card.id}-${index}`}>
+      {cards ? cards.map(card => (
+        <Grid item xs={12} sm={4} key={`group-card-${card.id}`}>
           <HomeCard
             title={card.title}
             description={card.description}
@@ -47,11 +46,10 @@ const HomeGroup = ({
 )
 
 HomeGroup.propTypes = {
-  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   cards: PropTypes.arrayOf(PropTypes.object).isRequired,
   handleClick: PropTypes.func.isRequired,
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 export default withStyles(styles)(HomeGroup)

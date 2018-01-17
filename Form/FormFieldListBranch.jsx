@@ -9,7 +9,7 @@ import Chip from 'material-ui/Chip'
 
 import FormFieldInput from './FormFieldInput'
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     position: 'relative',
     zIndex: 1,
@@ -72,12 +72,13 @@ const FormFieldListBranch = ({
       />
 
       <Paper className={classNames(classes.list, {
-        [classes.listActive]: showMenu && availableOptions.length > 0
-      })}>
+        [classes.listActive]: showMenu && availableOptions.length > 0,
+      })}
+      >
         <List>
-          {availableOptions.slice(0, 10).map((option, index) => (
+          {availableOptions.slice(0, 10).map(option => (
             <ListItem
-              key={`form-field-list-${index}`}
+              key={`form-field-list-${option.toLowerCase().replace(/ /, '')}`}
               button
               onClick={onClick(option)}
             >
@@ -95,12 +96,10 @@ const FormFieldListBranch = ({
 }
 
 FormFieldListBranch.propTypes = {
-  availableOptions: PropTypes.arrayOf(
-    PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object,
-    ])
-  ).isRequired,
+  availableOptions: PropTypes.arrayOf(PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ])).isRequired,
   listItems: PropTypes.arrayOf(PropTypes.string).isRequired,
   showMenu: PropTypes.bool.isRequired,
   renderElement: PropTypes.func,
@@ -109,7 +108,11 @@ FormFieldListBranch.propTypes = {
   onChange: PropTypes.func.isRequired,
   onBlur: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
+}
+
+FormFieldListBranch.defaultProps = {
+  renderElement: () => {},
 }
 
 export default withStyles(styles)(FormFieldListBranch)

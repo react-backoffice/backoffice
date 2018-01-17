@@ -18,32 +18,36 @@ const MenuItem = ({
   title,
   icon: Icon,
   disabled,
-  classes
-}) => {
-  return (
-    <ListItem
-      button
-      onClick={() => redirectTo(url)}
-      className={classNames({
-        [classes.disabled]: disabled
+  classes,
+}) => (
+  <ListItem
+    button
+    onClick={() => redirectTo(url)}
+    className={classNames({
+        [classes.disabled]: disabled,
       })}
-    >
-      {Icon? (
-        <ListItemIcon>
-          <Icon />
-        </ListItemIcon>
+  >
+    {Icon ? (
+      <ListItemIcon>
+        <Icon />
+      </ListItemIcon>
       ) : null}
-      <ListItemText primary={title} />
-    </ListItem>
-  )
-}
+    <ListItemText primary={title} />
+  </ListItem>
+)
 
 MenuItem.propTypes = {
   redirectTo: PropTypes.func.isRequired,
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
-  icon: PropTypes.func,
+  icon: PropTypes.node,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
+}
+
+MenuItem.defaultProps = {
+  disabled: false,
+  icon: null,
 }
 
 export default withStyles(styles)(MenuItem)

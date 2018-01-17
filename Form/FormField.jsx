@@ -1,10 +1,24 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import FormFieldBranch from './FormFieldBranch'
 import * as Validators from './validators'
-import { TYPES } from './constants';
+import { TYPES } from './constants'
 
-const withFormField = (Component) => class extends React.Component {
+const withFormField = Component => class extends React.Component {
+  static propTypes = {
+    type: PropTypes.string,
+    validators: PropTypes.arrayOf(PropTypes.string),
+    required: PropTypes.bool,
+    handleChange: PropTypes.func.isRequired,
+  }
+
+  static defaultProps = {
+    type: 'text',
+    validators: [],
+    required: false,
+  }
+
   constructor(props) {
     super(props)
 
@@ -43,11 +57,11 @@ const withFormField = (Component) => class extends React.Component {
   }
 
   isValid(value) {
-    let { type, validators, required } = this.props
-
-    if (!validators) {
-      validators = []
-    }
+    const {
+      type,
+      validators,
+      required,
+    } = this.props
 
     if (required) {
       validators.push('required')
@@ -61,37 +75,39 @@ const withFormField = (Component) => class extends React.Component {
       return true
     }
 
-    const validatorFunctions = validators.map((validator) => Validators[validator])
+    const validatorFunctions = validators.map(validator => Validators[validator])
     const validState = validatorFunctions.map((validator) => {
       if (typeof validator === 'function') {
         return validator(value)
       }
 
       return true
-    });
+    })
 
     return validState.indexOf(false) === -1
   }
 
   handleChange(fieldId) {
     return ((event) => {
-      let value
+      let valueName
 
       if (event.target) {
-        value = event.target.value
+        valueName = event.target.value
+
+      // eslint-disable-next-line no-underscore-dangle
       } else if (event._isAMomentObject) {
-        value = event.valueOf()
+        valueName = event.valueOf()
       }
 
-      const error = !this.isValid(value)
+      const error = !this.isValid(valueName)
 
       this.setState({
-        value,
+        value: valueName,
         error,
       })
 
-      this.props.handleChange(fieldId, value, error)
-    }).bind(this)
+      this.props.handleChange(fieldId, valueName, error)
+    })
   }
 
   render() {

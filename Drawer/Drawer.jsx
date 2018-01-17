@@ -11,7 +11,7 @@ import Menu from '../Menu'
 
 const drawerWidth = 280
 
-const styles = (theme) => ({
+const styles = theme => ({
   drawerPaper: {
     position: 'relative',
     height: '100%',
@@ -22,7 +22,7 @@ const styles = (theme) => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     padding: '0 8px',
-    height: theme.spacing.unit * 8
+    height: theme.spacing.unit * 8,
   },
 })
 
@@ -31,38 +31,37 @@ const Drawer = ({
   open,
   handleDrawerClose,
   redirectTo,
-  classes
-}) => {
-  return (
-    <MaterialDrawer
-      type="persistent"
-      classes={{
-        paper: classes.drawerPaper,
-      }}
-      anchor="left"
-      open={open}
-    >
-      <div className={classes.drawerInner}>
-        <div className={classes.drawerHeader}>
-          <IconButton onClick={handleDrawerClose}>
-            <ChevronLeftIcon />
-          </IconButton>
-        </div>
-
-        <Divider />
-
-        <Menu data={data} redirectTo={redirectTo} />
+  classes,
+}) => (
+  <MaterialDrawer
+    type="persistent"
+    classes={{
+      paper: classes.drawerPaper,
+    }}
+    anchor="left"
+    open={open}
+  >
+    <div className={classes.drawerInner}>
+      <div className={classes.drawerHeader}>
+        <IconButton onClick={handleDrawerClose}>
+          <ChevronLeftIcon />
+        </IconButton>
       </div>
-    </MaterialDrawer>
-  )
-}
+
+      <Divider />
+
+      <Menu data={data} redirectTo={redirectTo} />
+    </div>
+  </MaterialDrawer>
+)
+
 
 Drawer.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   open: PropTypes.bool.isRequired,
   handleDrawerClose: PropTypes.func.isRequired,
   redirectTo: PropTypes.func.isRequired,
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 export default withStyles(styles)(Drawer)

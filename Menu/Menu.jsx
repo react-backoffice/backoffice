@@ -14,20 +14,18 @@ const styles = theme => ({
   },
 })
 
-const Menu = ({ data, redirectTo, classes }) => {
-  return (
-    <div className={classes.root}>
-      <List>
-        {data.map((item, index) => {
+const Menu = ({ data, redirectTo, classes }) => (
+  <div className={classes.root}>
+    <List>
+      {data.map((item) => {
           switch (item.type) {
             case 'divider':
-              return <Divider key={`menu-${index}`} />
-              break
+              return <Divider key={`menu-${(Math.random() * 100).toFixed(5)}`} />
 
             default:
               return (
                 <MenuItem
-                  key={`menu-${index}`}
+                  key={`menu-${(Math.random() * 100).toFixed(5)}`}
                   redirectTo={redirectTo}
                   url={item.url}
                   title={item.title}
@@ -35,17 +33,16 @@ const Menu = ({ data, redirectTo, classes }) => {
                   icon={item.icon}
                 />
               )
-              break
           }
         })}
-      </List>
-    </div>
-  )
-}
+    </List>
+  </div>
+)
 
 Menu.propTypes = {
   redirectTo: PropTypes.func.isRequired,
-  classes: PropTypes.object.isRequired,
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 export default withStyles(styles)(Menu)

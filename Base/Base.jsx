@@ -1,14 +1,30 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import { withRouter } from 'react-router'
-import { withStyles } from 'material-ui/styles'
+import { withRouter } from 'react-router-dom'
 
 import withRoot from './withRoot'
 import BaseBranch from './BaseBranch'
 
 import Cookie from '../CookieInfo/Cookie'
 
-const withBase = (Component) => class extends React.Component {
+const withBase = Component => class extends React.Component {
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    menuData: PropTypes.arrayOf(PropTypes.object).isRequired,
+    rightContent: PropTypes.node,
+    fixedHeader: PropTypes.bool,
+    hasHeader: PropTypes.bool,
+    hasCookieInfo: PropTypes.bool,
+    history: PropTypes.objectOf(PropTypes.any).isRequired,
+  }
+
+  static defaultProps = {
+    fixedHeader: true,
+    hasHeader: true,
+    hasCookieInfo: false,
+    rightContent: null,
+  }
+
   constructor(props) {
     super(props)
 
@@ -34,24 +50,24 @@ const withBase = (Component) => class extends React.Component {
     })
   }
 
+  onClick() {
+    this.redirectTo('/')
+  }
+
   handleDrawerOpen() {
     this.setState({
-      open: true
+      open: true,
     })
   }
 
   handleDrawerClose() {
     this.setState({
-      open: false
+      open: false,
     })
   }
 
   redirectTo(link) {
     this.props.history.push(link)
-  }
-
-  onClick() {
-    this.redirectTo('/')
   }
 
   handleCookieInfoAccept() {
@@ -78,20 +94,5 @@ const withBase = (Component) => class extends React.Component {
 
 let Base = withBase(BaseBranch)
 Base = withRouter(Base)
-
-Base.propTypes = {
-  title: PropTypes.string.isRequired,
-  menuData: PropTypes.arrayOf(PropTypes.object).isRequired,
-  rightContent: PropTypes.element,
-  fixedHeader: PropTypes.bool,
-  hasHeader: PropTypes.bool,
-  hasCookieInfo: PropTypes.bool,
-}
-
-Base.defaultProps = {
-  fixedHeader: true,
-  hasHeader: true,
-  hasCookieInfo: false,
-}
 
 export default withRoot(Base)

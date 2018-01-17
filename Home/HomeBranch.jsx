@@ -15,33 +15,31 @@ const styles = theme => ({
   },
   headline: {
     marginTop: theme.spacing.unit * 3,
-    marginBottom: theme.spacing.unit * 2
+    marginBottom: theme.spacing.unit * 2,
   },
 })
 
-const HomeBranch = ({ data, handleClick, classes }) => {
-  return (
-    <div className={classes.root}>
-      <div className={classes.headline}>
-        <Typography type="display2">{data.title}</Typography>
-        <Typography type="body1">{data.description}</Typography>
-      </div>
-
-      {data.groups ? data.groups.map((group, index) => (
-        <HomeGroup
-          key={`group-${group.id}-${index}`}
-          handleClick={handleClick}
-          {...group}
-        />
-      )) : null}
+const HomeBranch = ({ data, handleClick, classes }) => (
+  <div className={classes.root}>
+    <div className={classes.headline}>
+      <Typography type="display2">{data.title}</Typography>
+      <Typography type="body1">{data.description}</Typography>
     </div>
-  )
-}
+
+    {data.groups ? data.groups.map(group => (
+      <HomeGroup
+        key={`group-${group.id}`}
+        handleClick={handleClick}
+        {...group}
+      />
+      )) : null}
+  </div>
+)
 
 HomeBranch.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.objectOf(PropTypes.any).isRequired,
   handleClick: PropTypes.func.isRequired,
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 export default withStyles(styles)(HomeBranch)

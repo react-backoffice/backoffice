@@ -7,7 +7,7 @@ import { withStyles, MuiThemeProvider } from 'material-ui/styles'
 import createContext from './createContext'
 
 // Apply some reset
-const styles = (theme) => ({
+const styles = theme => ({
   '@global': {
     html: {
       background: theme.palette.background.default,

@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { withStyles } from 'material-ui/styles'
-import Table, {
+import {
   TableCell,
   TableRow,
 } from 'material-ui/Table'
 import { LinearProgress } from 'material-ui/Progress'
 
-const styles = (theme) => ({
+const styles = {
   row: {
     height: 'auto',
   },
@@ -19,7 +19,7 @@ const styles = (theme) => ({
   progress: {
     width: '100%',
   },
-})
+}
 
 const ListingLoader = ({ cols, classes }) => (
   <TableRow className={classes.row}>
@@ -30,8 +30,8 @@ const ListingLoader = ({ cols, classes }) => (
 )
 
 ListingLoader.propTypes = {
-  cols: PropTypes.number.isRequired,
-  classes: PropTypes.object.isRequired,
+  cols: PropTypes.number,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 ListingLoader.defaultProps = {

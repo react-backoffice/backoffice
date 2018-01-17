@@ -17,6 +17,14 @@ const InputEnd = ({ icon }) => (
   </Fragment>
 )
 
+InputEnd.propTypes = {
+  icon: PropTypes.element,
+}
+
+InputEnd.defaultProps = {
+  icon: null,
+}
+
 const FormFieldInput = ({
   id,
   type,
@@ -57,12 +65,14 @@ const FormFieldInput = ({
     onBlur={onBlur}
     onKeyPress={onKeyPress}
     InputProps={{
-      endAdornment: (<InputEnd icon={iconEnd} />)
+      endAdornment: (<InputEnd icon={iconEnd} />),
     }}
   >
     {options ?
-        options.map((option, index) => (
-          <MenuItem value={option} key={index}>{option}</MenuItem>
+        options.map(option => (
+          <MenuItem value={option} key={option.toLowerCase().replace(/ /, '')}>
+            {option}
+          </MenuItem>
         ))
       : null
     }
@@ -71,34 +81,50 @@ const FormFieldInput = ({
 
 FormFieldInput.propTypes = {
   id: PropTypes.string.isRequired,
+  type: PropTypes.string,
   title: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.array,
-    PropTypes.number
-  ]).isRequired,
+    PropTypes.number,
+  ]),
+  defaultValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+    PropTypes.number,
+  ]),
   rows: PropTypes.number,
-  isMultiline: PropTypes.bool.isRequired,
+  isMultiline: PropTypes.bool,
   helperText: PropTypes.string,
-  required: PropTypes.bool.isRequired,
-  error: PropTypes.bool.isRequired,
-  classNames: PropTypes.array.isRequired,
-  handleChange: PropTypes.func.isRequired,
+  required: PropTypes.bool,
+  error: PropTypes.bool,
+  classNames: PropTypes.arrayOf(PropTypes.string),
+  handleChange: PropTypes.func,
   select: PropTypes.bool,
-  options: PropTypes.array,
+  options: PropTypes.arrayOf(PropTypes.string),
   iconEnd: PropTypes.element,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+  onKeyPress: PropTypes.func,
 }
 
 FormFieldInput.defaultProps = {
-  id: '',
-  title: '',
+  type: 'text',
   value: '',
+  defaultValue: undefined,
   isMultiline: false,
   helperText: '',
   classNames: [],
   required: false,
   error: false,
-  handleChange: () => {},
+  rows: 1,
+  select: false,
+  options: [],
+  iconEnd: null,
+  handleChange: () => { },
+  onFocus: () => { },
+  onBlur: () => { },
+  onKeyPress: () => { },
 }
 
 export default FormFieldInput

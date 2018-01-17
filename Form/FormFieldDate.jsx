@@ -9,11 +9,10 @@ import AccessTimeIcon from 'material-ui-icons/AccessTime'
 import {
   DateTimePicker,
   DatePicker,
-  TimePicker
+  TimePicker,
 } from 'material-ui-pickers'
 
 import { TYPES } from './constants'
-import FormFieldInput from './FormFieldInput'
 
 const FormFieldDate = ({
   type,
@@ -70,26 +69,27 @@ const FormFieldDate = ({
 }
 
 FormFieldDate.propTypes = {
+  type: PropTypes.oneOf([
+    TYPES.TIME,
+    TYPES.DATE,
+    TYPES.DATETIME,
+  ]).isRequired,
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
   ]).isRequired,
+  format: PropTypes.string,
   helperText: PropTypes.string,
   required: PropTypes.bool.isRequired,
-  classNames: PropTypes.array.isRequired,
+  classNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleChange: PropTypes.func.isRequired,
 }
 
 FormFieldDate.defaultProps = {
-  id: '',
-  title: '',
-  value: +new Date(),
-  helperText: '',
-  required: false,
-  classNames: [],
-  handleChange: () => {},
+  helperText: null,
+  format: null,
 }
 
 export default FormFieldDate

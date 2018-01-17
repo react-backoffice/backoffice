@@ -3,7 +3,11 @@ import PropTypes from 'prop-types'
 
 import AddButtonBranch from './AddButtonBranch'
 
-const withAddButton = (Component) => class extends React.Component {
+const withAddButton = Component => class extends React.PureComponent {
+  static propTypes = {
+    handleClick: PropTypes.func.isRequired,
+  }
+
   render() {
     return (
       <Component {...this.props} />
@@ -11,10 +15,4 @@ const withAddButton = (Component) => class extends React.Component {
   }
 }
 
-const AddButton = withAddButton(AddButtonBranch)
-
-AddButton.propTypes = {
-  handleClick: PropTypes.func.isRequired,
-}
-
-export default AddButton
+export default withAddButton(AddButtonBranch)

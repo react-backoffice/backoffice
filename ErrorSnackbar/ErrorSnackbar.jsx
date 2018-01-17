@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { withStyles } from 'material-ui/styles'
-
-import Button from 'material-ui/Button'
 import Snackbar from 'material-ui/Snackbar'
 
 const styles = theme => ({
@@ -16,8 +14,7 @@ const styles = theme => ({
 const ErrorSnackbar = ({
   open,
   message,
-  link,
-  classes
+  classes,
 }) => (
   <Snackbar
     anchorOrigin={{
@@ -34,9 +31,9 @@ const ErrorSnackbar = ({
 )
 
 ErrorSnackbar.propTypes = {
-  classes: PropTypes.object.isRequired,
-  open: PropTypes.bool.isRequired,
+  open: PropTypes.bool,
   message: PropTypes.string.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 ErrorSnackbar.defaultProps = {

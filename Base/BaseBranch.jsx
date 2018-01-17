@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
@@ -9,7 +9,7 @@ import Header from '../Header'
 
 const drawerWidth = 280
 
-const styles = (theme) => ({
+const styles = theme => ({
   appFrame: {
     position: 'relative',
     display: 'flex',
@@ -76,13 +76,14 @@ const BaseBranch = ({
         fixed={fixedHeader}
         cookieInfoOpen={cookieInfoOpen}
       >
-        {rightContent ? rightContent : null}
+        {rightContent || null}
       </Header>
     ) : null}
 
     <div className={classNames(classes.appFrame, {
-      [classes.appFrameWithCookieInfo]: cookieInfoOpen
-    })}>
+      [classes.appFrameWithCookieInfo]: cookieInfoOpen,
+    })}
+    >
       {hasHeader ? (
         <Drawer
           handleDrawerClose={handleDrawerClose}
@@ -97,15 +98,38 @@ const BaseBranch = ({
           [classes.contentShift]: open || !hasHeader,
         })}
       >
-        {React.Children.map(children, (child) =>
+        {React.Children.map(children, child => (
           React.cloneElement(child, {
             cookieInfoOpen,
             ...rest,
           })
-        )}
+        ))}
       </main>
     </div>
   </div>
 )
+
+BaseBranch.propTypes = {
+  open: PropTypes.bool,
+  title: PropTypes.string.isRequired,
+  menuData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  fixedHeader: PropTypes.bool,
+  cookieInfoOpen: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+  handleDrawerOpen: PropTypes.func.isRequired,
+  handleDrawerClose: PropTypes.func.isRequired,
+  redirectTo: PropTypes.func.isRequired,
+  rightContent: PropTypes.element,
+  hasHeader: PropTypes.bool.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
+  children: PropTypes.node.isRequired,
+}
+
+BaseBranch.defaultProps = {
+  open: false,
+  fixedHeader: false,
+  cookieInfoOpen: false,
+  rightContent: (<Fragment />),
+}
 
 export default withStyles(styles)(BaseBranch)

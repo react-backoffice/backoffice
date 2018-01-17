@@ -1,10 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from 'material-ui/styles'
 import {
   TableCell,
   TableHead,
-  TablePagination,
   TableRow,
   TableSortLabel,
 } from 'material-ui/Table'
@@ -25,7 +23,7 @@ class ListingHeader extends React.Component {
       orderBy,
       numSelected,
       rowCount,
-      headers
+      headers,
     } = this.props
 
     return (
@@ -38,28 +36,26 @@ class ListingHeader extends React.Component {
               onChange={onSelectAllClick}
             />
           </TableCell>
-          {headers.map(column => {
-            return (
-              <TableCell
-                key={column.id}
-                padding={column.disablePadding ? 'none' : 'default'}
+          {headers.map(column => (
+            <TableCell
+              key={column.id}
+              padding={column.disablePadding ? 'none' : 'default'}
+            >
+              <Tooltip
+                title="Sort"
+                placement={column.numeric ? 'bottom-end' : 'bottom-start'}
+                enterDelay={300}
               >
-                <Tooltip
-                  title="Sort"
-                  placement={column.numeric ? 'bottom-end' : 'bottom-start'}
-                  enterDelay={300}
+                <TableSortLabel
+                  active={orderBy === column.id}
+                  direction={order}
+                  onClick={this.createSortHandler(column.id)}
                 >
-                  <TableSortLabel
-                    active={orderBy === column.id}
-                    direction={order}
-                    onClick={this.createSortHandler(column.id)}
-                  >
-                    {column.label}
-                  </TableSortLabel>
-                </Tooltip>
-              </TableCell>
-            )
-          }, this)}
+                  {column.label}
+                </TableSortLabel>
+              </Tooltip>
+            </TableCell>
+            ), this)}
         </TableRow>
       </TableHead>
     )

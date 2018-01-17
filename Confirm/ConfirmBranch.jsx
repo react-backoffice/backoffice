@@ -9,7 +9,7 @@ import Dialog, {
 } from 'material-ui/Dialog'
 import withStyles from 'material-ui/styles/withStyles'
 
-const styles = (theme) => ({
+const styles = theme => ({
   primaryButton: {
     color: theme.palette.primary.dark,
   },
@@ -64,7 +64,11 @@ ConfirmBranch.propTypes = {
   disagreeText: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
   onConfirm: PropTypes.func.isRequired,
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
+}
+
+ConfirmBranch.defaultProps = {
+  title: null,
 }
 
 export default withStyles(styles)(ConfirmBranch)

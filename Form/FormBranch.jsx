@@ -9,7 +9,7 @@ import FormGroupWrapper from './FormGroupWrapper'
 import FormField from './FormField'
 import FormSubmitButton from './FormSubmitButton'
 
-const styles = (theme) => ({
+const styles = theme => ({
   title: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
@@ -23,16 +23,15 @@ const FormBranch = ({
   fixedSubmit,
   updateFieldData,
   handleSubmit,
-  onSubmit,
   submitText,
   children,
   classes,
 }) => {
   const renderField = (field, index) => {
-    let value = data[field.id] && data[field.id].value
+    let valueName = data[field.id] && data[field.id].value
 
-    if (!value) {
-      value = field.value
+    if (!valueName) {
+      valueName = field.value
     }
 
     return (
@@ -40,37 +39,35 @@ const FormBranch = ({
         key={index}
         {...field}
         fieldId={field.id}
-        value={value}
+        value={valueName}
         handleChange={updateFieldData}
       />
     )
   }
 
-  const generateFields = (data, group) => {
-    return data.map((field, index) => {
-      if (field.group) {
-        return (
-          <FormGroupWrapper
-            key={index}
-            isVisible={field.isVisible}
-            isPaper={!field.integrated}
-          >
-            {field.title ? (
-              <Typography
-                type={field.integrated ? 'subheading' : 'title'}
-                className={classes.title}
-              >
-                {field.title}
-              </Typography>
+  const generateFields = formData => formData.map((field, index) => {
+    if (field.group) {
+      return (
+        <FormGroupWrapper
+          key={`group.${field.id}`}
+          isVisible={field.isVisible}
+          isPaper={!field.integrated}
+        >
+          {field.title ? (
+            <Typography
+              type={field.integrated ? 'subheading' : 'title'}
+              className={classes.title}
+            >
+              {field.title}
+            </Typography>
             ) : ''}
-            {generateFields(field.data, field)}
-          </FormGroupWrapper>
-        )
-      }
+          {generateFields(field.data, field)}
+        </FormGroupWrapper>
+      )
+    }
 
-      return renderField(field, index)
-    })
-  }
+    return renderField(field, index)
+  })
 
   const elements = generateFields(form)
 
@@ -93,21 +90,24 @@ const FormBranch = ({
 }
 
 FormBranch.propTypes = {
-  form: PropTypes.arrayOf(PropTypes.object),
-  data: PropTypes.object.isRequired,
+  form: PropTypes.arrayOf(PropTypes.object).isRequired,
+  data: PropTypes.objectOf(PropTypes.object),
+  loading: PropTypes.bool.isRequired,
   fixedSubmit: PropTypes.bool,
-  updateFieldData: PropTypes.func.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
+  updateFieldData: PropTypes.func,
+  handleSubmit: PropTypes.func,
   submitText: PropTypes.string,
+  children: PropTypes.node,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 FormBranch.defaultProps = {
-  form: [],
   data: {},
   fixedSubmit: false,
   updateFieldData: () => {},
   handleSubmit: () => {},
   submitText: 'Save',
+  children: null,
 }
 
 export default withStyles(styles)(FormBranch)

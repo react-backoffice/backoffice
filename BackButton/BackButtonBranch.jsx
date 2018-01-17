@@ -23,7 +23,7 @@ const BackButtonBranch = ({
 
 BackButtonBranch.propTypes = {
   handleBack: PropTypes.func.isRequired,
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 export default withStyles(styles)(BackButtonBranch)

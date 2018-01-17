@@ -3,7 +3,23 @@ import PropTypes from 'prop-types'
 
 import ConfirmBranch from './ConfirmBranch'
 
-const withConfirm = (Component) => class Confirm extends React.Component {
+const withConfirm = Component => class Confirm extends React.Component {
+  static propTypes = {
+    open: PropTypes.bool,
+    title: PropTypes.string,
+    description: PropTypes.string.isRequired,
+    agreeText: PropTypes.string,
+    disagreeText: PropTypes.string,
+    onConfirm: PropTypes.func.isRequired,
+  }
+
+  static defaultProps = {
+    title: null,
+    open: false,
+    agreeText: 'Agree',
+    disagreeText: 'Disagree',
+  }
+
   constructor() {
     super()
 
@@ -18,20 +34,20 @@ const withConfirm = (Component) => class Confirm extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (this.state.open !== nextProps.open) {
       this.setState({
-        open: nextProps.open
+        open: nextProps.open,
       })
     }
   }
 
   handleClose() {
     this.setState({
-      open: false
+      open: false,
     })
   }
 
   handleConfirm() {
     this.setState({
-      open: false
+      open: false,
     })
 
     this.props.onConfirm()
@@ -49,21 +65,4 @@ const withConfirm = (Component) => class Confirm extends React.Component {
   }
 }
 
-const Confirm = withConfirm(ConfirmBranch)
-
-Confirm.propTypes = {
-  open: PropTypes.bool.isRequired,
-  title: PropTypes.string,
-  description: PropTypes.string.isRequired,
-  agreeText: PropTypes.string.isRequired,
-  disagreeText: PropTypes.string.isRequired,
-  onConfirm: PropTypes.func.isRequired,
-}
-
-Confirm.defaultProps = {
-  open: false,
-  agreeText: 'Agree',
-  disagreeText: 'Disagree',
-}
-
-export default Confirm
+export default withConfirm(ConfirmBranch)

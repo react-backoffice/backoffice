@@ -15,11 +15,13 @@ import NoMatch from '../../NoMatch'
 import Page from './Page'
 import General from './General'
 
-let App = () => (
+const App = () => (
   <Router>
     <Switch>
-      <Route exact path="/"
-        render={(props) => (
+      <Route
+        exact
+        path="/"
+        render={props => (
           <Base
             title="This is Backoffice"
             menuData={menuData}

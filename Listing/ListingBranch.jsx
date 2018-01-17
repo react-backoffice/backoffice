@@ -5,14 +5,10 @@ import { withStyles } from 'material-ui/styles'
 import Table, {
   TableBody,
   TableFooter,
-  TableHead,
   TablePagination,
   TableRow,
-  TableSortLabel,
 } from 'material-ui/Table'
 import Paper from 'material-ui/Paper'
-import Tooltip from 'material-ui/Tooltip'
-import Checkbox from 'material-ui/Checkbox'
 
 import ListingHeader from './ListingHeader'
 import ListingToolbar from './ListingToolbar'
@@ -21,14 +17,14 @@ import ListingLoader from './ListingLoader'
 
 const styles = theme => ({
   root: {
-    width: "100%",
+    width: '100%',
     marginTop: theme.spacing.unit * 3,
   },
   table: {
     minWidth: 800,
   },
   tableWrapper: {
-    overflowX: "auto",
+    overflowX: 'auto',
   },
 })
 
@@ -74,19 +70,17 @@ const ListingBranch = ({
             <ListingLoader cols={headers.length + 1} />
           ) : null}
 
-          {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((n, index) => {
-            return (
-              <ListingLine
-                key={index}
-                data={n}
-                headers={headers}
-                handleCheckClick={handleCheckClick}
-                handleClick={handleClick}
-                handleKeyDown={handleKeyDown}
-                isSelected={isSelected(n.id)}
-              />
-            )
-          })}
+          {data.slice(page * rowsPerPage, (page * rowsPerPage) + rowsPerPage).map(n => (
+            <ListingLine
+              key={n[Object.keys(n)[0]]}
+              data={n}
+              headers={headers}
+              handleCheckClick={handleCheckClick}
+              handleClick={handleClick}
+              handleKeyDown={handleKeyDown}
+              isSelected={isSelected(n.id)}
+            />
+            ))}
         </TableBody>
         <TableFooter>
           <TableRow>
@@ -106,15 +100,15 @@ const ListingBranch = ({
 )
 
 ListingBranch.propTypes = {
-  title: PropTypes.string.isRequired,
-  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  title: PropTypes.string,
+  data: PropTypes.arrayOf(PropTypes.object),
   headers: PropTypes.arrayOf(PropTypes.object).isRequired,
-  order: PropTypes.string.isRequired,
+  order: PropTypes.string,
   orderBy: PropTypes.string.isRequired,
   selected: PropTypes.arrayOf(PropTypes.string),
-  rowsPerPage: PropTypes.number.isRequired,
+  rowsPerPage: PropTypes.number,
   rowsPerPageOptions: PropTypes.arrayOf(PropTypes.number),
-  page: PropTypes.number.isRequired,
+  page: PropTypes.number,
   hasLoader: PropTypes.bool.isRequired,
   handleSelectAllClick: PropTypes.func.isRequired,
   handleRequestSort: PropTypes.func.isRequired,
@@ -123,27 +117,19 @@ ListingBranch.propTypes = {
   handleKeyDown: PropTypes.func.isRequired,
   handleChangePage: PropTypes.func.isRequired,
   handleChangeRowsPerPage: PropTypes.func.isRequired,
-  classes: PropTypes.object.isRequired,
+  isSelected: PropTypes.func,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 ListingBranch.defaultProps = {
   title: '',
   data: [],
-  headers: [],
   order: '',
-  orderBy: '',
   selected: [],
   rowsPerPage: 10,
   rowsPerPageOptions: [10, 25, 50, 100],
   page: 0,
-  hasLoader: false,
-  handleSelectAllClick: () => {},
-  handleRequestSort: () => {},
-  handleCheckClick: () => {},
-  handleClick: () => {},
-  handleKeyDown: () => {},
-  handleChangePage: () => {},
-  handleChangeRowsPerPage: () => {}
+  isSelected: () => {},
 }
 
 export default withStyles(styles)(ListingBranch)

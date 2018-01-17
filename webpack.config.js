@@ -21,11 +21,16 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-loader?babelrc',
           options: {
             presets: [
               'env',
               'react',
+            ],
+            plugins: [
+              'transform-class-properties',
+              'transform-regenerator',
+              'transform-object-rest-spread',
             ],
           },
         },

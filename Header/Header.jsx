@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { withStyles } from 'material-ui/styles'
@@ -10,7 +10,7 @@ import MenuIcon from 'material-ui-icons/Menu'
 
 const drawerWidth = 280
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     width: '100%',
   },
@@ -20,7 +20,6 @@ const styles = (theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     transform: 'translate(0, 0)',
-    transition: '0.25s',
   },
   appBarWithCookieInfo: {
     transform: `translate(0, ${theme.spacing.unit * 6}px)`,
@@ -48,7 +47,7 @@ const styles = (theme) => ({
     '&:hover': {
       textDecoration: 'underline',
     },
-  }
+  },
 })
 
 const Header = ({
@@ -59,7 +58,7 @@ const Header = ({
   cookieInfoOpen,
   onClick,
   children,
-  classes
+  classes,
 }) => (
   <div className={classes.root}>
     <AppBar
@@ -95,12 +94,19 @@ const Header = ({
 )
 
 Header.propTypes = {
+  open: PropTypes.bool,
   title: PropTypes.string.isRequired,
   fixed: PropTypes.bool.isRequired,
   cookieInfoOpen: PropTypes.bool.isRequired,
   handleDrawerOpen: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired,
-  classes: PropTypes.object.isRequired,
+  children: PropTypes.node,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
+}
+
+Header.defaultProps = {
+  open: false,
+  children: null,
 }
 
 export default withStyles(styles)(Header)

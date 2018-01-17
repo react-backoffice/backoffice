@@ -8,9 +8,9 @@ import FormFieldInput from './FormFieldInput'
 import FormFieldDate from './FormFieldDate'
 import FormFieldList from './FormFieldList'
 
-const styles = (theme) => ({
+const styles = theme => ({
   headline: {
-    marginTop: theme.spacing.unit * 3
+    marginTop: theme.spacing.unit * 3,
   },
 
   field: {
@@ -28,10 +28,12 @@ const styles = (theme) => ({
 
   widthFull: {
     width: `calc(100% - ${theme.spacing.unit * 2}px)`,
-  }
+  },
 })
 
-const FormFieldBranch = ({ type, width, classes, ...props }) => {
+const FormFieldBranch = ({
+  type, width, classes, ...props
+}) => {
   const getClasses = () => {
     const classNames = [classes.field]
 
@@ -46,7 +48,7 @@ const FormFieldBranch = ({ type, width, classes, ...props }) => {
     return classNames
   }
 
-  let classNames = getClasses()
+  const classNames = getClasses()
 
   switch (type) {
     case TYPES.SELECT:
@@ -58,7 +60,6 @@ const FormFieldBranch = ({ type, width, classes, ...props }) => {
           classNames={classNames}
         />
       )
-      break
     case TYPES.LIST:
       return (
         <FormFieldList
@@ -66,7 +67,6 @@ const FormFieldBranch = ({ type, width, classes, ...props }) => {
           classNames={classNames}
         />
       )
-      break
     case TYPES.MULTILINE:
       return (
         <FormFieldInput
@@ -75,7 +75,6 @@ const FormFieldBranch = ({ type, width, classes, ...props }) => {
           isMultiline
         />
       )
-      break
     case TYPES.DATE:
       return (
         <FormFieldDate
@@ -84,7 +83,6 @@ const FormFieldBranch = ({ type, width, classes, ...props }) => {
           type={TYPES.DATE}
         />
       )
-      break
     case TYPES.TIME:
       return (
         <FormFieldDate
@@ -93,7 +91,6 @@ const FormFieldBranch = ({ type, width, classes, ...props }) => {
           type={TYPES.TIME}
         />
       )
-      break
     case TYPES.DATETIME:
       return (
         <FormFieldDate
@@ -102,7 +99,6 @@ const FormFieldBranch = ({ type, width, classes, ...props }) => {
           type={TYPES.DATETIME}
         />
       )
-      break
     default:
       return (
         <FormFieldInput
@@ -111,21 +107,23 @@ const FormFieldBranch = ({ type, width, classes, ...props }) => {
           classNames={classNames}
         />
       )
-      break
   }
-
-  return null
 }
 
 FormFieldBranch.propTypes = {
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
   width: PropTypes.string,
-  listItems: PropTypes.array,
-  classes: PropTypes.object,
+  listItems: PropTypes.arrayOf(PropTypes.string),
+  selectOptions: PropTypes.arrayOf(PropTypes.string),
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
+  handleChange: PropTypes.func,
 }
 
 FormFieldBranch.defaultProps = {
   type: 'text',
+  width: 'full',
+  listItems: [],
+  selectOptions: [],
   handleChange: () => { },
 }
 
