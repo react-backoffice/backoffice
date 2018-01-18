@@ -66,6 +66,25 @@ Children are rendered as content.
 
 Dashboard-like homepage
 
+#### Options
+
+* `title: string`, Title as headline
+* `description?: string`, Description of HomeGroups that are upcoming
+* `groups: HomeGroup[]`, Groups of content-teasers that should be rendered
+
+#### HomeGroup
+
+* `id: string`, Name of the upcoming group
+* `title: string`, Title as headline of the next group
+* `cards: HomeCard[]`, Data to render teaser elements
+
+#### HomeCard
+
+* `title: string`, Title of the card
+* `description?: string`, A description text
+* `icon?: function`, An icon element that you want to display next to the title
+* `disabled?: function`, Should element be disabled?, default `false`
+
 ### Menu
 
 A menu that lists entries
