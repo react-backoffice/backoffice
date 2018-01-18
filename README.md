@@ -7,7 +7,7 @@ Backoffice also uses `react-router-dom`, `material-ui-icons`, `material-ui-picke
 
 ## Purpose
 
-The purpose of Backoffice is to provide an easier to use framework to generate applications that are mainly designed for working with data.
+The purpose of Backoffice is to provide an easier to use framework to generate applications that are mainly designed for working with data. For example for CRUD-APIs.
 
 If you have a list of data and you want to be able to update and delete entries in the list as well as create new ones (CRUD) Backoffice helps you to build an application in "no time".
 
@@ -25,21 +25,42 @@ You need to create your own React application, that takes care of routing (at le
 
 Within any of your components you can use a given component by importing it to your application:
 
-    import Menu from 'backoffice/Menu'
+```javascript
+import Menu from 'backoffice/Menu'
+```
 
 You can then use the component within your render logic:
 
-    const MyMenu = ({ menuData, redirectTo }) => (
-      <Menu data={menuData} redirectTo={redirectTo} />
-    )
+```javascript
+const MyMenu = ({ menuData, redirectTo }) => (
+  <Menu data={menuData} redirectTo={redirectTo} />
+)
+```
 
 ## Components
 
 ### Base
 
-* `fixedHeader: boolean`: Is header fixed?, default `true`
-* `hasHeader: boolean`: Is header included, default `true`
-* `hasCookieInfo: boolean`: Is there a cookieinfo in the project, default: `false`
+A page usually needs some default baseline (styling, header aso). The Base Component provides this functionality.
+
+#### Usage
+
+```html
+<Base title="Foobar" menuData={[]} hasCookieInfo>
+  Content
+</Base>
+```
+
+#### Options
+
+Children are rendered as content.
+
+* `title: string`, Title that is shon in header
+* `menuData: MenuItem[]`, Same as in `Menu`, please see below
+* `rightContent?: node`, React element that is rendered on the right side of the header
+* `fixedHeader?: boolean`, Is header fixed?, default `true`
+* `hasHeader?: boolean`, Is header included, default `true`
+* `hasCookieInfo?: boolean`, Is there a cookieinfo in the project, default: `false`
 
 ### Home
 
