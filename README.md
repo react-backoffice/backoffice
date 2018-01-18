@@ -165,7 +165,7 @@ Form components
 #### FormField
 
 * `id: string`, identifier of the field (concatenated with `FormGroup.id` if set)
-* `type: ENUM('select' | 'list' | 'multiline' | 'text' | 'date' | 'time' | 'datetime' | 'email' | 'password')`, default: `text`
+* `type: ENUM('select' | 'list' | 'multiline' | 'text' | 'date' | 'time' | 'datetime' | 'email' | 'password' | 'url')`, default: `text`
 * `title: string`, label of field
 * `width: ENUM('small' | 'mid' | 'full')`, default: `full`
 * `value: string | string[]`, default value of a field
@@ -187,7 +187,7 @@ Show an error in the left hand corner
 ### Todos
 
 * Rename component Home to Dashboard
-* Form types: `checkbox`, `radio`, `url`
+* Form types: `checkbox`, `radio`
 * Tests
 * Performance optimizing
 

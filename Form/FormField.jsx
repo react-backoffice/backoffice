@@ -71,6 +71,10 @@ const withFormField = Component => class extends React.Component {
       validators.push('email')
     }
 
+    if (type === TYPES.URL) {
+      validators.push('url')
+    }
+
     if (validators.length === 0) {
       return true
     }

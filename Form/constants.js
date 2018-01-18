@@ -8,6 +8,7 @@ export const TYPES = {
   DATETIME: 'datetime',
   EMAIL: 'email',
   PASSWORD: 'password',
+  URL: 'url',
 }
 
 export default {}

@@ -82,5 +82,10 @@ export default [{
     title: 'Password',
     type: 'password',
     width: 'mid',
+  }, {
+    id: 'url',
+    title: 'URL',
+    type: 'url',
+    width: 'mid',
   }],
 }]

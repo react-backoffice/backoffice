@@ -1,4 +1,5 @@
 import Isemail from 'isemail'
+import isUrl from 'is-url'
 
 /**
  * Check if a field has any value at all
@@ -20,3 +21,8 @@ export const date = value => !Number.isNaN(Date.parse(value))
  * Check if value is email
  */
 export const email = value => Isemail.validate(value)
+
+/**
+ * Check if value is url
+ */
+export const url = value => isUrl(value)

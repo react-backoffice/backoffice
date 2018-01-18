@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "is-url": "^1.2.2",
     "isemail": "^3.0.0",
     "jss": "^9.5.1",
     "keycode": "^2.1.9",
