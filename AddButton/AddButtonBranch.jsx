@@ -16,7 +16,7 @@ const styles = theme => ({
 const AddButton = ({ handleClick, classes }) => (
   <Button
     fab
-    color="accent"
+    color="secondary"
     aria-label="add"
     className={classes.button}
     onClick={handleClick}

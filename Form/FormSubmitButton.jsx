@@ -44,7 +44,7 @@ const FormSubmitButton = ({
     <div className={wrapperClasses}>
       <Button
         raised
-        color="accent"
+        color="secondary"
         className={classes.button}
         disabled={disabled}
         onClick={onSubmit}
