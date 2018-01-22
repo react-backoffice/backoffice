@@ -23,7 +23,7 @@ const styles = theme => ({
     minHeight: `calc(100vh - ${theme.spacing.unit * 6}px)`,
   },
   content: {
-    width: '100%',
+    width: `calc(100vw - ${theme.spacing.unit * 3 * 2}px)`,
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing.unit * 3,
@@ -33,12 +33,6 @@ const styles = theme => ({
     }),
     height: 'calc(100% - 56px)',
     marginTop: theme.spacing.unit * 8,
-    [theme.breakpoints.up('sm')]: {
-      content: {
-        height: 'calc(100% - 64px)',
-        marginTop: 64,
-      },
-    },
     marginLeft: -drawerWidth,
   },
   contentShift: {
