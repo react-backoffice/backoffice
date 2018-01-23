@@ -5,6 +5,8 @@ React implementation that provides a couple of components you might want to use 
 
 Backoffice also uses `react-router-dom`, `material-ui-icons`, `material-ui-picker` and some more OSS.
 
+[![Build Status](https://travis-ci.org/drublic/backoffice.svg?branch=master)](https://travis-ci.org/drublic/backoffice)
+
 ## Purpose
 
 The purpose of Backoffice is to provide an easier to use framework to generate applications that are mainly designed for working with data. For example for CRUD-APIs.
