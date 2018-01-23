@@ -9,7 +9,8 @@
     "server": "node __tests__/visual/server.js",
     "js": "webpack",
     "js:lint": "eslint **/*.{js,jsx}",
-    "lint": "yarn js:lint"
+    "lint": "yarn js:lint",
+    "test": "yarn lint"
   },
   "dependencies": {
     "classnames": "^2.2.5",
