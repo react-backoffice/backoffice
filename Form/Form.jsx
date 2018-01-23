@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 
 import FormBranch from './FormBranch'
+import isValid from './isValid'
 
-const withForm = Component => class extends React.Component {
+const withForm = Component => class Form extends React.Component {
   static propTypes = {
     form: PropTypes.arrayOf(PropTypes.object).isRequired,
     data: PropTypes.objectOf(PropTypes.any).isRequired,
@@ -20,6 +21,15 @@ const withForm = Component => class extends React.Component {
     fixedSubmit: false,
   }
 
+  static getInitialField(field, data) {
+    const valueName = data[field.id] && data[field.id].value
+
+    return {
+      value: valueName,
+      error: !isValid(field.type, field.required, field.validators, valueName),
+    }
+  }
+
   constructor(props, defaultProps) {
     super(props, defaultProps)
 
@@ -28,6 +38,7 @@ const withForm = Component => class extends React.Component {
       loading: false,
     }
 
+    this.fields = {}
     this.timer = undefined
 
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -35,19 +46,34 @@ const withForm = Component => class extends React.Component {
   }
 
   componentWillMount() {
+    this.generateFields(this.props.form, this.props.data)
+
     this.setState({
-      data: this.props.data,
+      data: this.fields,
     })
   }
 
   componentWillReceiveProps(nextProps) {
+    this.generateFields(nextProps.form, nextProps.data)
+
     this.setState({
-      data: nextProps.data,
+      data: this.fields,
     })
   }
 
   componentWillUnmount() {
     clearTimeout(this.timer)
+  }
+
+  generateFields(fieldset, data) {
+    fieldset.forEach((field) => {
+      if (field.group) {
+        this.generateFields(field.data, data)
+        return
+      }
+
+      this.fields[field.id] = Form.getInitialField(field, data)
+    })
   }
 
   handleSubmit() {
@@ -56,10 +82,21 @@ const withForm = Component => class extends React.Component {
       loading,
     } = this.state
 
+    const errors = Object.values(data).map(field => field.error)
+
+    if (errors.indexOf(true) > -1) {
+      this.setState({
+        error: true,
+      })
+
+      return
+    }
+
     if (!loading) {
       this.setState(
         {
           loading: true,
+          error: false,
         },
         () => {
           this.timer = setTimeout(() => {
@@ -101,6 +138,6 @@ const withForm = Component => class extends React.Component {
   }
 }
 
-const Form = withForm(FormBranch)
+const newForm = withForm(FormBranch)
 
-export default withRouter(Form)
+export default withRouter(newForm)

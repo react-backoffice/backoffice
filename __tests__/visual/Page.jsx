@@ -52,7 +52,11 @@ const Page = ({ classes, ...props }) => (
     </Typography>
 
     <Form
-      data={{}}
+      data={{
+        text: {
+          value: 'prefilled text-field',
+        },
+      }}
       form={formData}
       onSubmit={noop}
       submitText="Save the form"

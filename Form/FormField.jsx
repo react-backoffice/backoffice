@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import FormFieldBranch from './FormFieldBranch'
-import * as Validators from './validators'
-import { TYPES } from './constants'
+import isValid from './isValid'
 
 const withFormField = Component => class extends React.Component {
   static propTypes = {
+    id: PropTypes.string.isRequired,
     type: PropTypes.string,
     validators: PropTypes.arrayOf(PropTypes.string),
     required: PropTypes.bool,
@@ -32,7 +32,7 @@ const withFormField = Component => class extends React.Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.initialize(this.props)
   }
 
@@ -60,36 +60,10 @@ const withFormField = Component => class extends React.Component {
     const {
       type,
       required,
+      validators,
     } = this.props
 
-    const validators = [...this.props.validators]
-
-    if (required) {
-      validators.push('required')
-    }
-
-    if (type === TYPES.EMAIL) {
-      validators.push('email')
-    }
-
-    if (type === TYPES.URL) {
-      validators.push('url')
-    }
-
-    if (validators.length === 0) {
-      return true
-    }
-
-    const validatorFunctions = validators.map(validator => Validators[validator])
-    const validState = validatorFunctions.map((validator) => {
-      if (typeof validator === 'function') {
-        return validator(value)
-      }
-
-      return true
-    })
-
-    return validState.indexOf(false) === -1
+    return isValid(type, required, validators, value)
   }
 
   handleChange(fieldId) {

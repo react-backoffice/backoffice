@@ -8,6 +8,10 @@ import Button from 'material-ui/Button'
 import green from 'material-ui/colors/green'
 
 const styles = theme => ({
+  root: {
+    position: 'relative',
+    display: 'inline-block',
+  },
   fixed: {
     position: 'fixed',
     right: theme.spacing.unit * 5,
@@ -36,7 +40,7 @@ const FormSubmitButton = ({
   classes,
   children,
 }) => {
-  const wrapperClasses = classNames({
+  const wrapperClasses = classNames(classes.root, {
     [classes.fixed]: fixed,
   })
 

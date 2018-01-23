@@ -14,12 +14,19 @@ const styles = theme => ({
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
   },
+  errorMessage: {
+    marginTop: theme.spacing.unit * 2,
+    marginBottom: theme.spacing.unit * 2,
+    color: theme.palette.error.main,
+  },
 })
 
 const FormBranch = ({
   form,
   data,
   loading,
+  error,
+  errorMessage,
   fixedSubmit,
   updateFieldData,
   handleSubmit,
@@ -77,6 +84,10 @@ const FormBranch = ({
 
       {children}
 
+      {error ? (
+        <Typography type="body1" className={classes.errorMessage}>{errorMessage}</Typography>
+      ) : null}
+
       <FormSubmitButton
         onSubmit={handleSubmit}
         disabled={loading}
@@ -94,6 +105,8 @@ FormBranch.propTypes = {
   data: PropTypes.objectOf(PropTypes.object),
   loading: PropTypes.bool.isRequired,
   fixedSubmit: PropTypes.bool,
+  error: PropTypes.bool,
+  errorMessage: PropTypes.string,
   updateFieldData: PropTypes.func,
   handleSubmit: PropTypes.func,
   submitText: PropTypes.string,
@@ -104,6 +117,8 @@ FormBranch.propTypes = {
 FormBranch.defaultProps = {
   data: {},
   fixedSubmit: false,
+  error: false,
+  errorMessage: 'An error occured. Please fill out all required fields correctly.',
   updateFieldData: () => {},
   handleSubmit: () => {},
   submitText: 'Save',
