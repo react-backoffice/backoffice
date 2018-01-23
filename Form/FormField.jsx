@@ -59,9 +59,10 @@ const withFormField = Component => class extends React.Component {
   isValid(value) {
     const {
       type,
-      validators,
       required,
     } = this.props
+
+    const validators = [...this.props.validators]
 
     if (required) {
       validators.push('required')
