@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 
-import withRoot from './withRoot'
 import BaseBranch from './BaseBranch'
 
 import Cookie from '../CookieInfo/Cookie'
@@ -92,7 +91,6 @@ const withBase = Component => class extends React.Component {
   }
 }
 
-let Base = withBase(BaseBranch)
-Base = withRouter(Base)
+const WithBase = withBase(BaseBranch)
 
-export default withRoot(Base)
+export default withRouter(WithBase)

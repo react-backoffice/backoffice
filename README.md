@@ -41,9 +41,47 @@ const MyMenu = ({ menuData, redirectTo }) => (
 
 ## Components
 
+### AppContainer
+
+The AppContainer provides the generic styling as well as the possiblity to povided your own theme (based on [Material UI's colors](https://material-ui-next.com/style/color/)).
+
+* `theme: object`, theme configuration
+
+You could use the AppContainer-Component like this:
+
+```javascript
+import React from 'react'
+import AppContainer from 'backoffice/AppContainer'
+
+import indigo from 'material-ui/colors/indigo'
+import amber from 'material-ui/colors/amber'
+
+
+const theme = {
+  palette: {
+    primary: {
+      light: indigo[300],
+      main: indigo[500],
+      dark: indigo[700],
+    },
+    secondary: {
+      light: amber[300],
+      main: amber[500],
+      dark: amber[700],
+    },
+  },
+}
+
+const MyApp = () => (
+  <AppContainer theme={theme}>
+    This is my application
+  </AppContainer>
+)
+```
+
 ### Base
 
-A page usually needs some default baseline (styling, header aso). The Base Component provides this functionality.
+A page usually needs some default baseline (header aso). The Base Component provides this functionality.
 
 #### Usage
 

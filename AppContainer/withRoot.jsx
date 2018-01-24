@@ -26,7 +26,7 @@ AppWrapper = withStyles(styles)(AppWrapper)
 
 const context = createContext()
 
-const withRoot = (BaseComponent) => {
+const withRoot = (BaseComponent, props) => {
   class WithRoot extends Component {
     componentDidMount() {
       // Remove the server-side injected CSS.
@@ -40,7 +40,7 @@ const withRoot = (BaseComponent) => {
     render() {
       return (
         <JssProvider registry={context.sheetsRegistry} jss={context.jss}>
-          <MuiThemeProvider theme={context.theme} sheetsManager={context.sheetsManager}>
+          <MuiThemeProvider theme={props.theme} sheetsManager={context.sheetsManager}>
             <AppWrapper>
               <BaseComponent {...this.props} />
             </AppWrapper>
