@@ -31,7 +31,6 @@ class General extends React.Component {
           </Typography>
         </CookieInfo>
 
-
         <Typography type="display1">
           Confirm
         </Typography>

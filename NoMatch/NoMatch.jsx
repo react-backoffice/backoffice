@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
@@ -19,22 +19,33 @@ const styles = theme => ({
   },
 })
 
-const NoMatch = ({ classes }) => (
+const NoMatch = ({ title, description, classes }) => (
   <div className={classes.root}>
     <div>
       <Typography type="display3">
-        404! Sorry, not found.
+        {title}
       </Typography>
       <Typography type="display1" paragraph>
-        This URL does not exist, sorry. Please start over from
-        the <Link href="/" to="/">Dashboard</Link>.
+        {description}
       </Typography>
     </div>
   </div>
 )
 
 NoMatch.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.node,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
+}
+
+NoMatch.defaultProps = {
+  title: '404! Sorry, not found.',
+  description: (
+    <Fragment>
+      This URL does not exist, sorry.Please start over from
+      the <Link href="/" to="/">Dashboard</Link>.
+    </Fragment>
+  ),
 }
 
 export default withStyles(styles)(NoMatch)

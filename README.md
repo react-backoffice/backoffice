@@ -134,6 +134,9 @@ Button in the bottom right, that let's you link to a new page
 
 A content-snippet for 404 pages
 
+* `title: string`, title of the page
+* `description: node`, element that is the content
+
 ### Drawer
 
 Element that has an (off-canvas) menu

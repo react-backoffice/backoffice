@@ -5,12 +5,13 @@ import {
   Route,
   Switch,
 } from 'react-router-dom'
-
-import Base from '../../Base'
+import Typography from 'material-ui/Typography'
 
 import menuData from './data/menu'
 
+import Base from '../../Base'
 import NoMatch from '../../NoMatch'
+import CookieInfo from '../../CookieInfo'
 
 import Page from './Page'
 import General from './General'
@@ -33,7 +34,23 @@ const App = () => (
         )}
       />
 
-      <Route component={NoMatch} />
+      <Route
+        render={props => (
+          <Base
+            title="This is Backoffice"
+            menuData={menuData}
+            hasCookieInfo
+          >
+            <NoMatch />
+
+            <CookieInfo {...props}>
+              <Typography type="body1">
+                This is the cookie info
+              </Typography>
+            </CookieInfo>
+          </Base>
+        )}
+      />
     </Switch>
   </Router>
 )
