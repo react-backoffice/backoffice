@@ -159,6 +159,7 @@ A dialog box to confirm something with a user
 * `agreeText: string`, Text for agree button, default `Agree`
 * `disagreeText: string`, Text for disagree button, default `Disagree`
 * `onConfirm: function`, handler when user confirms dialog
+* `onClose: function`, handler when user closes dialog
 
 ### Listing
 
