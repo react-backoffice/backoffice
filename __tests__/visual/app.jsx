@@ -1,60 +1,24 @@
 import React from 'react'
-import { render } from 'react-dom'
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-} from 'react-router-dom'
-import Typography from 'material-ui/Typography'
+import ReactDOM from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
 
-import menuData from './data/menu'
+import Container from './Container'
 
-import Base from '../../Base'
-import NoMatch from '../../NoMatch'
-import CookieInfo from '../../CookieInfo'
+const element = document.querySelector('[data-react-app]')
 
-import Page from './Page'
-import General from './General'
+const render = (Component) => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    element,
+  )
+}
 
-const App = () => (
-  <Router>
-    <Switch>
-      <Route
-        exact
-        path="/"
-        render={props => (
-          <Base
-            title="This is Backoffice"
-            menuData={menuData}
-            hasCookieInfo
-          >
-            <Page {...props} />
-            <General {...props} />
-          </Base>
-        )}
-      />
+render(Container)
 
-      <Route
-        render={props => (
-          <Base
-            title="This is Backoffice"
-            menuData={menuData}
-            hasCookieInfo
-          >
-            <NoMatch />
-
-            <CookieInfo {...props}>
-              <Typography type="body1">
-                This is the cookie info
-              </Typography>
-            </CookieInfo>
-          </Base>
-        )}
-      />
-    </Switch>
-  </Router>
-)
-
-const appElement = document.querySelector('[data-react-app]')
-
-render(<App />, appElement)
+// Webpack Hot Module Replacement API
+if (module.hot) {
+  // eslint-disable-next-line
+  module.hot.accept('./Container', () => render(require('./Container').default))
+}

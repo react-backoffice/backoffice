@@ -1,19 +1,26 @@
 const path = require('path')
+const webpack = require('webpack')
 
-const DEBUG = process.env.NODE_ENV !== 'production'
+const defaultPath = '__tests__/visual/'
 
 module.exports = {
   entry: {
     app: [
       'babel-polyfill',
-      path.resolve(__dirname, '__tests__/visual/app.jsx'),
+      'react-hot-loader/patch',
+      path.resolve(__dirname, defaultPath, 'app.jsx'),
     ],
   },
-  devtool: DEBUG ? 'inline-sourcemap' : false,
+  devtool: 'inline-sourcemap',
   cache: true,
   output: {
-    path: path.resolve(__dirname, '__tests__/visual/dist/'),
+    path: path.resolve(__dirname, defaultPath, 'dist/'),
     filename: '[name].js',
+    publicPath: '/static/',
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, defaultPath),
+    hot: true,
   },
   module: {
     rules: [
@@ -31,6 +38,7 @@ module.exports = {
               'transform-class-properties',
               'transform-regenerator',
               'transform-object-rest-spread',
+              'react-hot-loader/babel',
             ],
           },
         },
@@ -43,4 +51,8 @@ module.exports = {
       '.jsx',
     ],
   },
+  plugins: [
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 }

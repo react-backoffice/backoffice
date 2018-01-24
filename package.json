@@ -5,9 +5,8 @@
   "author": "Hans Christian Reinl <info@drublic.de>",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently \"yarn server\" \"yarn js --watch\"",
-    "server": "node __tests__/visual/server.js",
-    "js": "webpack",
+    "start": "yarn server",
+    "server": "webpack-dev-server",
     "js:lint": "eslint **/*.{js,jsx}",
     "lint": "yarn js:lint",
     "test": "yarn lint"
@@ -25,6 +24,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-hot-loader": "^3.1.3",
     "react-jss": "^8.1.0",
     "react-router-dom": "^4.2.2",
     "recompose": "^0.26.0"
@@ -47,6 +47,7 @@
     "eslint-plugin-react": "^7.5.1",
     "express": "^4.16.2",
     "log": "^1.4.0",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }
