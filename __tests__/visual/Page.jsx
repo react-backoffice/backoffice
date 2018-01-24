@@ -56,6 +56,9 @@ const Page = ({ classes, ...props }) => (
         text: {
           value: 'prefilled text-field',
         },
+        id: {
+          value: 'test-id',
+        },
       }}
       form={formData}
       onSubmit={noop}

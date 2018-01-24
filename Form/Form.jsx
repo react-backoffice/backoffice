@@ -47,6 +47,7 @@ const withForm = Component => class Form extends React.Component {
 
   componentWillMount() {
     this.generateFields(this.props.form, this.props.data)
+    this.generateMissingData(this.props.data)
 
     this.setState({
       data: this.fields,
@@ -55,6 +56,7 @@ const withForm = Component => class Form extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     this.generateFields(nextProps.form, nextProps.data)
+    this.generateMissingData(nextProps.data)
 
     this.setState({
       data: this.fields,
@@ -73,6 +75,16 @@ const withForm = Component => class Form extends React.Component {
       }
 
       this.fields[field.id] = Form.getInitialField(field, data)
+    })
+  }
+
+  generateMissingData(data) {
+    Object.keys(data).forEach((key) => {
+      if (this.fields[key]) {
+        return
+      }
+
+      this.fields[key] = data[key]
     })
   }
 
