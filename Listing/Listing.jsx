@@ -11,11 +11,13 @@ const withListing = Component => class Listing extends React.Component {
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
     headers: PropTypes.arrayOf(PropTypes.object).isRequired,
     toolbarContent: PropTypes.node,
+    onUpdateSelection: PropTypes.func,
   }
 
   static defaultProps = {
     hasLoader: false,
     toolbarContent: (<Fragment />),
+    onUpdateSelection: () => {},
   }
 
   static getSearchableHeaders(headers) {
@@ -162,6 +164,8 @@ const withListing = Component => class Listing extends React.Component {
         selected.slice(selectedIndex + 1),
       )
     }
+
+    this.props.onUpdateSelection(newSelected)
 
     this.setState({
       selected: newSelected,

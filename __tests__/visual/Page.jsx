@@ -48,6 +48,7 @@ const Page = ({ classes, ...props }) => (
       orderBy="date"
       handleClick={noop}
       hasLoader
+      onUpdateSelection={(selection) => { console.log(selection) }}
       toolbarContent={(
         <Tooltip title="Delete">
           <IconButton aria-label="Delete">

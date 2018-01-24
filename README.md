@@ -165,6 +165,7 @@ A dialog box to confirm something with a user
 Data-Table
 
 * `toolbarContent: node`, Content that should be shown in the toolbar, if a line is selected
+* `onUpdateSelection: function`, is called if a selection of a line is changed
 
 ### AddButton
 

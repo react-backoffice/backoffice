@@ -16,8 +16,9 @@ class ListingLine extends React.Component {
     handleKeyDown: PropTypes.func.isRequired,
     handleCheckClick: PropTypes.func.isRequired,
   }
-  renderCells(handleClick) {
-    const { headers, data } = this.props
+
+  renderCells() {
+    const { headers, data, handleClick } = this.props
 
     return headers.map((header) => {
       const content = data[header.id]
@@ -32,7 +33,7 @@ class ListingLine extends React.Component {
           key={`header-${header.id}`}
           padding={header.disablePadding ? 'none' : 'default'}
           numeric={header.numeric}
-          onClick={() => handleClick(data.id)}
+          onClick={handleClick(data.id)}
         >
           {transformContent(content, data)}
         </TableCell>
@@ -43,7 +44,6 @@ class ListingLine extends React.Component {
   render() {
     const {
       data,
-      handleClick,
       isSelected,
       handleKeyDown,
       handleCheckClick,
@@ -65,7 +65,7 @@ class ListingLine extends React.Component {
           <Checkbox checked={isSelected} />
         </TableCell>
 
-        {this.renderCells(handleClick)}
+        {this.renderCells()}
       </TableRow>
     )
   }
