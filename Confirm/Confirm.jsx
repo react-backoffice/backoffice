@@ -11,6 +11,7 @@ const withConfirm = Component => class Confirm extends React.Component {
     agreeText: PropTypes.string,
     disagreeText: PropTypes.string,
     onConfirm: PropTypes.func.isRequired,
+    onClose: PropTypes.func,
   }
 
   static defaultProps = {
@@ -18,6 +19,7 @@ const withConfirm = Component => class Confirm extends React.Component {
     open: false,
     agreeText: 'Agree',
     disagreeText: 'Disagree',
+    onClose: () => {},
   }
 
   constructor() {
@@ -43,6 +45,8 @@ const withConfirm = Component => class Confirm extends React.Component {
     this.setState({
       open: false,
     })
+
+    this.props.onClose()
   }
 
   handleConfirm() {
