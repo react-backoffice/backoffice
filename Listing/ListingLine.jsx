@@ -33,7 +33,7 @@ class ListingLine extends React.Component {
           key={`header-${header.id}`}
           padding={header.disablePadding ? 'none' : 'default'}
           numeric={header.numeric}
-          onClick={handleClick(data.id)}
+          onClick={() => handleClick(data.id)}
         >
           {transformContent(content, data)}
         </TableCell>
