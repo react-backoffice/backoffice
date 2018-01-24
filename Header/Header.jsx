@@ -71,6 +71,7 @@ const Header = ({
       <Toolbar>
         <IconButton
           aria-label="open drawer"
+          color="inherit"
           onClick={handleDrawerOpen}
           className={classNames(classes.menuButton, open && classes.hide)}
         >
