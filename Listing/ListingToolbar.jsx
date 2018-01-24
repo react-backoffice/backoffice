@@ -1,14 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 import { withStyles } from 'material-ui/styles'
 import Toolbar from 'material-ui/Toolbar'
-import Tooltip from 'material-ui/Tooltip'
 import Typography from 'material-ui/Typography'
-import IconButton from 'material-ui/IconButton'
 
-import DeleteIcon from 'material-ui-icons/Delete'
 import ListingSearch from './ListingSearch'
 
 const toolbarStyles = theme => ({
@@ -41,6 +38,7 @@ const ListingToolbar = ({
   numSelected,
   onFilter,
   classes,
+  children,
 }) => (
   <Toolbar
     className={classNames(classes.root, {
@@ -57,13 +55,7 @@ const ListingToolbar = ({
     <div className={classes.spacer} />
     <div className={classes.actions}>
 
-      {numSelected > 0 ? (
-        <Tooltip title="Delete">
-          <IconButton aria-label="Delete">
-            <DeleteIcon />
-          </IconButton>
-        </Tooltip>
-      ) : (
+      {numSelected > 0 ? children : (
         <ListingSearch onFilter={onFilter} />
       )}
     </div>
@@ -75,6 +67,11 @@ ListingToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
   onFilter: PropTypes.func.isRequired,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
+  children: PropTypes.node,
+}
+
+ListingToolbar.defaultProps = {
+  children: (<Fragment />),
 }
 
 export default withStyles(toolbarStyles)(ListingToolbar)

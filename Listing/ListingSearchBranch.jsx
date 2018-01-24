@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import TextField from 'material-ui/TextField/TextField'
 import withStyles from 'material-ui/styles/withStyles'
+import TextField from 'material-ui/TextField/TextField'
+import Tooltip from 'material-ui/Tooltip'
 import IconButton from 'material-ui/IconButton/IconButton'
 import SearchIcon from 'material-ui-icons/Search'
 
@@ -40,9 +41,11 @@ const ListingSearchBranch = ({
       })}
       onChange={onFilter}
     />
-    <IconButton onClick={onClick}>
-      <SearchIcon />
-    </IconButton>
+    <Tooltip title="Search">
+      <IconButton onClick={onClick}>
+        <SearchIcon />
+      </IconButton>
+    </Tooltip>
   </div>
 )
 

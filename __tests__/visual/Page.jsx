@@ -2,6 +2,9 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Typography from 'material-ui/Typography'
 import withStyles from 'material-ui/styles/withStyles'
+import Tooltip from 'material-ui/Tooltip'
+import IconButton from 'material-ui/IconButton'
+import DeleteIcon from 'material-ui-icons/Delete'
 
 import Home from '../../Home'
 import homeData from './data/home'
@@ -45,6 +48,13 @@ const Page = ({ classes, ...props }) => (
       orderBy="date"
       handleClick={noop}
       hasLoader
+      toolbarContent={(
+        <Tooltip title="Delete">
+          <IconButton aria-label="Delete">
+            <DeleteIcon />
+          </IconButton>
+        </Tooltip>
+      )}
     />
 
     <Typography type="display1" className={classes.headline}>

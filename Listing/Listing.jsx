@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import keycode from 'keycode'
 
@@ -10,10 +10,12 @@ const withListing = Component => class Listing extends React.Component {
     hasLoader: PropTypes.bool,
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
     headers: PropTypes.arrayOf(PropTypes.object).isRequired,
+    toolbarContent: PropTypes.node,
   }
 
   static defaultProps = {
     hasLoader: false,
+    toolbarContent: (<Fragment />),
   }
 
   static getSearchableHeaders(headers) {

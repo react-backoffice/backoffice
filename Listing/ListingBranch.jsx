@@ -39,6 +39,7 @@ const ListingBranch = ({
   rowsPerPage,
   rowsPerPageOptions,
   page,
+  toolbarContent,
   handleSelectAllClick,
   handleRequestSort,
   handleCheckClick,
@@ -55,7 +56,9 @@ const ListingBranch = ({
       title={title}
       numSelected={selected.length}
       onFilter={onFilter}
-    />
+    >
+      {toolbarContent}
+    </ListingToolbar>
 
     <div className={classes.tableWrapper}>
 
@@ -115,6 +118,7 @@ ListingBranch.propTypes = {
   rowsPerPageOptions: PropTypes.arrayOf(PropTypes.number),
   page: PropTypes.number,
   hasLoader: PropTypes.bool.isRequired,
+  toolbarContent: PropTypes.node.isRequired,
   handleSelectAllClick: PropTypes.func.isRequired,
   handleRequestSort: PropTypes.func.isRequired,
   handleCheckClick: PropTypes.func.isRequired,

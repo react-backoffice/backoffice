@@ -164,6 +164,8 @@ A dialog box to confirm something with a user
 
 Data-Table
 
+* `toolbarContent: node`, Content that should be shown in the toolbar, if a line is selected
+
 ### AddButton
 
 Button in the bottom right, that let's you link to a new page
@@ -231,6 +233,7 @@ Show an error in the left hand corner
 
 * Rename component Home to Dashboard
 * Form types: `checkbox`, `radio`
+* Focus search in listing when opening
 * Tests
 * Performance optimizing
 
