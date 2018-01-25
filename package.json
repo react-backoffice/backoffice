@@ -8,13 +8,16 @@
     "start": "yarn server",
     "server": "webpack-dev-server",
     "js:lint": "eslint **/*.{js,jsx}",
+    "js:test": "jest",
+    "js:test:watch": "yarn js:test --watch",
     "lint": "yarn js:lint",
-    "test": "yarn lint"
+    "test": "yarn lint && yarn js:test"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "is-url": "^1.2.2",
     "isemail": "^3.0.0",
+    "jest": "^22.1.4",
     "jss": "^9.5.1",
     "keycode": "^2.1.9",
     "material-ui": "^1.0.0-beta.23",
@@ -32,6 +35,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.1.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
