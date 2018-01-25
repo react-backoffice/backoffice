@@ -6,6 +6,7 @@ React implementation that provides a couple of components you might want to use 
 Backoffice also uses `react-router-dom`, `material-ui-icons`, `material-ui-picker` and some more OSS.
 
 [![Build Status](https://travis-ci.org/drublic/backoffice.svg?branch=master)](https://travis-ci.org/drublic/backoffice)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdrublic%2Fbackoffice.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdrublic%2Fbackoffice?ref=badge_shield)
 
 ## Purpose
 
@@ -242,3 +243,6 @@ Show an error in the left hand corner
 ## License
 
 This framework is licensed under [MIT](./LICENSE)
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdrublic%2Fbackoffice.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdrublic%2Fbackoffice?ref=badge_large)
