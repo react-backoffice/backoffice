@@ -21,6 +21,10 @@ If you use yarn, just run the following command in your project’s root directo
 
     yarn add backoffice
 
+Or using npm:
+
+    npm install --save backoffice
+
 ### Using components
 
 You need to create your own React application, that takes care of routing (at least for now), handling state and so on.
