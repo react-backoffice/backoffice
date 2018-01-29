@@ -22,6 +22,14 @@ If you use yarn, just run the following command in your project’s root directo
 
     yarn add backoffice
 
+Or using npm:
+
+    npm install --save backoffice
+
+### Setting up Webpack
+
+Backoffice needs a transpiler for its ES2016 modules + JSX.
+
 ### Using components
 
 You need to create your own React application, that takes care of routing (at least for now), handling state and so on.
@@ -243,6 +251,5 @@ Show an error in the left hand corner
 ## License
 
 This framework is licensed under [MIT](./LICENSE)
-
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdrublic%2Fbackoffice.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdrublic%2Fbackoffice?ref=badge_large)
