@@ -18,6 +18,8 @@ const withFormFieldList = Component => class extends React.Component {
     listItems: PropTypes.arrayOf(PropTypes.string),
     completeFrom: PropTypes.arrayOf(PropTypes.string),
     handleChange: PropTypes.func.isRequired,
+    onAddListItem: PropTypes.func.isRequired,
+    onRemoveListItem: PropTypes.func.isRequired,
   }
 
   static defaultProps = {
@@ -28,14 +30,6 @@ const withFormFieldList = Component => class extends React.Component {
   constructor(props) {
     super(props)
 
-    this.timer = undefined
-
-    this.state = {
-      availableOptions: [],
-      listItems: [],
-      showMenu: false,
-      dirty: false,
-    }
 
     this.handleChange = this.handleChange.bind(this)
     this.handleClick = this.handleClick.bind(this)
@@ -44,18 +38,9 @@ const withFormFieldList = Component => class extends React.Component {
     this.handleKeyPress = this.handleKeyPress.bind(this)
   }
 
-  componentWillMount() {
-    this.setState({
-      listItems: this.props.listItems,
-    })
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (!this.state.dirty) {
-      this.setState({
-        listItems: nextProps.listItems,
-      })
-    }
+  state = {
+    availableOptions: [],
+    showMenu: false,
   }
 
   componentWillUnmount() {
@@ -63,8 +48,7 @@ const withFormFieldList = Component => class extends React.Component {
   }
 
   getAvailableOptions(value) {
-    const { completeFrom } = this.props
-    const { listItems } = this.state
+    const { completeFrom, listItems } = this.props
     const lowerValue = value.toLowerCase()
 
     let availableOptions = completeFrom.filter(option => listItems.indexOf(option) === -1)
@@ -79,12 +63,15 @@ const withFormFieldList = Component => class extends React.Component {
       return (
         <span
           dangerouslySetInnerHTML={{ __html: text }}
+          text={option}
         />
       )
     })
 
     return availableOptions
   }
+
+  timer = undefined
 
   handleChange(id) {
     return (event) => {
@@ -102,10 +89,12 @@ const withFormFieldList = Component => class extends React.Component {
   }
 
   handleClick(option) {
+    const newOption = option.props.text
+
     return () => {
+      this.props.onAddListItem(newOption)
+
       this.setState({
-        listItems: [...this.state.listItems, option],
-        dirty: true,
         value: '',
       })
     }
@@ -121,27 +110,18 @@ const withFormFieldList = Component => class extends React.Component {
 
   handleDelete(option) {
     return () => {
-      const listItems = [...this.state.listItems]
-      const index = listItems.indexOf(option)
-
-      if (index > -1) {
-        listItems.splice(index, 1)
-      }
-
-      this.setState({
-        listItems,
-      })
+      this.props.onRemoveListItem(option)
     }
   }
 
   handleKeyPress(event) {
-    const { listItems, value } = this.state
+    const { value } = this.state
     const { completeFrom } = this.props
 
     if (event.which === 13 && completeFrom.length === 0) {
+      this.props.onAddListItem(value)
+
       this.setState({
-        listItems: [...listItems, value],
-        dirty: true,
         value: '',
       })
     }

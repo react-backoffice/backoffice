@@ -24,6 +24,8 @@ const withFormField = Component => class extends React.Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.initialize = this.initialize.bind(this)
+    this.handleAddListItem = this.handleAddListItem.bind(this)
+    this.handleRemoveListItem = this.handleRemoveListItem.bind(this)
 
     this.state = {
       listItems: [],
@@ -43,7 +45,11 @@ const withFormField = Component => class extends React.Component {
   initialize(props) {
     const isList = props.type === 'list'
     const value = !isList ? props.value : ''
-    let listItems = []
+    let { listItems } = this.state
+
+    if (!listItems) {
+      listItems = []
+    }
 
     if (this.state.isDirty === false && isList) {
       listItems = props.value
@@ -89,12 +95,33 @@ const withFormField = Component => class extends React.Component {
     })
   }
 
+  handleAddListItem(option) {
+    this.setState({
+      listItems: [...this.state.listItems, option],
+    })
+  }
+
+  handleRemoveListItem(option) {
+    const listItems = [...this.state.listItems]
+    const index = listItems.indexOf(option)
+
+    if (index > -1) {
+      listItems.splice(index, 1)
+    }
+
+    this.setState({
+      listItems,
+    })
+  }
+
   render() {
     return (
       <Component
         {...this.props}
         {...this.state}
         handleChange={this.handleChange}
+        onRemoveListItem={this.handleRemoveListItem}
+        onAddListItem={this.handleAddListItem}
       />
     )
   }

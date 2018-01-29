@@ -76,15 +76,21 @@ const FormFieldListBranch = ({
       })}
       >
         <List>
-          {availableOptions.slice(0, 10).map(option => (
-            <ListItem
-              key={`form-field-list-${option.toLowerCase().replace(/ /, '')}`}
-              button
-              onClick={onClick(option)}
-            >
-              <ListItemText primary={option} />
-            </ListItem>
-          ))}
+          {availableOptions.slice(0, 10).map((option) => {
+            const key = Math.floor((1 + Math.random()) * 0x10000)
+              .toString(16)
+              .substring(1)
+
+            return (
+              <ListItem
+                key={`form-field-list-${key}`}
+                button
+                onClick={onClick(option)}
+              >
+                <ListItemText primary={option} />
+              </ListItem>
+            )
+        })}
         </List>
       </Paper>
 
@@ -112,7 +118,7 @@ FormFieldListBranch.propTypes = {
 }
 
 FormFieldListBranch.defaultProps = {
-  renderElement: () => {},
+  renderElement: null,
 }
 
 export default withStyles(styles)(FormFieldListBranch)
