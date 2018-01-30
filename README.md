@@ -230,8 +230,13 @@ Form components
 * `options: string[]`, options of a field of type `select`
 * `format: string`, formation of a field of type `date`, `time` or `datetime`, uses [Moment.js](https://momentjs.com/docs/#/parsing/string-format/)
 * `rows: number`, height of multiline text-field
-* `completeFrom: string[]`, list for autocompletion
+* `completeFrom: (FormFieldCompleteFrom | string)[]`, list for autocompletion
 * `renderElement: function`, element that should be rendered of a field of type `list`
+
+#### FormFieldCompleteFrom
+
+* `title: string`, display as text
+* `tooltip: string`, tooltip text, also used as secondary text in autocomplete
 
 ### ErrorSnackbar
 

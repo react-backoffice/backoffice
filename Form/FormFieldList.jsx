@@ -15,8 +15,8 @@ const replace = (string, searchValue, replaceValue) => {
 
 const withFormFieldList = Component => class extends React.Component {
   static propTypes = {
-    listItems: PropTypes.arrayOf(PropTypes.string),
-    completeFrom: PropTypes.arrayOf(PropTypes.string),
+    listItems: PropTypes.arrayOf(PropTypes.object),
+    completeFrom: PropTypes.arrayOf(PropTypes.object),
     handleChange: PropTypes.func.isRequired,
     onAddListItem: PropTypes.func.isRequired,
     onRemoveListItem: PropTypes.func.isRequired,
@@ -30,12 +30,12 @@ const withFormFieldList = Component => class extends React.Component {
   constructor(props) {
     super(props)
 
-
     this.handleChange = this.handleChange.bind(this)
     this.handleClick = this.handleClick.bind(this)
     this.handleBlur = this.handleBlur.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
     this.handleKeyPress = this.handleKeyPress.bind(this)
+    this.getAvailableOptions = this.getAvailableOptions.bind(this)
   }
 
   state = {
@@ -50,23 +50,32 @@ const withFormFieldList = Component => class extends React.Component {
   getAvailableOptions(value) {
     const { completeFrom, listItems } = this.props
     const lowerValue = value.toLowerCase()
+    const flatListItems = listItems.map(item => item.title)
 
-    let availableOptions = completeFrom.filter(option => listItems.indexOf(option) === -1)
-
-    availableOptions = availableOptions.filter(option => (
-      option.toLowerCase().indexOf(lowerValue) > -1
+    // Remove selected items
+    let availableOptions = completeFrom.filter(option => (
+      flatListItems.indexOf(option.title) === -1
     ))
 
+    // Overload data
     availableOptions = availableOptions.map((option) => {
-      const text = replace(option, lowerValue, `<b>${value}</b>`)
+      let { title } = option
 
-      return (
-        <span
-          dangerouslySetInnerHTML={{ __html: text }}
-          text={option}
-        />
-      )
+      if (!option.title) {
+        title = option
+      }
+
+      return {
+        title,
+        tooltip: option.tooltip,
+        text: replace(title, lowerValue, `<b>${value}</b>`),
+      }
     })
+
+    // Filter for real
+    availableOptions = availableOptions.filter(option => (
+      option.title.toLowerCase().indexOf(lowerValue) > -1
+    ))
 
     return availableOptions
   }
@@ -89,10 +98,8 @@ const withFormFieldList = Component => class extends React.Component {
   }
 
   handleClick(option) {
-    const newOption = option.props.text
-
     return () => {
-      this.props.onAddListItem(newOption)
+      this.props.onAddListItem(option)
 
       this.setState({
         value: '',
@@ -119,7 +126,9 @@ const withFormFieldList = Component => class extends React.Component {
     const { completeFrom } = this.props
 
     if (event.which === 13 && completeFrom.length === 0) {
-      this.props.onAddListItem(value)
+      this.props.onAddListItem({
+        title: value,
+      })
 
       this.setState({
         value: '',

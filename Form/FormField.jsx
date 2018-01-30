@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import FormFieldBranch from './FormFieldBranch'
 import isValid from './isValid'
 
-const withFormField = Component => class extends React.Component {
+const withFormField = Component => class FormField extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     type: PropTypes.string,
@@ -19,6 +19,21 @@ const withFormField = Component => class extends React.Component {
     required: false,
   }
 
+  static getCompleteFrom(completeFrom = []) {
+    return completeFrom.map((option) => {
+      let { title } = option
+
+      if (!option.title) {
+        title = option
+      }
+
+      return {
+        title,
+        tooltip: option.tooltip,
+      }
+    })
+  }
+
   constructor(props) {
     super(props)
 
@@ -26,12 +41,13 @@ const withFormField = Component => class extends React.Component {
     this.initialize = this.initialize.bind(this)
     this.handleAddListItem = this.handleAddListItem.bind(this)
     this.handleRemoveListItem = this.handleRemoveListItem.bind(this)
+  }
 
-    this.state = {
-      listItems: [],
-      value: '',
-      isDirty: false,
-    }
+  state = {
+    listItems: [],
+    value: '',
+    isDirty: false,
+    completeFrom: [],
   }
 
   componentWillMount() {
@@ -46,19 +62,29 @@ const withFormField = Component => class extends React.Component {
     const isList = props.type === 'list'
     const value = !isList ? props.value : ''
     let { listItems } = this.state
+    let { completeFrom } = props
+
+    if (isList) {
+      completeFrom = isList ? FormField.getCompleteFrom(completeFrom) : []
+    }
 
     if (!listItems) {
       listItems = []
     }
 
-    if (this.state.isDirty === false && isList) {
-      listItems = props.value
+    if (this.state.isDirty === false && isList && props.value &&
+        props.value.constructor === Array
+    ) {
+      listItems = props.value.map(selectedValue => (
+        completeFrom.filter(option => option.title === selectedValue)[0]
+      ))
     }
 
     this.setState({
       listItems,
       value,
       isDirty: true,
+      completeFrom,
     })
   }
 
@@ -103,7 +129,8 @@ const withFormField = Component => class extends React.Component {
 
   handleRemoveListItem(option) {
     const listItems = [...this.state.listItems]
-    const index = listItems.indexOf(option)
+    const flatListItems = listItems.map(item => item.title)
+    const index = flatListItems.indexOf(option.title)
 
     if (index > -1) {
       listItems.splice(index, 1)

@@ -54,7 +54,29 @@ export default [{
     type: 'list',
     width: 'mid',
     value: ['Foo', 'Bar', 'Baz'],
-    completeFrom: ['Foo', 'Bar', 'Baz', 'Froot', 'Foobar', 'Barbaz', 'Foobaz'],
+    completeFrom: [{
+      title: 'Foo',
+      tooltip: 'Foo-Baz',
+    },
+    'Bar',
+    {
+      title: 'Baz',
+      tooltip: 'Foo-Baz',
+    },
+    {
+      title: 'Froot',
+    },
+    {
+      title: 'Foobar',
+      tooltip: 'Foo-Baz',
+    },
+    {
+      title: 'Barbaz',
+      tooltip: 'Foo-Baz',
+    },
+    {
+      title: 'Foobaz',
+    }],
   }, {
     id: 'free-list',
     title: 'Free List',

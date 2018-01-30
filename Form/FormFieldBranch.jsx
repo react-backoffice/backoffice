@@ -113,7 +113,7 @@ const FormFieldBranch = ({
 FormFieldBranch.propTypes = {
   type: PropTypes.string,
   width: PropTypes.string,
-  listItems: PropTypes.arrayOf(PropTypes.string),
+  listItems: PropTypes.arrayOf(PropTypes.object),
   selectOptions: PropTypes.arrayOf(PropTypes.string),
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
   handleChange: PropTypes.func,

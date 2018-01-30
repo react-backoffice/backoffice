@@ -6,6 +6,7 @@ import { withStyles } from 'material-ui/styles'
 import Paper from 'material-ui/Paper'
 import List, { ListItem, ListItemText } from 'material-ui/List'
 import Chip from 'material-ui/Chip'
+import Tooltip from 'material-ui/Tooltip/Tooltip'
 
 import FormFieldInput from './FormFieldInput'
 
@@ -48,18 +49,27 @@ const FormFieldListBranch = ({
   classes,
   ...rest
 }) => {
-  const renderListItem = (element, index) => {
+  const renderListItem = (option, index) => {
     if (renderElement) {
-      return renderElement(element, index)
+      return renderElement(option, index)
+    }
+
+    const chipProp = {
+      key: `form-list-${index}`,
+      label: option.title,
+      onDelete: onDelete(option),
+    }
+
+    if (option.tooltip) {
+      return (
+        <Tooltip title={option.tooltip} className={classes.selectedItem}>
+          <Chip {...chipProp} />
+        </Tooltip>
+      )
     }
 
     return (
-      <Chip
-        key={`form-list-${index}`}
-        label={element}
-        onDelete={onDelete(element)}
-        className={classes.selectedItem}
-      />
+      <Chip {...chipProp} className={classes.selectedItem} />
     )
   }
 
@@ -81,13 +91,17 @@ const FormFieldListBranch = ({
               .toString(16)
               .substring(1)
 
+            const title = (
+              <span dangerouslySetInnerHTML={{ __html: option.text }} />
+            )
+
             return (
               <ListItem
                 key={`form-field-list-${key}`}
                 button
                 onClick={onClick(option)}
               >
-                <ListItemText primary={option} />
+                <ListItemText primary={title} secondary={option.tooltip} />
               </ListItem>
             )
         })}
@@ -102,11 +116,11 @@ const FormFieldListBranch = ({
 }
 
 FormFieldListBranch.propTypes = {
-  availableOptions: PropTypes.arrayOf(PropTypes.oneOfType([
+  availableOptions: PropTypes.arrayOf(PropTypes.object).isRequired,
+  listItems: PropTypes.arrayOf(PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
   ])).isRequired,
-  listItems: PropTypes.arrayOf(PropTypes.string).isRequired,
   showMenu: PropTypes.bool.isRequired,
   renderElement: PropTypes.func,
   classNames: PropTypes.arrayOf(PropTypes.string).isRequired,
