@@ -1,6 +1,6 @@
 {
   "name": "backoffice",
-  "version": "1.30.3",
+  "version": "1.31.0",
   "main": "index.js",
   "author": "Hans Christian Reinl <info@drublic.de>",
   "license": "MIT",
