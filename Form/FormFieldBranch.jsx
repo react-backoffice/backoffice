@@ -16,6 +16,7 @@ const styles = theme => ({
   field: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
+    verticalAlign: 'top',
   },
 
   widthSmall: {
