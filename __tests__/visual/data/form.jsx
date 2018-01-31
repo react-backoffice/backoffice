@@ -95,6 +95,7 @@ export default [{
       iconEnd: (<Icon />),
       width: 'mid',
     }, {
+      id: 'empty',
       type: 'empty',
       width: 'mid',
     }],
