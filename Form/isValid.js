@@ -1,6 +1,14 @@
 import * as Validators from './validators'
 import { TYPES } from './constants'
 
+export const getValidator = (validator) => {
+  if (typeof validator === 'function') {
+    return validator
+  }
+
+  return Validators[validator]
+}
+
 export default (type, required, validators = [], value) => {
   const allValidators = [...validators]
 
@@ -20,7 +28,8 @@ export default (type, required, validators = [], value) => {
     return true
   }
 
-  const validatorFunctions = allValidators.map(validator => Validators[validator])
+  const validatorFunctions = allValidators.map(getValidator)
+
   const validState = validatorFunctions.map((validator) => {
     if (typeof validator === 'function') {
       return validator(value)

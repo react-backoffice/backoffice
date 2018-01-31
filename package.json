@@ -53,5 +53,21 @@
     "log": "^1.4.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    },
+    "testMatch": [
+      "**/__tests__/**/*.test.js"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   }
 }

@@ -7,6 +7,9 @@ module.exports = {
       statements: 80,
     },
   },
+  testMatch: [
+    '**/__tests__/**/*.test.js?(x)',
+  ],
   transform: {
     '^.+\\.jsx?$': 'babel-jest',
   },
