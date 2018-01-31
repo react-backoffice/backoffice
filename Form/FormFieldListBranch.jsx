@@ -55,21 +55,28 @@ const FormFieldListBranch = ({
     }
 
     const chipProp = {
-      key: `form-list-${index}`,
       label: option.title,
       onDelete: onDelete(option),
     }
 
     if (option.tooltip) {
       return (
-        <Tooltip title={option.tooltip} className={classes.selectedItem}>
+        <Tooltip
+          key={`form-list-${index}`}
+          title={option.tooltip}
+          className={classes.selectedItem}
+        >
           <Chip {...chipProp} />
         </Tooltip>
       )
     }
 
     return (
-      <Chip {...chipProp} className={classes.selectedItem} />
+      <Chip
+        {...chipProp}
+        key={`form-list-${index}`}
+        className={classes.selectedItem}
+      />
     )
   }
 
