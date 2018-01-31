@@ -93,6 +93,10 @@ export default [{
       title: 'Nested Text',
       type: 'text',
       iconEnd: (<Icon />),
+      width: 'mid',
+    }, {
+      type: 'empty',
+      width: 'mid',
     }],
   }, {
     id: 'email',

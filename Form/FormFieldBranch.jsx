@@ -105,6 +105,10 @@ const FormFieldBranch = ({
           type={TYPES.DATETIME}
         />
       )
+    case TYPES.EMPTY:
+      return (
+        <div className={classNames.join('')} />
+      )
     default:
       return (
         <FormFieldInput

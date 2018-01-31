@@ -9,6 +9,7 @@ export const TYPES = {
   EMAIL: 'email',
   PASSWORD: 'password',
   URL: 'url',
+  EMPTY: 'empty',
 }
 
 export default {}
