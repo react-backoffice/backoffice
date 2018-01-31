@@ -19,6 +19,11 @@ const styles = theme => ({
     verticalAlign: 'top',
   },
 
+  fieldDate: {
+    marginTop: theme.spacing.unit * 2,
+    marginBottom: theme.spacing.unit,
+  },
+
   widthSmall: {
     width: `calc(25% - ${theme.spacing.unit * 2}px)`,
   },
@@ -80,7 +85,7 @@ const FormFieldBranch = ({
       return (
         <FormFieldDate
           {...props}
-          classNames={classNames}
+          classNames={[...classNames, classes.fieldDate]}
           type={TYPES.DATE}
         />
       )
@@ -88,7 +93,7 @@ const FormFieldBranch = ({
       return (
         <FormFieldDate
           {...props}
-          classNames={classNames}
+          classNames={[...classNames, classes.fieldDate]}
           type={TYPES.TIME}
         />
       )
@@ -96,7 +101,7 @@ const FormFieldBranch = ({
       return (
         <FormFieldDate
           {...props}
-          classNames={classNames}
+          classNames={[...classNames, classes.fieldDate]}
           type={TYPES.DATETIME}
         />
       )
