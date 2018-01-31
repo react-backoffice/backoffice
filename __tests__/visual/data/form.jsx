@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Icon from 'material-ui-icons/Visibility'
+import Divider from 'material-ui/Divider/Divider'
+import Typography from 'material-ui/Typography/Typography';
 
 export default [{
   group: true,
@@ -99,6 +101,15 @@ export default [{
       type: 'empty',
       width: 'mid',
     }],
+  }, {
+    id: 'content',
+    type: 'content',
+    content: (
+      <Fragment>
+        <Typography type="headline">Content</Typography>
+        <Divider />
+      </Fragment>
+    ),
   }, {
     id: 'email',
     title: 'Email',

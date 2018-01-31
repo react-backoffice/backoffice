@@ -107,7 +107,13 @@ const FormFieldBranch = ({
       )
     case TYPES.EMPTY:
       return (
-        <div className={classNames.join('')} />
+        <div className={classNames.join(' ')} />
+      )
+    case TYPES.CONTENT:
+      return (
+        <div className={[...classNames, classes.field].join(' ')}>
+          {props.content}
+        </div>
       )
     default:
       return (
@@ -125,6 +131,7 @@ FormFieldBranch.propTypes = {
   width: PropTypes.string,
   listItems: PropTypes.arrayOf(PropTypes.object),
   selectOptions: PropTypes.arrayOf(PropTypes.string),
+  content: PropTypes.node,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
   handleChange: PropTypes.func,
 }
@@ -134,6 +141,7 @@ FormFieldBranch.defaultProps = {
   width: 'full',
   listItems: [],
   selectOptions: [],
+  content: null,
   handleChange: () => { },
 }
 
