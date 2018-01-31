@@ -13,6 +13,8 @@ describe('Form.validators', () => {
     expect(required(' ')).toBe(false)
     expect(required('a')).toBe(true)
     expect(required('foobar')).toBe(true)
+    expect(required(['foo'])).toBe(true)
+    expect(required([])).toBe(false)
   })
 
   it('checks a value for machinereadable', () => {

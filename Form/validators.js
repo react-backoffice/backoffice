@@ -4,7 +4,15 @@ import isUrl from 'is-url'
 /**
  * Check if a field has any value at all
  */
-export const required = value => !!(value && value.trim().length > 0)
+export const required = (value) => {
+  let checkValue = value
+
+  if (typeof value === 'string') {
+    checkValue = value.trim()
+  }
+
+  return !!(checkValue && checkValue.length > 0)
+}
 
 /**
  * Check if a value is readable for machines (e.g. as identifier)
