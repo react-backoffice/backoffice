@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import withStyles from 'material-ui/styles/withStyles'
+import InputAdornment from 'material-ui/Input/InputAdornment'
+import IconButton from 'material-ui/IconButton/IconButton'
 import KeyboardArrowLeftIcon from 'material-ui-icons/KeyboardArrowLeft'
 import KeyboardArrowRightIcon from 'material-ui-icons/KeyboardArrowRight'
 import EventIcon from 'material-ui-icons/Event'
@@ -14,6 +17,13 @@ import {
 
 import { TYPES } from './constants'
 
+const styles = theme => ({
+  buttonIcon: {
+    position: 'relative',
+    top: theme.spacing.unit * -1 * 2,
+  },
+})
+
 const FormFieldDate = ({
   type,
   id,
@@ -24,6 +34,7 @@ const FormFieldDate = ({
   handleChange,
   helperText,
   classNames,
+  classes,
 }) => {
   let additionalAttributes = {}
   let Component
@@ -60,7 +71,15 @@ const FormFieldDate = ({
       onChange={handleChange(id)}
       format={format}
       required={required}
-      keyboardIcon={<EventIcon />}
+      InputProps={{
+        endAdornment: (
+          <InputAdornment position="end" className={classes.buttonIcon}>
+            <IconButton>
+              <EventIcon />
+            </IconButton>
+          </InputAdornment>
+        ),
+      }}
       className={classNames.join(' ')}
       helperText={helperText}
       {...additionalAttributes}
@@ -85,6 +104,7 @@ FormFieldDate.propTypes = {
   required: PropTypes.bool.isRequired,
   classNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleChange: PropTypes.func.isRequired,
+  classes: PropTypes.objectOf(PropTypes.object).isRequired,
 }
 
 FormFieldDate.defaultProps = {
@@ -92,4 +112,4 @@ FormFieldDate.defaultProps = {
   format: null,
 }
 
-export default FormFieldDate
+export default withStyles(styles)(FormFieldDate)
