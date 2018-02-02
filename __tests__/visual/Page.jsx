@@ -72,7 +72,7 @@ const Page = ({ classes, ...props }) => (
         },
       }}
       form={formData}
-      onSubmit={noop}
+      onSubmit={console.log}
       submitText="Save the form"
     >
       <Typography>

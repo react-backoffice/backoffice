@@ -111,6 +111,21 @@ Children are rendered as content.
 * `hasHeader?: boolean`, Is header included, default `true`
 * `hasCookieInfo?: boolean`, Is there a cookieinfo in the project, default: `false`
 
+### Menu
+
+A menu that lists entries
+
+* `data: MenuItem[]`, data to render the menu
+* `redirectTo: function`, called when clicked on an item
+
+### MenuItem
+
+* `type: ENUM('link' | 'divider')`
+* `url: string`, url to link to
+* `title: string`, title to display
+* `icon: ReactElement | null`, icon which should be displayed before title
+* `disabled: boolean`, if true, item will not be clickable
+
 ### Home
 
 Dashboard-like homepage
@@ -133,21 +148,6 @@ Dashboard-like homepage
 * `description?: string`, A description text
 * `icon?: function`, An icon element that you want to display next to the title
 * `disabled?: function`, Should element be disabled?, default `false`
-
-### Menu
-
-A menu that lists entries
-
-* `data: MenuItem[]`, data to render the menu
-* `redirectTo: function`, called when clicked on an item
-
-### MenuItem
-
-* `type: ENUM('link' | 'divider')`
-* `url: string`, url to link to
-* `title: string`, title to display
-* `icon: ReactElement | null`, icon which should be displayed before title
-* `disabled: boolean`, if true, item will not be clickable
 
 ### CookieInfo
 
