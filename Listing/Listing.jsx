@@ -93,6 +93,10 @@ const withListing = Component => class Listing extends React.Component {
     const orderByHeader = headers.filter(header => header.id === orderBy)[0]
     let { transformData } = orderByHeader
 
+    if (!data) {
+      return data
+    }
+
     if (typeof transformData !== 'function') {
       transformData = values => values
     }
