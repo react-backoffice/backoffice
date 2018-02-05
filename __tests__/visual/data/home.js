@@ -1,6 +1,6 @@
 export default {
   title: 'Backoffice',
-  description: 'Visial Testing for Backoffice Framework',
+  description: 'Visual Testing for Backoffice Framework',
   groups: [{
     id: 'list',
     title: 'List',
@@ -10,6 +10,13 @@ export default {
       description: 'Manage this card’s page',
       link: '/some-link',
       icon: null,
+    }, {
+      id: 'card-2',
+      title: 'Card 2',
+      description: 'Manage this card’s page',
+      link: '/some-link',
+      icon: null,
+      disabled: true,
     }],
   }],
 }

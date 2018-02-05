@@ -7,6 +7,8 @@ import Card, { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import Avatar from 'material-ui/Avatar'
 
+import DisabledIcon from 'material-ui-icons/Lock'
+
 const styles = theme => ({
   root: {
     cursor: 'pointer',
@@ -27,6 +29,10 @@ const styles = theme => ({
     pointerEvents: 'none',
     filter: 'grayscale(30%)',
   },
+  icon: {
+    float: 'right',
+    opacity: 0.5,
+  },
 })
 
 const HomeCard = ({
@@ -45,6 +51,10 @@ const HomeCard = ({
   return (
     <Card onClick={handleClick} className={rootClasses}>
       <CardContent className={classes.content}>
+        {disabled ? (
+          <DisabledIcon className={classes.icon} />
+        ) : null}
+
         {Icon ? (
           <Avatar className={classes.avatar}>
             <Icon />
