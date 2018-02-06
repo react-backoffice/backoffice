@@ -34,7 +34,7 @@ const Drawer = ({
   classes,
 }) => (
   <MaterialDrawer
-    type="persistent"
+    variant="persistent"
     classes={{
       paper: classes.drawerPaper,
     }}
