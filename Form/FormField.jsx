@@ -58,9 +58,17 @@ const withFormField = Component => class FormField extends React.Component {
     this.initialize(nextProps)
   }
 
+  getAdditionalValue(value) {
+    if (typeof this.props.getAdditionalValue === 'function') {
+      return this.props.getAdditionalValue(value)
+    }
+
+    return value
+  }
+
   initialize(props) {
     const isList = props.type === 'list'
-    const value = !isList ? props.value : ''
+    let value = this.getAdditionalValue(props.value)
     let { listItems } = this.state
     let { completeFrom } = props
 
@@ -72,12 +80,16 @@ const withFormField = Component => class FormField extends React.Component {
       listItems = []
     }
 
-    if (this.state.isDirty === false && isList && props.value &&
-        props.value.constructor === Array
+    if (this.state.isDirty === false && isList && value &&
+        value.constructor === Array
     ) {
-      listItems = props.value.map(selectedValue => (
+      listItems = value.map(selectedValue => (
         completeFrom.filter(option => option.title === selectedValue)[0]
       ))
+    }
+
+    if (isList) {
+      value = ''
     }
 
     this.setState({

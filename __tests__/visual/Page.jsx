@@ -4,6 +4,7 @@ import Typography from 'material-ui/Typography'
 import withStyles from 'material-ui/styles/withStyles'
 import Tooltip from 'material-ui/Tooltip'
 import IconButton from 'material-ui/IconButton'
+import Button from 'material-ui/Button'
 import DeleteIcon from 'material-ui-icons/Delete'
 
 import Home from '../../Home'
@@ -30,77 +31,115 @@ const styles = theme => ({
   },
 })
 
-const Page = ({ classes, ...props }) => (
-  <Fragment>
-    <Home
-      data={homeData}
-      {...props}
-    />
+class Page extends React.Component {
+  static propTypes = {
+    classes: PropTypes.objectOf(PropTypes.string).isRequired,
+  }
 
-    <Typography type="display1" className={classes.headline}>
-      Listing
-    </Typography>
+  constructor() {
+    super()
 
-    <Listing
-      title="Christmas Time"
-      data={listingData}
-      headers={listingHeaders}
-      orderBy="date"
-      handleClick={noop}
-      hasLoader
-      onUpdateSelection={(selection) => { console.log(selection) }}
-      toolbarContent={(
-        <Tooltip title="Delete">
-          <IconButton aria-label="Delete">
-            <DeleteIcon />
-          </IconButton>
-        </Tooltip>
-      )}
-    />
+    this.handleFormButtonClick = this.handleFormButtonClick.bind(this)
+  }
 
-    <Typography type="display1" className={classes.headline}>
-      Form
-    </Typography>
+  state = {
+    formData,
+    additionalValue: null,
+  }
 
-    <Form
-      data={{
-        text: {
-          value: 'prefilled text-field',
-        },
-        id: {
-          value: 'test-id',
-        },
-      }}
-      form={formData}
-      onSubmit={console.log}
-      submitText="Save the form"
-    >
-      <Typography>
-        This is a very special form with additional content.
-      </Typography>
-    </Form>
+  componentWillMount() {
+    const { formData: newFormData } = this.state
 
-    <Typography type="display1" className={classes.headline}>
-      Menu
-    </Typography>
+    newFormData[0].data[0].getAdditionalValue = value => (
+      this.state.additionalValue || value
+    )
 
-    <Menu
-      data={menuData}
-      redirectTo={noop}
-      {...props}
-    />
+    this.setState({
+      formData: newFormData,
+    })
+  }
 
-    <AddButton handleClick={noop} />
+  handleFormButtonClick() {
+    this.setState({
+      additionalValue: 'New value',
+    })
+  }
 
-    <Typography type="display1" className={classes.headline}>
-      Back Button
-    </Typography>
-    <BackButton url="/root" />
-  </Fragment>
-)
+  render() {
+    const { classes, ...props } = this.props
 
-Page.propTypes = {
-  classes: PropTypes.objectOf(PropTypes.string).isRequired,
+    return (
+      <Fragment>
+        <Home
+          data={homeData}
+          {...props}
+        />
+
+        <Typography type="display1" className={classes.headline}>
+          Listing
+        </Typography>
+
+        <Listing
+          title="Christmas Time"
+          data={listingData}
+          headers={listingHeaders}
+          orderBy="date"
+          handleClick={noop}
+          hasLoader
+          onUpdateSelection={(selection) => { console.log(selection) }}
+          toolbarContent={(
+            <Tooltip title="Delete">
+              <IconButton aria-label="Delete">
+                <DeleteIcon />
+              </IconButton>
+            </Tooltip>
+          )}
+        />
+
+        <Typography type="display1" className={classes.headline}>
+          Form
+        </Typography>
+
+        <Form
+          data={{
+            text: {
+              value: 'prefilled text-field',
+            },
+            id: {
+              value: 'test-id',
+            },
+          }}
+          form={formData}
+          onSubmit={console.log}
+          submitText="Save the form"
+        >
+          <Typography>
+            This is a very special form with additional content.
+          </Typography>
+          <Button onClick={this.handleFormButtonClick}>
+            Change First Field Value Via Function
+          </Button>
+        </Form>
+
+        <Typography type="display1" className={classes.headline}>
+          Menu
+        </Typography>
+
+        <Menu
+          data={menuData}
+          redirectTo={noop}
+          {...props}
+        />
+
+        <AddButton handleClick={noop} />
+
+        <Typography type="display1" className={classes.headline}>
+          Back Button
+        </Typography>
+        <BackButton url="/root" />
+      </Fragment>
+    )
+  }
 }
 
 export default withStyles(styles)(Page)

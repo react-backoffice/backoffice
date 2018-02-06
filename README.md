@@ -232,6 +232,7 @@ Form components
 * `rows: number`, height of multiline text-field
 * `completeFrom: (FormFieldCompleteFrom | string)[]`, list for autocompletion
 * `renderElement: function`, element that should be rendered of a field of type `list`
+* `getAdditionalValue: function`, transform any value before rendering
 
 #### FormFieldCompleteFrom
 
