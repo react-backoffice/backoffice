@@ -11,12 +11,14 @@ const withFormField = Component => class FormField extends React.Component {
     validators: PropTypes.arrayOf(PropTypes.string),
     required: PropTypes.bool,
     handleChange: PropTypes.func.isRequired,
+    getAdditionalValue: PropTypes.func,
   }
 
   static defaultProps = {
     type: 'text',
     validators: [],
     required: false,
+    getAdditionalValue: data => data,
   }
 
   static getCompleteFrom(completeFrom = []) {
@@ -66,38 +68,53 @@ const withFormField = Component => class FormField extends React.Component {
     return value
   }
 
+  getList({ value, completeFrom }) {
+    let listItems = this.state.listItems.map(item => item.title)
+
+    if (this.state.isDirty === false) {
+      if (value && value.constructor === Array) {
+        listItems = [
+          ...value,
+        ]
+      } else {
+        listItems = []
+      }
+    }
+
+    const allCompleteFrom = FormField.getCompleteFrom(completeFrom)
+    const transformedListItems = this.getAdditionalValue(listItems)
+
+    listItems = transformedListItems.map((selectedValue) => {
+      if (allCompleteFrom.length > 0) {
+        return allCompleteFrom.filter(option => option.title === selectedValue)[0]
+      }
+
+      return {
+        title: selectedValue,
+      }
+    })
+
+    return {
+      completeFrom: allCompleteFrom,
+      value: '',
+      isDirty: true,
+      listItems,
+    }
+  }
+
   initialize(props) {
     const isList = props.type === 'list'
-    let value = this.getAdditionalValue(props.value)
-    let { listItems } = this.state
-    let { completeFrom } = props
+    let state = {}
 
     if (isList) {
-      completeFrom = isList ? FormField.getCompleteFrom(completeFrom) : []
+      state = this.getList(props)
+    } else {
+      state = {
+        value: this.getAdditionalValue(props.value),
+      }
     }
 
-    if (!listItems) {
-      listItems = []
-    }
-
-    if (this.state.isDirty === false && isList && value &&
-        value.constructor === Array
-    ) {
-      listItems = value.map(selectedValue => (
-        completeFrom.filter(option => option.title === selectedValue)[0]
-      ))
-    }
-
-    if (isList) {
-      value = ''
-    }
-
-    this.setState({
-      listItems,
-      value,
-      isDirty: true,
-      completeFrom,
-    })
+    this.setState(state)
   }
 
   isValid(value) {

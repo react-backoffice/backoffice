@@ -54,6 +54,10 @@ const FormFieldListBranch = ({
       return renderElement(option, index)
     }
 
+    if (!option) {
+      return null
+    }
+
     const chipProp = {
       label: option.title,
       onDelete: onDelete(option),
