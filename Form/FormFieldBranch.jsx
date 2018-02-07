@@ -9,6 +9,10 @@ import FormFieldDate from './FormFieldDate'
 import FormFieldList from './FormFieldList'
 
 const styles = theme => ({
+  hidden: {
+    display: 'none',
+  },
+
   headline: {
     marginTop: theme.spacing.unit * 3,
   },
@@ -38,7 +42,11 @@ const styles = theme => ({
 })
 
 const FormFieldBranch = ({
-  type, width, classes, ...props
+  type,
+  width,
+  classes,
+  isVisible,
+  ...props
 }) => {
   const getClasses = () => {
     const classNames = [classes.field]
@@ -49,6 +57,10 @@ const FormFieldBranch = ({
       classNames.push(classes.widthMid)
     } else {
       classNames.push(classes.widthFull)
+    }
+
+    if (!isVisible) {
+      classNames.push(classes.hidden)
     }
 
     return classNames
@@ -132,6 +144,7 @@ FormFieldBranch.propTypes = {
   listItems: PropTypes.arrayOf(PropTypes.object),
   selectOptions: PropTypes.arrayOf(PropTypes.string),
   content: PropTypes.node,
+  isVisible: PropTypes.bool,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
   handleChange: PropTypes.func,
 }
@@ -142,6 +155,7 @@ FormFieldBranch.defaultProps = {
   listItems: [],
   selectOptions: [],
   content: null,
+  isVisible: true,
   handleChange: () => { },
 }
 

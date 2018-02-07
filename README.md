@@ -228,6 +228,7 @@ Form components
 * `value: string | string[]`, default value of a field
 * `required: boolean`, is filling this field required, default: false
 * `validators: ENUM('date', 'machinereadable')[]`, validate a field’s input value
+* `isVisible: boolean`, should element be visible?
 * `options: string[]`, options of a field of type `select`
 * `format: string`, formation of a field of type `date`, `time` or `datetime`, uses [Moment.js](https://momentjs.com/docs/#/parsing/string-format/)
 * `rows: number`, height of multiline text-field
