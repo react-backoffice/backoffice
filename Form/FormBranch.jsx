@@ -25,6 +25,7 @@ const FormBranch = ({
   form,
   data,
   loading,
+  useFormElement,
   error,
   errorMessage,
   fixedSubmit,
@@ -78,8 +79,20 @@ const FormBranch = ({
 
   const elements = generateFields(form)
 
+  const Element = (props) => {
+    if (useFormElement) {
+      return (
+        <form {...props} />
+      )
+    }
+
+    return (
+      <div {...props} />
+    )
+  }
+
   return (
-    <form noValidate autoComplete="off">
+    <Element noValidate autoComplete="off">
       {elements}
 
       {children}
@@ -96,7 +109,7 @@ const FormBranch = ({
       >
         {submitText}
       </FormSubmitButton>
-    </form>
+    </Element>
   )
 }
 
@@ -104,6 +117,7 @@ FormBranch.propTypes = {
   form: PropTypes.arrayOf(PropTypes.object).isRequired,
   data: PropTypes.objectOf(PropTypes.object),
   loading: PropTypes.bool.isRequired,
+  useFormElement: PropTypes.bool,
   fixedSubmit: PropTypes.bool,
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
@@ -116,6 +130,7 @@ FormBranch.propTypes = {
 
 FormBranch.defaultProps = {
   data: {},
+  useFormElement: true,
   fixedSubmit: false,
   error: false,
   errorMessage: 'An error occured. Please fill out all required fields correctly.',

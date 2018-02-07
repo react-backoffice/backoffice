@@ -208,6 +208,7 @@ A Button to go "back" to a given url
 Form components
 
 * `form: (FormGroup | FormField)[]`, form configuration
+* `useFormElement: boolean`, use a form element or a div
 
 #### FormGroup
 
