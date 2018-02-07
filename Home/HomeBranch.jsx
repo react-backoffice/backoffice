@@ -22,8 +22,8 @@ const styles = theme => ({
 const HomeBranch = ({ data, handleClick, classes }) => (
   <div className={classes.root}>
     <div className={classes.headline}>
-      <Typography type="display2">{data.title}</Typography>
-      <Typography type="body1">{data.description}</Typography>
+      <Typography variant="display2">{data.title}</Typography>
+      <Typography variant="body1">{data.description}</Typography>
     </div>
 
     {data.groups ? data.groups.map(group => (

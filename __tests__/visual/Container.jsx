@@ -63,7 +63,7 @@ const Container = () => (
               <NoMatch />
 
               <CookieInfo {...props}>
-                <Typography type="body1">
+                <Typography variant="body1">
                   This is the cookie info
                 </Typography>
               </CookieInfo>

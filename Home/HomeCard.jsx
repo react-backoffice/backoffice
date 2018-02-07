@@ -61,12 +61,12 @@ const HomeCard = ({
           </Avatar>
         ) : null}
 
-        <Typography type="headline" className={classes.title} component="h2">
+        <Typography variant="headline" className={classes.title} component="h2">
           {title}
         </Typography>
 
         {description ? (
-          <Typography type="body1">{description}</Typography>
+          <Typography variant="body1">{description}</Typography>
         ) : null}
       </CardContent>
     </Card>

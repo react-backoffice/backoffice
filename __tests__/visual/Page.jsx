@@ -75,7 +75,7 @@ class Page extends React.Component {
           {...props}
         />
 
-        <Typography type="display1" className={classes.headline}>
+        <Typography variant="display1" className={classes.headline}>
           Listing
         </Typography>
 
@@ -96,7 +96,7 @@ class Page extends React.Component {
           )}
         />
 
-        <Typography type="display1" className={classes.headline}>
+        <Typography variant="display1" className={classes.headline}>
           Form
         </Typography>
 
@@ -121,7 +121,7 @@ class Page extends React.Component {
           </Button>
         </Form>
 
-        <Typography type="display1" className={classes.headline}>
+        <Typography variant="display1" className={classes.headline}>
           Menu
         </Typography>
 
@@ -133,7 +133,7 @@ class Page extends React.Component {
 
         <AddButton handleClick={noop} />
 
-        <Typography type="display1" className={classes.headline}>
+        <Typography variant="display1" className={classes.headline}>
           Back Button
         </Typography>
         <BackButton url="/root" />

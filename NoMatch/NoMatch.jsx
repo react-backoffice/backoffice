@@ -22,10 +22,10 @@ const styles = theme => ({
 const NoMatch = ({ title, description, classes }) => (
   <div className={classes.root}>
     <div>
-      <Typography type="display3">
+      <Typography variant="display3">
         {title}
       </Typography>
-      <Typography type="display1" paragraph>
+      <Typography variant="display1" paragraph>
         {description}
       </Typography>
     </div>

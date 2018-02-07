@@ -79,7 +79,7 @@ const Header = ({
         </IconButton>
 
         <Typography
-          type="title"
+          variant="title"
           color="inherit"
           className={`${classes.flex} ${classes.title}`}
           onClick={onClick}

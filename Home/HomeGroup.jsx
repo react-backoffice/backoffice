@@ -22,7 +22,7 @@ const HomeGroup = ({
 }) => (
   <div>
     <div className={classes.headline}>
-      <Typography type="headline">
+      <Typography variant="headline">
         {title}
       </Typography>
     </div>

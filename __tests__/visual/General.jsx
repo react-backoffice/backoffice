@@ -26,12 +26,12 @@ class General extends React.Component {
     return (
       <Fragment>
         <CookieInfo {...this.props}>
-          <Typography type="body1">
+          <Typography variant="body1">
             This is the cookie info
           </Typography>
         </CookieInfo>
 
-        <Typography type="display1">
+        <Typography variant="display1">
           Confirm
         </Typography>
         <Button onClick={this.handleOpenDialoge}>Open Dialog</Button>

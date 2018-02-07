@@ -106,7 +106,7 @@ export default [{
     type: 'content',
     content: (
       <Fragment>
-        <Typography type="headline">Content</Typography>
+        <Typography variant="headline">Content</Typography>
         <Divider />
       </Fragment>
     ),

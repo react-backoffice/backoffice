@@ -85,7 +85,7 @@ const FormBranch = ({
       {children}
 
       {error ? (
-        <Typography type="body1" className={classes.errorMessage}>{errorMessage}</Typography>
+        <Typography variant="body1" className={classes.errorMessage}>{errorMessage}</Typography>
       ) : null}
 
       <FormSubmitButton
