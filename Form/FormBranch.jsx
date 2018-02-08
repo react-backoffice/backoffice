@@ -21,6 +21,19 @@ const styles = theme => ({
   },
 })
 
+
+const Element = ({ useFormElement, ...props }) => {
+  if (useFormElement) {
+    return (
+      <form {...props} />
+    )
+  }
+
+  return (
+    <div {...props} />
+  )
+}
+
 const FormBranch = ({
   form,
   data,
@@ -79,20 +92,8 @@ const FormBranch = ({
 
   const elements = generateFields(form)
 
-  const Element = (props) => {
-    if (useFormElement) {
-      return (
-        <form {...props} />
-      )
-    }
-
-    return (
-      <div {...props} />
-    )
-  }
-
   return (
-    <Element noValidate autoComplete="off">
+    <Element useFormElement={useFormElement} noValidate autoComplete="off">
       {elements}
 
       {children}
