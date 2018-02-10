@@ -34,6 +34,10 @@ const Element = ({ useFormElement, ...props }) => {
   )
 }
 
+Element.propTypes = {
+  useFormElement: PropTypes.bool.isRequired,
+}
+
 const FormBranch = ({
   form,
   data,
