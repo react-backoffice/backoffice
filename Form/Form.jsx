@@ -26,6 +26,7 @@ const withForm = Component => class Form extends React.Component {
 
     return {
       value: valueName,
+      submitValue: valueName,
       error: !isValid(field.type, field.required, field.validators, valueName),
     }
   }
@@ -123,11 +124,12 @@ const withForm = Component => class Form extends React.Component {
     this.props.onSubmit(data)
   }
 
-  updateFieldData(fieldId, value, error) {
+  updateFieldData(fieldId, value, submitValue, error) {
     const data = Object.assign({}, this.state.data)
 
     data[fieldId] = {
       value,
+      submitValue,
       error,
     }
 

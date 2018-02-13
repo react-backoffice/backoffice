@@ -125,5 +125,6 @@ export default [{
     title: 'URL',
     type: 'url',
     width: 'mid',
+    beforeSubmit: url => `${url}#top`,
   }],
 }]

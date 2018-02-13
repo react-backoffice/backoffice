@@ -12,6 +12,7 @@ const withFormField = Component => class FormField extends React.Component {
     required: PropTypes.bool,
     handleChange: PropTypes.func.isRequired,
     getAdditionalValue: PropTypes.func,
+    beforeSubmit: PropTypes.func,
   }
 
   static defaultProps = {
@@ -19,6 +20,7 @@ const withFormField = Component => class FormField extends React.Component {
     validators: [],
     required: false,
     getAdditionalValue: data => data,
+    beforeSubmit: null,
   }
 
   static getCompleteFrom(completeFrom = []) {
@@ -129,24 +131,30 @@ const withFormField = Component => class FormField extends React.Component {
 
   handleChange(fieldId) {
     return ((event) => {
-      let valueName
+      let newValue
 
       if (event.target) {
-        valueName = event.target.value
+        newValue = event.target.value
 
       // eslint-disable-next-line no-underscore-dangle
       } else if (event._isAMomentObject) {
-        valueName = event.valueOf()
+        newValue = event.valueOf()
       }
 
-      const error = !this.isValid(valueName)
+      let submitValue = newValue
+
+      if (typeof this.props.beforeSubmit === 'function') {
+        submitValue = this.props.beforeSubmit(submitValue)
+      }
+
+      const error = !this.isValid(submitValue)
 
       this.setState({
-        value: valueName,
+        value: newValue,
         error,
       })
 
-      this.props.handleChange(fieldId, valueName, error)
+      this.props.handleChange(fieldId, newValue, submitValue, error)
     })
   }
 
