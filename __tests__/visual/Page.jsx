@@ -83,7 +83,7 @@ class Page extends React.Component {
           title="Christmas Time"
           data={listingData}
           headers={listingHeaders}
-          orderBy="date"
+          orderBy="username"
           handleClick={noop}
           hasLoader
           onUpdateSelection={(selection) => { console.log(selection) }}
