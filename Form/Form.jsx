@@ -23,10 +23,15 @@ const withForm = Component => class Form extends React.Component {
 
   static getInitialField(field, data) {
     const valueName = data[field.id] && data[field.id].value
+    let submitValue = valueName
+
+    if (typeof field.beforeSubmit === 'function') {
+      submitValue = field.beforeSubmit(submitValue)
+    }
 
     return {
       value: valueName,
-      submitValue: valueName,
+      submitValue,
       error: !isValid(field.type, field.required, field.validators, valueName),
     }
   }
