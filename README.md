@@ -48,6 +48,11 @@ const MyMenu = ({ menuData, redirectTo }) => (
 )
 ```
 
+## Examples & Demo
+
+For now you can find examples in [`__tests__/visual/`](./__tests__/visual/).
+More to follow.
+
 ## Components
 
 ### AppContainer
