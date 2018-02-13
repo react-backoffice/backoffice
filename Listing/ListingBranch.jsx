@@ -80,7 +80,7 @@ const ListingBranch = ({
 
           {data.slice(page * rowsPerPage, (page * rowsPerPage) + rowsPerPage).map(n => (
             <ListingLine
-              key={n[Object.keys(n)[0]]}
+              key={`line-${(Math.random() * 10000).toFixed(4)}`}
               data={n}
               headers={headers}
               handleCheckClick={handleCheckClick}
@@ -88,7 +88,7 @@ const ListingBranch = ({
               handleKeyDown={handleKeyDown}
               isSelected={isSelected(n.id)}
             />
-            ))}
+          ))}
         </TableBody>
         <TableFooter>
           <TableRow>

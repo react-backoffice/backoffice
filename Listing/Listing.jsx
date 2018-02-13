@@ -26,27 +26,58 @@ const withListing = Component => class Listing extends React.Component {
       .map(header => header.id)
   }
 
+  static getStringContent(content) {
+    let matchContent = content
+
+    if (content.constructor === Array) {
+      matchContent = content.join(' ')
+    } else if (typeof content === 'object') {
+      matchContent = Object.values(content).join(' ')
+    }
+
+    return matchContent.toLowerCase()
+  }
+
+  static tryToMatch(value, content) {
+    let initialContent = content
+
+    if (content.highlight) {
+      initialContent = content.value
+    }
+
+    const contentToSearch = Listing.getStringContent(initialContent)
+
+    if (contentToSearch.indexOf(value) > -1) {
+      return true
+    }
+
+    return false
+  }
+
   static filterElement(element, value, searchables) {
     const searchValue = value.toLowerCase()
-    const matches = Object.keys(element).map((key) => {
+    let newElement
+
+    Object.keys(element).forEach((key) => {
       if (searchables.indexOf(key) > -1) {
-        let elementValue = element[key]
+        const matched = Listing.tryToMatch(searchValue, element[key])
 
-        if (elementValue.constructor === Array) {
-          elementValue = elementValue.join(' ')
-        } else if (typeof elementValue === 'object') {
-          elementValue = Object.values(elementValue).join(' ')
-        }
-
-        if (elementValue.toLowerCase().indexOf(searchValue) > -1) {
-          return true
+        if (matched) {
+          newElement = element
         }
       }
-
-      return false
     })
 
-    return matches.indexOf(true) > -1
+    if (newElement) {
+      Object.keys(newElement).forEach((key) => {
+        newElement[key] = {
+          highlight: searchValue,
+          value: newElement[key].highlight ? newElement[key].value : newElement[key],
+        }
+      })
+    }
+
+    return newElement
   }
 
   constructor(props, context) {
@@ -202,6 +233,20 @@ const withListing = Component => class Listing extends React.Component {
     }
 
     if (!value) {
+      searchableData = searchableData.map((item) => {
+        const newItem = item
+
+        Object.keys(item).forEach((key) => {
+          if (item[key].value) {
+            newItem[key] = item[key].value
+          } else {
+            newItem[key] = item[key]
+          }
+        })
+
+        return newItem
+      })
+
       this.setState({
         data: searchableData,
       })
@@ -209,9 +254,11 @@ const withListing = Component => class Listing extends React.Component {
       return
     }
 
-    const newData = searchableData.filter(element => (
-      Listing.filterElement(element, value, searchable)
-    ))
+    const newData = searchableData
+      .map(element => (
+        Listing.filterElement(element, value, searchable)
+      ))
+      .filter(item => item !== undefined)
 
     this.setState({
       data: newData,

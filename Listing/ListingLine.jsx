@@ -6,6 +6,41 @@ import {
 } from 'material-ui/Table'
 import Checkbox from 'material-ui/Checkbox'
 
+import replace from '../utils/replace'
+
+
+const getCellContent = (content, transformContent, data) => {
+  let printableContent = content
+
+  if (content.highlight) {
+    printableContent = content.value
+  }
+
+  if (typeof transformContent === 'function') {
+    printableContent = transformContent(printableContent, data)
+  }
+
+  const props = {}
+
+  if (typeof printableContent === 'string' && content.highlight) {
+    printableContent = replace(
+      printableContent,
+      content.highlight,
+      key => `<span style="background-color: yellow;">${key}</span>`,
+    )
+
+    props.dangerouslySetInnerHTML = {
+      __html: printableContent,
+    }
+
+    printableContent = undefined
+  }
+
+  return {
+    content: printableContent,
+    props,
+  }
+}
 
 class ListingLine extends React.Component {
   static propTypes = {
@@ -21,21 +56,20 @@ class ListingLine extends React.Component {
     const { headers, data, handleClick } = this.props
 
     return headers.map((header) => {
-      const content = data[header.id]
-      let { transformContent } = header
-
-      if (typeof transformContent !== 'function') {
-        transformContent = contentData => contentData
-      }
+      const {
+        content,
+        props,
+      } = getCellContent(data[header.id], header.transformContent, data)
 
       return (
         <TableCell
-          key={`header-${header.id}`}
+          key={`cell-${(Math.random() * 10000).toFixed(4)}`}
           padding={header.disablePadding ? 'none' : 'default'}
           numeric={header.numeric}
           onClick={() => handleClick(data.id)}
+          {...props}
         >
-          {transformContent(content, data)}
+          {content}
         </TableCell>
       )
     })

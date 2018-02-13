@@ -1,17 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import replace from '../utils/replace'
+
 import FormFieldListBranch from './FormFieldListBranch'
-
-const replace = (string, searchValue, replaceValue) => {
-  if (!searchValue) {
-    return string
-  }
-
-  const search = searchValue.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')
-
-  return string.replace(new RegExp(search, 'gi'), replaceValue)
-}
 
 const withFormFieldList = Component => class extends React.Component {
   static propTypes = {
