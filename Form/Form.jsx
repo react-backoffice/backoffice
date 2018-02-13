@@ -22,8 +22,12 @@ const withForm = Component => class Form extends React.Component {
   }
 
   static getInitialField(field, data) {
-    const valueName = data[field.id] && data[field.id].value
+    let valueName = data[field.id] && data[field.id].value
     let submitValue = valueName
+
+    if (!valueName && field.value !== undefined) {
+      valueName = field.value
+    }
 
     if (typeof field.beforeSubmit === 'function') {
       submitValue = field.beforeSubmit(submitValue)

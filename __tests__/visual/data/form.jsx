@@ -125,6 +125,12 @@ export default [{
     title: 'URL',
     type: 'url',
     width: 'mid',
-    beforeSubmit: url => `${url}#top`,
+    beforeSubmit: (url) => {
+      if (url) {
+        return `${url}#top`
+      }
+
+      return url
+    },
   }],
 }]
