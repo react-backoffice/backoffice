@@ -32,7 +32,7 @@ const withForm = Component => class Form extends React.Component {
     return {
       value: valueName,
       submitValue,
-      error: !isValid(field.type, field.required, field.validators, valueName),
+      error: !isValid(field.type, field.required, field.validators, submitValue),
     }
   }
 
