@@ -27,15 +27,18 @@ const withListing = Component => class Listing extends React.Component {
   }
 
   static filterElement(element, value, searchables) {
+    const searchValue = value.toLowerCase()
     const matches = Object.keys(element).map((key) => {
       if (searchables.indexOf(key) > -1) {
         let elementValue = element[key]
 
         if (elementValue.constructor === Array) {
           elementValue = elementValue.join(' ')
+        } else if (typeof elementValue === 'object') {
+          elementValue = Object.values(elementValue).join(' ')
         }
 
-        if (elementValue.toLowerCase().indexOf(value.toLowerCase()) > -1) {
+        if (elementValue.toLowerCase().indexOf(searchValue) > -1) {
           return true
         }
       }
