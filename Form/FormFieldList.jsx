@@ -60,7 +60,7 @@ const withFormFieldList = Component => class extends React.Component {
       return {
         title,
         tooltip: option.tooltip,
-        text: replace(title, lowerValue, `<b>${value}</b>`),
+        text: replace(title, lowerValue, searchResult => `<b>${searchResult}</b>`),
       }
     })
 
