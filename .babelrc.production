@@ -1,0 +1,16 @@
+{
+  "presets": [
+    "env",
+    "react"
+  ],
+  "plugins": [
+    [
+      "transform-class-properties",
+      {
+        "spec": true
+      }
+    ],
+    "transform-regenerator",
+    "transform-object-rest-spread"
+  ]
+}

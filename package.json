@@ -1,7 +1,7 @@
 {
   "name": "backoffice",
   "version": "1.37.3",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "Hans Christian Reinl <info@drublic.de>",
   "license": "MIT",
   "scripts": {
@@ -10,8 +10,12 @@
     "js:lint": "eslint **/*.{js,jsx}",
     "js:test": "jest",
     "js:test:watch": "yarn js:test --watch",
+    "js:build": "webpack --config webpack-production.config.js",
     "lint": "yarn js:lint",
-    "test": "yarn lint && yarn js:test"
+    "test": "yarn lint && yarn js:test",
+    "build": "yarn js:build",
+    "prepublishOnly": "yarn build"
+
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -30,7 +34,8 @@
     "react-hot-loader": "^3.1.3",
     "react-jss": "^8.1.0",
     "react-router-dom": "^4.2.2",
-    "recompose": "^0.26.0"
+    "recompose": "^0.26.0",
+    "webpack": "^3.10.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -50,7 +55,6 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
     "express": "^4.16.2",
-    "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   },
   "jest": {
