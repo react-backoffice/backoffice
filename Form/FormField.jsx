@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { TYPES } from './constants'
 import FormFieldBranch from './FormFieldBranch'
 import isValid from './isValid'
 
@@ -148,6 +149,10 @@ const withFormField = Component => class FormField extends React.Component {
       }
 
       const error = !this.isValid(submitValue)
+
+      if (this.props.type === TYPES.NUMBER) {
+        newValue = parseFloat(newValue, 10)
+      }
 
       this.setState({
         value: newValue,

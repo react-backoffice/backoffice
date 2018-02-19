@@ -7,6 +7,7 @@ export const TYPES = {
   TIME: 'time',
   DATETIME: 'datetime',
   EMAIL: 'email',
+  NUMBER: 'number',
   PASSWORD: 'password',
   URL: 'url',
   CONTENT: 'content',

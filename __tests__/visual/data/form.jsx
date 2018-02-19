@@ -51,6 +51,12 @@ export default [{
     width: 'small',
     validators: ['date'],
   }, {
+    id: 'number',
+    title: 'Number',
+    type: 'number',
+    value: 10,
+    width: 'small',
+  }, {
     id: 'list',
     title: 'List',
     type: 'list',
