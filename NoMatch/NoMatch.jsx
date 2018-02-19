@@ -42,7 +42,7 @@ NoMatch.defaultProps = {
   title: '404! Sorry, not found.',
   description: (
     <Fragment>
-      This URL does not exist, sorry.Please start over from
+      This URL does not exist, sorry. Please start over from
       the <Link href="/" to="/">Dashboard</Link>.
     </Fragment>
   ),
