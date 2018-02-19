@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-react"
+  ],
+  "rules": {
+    "semicolon": [
+      true,
+      "never"
+    ]
+  }
+}
