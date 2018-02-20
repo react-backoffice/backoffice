@@ -10,11 +10,13 @@
     "js:lint": "eslint **/*.{js,jsx}",
     "js:test": "jest",
     "js:test:watch": "yarn js:test --watch",
+    "js:test:coverage": "yarn js:test --coverage",
     "js:build": "webpack --config webpack-production.config.js",
     "ts:lint": "tslint {,src/**/}*.{ts,tsx} -p tsconfig.json",
     "ts:build": "tsc -p tsconfig.json",
     "lint": "yarn js:lint && yarn ts:lint",
     "test": "yarn lint && yarn js:test",
+    "test:coverage": "yarn js:test:coverage",
     "build": "yarn js:build",
     "prepublishOnly": "yarn build"
   },
