@@ -16,7 +16,8 @@
     "ts:build": "tsc -p tsconfig.json",
     "lint": "yarn js:lint && yarn ts:lint",
     "test": "yarn lint && yarn js:test",
-    "test:coverage": "yarn js:test:coverage",
+    "codecov": "codecov",
+    "test:coverage": "yarn js:test:coverage && yarn codecov",
     "build": "yarn js:build",
     "prepublishOnly": "yarn build"
   },
@@ -51,6 +52,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "codecov": "^3.0.0",
     "concurrently": "^3.5.1",
     "eslint": "^4.15.0",
     "eslint-config-airbnb": "^16.1.0",
