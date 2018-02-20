@@ -7,21 +7,21 @@ import IconButton from 'material-ui/IconButton'
 import Button from 'material-ui/Button'
 import DeleteIcon from 'material-ui-icons/Delete'
 
-import Home from '../../Home'
+import Home from '../../src/Home'
 import homeData from './data/home'
 
-import Menu from '../../Menu'
+import Menu from '../../src/Menu'
 import menuData from './data/menu'
 
-import Listing from '../../Listing'
+import Listing from '../../src/Listing'
 import listingData from './data/listing_data'
 import listingHeaders from './data/listing_headers'
 
-import Form from '../../Form'
+import Form from '../../src/Form'
 import formData from './data/form'
 
-import AddButton from '../../AddButton'
-import BackButton from '../../BackButton'
+import AddButton from '../../src/AddButton'
+import BackButton from '../../src/BackButton'
 
 const noop = () => {}
 

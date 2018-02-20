@@ -4,7 +4,7 @@ import {
   date,
   email,
   url,
-} from '../Form/validators'
+} from '../src/Form/validators'
 
 describe('Form.validators', () => {
   it('checks a value for required', () => {

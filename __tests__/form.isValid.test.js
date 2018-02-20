@@ -1,4 +1,4 @@
-import { getValidator } from '../Form/isValid'
+import { getValidator } from '../src/Form/isValid'
 
 describe('Form.isValid', () => {
   it('is able to deal with custom validators', () => {
