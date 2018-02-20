@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="HomeBranch-root-1"
+>
+  <div
+    className="HomeBranch-headline-2"
+  >
+    <h1
+      className="MuiTypography-root-3 MuiTypography-display2-6"
+    >
+      Backoffice
+    </h1>
+    <p
+      className="MuiTypography-root-3 MuiTypography-body1-12"
+    >
+      Visual Testing for Backoffice Framework
+    </p>
+  </div>
+  <div>
+    <div
+      className="HomeGroup-headline-27"
+    >
+      <h1
+        className="MuiTypography-root-3 MuiTypography-headline-8"
+      >
+        Title
+      </h1>
+    </div>
+    <div
+      className="MuiGrid-typeContainer-28 MuiGrid-spacing-xs-16-50"
+    >
+      <div
+        className="MuiGrid-typeItem-29 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-4-70"
+      >
+        <div
+          className="MuiPaper-root-124 MuiPaper-shadow2-128 MuiPaper-rounded-125 HomeCard-root-118"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiCardContent-root-151 HomeCard-content-119"
+          >
+            <h2
+              className="MuiTypography-root-3 MuiTypography-headline-8 HomeCard-title-121"
+            >
+              title
+            </h2>
+            <p
+              className="MuiTypography-root-3 MuiTypography-body1-12"
+            >
+              desc
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

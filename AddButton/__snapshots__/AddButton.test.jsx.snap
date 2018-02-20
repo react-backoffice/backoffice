@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<button
+  aria-label="add"
+  className="MuiButtonBase-root-17 MuiButton-root-2 MuiButton-raised-7 MuiButton-fab-12 MuiButton-raisedSecondary-10 AddButton-button-1"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+  type="button"
+>
+  <span
+    className="MuiButton-label-3"
+  >
+    <svg
+      aria-hidden="true"
+      className="MuiSvgIcon-root-19 MuiSvgIcon-fontSize-25"
+      color={undefined}
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+      />
+    </svg>
+  </span>
+  <span
+    className="MuiTouchRipple-root-26"
+  />
+</button>
+`;

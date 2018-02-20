@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="MuiDrawer-docked-3"
+>
+  <div
+    className="MuiPaper-root-14 MuiPaper-shadow0-16 MuiDrawer-paper-4 Drawer-drawerPaper-1 MuiDrawer-paperAnchorLeft-5 MuiDrawer-paperAnchorDockedLeft-9"
+    direction="right"
+    style={Object {}}
+  >
+    <div
+      className={undefined}
+    >
+      <div
+        className="Drawer-drawerHeader-2"
+      >
+        <button
+          className="MuiButtonBase-root-47 MuiIconButton-root-41"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiIconButton-label-46"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-49 MuiSvgIcon-fontSize-55"
+              color={undefined}
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+              />
+            </svg>
+          </span>
+          <span
+            className="MuiTouchRipple-root-56"
+          />
+        </button>
+      </div>
+      <hr
+        className="MuiDivider-root-63 MuiDivider-default-65"
+      />
+      <div
+        className="Menu-root-68"
+      >
+        <ul
+          className="MuiList-root-69 MuiList-padding-70"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

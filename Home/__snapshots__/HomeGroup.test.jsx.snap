@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="HomeGroup-headline-1"
+  >
+    <h1
+      className="MuiTypography-root-2 MuiTypography-headline-7"
+    >
+      Title
+    </h1>
+  </div>
+  <div
+    className="MuiGrid-typeContainer-26 MuiGrid-spacing-xs-16-48"
+  >
+    <div
+      className="MuiGrid-typeItem-27 MuiGrid-grid-xs-12-63 MuiGrid-grid-sm-4-68"
+    >
+      <div
+        className="MuiPaper-root-122 MuiPaper-shadow2-126 MuiPaper-rounded-123 HomeCard-root-116"
+        onClick={[Function]}
+      >
+        <div
+          className="MuiCardContent-root-149 HomeCard-content-117"
+        >
+          <h2
+            className="MuiTypography-root-2 MuiTypography-headline-7 HomeCard-title-119"
+          >
+            title
+          </h2>
+          <p
+            className="MuiTypography-root-2 MuiTypography-body1-11"
+          >
+            desc
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

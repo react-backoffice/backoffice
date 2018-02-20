@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="NoMatch-root-1"
+>
+  <div>
+    <h1
+      className="MuiTypography-root-2 MuiTypography-display3-4"
+    >
+      Title
+    </h1>
+    <p
+      className="MuiTypography-root-2 MuiTypography-display1-6 MuiTypography-paragraph-20"
+    >
+      This URL does not exist, sorry. Please start over from the 
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Dashboard
+      </a>
+      .
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with description 1`] = `
+<div
+  className="NoMatch-root-1"
+>
+  <div>
+    <h1
+      className="MuiTypography-root-2 MuiTypography-display3-4"
+    >
+      Title
+    </h1>
+    <p
+      className="MuiTypography-root-2 MuiTypography-display1-6 MuiTypography-paragraph-20"
+    >
+      <p>
+        Desc
+      </p>
+    </p>
+  </div>
+</div>
+`;

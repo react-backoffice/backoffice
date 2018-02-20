@@ -56,25 +56,10 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
     "express": "^4.16.2",
+    "react-test-renderer": "^16.2.0",
     "tslint": "^5.9.1",
     "tslint-react": "^3.5.1",
     "typescript": "^2.7.2",
     "webpack-dev-server": "^2.11.1"
-  },
-  "jest": {
-    "coverageThreshold": {
-      "global": {
-        "branches": 80,
-        "functions": 80,
-        "lines": 80,
-        "statements": 80
-      }
-    },
-    "testMatch": [
-      "**/__tests__/**/*.test.js"
-    ],
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest"
-    }
   }
 }

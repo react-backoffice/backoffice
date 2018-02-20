@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="MuiPaper-root-7 MuiPaper-shadow2-11 MuiPaper-rounded-8 HomeCard-root-1"
+  onClick={[Function]}
+>
+  <div
+    className="MuiCardContent-root-34 HomeCard-content-2"
+  >
+    <h2
+      className="MuiTypography-root-35 MuiTypography-headline-40 HomeCard-title-4"
+    >
+      Title
+    </h2>
+    <p
+      className="MuiTypography-root-35 MuiTypography-body1-44"
+    >
+      desc
+    </p>
+  </div>
+</div>
+`;
