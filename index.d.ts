@@ -9,14 +9,14 @@ export type StandardProps<C, ClassKey extends string, Removals extends keyof C =
   C & { classes: any },
   "classes" | Removals
   > &
-  StyledComponentProps<ClassKey> & {
+  IStyledComponentProps<ClassKey> & {
     className?: string
-    style?: Partial<React.CSSProperties>
+    style?: Partial<React.CSSProperties>,
   }
 
 export type ClassNameMap<ClassKey extends string = string> = Record<ClassKey, string>
 
-export interface StyledComponentProps<ClassKey extends string = string> {
+export interface IStyledComponentProps<ClassKey extends string = string> {
   classes?: Partial<ClassNameMap<ClassKey>>
   innerRef?: React.Ref<any>
 }
