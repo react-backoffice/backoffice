@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="Tabs-root-1"
+>
+  <header
+    className="MuiPaper-root-10 MuiPaper-shadow4-16 MuiAppBar-root-2 MuiAppBar-positionStatic-6 MuiAppBar-colorDefault-7"
+  >
+    <div
+      className="MuiTabs-root-37"
+    >
+      <div
+        className="MuiTabs-flexContainer-38"
+      >
+        <div
+          className="MuiTabs-scrollingContainer-39 MuiTabs-fixed-40"
+          onScroll={[Function]}
+          role="tablist"
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <div
+            className="MuiTabs-flexContainer-38"
+          >
+            <button
+              aria-selected={true}
+              className="MuiButtonBase-root-60 MuiTab-root-44 MuiTab-rootPrimary-47 MuiTab-rootPrimarySelected-48"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="tab"
+              style={
+                Object {
+                  "color": "primary",
+                }
+              }
+              tabIndex={0}
+              type="button"
+            >
+              <span
+                className="MuiTab-wrapper-56"
+              >
+                <span
+                  className="MuiTab-labelContainer-57"
+                >
+                  <span
+                    className="MuiTab-label-58"
+                  >
+                    Title
+                  </span>
+                </span>
+              </span>
+              <span
+                className="MuiTouchRipple-root-65"
+              />
+            </button>
+          </div>
+          <span
+            className="MuiTabIndicator-root-62 MuiTabIndicator-colorPrimary-63"
+            style={
+              Object {
+                "left": 0,
+                "width": 0,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+  <div
+    className="MuiTypography-root-72 MuiTypography-body1-81"
+    style={
+      Object {
+        "padding": 24,
+      }
+    }
+  >
+    <p>
+      Content
+    </p>
+  </div>
+</div>
+`;

@@ -255,6 +255,18 @@ Show an error in the left hand corner
 * `open: boolean`, is the snackbar open?
 * `message: string`, message to show with snackbar
 
+### Tabs
+
+Tab elements
+
+* `scrollable: boolean`, is tab header area scrollable
+* `data: Tab[]`, all tabs
+
+#### Tab
+
+* `title: string`, title of a tab
+* `content: node`, elements to show as content
+
 ### Todos
 
 * Rename component Home to Dashboard

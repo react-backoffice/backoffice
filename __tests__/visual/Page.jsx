@@ -23,6 +23,9 @@ import formData from './data/form'
 import AddButton from '../../src/AddButton'
 import BackButton from '../../src/BackButton'
 
+import Tabs from '../../src/Tabs'
+import tabData from './data/tabs'
+
 const noop = () => {}
 
 const styles = theme => ({
@@ -120,6 +123,12 @@ class Page extends React.Component {
             Change First Field Value Via Function
           </Button>
         </Form>
+
+        <Typography variant="display1" className={classes.headline}>
+          Tabs
+        </Typography>
+
+        <Tabs data={tabData} />
 
         <Typography variant="display1" className={classes.headline}>
           Menu
