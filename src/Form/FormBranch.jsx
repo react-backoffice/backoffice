@@ -80,7 +80,7 @@ const FormBranch = ({
         >
           {field.title ? (
             <Typography
-              type={field.integrated ? 'subheading' : 'title'}
+              variant={field.integrated ? 'subheading' : 'title'}
               className={classes.title}
             >
               {field.title}
