@@ -1,6 +1,10 @@
 __tests__/
+.babelrc*
 .presentational/
 .eslintignore
 .eslintrc.js
 .travis.yml
+jest.config.js
+ts*.json
 webpack.config.js
+webpack-production.config.js
