@@ -269,15 +269,6 @@ Tab elements
 * `title: string`, title of a tab
 * `content: node`, elements to show as content
 
-### Todos
-
-* Rename component Home to Dashboard
-* Form types: `checkbox`, `radio`
-* Tests: better coverage
-* Performance optimizing
-* Focus search in listing when opening
-* Use `is` and `has` as prefixes for boolean properties
-
 ## License
 
 This framework is licensed under [MIT](./LICENSE)
