@@ -40,6 +40,7 @@ const FormFieldInput = ({
   required,
   error,
   iconEnd,
+  isDisabled,
   classNames,
   onFocus,
   onBlur,
@@ -61,6 +62,7 @@ const FormFieldInput = ({
     margin="normal"
     fullWidth
     rows={rows}
+    disabled={isDisabled}
     onFocus={onFocus}
     onBlur={onBlur}
     onKeyPress={onKeyPress}
@@ -102,6 +104,7 @@ FormFieldInput.propTypes = {
   handleChange: PropTypes.func,
   select: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.string),
+  isDisabled: PropTypes.bool,
   iconEnd: PropTypes.element,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
@@ -121,6 +124,7 @@ FormFieldInput.defaultProps = {
   select: false,
   options: [],
   iconEnd: null,
+  isDisabled: false,
   handleChange: () => { },
   onFocus: () => { },
   onBlur: () => { },

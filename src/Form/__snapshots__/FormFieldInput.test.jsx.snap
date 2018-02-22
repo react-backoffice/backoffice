@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  aria-describedby={undefined}
+  className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyPress={[Function]}
+>
+  <div
+    className="MuiInput-root-5 MuiInput-fullWidth-13 MuiInput-formControl-6 MuiInput-inkbar-7 MuiInput-underline-11"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      aria-required={false}
+      autoComplete={undefined}
+      autoFocus={undefined}
+      className="MuiInput-input-14"
+      defaultValue={undefined}
+      disabled={false}
+      id={undefined}
+      name={undefined}
+      onChange={[Function]}
+      onKeyDown={undefined}
+      onKeyUp={undefined}
+      placeholder={undefined}
+      readOnly={undefined}
+      required={undefined}
+      rows={1}
+      type="text"
+      value=""
+    />
+  </div>
+  
+</div>
+`;
+
+exports[`renders disabled 1`] = `
+<div
+  aria-describedby={undefined}
+  className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyPress={[Function]}
+>
+  <div
+    className="MuiInput-root-5 MuiInput-disabled-10 MuiInput-fullWidth-13 MuiInput-formControl-6 MuiInput-inkbar-7 MuiInput-underline-11"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      aria-required={false}
+      autoComplete={undefined}
+      autoFocus={undefined}
+      className="MuiInput-input-14 MuiInput-inputDisabled-16"
+      defaultValue={undefined}
+      disabled={true}
+      id={undefined}
+      name={undefined}
+      onChange={[Function]}
+      onKeyDown={undefined}
+      onKeyUp={undefined}
+      placeholder={undefined}
+      readOnly={undefined}
+      required={undefined}
+      rows={1}
+      type="text"
+      value=""
+    />
+  </div>
+  
+</div>
+`;

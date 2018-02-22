@@ -243,6 +243,7 @@ Form components
 * `renderElement: function`, element that should be rendered of a field of type `list`
 * `getAdditionalValue: function`, transform any value before rendering
 * `beforeSubmit: function`, allow content to get changed before submitting data
+* `isDisabled?: boolean`, true if this field should be disbaled, default: `false`
 
 #### FormFieldCompleteFrom
 

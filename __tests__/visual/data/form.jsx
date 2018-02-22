@@ -138,5 +138,22 @@ export default [{
 
       return url
     },
+  }, {
+    id: 'empty',
+    type: 'empty',
+    width: 'mid',
+  }, {
+    id: 'disabled',
+    title: 'Disabled Text',
+    type: 'text',
+    width: 'mid',
+    isDisabled: true,
+  }, {
+    id: 'disabled-select',
+    title: 'Disabled Select',
+    type: 'select',
+    width: 'mid',
+    options: ['Foo', 'Bar', 'Baz'],
+    isDisabled: true,
   }],
 }]
