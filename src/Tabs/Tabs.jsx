@@ -61,7 +61,7 @@ class Tabs extends React.Component {
           >
             {data.map(item => (
               <Tab
-                key={`tab-${(Math.random() * 100).toFixed(2)}`}
+                key={`tab-${(Math.random() * 10000).toFixed(4)}`}
                 label={item.title}
               />
             ))}
@@ -72,7 +72,7 @@ class Tabs extends React.Component {
           if (value === index) {
             return (
               <TabContainer
-                key={`tabcontainer-${(Math.random() * 100).toFixed(2)}`}
+                key={`tabcontainer-${(Math.random() * 10000).toFixed(4)}`}
               >
                 {item.content}
               </TabContainer>
