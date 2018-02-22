@@ -99,6 +99,18 @@ class Page extends React.Component {
           )}
         />
 
+        <Typography variant="title" className={classes.headline}>
+          Integrated
+        </Typography>
+
+        <Listing
+          data={listingData.slice(0, 2)}
+          headers={listingHeaders}
+          orderBy="username"
+          handleClick={noop}
+          isIntegrated
+        />
+
         <Typography variant="display1" className={classes.headline}>
           Form
         </Typography>

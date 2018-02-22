@@ -50,8 +50,12 @@ const ListingBranch = ({
   isSelected,
   onFilter,
   hasLoader,
+  isIntegrated,
 }) => (
-  <Paper className={classes.root}>
+  <Paper
+    className={isIntegrated ? null : classes.root}
+    elevation={isIntegrated ? 0 : 4}
+  >
     <ListingToolbar
       title={title}
       numSelected={selected.length}
@@ -128,6 +132,7 @@ ListingBranch.propTypes = {
   handleChangeRowsPerPage: PropTypes.func.isRequired,
   isSelected: PropTypes.func,
   onFilter: PropTypes.func,
+  isIntegrated: PropTypes.bool,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
@@ -141,6 +146,7 @@ ListingBranch.defaultProps = {
   page: 0,
   onFilter: () => {},
   isSelected: () => {},
+  isIntegrated: false,
 }
 
 export default withStyles(styles)(ListingBranch)
