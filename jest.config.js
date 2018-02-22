@@ -7,6 +7,14 @@ module.exports = {
       // statements: 80,
     },
   },
+  collectCoverageFrom: [
+    '**/*.{js,jsx}',
+    '!**/node_modules/**',
+    '!**/vendor/**',
+    '!**/coverage/**',
+    '!**/__tests__/**',
+    '!**/dist/**',
+  ],
   testMatch: [
     '**/*.test.js?(x)',
   ],
