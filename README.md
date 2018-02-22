@@ -272,9 +272,10 @@ Tab elements
 
 * Rename component Home to Dashboard
 * Form types: `checkbox`, `radio`
-* Focus search in listing when opening
-* Tests
+* Tests: better coverage
 * Performance optimizing
+* Focus search in listing when opening
+* Use `is` and `has` as prefixes for boolean properties
 
 ## License
 
