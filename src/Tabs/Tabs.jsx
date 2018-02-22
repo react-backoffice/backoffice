@@ -51,12 +51,11 @@ class Tabs extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" color="default">
+        <AppBar position="static">
           <MaterialTabs
             value={value}
             onChange={this.handleChange}
-            indicatorColor="primary"
-            textColor="primary"
+            indicatorColor="secondary"
             scrollable={scrollable}
             scrollButtons="auto"
           >

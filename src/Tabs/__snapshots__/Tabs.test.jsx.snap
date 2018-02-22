@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="Tabs-root-1"
 >
   <header
-    className="MuiPaper-root-10 MuiPaper-shadow4-16 MuiAppBar-root-2 MuiAppBar-positionStatic-6 MuiAppBar-colorDefault-7"
+    className="MuiPaper-root-10 MuiPaper-shadow4-16 MuiAppBar-root-2 MuiAppBar-positionStatic-6 MuiAppBar-colorPrimary-8"
   >
     <div
       className="MuiTabs-root-37"
@@ -28,7 +28,7 @@ exports[`renders correctly 1`] = `
           >
             <button
               aria-selected={true}
-              className="MuiButtonBase-root-60 MuiTab-root-44 MuiTab-rootPrimary-47 MuiTab-rootPrimarySelected-48"
+              className="MuiButtonBase-root-60 MuiTab-root-44 MuiTab-rootInherit-46 MuiTab-rootInheritSelected-53"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -42,11 +42,7 @@ exports[`renders correctly 1`] = `
               onTouchMove={[Function]}
               onTouchStart={[Function]}
               role="tab"
-              style={
-                Object {
-                  "color": "primary",
-                }
-              }
+              style={undefined}
               tabIndex={0}
               type="button"
             >
@@ -69,7 +65,7 @@ exports[`renders correctly 1`] = `
             </button>
           </div>
           <span
-            className="MuiTabIndicator-root-62 MuiTabIndicator-colorPrimary-63"
+            className="MuiTabIndicator-root-62 MuiTabIndicator-colorSecondary-64"
             style={
               Object {
                 "left": 0,
