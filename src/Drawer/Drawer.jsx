@@ -58,10 +58,14 @@ const Drawer = ({
 
 Drawer.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
-  open: PropTypes.bool.isRequired,
+  open: PropTypes.bool,
   handleDrawerClose: PropTypes.func.isRequired,
   redirectTo: PropTypes.func.isRequired,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
+}
+
+Drawer.defaultProps = {
+  open: false,
 }
 
 export default withStyles(styles)(Drawer)

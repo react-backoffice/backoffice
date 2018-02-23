@@ -9,6 +9,7 @@ import Cookie from '../CookieInfo/Cookie'
 const withBase = Component => class extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
+    menuOpen: PropTypes.bool,
     menuData: PropTypes.arrayOf(PropTypes.object).isRequired,
     rightContent: PropTypes.node,
     fixedHeader: PropTypes.bool,
@@ -21,6 +22,7 @@ const withBase = Component => class extends React.Component {
     fixedHeader: true,
     hasHeader: true,
     hasCookieInfo: false,
+    menuOpen: false,
     rightContent: null,
   }
 
@@ -46,6 +48,13 @@ const withBase = Component => class extends React.Component {
   componentWillMount() {
     this.setState({
       cookieInfoOpen: this.props.hasCookieInfo && Cookie.getCookie() === false,
+      open: this.props.menuOpen,
+    })
+  }
+
+  componentWillReceiveProps(nextProp) {
+    this.setState({
+      open: nextProp.menuOpen,
     })
   }
 

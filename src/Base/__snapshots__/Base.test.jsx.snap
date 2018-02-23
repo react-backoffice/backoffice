@@ -1,0 +1,338 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Base renders correctly 1`] = `
+<div>
+  <div
+    className="Header-root-5"
+  >
+    <header
+      className="MuiPaper-root-21 MuiPaper-shadow4-27 MuiAppBar-root-13 MuiAppBar-positionFixed-14 MuiAppBar-colorPrimary-19 mui-fixed Header-appBar-6 Header-appBarShift-8 Header-appBarWithCookieInfo-7"
+    >
+      <div
+        className="MuiToolbar-root-48 MuiToolbar-gutters-49"
+      >
+        <button
+          aria-label="open drawer"
+          className="MuiButtonBase-root-56 MuiIconButton-root-50 MuiIconButton-colorInherit-51 Header-menuButton-9 Header-hide-10"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiIconButton-label-55"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-58 MuiSvgIcon-fontSize-64"
+              color={undefined}
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
+            </svg>
+          </span>
+          <span
+            className="MuiTouchRipple-root-65"
+          />
+        </button>
+        <h2
+          className="MuiTypography-root-72 MuiTypography-title-78 MuiTypography-colorInherit-91 Header-flex-11 Header-title-12"
+          onClick={[Function]}
+        >
+          Foo
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div
+    className="BaseBranch-appFrame-1 BaseBranch-appFrameWithCookieInfo-2"
+  >
+    <div
+      className="MuiDrawer-docked-98"
+    >
+      <div
+        className="MuiPaper-root-21 MuiPaper-shadow0-23 MuiDrawer-paper-99 Drawer-drawerPaper-96 MuiDrawer-paperAnchorLeft-100 MuiDrawer-paperAnchorDockedLeft-104"
+        direction="right"
+        style={Object {}}
+      >
+        <div
+          className={undefined}
+        >
+          <div
+            className="Drawer-drawerHeader-97"
+          >
+            <button
+              className="MuiButtonBase-root-56 MuiIconButton-root-50"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              <span
+                className="MuiIconButton-label-55"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-58 MuiSvgIcon-fontSize-64"
+                  color={undefined}
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                  />
+                </svg>
+              </span>
+              <span
+                className="MuiTouchRipple-root-65"
+              />
+            </button>
+          </div>
+          <hr
+            className="MuiDivider-root-109 MuiDivider-default-111"
+          />
+          <div
+            className="Menu-root-114"
+          >
+            <ul
+              className="MuiList-root-115 MuiList-padding-116"
+            >
+              <div
+                className="MuiButtonBase-root-56 MuiListItem-root-120 MuiListItem-default-123 MuiListItem-gutters-127 MuiListItem-button-128"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className="MuiListItemText-root-130"
+                >
+                  <h3
+                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-133"
+                  >
+                    Dashboard
+                  </h3>
+                </div>
+                <span
+                  className="MuiTouchRipple-root-65"
+                />
+              </div>
+              <div
+                className="MuiButtonBase-root-56 MuiListItem-root-120 MuiListItem-default-123 MuiListItem-gutters-127 MuiListItem-button-128 MenuItem-disabled-119"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className="MuiListItemText-root-130"
+                >
+                  <h3
+                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-133"
+                  >
+                    New portfolio
+                  </h3>
+                </div>
+                <span
+                  className="MuiTouchRipple-root-65"
+                />
+              </div>
+              <hr
+                className="MuiDivider-root-109 MuiDivider-default-111"
+              />
+              <div
+                className="MuiButtonBase-root-56 MuiListItem-root-120 MuiListItem-default-123 MuiListItem-gutters-127 MuiListItem-button-128"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-58 MuiListItemIcon-root-136"
+                  color={undefined}
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
+                  />
+                </svg>
+                <div
+                  className="MuiListItemText-root-130"
+                >
+                  <h3
+                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-133"
+                  >
+                    Report a bug
+                  </h3>
+                </div>
+                <span
+                  className="MuiTouchRipple-root-65"
+                />
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main
+      className="BaseBranch-content-3 BaseBranch-contentShift-4"
+    >
+      <div
+        cookieInfoOpen={true}
+        hasCookieInfo={true}
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "createHref": [Function],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "pathname": "blank",
+              "search": "",
+              "state": undefined,
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+        location={
+          Object {
+            "hash": "",
+            "pathname": "blank",
+            "search": "",
+            "state": undefined,
+          }
+        }
+        match={
+          Object {
+            "isExact": false,
+            "params": Object {},
+            "path": "/",
+            "url": "/",
+          }
+        }
+        menuOpen={true}
+        onCookieInfoAccept={[Function]}
+        staticContext={undefined}
+      >
+        Foo
+      </div>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`Base renders correctly without header 1`] = `
+<div>
+  <div
+    className="BaseBranch-appFrame-1 BaseBranch-appFrameWithCookieInfo-2"
+  >
+    <main
+      className="BaseBranch-content-3 BaseBranch-contentShift-4"
+    >
+      <div
+        cookieInfoOpen={true}
+        hasCookieInfo={true}
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "createHref": [Function],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "pathname": "blank",
+              "search": "",
+              "state": undefined,
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+        location={
+          Object {
+            "hash": "",
+            "pathname": "blank",
+            "search": "",
+            "state": undefined,
+          }
+        }
+        match={
+          Object {
+            "isExact": false,
+            "params": Object {},
+            "path": "/",
+            "url": "/",
+          }
+        }
+        menuOpen={true}
+        onCookieInfoAccept={[Function]}
+        staticContext={undefined}
+      >
+        Foo
+      </div>
+    </main>
+  </div>
+</div>
+`;

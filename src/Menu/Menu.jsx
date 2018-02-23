@@ -18,23 +18,23 @@ const Menu = ({ data, redirectTo, classes }) => (
   <div className={classes.root}>
     <List>
       {data.map((item) => {
-          switch (item.type) {
-            case 'divider':
-              return <Divider key={`menu-${(Math.random() * 100).toFixed(5)}`} />
+        switch (item.type) {
+          case 'divider':
+            return <Divider key={`menu-${(Math.random() * 100).toFixed(5)}`} />
 
-            default:
-              return (
-                <MenuItem
-                  key={`menu-${(Math.random() * 100).toFixed(5)}`}
-                  redirectTo={redirectTo}
-                  url={item.url}
-                  title={item.title}
-                  disabled={item.disabled}
-                  icon={item.icon}
-                />
-              )
-          }
-        })}
+          default:
+            return (
+              <MenuItem
+                key={`menu-${(Math.random() * 100).toFixed(5)}`}
+                redirectTo={redirectTo}
+                url={item.url}
+                title={item.title}
+                disabled={item.disabled}
+                icon={item.icon}
+              />
+            )
+        }
+      })}
     </List>
   </div>
 )

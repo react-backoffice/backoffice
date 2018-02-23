@@ -60,7 +60,109 @@ exports[`renders correctly 1`] = `
       >
         <ul
           className="MuiList-root-69 MuiList-padding-70"
-        />
+        >
+          <div
+            className="MuiButtonBase-root-47 MuiListItem-root-74 MuiListItem-default-77 MuiListItem-gutters-81 MuiListItem-button-82"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <div
+              className="MuiListItemText-root-84"
+            >
+              <h3
+                className="MuiTypography-root-90 MuiTypography-subheading-97 MuiListItemText-primary-87"
+              >
+                Dashboard
+              </h3>
+            </div>
+            <span
+              className="MuiTouchRipple-root-56"
+            />
+          </div>
+          <div
+            className="MuiButtonBase-root-47 MuiListItem-root-74 MuiListItem-default-77 MuiListItem-gutters-81 MuiListItem-button-82 MenuItem-disabled-73"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <div
+              className="MuiListItemText-root-84"
+            >
+              <h3
+                className="MuiTypography-root-90 MuiTypography-subheading-97 MuiListItemText-primary-87"
+              >
+                New portfolio
+              </h3>
+            </div>
+            <span
+              className="MuiTouchRipple-root-56"
+            />
+          </div>
+          <hr
+            className="MuiDivider-root-63 MuiDivider-default-65"
+          />
+          <div
+            className="MuiButtonBase-root-47 MuiListItem-root-74 MuiListItem-default-77 MuiListItem-gutters-81 MuiListItem-button-82"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-49 MuiListItemIcon-root-114"
+              color={undefined}
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
+              />
+            </svg>
+            <div
+              className="MuiListItemText-root-84"
+            >
+              <h3
+                className="MuiTypography-root-90 MuiTypography-subheading-97 MuiListItemText-primary-87"
+              >
+                Report a bug
+              </h3>
+            </div>
+            <span
+              className="MuiTouchRipple-root-56"
+            />
+          </div>
+        </ul>
       </div>
     </div>
   </div>
