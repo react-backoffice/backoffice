@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Component Info renders correctly 1`] = `
 <div
   className="CookieInfo-root-1 CookieInfo-rootActive-2"
 >

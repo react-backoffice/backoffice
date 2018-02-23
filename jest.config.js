@@ -21,4 +21,8 @@ module.exports = {
   transform: {
     '^.+\\.jsx?$': 'babel-jest',
   },
+  unmockedModulePathPatterns: [
+    'node_modules/react/',
+    'node_modules/enzyme/',
+  ],
 }

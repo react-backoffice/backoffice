@@ -11,7 +11,7 @@ class Cookie {
     const value = `; ${document.cookie}`
     const parts = value.split('; cookie_concent=')
 
-    if (parts.length !== 2) {
+    if (parts.length < 2) {
       return undefined
     }
 
