@@ -14,6 +14,7 @@ module.exports = {
     '!**/coverage/**',
     '!**/__tests__/**',
     '!**/dist/**',
+    '!**/webpack*',
   ],
   testMatch: [
     '**/*.test.js?(x)',
