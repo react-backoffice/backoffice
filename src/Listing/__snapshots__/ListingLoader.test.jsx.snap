@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<table
+  className="MuiTable-root-1"
+>
+  <tr
+    className="MuiTableRow-root-5 ListingLoader-row-2"
+  >
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root-10 ListingLoader-cell-3"
+      colSpan={1}
+      scope={undefined}
+    >
+      <div
+        className="MuiLinearProgress-root-18 MuiLinearProgress-primaryColor-19 ListingLoader-progress-4"
+        mode="query"
+        role="progressbar"
+      >
+        <div
+          className="MuiLinearProgress-bar-25 MuiLinearProgress-primaryColorBar-20 MuiLinearProgress-indeterminateBar1-30"
+          style={Object {}}
+        />
+        <div
+          className="MuiLinearProgress-bar-25 MuiLinearProgress-primaryColorBar-20 MuiLinearProgress-indeterminateBar2-31"
+          style={Object {}}
+        />
+      </div>
+    </td>
+  </tr>
+</table>
+`;

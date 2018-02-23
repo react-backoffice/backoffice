@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<table
+  className="MuiTable-root-1"
+>
+  <thead>
+    <tr
+      className="MuiTableRow-root-2 MuiTableRow-typeHead-3"
+    >
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-14 MuiTableCell-paddingDefault-12 MuiTableCell-typeHead-9"
+        scope="col"
+      >
+        <span
+          className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-20 MuiSwitchBase-default-22 MuiCheckbox-default-15 MuiSwitchBase-checked-23 MuiCheckbox-checked-16 MuiCheckbox-checkedSecondary-18"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role={undefined}
+          tabIndex={null}
+        >
+          <span
+            className="MuiIconButton-label-30"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-33 MuiSvgIcon-fontSize-39"
+              color={undefined}
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+              />
+            </svg>
+            <input
+              checked={true}
+              className="MuiSwitchBase-input-21"
+              disabled={undefined}
+              id={undefined}
+              name={undefined}
+              onChange={[Function]}
+              tabIndex={undefined}
+              type="checkbox"
+              value={undefined}
+            />
+          </span>
+          <span
+            className="MuiTouchRipple-root-40"
+          />
+        </span>
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-7 MuiTableCell-paddingDefault-12 MuiTableCell-typeHead-9"
+        scope="col"
+      >
+        <div
+          className="MuiTooltip-root-47"
+        >
+          <span
+            aria-describedby={undefined}
+            className="MuiButtonBase-root-31 MuiTableSortLabel-root-56 MuiTableSortLabel-active-57"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            Name
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-33 MuiTableSortLabel-icon-58 MuiTableSortLabel-asc-60"
+              color={undefined}
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+          <div
+            className="MuiTooltip-popper-48 MuiTooltip-popperClose-49"
+            data-placement={undefined}
+            data-x-out-of-boundaries={undefined}
+            style={
+              Object {
+                "left": 0,
+                "opacity": 0,
+                "pointerEvents": "none",
+                "position": "absolute",
+                "top": 0,
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              className="MuiTooltip-tooltip-50 MuiTooltip-tooltipBottom-54"
+              id={undefined}
+              role="tooltip"
+            >
+              Sort
+            </div>
+          </div>
+        </div>
+      </th>
+    </tr>
+  </thead>
+</table>
+`;

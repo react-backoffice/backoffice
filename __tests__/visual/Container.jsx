@@ -9,7 +9,7 @@ import Typography from 'material-ui/Typography'
 import indigo from 'material-ui/colors/indigo'
 import amber from 'material-ui/colors/amber'
 
-import menuData from './data/menu'
+import menuData from '../data/menu'
 
 import AppContainer from '../../src/AppContainer'
 import Base from '../../src/Base'

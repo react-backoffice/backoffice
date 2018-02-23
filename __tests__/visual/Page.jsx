@@ -8,23 +8,23 @@ import Button from 'material-ui/Button'
 import DeleteIcon from 'material-ui-icons/Delete'
 
 import Home from '../../src/Home'
-import homeData from './data/home'
+import homeData from '../data/home'
 
 import Menu from '../../src/Menu'
-import menuData from './data/menu'
+import menuData from '../data/menu'
 
 import Listing from '../../src/Listing'
-import listingData from './data/listing_data'
-import listingHeaders from './data/listing_headers'
+import listingData from '../data/listing_data'
+import listingHeaders from '../data/listing_headers'
 
 import Form from '../../src/Form'
-import formData from './data/form'
+import formData from '../data/form'
 
 import AddButton from '../../src/AddButton'
 import BackButton from '../../src/BackButton'
 
 import Tabs from '../../src/Tabs'
-import tabData from './data/tabs'
+import tabData from '../data/tabs'
 
 const noop = () => {}
 

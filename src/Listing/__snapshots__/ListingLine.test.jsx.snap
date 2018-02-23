@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<table
+  className="MuiTable-root-1"
+>
+  <tr
+    aria-checked={false}
+    className="MuiTableRow-root-2 MuiTableRow-hover-6"
+    onKeyDown={[Function]}
+    role="checkbox"
+    tabIndex={-1}
+  >
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-14 MuiTableCell-paddingDefault-12"
+      onClick={[Function]}
+      scope={undefined}
+    >
+      <span
+        className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-20 MuiSwitchBase-default-22 MuiCheckbox-default-15"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role={undefined}
+        tabIndex={null}
+      >
+        <span
+          className="MuiIconButton-label-30"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-33 MuiSvgIcon-fontSize-39"
+            color={undefined}
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+            />
+          </svg>
+          <input
+            checked={false}
+            className="MuiSwitchBase-input-21"
+            disabled={undefined}
+            id={undefined}
+            name={undefined}
+            onChange={[Function]}
+            tabIndex={undefined}
+            type="checkbox"
+            value={undefined}
+          />
+        </span>
+        <span
+          className="MuiTouchRipple-root-40"
+        />
+      </span>
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root-7"
+      onClick={[Function]}
+      scope={undefined}
+    >
+      Leanne Graham
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root-7"
+      onClick={[Function]}
+      scope={undefined}
+    >
+      Bret
+    </td>
+  </tr>
+</table>
+`;
+
+exports[`renders highlighted 1`] = `
+<table
+  className="MuiTable-root-1"
+>
+  <tr
+    aria-checked={true}
+    className="MuiTableRow-root-2 MuiTableRow-hover-6 MuiTableRow-selected-5"
+    onKeyDown={[Function]}
+    role="checkbox"
+    tabIndex={-1}
+  >
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-14 MuiTableCell-paddingDefault-12"
+      onClick={[Function]}
+      scope={undefined}
+    >
+      <span
+        className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-20 MuiSwitchBase-default-22 MuiCheckbox-default-15 MuiSwitchBase-checked-23 MuiCheckbox-checked-16 MuiCheckbox-checkedSecondary-18"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role={undefined}
+        tabIndex={null}
+      >
+        <span
+          className="MuiIconButton-label-30"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-33 MuiSvgIcon-fontSize-39"
+            color={undefined}
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+            />
+          </svg>
+          <input
+            checked={true}
+            className="MuiSwitchBase-input-21"
+            disabled={undefined}
+            id={undefined}
+            name={undefined}
+            onChange={[Function]}
+            tabIndex={undefined}
+            type="checkbox"
+            value={undefined}
+          />
+        </span>
+        <span
+          className="MuiTouchRipple-root-40"
+        />
+      </span>
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root-7"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<span style=\\"background-color: yellow;\\">Lea</span>nne Graham",
+        }
+      }
+      onClick={[Function]}
+      scope={undefined}
+    />
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root-7"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Leanne Graham",
+        }
+      }
+      onClick={[Function]}
+      scope={undefined}
+    />
+  </tr>
+</table>
+`;
+
+exports[`renders selected 1`] = `
+<table
+  className="MuiTable-root-1"
+>
+  <tr
+    aria-checked={true}
+    className="MuiTableRow-root-2 MuiTableRow-hover-6 MuiTableRow-selected-5"
+    onKeyDown={[Function]}
+    role="checkbox"
+    tabIndex={-1}
+  >
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-14 MuiTableCell-paddingDefault-12"
+      onClick={[Function]}
+      scope={undefined}
+    >
+      <span
+        className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-20 MuiSwitchBase-default-22 MuiCheckbox-default-15 MuiSwitchBase-checked-23 MuiCheckbox-checked-16 MuiCheckbox-checkedSecondary-18"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role={undefined}
+        tabIndex={null}
+      >
+        <span
+          className="MuiIconButton-label-30"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root-33 MuiSvgIcon-fontSize-39"
+            color={undefined}
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+            />
+          </svg>
+          <input
+            checked={true}
+            className="MuiSwitchBase-input-21"
+            disabled={undefined}
+            id={undefined}
+            name={undefined}
+            onChange={[Function]}
+            tabIndex={undefined}
+            type="checkbox"
+            value={undefined}
+          />
+        </span>
+        <span
+          className="MuiTouchRipple-root-40"
+        />
+      </span>
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root-7"
+      onClick={[Function]}
+      scope={undefined}
+    >
+      Leanne Graham
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root-7"
+      onClick={[Function]}
+      scope={undefined}
+    >
+      Bret
+    </td>
+  </tr>
+</table>
+`;
