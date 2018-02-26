@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 import renderer from 'react-test-renderer'
 import Enzyme from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
@@ -11,14 +12,16 @@ describe('Tabs', () => {
   it('renders correctly', () => {
     const tree = renderer
       .create((
-        <Tabs
-          data={[{
-            title: 'Title',
-            content: (
-              <p>Content</p>
-            ),
-          }]}
-        />
+        <Router>
+          <Tabs
+            data={[{
+              title: 'Title',
+              content: (
+                <p>Content</p>
+              ),
+            }]}
+          />
+        </Router>
       ))
       .toJSON()
     expect(tree).toMatchSnapshot()
@@ -26,7 +29,11 @@ describe('Tabs', () => {
 
   it('renders correctly if no data', () => {
     const tree = renderer
-      .create(<Tabs data={[]} />)
+      .create((
+        <Router>
+          <Tabs data={[]} />
+        </Router>
+      ))
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
