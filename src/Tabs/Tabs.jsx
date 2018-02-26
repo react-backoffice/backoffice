@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withRouter } from 'react-router-dom'
 import { withStyles } from 'material-ui/styles'
 import AppBar from 'material-ui/AppBar'
 import MaterialTabs, { Tab } from 'material-ui/Tabs'
@@ -37,13 +38,41 @@ class Tabs extends React.Component {
     scrollable: false,
   }
 
+  constructor() {
+    super()
+
+    this.handleChange = this.handleChange.bind(this)
+  }
+
   state = {
     value: 0,
-  };
+  }
 
-  handleChange = (event, value) => {
+  componentWillMount() {
+    const { data } = this.props
+    const hash = window.location.hash.replace('#/', '')
+    let value = 0
+
+    if (data && data.constructor === Array) {
+      data.forEach((item, index) => {
+        if (item.id === hash) {
+          value = index
+        }
+      })
+    }
+
+    this.setState({
+      value,
+    })
+  }
+
+  handleChange(event, value) {
+    const hash = this.props.data[value].id || value
+
+    window.location.hash = `#/${hash}`
+
     this.setState({ value })
-  };
+  }
 
   render() {
     const { scrollable, data, classes } = this.props
@@ -86,4 +115,5 @@ class Tabs extends React.Component {
   }
 }
 
-export default withStyles(styles)(Tabs)
+const tabsWithStyles = withStyles(styles)(Tabs)
+export default withRouter(tabsWithStyles)

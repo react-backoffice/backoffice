@@ -267,6 +267,7 @@ Tab elements
 #### Tab
 
 * `title: string`, title of a tab
+* `id: string`, identifier for tab
 * `content: node`, elements to show as content
 
 ## License
