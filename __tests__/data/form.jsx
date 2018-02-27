@@ -4,6 +4,8 @@ import Icon from 'material-ui-icons/Visibility'
 import Divider from 'material-ui/Divider/Divider'
 import Typography from 'material-ui/Typography/Typography'
 
+import { TYPES } from '../../src/Form/constants'
+
 export default [{
   group: true,
   title: 'Form',
@@ -11,55 +13,31 @@ export default [{
   data: [{
     id: 'text',
     title: 'Text Field',
-    type: 'text',
-    width: 'mid',
+    type: TYPES.TEXT,
+    width: 'small',
     required: true,
   }, {
     id: 'select',
     title: 'Select',
-    type: 'select',
+    type: TYPES.SELECT,
     options: ['Foo', 'Bar', 'Baz'],
-    width: 'mid',
+    width: 'small',
     required: true,
+  }, {
+    id: 'number',
+    title: 'Number',
+    type: TYPES.NUMBER,
+    value: 10,
+    width: 'small',
   }, {
     id: 'multiline',
     title: 'Multiline',
     type: 'multiline',
     rows: 5,
   }, {
-    id: 'date',
-    title: 'Date',
-    type: 'date',
-    format: 'DD.MM.YYYY',
-    value: 1514989682669,
-    width: 'small',
-    validators: ['date'],
-  }, {
-    id: 'time',
-    title: 'Time',
-    type: 'time',
-    format: 'hh:mm a',
-    value: 1514989682669,
-    width: 'small',
-    validators: ['date'],
-  }, {
-    id: 'datetime',
-    title: 'Datetime',
-    type: 'datetime',
-    format: 'DD.MM.YYYY, hh:mm a',
-    value: 1514989682669,
-    width: 'small',
-    validators: ['date'],
-  }, {
-    id: 'number',
-    title: 'Number',
-    type: 'number',
-    value: 10,
-    width: 'small',
-  }, {
     id: 'list',
     title: 'List',
-    type: 'list',
+    type: TYPES.LIST,
     width: 'mid',
     value: ['Foo', 'Bar', 'Baz'],
     completeFrom: [{
@@ -88,7 +66,7 @@ export default [{
   }, {
     id: 'free-list',
     title: 'Free List',
-    type: 'list',
+    type: TYPES.LIST,
     width: 'mid',
   }, {
     id: 'nested',
@@ -99,17 +77,17 @@ export default [{
     data: [{
       id: 'nested-text',
       title: 'Nested Text',
-      type: 'text',
+      type: TYPES.TEXT,
       iconEnd: (<Icon />),
       width: 'mid',
     }, {
       id: 'empty',
-      type: 'empty',
+      type: TYPES.EMPTY,
       width: 'mid',
     }],
   }, {
     id: 'content',
-    type: 'content',
+    type: TYPES.CONTENT,
     content: (
       <Fragment>
         <Typography variant="headline">Content</Typography>
@@ -119,17 +97,17 @@ export default [{
   }, {
     id: 'email',
     title: 'Email',
-    type: 'email',
+    type: TYPES.EMAIL,
     width: 'mid',
   }, {
     id: 'password',
     title: 'Password',
-    type: 'password',
+    type: TYPES.PASSWORD,
     width: 'mid',
   }, {
     id: 'url',
     title: 'URL',
-    type: 'url',
+    type: TYPES.URL,
     width: 'mid',
     beforeSubmit: (url) => {
       if (url) {
@@ -140,18 +118,52 @@ export default [{
     },
   }, {
     id: 'empty',
-    type: 'empty',
+    type: TYPES.EMAIL,
     width: 'mid',
+  }],
+}, {
+  group: true,
+  title: 'Form - Date',
+  id: 'date',
+  data: [{
+    id: 'date',
+    title: 'Date',
+    type: TYPES.DATE,
+    format: 'DD.MM.YYYY',
+    value: 1514989682669,
+    width: 'small',
+    validators: ['date'],
   }, {
+    id: 'time',
+    title: 'Time',
+    type: TYPES.TIME,
+    format: 'hh:mm a',
+    value: 1514989682669,
+    width: 'small',
+    validators: ['date'],
+  }, {
+    id: 'datetime',
+    title: 'Datetime',
+    type: TYPES.DATETIME,
+    format: 'DD.MM.YYYY, hh:mm a',
+    value: 1514989682669,
+    width: 'small',
+    validators: ['date'],
+  }],
+}, {
+  group: true,
+  title: 'Form - Disabled fields',
+  id: 'disabled',
+  data: [{
     id: 'disabled',
     title: 'Disabled Text',
-    type: 'text',
+    type: TYPES.TEXT,
     width: 'mid',
     isDisabled: true,
   }, {
     id: 'disabled-select',
     title: 'Disabled Select',
-    type: 'select',
+    type: TYPES.SELECT,
     width: 'mid',
     options: ['Foo', 'Bar', 'Baz'],
     isDisabled: true,
