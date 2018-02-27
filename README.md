@@ -229,7 +229,22 @@ Form components
 #### FormField
 
 * `id: string`, identifier of the field (concatenated with `FormGroup.id` if set)
-* `type: ENUM('select' | 'list' | 'multiline' | 'text' | 'date' | 'time' | 'datetime' | 'email' | 'number' | 'password' | 'url' | 'content' | 'empty')`, default: `text`
+* `type: ENUM(
+    'select' |
+    'list' |
+    'multiline' |
+    'text' |
+    'date' |
+    'time' |
+    'datetime' |
+    'email' |
+    'number' |
+    'switch' |
+    'password' |
+    'url' |
+    'content' |
+    'empty'
+  )`, default: `text`
 * `title: string`, label of field
 * `width: ENUM('small' | 'mid' | 'full')`, default: `full`
 * `value: string | string[]`, default value of a field

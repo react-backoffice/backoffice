@@ -7,6 +7,7 @@ import { TYPES } from './constants'
 import FormFieldInput from './FormFieldInput'
 import FormFieldDate from './FormFieldDate'
 import FormFieldList from './FormFieldList'
+import FormFieldSwitch from './FormFieldSwitch'
 
 const styles = theme => ({
   hidden: {
@@ -21,6 +22,10 @@ const styles = theme => ({
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
     verticalAlign: 'top',
+  },
+
+  fieldInline: {
+    display: 'inline-block',
   },
 
   fieldDate: {
@@ -94,27 +99,20 @@ const FormFieldBranch = ({
         />
       )
     case TYPES.DATE:
-      return (
-        <FormFieldDate
-          {...props}
-          classNames={[...classNames, classes.fieldDate]}
-          type={TYPES.DATE}
-        />
-      )
     case TYPES.TIME:
-      return (
-        <FormFieldDate
-          {...props}
-          classNames={[...classNames, classes.fieldDate]}
-          type={TYPES.TIME}
-        />
-      )
     case TYPES.DATETIME:
       return (
         <FormFieldDate
           {...props}
           classNames={[...classNames, classes.fieldDate]}
-          type={TYPES.DATETIME}
+          type={type}
+        />
+      )
+    case TYPES.SWITCH:
+      return (
+        <FormFieldSwitch
+          {...props}
+          classNames={[...classNames, classes.fieldInline]}
         />
       )
     case TYPES.EMPTY:

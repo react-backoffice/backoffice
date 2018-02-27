@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className=""
+>
+  <label
+    className="MuiFormControlLabel-root-1"
+  >
+    <span
+      className="MuiSwitch-root-4"
+    >
+      <span
+        className="MuiButtonBase-root-24 MuiIconButton-root-18 MuiSwitchBase-root-13 MuiSwitchBase-default-15 MuiSwitch-default-8"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role={undefined}
+        tabIndex={null}
+      >
+        <span
+          className="MuiIconButton-label-23"
+        >
+          <span
+            className="MuiSwitch-icon-6"
+          />
+          <input
+            checked={false}
+            className="MuiSwitchBase-input-14"
+            disabled={false}
+            id={undefined}
+            name={undefined}
+            onChange={[Function]}
+            tabIndex={undefined}
+            type="checkbox"
+            value="switch"
+          />
+        </span>
+        <span
+          className="MuiTouchRipple-root-26"
+        />
+      </span>
+      <span
+        className="MuiSwitch-bar-5"
+      />
+    </span>
+    <span
+      className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-3"
+    >
+      Title
+    </span>
+  </label>
+</div>
+`;
+
+exports[`renders disabled 1`] = `
+<div
+  className=""
+>
+  <label
+    className="MuiFormControlLabel-root-1 MuiFormControlLabel-disabled-2"
+  >
+    <span
+      className="MuiSwitch-root-4"
+    >
+      <span
+        className="MuiButtonBase-root-24 MuiButtonBase-disabled-25 MuiIconButton-root-18 MuiIconButton-disabled-22 MuiSwitchBase-root-13 MuiSwitchBase-default-15 MuiSwitch-default-8 MuiSwitchBase-disabled-17 MuiSwitch-disabled-12"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role={undefined}
+        tabIndex={-1}
+      >
+        <span
+          className="MuiIconButton-label-23"
+        >
+          <span
+            className="MuiSwitch-icon-6"
+          />
+          <input
+            checked={false}
+            className="MuiSwitchBase-input-14"
+            disabled={true}
+            id={undefined}
+            name={undefined}
+            onChange={[Function]}
+            tabIndex={undefined}
+            type="checkbox"
+            value="switch"
+          />
+        </span>
+      </span>
+      <span
+        className="MuiSwitch-bar-5"
+      />
+    </span>
+    <span
+      className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-3"
+    >
+      Title
+    </span>
+  </label>
+</div>
+`;
+
+exports[`renders with helper text 1`] = `
+<div
+  className=""
+>
+  <label
+    className="MuiFormControlLabel-root-1"
+  >
+    <span
+      className="MuiSwitch-root-4"
+    >
+      <span
+        className="MuiButtonBase-root-24 MuiIconButton-root-18 MuiSwitchBase-root-13 MuiSwitchBase-default-15 MuiSwitch-default-8"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role={undefined}
+        tabIndex={null}
+      >
+        <span
+          className="MuiIconButton-label-23"
+        >
+          <span
+            className="MuiSwitch-icon-6"
+          />
+          <input
+            checked={false}
+            className="MuiSwitchBase-input-14"
+            disabled={false}
+            id={undefined}
+            name={undefined}
+            onChange={[Function]}
+            tabIndex={undefined}
+            type="checkbox"
+            value="switch"
+          />
+        </span>
+        <span
+          className="MuiTouchRipple-root-26"
+        />
+      </span>
+      <span
+        className="MuiSwitch-bar-5"
+      />
+    </span>
+    <span
+      className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-3"
+    >
+      Title
+    </span>
+  </label>
+  <p
+    className="MuiFormHelperText-root-57"
+  >
+    test
+  </p>
+</div>
+`;

@@ -168,4 +168,22 @@ export default [{
     options: ['Foo', 'Bar', 'Baz'],
     isDisabled: true,
   }],
+}, {
+  group: true,
+  title: 'Form - Switches, Radio Buttons and Checkboxes',
+  id: 'switches',
+  data: [{
+    id: 'switch',
+    title: 'Switch',
+    type: TYPES.SWITCH,
+    helperText: 'Display Helper Text',
+    width: 'small',
+  }, {
+    id: 'switch-1',
+    title: 'Switch - Disabled',
+    type: TYPES.SWITCH,
+    helperText: 'Display Helper Text',
+    width: 'small',
+    isDisabled: true,
+  }],
 }]
