@@ -56,7 +56,7 @@ const FormFieldDate = ({
       label={title}
       keyboard
       clearable
-      value={new Date(value)}
+      value={new Date(value).toISOString()}
       onChange={handleChange(id)}
       format={format}
       required={required}
