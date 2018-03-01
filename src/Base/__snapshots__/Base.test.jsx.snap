@@ -26,7 +26,7 @@ exports[`Base renders correctly 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          tabIndex={0}
+          tabIndex="0"
           type="button"
         >
           <span
@@ -88,7 +88,7 @@ exports[`Base renders correctly 1`] = `
               onTouchEnd={[Function]}
               onTouchMove={[Function]}
               onTouchStart={[Function]}
-              tabIndex={0}
+              tabIndex="0"
               type="button"
             >
               <span
@@ -134,7 +134,7 @@ exports[`Base renders correctly 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="button"
-                tabIndex={0}
+                tabIndex="0"
               >
                 <div
                   className="MuiListItemText-root-130"
@@ -163,7 +163,7 @@ exports[`Base renders correctly 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="button"
-                tabIndex={0}
+                tabIndex="0"
               >
                 <div
                   className="MuiListItemText-root-130"
@@ -195,7 +195,7 @@ exports[`Base renders correctly 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="button"
-                tabIndex={0}
+                tabIndex="0"
               >
                 <svg
                   aria-hidden="true"

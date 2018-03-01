@@ -77,7 +77,7 @@ exports[`renders correctly 1`] = `
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
             onTouchStart={[Function]}
-            tabIndex={0}
+            tabIndex="0"
             type="button"
           >
             <span
@@ -211,7 +211,7 @@ exports[`renders correctly 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="button"
-                tabIndex={0}
+                tabIndex="0"
               >
                 Name
                 <svg
@@ -275,7 +275,7 @@ exports[`renders correctly 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="button"
-                tabIndex={0}
+                tabIndex="0"
               >
                 Username
                 <svg
@@ -339,7 +339,7 @@ exports[`renders correctly 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="button"
-                tabIndex={0}
+                tabIndex="0"
               >
                 Phone
                 <svg
@@ -403,7 +403,7 @@ exports[`renders correctly 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="button"
-                tabIndex={0}
+                tabIndex="0"
               >
                 Website
                 <svg
@@ -467,7 +467,7 @@ exports[`renders correctly 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="button"
-                tabIndex={0}
+                tabIndex="0"
               >
                 Company
                 <svg
@@ -1592,6 +1592,13 @@ exports[`renders correctly 1`] = `
                     role="button"
                     tabIndex={0}
                   >
+                    <span
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "&#8203",
+                        }
+                      }
+                    />
                     10
                   </div>
                   <input
@@ -1646,7 +1653,7 @@ exports[`renders correctly 1`] = `
                   onTouchEnd={[Function]}
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
-                  tabIndex={-1}
+                  tabIndex="-1"
                   type="button"
                 >
                   <span
@@ -1679,7 +1686,7 @@ exports[`renders correctly 1`] = `
                   onTouchEnd={[Function]}
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
-                  tabIndex={0}
+                  tabIndex="0"
                   type="button"
                 >
                   <span
@@ -1788,7 +1795,7 @@ exports[`renders correctly with Loader 1`] = `
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
             onTouchStart={[Function]}
-            tabIndex={0}
+            tabIndex="0"
             type="button"
           >
             <span
@@ -1922,7 +1929,7 @@ exports[`renders correctly with Loader 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="button"
-                tabIndex={0}
+                tabIndex="0"
               >
                 Name
                 <svg
@@ -1986,7 +1993,7 @@ exports[`renders correctly with Loader 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="button"
-                tabIndex={0}
+                tabIndex="0"
               >
                 Username
                 <svg
@@ -2050,7 +2057,7 @@ exports[`renders correctly with Loader 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="button"
-                tabIndex={0}
+                tabIndex="0"
               >
                 Phone
                 <svg
@@ -2114,7 +2121,7 @@ exports[`renders correctly with Loader 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="button"
-                tabIndex={0}
+                tabIndex="0"
               >
                 Website
                 <svg
@@ -2178,7 +2185,7 @@ exports[`renders correctly with Loader 1`] = `
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 role="button"
-                tabIndex={0}
+                tabIndex="0"
               >
                 Company
                 <svg
@@ -3328,6 +3335,13 @@ exports[`renders correctly with Loader 1`] = `
                     role="button"
                     tabIndex={0}
                   >
+                    <span
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "&#8203",
+                        }
+                      }
+                    />
                     10
                   </div>
                   <input
@@ -3382,7 +3396,7 @@ exports[`renders correctly with Loader 1`] = `
                   onTouchEnd={[Function]}
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
-                  tabIndex={-1}
+                  tabIndex="-1"
                   type="button"
                 >
                   <span
@@ -3415,7 +3429,7 @@ exports[`renders correctly with Loader 1`] = `
                   onTouchEnd={[Function]}
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
-                  tabIndex={0}
+                  tabIndex="0"
                   type="button"
                 >
                   <span

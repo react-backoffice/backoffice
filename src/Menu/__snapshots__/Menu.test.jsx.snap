@@ -21,7 +21,7 @@ exports[`renders correctly 1`] = `
       onTouchMove={[Function]}
       onTouchStart={[Function]}
       role="button"
-      tabIndex={0}
+      tabIndex="0"
     >
       <svg
         aria-hidden="true"

@@ -15,7 +15,7 @@ exports[`renders correctly 1`] = `
   onTouchEnd={[Function]}
   onTouchMove={[Function]}
   onTouchStart={[Function]}
-  tabIndex={0}
+  tabIndex="0"
   type="button"
 >
   <span

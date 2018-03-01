@@ -43,7 +43,7 @@ exports[`Tabs renders correctly 1`] = `
               onTouchStart={[Function]}
               role="tab"
               style={undefined}
-              tabIndex={0}
+              tabIndex="0"
               type="button"
             >
               <span

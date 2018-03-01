@@ -83,7 +83,7 @@ exports[`renders disabled 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         role={undefined}
-        tabIndex={-1}
+        tabIndex="-1"
       >
         <span
           className="MuiIconButton-label-23"
