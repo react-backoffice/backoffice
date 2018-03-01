@@ -86,8 +86,8 @@
     "@types/react" "*"
 
 "@types/react@*":
-  version "16.0.38"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.38.tgz#76617433ea10274505f60bb86eddfdd0476ffdc2"
+  version "16.0.39"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.39.tgz#6aef052209521cd76f62cd7286abdc8fd787e39d"
 
 abab@^1.0.4:
   version "1.0.4"
@@ -4214,8 +4214,8 @@ map-visit@^1.0.0:
     object-visit "^1.0.0"
 
 material-ui-icons@^1.0.0-beta.17:
-  version "1.0.0-beta.17"
-  resolved "https://registry.yarnpkg.com/material-ui-icons/-/material-ui-icons-1.0.0-beta.17.tgz#5f19af54a2d99eeef347a55414a6853e1c850dc3"
+  version "1.0.0-beta.35"
+  resolved "https://registry.yarnpkg.com/material-ui-icons/-/material-ui-icons-1.0.0-beta.35.tgz#f795fafa385918ef7c88ee382e5e5bf4401f008c"
   dependencies:
     recompose "^0.26.0"
 
@@ -4227,8 +4227,8 @@ material-ui-pickers@^1.0.0-beta.15.1:
     react-text-mask "^5.0.2"
 
 material-ui@^1.0.0-beta.33:
-  version "1.0.0-beta.34"
-  resolved "https://registry.yarnpkg.com/material-ui/-/material-ui-1.0.0-beta.34.tgz#bea328d3d34df7ab8bf01c936d08adee11195b80"
+  version "1.0.0-beta.35"
+  resolved "https://registry.yarnpkg.com/material-ui/-/material-ui-1.0.0-beta.35.tgz#eeac6be307c0469943c7686e5c6bd4eaa6b1b563"
   dependencies:
     "@types/jss" "^9.3.0"
     "@types/react-transition-group" "^2.0.6"
@@ -4255,7 +4255,7 @@ material-ui@^1.0.0-beta.33:
     react-scrollbar-size "^2.0.2"
     react-transition-group "^2.2.1"
     recompose "^0.26.0"
-    scroll "^2.0.1"
+    scroll "^2.0.3"
     warning "^3.0.0"
 
 md5.js@^1.3.4:
@@ -5044,7 +5044,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8:
+prop-types@^15.5.4, prop-types@^15.5.6:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -5052,7 +5052,7 @@ prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
-prop-types@^15.6.0:
+prop-types@^15.5.8, prop-types@^15.6.0:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:
@@ -5671,7 +5671,7 @@ sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
-scroll@^2.0.1:
+scroll@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/scroll/-/scroll-2.0.3.tgz#0951b785544205fd17753bc3d294738ba16fc2ab"
   dependencies:
