@@ -4,7 +4,7 @@ import { withStyles } from 'material-ui/styles'
 
 import Typography from 'material-ui/Typography'
 
-import HomeGroup from './HomeGroup'
+import DashboardGroup from './DashboardGroup'
 
 const styles = theme => ({
   root: {
@@ -19,7 +19,7 @@ const styles = theme => ({
   },
 })
 
-const HomeBranch = ({ data, handleClick, classes }) => (
+const DashboardBranch = ({ data, handleClick, classes }) => (
   <div className={classes.root}>
     <div className={classes.headline}>
       <Typography variant="display2">{data.title}</Typography>
@@ -27,7 +27,7 @@ const HomeBranch = ({ data, handleClick, classes }) => (
     </div>
 
     {data.groups ? data.groups.map(group => (
-      <HomeGroup
+      <DashboardGroup
         key={`group-${group.id}`}
         handleClick={handleClick}
         {...group}
@@ -36,10 +36,10 @@ const HomeBranch = ({ data, handleClick, classes }) => (
   </div>
 )
 
-HomeBranch.propTypes = {
+DashboardBranch.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
   handleClick: PropTypes.func.isRequired,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
-export default withStyles(styles)(HomeBranch)
+export default withStyles(styles)(DashboardBranch)

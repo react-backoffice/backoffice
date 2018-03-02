@@ -2,13 +2,13 @@ import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import renderer from 'react-test-renderer'
 
-import Home from './'
+import Dashboard from './'
 
 it('renders correctly', () => {
   const tree = renderer
     .create((
       <Router>
-        <Home
+        <Dashboard
           data={{
             title: 'Backoffice',
             description: 'Visual Testing for Backoffice Framework',

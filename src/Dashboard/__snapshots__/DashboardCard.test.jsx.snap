@@ -2,14 +2,14 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="MuiPaper-root-7 MuiPaper-shadow2-11 MuiPaper-rounded-8 HomeCard-root-1"
+  className="MuiPaper-root-7 MuiPaper-shadow2-11 MuiPaper-rounded-8 DashboardCard-root-1"
   onClick={[Function]}
 >
   <div
-    className="MuiCardContent-root-34 HomeCard-content-2"
+    className="MuiCardContent-root-34 DashboardCard-content-2"
   >
     <h2
-      className="MuiTypography-root-35 MuiTypography-headline-40 HomeCard-title-4"
+      className="MuiTypography-root-35 MuiTypography-headline-40 DashboardCard-title-4"
     >
       Title
     </h2>

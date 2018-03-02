@@ -2,10 +2,10 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="HomeBranch-root-1"
+  className="DashboardBranch-root-1"
 >
   <div
-    className="HomeBranch-headline-2"
+    className="DashboardBranch-headline-2"
   >
     <h1
       className="MuiTypography-root-3 MuiTypography-display2-6"
@@ -20,7 +20,7 @@ exports[`renders correctly 1`] = `
   </div>
   <div>
     <div
-      className="HomeGroup-headline-27"
+      className="DashboardGroup-headline-27"
     >
       <h1
         className="MuiTypography-root-3 MuiTypography-headline-8"
@@ -35,14 +35,14 @@ exports[`renders correctly 1`] = `
         className="MuiGrid-typeItem-29 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-4-70"
       >
         <div
-          className="MuiPaper-root-124 MuiPaper-shadow2-128 MuiPaper-rounded-125 HomeCard-root-118"
+          className="MuiPaper-root-124 MuiPaper-shadow2-128 MuiPaper-rounded-125 DashboardCard-root-118"
           onClick={[Function]}
         >
           <div
-            className="MuiCardContent-root-151 HomeCard-content-119"
+            className="MuiCardContent-root-151 DashboardCard-content-119"
           >
             <h2
-              className="MuiTypography-root-3 MuiTypography-headline-8 HomeCard-title-121"
+              className="MuiTypography-root-3 MuiTypography-headline-8 DashboardCard-title-121"
             >
               title
             </h2>

@@ -7,8 +7,8 @@ import IconButton from 'material-ui/IconButton'
 import Button from 'material-ui/Button'
 import DeleteIcon from 'material-ui-icons/Delete'
 
-import Home from '../../src/Home'
-import homeData from '../data/home'
+import Dashboard from '../../src/Dashboard'
+import dashboardData from '../data/dashboard'
 
 import Menu from '../../src/Menu'
 import menuData from '../data/menu'
@@ -73,8 +73,8 @@ class Page extends React.Component {
 
     return (
       <Fragment>
-        <Home
-          data={homeData}
+        <Dashboard
+          data={dashboardData}
           {...props}
         />
 

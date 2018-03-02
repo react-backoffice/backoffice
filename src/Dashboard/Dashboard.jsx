@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 
-import HomeBranch from './HomeBranch'
+import DashboardBranch from './DashboardBranch'
 
-const withHome = Component => class extends React.Component {
+const withDashboard = Component => class extends React.Component {
   static propTypes = {
     history: PropTypes.objectOf(PropTypes.any).isRequired,
   }
@@ -29,6 +29,6 @@ const withHome = Component => class extends React.Component {
   }
 }
 
-const Home = withHome(HomeBranch)
+const Dashboard = withDashboard(DashboardBranch)
 
-export default withRouter(Home)
+export default withRouter(Dashboard)

@@ -5,7 +5,7 @@ import { withStyles } from 'material-ui/styles'
 import Grid from 'material-ui/Grid'
 import Typography from 'material-ui/Typography'
 
-import HomeCard from './HomeCard'
+import DashboardCard from './DashboardCard'
 
 const styles = theme => ({
   headline: {
@@ -14,7 +14,7 @@ const styles = theme => ({
   },
 })
 
-const HomeGroup = ({
+const DashboardGroup = ({
   title,
   cards,
   handleClick,
@@ -31,7 +31,7 @@ const HomeGroup = ({
 
       {cards ? cards.map(card => (
         <Grid item xs={12} sm={4} key={`group-card-${card.id}`}>
-          <HomeCard
+          <DashboardCard
             title={card.title}
             description={card.description}
             handleClick={() => handleClick(card.link)}
@@ -45,11 +45,11 @@ const HomeGroup = ({
   </div>
 )
 
-HomeGroup.propTypes = {
+DashboardGroup.propTypes = {
   title: PropTypes.string.isRequired,
   cards: PropTypes.arrayOf(PropTypes.object).isRequired,
   handleClick: PropTypes.func.isRequired,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
-export default withStyles(styles)(HomeGroup)
+export default withStyles(styles)(DashboardGroup)

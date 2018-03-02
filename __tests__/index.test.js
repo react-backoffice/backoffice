@@ -11,7 +11,7 @@ it('has all components', () => {
   expect(typeof Backoffice.Snackbar).toBe('function')
   expect(typeof Backoffice.Form).toBe('function')
   expect(typeof Backoffice.Header).toBe('function')
-  expect(typeof Backoffice.Home).toBe('function')
+  expect(typeof Backoffice.Dashboard).toBe('function')
   expect(typeof Backoffice.Listing).toBe('function')
   expect(typeof Backoffice.Menu).toBe('function')
   expect(typeof Backoffice.NoMatch).toBe('function')

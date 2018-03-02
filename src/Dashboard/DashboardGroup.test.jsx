@@ -1,11 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import HomeGroup from './HomeGroup'
+import DashboardGroup from './DashboardGroup'
 
 it('renders correctly', () => {
   const tree = renderer
-    .create(<HomeGroup
+    .create(<DashboardGroup
       title="Title"
       cards={[{
         title: 'title',

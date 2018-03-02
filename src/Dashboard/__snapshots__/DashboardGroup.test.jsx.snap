@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className="HomeGroup-headline-1"
+    className="DashboardGroup-headline-1"
   >
     <h1
       className="MuiTypography-root-2 MuiTypography-headline-7"
@@ -18,14 +18,14 @@ exports[`renders correctly 1`] = `
       className="MuiGrid-typeItem-27 MuiGrid-grid-xs-12-63 MuiGrid-grid-sm-4-68"
     >
       <div
-        className="MuiPaper-root-122 MuiPaper-shadow2-126 MuiPaper-rounded-123 HomeCard-root-116"
+        className="MuiPaper-root-122 MuiPaper-shadow2-126 MuiPaper-rounded-123 DashboardCard-root-116"
         onClick={[Function]}
       >
         <div
-          className="MuiCardContent-root-149 HomeCard-content-117"
+          className="MuiCardContent-root-149 DashboardCard-content-117"
         >
           <h2
-            className="MuiTypography-root-2 MuiTypography-headline-7 HomeCard-title-119"
+            className="MuiTypography-root-2 MuiTypography-headline-7 DashboardCard-title-119"
           >
             title
           </h2>

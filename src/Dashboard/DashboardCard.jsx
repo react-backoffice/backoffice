@@ -35,7 +35,7 @@ const styles = theme => ({
   },
 })
 
-const HomeCard = ({
+const DashboardCard = ({
   title,
   description,
   handleClick,
@@ -73,7 +73,7 @@ const HomeCard = ({
   )
 }
 
-HomeCard.propTypes = {
+DashboardCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   handleClick: PropTypes.func.isRequired,
@@ -82,10 +82,10 @@ HomeCard.propTypes = {
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
-HomeCard.defaultProps = {
+DashboardCard.defaultProps = {
   description: null,
   icon: null,
   disabled: false,
 }
 
-export default withStyles(styles)(HomeCard)
+export default withStyles(styles)(DashboardCard)

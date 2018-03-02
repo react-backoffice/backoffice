@@ -132,23 +132,23 @@ A menu that lists entries
 * `icon: ReactElement | null`, icon which should be displayed before title
 * `disabled: boolean`, if true, item will not be clickable
 
-### Home
+### Dashboard
 
-Dashboard-like homepage
+Dashboard-like overview page
 
 #### Options
 
 * `title: string`, Title as headline
-* `description?: string`, Description of HomeGroups that are upcoming
-* `groups: HomeGroup[]`, Groups of content-teasers that should be rendered
+* `description?: string`, Description of DashboardGroups that are upcoming
+* `groups: DashboardGroup[]`, Groups of content-teasers that should be rendered
 
-#### HomeGroup
+#### DashboardGroup
 
 * `id: string`, Name of the upcoming group
 * `title: string`, Title as headline of the next group
-* `cards: HomeCard[]`, Data to render teaser elements
+* `cards: DashboardCard[]`, Data to render teaser elements
 
-#### HomeCard
+#### DashboardCard
 
 * `title: string`, Title of the card
 * `description?: string`, A description text

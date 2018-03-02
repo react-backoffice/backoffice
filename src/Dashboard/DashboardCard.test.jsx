@@ -1,11 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import HomeCard from './HomeCard'
+import DashboardCard from './DashboardCard'
 
 it('renders correctly', () => {
   const tree = renderer
-    .create(<HomeCard
+    .create(<DashboardCard
       title="Title"
       description="desc"
       handleClick={() => {}}
