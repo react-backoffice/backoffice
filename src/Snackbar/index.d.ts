@@ -1,17 +1,17 @@
 import * as React from "react"
 import { StandardProps } from "../../"
 
-export interface IErrorSnackbarProps
+export interface ISnackbarProps
   extends StandardProps<
       React.HTMLAttributes<HTMLDivElement>,
-      ErrorSnackbarClassKey
+      SnackbarClassKey
     > {
   open: boolean
   message: React.ReactElement<any> | string
 }
 
-export type ErrorSnackbarClassKey = "root"
+export type SnackbarClassKey = "root"
 
-declare const ErrorSnackbar: React.ComponentType<IErrorSnackbarProps>
+declare const Snackbar: React.ComponentType<ISnackbarProps>
 
-export default ErrorSnackbar
+export default Snackbar

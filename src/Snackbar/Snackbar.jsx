@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Snackbar from 'material-ui/Snackbar'
+import MaterialSnackbar from 'material-ui/Snackbar'
 
-const ErrorSnackbar = ({
+const Snackbar = ({
   open,
   message,
 }) => (
-  <Snackbar
+  <MaterialSnackbar
     anchorOrigin={{
       vertical: 'bottom',
       horizontal: 'left',
@@ -21,13 +21,13 @@ const ErrorSnackbar = ({
   />
 )
 
-ErrorSnackbar.propTypes = {
+Snackbar.propTypes = {
   open: PropTypes.bool,
   message: PropTypes.string.isRequired,
 }
 
-ErrorSnackbar.defaultProps = {
+Snackbar.defaultProps = {
   open: false,
 }
 
-export default ErrorSnackbar
+export default Snackbar

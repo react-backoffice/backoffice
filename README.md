@@ -265,7 +265,7 @@ Form components
 * `title: string`, display as text
 * `tooltip: string`, tooltip text, also used as secondary text in autocomplete
 
-### ErrorSnackbar
+### Snackbar
 
 Show an error in the left hand corner
 

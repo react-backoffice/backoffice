@@ -1,11 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import ErrorSnackbar from './'
+import Snackbar from './'
 
 it('renders correctly', () => {
   const tree = renderer
-    .create(<ErrorSnackbar message="Message" />)
+    .create(<Snackbar message="Message" />)
     .toJSON()
   expect(tree).toMatchSnapshot()
 })

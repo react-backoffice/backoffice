@@ -8,7 +8,7 @@ it('has all components', () => {
   expect(typeof Backoffice.Confirm).toBe('function')
   expect(typeof Backoffice.CookieInfo).toBe('function')
   expect(typeof Backoffice.Drawer).toBe('function')
-  expect(typeof Backoffice.ErrorSnackbar).toBe('function')
+  expect(typeof Backoffice.Snackbar).toBe('function')
   expect(typeof Backoffice.Form).toBe('function')
   expect(typeof Backoffice.Header).toBe('function')
   expect(typeof Backoffice.Home).toBe('function')
