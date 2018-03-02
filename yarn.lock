@@ -5228,6 +5228,10 @@ react-jss@^8.1.0:
     prop-types "^15.6.0"
     theming "^1.3.0"
 
+react-mock-router@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/react-mock-router/-/react-mock-router-1.0.11.tgz#e6a6d43860865f1b9f063a62509bf9c597afc710"
+
 react-popper@^0.8.0:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-0.8.2.tgz#092095ff13933211d3856d9f325511ec3a42f12c"
