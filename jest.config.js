@@ -15,6 +15,8 @@ module.exports = {
     '!**/__tests__/**',
     '!**/dist/**',
     '!**/webpack*',
+    '!**/.eslintrc.js',
+    '!**/jest.config.js',
   ],
   testMatch: [
     '**/*.test.js?(x)',
