@@ -13,15 +13,26 @@ const withListing = Component => class extends React.Component {
 
     this.handleClick = this.handleClick.bind(this)
     this.handleFilter = this.handleFilter.bind(this)
+    this.getSearchRef = this.getSearchRef.bind(this)
   }
 
   state = {
     open: false,
   }
 
+  getSearchRef(node) {
+    this.searchRef = node
+  }
+
   handleClick() {
+    const newOpen = !this.state.open
+
+    if (this.searchRef && newOpen) {
+      this.searchRef.focus()
+    }
+
     this.setState({
-      open: !this.state.open,
+      open: newOpen,
     })
 
     this.props.onFilter(undefined)
@@ -44,6 +55,7 @@ const withListing = Component => class extends React.Component {
         {...this.state}
         onClick={this.handleClick}
         onFilter={this.handleFilter}
+        getSearchRef={this.getSearchRef}
       />
     )
   }

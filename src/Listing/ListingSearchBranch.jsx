@@ -30,6 +30,7 @@ const ListingSearchBranch = ({
   placeholder,
   onClick,
   onFilter,
+  getSearchRef,
   classes,
 }) => (
   <div className={classes.root}>
@@ -40,6 +41,9 @@ const ListingSearchBranch = ({
         [classes.fieldActive]: open,
       })}
       onChange={onFilter}
+      inputProps={{
+        ref: (node) => { getSearchRef(node) },
+      }}
     />
     <Tooltip title="Search">
       <IconButton onClick={onClick}>
@@ -54,6 +58,7 @@ ListingSearchBranch.propTypes = {
   placeholder: PropTypes.string,
   onClick: PropTypes.func.isRequired,
   onFilter: PropTypes.func.isRequired,
+  getSearchRef: PropTypes.func.isRequired,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 

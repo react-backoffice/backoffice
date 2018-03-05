@@ -83,3 +83,24 @@ it('does not filter if not open and value changes', () => {
 
   expect(onFilter).toHaveBeenCalled()
 })
+
+it('focuses search field on click', () => {
+  const mockObject = {
+    focus: jest.fn(),
+  }
+
+  const listingSearch = mount((
+    <ListingSearch
+      onClick={() => { }}
+      onFilter={() => {}}
+    />
+  ))
+
+  listingSearch.instance().searchRef = mockObject
+
+  listingSearch.find(IconButton).simulate('click')
+
+  expect(listingSearch.state().open).toBe(true)
+
+  expect(mockObject.focus).toHaveBeenCalled()
+})
