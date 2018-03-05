@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import MockRouter from 'react-mock-router'
 import renderer from 'react-test-renderer'
 import Enzyme from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
@@ -14,7 +14,7 @@ describe('Base', () => {
   it('renders correctly', () => {
     const tree = renderer
       .create((
-        <Router>
+        <MockRouter>
           <Base
             title="Foo"
             menuData={menuData}
@@ -23,7 +23,7 @@ describe('Base', () => {
           >
             <div>Foo</div>
           </Base>
-        </Router>
+        </MockRouter>
       ))
       .toJSON()
     expect(tree).toMatchSnapshot()
@@ -32,7 +32,7 @@ describe('Base', () => {
   it('renders correctly without header', () => {
     const tree = renderer
       .create((
-        <Router>
+        <MockRouter>
           <Base
             title="Foo"
             menuData={menuData}
@@ -42,7 +42,27 @@ describe('Base', () => {
           >
             <div>Foo</div>
           </Base>
-        </Router>
+        </MockRouter>
+      ))
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders with drawer open', () => {
+    const tree = renderer
+      .create((
+        <MockRouter>
+          <Base
+            open
+            title="Foo"
+            menuData={menuData}
+            hasCookieInfo
+            hasHeader={false}
+            menuOpen
+          >
+            <div>Foo</div>
+          </Base>
+        </MockRouter>
       ))
       .toJSON()
     expect(tree).toMatchSnapshot()

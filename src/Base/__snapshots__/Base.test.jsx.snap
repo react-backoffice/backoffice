@@ -234,38 +234,18 @@ exports[`Base renders correctly 1`] = `
         hasCookieInfo={true}
         history={
           Object {
-            "action": "POP",
-            "block": [Function],
             "createHref": [Function],
-            "go": [Function],
-            "goBack": [Function],
-            "goForward": [Function],
-            "length": 1,
-            "listen": [Function],
-            "location": Object {
-              "hash": "",
-              "pathname": "blank",
-              "search": "",
-              "state": undefined,
-            },
+            "path": "",
             "push": [Function],
             "replace": [Function],
           }
         }
-        location={
-          Object {
-            "hash": "",
-            "pathname": "blank",
-            "search": "",
-            "state": undefined,
-          }
-        }
+        location=""
         match={
           Object {
-            "isExact": false,
             "params": Object {},
-            "path": "/",
-            "url": "/",
+            "path": "",
+            "url": "",
           }
         }
         menuOpen={true}
@@ -292,38 +272,56 @@ exports[`Base renders correctly without header 1`] = `
         hasCookieInfo={true}
         history={
           Object {
-            "action": "POP",
-            "block": [Function],
             "createHref": [Function],
-            "go": [Function],
-            "goBack": [Function],
-            "goForward": [Function],
-            "length": 1,
-            "listen": [Function],
-            "location": Object {
-              "hash": "",
-              "pathname": "blank",
-              "search": "",
-              "state": undefined,
-            },
+            "path": "",
             "push": [Function],
             "replace": [Function],
           }
         }
-        location={
-          Object {
-            "hash": "",
-            "pathname": "blank",
-            "search": "",
-            "state": undefined,
-          }
-        }
+        location=""
         match={
           Object {
-            "isExact": false,
             "params": Object {},
-            "path": "/",
-            "url": "/",
+            "path": "",
+            "url": "",
+          }
+        }
+        menuOpen={true}
+        onCookieInfoAccept={[Function]}
+        staticContext={undefined}
+      >
+        Foo
+      </div>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`Base renders with drawer open 1`] = `
+<div>
+  <div
+    className="BaseBranch-appFrame-1 BaseBranch-appFrameWithCookieInfo-2"
+  >
+    <main
+      className="BaseBranch-content-3 BaseBranch-contentShift-4"
+    >
+      <div
+        cookieInfoOpen={true}
+        hasCookieInfo={true}
+        history={
+          Object {
+            "createHref": [Function],
+            "path": "",
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+        location=""
+        match={
+          Object {
+            "params": Object {},
+            "path": "",
+            "url": "",
           }
         }
         menuOpen={true}
