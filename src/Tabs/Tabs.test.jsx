@@ -1,10 +1,12 @@
 import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import MockRouter from 'react-mock-router'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
+import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
+import { Tab } from 'material-ui'
 
 import Tabs from './'
+import tabsContent from '../../__tests__/data/tabs'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -12,7 +14,7 @@ describe('Tabs', () => {
   it('renders correctly', () => {
     const tree = renderer
       .create((
-        <Router>
+        <MockRouter>
           <Tabs
             data={[{
               title: 'Title',
@@ -21,7 +23,7 @@ describe('Tabs', () => {
               ),
             }]}
           />
-        </Router>
+        </MockRouter>
       ))
       .toJSON()
     expect(tree).toMatchSnapshot()
@@ -30,22 +32,29 @@ describe('Tabs', () => {
   it('renders correctly if no data', () => {
     const tree = renderer
       .create((
-        <Router>
+        <MockRouter>
           <Tabs data={[]} />
-        </Router>
+        </MockRouter>
       ))
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
 
-
-  /* @TODO
   it('click second tab', () => {
-    const tabs = shallow(<Tabs data={[]} />)
+    const tabAt = 1
+    const tabs = mount(<MockRouter><Tabs data={tabsContent} /></MockRouter>)
 
-    tabs.instance().handleChange({}, 1)
-
-    expect(tabs.instance().state.value).toEqual(1)
+    expect(window.location.hash).toBe('')
+    tabs.find(Tab).at(tabAt).simulate('click')
+    expect(window.location.hash).toBe(`#/${tabsContent[tabAt].id}`)
   })
-  */
+
+  it('test if correct element is active', () => {
+    const tabAt = 1
+    window.location.hash = `#/${tabsContent[tabAt].id}`
+
+    mount(<MockRouter><Tabs data={tabsContent} /></MockRouter>)
+
+    expect(window.location.hash).toBe(`#/${tabsContent[tabAt].id}`)
+  })
 })
