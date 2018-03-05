@@ -1,27 +1,73 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
+import Enzyme, { shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+import Button from 'material-ui/Button'
 
 import Confirm from './'
 
-it('renders correctly', () => {
-  const tree = renderer
-    .create(<Confirm
-      title="Title"
-      description="Desc"
-      onConfirm={() => { }}
-    />)
-    .toJSON()
-  expect(tree).toMatchSnapshot()
-})
+Enzyme.configure({ adapter: new Adapter() })
 
-it('renders correctly opened', () => {
-  const tree = renderer
-    .create(<Confirm
-      open
-      title="Title"
-      description="Desc"
-      onConfirm={() => { }}
-    />)
-    .toJSON()
-  expect(tree).toMatchSnapshot()
+describe('Confirm', () => {
+  it('renders correctly', () => {
+    const tree = renderer
+      .create(<Confirm
+        title="Title"
+        description="Desc"
+        onConfirm={() => { }}
+      />)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('confirm is handled', () => {
+    const onConfirm = jest.fn()
+    const confirm = shallow((
+      <Confirm
+        open
+        title="Title"
+        description="Desc"
+        onConfirm={onConfirm}
+      />
+    ))
+
+    expect(confirm.state().open).toBe(true)
+    confirm.instance().handleConfirm()
+
+    expect(onConfirm).toHaveBeenCalled()
+  })
+
+  it('close is handled', () => {
+    const onClose = jest.fn()
+    const confirm = shallow((
+      <Confirm
+        open
+        title="Title"
+        description="Desc"
+        onConfirm={() => {}}
+        onClose={onClose}
+      />
+    ))
+
+    expect(confirm.state().open).toBe(true)
+    confirm.instance().handleClose()
+
+    expect(onClose).toHaveBeenCalled()
+  })
+
+  it('changes open', () => {
+    const confirm = shallow((
+      <Confirm
+        open
+        title="Title"
+        description="Desc"
+        onConfirm={() => { }}
+      />
+    ))
+
+    confirm.setProps({
+      open: false,
+    })
+  })
 })

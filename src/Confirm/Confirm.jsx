@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import ConfirmBranch from './ConfirmBranch'
 
-const withConfirm = Component => class Confirm extends React.Component {
+const withConfirm = Component => class extends React.Component {
   static propTypes = {
     open: PropTypes.bool,
     title: PropTypes.string,
@@ -22,8 +22,8 @@ const withConfirm = Component => class Confirm extends React.Component {
     onClose: () => {},
   }
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
       open: false,
@@ -31,6 +31,12 @@ const withConfirm = Component => class Confirm extends React.Component {
 
     this.handleClose = this.handleClose.bind(this)
     this.handleConfirm = this.handleConfirm.bind(this)
+  }
+
+  componentWillMount() {
+    this.setState({
+      open: this.props.open,
+    })
   }
 
   componentWillReceiveProps(nextProps) {
