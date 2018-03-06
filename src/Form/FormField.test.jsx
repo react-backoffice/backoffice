@@ -1,8 +1,7 @@
 import React from 'react'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
-import { ListItem } from 'material-ui'
-import { DateTimePicker } from 'material-ui-pickers'
+import { ListItem, Chip } from 'material-ui'
 
 import FormField from './FormField'
 import FormFieldInput from './FormFieldInput'
@@ -105,6 +104,62 @@ describe('Form Field', () => {
     field.find(ListItem).at(0).simulate('click')
 
     expect(field.state().listItems[0].title).toEqual('foo')
+  })
+
+  it('handles list delete', () => {
+    const field = mount((
+      <FormField
+        id="5a"
+        title="Foo"
+        type="list"
+        handleChange={() => { }}
+        completeFrom={[{
+          title: 'foo',
+          tooltip: 'bar',
+        }]}
+      />
+    ))
+
+    field.find('input').simulate('change', { target: { value: 'foo' } })
+    field.find(ListItem).at(0).simulate('click')
+
+    expect(field.state().listItems[0].title).toEqual('foo')
+    field.find(Chip).at(0).find('svg').simulate('click')
+  })
+
+  it('renders list item via function', () => {
+    const renderElement = jest.fn()
+    const field = mount((
+      <FormField
+        id="5b"
+        title="Foo"
+        type="list"
+        handleChange={() => { }}
+        renderElement={renderElement}
+      />
+    ))
+
+    field.find('input').simulate('change', { target: { value: 'foo' } })
+    field.find('input').simulate('keyPress', { which: 13 })
+
+    expect(renderElement).toHaveBeenCalled()
+  })
+
+  it('does not render if there is no option', () => {
+    const field = mount((
+      <FormField
+        id="5b"
+        title="Foo"
+        type="list"
+        handleChange={() => { }}
+      />
+    ))
+
+    field.setState({
+      listItems: [null],
+    })
+
+    expect(field.find(Chip).length).toEqual(0)
   })
 
   it('handles datetime field', () => {
