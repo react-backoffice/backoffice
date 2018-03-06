@@ -60,7 +60,6 @@ describe('Confirm', () => {
     const confirm = shallow((
       <Confirm
         open
-        title="Title"
         description="Desc"
         onConfirm={() => { }}
       />
