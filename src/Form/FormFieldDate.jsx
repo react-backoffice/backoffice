@@ -11,6 +11,8 @@ import {
   DatePicker,
   TimePicker,
 } from 'material-ui-pickers'
+import MomentUtils from 'material-ui-pickers/utils/moment-utils'
+import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider'
 
 import { TYPES } from './constants'
 
@@ -51,20 +53,22 @@ const FormFieldDate = ({
   }
 
   return (
-    <Component
-      id={id}
-      label={title}
-      keyboard
-      clearable
-      value={new Date(value).toISOString()}
-      onChange={handleChange(id)}
-      format={format}
-      required={required}
-      keyboardIcon={<EventIcon />}
-      className={classNames.join(' ')}
-      helperText={helperText}
-      {...additionalAttributes}
-    />
+    <MuiPickersUtilsProvider utils={MomentUtils}>
+      <Component
+        id={id}
+        label={title}
+        keyboard
+        clearable
+        value={new Date(value).toISOString()}
+        onChange={handleChange(id)}
+        format={format}
+        required={required}
+        keyboardIcon={<EventIcon />}
+        className={classNames.join(' ')}
+        helperText={helperText}
+        {...additionalAttributes}
+      />
+    </MuiPickersUtilsProvider>
   )
 }
 
