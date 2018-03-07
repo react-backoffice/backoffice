@@ -5,7 +5,7 @@ exports[`Tabs renders correctly 1`] = `
   className="Tabs-root-1"
 >
   <header
-    className="MuiPaper-root-10 MuiPaper-shadow4-16 MuiAppBar-root-2 MuiAppBar-positionStatic-6 MuiAppBar-colorPrimary-8"
+    className="MuiPaper-root-10 MuiPaper-elevation4-16 MuiAppBar-root-2 MuiAppBar-positionStatic-6 MuiAppBar-colorPrimary-8"
   >
     <div
       className="MuiTabs-root-37"
@@ -14,7 +14,7 @@ exports[`Tabs renders correctly 1`] = `
         className="MuiTabs-flexContainer-38"
       >
         <div
-          className="MuiTabs-scrollingContainer-39 MuiTabs-fixed-40"
+          className="MuiTabs-scroller-39 MuiTabs-fixed-40"
           onScroll={[Function]}
           role="tablist"
           style={
@@ -28,7 +28,7 @@ exports[`Tabs renders correctly 1`] = `
           >
             <button
               aria-selected={true}
-              className="MuiButtonBase-root-60 MuiTab-root-44 MuiTab-rootInherit-46 MuiTab-rootInheritSelected-53"
+              className="MuiButtonBase-root-60 MuiTab-root-44 MuiTab-textColorInherit-46 MuiTab-textColorInheritSelected-53"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -97,7 +97,7 @@ exports[`Tabs renders correctly if no data 1`] = `
   className="Tabs-root-1"
 >
   <header
-    className="MuiPaper-root-10 MuiPaper-shadow4-16 MuiAppBar-root-2 MuiAppBar-positionStatic-6 MuiAppBar-colorPrimary-8"
+    className="MuiPaper-root-10 MuiPaper-elevation4-16 MuiAppBar-root-2 MuiAppBar-positionStatic-6 MuiAppBar-colorPrimary-8"
   >
     <div
       className="MuiTabs-root-37"
@@ -106,7 +106,7 @@ exports[`Tabs renders correctly if no data 1`] = `
         className="MuiTabs-flexContainer-38"
       >
         <div
-          className="MuiTabs-scrollingContainer-39 MuiTabs-fixed-40"
+          className="MuiTabs-scroller-39 MuiTabs-fixed-40"
           onScroll={[Function]}
           role="tablist"
           style={

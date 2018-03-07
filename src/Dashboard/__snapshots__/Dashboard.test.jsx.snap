@@ -35,7 +35,7 @@ exports[`renders correctly 1`] = `
         className="MuiGrid-typeItem-29 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-4-70"
       >
         <div
-          className="MuiPaper-root-124 MuiPaper-shadow2-128 MuiPaper-rounded-125 DashboardCard-root-118"
+          className="MuiPaper-root-124 MuiPaper-elevation2-128 MuiPaper-rounded-125 DashboardCard-root-118"
           onClick={[Function]}
         >
           <div

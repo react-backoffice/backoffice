@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="MuiDrawer-docked-3"
 >
   <div
-    className="MuiPaper-root-14 MuiPaper-shadow0-16 MuiDrawer-paper-4 Drawer-drawerPaper-1 MuiDrawer-paperAnchorLeft-5 MuiDrawer-paperAnchorDockedLeft-9"
+    className="MuiPaper-root-14 MuiPaper-elevation0-16 MuiDrawer-paper-4 Drawer-drawerPaper-1 MuiDrawer-paperAnchorLeft-5 MuiDrawer-paperAnchorDockedLeft-9"
     direction="right"
     style={Object {}}
   >
@@ -37,7 +37,7 @@ exports[`renders correctly 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-49 MuiSvgIcon-fontSize-55"
+              className="MuiSvgIcon-root-49"
               color={undefined}
               focusable="false"
               viewBox="0 0 24 24"
@@ -48,21 +48,21 @@ exports[`renders correctly 1`] = `
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-56"
+            className="MuiTouchRipple-root-55"
           />
         </button>
       </div>
       <hr
-        className="MuiDivider-root-63 MuiDivider-default-65"
+        className="MuiDivider-root-62"
       />
       <div
-        className="Menu-root-68"
+        className="Menu-root-66"
       >
         <ul
-          className="MuiList-root-69 MuiList-padding-70"
+          className="MuiList-root-67 MuiList-padding-68"
         >
           <div
-            className="MuiButtonBase-root-47 MuiListItem-root-74 MuiListItem-default-77 MuiListItem-gutters-81 MuiListItem-button-82"
+            className="MuiButtonBase-root-47 MuiListItem-root-72 MuiListItem-default-75 MuiListItem-gutters-79 MuiListItem-button-80"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -78,20 +78,20 @@ exports[`renders correctly 1`] = `
             tabIndex="0"
           >
             <div
-              className="MuiListItemText-root-84"
+              className="MuiListItemText-root-82"
             >
               <h3
-                className="MuiTypography-root-90 MuiTypography-subheading-97 MuiListItemText-primary-87"
+                className="MuiTypography-root-88 MuiTypography-subheading-95 MuiListItemText-primary-85"
               >
                 Dashboard
               </h3>
             </div>
             <span
-              className="MuiTouchRipple-root-56"
+              className="MuiTouchRipple-root-55"
             />
           </div>
           <div
-            className="MuiButtonBase-root-47 MuiListItem-root-74 MuiListItem-default-77 MuiListItem-gutters-81 MuiListItem-button-82 MenuItem-disabled-73"
+            className="MuiButtonBase-root-47 MuiListItem-root-72 MuiListItem-default-75 MuiListItem-gutters-79 MuiListItem-button-80 MenuItem-disabled-71"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -107,23 +107,23 @@ exports[`renders correctly 1`] = `
             tabIndex="0"
           >
             <div
-              className="MuiListItemText-root-84"
+              className="MuiListItemText-root-82"
             >
               <h3
-                className="MuiTypography-root-90 MuiTypography-subheading-97 MuiListItemText-primary-87"
+                className="MuiTypography-root-88 MuiTypography-subheading-95 MuiListItemText-primary-85"
               >
                 New portfolio
               </h3>
             </div>
             <span
-              className="MuiTouchRipple-root-56"
+              className="MuiTouchRipple-root-55"
             />
           </div>
           <hr
-            className="MuiDivider-root-63 MuiDivider-default-65"
+            className="MuiDivider-root-62"
           />
           <div
-            className="MuiButtonBase-root-47 MuiListItem-root-74 MuiListItem-default-77 MuiListItem-gutters-81 MuiListItem-button-82"
+            className="MuiButtonBase-root-47 MuiListItem-root-72 MuiListItem-default-75 MuiListItem-gutters-79 MuiListItem-button-80"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -140,7 +140,7 @@ exports[`renders correctly 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-49 MuiListItemIcon-root-114"
+              className="MuiSvgIcon-root-49 MuiListItemIcon-root-112"
               color={undefined}
               focusable="false"
               viewBox="0 0 24 24"
@@ -150,16 +150,16 @@ exports[`renders correctly 1`] = `
               />
             </svg>
             <div
-              className="MuiListItemText-root-84"
+              className="MuiListItemText-root-82"
             >
               <h3
-                className="MuiTypography-root-90 MuiTypography-subheading-97 MuiListItemText-primary-87"
+                className="MuiTypography-root-88 MuiTypography-subheading-95 MuiListItemText-primary-85"
               >
                 Report a bug
               </h3>
             </div>
             <span
-              className="MuiTouchRipple-root-56"
+              className="MuiTouchRipple-root-55"
             />
           </div>
         </ul>

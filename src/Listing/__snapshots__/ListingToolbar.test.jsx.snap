@@ -29,7 +29,7 @@ exports[`renders correctly 1`] = `
         onFocus={[Function]}
       >
         <div
-          className="MuiInput-root-39 MuiInput-formControl-40 MuiInput-inkbar-41 MuiInput-underline-45"
+          className="MuiInput-root-39 MuiInput-formControl-40 MuiInput-underline-43"
           onBlur={[Function]}
           onFocus={[Function]}
         >
@@ -38,7 +38,7 @@ exports[`renders correctly 1`] = `
             aria-required={false}
             autoComplete={undefined}
             autoFocus={undefined}
-            className="MuiInput-input-48 MuiInput-inputType-51 MuiInput-inputSearch-53"
+            className="MuiInput-input-47 MuiInput-inputType-51 MuiInput-inputTypeSearch-52"
             defaultValue={undefined}
             disabled={false}
             id={undefined}
@@ -56,11 +56,11 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="MuiTooltip-root-54"
+        className="MuiTooltip-root-53"
       >
         <button
           aria-describedby={undefined}
-          className="MuiButtonBase-root-69 MuiIconButton-root-63"
+          className="MuiButtonBase-root-68 MuiIconButton-root-62"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -78,11 +78,11 @@ exports[`renders correctly 1`] = `
           type="button"
         >
           <span
-            className="MuiIconButton-label-68"
+            className="MuiIconButton-label-67"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-71 MuiSvgIcon-fontSize-77"
+              className="MuiSvgIcon-root-70"
               color={undefined}
               focusable="false"
               viewBox="0 0 24 24"
@@ -93,11 +93,11 @@ exports[`renders correctly 1`] = `
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-78"
+            className="MuiTouchRipple-root-76"
           />
         </button>
         <div
-          className="MuiTooltip-popper-55 MuiTooltip-popperClose-56"
+          className="MuiTooltip-popper-54 MuiTooltip-popperClose-55"
           data-placement={undefined}
           data-x-out-of-boundaries={undefined}
           style={
@@ -112,7 +112,7 @@ exports[`renders correctly 1`] = `
         >
           <div
             aria-hidden={true}
-            className="MuiTooltip-tooltip-57 MuiTooltip-tooltipBottom-61"
+            className="MuiTooltip-tooltip-56 MuiTooltip-tooltipPlacementBottom-60"
             id={undefined}
             role="tooltip"
           >

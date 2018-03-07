@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="MuiPaper-root-7 MuiPaper-shadow2-11 MuiPaper-rounded-8 DashboardCard-root-1"
+  className="MuiPaper-root-7 MuiPaper-elevation2-11 MuiPaper-rounded-8 DashboardCard-root-1"
   onClick={[Function]}
 >
   <div

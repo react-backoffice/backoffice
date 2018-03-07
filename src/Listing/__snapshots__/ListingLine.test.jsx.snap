@@ -13,7 +13,7 @@ exports[`renders correctly 1`] = `
   >
     <td
       aria-sort={null}
-      className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-14 MuiTableCell-paddingDefault-12"
+      className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-13"
       onClick={[Function]}
       scope={undefined}
     >
@@ -37,7 +37,7 @@ exports[`renders correctly 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-33 MuiSvgIcon-fontSize-39"
+            className="MuiSvgIcon-root-33"
             color={undefined}
             focusable="false"
             viewBox="0 0 24 24"
@@ -59,13 +59,13 @@ exports[`renders correctly 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-40"
+          className="MuiTouchRipple-root-39"
         />
       </span>
     </td>
     <td
       aria-sort={null}
-      className="MuiTableCell-root-7"
+      className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
       onClick={[Function]}
       scope={undefined}
     >
@@ -73,7 +73,7 @@ exports[`renders correctly 1`] = `
     </td>
     <td
       aria-sort={null}
-      className="MuiTableCell-root-7"
+      className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
       onClick={[Function]}
       scope={undefined}
     >
@@ -96,7 +96,7 @@ exports[`renders highlighted 1`] = `
   >
     <td
       aria-sort={null}
-      className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-14 MuiTableCell-paddingDefault-12"
+      className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-13"
       onClick={[Function]}
       scope={undefined}
     >
@@ -120,7 +120,7 @@ exports[`renders highlighted 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-33 MuiSvgIcon-fontSize-39"
+            className="MuiSvgIcon-root-33"
             color={undefined}
             focusable="false"
             viewBox="0 0 24 24"
@@ -142,13 +142,13 @@ exports[`renders highlighted 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-40"
+          className="MuiTouchRipple-root-39"
         />
       </span>
     </td>
     <td
       aria-sort={null}
-      className="MuiTableCell-root-7"
+      className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
       dangerouslySetInnerHTML={
         Object {
           "__html": "<span style=\\"background-color: yellow;\\">Lea</span>nne Graham",
@@ -159,7 +159,7 @@ exports[`renders highlighted 1`] = `
     />
     <td
       aria-sort={null}
-      className="MuiTableCell-root-7"
+      className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
       dangerouslySetInnerHTML={
         Object {
           "__html": "Leanne Graham",
@@ -185,7 +185,7 @@ exports[`renders selected 1`] = `
   >
     <td
       aria-sort={null}
-      className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-14 MuiTableCell-paddingDefault-12"
+      className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-13"
       onClick={[Function]}
       scope={undefined}
     >
@@ -209,7 +209,7 @@ exports[`renders selected 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-33 MuiSvgIcon-fontSize-39"
+            className="MuiSvgIcon-root-33"
             color={undefined}
             focusable="false"
             viewBox="0 0 24 24"
@@ -231,13 +231,13 @@ exports[`renders selected 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-40"
+          className="MuiTouchRipple-root-39"
         />
       </span>
     </td>
     <td
       aria-sort={null}
-      className="MuiTableCell-root-7"
+      className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
       onClick={[Function]}
       scope={undefined}
     >
@@ -245,7 +245,7 @@ exports[`renders selected 1`] = `
     </td>
     <td
       aria-sort={null}
-      className="MuiTableCell-root-7"
+      className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
       onClick={[Function]}
       scope={undefined}
     >

@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="Header-root-1"
 >
   <header
-    className="MuiPaper-root-17 MuiPaper-shadow4-23 MuiAppBar-root-9 MuiAppBar-positionFixed-10 MuiAppBar-colorPrimary-15 mui-fixed Header-appBar-2 Header-appBarShift-4 Header-appBarWithCookieInfo-3"
+    className="MuiPaper-root-17 MuiPaper-elevation4-23 MuiAppBar-root-9 MuiAppBar-positionFixed-10 MuiAppBar-colorPrimary-15 mui-fixed Header-appBar-2 Header-appBarShift-4 Header-appBarWithCookieInfo-3"
   >
     <div
       className="MuiToolbar-root-44 MuiToolbar-gutters-45"
@@ -33,7 +33,7 @@ exports[`renders correctly 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-54 MuiSvgIcon-fontSize-60"
+            className="MuiSvgIcon-root-54"
             color={undefined}
             focusable="false"
             viewBox="0 0 24 24"
@@ -44,11 +44,11 @@ exports[`renders correctly 1`] = `
           </svg>
         </span>
         <span
-          className="MuiTouchRipple-root-61"
+          className="MuiTouchRipple-root-60"
         />
       </button>
       <h2
-        className="MuiTypography-root-68 MuiTypography-title-74 MuiTypography-colorInherit-87 Header-flex-7 Header-title-8"
+        className="MuiTypography-root-67 MuiTypography-title-73 MuiTypography-colorInherit-86 Header-flex-7 Header-title-8"
         onClick={[Function]}
       >
         Header
@@ -63,7 +63,7 @@ exports[`renders correctly with closed 1`] = `
   className="Header-root-1"
 >
   <header
-    className="MuiPaper-root-17 MuiPaper-shadow4-23 MuiAppBar-root-9 MuiAppBar-positionStatic-13 MuiAppBar-colorPrimary-15 Header-appBar-2"
+    className="MuiPaper-root-17 MuiPaper-elevation4-23 MuiAppBar-root-9 MuiAppBar-positionStatic-13 MuiAppBar-colorPrimary-15 Header-appBar-2"
   >
     <div
       className="MuiToolbar-root-44 MuiToolbar-gutters-45"
@@ -91,7 +91,7 @@ exports[`renders correctly with closed 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-54 MuiSvgIcon-fontSize-60"
+            className="MuiSvgIcon-root-54"
             color={undefined}
             focusable="false"
             viewBox="0 0 24 24"
@@ -102,11 +102,11 @@ exports[`renders correctly with closed 1`] = `
           </svg>
         </span>
         <span
-          className="MuiTouchRipple-root-61"
+          className="MuiTouchRipple-root-60"
         />
       </button>
       <h2
-        className="MuiTypography-root-68 MuiTypography-title-74 MuiTypography-colorInherit-87 Header-flex-7 Header-title-8"
+        className="MuiTypography-root-67 MuiTypography-title-73 MuiTypography-colorInherit-86 Header-flex-7 Header-title-8"
         onClick={[Function]}
       >
         Header

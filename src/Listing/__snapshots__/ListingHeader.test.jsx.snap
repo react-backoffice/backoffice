@@ -4,17 +4,19 @@ exports[`renders correctly 1`] = `
 <table
   className="MuiTable-root-1"
 >
-  <thead>
+  <thead
+    className="MuiTableHead-root-2"
+  >
     <tr
-      className="MuiTableRow-root-2 MuiTableRow-typeHead-3"
+      className="MuiTableRow-root-3 MuiTableRow-head-4"
     >
       <th
         aria-sort={null}
-        className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-14 MuiTableCell-paddingDefault-12 MuiTableCell-typeHead-9"
+        className="MuiTableCell-root-8 MuiTableCell-head-9 MuiTableCell-paddingCheckbox-14"
         scope="col"
       >
         <span
-          className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-20 MuiSwitchBase-default-22 MuiCheckbox-default-15 MuiSwitchBase-checked-23 MuiCheckbox-checked-16 MuiCheckbox-checkedSecondary-18"
+          className="MuiButtonBase-root-32 MuiIconButton-root-26 MuiSwitchBase-root-21 MuiSwitchBase-default-23 MuiCheckbox-default-16 MuiSwitchBase-checked-24 MuiCheckbox-checked-17 MuiCheckbox-checkedSecondary-19"
           onBlur={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
@@ -29,11 +31,11 @@ exports[`renders correctly 1`] = `
           tabIndex={null}
         >
           <span
-            className="MuiIconButton-label-30"
+            className="MuiIconButton-label-31"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-33 MuiSvgIcon-fontSize-39"
+              className="MuiSvgIcon-root-34"
               color={undefined}
               focusable="false"
               viewBox="0 0 24 24"
@@ -44,7 +46,7 @@ exports[`renders correctly 1`] = `
             </svg>
             <input
               checked={true}
-              className="MuiSwitchBase-input-21"
+              className="MuiSwitchBase-input-22"
               disabled={undefined}
               id={undefined}
               name={undefined}
@@ -61,7 +63,7 @@ exports[`renders correctly 1`] = `
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-7 MuiTableCell-paddingDefault-12 MuiTableCell-typeHead-9"
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
         scope="col"
       >
         <div
@@ -69,7 +71,7 @@ exports[`renders correctly 1`] = `
         >
           <span
             aria-describedby={undefined}
-            className="MuiButtonBase-root-31 MuiTableSortLabel-root-56 MuiTableSortLabel-active-57"
+            className="MuiButtonBase-root-32 MuiTableSortLabel-root-56 MuiTableSortLabel-active-57"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -88,7 +90,7 @@ exports[`renders correctly 1`] = `
             Name
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-33 MuiTableSortLabel-icon-58 MuiTableSortLabel-asc-60"
+              className="MuiSvgIcon-root-34 MuiTableSortLabel-icon-58 MuiTableSortLabel-iconDirectionAsc-60"
               color={undefined}
               focusable="false"
               viewBox="0 0 24 24"
@@ -114,7 +116,7 @@ exports[`renders correctly 1`] = `
           >
             <div
               aria-hidden={true}
-              className="MuiTooltip-tooltip-50 MuiTooltip-tooltipBottom-54"
+              className="MuiTooltip-tooltip-50 MuiTooltip-tooltipPlacementBottom-54"
               id={undefined}
               role="tooltip"
             >

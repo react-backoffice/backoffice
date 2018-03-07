@@ -35,16 +35,16 @@ exports[`renders correctly 1`] = `
         />
       </svg>
       <div
-        className="MuiListItemText-root-27"
+        className="MuiListItemText-root-26"
       >
         <h3
-          className="MuiTypography-root-33 MuiTypography-subheading-40 MuiListItemText-primary-30"
+          className="MuiTypography-root-32 MuiTypography-subheading-39 MuiListItemText-primary-29"
         >
           Title
         </h3>
       </div>
       <span
-        className="MuiTouchRipple-root-57"
+        className="MuiTouchRipple-root-56"
       />
     </div>
   </ul>

@@ -24,7 +24,7 @@ exports[`renders correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-19 MuiSvgIcon-fontSize-25"
+      className="MuiSvgIcon-root-19"
       color={undefined}
       focusable="false"
       viewBox="0 0 24 24"
@@ -35,7 +35,7 @@ exports[`renders correctly 1`] = `
     </svg>
   </span>
   <span
-    className="MuiTouchRipple-root-26"
+    className="MuiTouchRipple-root-25"
   />
 </button>
 `;

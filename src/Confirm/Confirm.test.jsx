@@ -2,7 +2,6 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
-import Button from 'material-ui/Button'
 
 import Confirm from './'
 

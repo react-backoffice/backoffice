@@ -35,7 +35,7 @@ exports[`Back Button renders correctly 1`] = `
     Back
   </span>
   <span
-    className="MuiTouchRipple-root-26"
+    className="MuiTouchRipple-root-25"
   />
 </button>
 `;

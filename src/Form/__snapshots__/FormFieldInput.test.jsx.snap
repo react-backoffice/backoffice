@@ -9,7 +9,7 @@ exports[`renders correctly 1`] = `
   onKeyPress={[Function]}
 >
   <div
-    className="MuiInput-root-5 MuiInput-fullWidth-13 MuiInput-formControl-6 MuiInput-inkbar-7 MuiInput-underline-11"
+    className="MuiInput-root-5 MuiInput-fullWidth-12 MuiInput-formControl-6 MuiInput-underline-9"
     onBlur={[Function]}
     onFocus={[Function]}
   >
@@ -18,7 +18,7 @@ exports[`renders correctly 1`] = `
       aria-required={false}
       autoComplete={undefined}
       autoFocus={undefined}
-      className="MuiInput-input-14"
+      className="MuiInput-input-13"
       defaultValue={undefined}
       disabled={false}
       id={undefined}
@@ -47,7 +47,7 @@ exports[`renders disabled 1`] = `
   onKeyPress={[Function]}
 >
   <div
-    className="MuiInput-root-5 MuiInput-disabled-10 MuiInput-fullWidth-13 MuiInput-formControl-6 MuiInput-inkbar-7 MuiInput-underline-11"
+    className="MuiInput-root-5 MuiInput-disabled-8 MuiInput-fullWidth-12 MuiInput-formControl-6 MuiInput-underline-9"
     onBlur={[Function]}
     onFocus={[Function]}
   >
@@ -56,7 +56,7 @@ exports[`renders disabled 1`] = `
       aria-required={false}
       autoComplete={undefined}
       autoFocus={undefined}
-      className="MuiInput-input-14 MuiInput-inputDisabled-16"
+      className="MuiInput-input-13 MuiInput-inputDisabled-15"
       defaultValue={undefined}
       disabled={true}
       id={undefined}
