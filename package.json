@@ -1,6 +1,6 @@
 {
   "name": "backoffice",
-  "version": "2.0.0-beta.5",
+  "version": "2.0.0-beta.6",
   "main": "dist/index.js",
   "author": "Hans Christian Reinl <info@drublic.de>",
   "license": "MIT",
