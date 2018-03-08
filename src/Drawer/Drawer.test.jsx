@@ -8,9 +8,9 @@ import Drawer from './'
 it('renders correctly', () => {
   const tree = renderer
     .create(<Drawer
-      open
+      isOpen
       data={menuData}
-      handleDrawerClose={() => {}}
+      onClose={() => {}}
       redirectTo={() => {}}
     />)
     .toJSON()

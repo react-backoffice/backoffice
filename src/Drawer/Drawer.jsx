@@ -28,8 +28,8 @@ const styles = theme => ({
 
 const Drawer = ({
   data,
-  open,
-  handleDrawerClose,
+  isOpen,
+  onClose,
   redirectTo,
   classes,
 }) => (
@@ -39,11 +39,11 @@ const Drawer = ({
       paper: classes.drawerPaper,
     }}
     anchor="left"
-    open={open}
+    open={isOpen}
   >
     <div className={classes.drawerInner}>
       <div className={classes.drawerHeader}>
-        <IconButton onClick={handleDrawerClose}>
+        <IconButton onClick={onClose}>
           <ChevronLeftIcon />
         </IconButton>
       </div>
@@ -58,14 +58,14 @@ const Drawer = ({
 
 Drawer.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
-  open: PropTypes.bool,
-  handleDrawerClose: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool,
+  onClose: PropTypes.func.isRequired,
   redirectTo: PropTypes.func.isRequired,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 Drawer.defaultProps = {
-  open: false,
+  isOpen: false,
 }
 
 export default withStyles(styles)(Drawer)

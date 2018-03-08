@@ -81,9 +81,9 @@ const BaseBranch = ({
     >
       {hasHeader ? (
         <Drawer
-          handleDrawerClose={handleDrawerClose}
+          onClose={handleDrawerClose}
           redirectTo={redirectTo}
-          open={open}
+          isOpen={open}
           data={menuData}
         />
       ) : null}

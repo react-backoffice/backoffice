@@ -228,6 +228,31 @@ const dashboard = () => (
 )
 ```
 
+### Drawer
+
+Element that has an (off-canvas) menu
+
+* `data: MenuItem[]`, menu data
+* `isOpen?: boolean`, is the drawer open?, default `false`
+* `onClose: function`, what happens when drawer is closed
+* `redirectTo: function`, what happens when clicking on a link
+  * Parameter: `url: string`, as set in MenuItem
+
+```javascript
+import { Drawer } from 'backoffice'
+
+import data from './__tests__/data/menu.js'
+
+const drawer = ({ onClose, redirectTo }) => (
+  <Drawer
+    data={data}
+    isOpen
+    onClose={onClose}
+    redirectTo={redirectTo}
+  />
+)
+```
+
 ### Menu
 
 A menu that lists entries
@@ -257,15 +282,6 @@ A content-snippet for 404 pages
 
 * `title: string`, title of the page
 * `description: node`, element that is the content
-
-### Drawer
-
-Element that has an (off-canvas) menu
-
-* `data: object[]`, menu data
-* `open: boolean`, is the drawer open?
-* `handleDrawerClose: function`, what happens when drawer is closed
-* `redirectTo: function`, what happens when clicking on a link
 
 ### Form
 
