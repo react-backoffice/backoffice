@@ -60,7 +60,7 @@ More to follow.
 
 The AppContainer provides the generic styling as well as the possiblity to povided your own theme (based on [Material UI's colors](https://material-ui-next.com/style/color/)).
 
-* `theme: object`, theme configuration
+* `theme: Theme`, theme configuration, theme palette as described [here](https://material-ui-next.com/style/color/)
 
 You could use the AppContainer-Component like this:
 
@@ -116,6 +116,13 @@ Children are rendered as content.
 * `fixedHeader?: boolean`, Is header fixed?, default `true`
 * `hasHeader?: boolean`, Is header included, default `true`
 * `hasCookieInfo?: boolean`, Is there a cookieinfo in the project, default: `false`
+
+### AddButton
+
+Button in the bottom right, that let's you link to a new page
+
+* `onClick: function`, handle click on Add Button
+
 
 ### Menu
 
@@ -183,12 +190,6 @@ Data-Table
 * `toolbarContent: node`, Content that should be shown in the toolbar, if a line is selected
 * `onUpdateSelection: function`, is called if a selection of a line is changed
 * `isIntegrated?: bool`, show Listing on Paper or integrated, default: false
-
-### AddButton
-
-Button in the bottom right, that let's you link to a new page
-
-* `onClick: function`, handle click on Add Button
 
 ### NoMatch
 
