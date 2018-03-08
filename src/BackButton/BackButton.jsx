@@ -26,7 +26,7 @@ const withBackButton = Component => class extends React.Component {
     return (
       <Component
         {...this.props}
-        handleBack={this.handleBack}
+        onNavigateBack={this.handleBack}
       />
     )
   }

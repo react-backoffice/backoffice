@@ -12,17 +12,17 @@ const styles = theme => ({
 })
 
 const BackButtonBranch = ({
-  handleBack,
+  onNavigateBack,
   classes,
 }) => (
-  <Button onClick={handleBack}>
+  <Button onClick={onNavigateBack}>
     <BackIcon className={classes.leftIcon} />
     Back
   </Button>
 )
 
 BackButtonBranch.propTypes = {
-  handleBack: PropTypes.func.isRequired,
+  onNavigateBack: PropTypes.func.isRequired,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 

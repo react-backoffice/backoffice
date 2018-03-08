@@ -123,6 +123,19 @@ Button in the bottom right, that let's you link to a new page
 
 * `onClick: function`, handle click on Add Button
 
+### BackButton
+
+A Button to go "back" to a given url
+
+* `url: string`, where to go next
+
+```javascript
+import { BackButton } from 'backoffice'
+
+const backButton = () => (
+  <BackButton url="/go-back" />
+)
+```
 
 ### Menu
 
@@ -206,12 +219,6 @@ Element that has an (off-canvas) menu
 * `open: boolean`, is the drawer open?
 * `handleDrawerClose: function`, what happens when drawer is closed
 * `redirectTo: function`, what happens when clicking on a link
-
-### BackButton
-
-A Button to go "back" to a given url
-
-* `url: string`, where to go next
 
 ### Form
 
