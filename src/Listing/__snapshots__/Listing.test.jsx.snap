@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Listing renders correctly 1`] = `
 <div
   className="MuiPaper-root-4 MuiPaper-elevation4-10 MuiPaper-rounded-5 ListingBranch-root-1"
 >
@@ -1722,7 +1722,7 @@ exports[`renders correctly 1`] = `
 </div>
 `;
 
-exports[`renders correctly with Loader 1`] = `
+exports[`Listing renders correctly with Loader 1`] = `
 <div
   className="MuiPaper-root-4 MuiPaper-elevation4-10 MuiPaper-rounded-5 ListingBranch-root-1"
 >

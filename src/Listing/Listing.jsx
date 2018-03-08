@@ -41,6 +41,10 @@ const withListing = Component => class Listing extends React.Component {
   static tryToMatch(value, content) {
     let initialContent = content
 
+    if (!content) {
+      return false
+    }
+
     if (content.highlight) {
       initialContent = content.value
     }
@@ -237,10 +241,12 @@ const withListing = Component => class Listing extends React.Component {
         const newItem = item
 
         Object.keys(item).forEach((key) => {
-          if (item[key].value) {
-            newItem[key] = item[key].value
-          } else {
-            newItem[key] = item[key]
+          if (item[key]) {
+            if (item[key].value) {
+              newItem[key] = item[key].value
+            } else {
+              newItem[key] = item[key]
+            }
           }
         })
 

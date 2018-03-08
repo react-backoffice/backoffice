@@ -10,129 +10,161 @@ import data from '../../__tests__/data/listing_data'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-it('renders correctly', () => {
-  const tree = renderer
-    .create((
-      <Listing
-        title="Christmas Time"
-        data={data}
-        headers={headers}
-        orderBy="username"
-        handleClick={() => { }}
-        onUpdateSelection={() => { }}
-      />
-    ))
-    .toJSON()
-  expect(tree).toMatchSnapshot()
-})
-
-it('renders correctly with Loader', () => {
-  const tree = renderer
-    .create((
-      <Listing
-        title="Christmas Time"
-        data={data}
-        headers={headers}
-        orderBy="username"
-        handleClick={() => { }}
-        hasLoader
-        onUpdateSelection={() => { }}
-      />
-    ))
-    .toJSON()
-  expect(tree).toMatchSnapshot()
-})
-
-it('changes props', () => {
-  const listing = shallow((
-    <Listing
-      title="Christmas Time"
-      data={data}
-      headers={headers}
-      orderBy="username"
-      handleClick={() => { }}
-      onUpdateSelection={() => { }}
-    />
-  ))
-
-  listing.setProps({
-    orderBy: 'name',
-    data: null,
+describe('Listing', () => {
+  it('renders correctly', () => {
+    const tree = renderer
+      .create((
+        <Listing
+          title="Christmas Time"
+          data={data}
+          headers={headers}
+          orderBy="username"
+          handleClick={() => { }}
+          onUpdateSelection={() => { }}
+        />
+      ))
+      .toJSON()
+    expect(tree).toMatchSnapshot()
   })
-})
 
-it('does a new sorting', () => {
-  const listing = shallow((
-    <Listing
-      title="Christmas Time"
-      data={data}
-      headers={headers}
-      orderBy="username"
-      handleClick={() => { }}
-      onUpdateSelection={() => { }}
-    />
-  ))
+  it('renders correctly with Loader', () => {
+    const tree = renderer
+      .create((
+        <Listing
+          title="Christmas Time"
+          data={data}
+          headers={headers}
+          orderBy="username"
+          handleClick={() => { }}
+          hasLoader
+          onUpdateSelection={() => { }}
+        />
+      ))
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 
-  expect(listing.state().data[0].username).toBe('Antonette')
+  it('changes props', () => {
+    const origSortData = Listing.prototype.sortData
+    Listing.prototype.sortData = jest.fn()
 
-  listing.instance().handleRequestSort({}, 'name')
-  expect(listing.state().data[0].username).toBe('Karianne')
+    const listing = shallow((
+      <Listing
+        title="Christmas Time"
+        data={data}
+        headers={headers}
+        orderBy="username"
+        handleClick={() => { }}
+        onUpdateSelection={() => { }}
+      />
+    ))
 
-  listing.instance().handleRequestSort({}, 'name')
-  expect(listing.state().data[0].username).toBe('Kamren')
-})
+    listing.setProps({
+      orderBy: 'name',
+      data: null,
+    })
 
-it('handles click on a checkbox', () => {
-  const onUpdateSelection = jest.fn()
-  const listing = shallow((
-    <Listing
-      title="Christmas Time"
-      data={data}
-      headers={headers}
-      orderBy="username"
-      handleClick={() => { }}
-      onUpdateSelection={onUpdateSelection}
-    />
-  ))
+    expect(Listing.prototype.sortData).toHaveBeenCalled()
+    Listing.prototype.sortData = origSortData
+  })
 
-  listing.instance().handleCheckClick('foo')
-  expect(listing.state().selected).toEqual(['foo'])
-  expect(onUpdateSelection).toHaveBeenCalled()
+  it('does a new sorting', () => {
+    const listing = shallow((
+      <Listing
+        title="Christmas Time"
+        data={data}
+        headers={headers}
+        orderBy="username"
+        handleClick={() => { }}
+        onUpdateSelection={() => { }}
+      />
+    ))
 
-  listing.instance().handleCheckClick('bar')
-  expect(listing.state().selected).toEqual(['foo', 'bar'])
+    expect(listing.state().data[0].username).toBe('Antonette')
 
-  listing.instance().handleCheckClick('baz')
-  expect(listing.state().selected).toEqual(['foo', 'bar', 'baz'])
+    listing.instance().handleRequestSort({}, 'name')
+    expect(listing.state().data[0].username).toBe('Karianne')
 
-  listing.instance().handleCheckClick('bar')
-  expect(listing.state().selected).toEqual(['foo', 'baz'])
+    listing.instance().handleRequestSort({}, 'name')
+    expect(listing.state().data[0].username).toBe('Kamren')
+  })
 
-  listing.instance().handleCheckClick('baz')
-  expect(listing.state().selected).toEqual(['foo'])
+  it('handles click on a checkbox', () => {
+    const onUpdateSelection = jest.fn()
+    const listing = shallow((
+      <Listing
+        title="Christmas Time"
+        data={data}
+        headers={headers}
+        orderBy="username"
+        handleClick={() => { }}
+        onUpdateSelection={onUpdateSelection}
+      />
+    ))
 
-  listing.instance().handleCheckClick('foo')
-  expect(listing.state().selected).toEqual([])
-})
+    listing.instance().handleCheckClick('foo')
+    expect(listing.state().selected).toEqual(['foo'])
+    expect(onUpdateSelection).toHaveBeenCalled()
 
-it('allows to filter', () => {
-  const listing = shallow((
-    <Listing
-      title="Christmas Time"
-      data={data}
-      headers={headers}
-      orderBy="username"
-      handleClick={() => { }}
-    />
-  ))
+    listing.instance().handleCheckClick('bar')
+    expect(listing.state().selected).toEqual(['foo', 'bar'])
 
-  const { length } = listing.state().data
+    listing.instance().handleCheckClick('baz')
+    expect(listing.state().selected).toEqual(['foo', 'bar', 'baz'])
 
-  listing.instance().handleFilter('')
+    listing.instance().handleCheckClick('bar')
+    expect(listing.state().selected).toEqual(['foo', 'baz'])
 
-  expect(listing.state().data.length).toEqual(length)
+    listing.instance().handleCheckClick('baz')
+    expect(listing.state().selected).toEqual(['foo'])
 
-  listing.instance().handleFilter('f0ooasdnajsbhdhuq2871dasd')
+    listing.instance().handleCheckClick('foo')
+    expect(listing.state().selected).toEqual([])
+  })
 
-  expect(listing.state().data.length).toEqual(0)
+  it('allows to filter', () => {
+    const listing = shallow((
+      <Listing
+        title="Christmas Time"
+        data={data}
+        headers={headers}
+        orderBy="username"
+        handleClick={() => { }}
+      />
+    ))
+
+    const { length } = listing.state().data
+
+    listing.instance().handleFilter('')
+
+    expect(listing.state().data.length).toEqual(length)
+
+    listing.instance().handleFilter('f0ooasdnajsbhdhuq2871dasd')
+
+    expect(listing.state().data.length).toEqual(0)
+  })
+
+  it('allows to filter even if there are empty filters', () => {
+    data[0].name = null
+
+    const listing = shallow((
+      <Listing
+        title="Christmas Time"
+        data={data}
+        headers={headers}
+        orderBy="username"
+        handleClick={() => { }}
+      />
+    ))
+
+    const { length } = listing.state().data
+
+    listing.instance().handleFilter('')
+
+    expect(listing.state().data.length).toEqual(length)
+
+    listing.instance().handleFilter('f0ooasdnajsbhdhuq2871dasd')
+
+    expect(listing.state().data.length).toEqual(0)
+  })
 })
