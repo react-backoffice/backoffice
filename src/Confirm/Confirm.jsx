@@ -5,7 +5,7 @@ import ConfirmBranch from './ConfirmBranch'
 
 const withConfirm = Component => class extends React.Component {
   static propTypes = {
-    open: PropTypes.bool,
+    isOpen: PropTypes.bool,
     title: PropTypes.string,
     description: PropTypes.string.isRequired,
     agreeText: PropTypes.string,
@@ -16,7 +16,7 @@ const withConfirm = Component => class extends React.Component {
 
   static defaultProps = {
     title: null,
-    open: false,
+    isOpen: false,
     agreeText: 'Agree',
     disagreeText: 'Disagree',
     onClose: () => {},
@@ -26,7 +26,7 @@ const withConfirm = Component => class extends React.Component {
     super(props)
 
     this.state = {
-      open: false,
+      isOpen: false,
     }
 
     this.handleClose = this.handleClose.bind(this)
@@ -35,21 +35,21 @@ const withConfirm = Component => class extends React.Component {
 
   componentWillMount() {
     this.setState({
-      open: this.props.open,
+      isOpen: this.props.isOpen,
     })
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.state.open !== nextProps.open) {
+    if (this.state.isOpen !== nextProps.isOpen) {
       this.setState({
-        open: nextProps.open,
+        isOpen: nextProps.isOpen,
       })
     }
   }
 
   handleClose() {
     this.setState({
-      open: false,
+      isOpen: false,
     })
 
     this.props.onClose()
@@ -57,7 +57,7 @@ const withConfirm = Component => class extends React.Component {
 
   handleConfirm() {
     this.setState({
-      open: false,
+      isOpen: false,
     })
 
     this.props.onConfirm()

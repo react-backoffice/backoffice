@@ -36,7 +36,7 @@ class General extends React.Component {
         </Typography>
         <Button onClick={this.handleOpenDialoge}>Open Dialog</Button>
         <Confirm
-          open={this.state.dialogOpen}
+          isOpen={this.state.dialogOpen}
           description="Are you sure you want to delete the entry?"
           onConfirm={() => {}}
         />

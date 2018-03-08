@@ -137,6 +137,30 @@ const backButton = () => (
 )
 ```
 
+### Confirm
+
+A dialog box to confirm something with a user
+
+* `isOpen: boolean`, is the confirm dialog open, default `false`
+* `title: string`, title, optional
+* `description: string`, description text
+* `agreeText: string`, Text for agree button, default `Agree`
+* `disagreeText: string`, Text for disagree button, default `Disagree`
+* `onConfirm: function`, handler when user confirms dialog
+* `onClose: function`, handler when user closes dialog
+
+```javascript
+import { Confirm } from 'backoffice'
+
+const confirm = ({ isOpen, onConfirm }) => (
+  <Confirm
+    isOpen={isOpen}
+    description="Are you sure you want to delete the entry?"
+    onConfirm={onConfirm}
+  />
+)
+```
+
 ### Menu
 
 A menu that lists entries
@@ -183,18 +207,6 @@ If you use CookieInfo please make sure to set the attribute `hasCookieInfo` to `
 * `buttonText: string`, text to display on the button
 * Internal: `cookieInfoOpen: boolean`, state of the cookieInfo, handled by `Base`, default `false`
 * Internal: `onCookieInfoAccept: function`, when accepted, provided by `Base`
-
-### Confirm
-
-A dialog box to confirm something with a user
-
-* `open: boolean`, is the confirm dialog open, default `false`
-* `title: string`, title, optional
-* `description: string`, description text
-* `agreeText: string`, Text for agree button, default `Agree`
-* `disagreeText: string`, Text for disagree button, default `Disagree`
-* `onConfirm: function`, handler when user confirms dialog
-* `onClose: function`, handler when user closes dialog
 
 ### Listing
 

@@ -24,14 +24,14 @@ describe('Confirm', () => {
     const onConfirm = jest.fn()
     const confirm = shallow((
       <Confirm
-        open
+        isOpen
         title="Title"
         description="Desc"
         onConfirm={onConfirm}
       />
     ))
 
-    expect(confirm.state().open).toBe(true)
+    expect(confirm.state().isOpen).toBe(true)
     confirm.instance().handleConfirm()
 
     expect(onConfirm).toHaveBeenCalled()
@@ -41,7 +41,7 @@ describe('Confirm', () => {
     const onClose = jest.fn()
     const confirm = shallow((
       <Confirm
-        open
+        isOpen
         title="Title"
         description="Desc"
         onConfirm={() => {}}
@@ -49,7 +49,7 @@ describe('Confirm', () => {
       />
     ))
 
-    expect(confirm.state().open).toBe(true)
+    expect(confirm.state().isOpen).toBe(true)
     confirm.instance().handleClose()
 
     expect(onClose).toHaveBeenCalled()
@@ -58,14 +58,14 @@ describe('Confirm', () => {
   it('changes open', () => {
     const confirm = shallow((
       <Confirm
-        open
+        isOpen
         description="Desc"
         onConfirm={() => { }}
       />
     ))
 
     confirm.setProps({
-      open: false,
+      isOpen: false,
     })
   })
 })

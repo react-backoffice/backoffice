@@ -18,7 +18,7 @@ const styles = theme => ({
 const ConfirmBranch = ({
   title,
   description,
-  open,
+  isOpen,
   disagreeText,
   agreeText,
   onClose,
@@ -26,7 +26,7 @@ const ConfirmBranch = ({
   classes,
 }) => (
   <Dialog
-    open={open}
+    open={isOpen}
     onClose={onClose}
     aria-labelledby="alert-dialog-title"
     aria-describedby="alert-dialog-description"
@@ -57,7 +57,7 @@ const ConfirmBranch = ({
 )
 
 ConfirmBranch.propTypes = {
-  open: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired,
   title: PropTypes.string,
   description: PropTypes.string.isRequired,
   agreeText: PropTypes.string.isRequired,
