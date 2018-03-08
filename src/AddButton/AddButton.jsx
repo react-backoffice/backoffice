@@ -5,7 +5,7 @@ import AddButtonBranch from './AddButtonBranch'
 
 const withAddButton = Component => class extends React.PureComponent {
   static propTypes = {
-    handleClick: PropTypes.func.isRequired,
+    onClick: PropTypes.func.isRequired,
   }
 
   render() {

@@ -188,6 +188,8 @@ Data-Table
 
 Button in the bottom right, that let's you link to a new page
 
+* `onClick: function`, handle click on Add Button
+
 ### NoMatch
 
 A content-snippet for 404 pages

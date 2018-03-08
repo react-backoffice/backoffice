@@ -152,7 +152,7 @@ class Page extends React.Component {
           {...props}
         />
 
-        <AddButton handleClick={noop} />
+        <AddButton onClick={noop} />
 
         <Typography variant="display1" className={classes.headline}>
           Back Button
