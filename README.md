@@ -173,10 +173,9 @@ Children are used as content.
 * Internal: `onAccept: function`, when accepted, provided by `Base`
 
 ```javascript
-import { CookieInfo } from 'backoffice'
+import { Base, CookieInfo } from 'backoffice'
 
 const page = (props) => (
-
   <Base
     hasCookieInfo
     {...props}
@@ -185,6 +184,47 @@ const page = (props) => (
       This is the cookie info
     </CookieInfo>
   </Base>
+)
+```
+
+### Dashboard
+
+Dashboard-like overview page
+
+You can find [example data here](./__tests__/data/dashboard.js).
+
+#### Options
+
+* `data: DashboardData`, data that describes the dashboard
+
+#### DashboardData
+
+* `title: string`, Title as headline
+* `description?: string`, Description of DashboardGroups that are upcoming
+* `groups: DashboardGroup[]`, Groups of content-teasers that should be rendered
+
+#### DashboardGroup
+
+* `id: string`, Name of the upcoming group
+* `title: string`, Title as headline of the next group
+* `cards: DashboardCard[]`, Data to render teaser elements
+
+#### DashboardCard
+
+* `title: string`, Title of the card
+* `description?: string`, A description text
+* `icon?: function`, An icon element that you want to display next to the title
+* `isDisabled?: function`, Should element be disabled?, default `false`
+
+#### Usage
+
+```javascript
+import { Dashboard } from 'backoffice'
+
+import data from './__tests__/data/dashboard.js'
+
+const dashboard = () => (
+  <Dashboard data={data} />
 )
 ```
 
@@ -202,29 +242,6 @@ A menu that lists entries
 * `title: string`, title to display
 * `icon: ReactElement | null`, icon which should be displayed before title
 * `disabled: boolean`, if true, item will not be clickable
-
-### Dashboard
-
-Dashboard-like overview page
-
-#### Options
-
-* `title: string`, Title as headline
-* `description?: string`, Description of DashboardGroups that are upcoming
-* `groups: DashboardGroup[]`, Groups of content-teasers that should be rendered
-
-#### DashboardGroup
-
-* `id: string`, Name of the upcoming group
-* `title: string`, Title as headline of the next group
-* `cards: DashboardCard[]`, Data to render teaser elements
-
-#### DashboardCard
-
-* `title: string`, Title of the card
-* `description?: string`, A description text
-* `icon?: function`, An icon element that you want to display next to the title
-* `disabled?: function`, Should element be disabled?, default `false`
 
 ### Listing
 

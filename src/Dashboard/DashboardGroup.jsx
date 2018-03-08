@@ -17,7 +17,7 @@ const styles = theme => ({
 const DashboardGroup = ({
   title,
   cards,
-  handleClick,
+  onClick,
   classes,
 }) => (
   <div>
@@ -34,7 +34,7 @@ const DashboardGroup = ({
           <DashboardCard
             title={card.title}
             description={card.description}
-            handleClick={() => handleClick(card.link)}
+            handleClick={() => onClick(card.link)}
             icon={card.icon}
             disabled={card.disabled}
           />
@@ -48,7 +48,7 @@ const DashboardGroup = ({
 DashboardGroup.propTypes = {
   title: PropTypes.string.isRequired,
   cards: PropTypes.arrayOf(PropTypes.object).isRequired,
-  handleClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 

@@ -40,18 +40,18 @@ const DashboardCard = ({
   description,
   handleClick,
   icon: Icon,
-  disabled,
+  isDisabled,
   classes,
 }) => {
   const rootClasses = classNames({
     [classes.root]: true,
-    [classes.disabled]: disabled,
+    [classes.disabled]: isDisabled,
   })
 
   return (
     <Card onClick={handleClick} className={rootClasses}>
       <CardContent className={classes.content}>
-        {disabled ? (
+        {isDisabled ? (
           <DisabledIcon className={classes.icon} />
         ) : null}
 
@@ -78,14 +78,14 @@ DashboardCard.propTypes = {
   description: PropTypes.string,
   handleClick: PropTypes.func.isRequired,
   icon: PropTypes.func,
-  disabled: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 DashboardCard.defaultProps = {
   description: null,
   icon: null,
-  disabled: false,
+  isDisabled: false,
 }
 
 export default withStyles(styles)(DashboardCard)

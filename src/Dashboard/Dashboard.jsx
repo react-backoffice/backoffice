@@ -23,7 +23,7 @@ const withDashboard = Component => class extends React.Component {
     return (
       <Component
         {...this.props}
-        handleClick={this.handleClick}
+        onClick={this.handleClick}
       />
     )
   }

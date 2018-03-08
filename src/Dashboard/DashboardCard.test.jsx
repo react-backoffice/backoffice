@@ -8,7 +8,20 @@ it('renders correctly', () => {
     .create(<DashboardCard
       title="Title"
       description="desc"
-      handleClick={() => {}}
+      handleClick={() => { }}
+    />)
+    .toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+
+it('renders disabled', () => {
+  const tree = renderer
+    .create(<DashboardCard
+      title="Title"
+      description="desc"
+      handleClick={() => { }}
+      isDisabled
     />)
     .toJSON()
   expect(tree).toMatchSnapshot()

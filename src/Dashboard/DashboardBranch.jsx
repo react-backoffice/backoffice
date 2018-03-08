@@ -19,7 +19,7 @@ const styles = theme => ({
   },
 })
 
-const DashboardBranch = ({ data, handleClick, classes }) => (
+const DashboardBranch = ({ data, onClick, classes }) => (
   <div className={classes.root}>
     <div className={classes.headline}>
       <Typography variant="display2">{data.title}</Typography>
@@ -29,7 +29,7 @@ const DashboardBranch = ({ data, handleClick, classes }) => (
     {data.groups ? data.groups.map(group => (
       <DashboardGroup
         key={`group-${group.id}`}
-        handleClick={handleClick}
+        onClick={onClick}
         {...group}
       />
       )) : null}
@@ -38,7 +38,7 @@ const DashboardBranch = ({ data, handleClick, classes }) => (
 
 DashboardBranch.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
-  handleClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 

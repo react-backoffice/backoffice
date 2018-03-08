@@ -16,7 +16,7 @@ export default {
       description: 'Manage this card’s page',
       link: '/some-link',
       icon: null,
-      disabled: true,
+      isDisabled: true,
     }],
   }],
 }
