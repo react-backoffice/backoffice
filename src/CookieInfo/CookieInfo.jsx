@@ -40,6 +40,20 @@ const styles = theme => ({
 })
 
 class CookieInfo extends React.Component {
+  static propTypes = {
+    isOpen: PropTypes.bool,
+    onAccept: PropTypes.func,
+    buttonText: PropTypes.string,
+    children: PropTypes.node.isRequired,
+    classes: PropTypes.objectOf(PropTypes.string).isRequired,
+  }
+
+  static defaultProps = {
+    isOpen: false,
+    onAccept: () => { },
+    buttonText: 'Accept',
+  }
+
   constructor(props) {
     super(props)
 
@@ -47,21 +61,21 @@ class CookieInfo extends React.Component {
   }
 
   handleClick() {
-    this.props.onCookieInfoAccept()
+    this.props.onAccept()
 
     Cookie.setCookie(true)
   }
 
   render() {
     const {
-      cookieInfoOpen,
+      isOpen,
       buttonText,
       classes,
       children,
     } = this.props
     const className = classNames({
       [classes.root]: true,
-      [classes.rootActive]: cookieInfoOpen,
+      [classes.rootActive]: isOpen,
     })
 
     return (
@@ -76,20 +90,6 @@ class CookieInfo extends React.Component {
       </div>
     )
   }
-}
-
-CookieInfo.propTypes = {
-  cookieInfoOpen: PropTypes.bool,
-  onCookieInfoAccept: PropTypes.func,
-  buttonText: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  classes: PropTypes.objectOf(PropTypes.string).isRequired,
-}
-
-CookieInfo.defaultProps = {
-  cookieInfoOpen: false,
-  onCookieInfoAccept: () => {},
-  buttonText: 'Accept',
 }
 
 export default withStyles(styles)(CookieInfo)

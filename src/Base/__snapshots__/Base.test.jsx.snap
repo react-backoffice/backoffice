@@ -230,7 +230,6 @@ exports[`Base renders correctly 1`] = `
       className="BaseBranch-content-3 BaseBranch-contentShift-4"
     >
       <div
-        cookieInfoOpen={true}
         hasCookieInfo={true}
         history={
           Object {
@@ -240,6 +239,7 @@ exports[`Base renders correctly 1`] = `
             "replace": [Function],
           }
         }
+        isOpen={true}
         location=""
         match={
           Object {
@@ -249,7 +249,7 @@ exports[`Base renders correctly 1`] = `
           }
         }
         menuOpen={true}
-        onCookieInfoAccept={[Function]}
+        onAccept={[Function]}
         staticContext={undefined}
       >
         Foo
@@ -268,7 +268,6 @@ exports[`Base renders correctly without header 1`] = `
       className="BaseBranch-content-3 BaseBranch-contentShift-4"
     >
       <div
-        cookieInfoOpen={true}
         hasCookieInfo={true}
         history={
           Object {
@@ -278,6 +277,7 @@ exports[`Base renders correctly without header 1`] = `
             "replace": [Function],
           }
         }
+        isOpen={true}
         location=""
         match={
           Object {
@@ -287,7 +287,7 @@ exports[`Base renders correctly without header 1`] = `
           }
         }
         menuOpen={true}
-        onCookieInfoAccept={[Function]}
+        onAccept={[Function]}
         staticContext={undefined}
       >
         Foo
@@ -306,7 +306,6 @@ exports[`Base renders with drawer open 1`] = `
       className="BaseBranch-content-3 BaseBranch-contentShift-4"
     >
       <div
-        cookieInfoOpen={true}
         hasCookieInfo={true}
         history={
           Object {
@@ -316,6 +315,7 @@ exports[`Base renders with drawer open 1`] = `
             "replace": [Function],
           }
         }
+        isOpen={true}
         location=""
         match={
           Object {
@@ -325,7 +325,7 @@ exports[`Base renders with drawer open 1`] = `
           }
         }
         menuOpen={true}
-        onCookieInfoAccept={[Function]}
+        onAccept={[Function]}
         staticContext={undefined}
       >
         Foo

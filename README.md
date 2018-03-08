@@ -161,6 +161,33 @@ const confirm = ({ isOpen, onConfirm }) => (
 )
 ```
 
+### CookieInfo
+
+Asks the user if they want to obey the fact that you are using cookies. Sets a cookie with the name `cookie_concent` and the value of `true` if the user accepts. Otherwise set to `false`.
+If you use CookieInfo please make sure to set the attribute `hasCookieInfo` to `Base`.
+
+Children are used as content.
+
+* `buttonText: string`, text to display on the button
+* Internal: `isOpen: boolean`, state of the cookieInfo, handled by `Base`, default `false`
+* Internal: `onAccept: function`, when accepted, provided by `Base`
+
+```javascript
+import { CookieInfo } from 'backoffice'
+
+const page = (props) => (
+
+  <Base
+    hasCookieInfo
+    {...props}
+  >
+    <CookieInfo buttonText="Accept" isOpen={isOpen}>
+      This is the cookie info
+    </CookieInfo>
+  </Base>
+)
+```
+
 ### Menu
 
 A menu that lists entries
@@ -198,15 +225,6 @@ Dashboard-like overview page
 * `description?: string`, A description text
 * `icon?: function`, An icon element that you want to display next to the title
 * `disabled?: function`, Should element be disabled?, default `false`
-
-### CookieInfo
-
-Asks the user if they want to obey the fact that you are using cookies. Sets a cookie with the name `cookie_concent` and the value of `true` if the user accepts. Otherwise set to `false`.
-If you use CookieInfo please make sure to set the attribute `hasCookieInfo` to `Base`.
-
-* `buttonText: string`, text to display on the button
-* Internal: `cookieInfoOpen: boolean`, state of the cookieInfo, handled by `Base`, default `false`
-* Internal: `onCookieInfoAccept: function`, when accepted, provided by `Base`
 
 ### Listing
 

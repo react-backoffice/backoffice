@@ -53,6 +53,7 @@ const BaseBranch = ({
   cookieInfoOpen,
   handleDrawerOpen,
   handleDrawerClose,
+  onCookieInfoAccept,
   redirectTo,
   rightContent,
   hasHeader,
@@ -94,7 +95,8 @@ const BaseBranch = ({
       >
         {React.Children.map(children, child => (
           React.cloneElement(child, {
-            cookieInfoOpen,
+            isOpen: cookieInfoOpen,
+            onAccept: onCookieInfoAccept,
             ...rest,
           })
         ))}
@@ -112,6 +114,7 @@ BaseBranch.propTypes = {
   onClick: PropTypes.func.isRequired,
   handleDrawerOpen: PropTypes.func.isRequired,
   handleDrawerClose: PropTypes.func.isRequired,
+  onCookieInfoAccept: PropTypes.func.isRequired,
   redirectTo: PropTypes.func.isRequired,
   rightContent: PropTypes.element,
   hasHeader: PropTypes.bool.isRequired,

@@ -2,7 +2,7 @@
 
 exports[`Component Info renders correctly 1`] = `
 <div
-  className="CookieInfo-root-1 CookieInfo-rootActive-2"
+  className="CookieInfo-root-1"
 >
   <div
     className="CookieInfo-content-3"
