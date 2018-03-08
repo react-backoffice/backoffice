@@ -22,8 +22,8 @@ describe('Component Info', () => {
 
     const cookieInfo = mount((
       <CookieInfo
-        cookieInfoOpen
-        onCookieInfoAccept={mockCallBack}
+        isOpen
+        onAccept={mockCallBack}
       >
         Foo
       </CookieInfo>
@@ -31,6 +31,6 @@ describe('Component Info', () => {
 
     cookieInfo.find(Button).simulate('click')
 
-    expect(mockCallBack.mock.calls.length).toEqual(1)
+    expect(mockCallBack).toHaveBeenCalled()
   })
 })
