@@ -2,6 +2,7 @@ __tests__/
 .presentational/
 .eslintignore
 .eslintrc.js
+.gitignore
 .travis.yml
 jest.config.js
 ts*.json
