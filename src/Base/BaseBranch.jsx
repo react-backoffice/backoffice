@@ -48,7 +48,7 @@ const BaseBranch = ({
   open,
   title,
   menuData,
-  fixedHeader,
+  isHeaderFixed,
   onClick,
   cookieInfoOpen,
   handleDrawerOpen,
@@ -67,7 +67,7 @@ const BaseBranch = ({
         handleDrawerOpen={handleDrawerOpen}
         onClick={onClick}
         open={open}
-        fixed={fixedHeader}
+        fixed={isHeaderFixed}
         cookieInfoOpen={cookieInfoOpen}
       >
         {rightContent || null}
@@ -107,7 +107,7 @@ BaseBranch.propTypes = {
   open: PropTypes.bool,
   title: PropTypes.string.isRequired,
   menuData: PropTypes.arrayOf(PropTypes.object).isRequired,
-  fixedHeader: PropTypes.bool,
+  isHeaderFixed: PropTypes.bool,
   cookieInfoOpen: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   handleDrawerOpen: PropTypes.func.isRequired,
@@ -121,7 +121,7 @@ BaseBranch.propTypes = {
 
 BaseBranch.defaultProps = {
   open: false,
-  fixedHeader: false,
+  isHeaderFixed: false,
   cookieInfoOpen: false,
   rightContent: (<Fragment />),
 }

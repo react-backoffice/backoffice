@@ -12,14 +12,14 @@ const withBase = Component => class extends React.Component {
     menuOpen: PropTypes.bool,
     menuData: PropTypes.arrayOf(PropTypes.object).isRequired,
     rightContent: PropTypes.node,
-    fixedHeader: PropTypes.bool,
+    isHeaderFixed: PropTypes.bool,
     hasHeader: PropTypes.bool,
     hasCookieInfo: PropTypes.bool,
     history: PropTypes.objectOf(PropTypes.any).isRequired,
   }
 
   static defaultProps = {
-    fixedHeader: true,
+    isHeaderFixed: true,
     hasHeader: true,
     hasCookieInfo: false,
     menuOpen: false,

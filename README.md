@@ -98,24 +98,24 @@ const MyApp = () => (
 
 A page usually needs some default baseline (header aso). The Base Component provides this functionality.
 
-#### Usage
-
-```html
-<Base title="Foobar" menuData={[]} hasCookieInfo>
-  Content
-</Base>
-```
-
-#### Options
-
 Children are rendered as content.
 
 * `title: string`, Title that is shon in header
 * `menuData: MenuItem[]`, Same as in `Menu`, please see below
 * `rightContent?: node`, React element that is rendered on the right side of the header
-* `fixedHeader?: boolean`, Is header fixed?, default `true`
+* `isHeaderFixed?: boolean`, Is header fixed?, default `true`
 * `hasHeader?: boolean`, Is header included, default `true`
 * `hasCookieInfo?: boolean`, Is there a cookieinfo in the project, default: `false`
+
+```javascript
+import { Base } from 'backoffice'
+
+const base = () => (
+  <Base title="Foobar" menuData={[]} hasCookieInfo>
+    Content
+  </Base>
+)
+```
 
 ### AddButton
 
