@@ -22,7 +22,7 @@ const FormFieldDate = ({
   title,
   value,
   format,
-  required,
+  isRequired,
   handleChange,
   helperText,
   classNames,
@@ -62,7 +62,7 @@ const FormFieldDate = ({
         value={new Date(value).toISOString()}
         onChange={handleChange(id)}
         format={format}
-        required={required}
+        required={isRequired}
         keyboardIcon={<EventIcon />}
         className={classNames.join(' ')}
         helperText={helperText}
@@ -86,7 +86,7 @@ FormFieldDate.propTypes = {
   ]).isRequired,
   format: PropTypes.string,
   helperText: PropTypes.string,
-  required: PropTypes.bool.isRequired,
+  isRequired: PropTypes.bool.isRequired,
   classNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleChange: PropTypes.func.isRequired,
 }

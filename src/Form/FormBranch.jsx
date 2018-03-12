@@ -45,7 +45,7 @@ const FormBranch = ({
   useFormElement,
   error,
   errorMessage,
-  fixedSubmit,
+  isFixedSubmitButton,
   updateFieldData,
   handleSubmit,
   submitText,
@@ -110,7 +110,7 @@ const FormBranch = ({
         onSubmit={handleSubmit}
         disabled={loading}
         loading={loading}
-        fixed={fixedSubmit}
+        fixed={isFixedSubmitButton}
       >
         {submitText}
       </FormSubmitButton>
@@ -123,7 +123,7 @@ FormBranch.propTypes = {
   data: PropTypes.objectOf(PropTypes.object),
   loading: PropTypes.bool.isRequired,
   useFormElement: PropTypes.bool,
-  fixedSubmit: PropTypes.bool,
+  isFixedSubmitButton: PropTypes.bool,
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
   updateFieldData: PropTypes.func,
@@ -136,7 +136,7 @@ FormBranch.propTypes = {
 FormBranch.defaultProps = {
   data: {},
   useFormElement: true,
-  fixedSubmit: false,
+  isFixedSubmitButton: false,
   error: false,
   errorMessage: 'An error occured. Please fill out all required fields correctly.',
   updateFieldData: () => {},

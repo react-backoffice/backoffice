@@ -255,10 +255,17 @@ const drawer = ({ onClose, redirectTo }) => (
 
 ### Form
 
-Form components
+Form components.
+
+An example of data can [be found here](./__tests__/data/form.jsx).
 
 * `form: (FormGroup | FormField)[]`, form configuration
-* `useFormElement: boolean`, use a form element or a div
+* `data: FormDataObject`, data for prefilling form
+* `onDataChanged?: function`, handle a change of a field (input, selection, …)
+* `onSubmit: function`, handle click on submit data
+* `submitText: string`: Submit button text
+* `isFixedSubmitButton?: boolean`, is submit button fixed in right bottom corner?, default `false`
+* `useFormElement?: boolean`, use a form element or a div, default `true`
 
 #### FormGroup
 
@@ -291,7 +298,7 @@ Form components
 * `title: string`, label of field
 * `width: ENUM('small' | 'mid' | 'full')`, default: `full`
 * `value: string | string[]`, default value of a field
-* `required: boolean`, is filling this field required, default: false
+* `isRequired: boolean`, is filling this field required, default: false
 * `validators: ENUM('date', 'machinereadable')[]`, validate a field’s input value
 * `isVisible: boolean`, should element be visible?
 * `options: string[]`, options of a field of type `select`
@@ -307,6 +314,42 @@ Form components
 
 * `title: string`, display as text
 * `tooltip: string`, tooltip text, also used as secondary text in autocomplete
+
+#### FormDataObject
+
+The object holds all values, and errors based on the name of a given form field.
+
+* `value: any`
+
+```javascript
+{
+  formFieldName: {
+    value: "foo"
+  }
+}
+```
+
+#### Usage
+
+```javascript
+import { Form } from 'backoffice'
+
+import fieldData from './__tests__/data/formFieldData'
+import formData from './__tests__/data/form.jsx'
+
+const form = ({ onSubmit }) => (
+  <Form
+    data={fieldData}
+    form={formData}
+    onSubmit={onSubmit}
+    submitText="Save the form"
+  >
+    <p>
+      This is a very special form with additional content.
+    </p>
+  </Form>
+)
+```
 
 ### Header
 

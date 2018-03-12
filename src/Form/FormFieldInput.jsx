@@ -37,7 +37,7 @@ const FormFieldInput = ({
   select,
   options,
   rows,
-  required,
+  isRequired,
   error,
   iconEnd,
   isDisabled,
@@ -57,7 +57,7 @@ const FormFieldInput = ({
     helperText={helperText}
     defaultValue={defaultValue}
     select={select}
-    required={required}
+    required={isRequired}
     error={error}
     margin="normal"
     fullWidth
@@ -98,7 +98,7 @@ FormFieldInput.propTypes = {
   rows: PropTypes.number,
   isMultiline: PropTypes.bool,
   helperText: PropTypes.string,
-  required: PropTypes.bool,
+  isRequired: PropTypes.bool,
   error: PropTypes.bool,
   classNames: PropTypes.arrayOf(PropTypes.string),
   handleChange: PropTypes.func,
@@ -118,7 +118,7 @@ FormFieldInput.defaultProps = {
   isMultiline: false,
   helperText: '',
   classNames: [],
-  required: false,
+  isRequired: false,
   error: false,
   rows: 1,
   select: false,

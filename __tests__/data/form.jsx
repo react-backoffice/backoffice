@@ -15,14 +15,14 @@ export default [{
     title: 'Text Field',
     type: TYPES.TEXT,
     width: 'small',
-    required: true,
+    isRequired: true,
   }, {
     id: 'select',
     title: 'Select',
     type: TYPES.SELECT,
     options: ['Foo', 'Bar', 'Baz'],
     width: 'small',
-    required: true,
+    isRequired: true,
   }, {
     id: 'number',
     title: 'Number',

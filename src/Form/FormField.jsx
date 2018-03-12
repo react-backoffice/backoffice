@@ -10,7 +10,7 @@ const withFormField = Component => class FormField extends React.Component {
     id: PropTypes.string.isRequired,
     type: PropTypes.string,
     validators: PropTypes.arrayOf(PropTypes.string),
-    required: PropTypes.bool,
+    isRequired: PropTypes.bool,
     handleChange: PropTypes.func.isRequired,
     getAdditionalValue: PropTypes.func,
     beforeSubmit: PropTypes.func,
@@ -19,7 +19,7 @@ const withFormField = Component => class FormField extends React.Component {
   static defaultProps = {
     type: 'text',
     validators: [],
-    required: false,
+    isRequired: false,
     getAdditionalValue: data => data,
     beforeSubmit: null,
   }
@@ -123,11 +123,11 @@ const withFormField = Component => class FormField extends React.Component {
   isValid(value) {
     const {
       type,
-      required,
+      isRequired,
       validators,
     } = this.props
 
-    return isValid(type, required, validators, value)
+    return isValid(type, isRequired, validators, value)
   }
 
   handleChange(fieldId) {

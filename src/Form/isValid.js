@@ -9,10 +9,10 @@ export const getValidator = (validator) => {
   return Validators[validator]
 }
 
-export default (type, required, validators = [], value) => {
+export default (type, isRequired, validators = [], value) => {
   const allValidators = [...validators]
 
-  if (required) {
+  if (isRequired) {
     allValidators.push('required')
   }
 

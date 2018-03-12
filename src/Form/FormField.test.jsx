@@ -17,7 +17,7 @@ describe('Form Field', () => {
         title="Foo"
         type="text"
         validators={['url']}
-        required
+        isRequired
         handleChange={handleChange}
       />
     ))
@@ -35,7 +35,7 @@ describe('Form Field', () => {
         type="text"
         value="http://google.de/"
         validators={['url']}
-        required
+        isRequired
         handleChange={() => { }}
         isVisible={false}
         width="small"

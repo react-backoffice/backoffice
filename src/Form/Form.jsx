@@ -12,13 +12,13 @@ const withForm = Component => class Form extends React.Component {
     onDataChanged: PropTypes.func,
     onSubmit: PropTypes.func.isRequired,
     submitText: PropTypes.string,
-    fixedSubmit: PropTypes.bool,
+    isFixedSubmitButton: PropTypes.bool,
   }
 
   static defaultProps = {
     onDataChanged: () => {},
     submitText: 'Save',
-    fixedSubmit: false,
+    isFixedSubmitButton: false,
   }
 
   static getInitialField(field, data) {
@@ -36,7 +36,7 @@ const withForm = Component => class Form extends React.Component {
     return {
       value: valueName,
       submitValue,
-      error: !isValid(field.type, field.required, field.validators, submitValue),
+      error: !isValid(field.type, field.isRequired, field.validators, submitValue),
     }
   }
 
