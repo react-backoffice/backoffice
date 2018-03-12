@@ -34,7 +34,7 @@ it('renders correctly disabled', () => {
       title="Title"
       url="/"
       redirectTo={() => {}}
-      disabled
+      isDisabled
     />)
     .toJSON()
   expect(tree).toMatchSnapshot()

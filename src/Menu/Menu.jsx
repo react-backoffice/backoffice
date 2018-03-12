@@ -29,7 +29,7 @@ const Menu = ({ data, redirectTo, classes }) => (
                 redirectTo={redirectTo}
                 url={item.url}
                 title={item.title}
-                disabled={item.disabled}
+                isDisabled={item.isDisabled}
                 icon={item.icon}
               />
             )

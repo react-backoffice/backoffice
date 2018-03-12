@@ -91,7 +91,7 @@ exports[`renders correctly 1`] = `
             />
           </div>
           <div
-            className="MuiButtonBase-root-47 MuiListItem-root-73 MuiListItem-default-76 MuiListItem-gutters-80 MuiListItem-button-81 MenuItem-disabled-72"
+            className="MuiButtonBase-root-47 MuiListItem-root-73 MuiListItem-default-76 MuiListItem-gutters-80 MuiListItem-button-81 MenuItem-isDisabled-72"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}

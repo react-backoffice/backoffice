@@ -150,7 +150,7 @@ exports[`Base renders correctly 1`] = `
                 />
               </div>
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127 MenuItem-disabled-118"
+                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127 MenuItem-isDisabled-118"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}

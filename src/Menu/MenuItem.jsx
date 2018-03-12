@@ -6,7 +6,7 @@ import withStyles from 'material-ui/styles/withStyles'
 import { ListItem, ListItemIcon, ListItemText } from 'material-ui/List'
 
 const styles = {
-  disabled: {
+  isDisabled: {
     opacity: 0.5,
     pointerEvents: 'none',
   },
@@ -17,14 +17,14 @@ const MenuItem = ({
   url,
   title,
   icon: Icon,
-  disabled,
+  isDisabled,
   classes,
 }) => (
   <ListItem
     button
     onClick={() => redirectTo(url)}
     className={classNames({
-        [classes.disabled]: disabled,
+        [classes.isDisabled]: isDisabled,
       })}
   >
     {Icon ? (
@@ -40,13 +40,13 @@ MenuItem.propTypes = {
   redirectTo: PropTypes.func.isRequired,
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  disabled: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   icon: PropTypes.func,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 MenuItem.defaultProps = {
-  disabled: false,
+  isDisabled: false,
   icon: null,
 }
 

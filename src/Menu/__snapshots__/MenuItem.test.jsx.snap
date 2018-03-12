@@ -34,7 +34,7 @@ exports[`renders correctly 1`] = `
 
 exports[`renders correctly disabled 1`] = `
 <div
-  className="MuiButtonBase-root-12 MuiListItem-root-2 MuiListItem-default-5 MuiListItem-gutters-9 MuiListItem-button-10 MenuItem-disabled-1"
+  className="MuiButtonBase-root-12 MuiListItem-root-2 MuiListItem-default-5 MuiListItem-gutters-9 MuiListItem-button-10 MenuItem-isDisabled-1"
   onBlur={[Function]}
   onClick={[Function]}
   onFocus={[Function]}
