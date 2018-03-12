@@ -12,8 +12,6 @@ exports[`renders correctly 1`] = `
   >
     <div
       className="MuiInput-root-8 MuiInput-formControl-9 MuiInput-underline-12"
-      onBlur={[Function]}
-      onFocus={[Function]}
     >
       <input
         aria-invalid={false}
@@ -25,7 +23,9 @@ exports[`renders correctly 1`] = `
         disabled={false}
         id={undefined}
         name={undefined}
+        onBlur={[Function]}
         onChange={[Function]}
+        onFocus={[Function]}
         onKeyDown={undefined}
         onKeyUp={undefined}
         placeholder="Filter"
@@ -64,7 +64,7 @@ exports[`renders correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-39"
+          className="MuiSvgIcon-root-40"
           color={undefined}
           focusable="false"
           viewBox="0 0 24 24"
@@ -75,7 +75,7 @@ exports[`renders correctly 1`] = `
         </svg>
       </span>
       <span
-        className="MuiTouchRipple-root-45"
+        className="MuiTouchRipple-root-46"
       />
     </button>
     <div
@@ -117,8 +117,6 @@ exports[`renders correctly when open 1`] = `
   >
     <div
       className="MuiInput-root-8 MuiInput-formControl-9 MuiInput-underline-12"
-      onBlur={[Function]}
-      onFocus={[Function]}
     >
       <input
         aria-invalid={false}
@@ -130,7 +128,9 @@ exports[`renders correctly when open 1`] = `
         disabled={false}
         id={undefined}
         name={undefined}
+        onBlur={[Function]}
         onChange={[Function]}
+        onFocus={[Function]}
         onKeyDown={undefined}
         onKeyUp={undefined}
         placeholder="Filter"
@@ -169,7 +169,7 @@ exports[`renders correctly when open 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-39"
+          className="MuiSvgIcon-root-40"
           color={undefined}
           focusable="false"
           viewBox="0 0 24 24"
@@ -180,7 +180,7 @@ exports[`renders correctly when open 1`] = `
         </svg>
       </span>
       <span
-        className="MuiTouchRipple-root-45"
+        className="MuiTouchRipple-root-46"
       />
     </button>
     <div

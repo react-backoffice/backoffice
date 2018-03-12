@@ -44,7 +44,7 @@ exports[`renders correctly 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-26"
+          className="MuiTouchRipple-root-27"
         />
       </span>
       <span
@@ -52,7 +52,7 @@ exports[`renders correctly 1`] = `
       />
     </span>
     <span
-      className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-3"
+      className="MuiTypography-root-34 MuiTypography-body1-43 MuiFormControlLabel-label-3"
     >
       Title
     </span>
@@ -109,7 +109,7 @@ exports[`renders disabled 1`] = `
       />
     </span>
     <span
-      className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-3"
+      className="MuiTypography-root-34 MuiTypography-body1-43 MuiFormControlLabel-label-3"
     >
       Title
     </span>
@@ -161,7 +161,7 @@ exports[`renders with helper text 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-26"
+          className="MuiTouchRipple-root-27"
         />
       </span>
       <span
@@ -169,13 +169,13 @@ exports[`renders with helper text 1`] = `
       />
     </span>
     <span
-      className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-3"
+      className="MuiTypography-root-34 MuiTypography-body1-43 MuiFormControlLabel-label-3"
     >
       Title
     </span>
   </label>
   <p
-    className="MuiFormHelperText-root-57"
+    className="MuiFormHelperText-root-58"
   >
     test
   </p>

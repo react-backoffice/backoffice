@@ -35,7 +35,7 @@ exports[`renders correctly 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-34"
+              className="MuiSvgIcon-root-35"
               color={undefined}
               focusable="false"
               viewBox="0 0 24 24"
@@ -57,7 +57,7 @@ exports[`renders correctly 1`] = `
             />
           </span>
           <span
-            className="MuiTouchRipple-root-40"
+            className="MuiTouchRipple-root-41"
           />
         </span>
       </th>
@@ -67,11 +67,11 @@ exports[`renders correctly 1`] = `
         scope="col"
       >
         <div
-          className="MuiTooltip-root-47"
+          className="MuiTooltip-root-48"
         >
           <span
             aria-describedby={undefined}
-            className="MuiButtonBase-root-32 MuiTableSortLabel-root-56 MuiTableSortLabel-active-57"
+            className="MuiButtonBase-root-32 MuiTableSortLabel-root-57 MuiTableSortLabel-active-58"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -90,7 +90,7 @@ exports[`renders correctly 1`] = `
             Name
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-34 MuiTableSortLabel-icon-58 MuiTableSortLabel-iconDirectionAsc-60"
+              className="MuiSvgIcon-root-35 MuiTableSortLabel-icon-59 MuiTableSortLabel-iconDirectionAsc-61"
               color={undefined}
               focusable="false"
               viewBox="0 0 24 24"
@@ -101,7 +101,7 @@ exports[`renders correctly 1`] = `
             </svg>
           </span>
           <div
-            className="MuiTooltip-popper-48 MuiTooltip-popperClose-49"
+            className="MuiTooltip-popper-49 MuiTooltip-popperClose-50"
             data-placement={undefined}
             data-x-out-of-boundaries={undefined}
             style={
@@ -116,7 +116,7 @@ exports[`renders correctly 1`] = `
           >
             <div
               aria-hidden={true}
-              className="MuiTooltip-tooltip-50 MuiTooltip-tooltipPlacementBottom-54"
+              className="MuiTooltip-tooltip-51 MuiTooltip-tooltipPlacementBottom-55"
               id={undefined}
               role="tooltip"
             >

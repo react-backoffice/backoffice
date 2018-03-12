@@ -33,7 +33,7 @@ exports[`renders correctly 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-54"
+            className="MuiSvgIcon-root-55"
             color={undefined}
             focusable="false"
             viewBox="0 0 24 24"
@@ -44,11 +44,11 @@ exports[`renders correctly 1`] = `
           </svg>
         </span>
         <span
-          className="MuiTouchRipple-root-60"
+          className="MuiTouchRipple-root-61"
         />
       </button>
       <h2
-        className="MuiTypography-root-67 MuiTypography-title-73 MuiTypography-colorInherit-86 Header-flex-7 Header-title-8"
+        className="MuiTypography-root-68 MuiTypography-title-74 MuiTypography-colorInherit-87 Header-flex-7 Header-title-8"
         onClick={[Function]}
       >
         Header
@@ -91,7 +91,7 @@ exports[`renders correctly with closed 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-54"
+            className="MuiSvgIcon-root-55"
             color={undefined}
             focusable="false"
             viewBox="0 0 24 24"
@@ -102,11 +102,11 @@ exports[`renders correctly with closed 1`] = `
           </svg>
         </span>
         <span
-          className="MuiTouchRipple-root-60"
+          className="MuiTouchRipple-root-61"
         />
       </button>
       <h2
-        className="MuiTypography-root-67 MuiTypography-title-73 MuiTypography-colorInherit-86 Header-flex-7 Header-title-8"
+        className="MuiTypography-root-68 MuiTypography-title-74 MuiTypography-colorInherit-87 Header-flex-7 Header-title-8"
         onClick={[Function]}
       >
         Header

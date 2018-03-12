@@ -18,16 +18,16 @@ exports[`renders correctly 1`] = `
   tabIndex="0"
 >
   <div
-    className="MuiListItemText-root-14"
+    className="MuiListItemText-root-15"
   >
     <h3
-      className="MuiTypography-root-20 MuiTypography-subheading-27 MuiListItemText-primary-17"
+      className="MuiTypography-root-21 MuiTypography-subheading-28 MuiListItemText-primary-18"
     >
       Title
     </h3>
   </div>
   <span
-    className="MuiTouchRipple-root-44"
+    className="MuiTouchRipple-root-45"
   />
 </div>
 `;
@@ -50,16 +50,16 @@ exports[`renders correctly disabled 1`] = `
   tabIndex="0"
 >
   <div
-    className="MuiListItemText-root-14"
+    className="MuiListItemText-root-15"
   >
     <h3
-      className="MuiTypography-root-20 MuiTypography-subheading-27 MuiListItemText-primary-17"
+      className="MuiTypography-root-21 MuiTypography-subheading-28 MuiListItemText-primary-18"
     >
       Title
     </h3>
   </div>
   <span
-    className="MuiTouchRipple-root-44"
+    className="MuiTouchRipple-root-45"
   />
 </div>
 `;
@@ -83,7 +83,7 @@ exports[`renders correctly with icon 1`] = `
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root-52 MuiListItemIcon-root-51"
+    className="MuiSvgIcon-root-53 MuiListItemIcon-root-52"
     color={undefined}
     focusable="false"
     viewBox="0 0 24 24"
@@ -93,16 +93,16 @@ exports[`renders correctly with icon 1`] = `
     />
   </svg>
   <div
-    className="MuiListItemText-root-14"
+    className="MuiListItemText-root-15"
   >
     <h3
-      className="MuiTypography-root-20 MuiTypography-subheading-27 MuiListItemText-primary-17"
+      className="MuiTypography-root-21 MuiTypography-subheading-28 MuiListItemText-primary-18"
     >
       Title
     </h3>
   </div>
   <span
-    className="MuiTouchRipple-root-44"
+    className="MuiTouchRipple-root-45"
   />
 </div>
 `;

@@ -10,8 +10,6 @@ exports[`renders correctly 1`] = `
 >
   <div
     className="MuiInput-root-5 MuiInput-fullWidth-12 MuiInput-formControl-6 MuiInput-underline-9"
-    onBlur={[Function]}
-    onFocus={[Function]}
   >
     <input
       aria-invalid={false}
@@ -23,7 +21,9 @@ exports[`renders correctly 1`] = `
       disabled={false}
       id={undefined}
       name={undefined}
+      onBlur={[Function]}
       onChange={[Function]}
+      onFocus={[Function]}
       onKeyDown={undefined}
       onKeyUp={undefined}
       placeholder={undefined}
@@ -48,8 +48,6 @@ exports[`renders disabled 1`] = `
 >
   <div
     className="MuiInput-root-5 MuiInput-disabled-8 MuiInput-fullWidth-12 MuiInput-formControl-6 MuiInput-underline-9"
-    onBlur={[Function]}
-    onFocus={[Function]}
   >
     <input
       aria-invalid={false}
@@ -61,7 +59,9 @@ exports[`renders disabled 1`] = `
       disabled={true}
       id={undefined}
       name={undefined}
+      onBlur={[Function]}
       onChange={[Function]}
+      onFocus={[Function]}
       onKeyDown={undefined}
       onKeyUp={undefined}
       placeholder={undefined}

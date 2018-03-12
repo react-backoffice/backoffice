@@ -32,7 +32,7 @@ exports[`Component Info renders correctly 1`] = `
       Accept
     </span>
     <span
-      className="MuiTouchRipple-root-22"
+      className="MuiTouchRipple-root-23"
     />
   </button>
 </div>

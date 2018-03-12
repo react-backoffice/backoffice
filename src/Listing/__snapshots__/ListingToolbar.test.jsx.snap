@@ -30,8 +30,6 @@ exports[`renders correctly 1`] = `
       >
         <div
           className="MuiInput-root-39 MuiInput-formControl-40 MuiInput-underline-43"
-          onBlur={[Function]}
-          onFocus={[Function]}
         >
           <input
             aria-invalid={false}
@@ -43,7 +41,9 @@ exports[`renders correctly 1`] = `
             disabled={false}
             id={undefined}
             name={undefined}
+            onBlur={[Function]}
             onChange={[Function]}
+            onFocus={[Function]}
             onKeyDown={undefined}
             onKeyUp={undefined}
             placeholder="Filter"
@@ -82,7 +82,7 @@ exports[`renders correctly 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-70"
+              className="MuiSvgIcon-root-71"
               color={undefined}
               focusable="false"
               viewBox="0 0 24 24"
@@ -93,7 +93,7 @@ exports[`renders correctly 1`] = `
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-76"
+            className="MuiTouchRipple-root-77"
           />
         </button>
         <div
