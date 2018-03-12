@@ -6,7 +6,7 @@ export interface ISnackbarProps
       React.HTMLAttributes<HTMLDivElement>,
       SnackbarClassKey
     > {
-  open: boolean
+  isOpen: boolean
   message: React.ReactElement<any> | string
 }
 

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import MaterialSnackbar from 'material-ui/Snackbar'
 
 const Snackbar = ({
-  open,
+  isOpen,
   message,
 }) => (
   <MaterialSnackbar
@@ -12,7 +12,7 @@ const Snackbar = ({
       vertical: 'bottom',
       horizontal: 'left',
     }}
-    open={open}
+    open={isOpen}
     autoHideDuration={6000}
     SnackbarContentProps={{
       'aria-describedby': 'message-id',
@@ -22,12 +22,12 @@ const Snackbar = ({
 )
 
 Snackbar.propTypes = {
-  open: PropTypes.bool,
+  isOpen: PropTypes.bool,
   message: PropTypes.string.isRequired,
 }
 
 Snackbar.defaultProps = {
-  open: false,
+  isOpen: false,
 }
 
 export default Snackbar

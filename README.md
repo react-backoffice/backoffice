@@ -371,8 +371,16 @@ A content-snippet for 404 pages
 
 Show an error in the left hand corner
 
-* `open: boolean`, is the snackbar open?
+* `isOpen: boolean`, is the snackbar open?
 * `message: string`, message to show with snackbar
+
+```javascript
+import { Snackbar } from 'backoffice'
+
+const snackbar = () => (
+  <Snackbar isOpen message="Message" />
+)
+```
 
 ### Tabs
 
