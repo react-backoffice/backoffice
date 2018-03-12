@@ -2,22 +2,22 @@ import React from 'react'
 
 export default [{
   id: 'name',
-  disablePadding: true,
+  isPaddingDisabled: true,
   label: 'Name',
-  searchable: true,
+  isSearchable: true,
 }, {
   id: 'username',
-  disablePadding: true,
+  isPaddingDisabled: true,
   label: 'Username',
-  searchable: true,
+  isSearchable: true,
 }, {
   id: 'phone',
-  disablePadding: false,
+  isPaddingDisabled: false,
   label: 'Phone',
-  searchable: true,
+  isSearchable: true,
 }, {
   id: 'website',
-  disablePadding: true,
+  isPaddingDisabled: true,
   label: 'Website',
   transformContent: (website) => {
     if (website) {
@@ -30,7 +30,7 @@ export default [{
   },
 }, {
   id: 'company',
-  disablePadding: true,
+  isPaddingDisabled: true,
   label: 'Company',
   transformContent: (company) => {
     if (company.name) {
@@ -39,5 +39,5 @@ export default [{
 
     return ''
   },
-  searchable: true,
+  isSearchable: true,
 }]

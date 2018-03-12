@@ -43,7 +43,7 @@ const ListingBranch = ({
   handleSelectAllClick,
   handleRequestSort,
   handleCheckClick,
-  handleClick,
+  onClick,
   handleKeyDown,
   handleChangePage,
   handleChangeRowsPerPage,
@@ -88,7 +88,7 @@ const ListingBranch = ({
               data={n}
               headers={headers}
               handleCheckClick={handleCheckClick}
-              handleClick={handleClick}
+              onClick={onClick}
               handleKeyDown={handleKeyDown}
               isSelected={isSelected(n.id)}
             />
@@ -126,7 +126,7 @@ ListingBranch.propTypes = {
   handleSelectAllClick: PropTypes.func.isRequired,
   handleRequestSort: PropTypes.func.isRequired,
   handleCheckClick: PropTypes.func.isRequired,
-  handleClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
   handleKeyDown: PropTypes.func.isRequired,
   handleChangePage: PropTypes.func.isRequired,
   handleChangeRowsPerPage: PropTypes.func.isRequired,
@@ -139,7 +139,7 @@ ListingBranch.propTypes = {
 ListingBranch.defaultProps = {
   title: '',
   data: [],
-  order: '',
+  order: 'asc',
   selected: [],
   rowsPerPage: 10,
   rowsPerPageOptions: [10, 25, 50, 100],

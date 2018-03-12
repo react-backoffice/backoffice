@@ -19,7 +19,7 @@ describe('Listing', () => {
           data={data}
           headers={headers}
           orderBy="username"
-          handleClick={() => { }}
+          onClick={() => { }}
           onUpdateSelection={() => { }}
         />
       ))
@@ -35,7 +35,7 @@ describe('Listing', () => {
           data={data}
           headers={headers}
           orderBy="username"
-          handleClick={() => { }}
+          onClick={() => { }}
           hasLoader
           onUpdateSelection={() => { }}
         />
@@ -54,7 +54,7 @@ describe('Listing', () => {
         data={data}
         headers={headers}
         orderBy="username"
-        handleClick={() => { }}
+        onClick={() => { }}
         onUpdateSelection={() => { }}
       />
     ))
@@ -75,7 +75,7 @@ describe('Listing', () => {
         data={data}
         headers={headers}
         orderBy="username"
-        handleClick={() => { }}
+        onClick={() => { }}
         onUpdateSelection={() => { }}
       />
     ))
@@ -97,7 +97,7 @@ describe('Listing', () => {
         data={data}
         headers={headers}
         orderBy="username"
-        handleClick={() => { }}
+        onClick={() => { }}
         onUpdateSelection={onUpdateSelection}
       />
     ))
@@ -129,7 +129,7 @@ describe('Listing', () => {
         data={data}
         headers={headers}
         orderBy="username"
-        handleClick={() => { }}
+        onClick={() => { }}
       />
     ))
 
@@ -153,7 +153,7 @@ describe('Listing', () => {
         data={data}
         headers={headers}
         orderBy="username"
-        handleClick={() => { }}
+        onClick={() => { }}
       />
     ))
 

@@ -87,7 +87,7 @@ class Page extends React.Component {
           data={listingData}
           headers={listingHeaders}
           orderBy="username"
-          handleClick={noop}
+          onClick={noop}
           hasLoader
           onUpdateSelection={(selection) => { console.log(selection) }}
           toolbarContent={(
@@ -107,7 +107,7 @@ class Page extends React.Component {
           data={listingData.slice(0, 2)}
           headers={listingHeaders}
           orderBy="username"
-          handleClick={noop}
+          onClick={noop}
           isIntegrated
         />
 

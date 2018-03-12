@@ -36,10 +36,11 @@ class ListingHeader extends React.Component {
               onChange={onSelectAllClick}
             />
           </TableCell>
+
           {headers.map(column => (
             <TableCell
               key={column.id}
-              padding={column.disablePadding ? 'none' : 'default'}
+              padding={column.isPaddingDisabled ? 'none' : 'default'}
             >
               <Tooltip
                 title="Sort"

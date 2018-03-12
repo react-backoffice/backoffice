@@ -22,7 +22,7 @@ const withListing = Component => class Listing extends React.Component {
 
   static getSearchableHeaders(headers) {
     return headers
-      .filter(header => header.searchable)
+      .filter(header => header.isSearchable)
       .map(header => header.id)
   }
 

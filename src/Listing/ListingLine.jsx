@@ -46,14 +46,14 @@ class ListingLine extends React.Component {
   static propTypes = {
     headers: PropTypes.arrayOf(PropTypes.object).isRequired,
     data: PropTypes.objectOf(PropTypes.any).isRequired,
-    handleClick: PropTypes.func.isRequired,
+    onClick: PropTypes.func.isRequired,
     isSelected: PropTypes.bool.isRequired,
     handleKeyDown: PropTypes.func.isRequired,
     handleCheckClick: PropTypes.func.isRequired,
   }
 
   renderCells() {
-    const { headers, data, handleClick } = this.props
+    const { headers, data, onClick } = this.props
 
     return headers.map((header) => {
       const {
@@ -64,9 +64,9 @@ class ListingLine extends React.Component {
       return (
         <TableCell
           key={`cell-${(Math.random() * 10000).toFixed(4)}`}
-          padding={header.disablePadding ? 'none' : 'default'}
+          padding={header.isPaddingDisabled ? 'none' : 'default'}
           numeric={header.numeric}
-          onClick={() => handleClick(data.id)}
+          onClick={() => onClick(data.id)}
           {...props}
         >
           {content}

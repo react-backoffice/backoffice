@@ -19,7 +19,7 @@ it('renders correctly', () => {
             name: 'Leanne Graham',
             username: 'Bret',
           }}
-          handleClick={() => { }}
+          onClick={() => { }}
           handleKeyDown={() => { }}
           handleCheckClick={() => { }}
           isSelected={false}
@@ -41,7 +41,7 @@ it('renders selected', () => {
             name: 'Leanne Graham',
             username: 'Bret',
           }}
-          handleClick={() => { }}
+          onClick={() => { }}
           handleKeyDown={() => { }}
           handleCheckClick={() => { }}
           isSelected
@@ -69,7 +69,7 @@ it('renders highlighted', () => {
               highlight: 'Bret',
             },
           }}
-          handleClick={() => { }}
+          onClick={() => { }}
           handleKeyDown={() => { }}
           handleCheckClick={() => { }}
           isSelected

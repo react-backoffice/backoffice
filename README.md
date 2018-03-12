@@ -382,11 +382,56 @@ const header = ({ onDrawerOpen, onClick }) => (
 
 ### Listing
 
-Data-Table
+Data-Table to display data.
 
-* `toolbarContent: node`, Content that should be shown in the toolbar, if a line is selected
+* `title?: string`, title to show for listing section
+* `headers: ListingHeader[]`, use for headers in listing
+* `data: any[]`, data to display in table
+* `order?: ENUM(asc | desc)`, direction in which to sort values, default `asc`
+* `orderBy: string`, field name to use for sorting the table
+* `hasLoader?: boolean`, should a loader be displayed in table, default `false`
+* `toolbarContent?: ReactElement | null`, content to show in the toolbar (visible if content column is selected)
 * `onUpdateSelection: function`, is called if a selection of a line is changed
 * `isIntegrated?: bool`, show Listing on Paper or integrated, default: false
+* `rowsPerPage: number`, number of rows to show per page, default `10`
+* `rowsPerPageOptions: number[]`, possible values for `rowsPerPage` for the user to choose from, default `[10, 25, 50, 100]`
+* `onClick: function`, clicking on a column
+
+#### ListingHeader
+
+* `id: string`, name of the header (matches against `data[].id`)
+* `label: string`, value to display in row header
+* `isPaddingDisabled?: boolean`, should the field be displayed condensed, default `false`
+* `isSearchable?: boolean`, is this value searchable?, default `false`
+* `transformContent?: function`, transform the content of each `data[]` entry before displaying
+
+#### Usage
+
+```javascript
+import { Listing } from 'backoffice'
+
+import listingData from './__tests__/data/listing_data'
+import listingHeaders from './__tests__/data/listing_headers'
+
+const listing = ({ onClick, onUpdateSelection }) => {
+  <Listing
+    title="Christmas Time"
+    data={listingData}
+    headers={listingHeaders}
+    orderBy="username"
+    onClick={onClick}
+    hasLoader
+    onUpdateSelection={onUpdateSelection}
+    toolbarContent={(
+      <Tooltip title="Delete">
+        <IconButton aria-label="Delete">
+          <DeleteIcon />
+        </IconButton>
+      </Tooltip>
+    )}
+  />
+)
+```
 
 ### Menu
 
