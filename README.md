@@ -367,6 +367,19 @@ A content-snippet for 404 pages
 * `title: string`, title of the page
 * `description: node`, element that is the content
 
+```javascript
+import { NoMatch } from 'backoffice'
+
+const noMatch = () => (
+  <NoMatch
+    title="Title"
+    description={(
+      <p>Desc</p>
+    )}
+  />
+)
+```
+
 ### Snackbar
 
 Show an error in the left hand corner
