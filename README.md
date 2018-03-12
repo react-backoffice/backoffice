@@ -253,66 +253,6 @@ const drawer = ({ onClose, redirectTo }) => (
 )
 ```
 
-### Header
-
-Header element, used by `Base` component.
-
-* `isOpen?: boolean`, is sidebar opened?, default `false`
-* `title: string`, title to show next to menu icon
-* `isFixed: boolean`, should the header be fixed when scrolling?
-* `isCookieInfoOpen: boolean`, is the cookie info bar visible?
-* `onDrawerOpen: function`, called when menu is toggled
-* `onClick: function`, click on title
-* `children?: Elements`, content which is shown on the right hand side of the header
-
-
-```javascript
-import { Header } from 'backoffice'
-
-const Header = ({ onDrawerOpen, onClick }) => (
-  <Header
-    title="My App"
-    onDrawerOpen={onDrawerOpen}
-    onClick={onClick}
-    isOpen={false}
-    isFixed
-    isCookieInfoOpen={true}
-  >
-    Beta
-  </Header>
-)
-```
-
-### Menu
-
-A menu that lists entries
-
-* `data: MenuItem[]`, data to render the menu
-* `redirectTo: function`, called when clicked on an item
-
-### MenuItem
-
-* `type: ENUM('link' | 'divider')`
-* `url: string`, url to link to
-* `title: string`, title to display
-* `icon: ReactElement | null`, icon which should be displayed before title
-* `disabled: boolean`, if true, item will not be clickable
-
-### Listing
-
-Data-Table
-
-* `toolbarContent: node`, Content that should be shown in the toolbar, if a line is selected
-* `onUpdateSelection: function`, is called if a selection of a line is changed
-* `isIntegrated?: bool`, show Listing on Paper or integrated, default: false
-
-### NoMatch
-
-A content-snippet for 404 pages
-
-* `title: string`, title of the page
-* `description: node`, element that is the content
-
 ### Form
 
 Form components
@@ -368,6 +308,65 @@ Form components
 * `title: string`, display as text
 * `tooltip: string`, tooltip text, also used as secondary text in autocomplete
 
+### Header
+
+Header element, used by `Base` component.
+
+* `isOpen?: boolean`, is sidebar opened?, default `false`
+* `title: string`, title to show next to menu icon
+* `isFixed: boolean`, should the header be fixed when scrolling?
+* `isCookieInfoOpen: boolean`, is the cookie info bar visible?
+* `onDrawerOpen: function`, called when menu is toggled
+* `onClick: function`, click on title
+* `children?: Elements`, content which is shown on the right hand side of the header
+
+```javascript
+import { Header } from 'backoffice'
+
+const header = ({ onDrawerOpen, onClick }) => (
+  <Header
+    title="My App"
+    onDrawerOpen={onDrawerOpen}
+    onClick={onClick}
+    isOpen={false}
+    isFixed
+    isCookieInfoOpen={true}
+  >
+    Beta
+  </Header>
+)
+```
+
+### Listing
+
+Data-Table
+
+* `toolbarContent: node`, Content that should be shown in the toolbar, if a line is selected
+* `onUpdateSelection: function`, is called if a selection of a line is changed
+* `isIntegrated?: bool`, show Listing on Paper or integrated, default: false
+
+### Menu
+
+A menu that lists entries
+
+* `data: MenuItem[]`, data to render the menu
+* `redirectTo: function`, called when clicked on an item
+
+### MenuItem
+
+* `type: ENUM('link' | 'divider')`
+* `url: string`, url to link to
+* `title: string`, title to display
+* `icon: ReactElement | null`, icon which should be displayed before title
+* `disabled: boolean`, if true, item will not be clickable
+
+### NoMatch
+
+A content-snippet for 404 pages
+
+* `title: string`, title of the page
+* `description: node`, element that is the content
+
 ### Snackbar
 
 Show an error in the left hand corner
@@ -379,7 +378,7 @@ Show an error in the left hand corner
 
 Tab elements
 
-* `scrollable: boolean`, is tab header area scrollable
+* `isScrollable?: boolean`, is tab header area scrollable, default `false`
 * `data: Tab[]`, all tabs
 
 #### Tab
@@ -387,6 +386,23 @@ Tab elements
 * `title: string`, title of a tab
 * `id: string`, identifier for tab
 * `content: node`, elements to show as content
+
+#### Usage
+
+```javascript
+import { Tabs } from 'backoffice'
+
+const tabs = () => (
+  <Tabs
+    data={[{
+      title: 'Title',
+      content: (
+        <p>Content</p>
+      ),
+    }]}
+  />
+)
+```
 
 ## License
 

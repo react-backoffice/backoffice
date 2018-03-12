@@ -29,13 +29,13 @@ const styles = theme => ({
 
 class Tabs extends React.Component {
   static propTypes = {
-    scrollable: PropTypes.bool,
+    isScrollable: PropTypes.bool,
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
     classes: PropTypes.objectOf(PropTypes.string).isRequired,
   }
 
   static defaultProps = {
-    scrollable: false,
+    isScrollable: false,
   }
 
   constructor() {
@@ -75,7 +75,7 @@ class Tabs extends React.Component {
   }
 
   render() {
-    const { scrollable, data, classes } = this.props
+    const { isScrollable, data, classes } = this.props
     const { value } = this.state
 
     return (
@@ -85,7 +85,7 @@ class Tabs extends React.Component {
             value={value}
             onChange={this.handleChange}
             indicatorColor="secondary"
-            scrollable={scrollable}
+            scrollable={isScrollable}
             scrollButtons="auto"
           >
             {data.map(item => (
