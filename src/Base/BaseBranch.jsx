@@ -65,11 +65,11 @@ const BaseBranch = ({
     {hasHeader ? (
       <Header
         title={title}
-        handleDrawerOpen={handleDrawerOpen}
+        onDrawerOpen={handleDrawerOpen}
         onClick={onClick}
-        open={open}
-        fixed={isHeaderFixed}
-        cookieInfoOpen={cookieInfoOpen}
+        isOpen={open}
+        isFixed={isHeaderFixed}
+        isCookieInfoOpen={cookieInfoOpen}
       >
         {rightContent || null}
       </Header>

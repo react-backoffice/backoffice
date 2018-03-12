@@ -52,10 +52,10 @@ const styles = theme => ({
 
 const Header = ({
   title,
-  open,
-  fixed,
-  handleDrawerOpen,
-  cookieInfoOpen,
+  isOpen,
+  isFixed,
+  onDrawerOpen,
+  isCookieInfoOpen,
   onClick,
   children,
   classes,
@@ -63,17 +63,17 @@ const Header = ({
   <div className={classes.root}>
     <AppBar
       className={classNames(classes.appBar, {
-        [classes.appBarShift]: open,
-        [classes.appBarWithCookieInfo]: cookieInfoOpen,
+        [classes.appBarShift]: isOpen,
+        [classes.appBarWithCookieInfo]: isCookieInfoOpen,
       })}
-      position={fixed ? 'fixed' : 'static'}
+      position={isFixed ? 'fixed' : 'static'}
     >
       <Toolbar>
         <IconButton
           aria-label="open drawer"
           color="inherit"
-          onClick={handleDrawerOpen}
-          className={classNames(classes.menuButton, open && classes.hide)}
+          onClick={onDrawerOpen}
+          className={classNames(classes.menuButton, isOpen && classes.hide)}
         >
           <MenuIcon />
         </IconButton>
@@ -94,18 +94,18 @@ const Header = ({
 )
 
 Header.propTypes = {
-  open: PropTypes.bool,
+  isOpen: PropTypes.bool,
   title: PropTypes.string.isRequired,
-  fixed: PropTypes.bool.isRequired,
-  cookieInfoOpen: PropTypes.bool.isRequired,
-  handleDrawerOpen: PropTypes.func.isRequired,
+  isFixed: PropTypes.bool.isRequired,
+  isCookieInfoOpen: PropTypes.bool.isRequired,
+  onDrawerOpen: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired,
   children: PropTypes.node,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
 Header.defaultProps = {
-  open: false,
+  isOpen: false,
   children: null,
 }
 

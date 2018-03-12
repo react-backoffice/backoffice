@@ -6,11 +6,11 @@ import Header from './'
 it('renders correctly', () => {
   const tree = renderer
     .create(<Header
-      open
+      isOpen
       title="Header"
-      fixed
-      cookieInfoOpen
-      handleDrawerOpen={() => {}}
+      isFixed
+      isCookieInfoOpen
+      onDrawerOpen={() => {}}
       onClick={() => { }}
     />)
     .toJSON()
@@ -21,7 +21,7 @@ it('renders correctly with closed', () => {
   const tree = renderer
     .create(<Header
       title="Header"
-      handleDrawerOpen={() => { }}
+      onDrawerOpen={() => { }}
       onClick={() => { }}
     />)
     .toJSON()

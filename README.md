@@ -253,6 +253,36 @@ const drawer = ({ onClose, redirectTo }) => (
 )
 ```
 
+### Header
+
+Header element, used by `Base` component.
+
+* `isOpen?: boolean`, is sidebar opened?, default `false`
+* `title: string`, title to show next to menu icon
+* `isFixed: boolean`, should the header be fixed when scrolling?
+* `isCookieInfoOpen: boolean`, is the cookie info bar visible?
+* `onDrawerOpen: function`, called when menu is toggled
+* `onClick: function`, click on title
+* `children?: Elements`, content which is shown on the right hand side of the header
+
+
+```javascript
+import { Header } from 'backoffice'
+
+const Header = ({ onDrawerOpen, onClick }) => (
+  <Header
+    title="My App"
+    onDrawerOpen={onDrawerOpen}
+    onClick={onClick}
+    isOpen={false}
+    isFixed
+    isCookieInfoOpen={true}
+  >
+    Beta
+  </Header>
+)
+```
+
 ### Menu
 
 A menu that lists entries
