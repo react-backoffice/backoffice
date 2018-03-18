@@ -4,6 +4,7 @@ module.exports = {
   mode: 'development',
   entry: {
     list: path.resolve(__dirname, 'list/index.jsx'),
+    form: path.resolve(__dirname, 'form/index.jsx'),
   },
   output: {
     path: path.resolve(__dirname, 'dist/'),

@@ -7,8 +7,8 @@ import {
 
 import { AppContainer } from 'backoffice'
 
-import UserListing from './UserListing'
 import theme from '../theme'
+import EditForm from './EditForm'
 
 const Container = () => (
   <AppContainer theme={theme}>
@@ -16,9 +16,9 @@ const Container = () => (
       <Switch>
         <Route
           exact
-          path="/list/"
+          path="/form/"
           render={props => (
-            <UserListing {...props} />
+            <EditForm {...props} />
           )}
         />
       </Switch>
