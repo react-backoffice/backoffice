@@ -27,10 +27,6 @@ Or using npm:
 
     npm install --save backoffice
 
-### Setting up Webpack
-
-Backoffice needs a transpiler for its ES2016 modules + JSX.
-
 ### Using components
 
 You need to create your own React application, that takes care of routing (at least for now), handling state and so on.
