@@ -1,10 +1,11 @@
 __tests__/
-.presentational/
 .eslintignore
 .eslintrc.js
 .gitignore
+.presentational/
 .travis.yml
+examples/
 jest.config.js
 ts*.json
-webpack.config.js
 webpack-production.config.js
+webpack.config.js
