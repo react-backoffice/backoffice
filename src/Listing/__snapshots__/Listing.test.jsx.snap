@@ -1594,13 +1594,6 @@ exports[`Listing renders correctly 1`] = `
                     role="button"
                     tabIndex={0}
                   >
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "&#8203",
-                        }
-                      }
-                    />
                     10
                   </div>
                   <input
@@ -3339,13 +3332,6 @@ exports[`Listing renders correctly with Loader 1`] = `
                     role="button"
                     tabIndex={0}
                   >
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "&#8203",
-                        }
-                      }
-                    />
                     10
                   </div>
                   <input
