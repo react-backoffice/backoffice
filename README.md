@@ -1,7 +1,8 @@
-![](.presentational/header.png)
+Backoffice is a Framework based on [Material UI](https://material-ui-next.com),
+a Material Design React implementation that provides a couple of components you
+might want to use in a backoffice app.
 
-Backoffice is a Framework based on [Material UI](https://material-ui-next.com), a Material UI
-React implementation that provides a couple of components you might want to use in a backoffice app.
+![](.presentational/header.png)
 
 Backoffice also uses `react-router-dom`, `material-ui-icons`, `material-ui-picker` and some more OSS.
 
@@ -47,8 +48,7 @@ const MyMenu = ({ menuData, redirectTo }) => (
 
 ## Examples & Demo
 
-For now you can find examples in [`__tests__/visual/`](./__tests__/visual/).
-More to follow.
+You can find examples in [`examples/`](./examples/).
 
 ## Components
 
