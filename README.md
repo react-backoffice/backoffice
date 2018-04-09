@@ -4,7 +4,7 @@ might want to use in a backoffice app.
 
 ![](.presentational/header.png)
 
-Backoffice also uses `react-router-dom`, `material-ui-icons`, `material-ui-picker` and some more OSS.
+Backoffice also uses `react-router-dom`, `@material-ui/icons`, `material-ui-picker` and some more OSS.
 
 [![Build Status](https://travis-ci.org/drublic/backoffice.svg?branch=master)](https://travis-ci.org/drublic/backoffice)
 [![codecov](https://codecov.io/gh/drublic/backoffice/branch/master/graph/badge.svg)](https://codecov.io/gh/drublic/backoffice)

@@ -1,4 +1,4 @@
-import BugIcon from 'material-ui-icons/BugReport'
+import BugIcon from '@material-ui/icons/BugReport'
 
 export default [{
   type: 'link',

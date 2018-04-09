@@ -96,7 +96,7 @@ class ListingLine extends React.Component {
           padding="checkbox"
           onClick={() => handleCheckClick(data.id)}
         >
-          <Checkbox checked={isSelected} />
+          <Checkbox color="primary" checked={isSelected} />
         </TableCell>
 
         {this.renderCells()}

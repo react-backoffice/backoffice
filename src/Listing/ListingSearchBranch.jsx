@@ -6,7 +6,7 @@ import withStyles from 'material-ui/styles/withStyles'
 import TextField from 'material-ui/TextField/TextField'
 import Tooltip from 'material-ui/Tooltip'
 import IconButton from 'material-ui/IconButton/IconButton'
-import SearchIcon from 'material-ui-icons/Search'
+import SearchIcon from '@material-ui/icons/Search'
 
 const styles = theme => ({
   root: {

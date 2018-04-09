@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import withStyles from 'material-ui/styles/withStyles'
 import Tooltip from 'material-ui/Tooltip'
 import IconButton from 'material-ui/IconButton'
-import DeleteIcon from 'material-ui-icons/Delete'
+import DeleteIcon from '@material-ui/icons/Delete'
 
 import Listing from 'backoffice/src/Listing'
 import data from './data'

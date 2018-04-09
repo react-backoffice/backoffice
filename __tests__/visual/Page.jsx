@@ -5,7 +5,7 @@ import withStyles from 'material-ui/styles/withStyles'
 import Tooltip from 'material-ui/Tooltip'
 import IconButton from 'material-ui/IconButton'
 import Button from 'material-ui/Button'
-import DeleteIcon from 'material-ui-icons/Delete'
+import DeleteIcon from '@material-ui/icons/Delete'
 
 import Dashboard from '../../src/Dashboard'
 import dashboardData from '../data/dashboard'

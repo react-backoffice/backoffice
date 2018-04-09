@@ -27,10 +27,10 @@ const DashboardGroup = ({
       </Typography>
     </div>
 
-    <Grid container>
+    <Grid spacing={16} container>
 
       {cards ? cards.map(card => (
-        <Grid item xs={12} sm={4} key={`group-card-${card.id}`}>
+        <Grid spacing={16} item xs={12} sm={4} key={`group-card-${card.id}`}>
           <DashboardCard
             title={card.title}
             description={card.description}

@@ -16,7 +16,7 @@
     "babel-preset-react": "^6.24.1",
     "backoffice": "^2.0.0-beta.7",
     "material-ui": "^0.20.0",
-    "material-ui-icons": "^1.0.0-beta.36",
+    "@material-ui/icons": "^1.0.0-beta.36",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

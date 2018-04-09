@@ -7,7 +7,7 @@ import Card, { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import Avatar from 'material-ui/Avatar'
 
-import DisabledIcon from 'material-ui-icons/Lock'
+import DisabledIcon from '@material-ui/icons/Lock'
 
 const styles = theme => ({
   root: {

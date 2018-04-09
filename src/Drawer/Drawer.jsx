@@ -5,7 +5,7 @@ import { withStyles } from 'material-ui/styles'
 import MaterialDrawer from 'material-ui/Drawer'
 import Divider from 'material-ui/Divider'
 import IconButton from 'material-ui/IconButton'
-import ChevronLeftIcon from 'material-ui-icons/ChevronLeft'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 
 import Menu from '../Menu'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Icon from 'material-ui-icons/AccessAlarm'
+import Icon from '@material-ui/icons/AccessAlarm'
 
 import Menu from './'
 

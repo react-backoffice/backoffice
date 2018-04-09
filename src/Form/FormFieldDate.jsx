@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import KeyboardArrowLeftIcon from 'material-ui-icons/KeyboardArrowLeft'
-import KeyboardArrowRightIcon from 'material-ui-icons/KeyboardArrowRight'
-import EventIcon from 'material-ui-icons/Event'
-import DateRangeIcon from 'material-ui-icons/DateRange'
-import AccessTimeIcon from 'material-ui-icons/AccessTime'
+import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft'
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
+import EventIcon from '@material-ui/icons/Event'
+import DateRangeIcon from '@material-ui/icons/DateRange'
+import AccessTimeIcon from '@material-ui/icons/AccessTime'
 import {
   DateTimePicker,
   DatePicker,
