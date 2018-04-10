@@ -9,7 +9,10 @@ const withFormField = Component => class FormField extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     type: PropTypes.string,
-    validators: PropTypes.arrayOf(PropTypes.string),
+    validators: PropTypes.arrayOf(PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.func,
+    ])),
     isRequired: PropTypes.bool,
     handleChange: PropTypes.func.isRequired,
     getAdditionalValue: PropTypes.func,
