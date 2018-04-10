@@ -36,7 +36,7 @@ const DashboardGroup = ({
             description={card.description}
             handleClick={() => onClick(card.link)}
             icon={card.icon}
-            disabled={card.disabled}
+            isDisabled={card.isDisabled}
           />
         </Grid>
       )) : null}
