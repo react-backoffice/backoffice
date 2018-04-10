@@ -1,5 +1,4 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { Button } from 'material-ui'
@@ -11,9 +10,8 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe('Component Info', () => {
   it('renders correctly', () => {
-    const tree = renderer
-      .create(<CookieInfo cookieInfoOpen>Foo</CookieInfo>)
-      .toJSON()
+    const tree = mount(<CookieInfo cookieInfoOpen>Foo</CookieInfo>)
+
     expect(tree).toMatchSnapshot()
   })
 

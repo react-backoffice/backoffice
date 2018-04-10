@@ -1,6 +1,5 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
-import Enzyme, { shallow } from 'enzyme'
+import Enzyme, { shallow, mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 import Confirm from './'
@@ -9,13 +8,12 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe('Confirm', () => {
   it('renders correctly', () => {
-    const tree = renderer
-      .create(<Confirm
-        title="Title"
-        description="Desc"
-        onConfirm={() => { }}
-      />)
-      .toJSON()
+    const tree = mount(<Confirm
+      title="Title"
+      description="Desc"
+      onConfirm={() => { }}
+    />)
+
 
     expect(tree).toMatchSnapshot()
   })

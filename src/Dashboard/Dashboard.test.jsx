@@ -1,28 +1,27 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
-import renderer from 'react-test-renderer'
+import { mount } from 'enzyme'
 
 import Dashboard from './'
 
 it('renders correctly', () => {
-  const tree = renderer
-    .create((
-      <Router>
-        <Dashboard
-          data={{
-            title: 'Backoffice',
-            description: 'Visual Testing for Backoffice Framework',
-            groups: [{
-              title: 'Title',
-              cards: [{
-                title: 'title',
-                description: 'desc',
-              }],
+  const tree = mount((
+    <Router>
+      <Dashboard
+        data={{
+          title: 'Backoffice',
+          description: 'Visual Testing for Backoffice Framework',
+          groups: [{
+            title: 'Title',
+            cards: [{
+              title: 'title',
+              description: 'desc',
             }],
-          }}
-        />
-      </Router>
-    ))
-    .toJSON()
+          }],
+        }}
+      />
+    </Router>
+  ))
+
   expect(tree).toMatchSnapshot()
 })

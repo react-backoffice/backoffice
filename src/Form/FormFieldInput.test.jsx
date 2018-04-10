@@ -1,25 +1,23 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { mount } from 'enzyme'
 
 import FormFieldInput from './FormFieldInput'
 
 it('renders correctly', () => {
-  const tree = renderer
-    .create((
-      <FormFieldInput />
-    ))
-    .toJSON()
+  const tree = mount((
+    <FormFieldInput />
+  ))
+
   expect(tree).toMatchSnapshot()
 })
 
 
 it('renders disabled', () => {
-  const tree = renderer
-    .create((
-      <FormFieldInput
-        isDisabled
-      />
-    ))
-    .toJSON()
+  const tree = mount((
+    <FormFieldInput
+      isDisabled
+    />
+  ))
+
   expect(tree).toMatchSnapshot()
 })

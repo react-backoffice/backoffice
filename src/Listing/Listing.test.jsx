@@ -1,6 +1,5 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
-import Enzyme, { shallow } from 'enzyme'
+import Enzyme, { mount, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 import Listing from './'
@@ -12,35 +11,33 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe('Listing', () => {
   it('renders correctly', () => {
-    const tree = renderer
-      .create((
-        <Listing
-          title="Christmas Time"
-          data={data}
-          headers={headers}
-          orderBy="username"
-          onClick={() => { }}
-          onUpdateSelection={() => { }}
-        />
-      ))
-      .toJSON()
+    const tree = mount((
+      <Listing
+        title="Christmas Time"
+        data={data}
+        headers={headers}
+        orderBy="username"
+        onClick={() => { }}
+        onUpdateSelection={() => { }}
+      />
+    ))
+
     expect(tree).toMatchSnapshot()
   })
 
   it('renders correctly with Loader', () => {
-    const tree = renderer
-      .create((
-        <Listing
-          title="Christmas Time"
-          data={data}
-          headers={headers}
-          orderBy="username"
-          onClick={() => { }}
-          hasLoader
-          onUpdateSelection={() => { }}
-        />
-      ))
-      .toJSON()
+    const tree = mount((
+      <Listing
+        title="Christmas Time"
+        data={data}
+        headers={headers}
+        orderBy="username"
+        onClick={() => { }}
+        hasLoader
+        onUpdateSelection={() => { }}
+      />
+    ))
+
     expect(tree).toMatchSnapshot()
   })
 

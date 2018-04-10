@@ -1,6 +1,5 @@
 import React from 'react'
 import MockRouter from 'react-mock-router'
-import renderer from 'react-test-renderer'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { Tab } from 'material-ui'
@@ -12,31 +11,29 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe('Tabs', () => {
   it('renders correctly', () => {
-    const tree = renderer
-      .create((
-        <MockRouter>
-          <Tabs
-            data={[{
-              title: 'Title',
-              content: (
-                <p>Content</p>
-              ),
-            }]}
-          />
-        </MockRouter>
-      ))
-      .toJSON()
+    const tree = mount((
+      <MockRouter>
+        <Tabs
+          data={[{
+            title: 'Title',
+            content: (
+              <p>Content</p>
+            ),
+          }]}
+        />
+      </MockRouter>
+    ))
+
     expect(tree).toMatchSnapshot()
   })
 
   it('renders correctly if no data', () => {
-    const tree = renderer
-      .create((
-        <MockRouter>
-          <Tabs data={[]} />
-        </MockRouter>
-      ))
-      .toJSON()
+    const tree = mount((
+      <MockRouter>
+        <Tabs data={[]} />
+      </MockRouter>
+    ))
+
     expect(tree).toMatchSnapshot()
   })
 

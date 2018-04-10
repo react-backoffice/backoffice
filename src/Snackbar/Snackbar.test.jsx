@@ -1,11 +1,10 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { mount } from 'enzyme'
 
 import Snackbar from './'
 
 it('renders correctly', () => {
-  const tree = renderer
-    .create(<Snackbar message="Message" />)
-    .toJSON()
+  const tree = mount(<Snackbar message="Message" />)
+
   expect(tree).toMatchSnapshot()
 })

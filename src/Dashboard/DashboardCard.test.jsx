@@ -1,28 +1,29 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { mount } from 'enzyme'
 
 import DashboardCard from './DashboardCard'
 
 it('renders correctly', () => {
-  const tree = renderer
-    .create(<DashboardCard
-      title="Title"
-      description="desc"
-      handleClick={() => { }}
-    />)
-    .toJSON()
+  const tree = mount(<DashboardCard
+    title="Title"
+    description="desc"
+    handleClick={() => { }}
+  />)
+
   expect(tree).toMatchSnapshot()
 })
 
 
 it('renders disabled', () => {
-  const tree = renderer
-    .create(<DashboardCard
+  const tree = mount((
+    <DashboardCard
       title="Title"
       description="desc"
       handleClick={() => { }}
       isDisabled
-    />)
-    .toJSON()
+    />
+  ))
+
+
   expect(tree).toMatchSnapshot()
 })

@@ -1,29 +1,29 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { mount } from 'enzyme'
 
 import Header from './'
 
 it('renders correctly', () => {
-  const tree = renderer
-    .create(<Header
-      isOpen
-      title="Header"
-      isFixed
-      isCookieInfoOpen
-      onDrawerOpen={() => {}}
-      onClick={() => { }}
-    />)
-    .toJSON()
+  const tree = mount(<Header
+    isOpen
+    title="Header"
+    isFixed
+    isCookieInfoOpen
+    onDrawerOpen={() => {}}
+    onClick={() => { }}
+  />)
+
   expect(tree).toMatchSnapshot()
 })
 
 it('renders correctly with closed', () => {
-  const tree = renderer
-    .create(<Header
-      title="Header"
-      onDrawerOpen={() => { }}
-      onClick={() => { }}
-    />)
-    .toJSON()
+  const tree = mount(<Header
+    title="Header"
+    isFixed={false}
+    isCookieInfoOpen={false}
+    onDrawerOpen={() => { }}
+    onClick={() => { }}
+  />)
+
   expect(tree).toMatchSnapshot()
 })

@@ -25,6 +25,10 @@ module.exports = {
   transform: {
     '^.+\\.jsx?$': 'babel-jest',
   },
+  setupTestFrameworkScriptFile: './__tests__/config.js',
+  snapshotSerializers: [
+    'enzyme-to-json/serializer',
+  ],
   unmockedModulePathPatterns: [
     'node_modules/react/',
     'node_modules/enzyme/',

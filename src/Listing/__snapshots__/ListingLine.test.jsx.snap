@@ -15,7 +15,6 @@ exports[`renders correctly 1`] = `
       aria-sort={null}
       className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-13"
       onClick={[Function]}
-      scope={undefined}
     >
       <span
         className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-20 MuiSwitchBase-default-22 MuiCheckbox-default-15"
@@ -29,7 +28,6 @@ exports[`renders correctly 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
-        role={undefined}
         tabIndex={null}
       >
         <span
@@ -38,7 +36,6 @@ exports[`renders correctly 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-34"
-            color={undefined}
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -49,13 +46,8 @@ exports[`renders correctly 1`] = `
           <input
             checked={false}
             className="MuiSwitchBase-input-21"
-            disabled={undefined}
-            id={undefined}
-            name={undefined}
             onChange={[Function]}
-            tabIndex={undefined}
             type="checkbox"
-            value={undefined}
           />
         </span>
         <span
@@ -67,7 +59,6 @@ exports[`renders correctly 1`] = `
       aria-sort={null}
       className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
       onClick={[Function]}
-      scope={undefined}
     >
       Leanne Graham
     </td>
@@ -75,7 +66,6 @@ exports[`renders correctly 1`] = `
       aria-sort={null}
       className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
       onClick={[Function]}
-      scope={undefined}
     >
       Bret
     </td>
@@ -98,10 +88,9 @@ exports[`renders highlighted 1`] = `
       aria-sort={null}
       className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-13"
       onClick={[Function]}
-      scope={undefined}
     >
       <span
-        className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-20 MuiSwitchBase-default-22 MuiCheckbox-default-15 MuiSwitchBase-checked-23 MuiCheckbox-checked-16 MuiCheckbox-checkedSecondary-18"
+        className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-20 MuiSwitchBase-default-22 MuiCheckbox-default-15 MuiSwitchBase-checked-23 MuiCheckbox-checked-16 MuiCheckbox-checkedPrimary-17"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -112,7 +101,6 @@ exports[`renders highlighted 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
-        role={undefined}
         tabIndex={null}
       >
         <span
@@ -121,7 +109,6 @@ exports[`renders highlighted 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-34"
-            color={undefined}
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -132,13 +119,8 @@ exports[`renders highlighted 1`] = `
           <input
             checked={true}
             className="MuiSwitchBase-input-21"
-            disabled={undefined}
-            id={undefined}
-            name={undefined}
             onChange={[Function]}
-            tabIndex={undefined}
             type="checkbox"
-            value={undefined}
           />
         </span>
         <span
@@ -155,7 +137,6 @@ exports[`renders highlighted 1`] = `
         }
       }
       onClick={[Function]}
-      scope={undefined}
     />
     <td
       aria-sort={null}
@@ -166,7 +147,6 @@ exports[`renders highlighted 1`] = `
         }
       }
       onClick={[Function]}
-      scope={undefined}
     />
   </tr>
 </table>
@@ -187,10 +167,9 @@ exports[`renders selected 1`] = `
       aria-sort={null}
       className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-13"
       onClick={[Function]}
-      scope={undefined}
     >
       <span
-        className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-20 MuiSwitchBase-default-22 MuiCheckbox-default-15 MuiSwitchBase-checked-23 MuiCheckbox-checked-16 MuiCheckbox-checkedSecondary-18"
+        className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-20 MuiSwitchBase-default-22 MuiCheckbox-default-15 MuiSwitchBase-checked-23 MuiCheckbox-checked-16 MuiCheckbox-checkedPrimary-17"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -201,7 +180,6 @@ exports[`renders selected 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
-        role={undefined}
         tabIndex={null}
       >
         <span
@@ -210,7 +188,6 @@ exports[`renders selected 1`] = `
           <svg
             aria-hidden="true"
             className="MuiSvgIcon-root-34"
-            color={undefined}
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -221,13 +198,8 @@ exports[`renders selected 1`] = `
           <input
             checked={true}
             className="MuiSwitchBase-input-21"
-            disabled={undefined}
-            id={undefined}
-            name={undefined}
             onChange={[Function]}
-            tabIndex={undefined}
             type="checkbox"
-            value={undefined}
           />
         </span>
         <span
@@ -239,7 +211,6 @@ exports[`renders selected 1`] = `
       aria-sort={null}
       className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
       onClick={[Function]}
-      scope={undefined}
     >
       Leanne Graham
     </td>
@@ -247,7 +218,6 @@ exports[`renders selected 1`] = `
       aria-sort={null}
       className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
       onClick={[Function]}
-      scope={undefined}
     >
       Bret
     </td>

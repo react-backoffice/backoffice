@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react'
 
-import Icon from '@material-ui/icons/Visibility'
-import Divider from 'material-ui/Divider/Divider'
 import Typography from 'material-ui/Typography/Typography'
 
 import { TYPES } from 'backoffice/src/Form/constants'

@@ -1,18 +1,13 @@
 import React from 'react'
 import MockRouter from 'react-mock-router'
-import renderer from 'react-test-renderer'
-import Enzyme, { mount } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { mount } from 'enzyme'
 
 import BackButton from './'
 
-Enzyme.configure({ adapter: new Adapter() })
-
 describe('Back Button', () => {
   it('renders correctly', () => {
-    const tree = renderer
-      .create((<MockRouter><BackButton url="/" /></MockRouter>))
-      .toJSON()
+    const tree = mount((<MockRouter><BackButton url="/" /></MockRouter>))
+
     expect(tree).toMatchSnapshot()
   })
 

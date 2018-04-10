@@ -2,7 +2,6 @@
 
 exports[`renders correctly 1`] = `
 <div
-  aria-describedby={undefined}
   className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -14,33 +13,21 @@ exports[`renders correctly 1`] = `
     <input
       aria-invalid={false}
       aria-required={false}
-      autoComplete={undefined}
-      autoFocus={undefined}
       className="MuiInput-input-13"
-      defaultValue={undefined}
       disabled={false}
-      id={undefined}
-      name={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
-      onKeyDown={undefined}
-      onKeyUp={undefined}
-      placeholder={undefined}
-      readOnly={undefined}
-      required={undefined}
       rows={1}
       type="text"
       value=""
     />
   </div>
-  
 </div>
 `;
 
 exports[`renders disabled 1`] = `
 <div
-  aria-describedby={undefined}
   className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -52,26 +39,15 @@ exports[`renders disabled 1`] = `
     <input
       aria-invalid={false}
       aria-required={false}
-      autoComplete={undefined}
-      autoFocus={undefined}
       className="MuiInput-input-13 MuiInput-inputDisabled-15"
-      defaultValue={undefined}
       disabled={true}
-      id={undefined}
-      name={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
-      onKeyDown={undefined}
-      onKeyUp={undefined}
-      placeholder={undefined}
-      readOnly={undefined}
-      required={undefined}
       rows={1}
       type="text"
       value=""
     />
   </div>
-  
 </div>
 `;

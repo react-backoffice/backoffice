@@ -1,5 +1,4 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
@@ -9,27 +8,25 @@ import ListingSearch from './ListingSearch'
 Enzyme.configure({ adapter: new Adapter() })
 
 it('renders correctly', () => {
-  const tree = renderer
-    .create((
-      <ListingSearch
-        onClick={() => { }}
-        onFilter={() => { }}
-      />
-    ))
-    .toJSON()
+  const tree = mount((
+    <ListingSearch
+      onClick={() => { }}
+      onFilter={() => { }}
+    />
+  ))
+
   expect(tree).toMatchSnapshot()
 })
 
 it('renders correctly when open', () => {
-  const tree = renderer
-    .create((
-      <ListingSearch
-        open
-        onClick={() => { }}
-        onFilter={() => { }}
-      />
-    ))
-    .toJSON()
+  const tree = mount((
+    <ListingSearch
+      open
+      onClick={() => { }}
+      onFilter={() => { }}
+    />
+  ))
+
   expect(tree).toMatchSnapshot()
 })
 

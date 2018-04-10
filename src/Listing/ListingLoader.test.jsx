@@ -1,16 +1,15 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { mount } from 'enzyme'
 import { Table } from 'material-ui'
 
 import ListingLoader from './ListingLoader'
 
 it('renders correctly', () => {
-  const tree = renderer
-    .create((
-      <Table>
-        <ListingLoader cols={1} />
-      </Table>
-    ))
-    .toJSON()
+  const tree = mount((
+    <Table>
+      <ListingLoader cols={1} />
+    </Table>
+  ))
+
   expect(tree).toMatchSnapshot()
 })

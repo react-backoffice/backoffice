@@ -9,9 +9,7 @@ exports[`renders correctly 1`] = `
   >
     <h2
       className="MuiTypography-root-8 MuiTypography-title-14"
-    >
-      
-    </h2>
+    />
   </div>
   <div
     className="ListingToolbar-spacer-3"
@@ -23,7 +21,6 @@ exports[`renders correctly 1`] = `
       className="ListingSearchBranch-root-32"
     >
       <div
-        aria-describedby={undefined}
         className="MuiFormControl-root-35 ListingSearchBranch-field-33"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -34,32 +31,19 @@ exports[`renders correctly 1`] = `
           <input
             aria-invalid={false}
             aria-required={false}
-            autoComplete={undefined}
-            autoFocus={undefined}
             className="MuiInput-input-47 MuiInput-inputType-51 MuiInput-inputTypeSearch-52"
-            defaultValue={undefined}
             disabled={false}
-            id={undefined}
-            name={undefined}
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
-            onKeyDown={undefined}
-            onKeyUp={undefined}
             placeholder="Filter"
-            readOnly={undefined}
-            required={undefined}
-            rows={undefined}
             type="search"
-            value={undefined}
           />
         </div>
       </div>
-      <div
-        className="MuiTooltip-root-53"
-      >
+      Array [
+        "",
         <button
-          aria-describedby={undefined}
           className="MuiButtonBase-root-68 MuiIconButton-root-62"
           disabled={false}
           onBlur={[Function]}
@@ -75,6 +59,7 @@ exports[`renders correctly 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           tabIndex="0"
+          title="Search"
           type="button"
         >
           <span
@@ -83,23 +68,22 @@ exports[`renders correctly 1`] = `
             <svg
               aria-hidden="true"
               className="MuiSvgIcon-root-71"
-              color={undefined}
               focusable="false"
               viewBox="0 0 24 24"
             >
-              <path
-                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-              />
+              <g>
+                <path
+                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                />
+              </g>
             </svg>
           </span>
           <span
             className="MuiTouchRipple-root-77"
           />
-        </button>
+        </button>,
         <div
           className="MuiTooltip-popper-54 MuiTooltip-popperClose-55"
-          data-placement={undefined}
-          data-x-out-of-boundaries={undefined}
           style={
             Object {
               "left": 0,
@@ -113,13 +97,12 @@ exports[`renders correctly 1`] = `
           <div
             aria-hidden={true}
             className="MuiTooltip-tooltip-56 MuiTooltip-tooltipPlacementBottom-60"
-            id={undefined}
             role="tooltip"
           >
             Search
           </div>
-        </div>
-      </div>
+        </div>,
+      ]
     </div>
   </div>
 </div>

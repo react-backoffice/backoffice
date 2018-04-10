@@ -1,11 +1,10 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { mount } from 'enzyme'
 
 import AddButton from './'
 
 it('renders correctly', () => {
-  const tree = renderer
-    .create(<AddButton handleClick={() => {}} />)
-    .toJSON()
+  const tree = mount(<AddButton onClick={() => {}} />)
+
   expect(tree).toMatchSnapshot()
 })
