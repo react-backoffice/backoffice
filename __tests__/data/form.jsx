@@ -99,6 +99,13 @@ export default [{
     title: 'Email',
     type: TYPES.EMAIL,
     width: 'mid',
+    beforeSubmit: (url) => {
+      if (url) {
+        return `${url}#top`
+      }
+
+      return url
+    },
   }, {
     id: 'password',
     title: 'Password',
@@ -109,13 +116,11 @@ export default [{
     title: 'URL',
     type: TYPES.URL,
     width: 'mid',
-    beforeSubmit: (url) => {
-      if (url) {
-        return `${url}#top`
-      }
-
-      return url
-    },
+    helperText: 'Should be URL with trailing slash',
+    validators: [{
+      validator: value => value && value.substr(-1, 1) === '/',
+      message: 'Please add a trailing slash to your URL',
+    }],
   }, {
     id: 'empty',
     type: TYPES.EMAIL,

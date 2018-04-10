@@ -9,9 +9,17 @@ const withFormField = Component => class FormField extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     type: PropTypes.string,
+    helperText: PropTypes.string,
     validators: PropTypes.arrayOf(PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.func,
+      PropTypes.shape({
+        validator: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.func,
+        ]),
+        message: PropTypes.string,
+      }),
     ])),
     isRequired: PropTypes.bool,
     handleChange: PropTypes.func.isRequired,
@@ -23,6 +31,7 @@ const withFormField = Component => class FormField extends React.Component {
     type: 'text',
     validators: [],
     isRequired: false,
+    helperText: '',
     getAdditionalValue: data => data,
     beforeSubmit: null,
   }
@@ -56,6 +65,7 @@ const withFormField = Component => class FormField extends React.Component {
     value: '',
     isDirty: false,
     completeFrom: [],
+    messages: [],
   }
 
   componentWillMount() {
@@ -150,8 +160,8 @@ const withFormField = Component => class FormField extends React.Component {
       if (typeof this.props.beforeSubmit === 'function') {
         submitValue = this.props.beforeSubmit(submitValue)
       }
-
-      const error = !this.isValid(submitValue)
+      const isValidWithMessages = this.isValid(submitValue)
+      const error = !isValidWithMessages.isValid
 
       if (this.props.type === TYPES.NUMBER) {
         newValue = parseFloat(newValue, 10)
@@ -159,6 +169,7 @@ const withFormField = Component => class FormField extends React.Component {
 
       this.setState({
         value: newValue,
+        messages: isValidWithMessages.messages,
         error,
       })
 
@@ -187,10 +198,19 @@ const withFormField = Component => class FormField extends React.Component {
   }
 
   render() {
+    const { helperText, ...props } = this.props
+    const { messages, ...state } = this.state
+    let helperMessages = []
+
+    if (helperText) {
+      helperMessages = [helperText, ...messages]
+    }
+
     return (
       <Component
-        {...this.props}
-        {...this.state}
+        {...props}
+        {...state}
+        helperText={helperMessages.join(' ')}
         handleChange={this.handleChange}
         onRemoveListItem={this.handleRemoveListItem}
         onAddListItem={this.handleAddListItem}

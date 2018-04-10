@@ -221,4 +221,29 @@ describe('Form Field', () => {
 
     expect(field.state().value).toEqual(newDate)
   })
+
+  it('handle validator with message', () => {
+    const handleChange = jest.fn()
+    const validatorWithMessage = {
+      validator: value => value === 'test',
+      message: 'Value should equal `test`',
+    }
+
+    const field = mount((
+      <FormField
+        id="7"
+        title="Foo"
+        type="text"
+        validators={[validatorWithMessage]}
+        isRequired
+        handleChange={handleChange}
+      />
+    ))
+
+    field.find('input').simulate('change', { value: 'a' })
+
+    const { messages } = field.instance().state
+
+    expect(messages).toEqual([validatorWithMessage.message])
+  })
 })
