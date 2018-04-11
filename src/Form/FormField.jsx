@@ -169,7 +169,7 @@ const withFormField = Component => class FormField extends React.Component {
 
       this.setState({
         value: newValue,
-        messages: isValidWithMessages.messages,
+        messages: isValidWithMessages.messages || [],
         error,
       })
 
