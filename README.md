@@ -144,6 +144,7 @@ A dialog box to confirm something with a user
 * `disagreeText: string`, Text for disagree button, default `Disagree`
 * `onConfirm: function`, handler when user confirms dialog
 * `onClose: function`, handler when user closes dialog
+* `hasCloseButton: boolean`, hide close button if `false`, defaults to `true`
 
 ```javascript
 import { Confirm } from 'backoffice'

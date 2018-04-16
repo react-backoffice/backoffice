@@ -12,6 +12,7 @@ const withConfirm = Component => class extends React.Component {
     disagreeText: PropTypes.string,
     onConfirm: PropTypes.func.isRequired,
     onClose: PropTypes.func,
+    hasCloseButton: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -20,6 +21,7 @@ const withConfirm = Component => class extends React.Component {
     agreeText: 'Agree',
     disagreeText: 'Disagree',
     onClose: () => {},
+    hasCloseButton: true,
   }
 
   constructor(props) {

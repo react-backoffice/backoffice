@@ -21,6 +21,7 @@ const ConfirmBranch = ({
   isOpen,
   disagreeText,
   agreeText,
+  hasCloseButton,
   onClose,
   onConfirm,
   classes,
@@ -41,9 +42,12 @@ const ConfirmBranch = ({
       </DialogContentText>
     </DialogContent>
     <DialogActions>
-      <Button onClick={onClose} color="primary">
-        {disagreeText}
-      </Button>
+      {hasCloseButton ? (
+        <Button onClick={onClose} color="primary">
+          {disagreeText}
+        </Button>
+      ) : null}
+
       <Button
         onClick={onConfirm}
         color="primary"
@@ -64,6 +68,7 @@ ConfirmBranch.propTypes = {
   disagreeText: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
   onConfirm: PropTypes.func.isRequired,
+  hasCloseButton: PropTypes.bool.isRequired,
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 

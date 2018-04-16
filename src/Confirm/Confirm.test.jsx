@@ -14,6 +14,16 @@ describe('Confirm', () => {
       onConfirm={() => { }}
     />)
 
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders correctly without close button', () => {
+    const tree = mount(<Confirm
+      title="Title"
+      description="Desc"
+      onConfirm={() => { }}
+      hasCloseButton={false}
+    />)
 
     expect(tree).toMatchSnapshot()
   })
