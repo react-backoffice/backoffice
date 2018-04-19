@@ -31,7 +31,7 @@ exports[`renders correctly 1`] = `
           <input
             aria-invalid={false}
             aria-required={false}
-            className="MuiInput-input-47 MuiInput-inputType-51 MuiInput-inputTypeSearch-52"
+            className="MuiInput-input-47 MuiInput-inputType-50 MuiInput-inputTypeSearch-51"
             disabled={false}
             onBlur={[Function]}
             onChange={[Function]}
@@ -44,7 +44,7 @@ exports[`renders correctly 1`] = `
       Array [
         "",
         <button
-          className="MuiButtonBase-root-68 MuiIconButton-root-62"
+          className="MuiButtonBase-root-67 MuiIconButton-root-61"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -59,15 +59,14 @@ exports[`renders correctly 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           tabIndex="0"
-          title="Search"
           type="button"
         >
           <span
-            className="MuiIconButton-label-67"
+            className="MuiIconButton-label-66"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-71"
+              className="MuiSvgIcon-root-70"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -79,11 +78,11 @@ exports[`renders correctly 1`] = `
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-77"
+            className="MuiTouchRipple-root-76"
           />
         </button>,
         <div
-          className="MuiTooltip-popper-54 MuiTooltip-popperClose-55"
+          className="MuiTooltip-popper-53"
           style={
             Object {
               "left": 0,
@@ -96,7 +95,7 @@ exports[`renders correctly 1`] = `
         >
           <div
             aria-hidden={true}
-            className="MuiTooltip-tooltip-56 MuiTooltip-tooltipPlacementBottom-60"
+            className="MuiTooltip-tooltip-55 MuiTooltip-tooltipPlacementBottom-60"
             role="tooltip"
           >
             Search

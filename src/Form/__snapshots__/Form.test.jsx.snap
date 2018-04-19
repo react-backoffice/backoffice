@@ -32,12 +32,12 @@ exports[`renders correctly 1`] = `
         </span>
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={true}
-          className="MuiInput-input-88"
+          className="MuiInput-input-87"
           disabled={false}
           id="text"
           onBlur={[Function]}
@@ -69,16 +69,16 @@ exports[`renders correctly 1`] = `
         </span>
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <div
-          className="MuiSelect-root-94"
+          className="MuiSelect-root-92"
         >
           <div
             aria-haspopup="true"
             aria-owns={null}
             aria-pressed="false"
-            className="MuiSelect-select-95 MuiSelect-selectMenu-96 MuiInput-input-88"
+            className="MuiSelect-select-93 MuiSelect-selectMenu-94 MuiInput-input-87"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -105,7 +105,7 @@ exports[`renders correctly 1`] = `
           />
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-99 MuiSelect-icon-98"
+            className="MuiSvgIcon-root-97 MuiSelect-icon-96"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -130,12 +130,12 @@ exports[`renders correctly 1`] = `
         Number
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputType-92"
+          className="MuiInput-input-87 MuiInput-inputType-90"
           disabled={false}
           id="number"
           onBlur={[Function]}
@@ -161,12 +161,12 @@ exports[`renders correctly 1`] = `
         Multiline
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-multiline-86 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-multiline-85 MuiInput-underline-83"
       >
         <textarea
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputMultiline-91"
+          className="MuiInput-input-87 MuiInput-inputMultiline-89"
           disabled={false}
           id="multiline"
           onBlur={[Function]}
@@ -179,7 +179,7 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="FormFieldBranch-field-59 FormFieldBranch-widthMid-63 FormFieldListBranch-root-109"
+      className="FormFieldBranch-field-59 FormFieldBranch-widthMid-63 FormFieldListBranch-root-107"
     >
       <div
         className="MuiFormControl-root-65 MuiFormControl-marginNormal-66 MuiFormControl-fullWidth-68"
@@ -195,12 +195,12 @@ exports[`renders correctly 1`] = `
           List
         </label>
         <div
-          className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+          className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
         >
           <input
             aria-invalid={false}
             aria-required={false}
-            className="MuiInput-input-88"
+            className="MuiInput-input-87"
             disabled={false}
             id="list"
             onBlur={[Function]}
@@ -213,17 +213,17 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="MuiPaper-root-6 MuiPaper-elevation2-10 MuiPaper-rounded-7 FormFieldListBranch-list-110"
+        className="MuiPaper-root-6 MuiPaper-elevation2-10 MuiPaper-rounded-7 FormFieldListBranch-list-108"
       >
         <ul
-          className="MuiList-root-113 MuiList-padding-114"
+          className="MuiList-root-111 MuiList-padding-112"
         />
       </div>
       <div>
         Array [
           "",
           <div
-            className="MuiChip-root-126 MuiChip-deletable-128"
+            className="MuiChip-root-124 MuiChip-deletable-126"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -233,16 +233,15 @@ exports[`renders correctly 1`] = `
             onTouchStart={[Function]}
             role="button"
             tabIndex={0}
-            title="Foo-Baz"
           >
             <span
-              className="MuiChip-label-131"
+              className="MuiChip-label-129"
             >
               Foo
             </span>
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-99 MuiChip-deleteIcon-132"
+              className="MuiSvgIcon-root-97 MuiChip-deleteIcon-130"
               focusable="false"
               onClick={[Function]}
               viewBox="0 0 24 24"
@@ -253,7 +252,7 @@ exports[`renders correctly 1`] = `
             </svg>
           </div>,
           <div
-            className="MuiTooltip-popper-118 MuiTooltip-popperClose-119"
+            className="MuiTooltip-popper-116"
             style={
               Object {
                 "left": 0,
@@ -266,7 +265,7 @@ exports[`renders correctly 1`] = `
           >
             <div
               aria-hidden={true}
-              className="MuiTooltip-tooltip-120 MuiTooltip-tooltipPlacementBottom-124"
+              className="MuiTooltip-tooltip-118 MuiTooltip-tooltipPlacementBottom-123"
               role="tooltip"
             >
               Foo-Baz
@@ -274,19 +273,19 @@ exports[`renders correctly 1`] = `
           </div>,
         ]
         <div
-          className="MuiChip-root-126 MuiChip-deletable-128 FormFieldListBranch-selectedItem-112"
+          className="MuiChip-root-124 MuiChip-deletable-126 FormFieldListBranch-selectedItem-110"
           onKeyDown={[Function]}
           role="button"
           tabIndex={0}
         >
           <span
-            className="MuiChip-label-131"
+            className="MuiChip-label-129"
           >
             Bar
           </span>
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-99 MuiChip-deleteIcon-132"
+            className="MuiSvgIcon-root-97 MuiChip-deleteIcon-130"
             focusable="false"
             onClick={[Function]}
             viewBox="0 0 24 24"
@@ -299,7 +298,7 @@ exports[`renders correctly 1`] = `
         Array [
           "",
           <div
-            className="MuiChip-root-126 MuiChip-deletable-128"
+            className="MuiChip-root-124 MuiChip-deletable-126"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -309,16 +308,15 @@ exports[`renders correctly 1`] = `
             onTouchStart={[Function]}
             role="button"
             tabIndex={0}
-            title="Foo-Baz"
           >
             <span
-              className="MuiChip-label-131"
+              className="MuiChip-label-129"
             >
               Baz
             </span>
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-99 MuiChip-deleteIcon-132"
+              className="MuiSvgIcon-root-97 MuiChip-deleteIcon-130"
               focusable="false"
               onClick={[Function]}
               viewBox="0 0 24 24"
@@ -329,7 +327,7 @@ exports[`renders correctly 1`] = `
             </svg>
           </div>,
           <div
-            className="MuiTooltip-popper-118 MuiTooltip-popperClose-119"
+            className="MuiTooltip-popper-116"
             style={
               Object {
                 "left": 0,
@@ -342,7 +340,7 @@ exports[`renders correctly 1`] = `
           >
             <div
               aria-hidden={true}
-              className="MuiTooltip-tooltip-120 MuiTooltip-tooltipPlacementBottom-124"
+              className="MuiTooltip-tooltip-118 MuiTooltip-tooltipPlacementBottom-123"
               role="tooltip"
             >
               Foo-Baz
@@ -352,7 +350,7 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="FormFieldBranch-field-59 FormFieldBranch-widthMid-63 FormFieldListBranch-root-109"
+      className="FormFieldBranch-field-59 FormFieldBranch-widthMid-63 FormFieldListBranch-root-107"
     >
       <div
         className="MuiFormControl-root-65 MuiFormControl-marginNormal-66 MuiFormControl-fullWidth-68"
@@ -368,12 +366,12 @@ exports[`renders correctly 1`] = `
           Free List
         </label>
         <div
-          className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+          className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
         >
           <input
             aria-invalid={false}
             aria-required={false}
-            className="MuiInput-input-88"
+            className="MuiInput-input-87"
             disabled={false}
             id="free-list"
             onBlur={[Function]}
@@ -386,10 +384,10 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="MuiPaper-root-6 MuiPaper-elevation2-10 MuiPaper-rounded-7 FormFieldListBranch-list-110"
+        className="MuiPaper-root-6 MuiPaper-elevation2-10 MuiPaper-rounded-7 FormFieldListBranch-list-108"
       >
         <ul
-          className="MuiList-root-113 MuiList-padding-114"
+          className="MuiList-root-111 MuiList-padding-112"
         />
       </div>
       <div />
@@ -416,12 +414,12 @@ exports[`renders correctly 1`] = `
           Nested Text
         </label>
         <div
-          className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+          className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
         >
           <input
             aria-invalid={false}
             aria-required={false}
-            className="MuiInput-input-88"
+            className="MuiInput-input-87"
             disabled={false}
             id="nested-text"
             onBlur={[Function]}
@@ -432,11 +430,11 @@ exports[`renders correctly 1`] = `
             value=""
           />
           <div
-            className="MuiInputAdornment-root-133 MuiInputAdornment-positionEnd-135"
+            className="MuiInputAdornment-root-131 MuiInputAdornment-positionEnd-133"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-99"
+              className="MuiSvgIcon-root-97"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -462,7 +460,7 @@ exports[`renders correctly 1`] = `
         Content
       </h1>
       <hr
-        className="MuiDivider-root-136"
+        className="MuiDivider-root-134"
       />
     </div>
     <div
@@ -479,12 +477,12 @@ exports[`renders correctly 1`] = `
         Email
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputType-92"
+          className="MuiInput-input-87 MuiInput-inputType-90"
           disabled={false}
           id="email"
           onBlur={[Function]}
@@ -510,12 +508,12 @@ exports[`renders correctly 1`] = `
         Password
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputType-92"
+          className="MuiInput-input-87 MuiInput-inputType-90"
           disabled={false}
           id="password"
           onBlur={[Function]}
@@ -542,12 +540,12 @@ exports[`renders correctly 1`] = `
         URL
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputType-92"
+          className="MuiInput-input-87 MuiInput-inputType-90"
           disabled={false}
           id="url"
           onBlur={[Function]}
@@ -559,7 +557,7 @@ exports[`renders correctly 1`] = `
         />
       </div>
       <p
-        className="MuiFormHelperText-root-140"
+        className="MuiFormHelperText-root-138"
         id="url-helper-text"
       >
         Should be URL with trailing slash
@@ -572,12 +570,12 @@ exports[`renders correctly 1`] = `
       onKeyPress={[Function]}
     >
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputType-92"
+          className="MuiInput-input-87 MuiInput-inputType-90"
           disabled={false}
           id="empty"
           onBlur={[Function]}
@@ -614,12 +612,12 @@ exports[`renders correctly 1`] = `
           Date
         </label>
         <div
-          className="MuiInput-root-80 MuiInput-formControl-81 MuiInput-underline-84 WithUtils-DateTextField--input-144"
+          className="MuiInput-root-79 MuiInput-formControl-80 MuiInput-underline-83 WithUtils-DateTextField--input-142"
         >
           <input
             aria-invalid={false}
             aria-required={false}
-            className="MuiInput-input-88"
+            className="MuiInput-input-87"
             disabled={false}
             id="date"
             onBlur={[Function]}
@@ -630,10 +628,10 @@ exports[`renders correctly 1`] = `
             value="03.01.2018"
           />
           <div
-            className="MuiInputAdornment-root-133 MuiInputAdornment-positionEnd-135"
+            className="MuiInputAdornment-root-131 MuiInputAdornment-positionEnd-133"
           >
             <button
-              className="MuiButtonBase-root-151 MuiIconButton-root-145"
+              className="MuiButtonBase-root-149 MuiIconButton-root-143"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -650,17 +648,17 @@ exports[`renders correctly 1`] = `
               type="button"
             >
               <span
-                className="MuiIconButton-label-150"
+                className="MuiIconButton-label-148"
               >
                  
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-154"
+                  className="material-icons MuiIcon-root-152"
                 >
                    
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root-99"
+                    className="MuiSvgIcon-root-97"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
@@ -675,7 +673,7 @@ exports[`renders correctly 1`] = `
                  
               </span>
               <span
-                className="MuiTouchRipple-root-160"
+                className="MuiTouchRipple-root-158"
               />
             </button>
           </div>
@@ -699,12 +697,12 @@ exports[`renders correctly 1`] = `
           Time
         </label>
         <div
-          className="MuiInput-root-80 MuiInput-formControl-81 MuiInput-underline-84 WithUtils-DateTextField--input-144"
+          className="MuiInput-root-79 MuiInput-formControl-80 MuiInput-underline-83 WithUtils-DateTextField--input-142"
         >
           <input
             aria-invalid={false}
             aria-required={false}
-            className="MuiInput-input-88"
+            className="MuiInput-input-87"
             disabled={false}
             id="time"
             onBlur={[Function]}
@@ -715,10 +713,10 @@ exports[`renders correctly 1`] = `
             value="03:28 pm"
           />
           <div
-            className="MuiInputAdornment-root-133 MuiInputAdornment-positionEnd-135"
+            className="MuiInputAdornment-root-131 MuiInputAdornment-positionEnd-133"
           >
             <button
-              className="MuiButtonBase-root-151 MuiIconButton-root-145"
+              className="MuiButtonBase-root-149 MuiIconButton-root-143"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -735,17 +733,17 @@ exports[`renders correctly 1`] = `
               type="button"
             >
               <span
-                className="MuiIconButton-label-150"
+                className="MuiIconButton-label-148"
               >
                  
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-154"
+                  className="material-icons MuiIcon-root-152"
                 >
                    
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root-99"
+                    className="MuiSvgIcon-root-97"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
@@ -760,7 +758,7 @@ exports[`renders correctly 1`] = `
                  
               </span>
               <span
-                className="MuiTouchRipple-root-160"
+                className="MuiTouchRipple-root-158"
               />
             </button>
           </div>
@@ -784,12 +782,12 @@ exports[`renders correctly 1`] = `
           Datetime
         </label>
         <div
-          className="MuiInput-root-80 MuiInput-formControl-81 MuiInput-underline-84 WithUtils-DateTextField--input-144"
+          className="MuiInput-root-79 MuiInput-formControl-80 MuiInput-underline-83 WithUtils-DateTextField--input-142"
         >
           <input
             aria-invalid={false}
             aria-required={false}
-            className="MuiInput-input-88"
+            className="MuiInput-input-87"
             disabled={false}
             id="datetime"
             onBlur={[Function]}
@@ -800,10 +798,10 @@ exports[`renders correctly 1`] = `
             value="03.01.2018, 03:28 pm"
           />
           <div
-            className="MuiInputAdornment-root-133 MuiInputAdornment-positionEnd-135"
+            className="MuiInputAdornment-root-131 MuiInputAdornment-positionEnd-133"
           >
             <button
-              className="MuiButtonBase-root-151 MuiIconButton-root-145"
+              className="MuiButtonBase-root-149 MuiIconButton-root-143"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -820,17 +818,17 @@ exports[`renders correctly 1`] = `
               type="button"
             >
               <span
-                className="MuiIconButton-label-150"
+                className="MuiIconButton-label-148"
               >
                  
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-154"
+                  className="material-icons MuiIcon-root-152"
                 >
                    
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root-99"
+                    className="MuiSvgIcon-root-97"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
@@ -845,7 +843,7 @@ exports[`renders correctly 1`] = `
                  
               </span>
               <span
-                className="MuiTouchRipple-root-160"
+                className="MuiTouchRipple-root-158"
               />
             </button>
           </div>
@@ -876,12 +874,12 @@ exports[`renders correctly 1`] = `
         Disabled Text
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-disabled-83 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-disabled-82 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputDisabled-90"
+          className="MuiInput-input-87 MuiInput-disabled-82"
           disabled={true}
           id="disabled"
           onBlur={[Function]}
@@ -907,16 +905,16 @@ exports[`renders correctly 1`] = `
         Disabled Select
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-disabled-83 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-disabled-82 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <div
-          className="MuiSelect-root-94"
+          className="MuiSelect-root-92"
         >
           <div
             aria-haspopup="true"
             aria-owns={null}
             aria-pressed="false"
-            className="MuiSelect-select-95 MuiSelect-selectMenu-96 MuiSelect-disabled-97 MuiInput-input-88 MuiInput-inputDisabled-90"
+            className="MuiSelect-select-93 MuiSelect-selectMenu-94 MuiSelect-disabled-95 MuiInput-input-87 MuiInput-disabled-82"
             onBlur={[Function]}
             onClick={null}
             onFocus={[Function]}
@@ -942,7 +940,7 @@ exports[`renders correctly 1`] = `
           />
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-99 MuiSelect-icon-98"
+            className="MuiSvgIcon-root-97 MuiSelect-icon-96"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -966,13 +964,13 @@ exports[`renders correctly 1`] = `
       className="FormFieldBranch-field-59 FormFieldBranch-widthSmall-62 FormFieldBranch-fieldInline-60"
     >
       <label
-        className="MuiFormControlLabel-root-181"
+        className="MuiFormControlLabel-root-179"
       >
         <span
-          className="MuiSwitch-root-185"
+          className="MuiSwitch-root-182"
         >
           <span
-            className="MuiButtonBase-root-151 MuiIconButton-root-145 MuiSwitchBase-root-194 MuiSwitchBase-default-196 MuiSwitch-default-189"
+            className="MuiButtonBase-root-149 MuiIconButton-root-143 MuiSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorPrimary-187"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -986,14 +984,14 @@ exports[`renders correctly 1`] = `
             tabIndex={null}
           >
             <span
-              className="MuiIconButton-label-150"
+              className="MuiIconButton-label-148"
             >
               <span
-                className="MuiSwitch-icon-187"
+                className="MuiSwitch-icon-183"
               />
               <input
                 checked={false}
-                className="MuiSwitchBase-input-195"
+                className="MuiSwitchBase-input-194"
                 disabled={false}
                 onChange={[Function]}
                 type="checkbox"
@@ -1001,21 +999,21 @@ exports[`renders correctly 1`] = `
               />
             </span>
             <span
-              className="MuiTouchRipple-root-160"
+              className="MuiTouchRipple-root-158"
             />
           </span>
           <span
-            className="MuiSwitch-bar-186"
+            className="MuiSwitch-bar-190"
           />
         </span>
         <span
-          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-183"
+          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-181"
         >
           Switch
         </span>
       </label>
       <p
-        className="MuiFormHelperText-root-140"
+        className="MuiFormHelperText-root-138"
       >
         Display Helper Text
       </p>
@@ -1024,13 +1022,13 @@ exports[`renders correctly 1`] = `
       className="FormFieldBranch-field-59 FormFieldBranch-widthSmall-62 FormFieldBranch-fieldInline-60"
     >
       <label
-        className="MuiFormControlLabel-root-181 MuiFormControlLabel-disabled-182"
+        className="MuiFormControlLabel-root-179 MuiFormControlLabel-disabled-180"
       >
         <span
-          className="MuiSwitch-root-185"
+          className="MuiSwitch-root-182"
         >
           <span
-            className="MuiButtonBase-root-151 MuiButtonBase-disabled-152 MuiIconButton-root-145 MuiIconButton-disabled-149 MuiSwitchBase-root-194 MuiSwitchBase-default-196 MuiSwitch-default-189 MuiSwitchBase-disabled-198 MuiSwitch-disabled-193"
+            className="MuiButtonBase-root-149 MuiButtonBase-disabled-150 MuiIconButton-root-143 MuiIconButton-disabled-147 MuiSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorPrimary-187 MuiSwitchBase-disabled-193 MuiSwitch-disabled-189"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -1044,14 +1042,14 @@ exports[`renders correctly 1`] = `
             tabIndex="-1"
           >
             <span
-              className="MuiIconButton-label-150"
+              className="MuiIconButton-label-148"
             >
               <span
-                className="MuiSwitch-icon-187"
+                className="MuiSwitch-icon-183"
               />
               <input
                 checked={false}
-                className="MuiSwitchBase-input-195"
+                className="MuiSwitchBase-input-194"
                 disabled={true}
                 onChange={[Function]}
                 type="checkbox"
@@ -1060,27 +1058,27 @@ exports[`renders correctly 1`] = `
             </span>
           </span>
           <span
-            className="MuiSwitch-bar-186"
+            className="MuiSwitch-bar-190"
           />
         </span>
         <span
-          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-183 MuiFormControlLabel-labelDisabled-184"
+          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-181 MuiFormControlLabel-disabled-180"
         >
           Switch - Disabled
         </span>
       </label>
       <p
-        className="MuiFormHelperText-root-140 MuiFormHelperText-disabled-142"
+        className="MuiFormHelperText-root-138 MuiFormHelperText-disabled-140"
       >
         Display Helper Text
       </p>
     </div>
   </div>
   <div
-    className="FormSubmitButton-root-199"
+    className="FormSubmitButton-root-195"
   >
     <button
-      className="MuiButtonBase-root-151 MuiButton-root-203 MuiButton-raised-208 MuiButton-raisedSecondary-211 FormSubmitButton-button-201"
+      className="MuiButtonBase-root-149 MuiButton-root-199 MuiButton-raised-204 MuiButton-raisedSecondary-206 FormSubmitButton-button-197"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -1097,12 +1095,12 @@ exports[`renders correctly 1`] = `
       type="button"
     >
       <span
-        className="MuiButton-label-204"
+        className="MuiButton-label-200"
       >
         Save
       </span>
       <span
-        className="MuiTouchRipple-root-160"
+        className="MuiTouchRipple-root-158"
       />
     </button>
   </div>
@@ -1141,12 +1139,12 @@ exports[`renders correctly with content 1`] = `
         </span>
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={true}
-          className="MuiInput-input-88"
+          className="MuiInput-input-87"
           disabled={false}
           id="text"
           onBlur={[Function]}
@@ -1178,16 +1176,16 @@ exports[`renders correctly with content 1`] = `
         </span>
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <div
-          className="MuiSelect-root-94"
+          className="MuiSelect-root-92"
         >
           <div
             aria-haspopup="true"
             aria-owns={null}
             aria-pressed="false"
-            className="MuiSelect-select-95 MuiSelect-selectMenu-96 MuiInput-input-88"
+            className="MuiSelect-select-93 MuiSelect-selectMenu-94 MuiInput-input-87"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -1214,7 +1212,7 @@ exports[`renders correctly with content 1`] = `
           />
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-99 MuiSelect-icon-98"
+            className="MuiSvgIcon-root-97 MuiSelect-icon-96"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -1239,12 +1237,12 @@ exports[`renders correctly with content 1`] = `
         Number
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputType-92"
+          className="MuiInput-input-87 MuiInput-inputType-90"
           disabled={false}
           id="number"
           onBlur={[Function]}
@@ -1270,12 +1268,12 @@ exports[`renders correctly with content 1`] = `
         Multiline
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-multiline-86 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-multiline-85 MuiInput-underline-83"
       >
         <textarea
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputMultiline-91"
+          className="MuiInput-input-87 MuiInput-inputMultiline-89"
           disabled={false}
           id="multiline"
           onBlur={[Function]}
@@ -1288,7 +1286,7 @@ exports[`renders correctly with content 1`] = `
       </div>
     </div>
     <div
-      className="FormFieldBranch-field-59 FormFieldBranch-widthMid-63 FormFieldListBranch-root-109"
+      className="FormFieldBranch-field-59 FormFieldBranch-widthMid-63 FormFieldListBranch-root-107"
     >
       <div
         className="MuiFormControl-root-65 MuiFormControl-marginNormal-66 MuiFormControl-fullWidth-68"
@@ -1304,12 +1302,12 @@ exports[`renders correctly with content 1`] = `
           List
         </label>
         <div
-          className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+          className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
         >
           <input
             aria-invalid={false}
             aria-required={false}
-            className="MuiInput-input-88"
+            className="MuiInput-input-87"
             disabled={false}
             id="list"
             onBlur={[Function]}
@@ -1322,17 +1320,17 @@ exports[`renders correctly with content 1`] = `
         </div>
       </div>
       <div
-        className="MuiPaper-root-6 MuiPaper-elevation2-10 MuiPaper-rounded-7 FormFieldListBranch-list-110"
+        className="MuiPaper-root-6 MuiPaper-elevation2-10 MuiPaper-rounded-7 FormFieldListBranch-list-108"
       >
         <ul
-          className="MuiList-root-113 MuiList-padding-114"
+          className="MuiList-root-111 MuiList-padding-112"
         />
       </div>
       <div>
         Array [
           "",
           <div
-            className="MuiChip-root-126 MuiChip-deletable-128"
+            className="MuiChip-root-124 MuiChip-deletable-126"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -1342,16 +1340,15 @@ exports[`renders correctly with content 1`] = `
             onTouchStart={[Function]}
             role="button"
             tabIndex={0}
-            title="Foo-Baz"
           >
             <span
-              className="MuiChip-label-131"
+              className="MuiChip-label-129"
             >
               Foo
             </span>
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-99 MuiChip-deleteIcon-132"
+              className="MuiSvgIcon-root-97 MuiChip-deleteIcon-130"
               focusable="false"
               onClick={[Function]}
               viewBox="0 0 24 24"
@@ -1362,7 +1359,7 @@ exports[`renders correctly with content 1`] = `
             </svg>
           </div>,
           <div
-            className="MuiTooltip-popper-118 MuiTooltip-popperClose-119"
+            className="MuiTooltip-popper-116"
             style={
               Object {
                 "left": 0,
@@ -1375,7 +1372,7 @@ exports[`renders correctly with content 1`] = `
           >
             <div
               aria-hidden={true}
-              className="MuiTooltip-tooltip-120 MuiTooltip-tooltipPlacementBottom-124"
+              className="MuiTooltip-tooltip-118 MuiTooltip-tooltipPlacementBottom-123"
               role="tooltip"
             >
               Foo-Baz
@@ -1383,19 +1380,19 @@ exports[`renders correctly with content 1`] = `
           </div>,
         ]
         <div
-          className="MuiChip-root-126 MuiChip-deletable-128 FormFieldListBranch-selectedItem-112"
+          className="MuiChip-root-124 MuiChip-deletable-126 FormFieldListBranch-selectedItem-110"
           onKeyDown={[Function]}
           role="button"
           tabIndex={0}
         >
           <span
-            className="MuiChip-label-131"
+            className="MuiChip-label-129"
           >
             Bar
           </span>
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-99 MuiChip-deleteIcon-132"
+            className="MuiSvgIcon-root-97 MuiChip-deleteIcon-130"
             focusable="false"
             onClick={[Function]}
             viewBox="0 0 24 24"
@@ -1408,7 +1405,7 @@ exports[`renders correctly with content 1`] = `
         Array [
           "",
           <div
-            className="MuiChip-root-126 MuiChip-deletable-128"
+            className="MuiChip-root-124 MuiChip-deletable-126"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -1418,16 +1415,15 @@ exports[`renders correctly with content 1`] = `
             onTouchStart={[Function]}
             role="button"
             tabIndex={0}
-            title="Foo-Baz"
           >
             <span
-              className="MuiChip-label-131"
+              className="MuiChip-label-129"
             >
               Baz
             </span>
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-99 MuiChip-deleteIcon-132"
+              className="MuiSvgIcon-root-97 MuiChip-deleteIcon-130"
               focusable="false"
               onClick={[Function]}
               viewBox="0 0 24 24"
@@ -1438,7 +1434,7 @@ exports[`renders correctly with content 1`] = `
             </svg>
           </div>,
           <div
-            className="MuiTooltip-popper-118 MuiTooltip-popperClose-119"
+            className="MuiTooltip-popper-116"
             style={
               Object {
                 "left": 0,
@@ -1451,7 +1447,7 @@ exports[`renders correctly with content 1`] = `
           >
             <div
               aria-hidden={true}
-              className="MuiTooltip-tooltip-120 MuiTooltip-tooltipPlacementBottom-124"
+              className="MuiTooltip-tooltip-118 MuiTooltip-tooltipPlacementBottom-123"
               role="tooltip"
             >
               Foo-Baz
@@ -1461,7 +1457,7 @@ exports[`renders correctly with content 1`] = `
       </div>
     </div>
     <div
-      className="FormFieldBranch-field-59 FormFieldBranch-widthMid-63 FormFieldListBranch-root-109"
+      className="FormFieldBranch-field-59 FormFieldBranch-widthMid-63 FormFieldListBranch-root-107"
     >
       <div
         className="MuiFormControl-root-65 MuiFormControl-marginNormal-66 MuiFormControl-fullWidth-68"
@@ -1477,12 +1473,12 @@ exports[`renders correctly with content 1`] = `
           Free List
         </label>
         <div
-          className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+          className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
         >
           <input
             aria-invalid={false}
             aria-required={false}
-            className="MuiInput-input-88"
+            className="MuiInput-input-87"
             disabled={false}
             id="free-list"
             onBlur={[Function]}
@@ -1495,10 +1491,10 @@ exports[`renders correctly with content 1`] = `
         </div>
       </div>
       <div
-        className="MuiPaper-root-6 MuiPaper-elevation2-10 MuiPaper-rounded-7 FormFieldListBranch-list-110"
+        className="MuiPaper-root-6 MuiPaper-elevation2-10 MuiPaper-rounded-7 FormFieldListBranch-list-108"
       >
         <ul
-          className="MuiList-root-113 MuiList-padding-114"
+          className="MuiList-root-111 MuiList-padding-112"
         />
       </div>
       <div />
@@ -1525,12 +1521,12 @@ exports[`renders correctly with content 1`] = `
           Nested Text
         </label>
         <div
-          className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+          className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
         >
           <input
             aria-invalid={false}
             aria-required={false}
-            className="MuiInput-input-88"
+            className="MuiInput-input-87"
             disabled={false}
             id="nested-text"
             onBlur={[Function]}
@@ -1541,11 +1537,11 @@ exports[`renders correctly with content 1`] = `
             value=""
           />
           <div
-            className="MuiInputAdornment-root-133 MuiInputAdornment-positionEnd-135"
+            className="MuiInputAdornment-root-131 MuiInputAdornment-positionEnd-133"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-99"
+              className="MuiSvgIcon-root-97"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -1571,7 +1567,7 @@ exports[`renders correctly with content 1`] = `
         Content
       </h1>
       <hr
-        className="MuiDivider-root-136"
+        className="MuiDivider-root-134"
       />
     </div>
     <div
@@ -1588,12 +1584,12 @@ exports[`renders correctly with content 1`] = `
         Email
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputType-92"
+          className="MuiInput-input-87 MuiInput-inputType-90"
           disabled={false}
           id="email"
           onBlur={[Function]}
@@ -1619,12 +1615,12 @@ exports[`renders correctly with content 1`] = `
         Password
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputType-92"
+          className="MuiInput-input-87 MuiInput-inputType-90"
           disabled={false}
           id="password"
           onBlur={[Function]}
@@ -1651,12 +1647,12 @@ exports[`renders correctly with content 1`] = `
         URL
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputType-92"
+          className="MuiInput-input-87 MuiInput-inputType-90"
           disabled={false}
           id="url"
           onBlur={[Function]}
@@ -1668,7 +1664,7 @@ exports[`renders correctly with content 1`] = `
         />
       </div>
       <p
-        className="MuiFormHelperText-root-140"
+        className="MuiFormHelperText-root-138"
         id="url-helper-text"
       >
         Should be URL with trailing slash
@@ -1681,12 +1677,12 @@ exports[`renders correctly with content 1`] = `
       onKeyPress={[Function]}
     >
       <div
-        className="MuiInput-root-80 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputType-92"
+          className="MuiInput-input-87 MuiInput-inputType-90"
           disabled={false}
           id="empty"
           onBlur={[Function]}
@@ -1723,12 +1719,12 @@ exports[`renders correctly with content 1`] = `
           Date
         </label>
         <div
-          className="MuiInput-root-80 MuiInput-formControl-81 MuiInput-underline-84 WithUtils-DateTextField--input-144"
+          className="MuiInput-root-79 MuiInput-formControl-80 MuiInput-underline-83 WithUtils-DateTextField--input-142"
         >
           <input
             aria-invalid={false}
             aria-required={false}
-            className="MuiInput-input-88"
+            className="MuiInput-input-87"
             disabled={false}
             id="date"
             onBlur={[Function]}
@@ -1739,10 +1735,10 @@ exports[`renders correctly with content 1`] = `
             value="03.01.2018"
           />
           <div
-            className="MuiInputAdornment-root-133 MuiInputAdornment-positionEnd-135"
+            className="MuiInputAdornment-root-131 MuiInputAdornment-positionEnd-133"
           >
             <button
-              className="MuiButtonBase-root-151 MuiIconButton-root-145"
+              className="MuiButtonBase-root-149 MuiIconButton-root-143"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -1759,17 +1755,17 @@ exports[`renders correctly with content 1`] = `
               type="button"
             >
               <span
-                className="MuiIconButton-label-150"
+                className="MuiIconButton-label-148"
               >
                  
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-154"
+                  className="material-icons MuiIcon-root-152"
                 >
                    
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root-99"
+                    className="MuiSvgIcon-root-97"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
@@ -1784,7 +1780,7 @@ exports[`renders correctly with content 1`] = `
                  
               </span>
               <span
-                className="MuiTouchRipple-root-160"
+                className="MuiTouchRipple-root-158"
               />
             </button>
           </div>
@@ -1808,12 +1804,12 @@ exports[`renders correctly with content 1`] = `
           Time
         </label>
         <div
-          className="MuiInput-root-80 MuiInput-formControl-81 MuiInput-underline-84 WithUtils-DateTextField--input-144"
+          className="MuiInput-root-79 MuiInput-formControl-80 MuiInput-underline-83 WithUtils-DateTextField--input-142"
         >
           <input
             aria-invalid={false}
             aria-required={false}
-            className="MuiInput-input-88"
+            className="MuiInput-input-87"
             disabled={false}
             id="time"
             onBlur={[Function]}
@@ -1824,10 +1820,10 @@ exports[`renders correctly with content 1`] = `
             value="03:28 pm"
           />
           <div
-            className="MuiInputAdornment-root-133 MuiInputAdornment-positionEnd-135"
+            className="MuiInputAdornment-root-131 MuiInputAdornment-positionEnd-133"
           >
             <button
-              className="MuiButtonBase-root-151 MuiIconButton-root-145"
+              className="MuiButtonBase-root-149 MuiIconButton-root-143"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -1844,17 +1840,17 @@ exports[`renders correctly with content 1`] = `
               type="button"
             >
               <span
-                className="MuiIconButton-label-150"
+                className="MuiIconButton-label-148"
               >
                  
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-154"
+                  className="material-icons MuiIcon-root-152"
                 >
                    
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root-99"
+                    className="MuiSvgIcon-root-97"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
@@ -1869,7 +1865,7 @@ exports[`renders correctly with content 1`] = `
                  
               </span>
               <span
-                className="MuiTouchRipple-root-160"
+                className="MuiTouchRipple-root-158"
               />
             </button>
           </div>
@@ -1893,12 +1889,12 @@ exports[`renders correctly with content 1`] = `
           Datetime
         </label>
         <div
-          className="MuiInput-root-80 MuiInput-formControl-81 MuiInput-underline-84 WithUtils-DateTextField--input-144"
+          className="MuiInput-root-79 MuiInput-formControl-80 MuiInput-underline-83 WithUtils-DateTextField--input-142"
         >
           <input
             aria-invalid={false}
             aria-required={false}
-            className="MuiInput-input-88"
+            className="MuiInput-input-87"
             disabled={false}
             id="datetime"
             onBlur={[Function]}
@@ -1909,10 +1905,10 @@ exports[`renders correctly with content 1`] = `
             value="03.01.2018, 03:28 pm"
           />
           <div
-            className="MuiInputAdornment-root-133 MuiInputAdornment-positionEnd-135"
+            className="MuiInputAdornment-root-131 MuiInputAdornment-positionEnd-133"
           >
             <button
-              className="MuiButtonBase-root-151 MuiIconButton-root-145"
+              className="MuiButtonBase-root-149 MuiIconButton-root-143"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -1929,17 +1925,17 @@ exports[`renders correctly with content 1`] = `
               type="button"
             >
               <span
-                className="MuiIconButton-label-150"
+                className="MuiIconButton-label-148"
               >
                  
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-154"
+                  className="material-icons MuiIcon-root-152"
                 >
                    
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root-99"
+                    className="MuiSvgIcon-root-97"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
@@ -1954,7 +1950,7 @@ exports[`renders correctly with content 1`] = `
                  
               </span>
               <span
-                className="MuiTouchRipple-root-160"
+                className="MuiTouchRipple-root-158"
               />
             </button>
           </div>
@@ -1985,12 +1981,12 @@ exports[`renders correctly with content 1`] = `
         Disabled Text
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-disabled-83 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-disabled-82 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <input
           aria-invalid={false}
           aria-required={false}
-          className="MuiInput-input-88 MuiInput-inputDisabled-90"
+          className="MuiInput-input-87 MuiInput-disabled-82"
           disabled={true}
           id="disabled"
           onBlur={[Function]}
@@ -2016,16 +2012,16 @@ exports[`renders correctly with content 1`] = `
         Disabled Select
       </label>
       <div
-        className="MuiInput-root-80 MuiInput-disabled-83 MuiInput-fullWidth-87 MuiInput-formControl-81 MuiInput-underline-84"
+        className="MuiInput-root-79 MuiInput-disabled-82 MuiInput-fullWidth-86 MuiInput-formControl-80 MuiInput-underline-83"
       >
         <div
-          className="MuiSelect-root-94"
+          className="MuiSelect-root-92"
         >
           <div
             aria-haspopup="true"
             aria-owns={null}
             aria-pressed="false"
-            className="MuiSelect-select-95 MuiSelect-selectMenu-96 MuiSelect-disabled-97 MuiInput-input-88 MuiInput-inputDisabled-90"
+            className="MuiSelect-select-93 MuiSelect-selectMenu-94 MuiSelect-disabled-95 MuiInput-input-87 MuiInput-disabled-82"
             onBlur={[Function]}
             onClick={null}
             onFocus={[Function]}
@@ -2051,7 +2047,7 @@ exports[`renders correctly with content 1`] = `
           />
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-99 MuiSelect-icon-98"
+            className="MuiSvgIcon-root-97 MuiSelect-icon-96"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -2075,13 +2071,13 @@ exports[`renders correctly with content 1`] = `
       className="FormFieldBranch-field-59 FormFieldBranch-widthSmall-62 FormFieldBranch-fieldInline-60"
     >
       <label
-        className="MuiFormControlLabel-root-181"
+        className="MuiFormControlLabel-root-179"
       >
         <span
-          className="MuiSwitch-root-185"
+          className="MuiSwitch-root-182"
         >
           <span
-            className="MuiButtonBase-root-151 MuiIconButton-root-145 MuiSwitchBase-root-194 MuiSwitchBase-default-196 MuiSwitch-default-189"
+            className="MuiButtonBase-root-149 MuiIconButton-root-143 MuiSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorPrimary-187"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -2095,14 +2091,14 @@ exports[`renders correctly with content 1`] = `
             tabIndex={null}
           >
             <span
-              className="MuiIconButton-label-150"
+              className="MuiIconButton-label-148"
             >
               <span
-                className="MuiSwitch-icon-187"
+                className="MuiSwitch-icon-183"
               />
               <input
                 checked={false}
-                className="MuiSwitchBase-input-195"
+                className="MuiSwitchBase-input-194"
                 disabled={false}
                 onChange={[Function]}
                 type="checkbox"
@@ -2110,21 +2106,21 @@ exports[`renders correctly with content 1`] = `
               />
             </span>
             <span
-              className="MuiTouchRipple-root-160"
+              className="MuiTouchRipple-root-158"
             />
           </span>
           <span
-            className="MuiSwitch-bar-186"
+            className="MuiSwitch-bar-190"
           />
         </span>
         <span
-          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-183"
+          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-181"
         >
           Switch
         </span>
       </label>
       <p
-        className="MuiFormHelperText-root-140"
+        className="MuiFormHelperText-root-138"
       >
         Display Helper Text
       </p>
@@ -2133,13 +2129,13 @@ exports[`renders correctly with content 1`] = `
       className="FormFieldBranch-field-59 FormFieldBranch-widthSmall-62 FormFieldBranch-fieldInline-60"
     >
       <label
-        className="MuiFormControlLabel-root-181 MuiFormControlLabel-disabled-182"
+        className="MuiFormControlLabel-root-179 MuiFormControlLabel-disabled-180"
       >
         <span
-          className="MuiSwitch-root-185"
+          className="MuiSwitch-root-182"
         >
           <span
-            className="MuiButtonBase-root-151 MuiButtonBase-disabled-152 MuiIconButton-root-145 MuiIconButton-disabled-149 MuiSwitchBase-root-194 MuiSwitchBase-default-196 MuiSwitch-default-189 MuiSwitchBase-disabled-198 MuiSwitch-disabled-193"
+            className="MuiButtonBase-root-149 MuiButtonBase-disabled-150 MuiIconButton-root-143 MuiIconButton-disabled-147 MuiSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorPrimary-187 MuiSwitchBase-disabled-193 MuiSwitch-disabled-189"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -2153,14 +2149,14 @@ exports[`renders correctly with content 1`] = `
             tabIndex="-1"
           >
             <span
-              className="MuiIconButton-label-150"
+              className="MuiIconButton-label-148"
             >
               <span
-                className="MuiSwitch-icon-187"
+                className="MuiSwitch-icon-183"
               />
               <input
                 checked={false}
-                className="MuiSwitchBase-input-195"
+                className="MuiSwitchBase-input-194"
                 disabled={true}
                 onChange={[Function]}
                 type="checkbox"
@@ -2169,17 +2165,17 @@ exports[`renders correctly with content 1`] = `
             </span>
           </span>
           <span
-            className="MuiSwitch-bar-186"
+            className="MuiSwitch-bar-190"
           />
         </span>
         <span
-          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-183 MuiFormControlLabel-labelDisabled-184"
+          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-181 MuiFormControlLabel-disabled-180"
         >
           Switch - Disabled
         </span>
       </label>
       <p
-        className="MuiFormHelperText-root-140 MuiFormHelperText-disabled-142"
+        className="MuiFormHelperText-root-138 MuiFormHelperText-disabled-140"
       >
         Display Helper Text
       </p>
@@ -2189,10 +2185,10 @@ exports[`renders correctly with content 1`] = `
     Foo
   </p>
   <div
-    className="FormSubmitButton-root-199"
+    className="FormSubmitButton-root-195"
   >
     <button
-      className="MuiButtonBase-root-151 MuiButton-root-203 MuiButton-raised-208 MuiButton-raisedSecondary-211 FormSubmitButton-button-201"
+      className="MuiButtonBase-root-149 MuiButton-root-199 MuiButton-raised-204 MuiButton-raisedSecondary-206 FormSubmitButton-button-197"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -2209,12 +2205,12 @@ exports[`renders correctly with content 1`] = `
       type="button"
     >
       <span
-        className="MuiButton-label-204"
+        className="MuiButton-label-200"
       >
         Save the form
       </span>
       <span
-        className="MuiTouchRipple-root-160"
+        className="MuiTouchRipple-root-158"
       />
     </button>
   </div>

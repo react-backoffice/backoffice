@@ -28,7 +28,7 @@ exports[`Tabs renders correctly 1`] = `
           >
             <button
               aria-selected={true}
-              className="MuiButtonBase-root-62 MuiTab-root-46 MuiTab-textColorInherit-48 MuiTab-textColorInheritSelected-55"
+              className="MuiButtonBase-root-58 MuiTab-root-46 MuiTab-textColorInherit-48 MuiTab-selected-51"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -46,25 +46,25 @@ exports[`Tabs renders correctly 1`] = `
               type="button"
             >
               <span
-                className="MuiTab-wrapper-58"
+                className="MuiTab-wrapper-54"
               >
                 <span
-                  className="MuiTab-labelContainer-59"
+                  className="MuiTab-labelContainer-55"
                 >
                   <span
-                    className="MuiTab-label-60"
+                    className="MuiTab-label-56"
                   >
                     Title
                   </span>
                 </span>
               </span>
               <span
-                className="MuiTouchRipple-root-68"
+                className="MuiTouchRipple-root-64"
               />
             </button>
           </div>
           <span
-            className="MuiTabIndicator-root-65 MuiTabIndicator-colorSecondary-67 MuiTabs-indicator-45"
+            className="MuiTabIndicator-root-61 MuiTabIndicator-colorSecondary-63 MuiTabs-indicator-45"
             style={
               Object {
                 "left": 0,
@@ -77,7 +77,7 @@ exports[`Tabs renders correctly 1`] = `
     </div>
   </header>
   <div
-    className="MuiTypography-root-75 MuiTypography-body1-84"
+    className="MuiTypography-root-71 MuiTypography-body1-80"
     style={
       Object {
         "padding": 24,
@@ -118,7 +118,7 @@ exports[`Tabs renders correctly if no data 1`] = `
             className="MuiTabs-flexContainer-38"
           />
           <span
-            className="MuiTabIndicator-root-65 MuiTabIndicator-colorSecondary-67 MuiTabs-indicator-45"
+            className="MuiTabIndicator-root-61 MuiTabIndicator-colorSecondary-63 MuiTabs-indicator-45"
             style={
               Object {
                 "left": 0,

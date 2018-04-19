@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
     className="MuiTableHead-root-2"
   >
     <tr
-      className="MuiTableRow-root-3 MuiTableRow-head-4"
+      className="MuiTableRow-root-3 MuiTableRow-head-6"
     >
       <th
         aria-sort={null}
@@ -16,7 +16,7 @@ exports[`renders correctly 1`] = `
         scope="col"
       >
         <span
-          className="MuiButtonBase-root-32 MuiIconButton-root-26 MuiSwitchBase-root-21 MuiSwitchBase-default-23 MuiCheckbox-default-16 MuiSwitchBase-checked-24 MuiCheckbox-checked-17 MuiCheckbox-checkedPrimary-18"
+          className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-21 MuiCheckbox-root-16 MuiCheckbox-colorPrimary-19 MuiSwitchBase-checked-22 MuiCheckbox-checked-17"
           onBlur={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
@@ -30,11 +30,11 @@ exports[`renders correctly 1`] = `
           tabIndex={null}
         >
           <span
-            className="MuiIconButton-label-31"
+            className="MuiIconButton-label-30"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-35"
+              className="MuiSvgIcon-root-34"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -44,13 +44,13 @@ exports[`renders correctly 1`] = `
             </svg>
             <input
               checked={true}
-              className="MuiSwitchBase-input-22"
+              className="MuiSwitchBase-input-24"
               onChange={[Function]}
               type="checkbox"
             />
           </span>
           <span
-            className="MuiTouchRipple-root-41"
+            className="MuiTouchRipple-root-40"
           />
         </span>
       </th>
@@ -62,7 +62,7 @@ exports[`renders correctly 1`] = `
         Array [
           "",
           <span
-            className="MuiButtonBase-root-32 MuiTableSortLabel-root-57 MuiTableSortLabel-active-58"
+            className="MuiButtonBase-root-31 MuiTableSortLabel-root-56 MuiTableSortLabel-active-57"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -77,12 +77,11 @@ exports[`renders correctly 1`] = `
             onTouchStart={[Function]}
             role="button"
             tabIndex="0"
-            title="Sort"
           >
             Name
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-35 MuiTableSortLabel-icon-59 MuiTableSortLabel-iconDirectionAsc-61"
+              className="MuiSvgIcon-root-34 MuiTableSortLabel-icon-58 MuiTableSortLabel-iconDirectionAsc-60"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -92,7 +91,7 @@ exports[`renders correctly 1`] = `
             </svg>
           </span>,
           <div
-            className="MuiTooltip-popper-49 MuiTooltip-popperClose-50"
+            className="MuiTooltip-popper-48"
             style={
               Object {
                 "left": 0,
@@ -105,7 +104,7 @@ exports[`renders correctly 1`] = `
           >
             <div
               aria-hidden={true}
-              className="MuiTooltip-tooltip-51 MuiTooltip-tooltipPlacementBottom-55"
+              className="MuiTooltip-tooltip-50 MuiTooltip-tooltipPlacementBottom-55"
               role="tooltip"
             >
               Sort

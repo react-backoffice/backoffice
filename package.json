@@ -30,7 +30,7 @@
     "jest": "^22.1.4",
     "jss": "^9.5.1",
     "keycode": "^2.1.9",
-    "material-ui": "1.0.0-beta.41",
+    "material-ui": "^1.0.0-beta.42",
     "material-ui-pickers": "^1.0.0-beta.15.1",
     "moment": "^2.20.1",
     "prop-types": "^15.6.1",

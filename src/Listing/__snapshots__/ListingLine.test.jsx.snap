@@ -6,7 +6,7 @@ exports[`renders correctly 1`] = `
 >
   <tr
     aria-checked={false}
-    className="MuiTableRow-root-2 MuiTableRow-hover-6"
+    className="MuiTableRow-root-2 MuiTableRow-hover-4"
     onKeyDown={[Function]}
     role="checkbox"
     tabIndex={-1}
@@ -17,7 +17,7 @@ exports[`renders correctly 1`] = `
       onClick={[Function]}
     >
       <span
-        className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-20 MuiSwitchBase-default-22 MuiCheckbox-default-15"
+        className="MuiButtonBase-root-30 MuiIconButton-root-24 MuiSwitchBase-root-20 MuiCheckbox-root-15 MuiCheckbox-colorPrimary-18"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -31,11 +31,11 @@ exports[`renders correctly 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-30"
+          className="MuiIconButton-label-29"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-34"
+            className="MuiSvgIcon-root-33"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -45,13 +45,13 @@ exports[`renders correctly 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiSwitchBase-input-21"
+            className="MuiSwitchBase-input-23"
             onChange={[Function]}
             type="checkbox"
           />
         </span>
         <span
-          className="MuiTouchRipple-root-40"
+          className="MuiTouchRipple-root-39"
         />
       </span>
     </td>
@@ -79,7 +79,7 @@ exports[`renders highlighted 1`] = `
 >
   <tr
     aria-checked={true}
-    className="MuiTableRow-root-2 MuiTableRow-hover-6 MuiTableRow-selected-5"
+    className="MuiTableRow-root-2 MuiTableRow-hover-4 MuiTableRow-selected-3"
     onKeyDown={[Function]}
     role="checkbox"
     tabIndex={-1}
@@ -90,7 +90,7 @@ exports[`renders highlighted 1`] = `
       onClick={[Function]}
     >
       <span
-        className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-20 MuiSwitchBase-default-22 MuiCheckbox-default-15 MuiSwitchBase-checked-23 MuiCheckbox-checked-16 MuiCheckbox-checkedPrimary-17"
+        className="MuiButtonBase-root-30 MuiIconButton-root-24 MuiSwitchBase-root-20 MuiCheckbox-root-15 MuiCheckbox-colorPrimary-18 MuiSwitchBase-checked-21 MuiCheckbox-checked-16"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -104,11 +104,11 @@ exports[`renders highlighted 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-30"
+          className="MuiIconButton-label-29"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-34"
+            className="MuiSvgIcon-root-33"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -118,13 +118,13 @@ exports[`renders highlighted 1`] = `
           </svg>
           <input
             checked={true}
-            className="MuiSwitchBase-input-21"
+            className="MuiSwitchBase-input-23"
             onChange={[Function]}
             type="checkbox"
           />
         </span>
         <span
-          className="MuiTouchRipple-root-40"
+          className="MuiTouchRipple-root-39"
         />
       </span>
     </td>
@@ -158,7 +158,7 @@ exports[`renders selected 1`] = `
 >
   <tr
     aria-checked={true}
-    className="MuiTableRow-root-2 MuiTableRow-hover-6 MuiTableRow-selected-5"
+    className="MuiTableRow-root-2 MuiTableRow-hover-4 MuiTableRow-selected-3"
     onKeyDown={[Function]}
     role="checkbox"
     tabIndex={-1}
@@ -169,7 +169,7 @@ exports[`renders selected 1`] = `
       onClick={[Function]}
     >
       <span
-        className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-20 MuiSwitchBase-default-22 MuiCheckbox-default-15 MuiSwitchBase-checked-23 MuiCheckbox-checked-16 MuiCheckbox-checkedPrimary-17"
+        className="MuiButtonBase-root-30 MuiIconButton-root-24 MuiSwitchBase-root-20 MuiCheckbox-root-15 MuiCheckbox-colorPrimary-18 MuiSwitchBase-checked-21 MuiCheckbox-checked-16"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -183,11 +183,11 @@ exports[`renders selected 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-30"
+          className="MuiIconButton-label-29"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-34"
+            className="MuiSvgIcon-root-33"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -197,13 +197,13 @@ exports[`renders selected 1`] = `
           </svg>
           <input
             checked={true}
-            className="MuiSwitchBase-input-21"
+            className="MuiSwitchBase-input-23"
             onChange={[Function]}
             type="checkbox"
           />
         </span>
         <span
-          className="MuiTouchRipple-root-40"
+          className="MuiTouchRipple-root-39"
         />
       </span>
     </td>

@@ -15,7 +15,7 @@ exports[`renders correctly 1`] = `
       <input
         aria-invalid={false}
         aria-required={false}
-        className="MuiInput-input-16 MuiInput-inputType-20 MuiInput-inputTypeSearch-21"
+        className="MuiInput-input-16 MuiInput-inputType-19 MuiInput-inputTypeSearch-20"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
@@ -28,7 +28,7 @@ exports[`renders correctly 1`] = `
   Array [
     "",
     <button
-      className="MuiButtonBase-root-37 MuiIconButton-root-31"
+      className="MuiButtonBase-root-36 MuiIconButton-root-30"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -43,15 +43,14 @@ exports[`renders correctly 1`] = `
       onTouchMove={[Function]}
       onTouchStart={[Function]}
       tabIndex="0"
-      title="Search"
       type="button"
     >
       <span
-        className="MuiIconButton-label-36"
+        className="MuiIconButton-label-35"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-40"
+          className="MuiSvgIcon-root-39"
           focusable="false"
           viewBox="0 0 24 24"
         >
@@ -63,11 +62,11 @@ exports[`renders correctly 1`] = `
         </svg>
       </span>
       <span
-        className="MuiTouchRipple-root-46"
+        className="MuiTouchRipple-root-45"
       />
     </button>,
     <div
-      className="MuiTooltip-popper-23 MuiTooltip-popperClose-24"
+      className="MuiTooltip-popper-22"
       style={
         Object {
           "left": 0,
@@ -80,7 +79,7 @@ exports[`renders correctly 1`] = `
     >
       <div
         aria-hidden={true}
-        className="MuiTooltip-tooltip-25 MuiTooltip-tooltipPlacementBottom-29"
+        className="MuiTooltip-tooltip-24 MuiTooltip-tooltipPlacementBottom-29"
         role="tooltip"
       >
         Search
@@ -105,7 +104,7 @@ exports[`renders correctly when open 1`] = `
       <input
         aria-invalid={false}
         aria-required={false}
-        className="MuiInput-input-16 MuiInput-inputType-20 MuiInput-inputTypeSearch-21"
+        className="MuiInput-input-16 MuiInput-inputType-19 MuiInput-inputTypeSearch-20"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
@@ -118,7 +117,7 @@ exports[`renders correctly when open 1`] = `
   Array [
     "",
     <button
-      className="MuiButtonBase-root-37 MuiIconButton-root-31"
+      className="MuiButtonBase-root-36 MuiIconButton-root-30"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -133,15 +132,14 @@ exports[`renders correctly when open 1`] = `
       onTouchMove={[Function]}
       onTouchStart={[Function]}
       tabIndex="0"
-      title="Search"
       type="button"
     >
       <span
-        className="MuiIconButton-label-36"
+        className="MuiIconButton-label-35"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-40"
+          className="MuiSvgIcon-root-39"
           focusable="false"
           viewBox="0 0 24 24"
         >
@@ -153,11 +151,11 @@ exports[`renders correctly when open 1`] = `
         </svg>
       </span>
       <span
-        className="MuiTouchRipple-root-46"
+        className="MuiTouchRipple-root-45"
       />
     </button>,
     <div
-      className="MuiTooltip-popper-23 MuiTooltip-popperClose-24"
+      className="MuiTooltip-popper-22"
       style={
         Object {
           "left": 0,
@@ -170,7 +168,7 @@ exports[`renders correctly when open 1`] = `
     >
       <div
         aria-hidden={true}
-        className="MuiTooltip-tooltip-25 MuiTooltip-tooltipPlacementBottom-29"
+        className="MuiTooltip-tooltip-24 MuiTooltip-tooltipPlacementBottom-29"
         role="tooltip"
       >
         Search

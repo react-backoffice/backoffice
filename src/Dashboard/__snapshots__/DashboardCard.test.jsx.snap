@@ -2,19 +2,19 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="MuiPaper-root-7 MuiPaper-elevation2-11 MuiPaper-rounded-8 DashboardCard-root-1"
+  className="MuiPaper-root-8 MuiPaper-elevation2-12 MuiPaper-rounded-9 MuiCard-root-7 DashboardCard-root-1"
   onClick={[Function]}
 >
   <div
-    className="MuiCardContent-root-34 DashboardCard-content-2"
+    className="MuiCardContent-root-35 DashboardCard-content-2"
   >
     <h2
-      className="MuiTypography-root-35 MuiTypography-headline-40 DashboardCard-title-4"
+      className="MuiTypography-root-36 MuiTypography-headline-41 DashboardCard-title-4"
     >
       Title
     </h2>
     <p
-      className="MuiTypography-root-35 MuiTypography-body1-44"
+      className="MuiTypography-root-36 MuiTypography-body1-45"
     >
       desc
     </p>
@@ -24,15 +24,15 @@ exports[`renders correctly 1`] = `
 
 exports[`renders disabled 1`] = `
 <div
-  className="MuiPaper-root-7 MuiPaper-elevation2-11 MuiPaper-rounded-8 DashboardCard-root-1 DashboardCard-disabled-5"
+  className="MuiPaper-root-8 MuiPaper-elevation2-12 MuiPaper-rounded-9 MuiCard-root-7 DashboardCard-root-1 DashboardCard-disabled-5"
   onClick={[Function]}
 >
   <div
-    className="MuiCardContent-root-34 DashboardCard-content-2"
+    className="MuiCardContent-root-35 DashboardCard-content-2"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-59 DashboardCard-icon-6"
+      className="MuiSvgIcon-root-60 DashboardCard-icon-6"
       focusable="false"
       viewBox="0 0 24 24"
     >
@@ -43,12 +43,12 @@ exports[`renders disabled 1`] = `
       </g>
     </svg>
     <h2
-      className="MuiTypography-root-35 MuiTypography-headline-40 DashboardCard-title-4"
+      className="MuiTypography-root-36 MuiTypography-headline-41 DashboardCard-title-4"
     >
       Title
     </h2>
     <p
-      className="MuiTypography-root-35 MuiTypography-body1-44"
+      className="MuiTypography-root-36 MuiTypography-body1-45"
     >
       desc
     </p>

@@ -29,17 +29,17 @@ exports[`renders correctly 1`] = `
       </h1>
     </div>
     <div
-      className="MuiGrid-typeContainer-28 MuiGrid-spacing-xs-16-50"
+      className="MuiGrid-container-28 MuiGrid-spacing-xs-16-50"
     >
       <div
-        className="MuiGrid-typeItem-29 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-4-70"
+        className="MuiGrid-item-29 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-4-70"
       >
         <div
-          className="MuiPaper-root-124 MuiPaper-elevation2-128 MuiPaper-rounded-125 DashboardCard-root-118"
+          className="MuiPaper-root-125 MuiPaper-elevation2-129 MuiPaper-rounded-126 MuiCard-root-124 DashboardCard-root-118"
           onClick={[Function]}
         >
           <div
-            className="MuiCardContent-root-151 DashboardCard-content-119"
+            className="MuiCardContent-root-152 DashboardCard-content-119"
           >
             <h2
               className="MuiTypography-root-3 MuiTypography-headline-8 DashboardCard-title-121"

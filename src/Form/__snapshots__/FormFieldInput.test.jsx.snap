@@ -39,7 +39,7 @@ exports[`renders disabled 1`] = `
     <input
       aria-invalid={false}
       aria-required={false}
-      className="MuiInput-input-13 MuiInput-inputDisabled-15"
+      className="MuiInput-input-13 MuiInput-disabled-8"
       disabled={true}
       onBlur={[Function]}
       onChange={[Function]}
