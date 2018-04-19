@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import keycode from 'keycode'
+import Uuid from 'init-uuid'
+import Store from 'vanilla-store'
 
 import ListingBranch from './ListingBranch'
 
@@ -12,9 +14,11 @@ const withListing = Component => class Listing extends React.Component {
     headers: PropTypes.arrayOf(PropTypes.object).isRequired,
     toolbarContent: PropTypes.node,
     onUpdateSelection: PropTypes.func,
+    id: PropTypes.string,
   }
 
   static defaultProps = {
+    id: new Uuid().get(),
     hasLoader: false,
     toolbarContent: (<Fragment />),
     onUpdateSelection: () => {},
@@ -96,6 +100,7 @@ const withListing = Component => class Listing extends React.Component {
       rowsPerPage: 10,
       searchable: [],
       origData: null,
+      id: null,
     }
 
     this.handleRequestSort = this.handleRequestSort.bind(this)
@@ -109,10 +114,23 @@ const withListing = Component => class Listing extends React.Component {
   }
 
   componentWillMount() {
-    this.setState({
+    const storedData = Store.get('Listing', this.props.id)
+    const newState = {
       data: this.sortData(this.props.data),
       searchable: Listing.getSearchableHeaders(this.props.headers),
-    })
+    }
+
+    if (storedData) {
+      if (storedData.page) {
+        newState.page = storedData.page
+      }
+
+      if (storedData.rowsPerPage) {
+        newState.rowsPerPage = storedData.rowsPerPage
+      }
+    }
+
+    this.setState(newState)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -123,6 +141,16 @@ const withListing = Component => class Listing extends React.Component {
       orderBy: nextProps.orderBy,
       searchable: Listing.getSearchableHeaders(nextProps.headers),
     })
+  }
+
+  getId() {
+    const idList = this.props.headers.map(header => header.id)
+
+    return idList.join().split('')
+      .reduce((a, b) => {
+        const newA = ((a << 5) - a) + b.charCodeAt(0) // eslint-disable-line
+        return newA & newA // eslint-disable-line
+      }, 0)
   }
 
   sortData(data) {
@@ -215,14 +243,27 @@ const withListing = Component => class Listing extends React.Component {
   }
 
   handleChangePage(event, page) {
+    Store.create('Listing', {
+      id: this.props.id,
+      rowsPerPage: this.state.rowsPerPage,
+      page,
+    })
+
     this.setState({
       page,
     })
   }
 
   handleChangeRowsPerPage(event) {
+    const rowsPerPage = event.target.value
+    Store.create('Listing', {
+      id: this.state.id,
+      page: this.state.page,
+      rowsPerPage,
+    })
+
     this.setState({
-      rowsPerPage: event.target.value,
+      rowsPerPage,
     })
   }
 

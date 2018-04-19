@@ -381,6 +381,7 @@ const header = ({ onDrawerOpen, onClick }) => (
 
 Data-Table to display data.
 
+* `id?: string`, id for list
 * `title?: string`, title to show for listing section
 * `headers: ListingHeader[]`, use for headers in listing
 * `data: any[]`, data to display in table

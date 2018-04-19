@@ -96,8 +96,8 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.2.tgz#e49ac1adb458835e95ca6487bc20f916b37aff23"
 
 "@types/react-transition-group@^2.0.6":
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-2.0.7.tgz#2847292d54c5685d982ae5a3ecb6960946689d87"
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-2.0.8.tgz#1ea86f6d8288e4bba8d743317ba9cc61cdacc1ad"
   dependencies:
     "@types/react" "*"
 
@@ -3230,6 +3230,10 @@ ini@~1.3.0:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
 
+init-uuid@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/init-uuid/-/init-uuid-1.2.0.tgz#08a66d0e21b8e9716bb53b503311fc2f31bef14a"
+
 inquirer@^3.0.6:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-3.3.0.tgz#9dd2f2ad765dcab1ff0443b491442a20ba227dc9"
@@ -4257,7 +4261,7 @@ material-ui-pickers@^1.0.0-beta.15.1:
     babel-runtime "^6.26.0"
     react-text-mask "^5.1.0"
 
-material-ui@^1.0.0-beta.33:
+material-ui@1.0.0-beta.41:
   version "1.0.0-beta.41"
   resolved "https://registry.yarnpkg.com/material-ui/-/material-ui-1.0.0-beta.41.tgz#0869bed008caa10003ab20ea726476b560c23160"
   dependencies:
@@ -6545,6 +6549,16 @@ validate-npm-package-license@^3.0.1:
 value-equal@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/value-equal/-/value-equal-0.4.0.tgz#c5bdd2f54ee093c04839d71ce2e4758a6890abc7"
+
+vanilla-pubsub@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/vanilla-pubsub/-/vanilla-pubsub-1.1.2.tgz#19e180f7e01c4e9548a7349a8b2a5587f8848da7"
+
+vanilla-store@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/vanilla-store/-/vanilla-store-0.4.0.tgz#e01a6d1a6829dc3800c2cffcd612f99b8088949c"
+  dependencies:
+    vanilla-pubsub "^1.1.2"
 
 vary@~1.1.2:
   version "1.1.2"
