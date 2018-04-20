@@ -6,6 +6,15 @@ import Store from 'vanilla-store'
 
 import ListingBranch from './ListingBranch'
 
+/* eslint-disable */
+Math.easeInOutQuad = (t, b, c, d) => {
+  t /= d / 2
+  if (t < 1) return c / 2 * t * t + b
+  t--
+  return -c / 2 * (t * (t - 2) - 1) + b
+};
+/* eslint-enable */
+
 const withListing = Component => class Listing extends React.Component {
   static propTypes = {
     orderBy: PropTypes.string.isRequired,
@@ -104,6 +113,8 @@ const withListing = Component => class Listing extends React.Component {
       origData: null,
       id: null,
     }
+
+    this.node = React.createRef()
 
     this.handleRequestSort = this.handleRequestSort.bind(this)
     this.handleSelectAllClick = this.handleSelectAllClick.bind(this)
@@ -244,12 +255,39 @@ const withListing = Component => class Listing extends React.Component {
     })
   }
 
+  scrollToElement() {
+    if (!this.node.current) {
+      return
+    }
+
+    const { offsetTop } = this.node.current
+    const start = window.scrollY
+    const change = offsetTop - start
+    const increment = 20
+    const duration = 250
+    let currentTime = 0
+
+    const animateScroll = () => {
+      currentTime += increment
+      const val = Math.easeInOutQuad(currentTime, start, change, duration)
+      window.scrollTo(0, val)
+
+      if (currentTime < duration) {
+        setTimeout(animateScroll, increment)
+      }
+    }
+
+    animateScroll()
+  }
+
   handleChangePage(event, page) {
     Store.create('Listing', {
       id: this.props.id,
       rowsPerPage: this.state.rowsPerPage,
       page,
     })
+
+    this.scrollToElement()
 
     this.setState({
       page,
@@ -321,18 +359,20 @@ const withListing = Component => class Listing extends React.Component {
 
   render() {
     return (
-      <Component
-        {...this.props}
-        {...this.state}
-        handleRequestSort={this.handleRequestSort}
-        handleSelectAllClick={this.handleSelectAllClick}
-        handleKeyDown={this.handleKeyDown}
-        handleCheckClick={this.handleCheckClick}
-        handleChangeRowsPerPage={this.handleChangeRowsPerPage}
-        handleChangePage={this.handleChangePage}
-        onFilter={this.handleFilter}
-        isSelected={this.isSelected}
-      />
+      <div ref={this.node}>
+        <Component
+          {...this.props}
+          {...this.state}
+          handleRequestSort={this.handleRequestSort}
+          handleSelectAllClick={this.handleSelectAllClick}
+          handleKeyDown={this.handleKeyDown}
+          handleCheckClick={this.handleCheckClick}
+          handleChangeRowsPerPage={this.handleChangeRowsPerPage}
+          handleChangePage={this.handleChangePage}
+          onFilter={this.handleFilter}
+          isSelected={this.isSelected}
+        />
+      </div>
     )
   }
 }
