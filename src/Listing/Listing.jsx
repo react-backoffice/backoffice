@@ -78,9 +78,11 @@ const withListing = Component => class Listing extends React.Component {
 
     if (newElement) {
       Object.keys(newElement).forEach((key) => {
-        newElement[key] = {
-          highlight: searchValue,
-          value: newElement[key].highlight ? newElement[key].value : newElement[key],
+        if (newElement[key]) {
+          newElement[key] = {
+            highlight: searchValue,
+            value: newElement[key].highlight ? newElement[key].value : newElement[key],
+          }
         }
       })
     }
