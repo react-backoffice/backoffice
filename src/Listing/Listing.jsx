@@ -156,16 +156,6 @@ const withListing = Component => class Listing extends React.Component {
     })
   }
 
-  getId() {
-    const idList = this.props.headers.map(header => header.id)
-
-    return idList.join().split('')
-      .reduce((a, b) => {
-        const newA = ((a << 5) - a) + b.charCodeAt(0) // eslint-disable-line
-        return newA & newA // eslint-disable-line
-      }, 0)
-  }
-
   sortData(data) {
     const { orderBy } = this.state
     const { headers } = this.props

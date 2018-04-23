@@ -12,7 +12,7 @@ import replace from '../utils/replace'
 const getCellContent = (content, transformContent, data) => {
   let printableContent = content
 
-  if (content.highlight) {
+  if (content && content.highlight) {
     printableContent = content.value
   }
 
