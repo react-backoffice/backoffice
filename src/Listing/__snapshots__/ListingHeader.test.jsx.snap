@@ -34,7 +34,7 @@ exports[`renders correctly 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-34"
+              className="MuiSvgIcon-root-33"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -50,7 +50,7 @@ exports[`renders correctly 1`] = `
             />
           </span>
           <span
-            className="MuiTouchRipple-root-40"
+            className="MuiTouchRipple-root-39"
           />
         </span>
       </th>
@@ -62,7 +62,7 @@ exports[`renders correctly 1`] = `
         Array [
           "",
           <span
-            className="MuiButtonBase-root-31 MuiTableSortLabel-root-56 MuiTableSortLabel-active-57"
+            className="MuiButtonBase-root-31 MuiTableSortLabel-root-55 MuiTableSortLabel-active-56"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -81,7 +81,7 @@ exports[`renders correctly 1`] = `
             Name
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-34 MuiTableSortLabel-icon-58 MuiTableSortLabel-iconDirectionAsc-60"
+              className="MuiSvgIcon-root-33 MuiTableSortLabel-icon-57 MuiTableSortLabel-iconDirectionAsc-59"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -91,7 +91,7 @@ exports[`renders correctly 1`] = `
             </svg>
           </span>,
           <div
-            className="MuiTooltip-popper-48"
+            className="MuiTooltip-popper-47"
             style={
               Object {
                 "left": 0,
@@ -104,7 +104,7 @@ exports[`renders correctly 1`] = `
           >
             <div
               aria-hidden={true}
-              className="MuiTooltip-tooltip-50 MuiTooltip-tooltipPlacementBottom-55"
+              className="MuiTooltip-tooltip-49 MuiTooltip-tooltipPlacementBottom-54"
               role="tooltip"
             >
               Sort

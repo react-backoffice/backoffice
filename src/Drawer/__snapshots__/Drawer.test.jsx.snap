@@ -35,7 +35,7 @@ exports[`renders correctly 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-50"
+              className="MuiSvgIcon-root-49"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -47,21 +47,21 @@ exports[`renders correctly 1`] = `
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-56"
+            className="MuiTouchRipple-root-55"
           />
         </button>
       </div>
       <hr
-        className="MuiDivider-root-63"
+        className="MuiDivider-root-62"
       />
       <div
-        className="Menu-root-67"
+        className="Menu-root-66"
       >
         <ul
-          className="MuiList-root-68 MuiList-padding-69"
+          className="MuiList-root-67 MuiList-padding-68"
         >
           <div
-            className="MuiButtonBase-root-47 MuiListItem-root-73 MuiListItem-default-76 MuiListItem-gutters-80 MuiListItem-button-81"
+            className="MuiButtonBase-root-47 MuiListItem-root-72 MuiListItem-default-75 MuiListItem-gutters-79 MuiListItem-button-80"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -77,20 +77,20 @@ exports[`renders correctly 1`] = `
             tabIndex="0"
           >
             <div
-              className="MuiListItemText-root-83"
+              className="MuiListItemText-root-82"
             >
               <h3
-                className="MuiTypography-root-89 MuiTypography-subheading-96 MuiListItemText-primary-86"
+                className="MuiTypography-root-88 MuiTypography-subheading-95 MuiListItemText-primary-85"
               >
                 Dashboard
               </h3>
             </div>
             <span
-              className="MuiTouchRipple-root-56"
+              className="MuiTouchRipple-root-55"
             />
           </div>
           <div
-            className="MuiButtonBase-root-47 MuiListItem-root-73 MuiListItem-default-76 MuiListItem-gutters-80 MuiListItem-button-81 MenuItem-isDisabled-72"
+            className="MuiButtonBase-root-47 MuiListItem-root-72 MuiListItem-default-75 MuiListItem-gutters-79 MuiListItem-button-80 MenuItem-isDisabled-71"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -106,23 +106,23 @@ exports[`renders correctly 1`] = `
             tabIndex="0"
           >
             <div
-              className="MuiListItemText-root-83"
+              className="MuiListItemText-root-82"
             >
               <h3
-                className="MuiTypography-root-89 MuiTypography-subheading-96 MuiListItemText-primary-86"
+                className="MuiTypography-root-88 MuiTypography-subheading-95 MuiListItemText-primary-85"
               >
                 New portfolio
               </h3>
             </div>
             <span
-              className="MuiTouchRipple-root-56"
+              className="MuiTouchRipple-root-55"
             />
           </div>
           <hr
-            className="MuiDivider-root-63"
+            className="MuiDivider-root-62"
           />
           <div
-            className="MuiButtonBase-root-47 MuiListItem-root-73 MuiListItem-default-76 MuiListItem-gutters-80 MuiListItem-button-81"
+            className="MuiButtonBase-root-47 MuiListItem-root-72 MuiListItem-default-75 MuiListItem-gutters-79 MuiListItem-button-80"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -139,7 +139,7 @@ exports[`renders correctly 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-50 MuiListItemIcon-root-113"
+              className="MuiSvgIcon-root-49 MuiListItemIcon-root-112"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -150,16 +150,16 @@ exports[`renders correctly 1`] = `
               </g>
             </svg>
             <div
-              className="MuiListItemText-root-83"
+              className="MuiListItemText-root-82"
             >
               <h3
-                className="MuiTypography-root-89 MuiTypography-subheading-96 MuiListItemText-primary-86"
+                className="MuiTypography-root-88 MuiTypography-subheading-95 MuiListItemText-primary-85"
               >
                 Report a bug
               </h3>
             </div>
             <span
-              className="MuiTouchRipple-root-56"
+              className="MuiTouchRipple-root-55"
             />
           </div>
         </ul>

@@ -35,7 +35,7 @@ exports[`renders correctly 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-33"
+            className="MuiSvgIcon-root-32"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -51,7 +51,7 @@ exports[`renders correctly 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-39"
+          className="MuiTouchRipple-root-38"
         />
       </span>
     </td>
@@ -108,7 +108,7 @@ exports[`renders highlighted 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-33"
+            className="MuiSvgIcon-root-32"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -124,7 +124,7 @@ exports[`renders highlighted 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-39"
+          className="MuiTouchRipple-root-38"
         />
       </span>
     </td>
@@ -187,7 +187,7 @@ exports[`renders selected 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-33"
+            className="MuiSvgIcon-root-32"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -203,7 +203,7 @@ exports[`renders selected 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-39"
+          className="MuiTouchRipple-root-38"
         />
       </span>
     </td>

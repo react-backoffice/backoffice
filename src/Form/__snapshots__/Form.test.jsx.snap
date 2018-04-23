@@ -653,7 +653,7 @@ exports[`renders correctly 1`] = `
                  
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-152"
+                  className="material-icons MuiIcon-root-151"
                 >
                    
                   <svg
@@ -673,7 +673,7 @@ exports[`renders correctly 1`] = `
                  
               </span>
               <span
-                className="MuiTouchRipple-root-158"
+                className="MuiTouchRipple-root-157"
               />
             </button>
           </div>
@@ -738,7 +738,7 @@ exports[`renders correctly 1`] = `
                  
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-152"
+                  className="material-icons MuiIcon-root-151"
                 >
                    
                   <svg
@@ -758,7 +758,7 @@ exports[`renders correctly 1`] = `
                  
               </span>
               <span
-                className="MuiTouchRipple-root-158"
+                className="MuiTouchRipple-root-157"
               />
             </button>
           </div>
@@ -823,7 +823,7 @@ exports[`renders correctly 1`] = `
                  
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-152"
+                  className="material-icons MuiIcon-root-151"
                 >
                    
                   <svg
@@ -843,7 +843,7 @@ exports[`renders correctly 1`] = `
                  
               </span>
               <span
-                className="MuiTouchRipple-root-158"
+                className="MuiTouchRipple-root-157"
               />
             </button>
           </div>
@@ -964,13 +964,13 @@ exports[`renders correctly 1`] = `
       className="FormFieldBranch-field-59 FormFieldBranch-widthSmall-62 FormFieldBranch-fieldInline-60"
     >
       <label
-        className="MuiFormControlLabel-root-179"
+        className="MuiFormControlLabel-root-178"
       >
         <span
-          className="MuiSwitch-root-182"
+          className="MuiSwitch-root-181"
         >
           <span
-            className="MuiButtonBase-root-149 MuiIconButton-root-143 MuiSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorPrimary-187"
+            className="MuiButtonBase-root-149 MuiIconButton-root-143 MuiSwitchBase-root-190 MuiSwitch-switchBase-184 MuiSwitch-colorPrimary-186"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -987,11 +987,11 @@ exports[`renders correctly 1`] = `
               className="MuiIconButton-label-148"
             >
               <span
-                className="MuiSwitch-icon-183"
+                className="MuiSwitch-icon-182"
               />
               <input
                 checked={false}
-                className="MuiSwitchBase-input-194"
+                className="MuiSwitchBase-input-193"
                 disabled={false}
                 onChange={[Function]}
                 type="checkbox"
@@ -999,15 +999,15 @@ exports[`renders correctly 1`] = `
               />
             </span>
             <span
-              className="MuiTouchRipple-root-158"
+              className="MuiTouchRipple-root-157"
             />
           </span>
           <span
-            className="MuiSwitch-bar-190"
+            className="MuiSwitch-bar-189"
           />
         </span>
         <span
-          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-181"
+          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-180"
         >
           Switch
         </span>
@@ -1022,13 +1022,13 @@ exports[`renders correctly 1`] = `
       className="FormFieldBranch-field-59 FormFieldBranch-widthSmall-62 FormFieldBranch-fieldInline-60"
     >
       <label
-        className="MuiFormControlLabel-root-179 MuiFormControlLabel-disabled-180"
+        className="MuiFormControlLabel-root-178 MuiFormControlLabel-disabled-179"
       >
         <span
-          className="MuiSwitch-root-182"
+          className="MuiSwitch-root-181"
         >
           <span
-            className="MuiButtonBase-root-149 MuiButtonBase-disabled-150 MuiIconButton-root-143 MuiIconButton-disabled-147 MuiSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorPrimary-187 MuiSwitchBase-disabled-193 MuiSwitch-disabled-189"
+            className="MuiButtonBase-root-149 MuiButtonBase-disabled-150 MuiIconButton-root-143 MuiIconButton-disabled-147 MuiSwitchBase-root-190 MuiSwitch-switchBase-184 MuiSwitch-colorPrimary-186 MuiSwitchBase-disabled-192 MuiSwitch-disabled-188"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -1045,11 +1045,11 @@ exports[`renders correctly 1`] = `
               className="MuiIconButton-label-148"
             >
               <span
-                className="MuiSwitch-icon-183"
+                className="MuiSwitch-icon-182"
               />
               <input
                 checked={false}
-                className="MuiSwitchBase-input-194"
+                className="MuiSwitchBase-input-193"
                 disabled={true}
                 onChange={[Function]}
                 type="checkbox"
@@ -1058,11 +1058,11 @@ exports[`renders correctly 1`] = `
             </span>
           </span>
           <span
-            className="MuiSwitch-bar-190"
+            className="MuiSwitch-bar-189"
           />
         </span>
         <span
-          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-181 MuiFormControlLabel-disabled-180"
+          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-180 MuiFormControlLabel-disabled-179"
         >
           Switch - Disabled
         </span>
@@ -1075,10 +1075,10 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="FormSubmitButton-root-195"
+    className="FormSubmitButton-root-194"
   >
     <button
-      className="MuiButtonBase-root-149 MuiButton-root-199 MuiButton-raised-204 MuiButton-raisedSecondary-206 FormSubmitButton-button-197"
+      className="MuiButtonBase-root-149 MuiButton-root-198 MuiButton-raised-203 MuiButton-raisedSecondary-205 FormSubmitButton-button-196"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -1095,12 +1095,12 @@ exports[`renders correctly 1`] = `
       type="button"
     >
       <span
-        className="MuiButton-label-200"
+        className="MuiButton-label-199"
       >
         Save
       </span>
       <span
-        className="MuiTouchRipple-root-158"
+        className="MuiTouchRipple-root-157"
       />
     </button>
   </div>
@@ -1760,7 +1760,7 @@ exports[`renders correctly with content 1`] = `
                  
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-152"
+                  className="material-icons MuiIcon-root-151"
                 >
                    
                   <svg
@@ -1780,7 +1780,7 @@ exports[`renders correctly with content 1`] = `
                  
               </span>
               <span
-                className="MuiTouchRipple-root-158"
+                className="MuiTouchRipple-root-157"
               />
             </button>
           </div>
@@ -1845,7 +1845,7 @@ exports[`renders correctly with content 1`] = `
                  
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-152"
+                  className="material-icons MuiIcon-root-151"
                 >
                    
                   <svg
@@ -1865,7 +1865,7 @@ exports[`renders correctly with content 1`] = `
                  
               </span>
               <span
-                className="MuiTouchRipple-root-158"
+                className="MuiTouchRipple-root-157"
               />
             </button>
           </div>
@@ -1930,7 +1930,7 @@ exports[`renders correctly with content 1`] = `
                  
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-152"
+                  className="material-icons MuiIcon-root-151"
                 >
                    
                   <svg
@@ -1950,7 +1950,7 @@ exports[`renders correctly with content 1`] = `
                  
               </span>
               <span
-                className="MuiTouchRipple-root-158"
+                className="MuiTouchRipple-root-157"
               />
             </button>
           </div>
@@ -2071,13 +2071,13 @@ exports[`renders correctly with content 1`] = `
       className="FormFieldBranch-field-59 FormFieldBranch-widthSmall-62 FormFieldBranch-fieldInline-60"
     >
       <label
-        className="MuiFormControlLabel-root-179"
+        className="MuiFormControlLabel-root-178"
       >
         <span
-          className="MuiSwitch-root-182"
+          className="MuiSwitch-root-181"
         >
           <span
-            className="MuiButtonBase-root-149 MuiIconButton-root-143 MuiSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorPrimary-187"
+            className="MuiButtonBase-root-149 MuiIconButton-root-143 MuiSwitchBase-root-190 MuiSwitch-switchBase-184 MuiSwitch-colorPrimary-186"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -2094,11 +2094,11 @@ exports[`renders correctly with content 1`] = `
               className="MuiIconButton-label-148"
             >
               <span
-                className="MuiSwitch-icon-183"
+                className="MuiSwitch-icon-182"
               />
               <input
                 checked={false}
-                className="MuiSwitchBase-input-194"
+                className="MuiSwitchBase-input-193"
                 disabled={false}
                 onChange={[Function]}
                 type="checkbox"
@@ -2106,15 +2106,15 @@ exports[`renders correctly with content 1`] = `
               />
             </span>
             <span
-              className="MuiTouchRipple-root-158"
+              className="MuiTouchRipple-root-157"
             />
           </span>
           <span
-            className="MuiSwitch-bar-190"
+            className="MuiSwitch-bar-189"
           />
         </span>
         <span
-          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-181"
+          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-180"
         >
           Switch
         </span>
@@ -2129,13 +2129,13 @@ exports[`renders correctly with content 1`] = `
       className="FormFieldBranch-field-59 FormFieldBranch-widthSmall-62 FormFieldBranch-fieldInline-60"
     >
       <label
-        className="MuiFormControlLabel-root-179 MuiFormControlLabel-disabled-180"
+        className="MuiFormControlLabel-root-178 MuiFormControlLabel-disabled-179"
       >
         <span
-          className="MuiSwitch-root-182"
+          className="MuiSwitch-root-181"
         >
           <span
-            className="MuiButtonBase-root-149 MuiButtonBase-disabled-150 MuiIconButton-root-143 MuiIconButton-disabled-147 MuiSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorPrimary-187 MuiSwitchBase-disabled-193 MuiSwitch-disabled-189"
+            className="MuiButtonBase-root-149 MuiButtonBase-disabled-150 MuiIconButton-root-143 MuiIconButton-disabled-147 MuiSwitchBase-root-190 MuiSwitch-switchBase-184 MuiSwitch-colorPrimary-186 MuiSwitchBase-disabled-192 MuiSwitch-disabled-188"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -2152,11 +2152,11 @@ exports[`renders correctly with content 1`] = `
               className="MuiIconButton-label-148"
             >
               <span
-                className="MuiSwitch-icon-183"
+                className="MuiSwitch-icon-182"
               />
               <input
                 checked={false}
-                className="MuiSwitchBase-input-194"
+                className="MuiSwitchBase-input-193"
                 disabled={true}
                 onChange={[Function]}
                 type="checkbox"
@@ -2165,11 +2165,11 @@ exports[`renders correctly with content 1`] = `
             </span>
           </span>
           <span
-            className="MuiSwitch-bar-190"
+            className="MuiSwitch-bar-189"
           />
         </span>
         <span
-          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-181 MuiFormControlLabel-disabled-180"
+          className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-180 MuiFormControlLabel-disabled-179"
         >
           Switch - Disabled
         </span>
@@ -2185,10 +2185,10 @@ exports[`renders correctly with content 1`] = `
     Foo
   </p>
   <div
-    className="FormSubmitButton-root-195"
+    className="FormSubmitButton-root-194"
   >
     <button
-      className="MuiButtonBase-root-149 MuiButton-root-199 MuiButton-raised-204 MuiButton-raisedSecondary-206 FormSubmitButton-button-197"
+      className="MuiButtonBase-root-149 MuiButton-root-198 MuiButton-raised-203 MuiButton-raisedSecondary-205 FormSubmitButton-button-196"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -2205,12 +2205,12 @@ exports[`renders correctly with content 1`] = `
       type="button"
     >
       <span
-        className="MuiButton-label-200"
+        className="MuiButton-label-199"
       >
         Save the form
       </span>
       <span
-        className="MuiTouchRipple-root-158"
+        className="MuiTouchRipple-root-157"
       />
     </button>
   </div>
