@@ -25,7 +25,7 @@ exports[`renders correctly 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-20 MuiListItemIcon-root-19"
+        className="MuiSvgIcon-root-21 MuiListItemIcon-root-20"
         focusable="false"
         viewBox="0 0 24 24"
       >
@@ -36,16 +36,16 @@ exports[`renders correctly 1`] = `
         </g>
       </svg>
       <div
-        className="MuiListItemText-root-26"
+        className="MuiListItemText-root-27"
       >
         <h3
-          className="MuiTypography-root-32 MuiTypography-subheading-39 MuiListItemText-primary-29"
+          className="MuiTypography-root-33 MuiTypography-subheading-40 MuiListItemText-primary-30"
         >
           Title
         </h3>
       </div>
       <span
-        className="MuiTouchRipple-root-56"
+        className="MuiTouchRipple-root-57"
       />
     </div>
   </ul>

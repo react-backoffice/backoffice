@@ -59,12 +59,12 @@ exports[`Tabs renders correctly 1`] = `
                 </span>
               </span>
               <span
-                className="MuiTouchRipple-root-63"
+                className="MuiTouchRipple-root-64"
               />
             </button>
           </div>
           <span
-            className="TabIndicator-root-60 TabIndicator-colorSecondary-62 MuiTabs-indicator-45"
+            className="TabIndicator-root-61 TabIndicator-colorSecondary-63 MuiTabs-indicator-45"
             style={
               Object {
                 "left": 0,
@@ -77,7 +77,7 @@ exports[`Tabs renders correctly 1`] = `
     </div>
   </header>
   <div
-    className="MuiTypography-root-70 MuiTypography-body1-79"
+    className="MuiTypography-root-71 MuiTypography-body1-80"
     style={
       Object {
         "padding": 24,
@@ -118,7 +118,7 @@ exports[`Tabs renders correctly if no data 1`] = `
             className="MuiTabs-flexContainer-38"
           />
           <span
-            className="TabIndicator-root-60 TabIndicator-colorSecondary-62 MuiTabs-indicator-45"
+            className="TabIndicator-root-61 TabIndicator-colorSecondary-63 MuiTabs-indicator-45"
             style={
               Object {
                 "left": 0,
