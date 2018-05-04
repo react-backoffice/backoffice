@@ -41,7 +41,7 @@
     "react-router-dom": "^4.2.2",
     "recompose": "^0.26.0",
     "vanilla-store": "^0.4.0",
-    "webpack": "^3.10.0"
+    "webpack": "^4.7.0"
   },
   "peerDependencies": {
     "prop-types": "^15.6.1",
@@ -74,7 +74,8 @@
     "tslint": "^5.9.1",
     "tslint-react": "^3.5.1",
     "typescript": "^2.7.2",
-    "webpack-dev-server": "^2.11.1"
+    "webpack-cli": "^2.1.2",
+    "webpack-dev-server": "^3.1.4"
   },
   "keywords": [
     "react",

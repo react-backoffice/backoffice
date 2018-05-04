@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const LIBRARY_NAME = 'backoffice'
 
 module.exports = {
+  mode: 'production',
   entry: {
     backoffice: path.resolve(__dirname, 'index.js'),
   },
