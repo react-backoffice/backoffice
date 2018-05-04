@@ -75,5 +75,15 @@
     "tslint-react": "^3.5.1",
     "typescript": "^2.7.2",
     "webpack-dev-server": "^2.11.1"
-  }
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-router",
+    "component-library",
+    "crud",
+    "crud-gui",
+    "dashboard",
+    "material-ui"
+  ]
 }
