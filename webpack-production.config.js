@@ -6,11 +6,12 @@ const LIBRARY_NAME = 'backoffice'
 module.exports = {
   mode: 'production',
   entry: {
-    backoffice: path.resolve(__dirname, 'index.js'),
+    [LIBRARY_NAME]: path.resolve(__dirname, 'index.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist/'),
-    filename: `${LIBRARY_NAME}.js`,
+    filename: '[name].js',
+    chunkFilename: '[name].js',
     library: LIBRARY_NAME,
     libraryTarget: 'umd',
     umdNamedDefine: true,
