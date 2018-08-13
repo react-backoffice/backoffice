@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {
+  Checkbox,
   TableCell,
   TableHead,
   TableRow,
   TableSortLabel,
-} from 'material-ui/Table'
-import Tooltip from 'material-ui/Tooltip'
-import Checkbox from 'material-ui/Checkbox'
+  Tooltip,
+} from '@material-ui/core'
 
 class ListingHeader extends React.Component {
   createSortHandler(property) {

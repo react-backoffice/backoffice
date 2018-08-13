@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react'
-
-import Typography from 'material-ui/Typography/Typography'
-
+import { Typography } from '@material-ui/core'
 import { TYPES } from 'backoffice/src/Form/constants'
 
 export default [{

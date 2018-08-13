@@ -2,10 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import { withStyles } from 'material-ui/styles'
-import Card, { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
-import Avatar from 'material-ui/Avatar'
+import {
+  Card,
+  CardContent,
+  Typography,
+  withStyles,
+  Avatar,
+} from '@material-ui/core'
 
 import DisabledIcon from '@material-ui/icons/Lock'
 

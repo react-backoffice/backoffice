@@ -2,11 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import { withStyles } from 'material-ui/styles'
-import Paper from 'material-ui/Paper'
-import List, { ListItem, ListItemText } from 'material-ui/List'
-import Chip from 'material-ui/Chip'
-import Tooltip from 'material-ui/Tooltip/Tooltip'
+import {
+  Chip,
+  List,
+  ListItem,
+  ListItemText,
+  Paper,
+  Tooltip,
+  withStyles,
+} from '@material-ui/core/styles'
 
 import FormFieldInput from './FormFieldInput'
 

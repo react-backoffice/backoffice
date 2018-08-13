@@ -7,6 +7,7 @@
     "start": "webpack-dev-server"
   },
   "dependencies": {
+    "@material-ui/core": "^1.0.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -15,7 +16,6 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "backoffice": "^2.0.0-beta.7",
-    "material-ui": "^0.20.0",
     "@material-ui/icons": "^1.0.0-beta.36",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",

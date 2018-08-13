@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import Typography from 'material-ui/Typography'
-
-import { withStyles } from 'material-ui/styles'
+import {
+  Typography,
+  withStyles,
+} from '@material-ui/core'
 
 import FormGroupWrapper from './FormGroupWrapper'
 import FormField from './FormField'

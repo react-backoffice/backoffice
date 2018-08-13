@@ -2,9 +2,11 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import { withStyles } from 'material-ui/styles'
-import Toolbar from 'material-ui/Toolbar'
-import Typography from 'material-ui/Typography'
+import {
+  Toolbar,
+  Typography,
+  withStyles,
+} from '@material-ui/core'
 
 import ListingSearch from './ListingSearch'
 

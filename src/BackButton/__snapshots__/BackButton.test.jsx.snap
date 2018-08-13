@@ -2,7 +2,7 @@
 
 exports[`Back Button renders correctly 1`] = `
 <button
-  className="MuiButtonBase-root-17 MuiButton-root-2"
+  className="MuiButtonBase-root-24 MuiButton-root-2 MuiButton-flat-6"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -23,7 +23,7 @@ exports[`Back Button renders correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-20 BackButtonBranch-leftIcon-1"
+      className="MuiSvgIcon-root-27 BackButtonBranch-leftIcon-1"
       focusable="false"
       viewBox="0 0 24 24"
     >
@@ -36,7 +36,7 @@ exports[`Back Button renders correctly 1`] = `
     Back
   </span>
   <span
-    className="MuiTouchRipple-root-26"
+    className="MuiTouchRipple-root-33"
   />
 </button>
 `;

@@ -2,10 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import { withStyles } from 'material-ui/styles'
-import { CircularProgress } from 'material-ui/Progress'
-import Button from 'material-ui/Button'
-import green from 'material-ui/colors/green'
+import { Button, CircularProgress, withStyles } from '@material-ui/core'
+import { green } from '@material-ui/core/colors'
 
 const styles = theme => ({
   root: {

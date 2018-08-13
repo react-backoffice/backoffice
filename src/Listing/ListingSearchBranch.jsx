@@ -2,11 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import withStyles from 'material-ui/styles/withStyles'
-import TextField from 'material-ui/TextField/TextField'
-import Tooltip from 'material-ui/Tooltip'
-import IconButton from 'material-ui/IconButton/IconButton'
-import SearchIcon from '@material-ui/icons/Search'
+import {
+  TextField,
+  Tooltip,
+  IconButton,
+  SearchIcon,
+  withStyles,
+} from '@material-ui/core'
 
 const styles = theme => ({
   root: {

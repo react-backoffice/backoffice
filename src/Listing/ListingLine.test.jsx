@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import { Table } from 'material-ui'
+import { Table } from '@material-ui/core'
 
 import ListingLine from './ListingLine'
 

@@ -2,7 +2,7 @@ import React from 'react'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import IconButton from 'material-ui/IconButton/IconButton'
+import { IconButton } from '@material-ui/core'
 import ListingSearch from './ListingSearch'
 
 Enzyme.configure({ adapter: new Adapter() })

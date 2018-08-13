@@ -64,9 +64,10 @@ You could use the AppContainer-Component like this:
 import React from 'react'
 import AppContainer from 'backoffice/AppContainer'
 
-import indigo from 'material-ui/colors/indigo'
-import amber from 'material-ui/colors/amber'
-
+import {
+  indigo,
+  amber
+} from '@material-ui/core/colors'
 
 const theme = {
   palette: {

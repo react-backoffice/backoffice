@@ -1,8 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { FormControlLabel, FormHelperText } from 'material-ui/Form'
-import Switch from 'material-ui/Switch'
+import {
+  FormControlLabel,
+  FormHelperText,
+  Switch,
+} from '@material-ui/core'
 
 class FormFieldSwitch extends React.Component {
   static propTypes = {

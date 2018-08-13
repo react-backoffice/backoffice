@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import JssProvider from 'react-jss/lib/JssProvider'
 import wrapDisplayName from 'recompose/wrapDisplayName'
 
-import { withStyles, MuiThemeProvider } from 'material-ui/styles'
+import { withStyles, MuiThemeProvider } from '@material-ui/core/styles'
 
 import createContext from './createContext'
 

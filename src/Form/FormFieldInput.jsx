@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-import TextField from 'material-ui/TextField'
-import { InputAdornment } from 'material-ui/Input'
-
-
-import { MenuItem } from 'material-ui/Menu'
+import {
+  TextField,
+  InputAdornment,
+  MenuItem,
+} from '@material-ui/core'
 
 const InputEnd = ({ icon }) => (
   <Fragment>

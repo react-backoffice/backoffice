@@ -118,7 +118,7 @@ exports[`Tabs renders correctly if no data 1`] = `
             className="MuiTabs-flexContainer-38"
           />
           <span
-            className="TabIndicator-root-61 TabIndicator-colorSecondary-63 MuiTabs-indicator-45"
+            className="TabIndicator-root-70 TabIndicator-colorSecondary-72 MuiTabs-indicator-45"
             style={
               Object {
                 "left": 0,

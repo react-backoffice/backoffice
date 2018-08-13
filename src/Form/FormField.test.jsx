@@ -1,7 +1,7 @@
 import React from 'react'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
-import { ListItem, Chip } from 'material-ui'
+import { ListItem, Chip } from '@material-ui/core'
 
 import FormField from './FormField'
 import FormFieldInput from './FormFieldInput'

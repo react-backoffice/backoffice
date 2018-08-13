@@ -10,7 +10,7 @@ exports[`Component Info renders correctly 1`] = `
     Foo
   </div>
   <button
-    className="MuiButtonBase-root-20 MuiButton-root-5 CookieInfo-button-4"
+    className="MuiButtonBase-root-27 MuiButton-root-5 MuiButton-flat-9 CookieInfo-button-4"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -32,7 +32,7 @@ exports[`Component Info renders correctly 1`] = `
       Accept
     </span>
     <span
-      className="MuiTouchRipple-root-23"
+      className="MuiTouchRipple-root-30"
     />
   </button>
 </div>

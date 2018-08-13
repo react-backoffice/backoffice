@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import withStyles from 'material-ui/styles/withStyles'
+import { withStyles } from '@material-ui/core'
 
 import Drawer from '../Drawer'
 import Header from '../Header'

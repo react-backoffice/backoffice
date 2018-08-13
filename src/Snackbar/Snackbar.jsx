@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import MaterialSnackbar from 'material-ui/Snackbar'
+import { Snackbar as MaterialSnackbar } from '@material-ui/core'
 
 const Snackbar = ({
   isOpen,

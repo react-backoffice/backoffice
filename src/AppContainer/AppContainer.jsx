@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { createMuiTheme } from 'material-ui/styles'
+import { createMuiTheme } from '@material-ui/core'
 import {
   blueGrey,
   orange,
-} from 'material-ui/colors'
+} from '@material-ui/core/colors'
 
 import withRoot from './withRoot'
 

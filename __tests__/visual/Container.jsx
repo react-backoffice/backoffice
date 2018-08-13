@@ -4,10 +4,10 @@ import {
   Route,
   Switch,
 } from 'react-router-dom'
-import Typography from 'material-ui/Typography'
+import Typography from '@material-ui/core/Typography'
 
-import indigo from 'material-ui/colors/indigo'
-import amber from 'material-ui/colors/amber'
+import indigo from '@material-ui/core/colors/indigo'
+import amber from '@material-ui/core/colors/amber'
 
 import menuData from '../data/menu'
 

@@ -1,5 +1,5 @@
-import indigo from 'material-ui/colors/indigo'
-import amber from 'material-ui/colors/amber'
+import indigo from '@material-ui/core/colors/indigo'
+import amber from '@material-ui/core/colors/amber'
 
 export default {
   palette: {

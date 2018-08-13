@@ -1,10 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
-import { withStyles } from 'material-ui/styles'
-import AppBar from 'material-ui/AppBar'
-import MaterialTabs, { Tab } from 'material-ui/Tabs'
-import Typography from 'material-ui/Typography'
+import {
+  AppBar,
+  withStyles,
+  Tabs as MaterialTabs,
+  Tab,
+  Typography,
+} from '@material-ui/core'
 
 function TabContainer(props) {
   return (

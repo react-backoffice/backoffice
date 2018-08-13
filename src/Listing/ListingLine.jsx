@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {
+  Checkbox,
   TableCell,
   TableRow,
-} from 'material-ui/Table'
-import Checkbox from 'material-ui/Checkbox'
+} from '@material-ui/core'
 
 import replace from '../utils/replace'
 

@@ -2,8 +2,8 @@ import {
   create,
   SheetsRegistry,
 } from 'jss'
-import { jssPreset } from 'material-ui/styles'
-import createGenerateClassName from 'material-ui/styles/createGenerateClassName'
+import { jssPreset } from '@material-ui/core/styles'
+import createGenerateClassName from '@material-ui/core/styles/createGenerateClassName'
 
 // Configure JSS
 const jss = create(jssPreset())

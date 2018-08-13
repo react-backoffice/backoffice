@@ -2,7 +2,7 @@ import React from 'react'
 import MockRouter from 'react-mock-router'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
-import { Tab } from 'material-ui'
+import { Tab } from '@material-ui/core'
 
 import Tabs from './'
 import tabsContent from '../../__tests__/data/tabs'

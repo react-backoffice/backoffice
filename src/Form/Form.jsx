@@ -21,25 +21,6 @@ const withForm = Component => class Form extends React.Component {
     isFixedSubmitButton: false,
   }
 
-  static getInitialField(field, data) {
-    let valueName = data[field.id] && data[field.id].value
-    let submitValue = valueName
-
-    if (!valueName && field.value !== undefined) {
-      valueName = field.value
-    }
-
-    if (typeof field.beforeSubmit === 'function') {
-      submitValue = field.beforeSubmit(submitValue)
-    }
-
-    return {
-      value: valueName,
-      submitValue,
-      error: !isValid(field.type, field.isRequired, field.validators, submitValue),
-    }
-  }
-
   constructor(props, defaultProps) {
     super(props, defaultProps)
 
@@ -75,6 +56,25 @@ const withForm = Component => class Form extends React.Component {
 
   componentWillUnmount() {
     clearTimeout(this.timer)
+  }
+
+  static getInitialField(field, data) {
+    let valueName = data[field.id] && data[field.id].value
+    let submitValue = valueName
+
+    if (!valueName && field.value !== undefined) {
+      valueName = field.value
+    }
+
+    if (typeof field.beforeSubmit === 'function') {
+      submitValue = field.beforeSubmit(submitValue)
+    }
+
+    return {
+      value: valueName,
+      submitValue,
+      error: !isValid(field.type, field.isRequired, field.validators, submitValue),
+    }
   }
 
   generateFields(fieldset, data) {

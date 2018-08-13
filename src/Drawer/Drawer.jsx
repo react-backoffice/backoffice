@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { withStyles } from 'material-ui/styles'
-import MaterialDrawer from 'material-ui/Drawer'
-import Divider from 'material-ui/Divider'
-import IconButton from 'material-ui/IconButton'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import {
+  Drawer as MaterialDrawer,
+  Divider,
+  IconButton,
+  ChevronLeftIcon,
+  withStyles,
+} from '@material-ui/core/styles'
 
 import Menu from '../Menu'
 

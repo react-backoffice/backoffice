@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { withStyles } from 'material-ui/styles'
 import {
   TableCell,
   TableRow,
-} from 'material-ui/Table'
-import { LinearProgress } from 'material-ui/Progress'
+  LinearProgress,
+  withStyles,
+} from '@material-ui/core'
 
 const styles = {
   row: {
