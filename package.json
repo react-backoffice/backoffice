@@ -22,8 +22,8 @@
     "prepublishOnly": "rm -rf ./dist && yarn build"
   },
   "dependencies": {
-    "@material-ui/core": "^1.0.0",
-    "@material-ui/icons": "^1.0.0-beta.42",
+    "@material-ui/core": "^3.0.0",
+    "@material-ui/icons": "^3.0.1",
     "classnames": "^2.2.5",
     "init-uuid": "^1.2.0",
     "is-url": "^1.2.2",
@@ -31,7 +31,7 @@
     "jest": "^22.1.4",
     "jss": "^9.5.1",
     "keycode": "^2.1.9",
-    "material-ui-pickers": "^1.0.0-rc.9",
+    "material-ui-pickers": "^1.0.0-rc.14",
     "moment": "^2.20.1",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
