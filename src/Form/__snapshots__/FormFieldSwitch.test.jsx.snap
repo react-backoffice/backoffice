@@ -8,10 +8,10 @@ exports[`renders correctly 1`] = `
     className="MuiFormControlLabel-root-1"
   >
     <span
-      className="MuiSwitch-root-4"
+      className="MuiSwitch-root-5"
     >
       <span
-        className="MuiButtonBase-root-23 MuiIconButton-root-17 MuiSwitchBase-root-13 MuiSwitch-switchBase-7 MuiSwitch-colorPrimary-9"
+        className="MuiButtonBase-root-24 MuiIconButton-root-18 MuiSwitchBase-root-14 MuiSwitch-switchBase-8 MuiSwitch-colorPrimary-10"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -25,14 +25,14 @@ exports[`renders correctly 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-22"
+          className="MuiIconButton-label-23"
         >
           <span
-            className="MuiSwitch-icon-5"
+            className="MuiSwitch-icon-6"
           />
           <input
             checked={false}
-            className="MuiSwitchBase-input-16"
+            className="MuiSwitchBase-input-17"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
@@ -40,15 +40,15 @@ exports[`renders correctly 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-26"
+          className="MuiTouchRipple-root-27"
         />
       </span>
       <span
-        className="MuiSwitch-bar-12"
+        className="MuiSwitch-bar-13"
       />
     </span>
     <span
-      className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-3"
+      className="MuiTypography-root-34 MuiTypography-body1-43 MuiFormControlLabel-label-4"
     >
       Title
     </span>
@@ -61,13 +61,13 @@ exports[`renders disabled 1`] = `
   className=""
 >
   <label
-    className="MuiFormControlLabel-root-1 MuiFormControlLabel-disabled-2"
+    className="MuiFormControlLabel-root-1 MuiFormControlLabel-disabled-3"
   >
     <span
-      className="MuiSwitch-root-4"
+      className="MuiSwitch-root-5"
     >
       <span
-        className="MuiButtonBase-root-23 MuiButtonBase-disabled-24 MuiIconButton-root-17 MuiIconButton-disabled-21 MuiSwitchBase-root-13 MuiSwitch-switchBase-7 MuiSwitch-colorPrimary-9 MuiSwitchBase-disabled-15 MuiSwitch-disabled-11"
+        className="MuiButtonBase-root-24 MuiButtonBase-disabled-25 MuiIconButton-root-18 MuiIconButton-disabled-22 MuiSwitchBase-root-14 MuiSwitch-switchBase-8 MuiSwitch-colorPrimary-10 MuiSwitchBase-disabled-16 MuiSwitch-disabled-12"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -81,14 +81,14 @@ exports[`renders disabled 1`] = `
         tabIndex="-1"
       >
         <span
-          className="MuiIconButton-label-22"
+          className="MuiIconButton-label-23"
         >
           <span
-            className="MuiSwitch-icon-5"
+            className="MuiSwitch-icon-6"
           />
           <input
             checked={false}
-            className="MuiSwitchBase-input-16"
+            className="MuiSwitchBase-input-17"
             disabled={true}
             onChange={[Function]}
             type="checkbox"
@@ -97,11 +97,11 @@ exports[`renders disabled 1`] = `
         </span>
       </span>
       <span
-        className="MuiSwitch-bar-12"
+        className="MuiSwitch-bar-13"
       />
     </span>
     <span
-      className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-3 MuiFormControlLabel-disabled-2"
+      className="MuiTypography-root-34 MuiTypography-body1-43 MuiFormControlLabel-label-4 MuiFormControlLabel-disabled-3"
     >
       Title
     </span>
@@ -117,10 +117,10 @@ exports[`renders with helper text 1`] = `
     className="MuiFormControlLabel-root-1"
   >
     <span
-      className="MuiSwitch-root-4"
+      className="MuiSwitch-root-5"
     >
       <span
-        className="MuiButtonBase-root-23 MuiIconButton-root-17 MuiSwitchBase-root-13 MuiSwitch-switchBase-7 MuiSwitch-colorPrimary-9"
+        className="MuiButtonBase-root-24 MuiIconButton-root-18 MuiSwitchBase-root-14 MuiSwitch-switchBase-8 MuiSwitch-colorPrimary-10"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -134,14 +134,14 @@ exports[`renders with helper text 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-22"
+          className="MuiIconButton-label-23"
         >
           <span
-            className="MuiSwitch-icon-5"
+            className="MuiSwitch-icon-6"
           />
           <input
             checked={false}
-            className="MuiSwitchBase-input-16"
+            className="MuiSwitchBase-input-17"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
@@ -149,21 +149,21 @@ exports[`renders with helper text 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-26"
+          className="MuiTouchRipple-root-27"
         />
       </span>
       <span
-        className="MuiSwitch-bar-12"
+        className="MuiSwitch-bar-13"
       />
     </span>
     <span
-      className="MuiTypography-root-33 MuiTypography-body1-42 MuiFormControlLabel-label-3"
+      className="MuiTypography-root-34 MuiTypography-body1-43 MuiFormControlLabel-label-4"
     >
       Title
     </span>
   </label>
   <p
-    className="MuiFormHelperText-root-57"
+    className="MuiFormHelperText-root-59"
   >
     test
   </p>

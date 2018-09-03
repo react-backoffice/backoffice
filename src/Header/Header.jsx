@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import {
   AppBar,
-  MenuIcon,
   IconButton,
   Toolbar,
   Typography,
   withStyles,
 } from '@material-ui/core'
+import MenuIcon from '@material-ui/icons/Menu'
 
 const drawerWidth = 280
 

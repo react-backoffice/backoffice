@@ -51,7 +51,7 @@ exports[`renders correctly 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-39"
+          className="MuiTouchRipple-root-40"
         />
       </span>
     </td>
@@ -124,7 +124,7 @@ exports[`renders highlighted 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-39"
+          className="MuiTouchRipple-root-40"
         />
       </span>
     </td>
@@ -203,7 +203,7 @@ exports[`renders selected 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-39"
+          className="MuiTouchRipple-root-40"
         />
       </span>
     </td>

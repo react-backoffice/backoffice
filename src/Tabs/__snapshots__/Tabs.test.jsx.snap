@@ -14,7 +14,7 @@ exports[`Tabs renders correctly 1`] = `
         className="MuiTabs-flexContainer-38"
       >
         <div
-          className="MuiTabs-scroller-39 MuiTabs-fixed-40"
+          className="MuiTabs-scroller-40 MuiTabs-fixed-41"
           onScroll={[Function]}
           role="tablist"
           style={
@@ -105,7 +105,7 @@ exports[`Tabs renders correctly if no data 1`] = `
         className="MuiTabs-flexContainer-38"
       >
         <div
-          className="MuiTabs-scroller-39 MuiTabs-fixed-40"
+          className="MuiTabs-scroller-40 MuiTabs-fixed-41"
           onScroll={[Function]}
           role="tablist"
           style={
@@ -118,7 +118,7 @@ exports[`Tabs renders correctly if no data 1`] = `
             className="MuiTabs-flexContainer-38"
           />
           <span
-            className="TabIndicator-root-70 TabIndicator-colorSecondary-72 MuiTabs-indicator-45"
+            className="TabIndicator-root-61 TabIndicator-colorSecondary-63 MuiTabs-indicator-45"
             style={
               Object {
                 "left": 0,

@@ -20,7 +20,7 @@ exports[`renders correctly 1`] = `
   </div>
   <div>
     <div
-      className="DashboardGroup-headline-27"
+      className="DashboardGroup-headline-28"
     >
       <h1
         className="MuiTypography-root-3 MuiTypography-headline-8"
@@ -29,20 +29,20 @@ exports[`renders correctly 1`] = `
       </h1>
     </div>
     <div
-      className="MuiGrid-container-28 MuiGrid-spacing-xs-16-50"
+      className="MuiGrid-container-29 MuiGrid-spacing-xs-16-52"
     >
       <div
-        className="MuiGrid-item-29 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-4-70"
+        className="MuiGrid-item-30 MuiGrid-grid-xs-12-69 MuiGrid-grid-sm-4-75"
       >
         <div
-          className="MuiPaper-root-125 MuiPaper-elevation2-129 MuiPaper-rounded-126 MuiCard-root-124 DashboardCard-root-118"
+          className="MuiPaper-root-133 MuiPaper-elevation1-136 MuiPaper-rounded-134 MuiCard-root-132 DashboardCard-root-126"
           onClick={[Function]}
         >
           <div
-            className="MuiCardContent-root-152 DashboardCard-content-119"
+            className="MuiCardContent-root-160 DashboardCard-content-127"
           >
             <h2
-              className="MuiTypography-root-3 MuiTypography-headline-8 DashboardCard-title-121"
+              className="MuiTypography-root-3 MuiTypography-headline-8 DashboardCard-title-129"
             >
               title
             </h2>

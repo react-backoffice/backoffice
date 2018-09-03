@@ -4,7 +4,7 @@ import Icon from '@material-ui/icons/Visibility'
 import {
   Divider,
   Typography,
-} from '@material-ui/core/Divider/Divider'
+} from '@material-ui/core'
 
 import { TYPES } from '../../src/Form/constants'
 

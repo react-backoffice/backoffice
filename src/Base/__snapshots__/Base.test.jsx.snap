@@ -9,11 +9,11 @@ exports[`Base call function when cookie is accepted 1`] = `
       className="MuiPaper-root-21 MuiPaper-elevation4-27 MuiAppBar-root-13 MuiAppBar-positionFixed-14 MuiAppBar-colorPrimary-19 mui-fixed Header-appBar-6 Header-appBarShift-8"
     >
       <div
-        className="MuiToolbar-root-48 MuiToolbar-gutters-49"
+        className="MuiToolbar-root-48 MuiToolbar-regular-50 MuiToolbar-gutters-49"
       >
         <button
           aria-label="open drawer"
-          className="MuiButtonBase-root-56 MuiIconButton-root-50 MuiIconButton-colorInherit-51 Header-menuButton-9 Header-hide-10"
+          className="MuiButtonBase-root-58 MuiIconButton-root-52 MuiIconButton-colorInherit-53 Header-menuButton-9 Header-hide-10"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -30,27 +30,29 @@ exports[`Base call function when cookie is accepted 1`] = `
           type="button"
         >
           <span
-            className="MuiIconButton-label-55"
+            className="MuiIconButton-label-57"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-59"
+              className="MuiSvgIcon-root-61"
               focusable="false"
               viewBox="0 0 24 24"
             >
-              <g>
-                <path
-                  d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-                />
-              </g>
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-65"
+            className="MuiTouchRipple-root-68"
           />
         </button>
         <h2
-          className="MuiTypography-root-72 MuiTypography-title-78 MuiTypography-colorInherit-91 Header-flex-11 Header-title-12"
+          className="MuiTypography-root-75 MuiTypography-title-81 MuiTypography-colorInherit-94 Header-flex-11 Header-title-12"
           onClick={[Function]}
         >
           Foo
@@ -62,19 +64,19 @@ exports[`Base call function when cookie is accepted 1`] = `
     className="BaseBranch-appFrame-1"
   >
     <div
-      className="MuiDrawer-docked-98"
+      className="MuiDrawer-docked-102"
     >
       <div
-        className="MuiPaper-root-21 MuiPaper-elevation0-23 MuiDrawer-paper-99 Drawer-drawerPaper-96 MuiDrawer-paperAnchorLeft-100 MuiDrawer-paperAnchorDockedLeft-104"
+        className="MuiPaper-root-21 MuiPaper-elevation0-23 MuiDrawer-paper-103 Drawer-drawerPaper-100 MuiDrawer-paperAnchorLeft-104 MuiDrawer-paperAnchorDockedLeft-108"
         direction="right"
         style={Object {}}
       >
         <div>
           <div
-            className="Drawer-drawerHeader-97"
+            className="Drawer-drawerHeader-101"
           >
             <button
-              className="MuiButtonBase-root-56 MuiIconButton-root-50"
+              className="MuiButtonBase-root-58 MuiIconButton-root-52"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -91,37 +93,39 @@ exports[`Base call function when cookie is accepted 1`] = `
               type="button"
             >
               <span
-                className="MuiIconButton-label-55"
+                className="MuiIconButton-label-57"
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-59"
+                  className="MuiSvgIcon-root-61"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
-                  <g>
-                    <path
-                      d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                    />
-                  </g>
+                  <path
+                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
                 </svg>
               </span>
               <span
-                className="MuiTouchRipple-root-65"
+                className="MuiTouchRipple-root-68"
               />
             </button>
           </div>
           <hr
-            className="MuiDivider-root-109"
+            className="MuiDivider-root-113"
           />
           <div
-            className="Menu-root-113"
+            className="Menu-root-117"
           >
             <ul
-              className="MuiList-root-114 MuiList-padding-115"
+              className="MuiList-root-118 MuiList-padding-119"
             >
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -137,20 +141,20 @@ exports[`Base call function when cookie is accepted 1`] = `
                 tabIndex="0"
               >
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     Dashboard
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127 MenuItem-isDisabled-118"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131 MenuItem-isDisabled-122"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -166,23 +170,23 @@ exports[`Base call function when cookie is accepted 1`] = `
                 tabIndex="0"
               >
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     New portfolio
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
               <hr
-                className="MuiDivider-root-109"
+                className="MuiDivider-root-113"
               />
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -199,27 +203,29 @@ exports[`Base call function when cookie is accepted 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-59 MuiListItemIcon-root-135"
+                  className="MuiSvgIcon-root-61 MuiListItemIcon-root-140"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
-                  <g>
-                    <path
-                      d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
-                    />
-                  </g>
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
+                  />
                 </svg>
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     Report a bug
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
             </ul>
@@ -231,13 +237,13 @@ exports[`Base call function when cookie is accepted 1`] = `
       className="BaseBranch-content-3 BaseBranch-contentShift-4"
     >
       <div
-        className="CookieInfo-root-136"
+        className="CookieInfo-root-141"
       >
         <div
-          className="CookieInfo-content-138"
+          className="CookieInfo-content-143"
         />
         <button
-          className="MuiButtonBase-root-56 MuiButton-root-140 CookieInfo-button-139"
+          className="MuiButtonBase-root-58 MuiButton-root-145 MuiButton-text-147 MuiButton-flat-150 CookieInfo-button-144"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -254,12 +260,12 @@ exports[`Base call function when cookie is accepted 1`] = `
           type="button"
         >
           <span
-            className="MuiButton-label-141"
+            className="MuiButton-label-146"
           >
             Accept
           </span>
           <span
-            className="MuiTouchRipple-root-65"
+            className="MuiTouchRipple-root-68"
           />
         </button>
       </div>
@@ -302,11 +308,11 @@ exports[`Base click on menu icon if closed changes state 1`] = `
       className="MuiPaper-root-21 MuiPaper-elevation4-27 MuiAppBar-root-13 MuiAppBar-positionFixed-14 MuiAppBar-colorPrimary-19 mui-fixed Header-appBar-6 Header-appBarWithCookieInfo-7"
     >
       <div
-        className="MuiToolbar-root-48 MuiToolbar-gutters-49"
+        className="MuiToolbar-root-48 MuiToolbar-regular-50 MuiToolbar-gutters-49"
       >
         <button
           aria-label="open drawer"
-          className="MuiButtonBase-root-56 MuiIconButton-root-50 MuiIconButton-colorInherit-51 Header-menuButton-9"
+          className="MuiButtonBase-root-58 MuiIconButton-root-52 MuiIconButton-colorInherit-53 Header-menuButton-9"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -323,27 +329,29 @@ exports[`Base click on menu icon if closed changes state 1`] = `
           type="button"
         >
           <span
-            className="MuiIconButton-label-55"
+            className="MuiIconButton-label-57"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-59"
+              className="MuiSvgIcon-root-61"
               focusable="false"
               viewBox="0 0 24 24"
             >
-              <g>
-                <path
-                  d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-                />
-              </g>
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-65"
+            className="MuiTouchRipple-root-68"
           />
         </button>
         <h2
-          className="MuiTypography-root-72 MuiTypography-title-78 MuiTypography-colorInherit-91 Header-flex-11 Header-title-12"
+          className="MuiTypography-root-75 MuiTypography-title-81 MuiTypography-colorInherit-94 Header-flex-11 Header-title-12"
           onClick={[Function]}
         >
           Foo
@@ -355,19 +363,19 @@ exports[`Base click on menu icon if closed changes state 1`] = `
     className="BaseBranch-appFrame-1 BaseBranch-appFrameWithCookieInfo-2"
   >
     <div
-      className="MuiDrawer-docked-98"
+      className="MuiDrawer-docked-102"
     >
       <div
-        className="MuiPaper-root-21 MuiPaper-elevation0-23 MuiDrawer-paper-99 Drawer-drawerPaper-96 MuiDrawer-paperAnchorLeft-100 MuiDrawer-paperAnchorDockedLeft-104"
+        className="MuiPaper-root-21 MuiPaper-elevation0-23 MuiDrawer-paper-103 Drawer-drawerPaper-100 MuiDrawer-paperAnchorLeft-104 MuiDrawer-paperAnchorDockedLeft-108"
         direction="right"
         style={Object {}}
       >
         <div>
           <div
-            className="Drawer-drawerHeader-97"
+            className="Drawer-drawerHeader-101"
           >
             <button
-              className="MuiButtonBase-root-56 MuiIconButton-root-50"
+              className="MuiButtonBase-root-58 MuiIconButton-root-52"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -384,37 +392,39 @@ exports[`Base click on menu icon if closed changes state 1`] = `
               type="button"
             >
               <span
-                className="MuiIconButton-label-55"
+                className="MuiIconButton-label-57"
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-59"
+                  className="MuiSvgIcon-root-61"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
-                  <g>
-                    <path
-                      d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                    />
-                  </g>
+                  <path
+                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
                 </svg>
               </span>
               <span
-                className="MuiTouchRipple-root-65"
+                className="MuiTouchRipple-root-68"
               />
             </button>
           </div>
           <hr
-            className="MuiDivider-root-109"
+            className="MuiDivider-root-113"
           />
           <div
-            className="Menu-root-113"
+            className="Menu-root-117"
           >
             <ul
-              className="MuiList-root-114 MuiList-padding-115"
+              className="MuiList-root-118 MuiList-padding-119"
             >
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -430,20 +440,20 @@ exports[`Base click on menu icon if closed changes state 1`] = `
                 tabIndex="0"
               >
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     Dashboard
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127 MenuItem-isDisabled-118"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131 MenuItem-isDisabled-122"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -459,23 +469,23 @@ exports[`Base click on menu icon if closed changes state 1`] = `
                 tabIndex="0"
               >
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     New portfolio
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
               <hr
-                className="MuiDivider-root-109"
+                className="MuiDivider-root-113"
               />
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -492,27 +502,29 @@ exports[`Base click on menu icon if closed changes state 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-59 MuiListItemIcon-root-135"
+                  className="MuiSvgIcon-root-61 MuiListItemIcon-root-140"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
-                  <g>
-                    <path
-                      d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
-                    />
-                  </g>
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
+                  />
                 </svg>
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     Report a bug
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
             </ul>
@@ -562,11 +574,11 @@ exports[`Base click on menu icon if open changes state 1`] = `
       className="MuiPaper-root-21 MuiPaper-elevation4-27 MuiAppBar-root-13 MuiAppBar-positionFixed-14 MuiAppBar-colorPrimary-19 mui-fixed Header-appBar-6 Header-appBarShift-8 Header-appBarWithCookieInfo-7"
     >
       <div
-        className="MuiToolbar-root-48 MuiToolbar-gutters-49"
+        className="MuiToolbar-root-48 MuiToolbar-regular-50 MuiToolbar-gutters-49"
       >
         <button
           aria-label="open drawer"
-          className="MuiButtonBase-root-56 MuiIconButton-root-50 MuiIconButton-colorInherit-51 Header-menuButton-9 Header-hide-10"
+          className="MuiButtonBase-root-58 MuiIconButton-root-52 MuiIconButton-colorInherit-53 Header-menuButton-9 Header-hide-10"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -583,27 +595,29 @@ exports[`Base click on menu icon if open changes state 1`] = `
           type="button"
         >
           <span
-            className="MuiIconButton-label-55"
+            className="MuiIconButton-label-57"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-59"
+              className="MuiSvgIcon-root-61"
               focusable="false"
               viewBox="0 0 24 24"
             >
-              <g>
-                <path
-                  d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-                />
-              </g>
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-65"
+            className="MuiTouchRipple-root-68"
           />
         </button>
         <h2
-          className="MuiTypography-root-72 MuiTypography-title-78 MuiTypography-colorInherit-91 Header-flex-11 Header-title-12"
+          className="MuiTypography-root-75 MuiTypography-title-81 MuiTypography-colorInherit-94 Header-flex-11 Header-title-12"
           onClick={[Function]}
         >
           Foo
@@ -615,19 +629,19 @@ exports[`Base click on menu icon if open changes state 1`] = `
     className="BaseBranch-appFrame-1 BaseBranch-appFrameWithCookieInfo-2"
   >
     <div
-      className="MuiDrawer-docked-98"
+      className="MuiDrawer-docked-102"
     >
       <div
-        className="MuiPaper-root-21 MuiPaper-elevation0-23 MuiDrawer-paper-99 Drawer-drawerPaper-96 MuiDrawer-paperAnchorLeft-100 MuiDrawer-paperAnchorDockedLeft-104"
+        className="MuiPaper-root-21 MuiPaper-elevation0-23 MuiDrawer-paper-103 Drawer-drawerPaper-100 MuiDrawer-paperAnchorLeft-104 MuiDrawer-paperAnchorDockedLeft-108"
         direction="right"
         style={Object {}}
       >
         <div>
           <div
-            className="Drawer-drawerHeader-97"
+            className="Drawer-drawerHeader-101"
           >
             <button
-              className="MuiButtonBase-root-56 MuiIconButton-root-50"
+              className="MuiButtonBase-root-58 MuiIconButton-root-52"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -644,37 +658,39 @@ exports[`Base click on menu icon if open changes state 1`] = `
               type="button"
             >
               <span
-                className="MuiIconButton-label-55"
+                className="MuiIconButton-label-57"
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-59"
+                  className="MuiSvgIcon-root-61"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
-                  <g>
-                    <path
-                      d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                    />
-                  </g>
+                  <path
+                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
                 </svg>
               </span>
               <span
-                className="MuiTouchRipple-root-65"
+                className="MuiTouchRipple-root-68"
               />
             </button>
           </div>
           <hr
-            className="MuiDivider-root-109"
+            className="MuiDivider-root-113"
           />
           <div
-            className="Menu-root-113"
+            className="Menu-root-117"
           >
             <ul
-              className="MuiList-root-114 MuiList-padding-115"
+              className="MuiList-root-118 MuiList-padding-119"
             >
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -690,20 +706,20 @@ exports[`Base click on menu icon if open changes state 1`] = `
                 tabIndex="0"
               >
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     Dashboard
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127 MenuItem-isDisabled-118"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131 MenuItem-isDisabled-122"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -719,23 +735,23 @@ exports[`Base click on menu icon if open changes state 1`] = `
                 tabIndex="0"
               >
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     New portfolio
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
               <hr
-                className="MuiDivider-root-109"
+                className="MuiDivider-root-113"
               />
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -752,27 +768,29 @@ exports[`Base click on menu icon if open changes state 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-59 MuiListItemIcon-root-135"
+                  className="MuiSvgIcon-root-61 MuiListItemIcon-root-140"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
-                  <g>
-                    <path
-                      d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
-                    />
-                  </g>
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
+                  />
                 </svg>
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     Report a bug
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
             </ul>
@@ -822,11 +840,11 @@ exports[`Base click on title 1`] = `
       className="MuiPaper-root-21 MuiPaper-elevation4-27 MuiAppBar-root-13 MuiAppBar-positionFixed-14 MuiAppBar-colorPrimary-19 mui-fixed Header-appBar-6 Header-appBarShift-8 Header-appBarWithCookieInfo-7"
     >
       <div
-        className="MuiToolbar-root-48 MuiToolbar-gutters-49"
+        className="MuiToolbar-root-48 MuiToolbar-regular-50 MuiToolbar-gutters-49"
       >
         <button
           aria-label="open drawer"
-          className="MuiButtonBase-root-56 MuiIconButton-root-50 MuiIconButton-colorInherit-51 Header-menuButton-9 Header-hide-10"
+          className="MuiButtonBase-root-58 MuiIconButton-root-52 MuiIconButton-colorInherit-53 Header-menuButton-9 Header-hide-10"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -843,27 +861,29 @@ exports[`Base click on title 1`] = `
           type="button"
         >
           <span
-            className="MuiIconButton-label-55"
+            className="MuiIconButton-label-57"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-59"
+              className="MuiSvgIcon-root-61"
               focusable="false"
               viewBox="0 0 24 24"
             >
-              <g>
-                <path
-                  d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-                />
-              </g>
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-65"
+            className="MuiTouchRipple-root-68"
           />
         </button>
         <h2
-          className="MuiTypography-root-72 MuiTypography-title-78 MuiTypography-colorInherit-91 Header-flex-11 Header-title-12"
+          className="MuiTypography-root-75 MuiTypography-title-81 MuiTypography-colorInherit-94 Header-flex-11 Header-title-12"
           onClick={[Function]}
         >
           Foo
@@ -875,19 +895,19 @@ exports[`Base click on title 1`] = `
     className="BaseBranch-appFrame-1 BaseBranch-appFrameWithCookieInfo-2"
   >
     <div
-      className="MuiDrawer-docked-98"
+      className="MuiDrawer-docked-102"
     >
       <div
-        className="MuiPaper-root-21 MuiPaper-elevation0-23 MuiDrawer-paper-99 Drawer-drawerPaper-96 MuiDrawer-paperAnchorLeft-100 MuiDrawer-paperAnchorDockedLeft-104"
+        className="MuiPaper-root-21 MuiPaper-elevation0-23 MuiDrawer-paper-103 Drawer-drawerPaper-100 MuiDrawer-paperAnchorLeft-104 MuiDrawer-paperAnchorDockedLeft-108"
         direction="right"
         style={Object {}}
       >
         <div>
           <div
-            className="Drawer-drawerHeader-97"
+            className="Drawer-drawerHeader-101"
           >
             <button
-              className="MuiButtonBase-root-56 MuiIconButton-root-50"
+              className="MuiButtonBase-root-58 MuiIconButton-root-52"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -904,37 +924,39 @@ exports[`Base click on title 1`] = `
               type="button"
             >
               <span
-                className="MuiIconButton-label-55"
+                className="MuiIconButton-label-57"
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-59"
+                  className="MuiSvgIcon-root-61"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
-                  <g>
-                    <path
-                      d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                    />
-                  </g>
+                  <path
+                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
                 </svg>
               </span>
               <span
-                className="MuiTouchRipple-root-65"
+                className="MuiTouchRipple-root-68"
               />
             </button>
           </div>
           <hr
-            className="MuiDivider-root-109"
+            className="MuiDivider-root-113"
           />
           <div
-            className="Menu-root-113"
+            className="Menu-root-117"
           >
             <ul
-              className="MuiList-root-114 MuiList-padding-115"
+              className="MuiList-root-118 MuiList-padding-119"
             >
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -950,20 +972,20 @@ exports[`Base click on title 1`] = `
                 tabIndex="0"
               >
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     Dashboard
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127 MenuItem-isDisabled-118"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131 MenuItem-isDisabled-122"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -979,23 +1001,23 @@ exports[`Base click on title 1`] = `
                 tabIndex="0"
               >
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     New portfolio
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
               <hr
-                className="MuiDivider-root-109"
+                className="MuiDivider-root-113"
               />
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -1012,27 +1034,29 @@ exports[`Base click on title 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-59 MuiListItemIcon-root-135"
+                  className="MuiSvgIcon-root-61 MuiListItemIcon-root-140"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
-                  <g>
-                    <path
-                      d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
-                    />
-                  </g>
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
+                  />
                 </svg>
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     Report a bug
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
             </ul>
@@ -1082,11 +1106,11 @@ exports[`Base renders correctly 1`] = `
       className="MuiPaper-root-21 MuiPaper-elevation4-27 MuiAppBar-root-13 MuiAppBar-positionFixed-14 MuiAppBar-colorPrimary-19 mui-fixed Header-appBar-6 Header-appBarShift-8 Header-appBarWithCookieInfo-7"
     >
       <div
-        className="MuiToolbar-root-48 MuiToolbar-gutters-49"
+        className="MuiToolbar-root-48 MuiToolbar-regular-50 MuiToolbar-gutters-49"
       >
         <button
           aria-label="open drawer"
-          className="MuiButtonBase-root-56 MuiIconButton-root-50 MuiIconButton-colorInherit-51 Header-menuButton-9 Header-hide-10"
+          className="MuiButtonBase-root-58 MuiIconButton-root-52 MuiIconButton-colorInherit-53 Header-menuButton-9 Header-hide-10"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -1103,27 +1127,29 @@ exports[`Base renders correctly 1`] = `
           type="button"
         >
           <span
-            className="MuiIconButton-label-55"
+            className="MuiIconButton-label-57"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-59"
+              className="MuiSvgIcon-root-61"
               focusable="false"
               viewBox="0 0 24 24"
             >
-              <g>
-                <path
-                  d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-                />
-              </g>
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-65"
+            className="MuiTouchRipple-root-68"
           />
         </button>
         <h2
-          className="MuiTypography-root-72 MuiTypography-title-78 MuiTypography-colorInherit-91 Header-flex-11 Header-title-12"
+          className="MuiTypography-root-75 MuiTypography-title-81 MuiTypography-colorInherit-94 Header-flex-11 Header-title-12"
           onClick={[Function]}
         >
           Foo
@@ -1135,19 +1161,19 @@ exports[`Base renders correctly 1`] = `
     className="BaseBranch-appFrame-1 BaseBranch-appFrameWithCookieInfo-2"
   >
     <div
-      className="MuiDrawer-docked-98"
+      className="MuiDrawer-docked-102"
     >
       <div
-        className="MuiPaper-root-21 MuiPaper-elevation0-23 MuiDrawer-paper-99 Drawer-drawerPaper-96 MuiDrawer-paperAnchorLeft-100 MuiDrawer-paperAnchorDockedLeft-104"
+        className="MuiPaper-root-21 MuiPaper-elevation0-23 MuiDrawer-paper-103 Drawer-drawerPaper-100 MuiDrawer-paperAnchorLeft-104 MuiDrawer-paperAnchorDockedLeft-108"
         direction="right"
         style={Object {}}
       >
         <div>
           <div
-            className="Drawer-drawerHeader-97"
+            className="Drawer-drawerHeader-101"
           >
             <button
-              className="MuiButtonBase-root-56 MuiIconButton-root-50"
+              className="MuiButtonBase-root-58 MuiIconButton-root-52"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -1164,37 +1190,39 @@ exports[`Base renders correctly 1`] = `
               type="button"
             >
               <span
-                className="MuiIconButton-label-55"
+                className="MuiIconButton-label-57"
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-59"
+                  className="MuiSvgIcon-root-61"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
-                  <g>
-                    <path
-                      d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                    />
-                  </g>
+                  <path
+                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
                 </svg>
               </span>
               <span
-                className="MuiTouchRipple-root-65"
+                className="MuiTouchRipple-root-68"
               />
             </button>
           </div>
           <hr
-            className="MuiDivider-root-109"
+            className="MuiDivider-root-113"
           />
           <div
-            className="Menu-root-113"
+            className="Menu-root-117"
           >
             <ul
-              className="MuiList-root-114 MuiList-padding-115"
+              className="MuiList-root-118 MuiList-padding-119"
             >
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -1210,20 +1238,20 @@ exports[`Base renders correctly 1`] = `
                 tabIndex="0"
               >
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     Dashboard
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127 MenuItem-isDisabled-118"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131 MenuItem-isDisabled-122"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -1239,23 +1267,23 @@ exports[`Base renders correctly 1`] = `
                 tabIndex="0"
               >
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     New portfolio
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
               <hr
-                className="MuiDivider-root-109"
+                className="MuiDivider-root-113"
               />
               <div
-                className="MuiButtonBase-root-56 MuiListItem-root-119 MuiListItem-default-122 MuiListItem-gutters-126 MuiListItem-button-127"
+                className="MuiButtonBase-root-58 MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-130 MuiListItem-button-131"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -1272,27 +1300,29 @@ exports[`Base renders correctly 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-59 MuiListItemIcon-root-135"
+                  className="MuiSvgIcon-root-61 MuiListItemIcon-root-140"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
-                  <g>
-                    <path
-                      d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
-                    />
-                  </g>
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
+                  />
                 </svg>
                 <div
-                  className="MuiListItemText-root-129"
+                  className="MuiListItemText-root-134"
                 >
-                  <h3
-                    className="MuiTypography-root-72 MuiTypography-subheading-79 MuiListItemText-primary-132"
+                  <span
+                    className="MuiTypography-root-75 MuiTypography-subheading-82 MuiListItemText-primary-137"
                   >
                     Report a bug
-                  </h3>
+                  </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-65"
+                  className="MuiTouchRipple-root-68"
                 />
               </div>
             </ul>

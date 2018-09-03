@@ -22,7 +22,7 @@ exports[`renders correctly 1`] = `
           style={Object {}}
         />
         <div
-          className="MuiLinearProgress-bar-26 MuiLinearProgress-barColorPrimary-27 MuiLinearProgress-bar2Indeterminate-30"
+          className="MuiLinearProgress-bar-26 MuiLinearProgress-barColorPrimary-27 MuiLinearProgress-bar2Indeterminate-32"
           style={Object {}}
         />
       </div>

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 import {
   Button,
-  BackIcon,
   withStyles,
-} from '@material-ui/core/Button'
+} from '@material-ui/core'
+import BackIcon from '@material-ui/icons/ArrowBackIos'
 
 const styles = theme => ({
   leftIcon: {

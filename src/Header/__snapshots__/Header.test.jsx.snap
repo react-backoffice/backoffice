@@ -8,11 +8,11 @@ exports[`renders correctly 1`] = `
     className="MuiPaper-root-17 MuiPaper-elevation4-23 MuiAppBar-root-9 MuiAppBar-positionFixed-10 MuiAppBar-colorPrimary-15 mui-fixed Header-appBar-2 Header-appBarShift-4 Header-appBarWithCookieInfo-3"
   >
     <div
-      className="MuiToolbar-root-44 MuiToolbar-gutters-45"
+      className="MuiToolbar-root-44 MuiToolbar-regular-46 MuiToolbar-gutters-45"
     >
       <button
         aria-label="open drawer"
-        className="MuiButtonBase-root-52 MuiIconButton-root-46 MuiIconButton-colorInherit-47 Header-menuButton-5 Header-hide-6"
+        className="MuiButtonBase-root-54 MuiIconButton-root-48 MuiIconButton-colorInherit-49 Header-menuButton-5 Header-hide-6"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -29,27 +29,29 @@ exports[`renders correctly 1`] = `
         type="button"
       >
         <span
-          className="MuiIconButton-label-51"
+          className="MuiIconButton-label-53"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-55"
+            className="MuiSvgIcon-root-57"
             focusable="false"
             viewBox="0 0 24 24"
           >
-            <g>
-              <path
-                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-              />
-            </g>
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+            />
           </svg>
         </span>
         <span
-          className="MuiTouchRipple-root-61"
+          className="MuiTouchRipple-root-64"
         />
       </button>
       <h2
-        className="MuiTypography-root-68 MuiTypography-title-74 MuiTypography-colorInherit-87 Header-flex-7 Header-title-8"
+        className="MuiTypography-root-71 MuiTypography-title-77 MuiTypography-colorInherit-90 Header-flex-7 Header-title-8"
         onClick={[Function]}
       >
         Header
@@ -67,11 +69,11 @@ exports[`renders correctly with closed 1`] = `
     className="MuiPaper-root-17 MuiPaper-elevation4-23 MuiAppBar-root-9 MuiAppBar-positionStatic-13 MuiAppBar-colorPrimary-15 Header-appBar-2"
   >
     <div
-      className="MuiToolbar-root-44 MuiToolbar-gutters-45"
+      className="MuiToolbar-root-44 MuiToolbar-regular-46 MuiToolbar-gutters-45"
     >
       <button
         aria-label="open drawer"
-        className="MuiButtonBase-root-52 MuiIconButton-root-46 MuiIconButton-colorInherit-47 Header-menuButton-5"
+        className="MuiButtonBase-root-54 MuiIconButton-root-48 MuiIconButton-colorInherit-49 Header-menuButton-5"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -88,27 +90,29 @@ exports[`renders correctly with closed 1`] = `
         type="button"
       >
         <span
-          className="MuiIconButton-label-51"
+          className="MuiIconButton-label-53"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-55"
+            className="MuiSvgIcon-root-57"
             focusable="false"
             viewBox="0 0 24 24"
           >
-            <g>
-              <path
-                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-              />
-            </g>
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+            />
           </svg>
         </span>
         <span
-          className="MuiTouchRipple-root-61"
+          className="MuiTouchRipple-root-64"
         />
       </button>
       <h2
-        className="MuiTypography-root-68 MuiTypography-title-74 MuiTypography-colorInherit-87 Header-flex-7 Header-title-8"
+        className="MuiTypography-root-71 MuiTypography-title-77 MuiTypography-colorInherit-90 Header-flex-7 Header-title-8"
         onClick={[Function]}
       >
         Header

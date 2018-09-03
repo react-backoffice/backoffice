@@ -1,18 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import AddButtonBranch from './AddButtonBranch'
+import {
+  Button,
+  withStyles,
+} from '@material-ui/core'
+import AddIcon from '@material-ui/icons/Add'
 
-const withAddButton = Component => class extends React.PureComponent {
-  static propTypes = {
-    onClick: PropTypes.func.isRequired,
-  }
+const styles = theme => ({
+  button: {
+    position: 'fixed',
+    right: theme.spacing.unit * 3,
+    bottom: theme.spacing.unit * 3,
+  },
+})
 
-  render() {
-    return (
-      <Component {...this.props} />
-    )
-  }
+const AddButton = ({ onClick, classes }) => (
+  <Button
+    variant="fab"
+    color="secondary"
+    aria-label="add"
+    className={classes.button}
+    onClick={onClick}
+  >
+    <AddIcon />
+  </Button>
+)
+
+AddButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
-export default withAddButton(AddButtonBranch)
+export default withStyles(styles)(AddButton)

@@ -12,21 +12,21 @@ exports[`renders correctly 1`] = `
     >
       <input
         aria-invalid={false}
-        aria-required={false}
         className="MuiInput-input-16 MuiInput-inputType-19 MuiInput-inputTypeSearch-20"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         placeholder="Filter"
+        required={false}
         type="search"
       />
     </div>
   </div>
   Array [
-    "",
     <button
-      className="MuiButtonBase-root-35 MuiIconButton-root-29"
+      aria-describedby={null}
+      className="MuiButtonBase-root-34 MuiIconButton-root-28"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -41,48 +41,32 @@ exports[`renders correctly 1`] = `
       onTouchMove={[Function]}
       onTouchStart={[Function]}
       tabIndex="0"
+      title="Search"
       type="button"
     >
       <span
-        className="MuiIconButton-label-34"
+        className="MuiIconButton-label-33"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-38"
+          className="MuiSvgIcon-root-37"
           focusable="false"
           viewBox="0 0 24 24"
         >
-          <g>
-            <path
-              d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-            />
-          </g>
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
         </svg>
       </span>
       <span
         className="MuiTouchRipple-root-44"
       />
     </button>,
-    <div
-      className="MuiTooltip-popper-21"
-      style={
-        Object {
-          "left": 0,
-          "opacity": 0,
-          "pointerEvents": "none",
-          "position": "absolute",
-          "top": 0,
-        }
-      }
-    >
-      <div
-        aria-hidden={true}
-        className="MuiTooltip-tooltip-23 MuiTooltip-tooltipPlacementBottom-28"
-        role="tooltip"
-      >
-        Search
-      </div>
-    </div>,
+    "",
   ]
 </div>
 `;
@@ -99,21 +83,21 @@ exports[`renders correctly when open 1`] = `
     >
       <input
         aria-invalid={false}
-        aria-required={false}
         className="MuiInput-input-16 MuiInput-inputType-19 MuiInput-inputTypeSearch-20"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         placeholder="Filter"
+        required={false}
         type="search"
       />
     </div>
   </div>
   Array [
-    "",
     <button
-      className="MuiButtonBase-root-35 MuiIconButton-root-29"
+      aria-describedby={null}
+      className="MuiButtonBase-root-34 MuiIconButton-root-28"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -128,48 +112,32 @@ exports[`renders correctly when open 1`] = `
       onTouchMove={[Function]}
       onTouchStart={[Function]}
       tabIndex="0"
+      title="Search"
       type="button"
     >
       <span
-        className="MuiIconButton-label-34"
+        className="MuiIconButton-label-33"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-38"
+          className="MuiSvgIcon-root-37"
           focusable="false"
           viewBox="0 0 24 24"
         >
-          <g>
-            <path
-              d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-            />
-          </g>
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
         </svg>
       </span>
       <span
         className="MuiTouchRipple-root-44"
       />
     </button>,
-    <div
-      className="MuiTooltip-popper-21"
-      style={
-        Object {
-          "left": 0,
-          "opacity": 0,
-          "pointerEvents": "none",
-          "position": "absolute",
-          "top": 0,
-        }
-      }
-    >
-      <div
-        aria-hidden={true}
-        className="MuiTooltip-tooltip-23 MuiTooltip-tooltipPlacementBottom-28"
-        role="tooltip"
-      >
-        Search
-      </div>
-    </div>,
+    "",
   ]
 </div>
 `;

@@ -2,13 +2,13 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="MuiToolbar-root-6 MuiToolbar-gutters-7 ListingToolbar-root-1"
+  className="MuiToolbar-root-6 MuiToolbar-regular-8 MuiToolbar-gutters-7 ListingToolbar-root-1"
 >
   <div
     className="ListingToolbar-title-5"
   >
     <h2
-      className="MuiTypography-root-8 MuiTypography-title-14"
+      className="MuiTypography-root-10 MuiTypography-title-16"
     />
   </div>
   <div
@@ -18,31 +18,31 @@ exports[`renders correctly 1`] = `
     className="ListingToolbar-actions-4"
   >
     <div
-      className="ListingSearchBranch-root-32"
+      className="ListingSearchBranch-root-35"
     >
       <div
-        className="MuiFormControl-root-35 ListingSearchBranch-field-33"
+        className="MuiFormControl-root-38 ListingSearchBranch-field-36"
       >
         <div
-          className="MuiInput-root-39 MuiInput-formControl-40 MuiInput-underline-43"
+          className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-underline-46"
         >
           <input
             aria-invalid={false}
-            aria-required={false}
-            className="MuiInput-input-47 MuiInput-inputType-50 MuiInput-inputTypeSearch-51"
+            className="MuiInput-input-50 MuiInput-inputType-53 MuiInput-inputTypeSearch-54"
             disabled={false}
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
             placeholder="Filter"
+            required={false}
             type="search"
           />
         </div>
       </div>
       Array [
-        "",
         <button
-          className="MuiButtonBase-root-66 MuiIconButton-root-60"
+          aria-describedby={null}
+          className="MuiButtonBase-root-68 MuiIconButton-root-62"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -57,48 +57,32 @@ exports[`renders correctly 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           tabIndex="0"
+          title="Search"
           type="button"
         >
           <span
-            className="MuiIconButton-label-65"
+            className="MuiIconButton-label-67"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-69"
+              className="MuiSvgIcon-root-71"
               focusable="false"
               viewBox="0 0 24 24"
             >
-              <g>
-                <path
-                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-                />
-              </g>
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-75"
+            className="MuiTouchRipple-root-78"
           />
         </button>,
-        <div
-          className="MuiTooltip-popper-52"
-          style={
-            Object {
-              "left": 0,
-              "opacity": 0,
-              "pointerEvents": "none",
-              "position": "absolute",
-              "top": 0,
-            }
-          }
-        >
-          <div
-            aria-hidden={true}
-            className="MuiTooltip-tooltip-54 MuiTooltip-tooltipPlacementBottom-59"
-            role="tooltip"
-          >
-            Search
-          </div>
-        </div>,
+        "",
       ]
     </div>
   </div>

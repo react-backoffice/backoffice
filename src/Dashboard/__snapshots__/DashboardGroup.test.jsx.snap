@@ -12,20 +12,20 @@ exports[`renders correctly 1`] = `
     </h1>
   </div>
   <div
-    className="MuiGrid-container-26 MuiGrid-spacing-xs-16-48"
+    className="MuiGrid-container-27 MuiGrid-spacing-xs-16-50"
   >
     <div
-      className="MuiGrid-item-27 MuiGrid-grid-xs-12-63 MuiGrid-grid-sm-4-68"
+      className="MuiGrid-item-28 MuiGrid-grid-xs-12-67 MuiGrid-grid-sm-4-73"
     >
       <div
-        className="MuiPaper-root-123 MuiPaper-elevation2-127 MuiPaper-rounded-124 MuiCard-root-122 DashboardCard-root-116"
+        className="MuiPaper-root-131 MuiPaper-elevation1-134 MuiPaper-rounded-132 MuiCard-root-130 DashboardCard-root-124"
         onClick={[Function]}
       >
         <div
-          className="MuiCardContent-root-150 DashboardCard-content-117"
+          className="MuiCardContent-root-158 DashboardCard-content-125"
         >
           <h2
-            className="MuiTypography-root-2 MuiTypography-headline-7 DashboardCard-title-119"
+            className="MuiTypography-root-2 MuiTypography-headline-7 DashboardCard-title-127"
           >
             title
           </h2>

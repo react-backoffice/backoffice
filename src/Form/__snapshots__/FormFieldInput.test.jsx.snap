@@ -10,12 +10,12 @@ exports[`renders correctly 1`] = `
   >
     <input
       aria-invalid={false}
-      aria-required={false}
       className="MuiInput-input-13"
       disabled={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      required={false}
       rows={1}
       type="text"
       value=""
@@ -34,12 +34,12 @@ exports[`renders disabled 1`] = `
   >
     <input
       aria-invalid={false}
-      aria-required={false}
       className="MuiInput-input-13 MuiInput-disabled-8"
       disabled={true}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      required={false}
       rows={1}
       type="text"
       value=""

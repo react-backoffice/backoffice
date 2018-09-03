@@ -10,7 +10,7 @@ import {
   Paper,
   Tooltip,
   withStyles,
-} from '@material-ui/core/styles'
+} from '@material-ui/core'
 
 import FormFieldInput from './FormFieldInput'
 

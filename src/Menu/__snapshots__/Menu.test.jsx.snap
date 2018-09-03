@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
     className="MuiList-root-2 MuiList-padding-3"
   >
     <div
-      className="MuiButtonBase-root-17 MuiListItem-root-7 MuiListItem-default-10 MuiListItem-gutters-14 MuiListItem-button-15"
+      className="MuiButtonBase-root-18 MuiListItem-root-7 MuiListItem-default-10 MuiListItem-gutters-14 MuiListItem-button-15"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -25,27 +25,29 @@ exports[`renders correctly 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-21 MuiListItemIcon-root-20"
+        className="MuiSvgIcon-root-22 MuiListItemIcon-root-21"
         focusable="false"
         viewBox="0 0 24 24"
       >
-        <g>
-          <path
-            d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5 8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
-          />
-        </g>
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5 8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+        />
       </svg>
       <div
-        className="MuiListItemText-root-27"
+        className="MuiListItemText-root-29"
       >
-        <h3
-          className="MuiTypography-root-33 MuiTypography-subheading-40 MuiListItemText-primary-30"
+        <span
+          className="MuiTypography-root-35 MuiTypography-subheading-42 MuiListItemText-primary-32"
         >
           Title
-        </h3>
+        </span>
       </div>
       <span
-        className="MuiTouchRipple-root-57"
+        className="MuiTouchRipple-root-60"
       />
     </div>
   </ul>

@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="MuiButtonBase-root-12 MuiListItem-root-2 MuiListItem-default-5 MuiListItem-gutters-9 MuiListItem-button-10"
+  className="MuiButtonBase-root-13 MuiListItem-root-2 MuiListItem-default-5 MuiListItem-gutters-9 MuiListItem-button-10"
   onBlur={[Function]}
   onClick={[Function]}
   onFocus={[Function]}
@@ -18,23 +18,23 @@ exports[`renders correctly 1`] = `
   tabIndex="0"
 >
   <div
-    className="MuiListItemText-root-15"
+    className="MuiListItemText-root-16"
   >
-    <h3
-      className="MuiTypography-root-21 MuiTypography-subheading-28 MuiListItemText-primary-18"
+    <span
+      className="MuiTypography-root-22 MuiTypography-subheading-29 MuiListItemText-primary-19"
     >
       Title
-    </h3>
+    </span>
   </div>
   <span
-    className="MuiTouchRipple-root-45"
+    className="MuiTouchRipple-root-47"
   />
 </div>
 `;
 
 exports[`renders correctly disabled 1`] = `
 <div
-  className="MuiButtonBase-root-12 MuiListItem-root-2 MuiListItem-default-5 MuiListItem-gutters-9 MuiListItem-button-10 MenuItem-isDisabled-1"
+  className="MuiButtonBase-root-13 MuiListItem-root-2 MuiListItem-default-5 MuiListItem-gutters-9 MuiListItem-button-10 MenuItem-isDisabled-1"
   onBlur={[Function]}
   onClick={[Function]}
   onFocus={[Function]}
@@ -50,23 +50,23 @@ exports[`renders correctly disabled 1`] = `
   tabIndex="0"
 >
   <div
-    className="MuiListItemText-root-15"
+    className="MuiListItemText-root-16"
   >
-    <h3
-      className="MuiTypography-root-21 MuiTypography-subheading-28 MuiListItemText-primary-18"
+    <span
+      className="MuiTypography-root-22 MuiTypography-subheading-29 MuiListItemText-primary-19"
     >
       Title
-    </h3>
+    </span>
   </div>
   <span
-    className="MuiTouchRipple-root-45"
+    className="MuiTouchRipple-root-47"
   />
 </div>
 `;
 
 exports[`renders correctly with icon 1`] = `
 <div
-  className="MuiButtonBase-root-12 MuiListItem-root-2 MuiListItem-default-5 MuiListItem-gutters-9 MuiListItem-button-10"
+  className="MuiButtonBase-root-13 MuiListItem-root-2 MuiListItem-default-5 MuiListItem-gutters-9 MuiListItem-button-10"
   onBlur={[Function]}
   onClick={[Function]}
   onFocus={[Function]}
@@ -83,27 +83,29 @@ exports[`renders correctly with icon 1`] = `
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root-53 MuiListItemIcon-root-52"
+    className="MuiSvgIcon-root-55 MuiListItemIcon-root-54"
     focusable="false"
     viewBox="0 0 24 24"
   >
-    <g>
-      <path
-        d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5 8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
-      />
-    </g>
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+    <path
+      d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5 8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+    />
   </svg>
   <div
-    className="MuiListItemText-root-15"
+    className="MuiListItemText-root-16"
   >
-    <h3
-      className="MuiTypography-root-21 MuiTypography-subheading-28 MuiListItemText-primary-18"
+    <span
+      className="MuiTypography-root-22 MuiTypography-subheading-29 MuiListItemText-primary-19"
     >
       Title
-    </h3>
+    </span>
   </div>
   <span
-    className="MuiTouchRipple-root-45"
+    className="MuiTouchRipple-root-47"
   />
 </div>
 `;
