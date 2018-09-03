@@ -16,41 +16,6 @@ Math.easeInOutQuad = (t, b, c, d) => {
 /* eslint-enable */
 
 const withListing = Component => class Listing extends React.Component {
-  static propTypes = {
-    orderBy: PropTypes.string.isRequired,
-    hasLoader: PropTypes.bool,
-    data: PropTypes.arrayOf(PropTypes.object).isRequired,
-    headers: PropTypes.arrayOf(PropTypes.object).isRequired,
-    toolbarContent: PropTypes.node,
-    onUpdateSelection: PropTypes.func,
-    id: PropTypes.string,
-  }
-
-  static defaultProps = {
-    id: new Uuid().get(),
-    hasLoader: false,
-    toolbarContent: (<Fragment />),
-    onUpdateSelection: () => {},
-  }
-
-  static getSearchableHeaders(headers) {
-    return headers
-      .filter(header => header.isSearchable)
-      .map(header => header.id)
-  }
-
-  static getStringContent(content) {
-    let matchContent = content
-
-    if (content.constructor === Array) {
-      matchContent = content.join(' ')
-    } else if (typeof content === 'object') {
-      matchContent = Object.values(content).join(' ')
-    }
-
-    return matchContent.toLowerCase()
-  }
-
   static tryToMatch(value, content) {
     let initialContent = content
 
@@ -97,6 +62,23 @@ const withListing = Component => class Listing extends React.Component {
     }
 
     return newElement
+  }
+
+  static propTypes = {
+    orderBy: PropTypes.string.isRequired,
+    hasLoader: PropTypes.bool,
+    data: PropTypes.arrayOf(PropTypes.object).isRequired,
+    headers: PropTypes.arrayOf(PropTypes.object).isRequired,
+    toolbarContent: PropTypes.node,
+    onUpdateSelection: PropTypes.func,
+    id: PropTypes.string,
+  }
+
+  static defaultProps = {
+    id: new Uuid().get(),
+    hasLoader: false,
+    toolbarContent: (<Fragment />),
+    onUpdateSelection: () => { },
   }
 
   constructor(props, context) {
@@ -154,6 +136,24 @@ const withListing = Component => class Listing extends React.Component {
       orderBy: nextProps.orderBy,
       searchable: Listing.getSearchableHeaders(nextProps.headers),
     })
+  }
+
+  static getSearchableHeaders(headers) {
+    return headers
+      .filter(header => header.isSearchable)
+      .map(header => header.id)
+  }
+
+  static getStringContent(content) {
+    let matchContent = content
+
+    if (content.constructor === Array) {
+      matchContent = content.join(' ')
+    } else if (typeof content === 'object') {
+      matchContent = Object.values(content).join(' ')
+    }
+
+    return matchContent.toLowerCase()
   }
 
   sortData(data) {

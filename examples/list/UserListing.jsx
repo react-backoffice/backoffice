@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {
-  DeleteIcon,
   IconButton,
   Tooltip,
   withStyles,
 } from '@material-ui/core'
+import DeleteIcon from '@material-ui/icons/Delete'
 
 import Listing from 'backoffice/src/Listing'
 import data from './data'

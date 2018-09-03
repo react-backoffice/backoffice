@@ -2,10 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import {
-  ListingHeader,
-  ListingToolbar,
-  ListingLine,
-  ListingLoader,
   Table,
   TableBody,
   TableFooter,
@@ -14,6 +10,11 @@ import {
   Paper,
   withStyles,
 } from '@material-ui/core'
+
+import ListingHeader from './ListingHeader'
+import ListingToolbar from './ListingToolbar'
+import ListingLine from './ListingLine'
+import ListingLoader from './ListingLoader'
 
 const styles = theme => ({
   root: {
