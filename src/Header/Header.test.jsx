@@ -13,7 +13,7 @@ it('renders correctly', () => {
       onDrawerOpen={() => {}}
       onClick={() => { }}
     />
-  ));
+  ))
 
   expect(tree).toMatchSnapshot()
 })
