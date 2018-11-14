@@ -6,13 +6,13 @@ import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
 import EventIcon from '@material-ui/icons/Event'
 import DateRangeIcon from '@material-ui/icons/DateRange'
 import AccessTimeIcon from '@material-ui/icons/AccessTime'
+import MomentUtils from '@date-io/moment'
 import {
+  MuiPickersUtilsProvider,
   DateTimePicker,
   DatePicker,
   TimePicker,
 } from 'material-ui-pickers'
-import MomentUtils from 'material-ui-pickers/utils/moment-utils'
-import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider'
 
 import { TYPES } from './constants'
 
