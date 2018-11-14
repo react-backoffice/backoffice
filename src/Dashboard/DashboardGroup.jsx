@@ -24,7 +24,7 @@ const DashboardGroup = ({
 }) => (
   <div>
     <div className={classes.headline}>
-      <Typography variant="headline">
+      <Typography variant="h5">
         {title}
       </Typography>
     </div>

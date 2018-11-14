@@ -85,7 +85,7 @@ export default [{
     type: TYPES.CONTENT,
     content: (
       <Fragment>
-        <Typography variant="headline">Content</Typography>
+        <Typography variant="h5">Content</Typography>
       </Fragment>
     ),
   }, {

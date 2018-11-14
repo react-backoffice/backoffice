@@ -64,12 +64,12 @@ const DashboardCard = ({
           </Avatar>
         ) : null}
 
-        <Typography variant="headline" className={classes.title} component="h2">
+        <Typography variant="h5" className={classes.title} component="h2">
           {title}
         </Typography>
 
         {description ? (
-          <Typography variant="body1">{description}</Typography>
+          <Typography variant="body2">{description}</Typography>
         ) : null}
       </CardContent>
     </Card>

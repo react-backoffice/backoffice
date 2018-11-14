@@ -45,7 +45,7 @@ const FormSubmitButton = ({
   return (
     <div className={wrapperClasses}>
       <Button
-        variant="raised"
+        variant="contained"
         color="secondary"
         className={classes.button}
         disabled={disabled}

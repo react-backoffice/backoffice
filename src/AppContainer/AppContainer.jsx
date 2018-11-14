@@ -9,6 +9,9 @@ import {
 import withRoot from './withRoot'
 
 const defaultTheme = {
+  typography: {
+    useNextVariants: true,
+  },
   palette: {
     primary: {
       light: blueGrey[300],

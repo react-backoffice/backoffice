@@ -20,8 +20,8 @@ const styles = theme => ({
 const DashboardBranch = ({ data, onClick, classes }) => (
   <div className={classes.root}>
     <div className={classes.headline}>
-      <Typography variant="display2">{data.title}</Typography>
-      <Typography variant="body1">{data.description}</Typography>
+      <Typography variant="h3">{data.title}</Typography>
+      <Typography variant="body2">{data.description}</Typography>
     </div>
 
     {data.groups ? data.groups.map(group => (

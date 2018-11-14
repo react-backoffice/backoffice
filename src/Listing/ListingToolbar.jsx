@@ -49,9 +49,9 @@ const ListingToolbar = ({
   >
     <div className={classes.title}>
       {numSelected > 0 ? (
-        <Typography variant="subheading">{numSelected} selected</Typography>
+        <Typography variant="subtitle1">{numSelected} selected</Typography>
       ) : (
-        <Typography variant="title">{title}</Typography>
+        <Typography variant="h6">{title}</Typography>
       )}
     </div>
     <div className={classes.spacer} />
