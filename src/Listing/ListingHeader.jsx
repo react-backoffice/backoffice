@@ -44,6 +44,7 @@ class ListingHeader extends React.Component {
             <TableCell
               key={column.id}
               padding={column.isPaddingDisabled ? 'none' : 'default'}
+              numeric={column.isNumeric}
             >
               <Tooltip
                 title="Sort"

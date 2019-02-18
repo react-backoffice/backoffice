@@ -402,6 +402,7 @@ Data-Table to display data.
 * `label: string`, value to display in row header
 * `isPaddingDisabled?: boolean`, should the field be displayed condensed, default `false`
 * `isSearchable?: boolean`, is this value searchable?, default `false`
+* `isNumeric?: boolean`, is this value like a number?, default `false`
 * `transformContent?: function`, transform the content of each `data[]` entry before displaying
 
 #### Usage

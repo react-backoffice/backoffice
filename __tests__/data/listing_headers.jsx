@@ -15,6 +15,7 @@ export default [{
   isPaddingDisabled: false,
   label: 'Phone',
   isSearchable: true,
+  isNumeric: true,
 }, {
   id: 'website',
   isPaddingDisabled: true,

@@ -65,7 +65,7 @@ class ListingLine extends React.Component {
         <TableCell
           key={`cell-${(Math.random() * 10000).toFixed(4)}`}
           padding={header.isPaddingDisabled ? 'none' : 'default'}
-          numeric={header.numeric}
+          numeric={header.isNumeric}
           onClick={() => onClick(data.id)}
           {...props}
         >
