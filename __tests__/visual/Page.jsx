@@ -51,10 +51,10 @@ class Page extends React.Component {
   }
 
   componentWillMount() {
-    const { formData: newFormData } = this.state
+    const { formData: newFormData, additionalValue } = this.state
 
     newFormData[0].data[0].getAdditionalValue = value => (
-      this.state.additionalValue || value
+      additionalValue || value
     )
 
     this.setState({
@@ -107,6 +107,7 @@ class Page extends React.Component {
           data={listingData.slice(0, 2)}
           headers={listingHeaders}
           orderBy="username"
+          order="desc"
           onClick={noop}
           isIntegrated
         />

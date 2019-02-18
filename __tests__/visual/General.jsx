@@ -23,6 +23,8 @@ class General extends React.Component {
   }
 
   render() {
+    const { dialogOpen } = this.state
+
     return (
       <Fragment>
         <CookieInfo {...this.props}>
@@ -36,7 +38,7 @@ class General extends React.Component {
         </Typography>
         <Button onClick={this.handleOpenDialoge}>Open Dialog</Button>
         <Confirm
-          isOpen={this.state.dialogOpen}
+          isOpen={dialogOpen}
           description="Are you sure you want to delete the entry?"
           onConfirm={() => {}}
         />
