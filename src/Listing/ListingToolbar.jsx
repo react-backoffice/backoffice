@@ -44,19 +44,23 @@ const ListingToolbar = ({
 }) => (
   <Toolbar
     className={classNames(classes.root, {
-        [classes.highlight]: numSelected > 0,
-      })}
+      [classes.highlight]: numSelected > 0,
+    })}
   >
     <div className={classes.title}>
       {numSelected > 0 ? (
-        <Typography variant="subtitle1">{numSelected} selected</Typography>
+        <Typography variant="subtitle1">
+          {numSelected}
+          &nbsp;selected
+        </Typography>
       ) : (
         <Typography variant="h6">{title}</Typography>
       )}
     </div>
-    <div className={classes.spacer} />
-    <div className={classes.actions}>
 
+    <div className={classes.spacer} />
+
+    <div className={classes.actions}>
       {numSelected > 0 ? children : (
         <ListingSearch onFilter={onFilter} />
       )}

@@ -4,68 +4,80 @@ import keycode from 'keycode'
 import Uuid from 'init-uuid'
 import Store from 'vanilla-store'
 
+import easeInOutQuad from '../utils/easeInOutQuad'
 import ListingBranch from './ListingBranch'
 
-/* eslint-disable */
-Math.easeInOutQuad = (t, b, c, d) => {
-  t /= d / 2
-  if (t < 1) return c / 2 * t * t + b
-  t--
-  return -c / 2 * (t * (t - 2) - 1) + b
-};
-/* eslint-enable */
+const getStringContent = (content) => {
+  let matchContent = content
 
-const withListing = Component => class Listing extends React.Component {
-  static tryToMatch(value, content) {
-    let initialContent = content
+  if (content.constructor === Array) {
+    matchContent = content.join(' ')
+  } else if (typeof content === 'object') {
+    matchContent = Object.values(content).join(' ')
+  }
 
-    if (!content) {
-      return false
-    }
+  return matchContent.toLowerCase()
+}
 
-    if (content.highlight) {
-      initialContent = content.value
-    }
+const tryToMatch = (value, content) => {
+  let initialContent = content
 
-    const contentToSearch = Listing.getStringContent(initialContent)
-
-    if (contentToSearch.indexOf(value) > -1) {
-      return true
-    }
-
+  if (!content) {
     return false
   }
 
-  static filterElement(element, value, searchables) {
-    const searchValue = value.toLowerCase()
-    let newElement
+  if (content.highlight) {
+    initialContent = content.value
+  }
 
-    Object.keys(element).forEach((key) => {
-      if (searchables.indexOf(key) > -1) {
-        const matched = Listing.tryToMatch(searchValue, element[key])
+  const contentToSearch = getStringContent(initialContent)
 
-        if (matched) {
-          newElement = element
+  if (contentToSearch.indexOf(value) > -1) {
+    return true
+  }
+
+  return false
+}
+
+const getSearchableHeaders = headers => headers
+  .filter(header => header.isSearchable)
+  .map(header => header.id)
+
+
+const filterElement = (element, value, searchables) => {
+  const searchValue = value.toLowerCase()
+  let newElement
+
+  Object.keys(element).forEach((key) => {
+    if (searchables.indexOf(key) > -1) {
+      const matched = tryToMatch(searchValue, element[key])
+
+      if (matched) {
+        newElement = element
+      }
+    }
+  })
+
+  if (newElement) {
+    Object.keys(newElement).forEach((key) => {
+      if (newElement[key]) {
+        newElement[key] = {
+          highlight: searchValue,
+          value: newElement[key].highlight ? newElement[key].value : newElement[key],
         }
       }
     })
-
-    if (newElement) {
-      Object.keys(newElement).forEach((key) => {
-        if (newElement[key]) {
-          newElement[key] = {
-            highlight: searchValue,
-            value: newElement[key].highlight ? newElement[key].value : newElement[key],
-          }
-        }
-      })
-    }
-
-    return newElement
   }
 
+  return newElement
+}
+const withListing = Component => class Listing extends React.Component {
   static propTypes = {
     orderBy: PropTypes.string.isRequired,
+    order: PropTypes.oneOf([
+      'asc',
+      'desc',
+    ]),
     hasLoader: PropTypes.bool,
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
     headers: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -76,6 +88,7 @@ const withListing = Component => class Listing extends React.Component {
 
   static defaultProps = {
     id: new Uuid().get(),
+    order: 'asc',
     hasLoader: false,
     toolbarContent: (<Fragment />),
     onUpdateSelection: () => { },
@@ -86,7 +99,7 @@ const withListing = Component => class Listing extends React.Component {
 
     this.state = {
       order: 'asc',
-      orderBy: this.props.orderBy,
+      orderBy: 'id',
       selected: [],
       data: [],
       page: 0,
@@ -109,10 +122,18 @@ const withListing = Component => class Listing extends React.Component {
   }
 
   componentWillMount() {
-    const storedData = Store.get('Listing', this.props.id)
+    const {
+      id,
+      data,
+      headers,
+      order,
+      orderBy,
+    } = this.props
+
+    const storedData = Store.get('Listing', id)
     const newState = {
-      data: this.sortData(this.props.data),
-      searchable: Listing.getSearchableHeaders(this.props.headers),
+      data: this.sortData(data, orderBy, order),
+      searchable: getSearchableHeaders(headers),
     }
 
     if (storedData) {
@@ -125,39 +146,28 @@ const withListing = Component => class Listing extends React.Component {
       }
     }
 
-    this.setState(newState)
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const data = this.sortData(nextProps.data)
-
     this.setState({
-      data,
-      orderBy: nextProps.orderBy,
-      searchable: Listing.getSearchableHeaders(nextProps.headers),
+      ...newState,
+      order,
+      orderBy,
     })
   }
 
-  static getSearchableHeaders(headers) {
-    return headers
-      .filter(header => header.isSearchable)
-      .map(header => header.id)
+  componentWillReceiveProps({
+    data,
+    headers,
+    orderBy,
+    order,
+  }) {
+    this.setState({
+      data: this.sortData(data, orderBy, order),
+      orderBy,
+      order,
+      searchable: getSearchableHeaders(headers),
+    })
   }
 
-  static getStringContent(content) {
-    let matchContent = content
-
-    if (content.constructor === Array) {
-      matchContent = content.join(' ')
-    } else if (typeof content === 'object') {
-      matchContent = Object.values(content).join(' ')
-    }
-
-    return matchContent.toLowerCase()
-  }
-
-  sortData(data) {
-    const { orderBy } = this.state
+  sortData(data, orderBy, order) {
     const { headers } = this.props
     const orderByHeader = headers.filter(header => header.id === orderBy)[0]
     let { transformData } = orderByHeader
@@ -176,22 +186,35 @@ const withListing = Component => class Listing extends React.Component {
 
       return newElement
     })
+    const sortedData = transformedData.sort((a, b) => (a[orderBy] < b[orderBy] ? -1 : 1))
 
-    return transformedData.sort((a, b) => (a[orderBy] < b[orderBy] ? -1 : 1))
+    if (order === 'asc') {
+      return sortedData
+    }
+
+    return sortedData.reverse()
   }
 
   handleRequestSort(event, property) {
+    const {
+      orderBy: orderByState,
+      order: orderState,
+      data: dataState,
+    } = this.state
     const orderBy = property
     let order = 'desc'
 
-    if (this.state.orderBy === property && this.state.order === 'desc') {
+    if (orderByState === property && orderState === 'desc') {
       order = 'asc'
     }
 
-    const data =
-      order === 'desc'
-        ? this.state.data.sort((a, b) => (b[orderBy] < a[orderBy] ? -1 : 1))
-        : this.state.data.sort((a, b) => (a[orderBy] < b[orderBy] ? -1 : 1))
+    let data
+
+    if (order === 'desc') {
+      data = dataState.sort((a, b) => (b[orderBy] < a[orderBy] ? -1 : 1))
+    } else {
+      data = dataState.sort((a, b) => (a[orderBy] < b[orderBy] ? -1 : 1))
+    }
 
     this.setState({
       data,
@@ -201,9 +224,11 @@ const withListing = Component => class Listing extends React.Component {
   }
 
   handleSelectAllClick(event, checked) {
+    const { data } = this.state
+
     if (checked) {
       this.setState({
-        selected: this.state.data.map(n => n.id),
+        selected: data.map(n => n.id),
       })
 
       return
@@ -221,6 +246,7 @@ const withListing = Component => class Listing extends React.Component {
   }
 
   handleCheckClick(id) {
+    const { onUpdateSelection } = this.props
     const { selected } = this.state
     const selectedIndex = selected.indexOf(id)
     let newSelected = []
@@ -238,7 +264,7 @@ const withListing = Component => class Listing extends React.Component {
       )
     }
 
-    this.props.onUpdateSelection(newSelected)
+    onUpdateSelection(newSelected)
 
     this.setState({
       selected: newSelected,
@@ -259,7 +285,7 @@ const withListing = Component => class Listing extends React.Component {
 
     const animateScroll = () => {
       currentTime += increment
-      const val = Math.easeInOutQuad(currentTime, start, change, duration)
+      const val = easeInOutQuad(currentTime, start, change, duration)
       window.scrollTo(0, val)
 
       if (currentTime < duration) {
@@ -271,9 +297,12 @@ const withListing = Component => class Listing extends React.Component {
   }
 
   handleChangePage(event, page) {
+    const { id } = this.props
+    const { rowsPerPage } = this.state
+
     Store.create('Listing', {
-      id: this.props.id,
-      rowsPerPage: this.state.rowsPerPage,
+      id,
+      rowsPerPage,
       page,
     })
 
@@ -286,9 +315,11 @@ const withListing = Component => class Listing extends React.Component {
 
   handleChangeRowsPerPage(event) {
     const rowsPerPage = event.target.value
+    const { id, page } = this.state
+
     Store.create('Listing', {
-      id: this.state.id,
-      page: this.state.page,
+      id,
+      page,
       rowsPerPage,
     })
 
@@ -332,9 +363,7 @@ const withListing = Component => class Listing extends React.Component {
     }
 
     const newData = searchableData
-      .map(element => (
-        Listing.filterElement(element, value, searchable)
-      ))
+      .map(element => filterElement(element, value, searchable))
       .filter(item => item !== undefined)
 
     this.setState({
@@ -344,7 +373,9 @@ const withListing = Component => class Listing extends React.Component {
   }
 
   isSelected(id) {
-    return this.state.selected.indexOf(id) !== -1
+    const { selected } = this.state
+
+    return selected.indexOf(id) !== -1
   }
 
   render() {

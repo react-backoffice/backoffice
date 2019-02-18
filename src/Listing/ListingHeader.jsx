@@ -11,8 +11,10 @@ import {
 
 class ListingHeader extends React.Component {
   createSortHandler(property) {
+    const { onRequestSort } = this.props
+
     return (event) => {
-      this.props.onRequestSort(event, property)
+      onRequestSort(event, property)
     }
   }
 
@@ -57,7 +59,7 @@ class ListingHeader extends React.Component {
                 </TableSortLabel>
               </Tooltip>
             </TableCell>
-            ), this)}
+          ), this)}
         </TableRow>
       </TableHead>
     )

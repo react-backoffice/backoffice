@@ -25,7 +25,9 @@ const withListing = Component => class extends React.Component {
   }
 
   handleClick() {
-    const newOpen = !this.state.open
+    const { open } = this.state
+    const { onFilter } = this.props
+    const newOpen = !open
 
     if (this.searchRef && newOpen) {
       this.searchRef.focus()
@@ -35,16 +37,18 @@ const withListing = Component => class extends React.Component {
       open: newOpen,
     })
 
-    this.props.onFilter(undefined)
+    onFilter(undefined)
   }
 
   handleFilter(event) {
+    const { open } = this.state
+    const { onFilter } = this.props
     const { value } = event.target
 
-    if (this.state.open) {
-      this.props.onFilter(value)
+    if (open) {
+      onFilter(value)
     } else {
-      this.props.onFilter(undefined)
+      onFilter(undefined)
     }
   }
 
