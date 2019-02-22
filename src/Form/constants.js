@@ -12,6 +12,7 @@ export const TYPES = {
   PASSWORD: 'password',
   URL: 'url',
   CONTENT: 'content',
+  DIVIDER: 'divider',
   EMPTY: 'empty',
 }
 

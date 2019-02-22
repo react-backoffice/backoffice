@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import classnames from 'classnames'
 import { withStyles } from '@material-ui/core'
 
 import { TYPES } from './constants'
@@ -44,6 +44,11 @@ const styles = theme => ({
   widthFull: {
     width: `calc(100% - ${theme.spacing.unit * 2}px)`,
   },
+
+  divider: {
+    marginTop: theme.spacing.unit * 3,
+    marginBottom: theme.spacing.unit * 3,
+  },
 })
 
 const FormFieldBranch = ({
@@ -80,21 +85,21 @@ const FormFieldBranch = ({
           {...props}
           select
           selectOptions={props.selectOptions}
-          classNames={classNames}
+          className={classnames(classNames)}
         />
       )
     case TYPES.LIST:
       return (
         <FormFieldList
           {...props}
-          classNames={classNames}
+          className={classnames(classNames)}
         />
       )
     case TYPES.MULTILINE:
       return (
         <FormFieldInput
           {...props}
-          classNames={classNames}
+          className={classnames(classNames)}
           isMultiline
         />
       )
@@ -104,7 +109,7 @@ const FormFieldBranch = ({
       return (
         <FormFieldDate
           {...props}
-          classNames={[...classNames, classes.fieldDate]}
+          className={classnames(classNames, classes.fieldDate)}
           type={type}
         />
       )
@@ -112,16 +117,20 @@ const FormFieldBranch = ({
       return (
         <FormFieldSwitch
           {...props}
-          classNames={[...classNames, classes.fieldInline]}
+          className={classnames(classNames, classes.fieldInline)}
         />
+      )
+    case TYPES.DIVIDER:
+      return (
+        <hr className={classnames(classNames, classes.divider)} />
       )
     case TYPES.EMPTY:
       return (
-        <div className={classNames.join(' ')} />
+        <div className={classnames(classNames)} />
       )
     case TYPES.CONTENT:
       return (
-        <div className={[...classNames, classes.field].join(' ')}>
+        <div className={classnames(classNames, classes.field)}>
           {props.content}
         </div>
       )

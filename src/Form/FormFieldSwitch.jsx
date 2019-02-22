@@ -13,13 +13,13 @@ class FormFieldSwitch extends React.Component {
     title: PropTypes.string.isRequired,
     handleChange: PropTypes.func.isRequired,
     helperText: PropTypes.string,
-    classNames: PropTypes.arrayOf(PropTypes.string),
+    className: PropTypes.string,
     isDisabled: PropTypes.bool,
   }
 
   static defaultProps = {
     helperText: null,
-    classNames: [],
+    className: '',
     isDisabled: false,
   }
 
@@ -51,11 +51,11 @@ class FormFieldSwitch extends React.Component {
       title,
       helperText,
       isDisabled,
-      classNames,
+      className,
     } = this.props
 
     return (
-      <div className={classNames.join(' ')}>
+      <div className={className}>
         <FormControlLabel
           disabled={isDisabled}
           control={

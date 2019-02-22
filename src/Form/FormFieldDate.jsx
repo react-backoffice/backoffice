@@ -25,7 +25,7 @@ const FormFieldDate = ({
   isRequired,
   handleChange,
   helperText,
-  classNames,
+  className,
 }) => {
   let additionalAttributes = {}
   let Component
@@ -64,7 +64,7 @@ const FormFieldDate = ({
         format={format}
         required={isRequired}
         keyboardIcon={<EventIcon />}
-        className={classNames.join(' ')}
+        className={className}
         helperText={helperText}
         {...additionalAttributes}
       />
@@ -87,7 +87,7 @@ FormFieldDate.propTypes = {
   format: PropTypes.string,
   helperText: PropTypes.string,
   isRequired: PropTypes.bool.isRequired,
-  classNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+  className: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
 }
 

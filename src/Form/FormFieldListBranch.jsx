@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import classnames from 'classnames'
 
 import {
   Chip,
@@ -45,7 +45,7 @@ const FormFieldListBranch = ({
   listItems,
   showMenu,
   renderElement,
-  classNames: propClassNames,
+  className,
   onClick,
   onChange,
   onBlur,
@@ -89,14 +89,14 @@ const FormFieldListBranch = ({
   }
 
   return (
-    <div className={`${propClassNames.join(' ')} ${classes.root}`}>
+    <div className={classnames(className, classes.root)}>
       <FormFieldInput
         {...rest}
         handleChange={onChange}
         onBlur={onBlur}
       />
 
-      <Paper className={classNames(classes.list, {
+      <Paper className={classnames(classes.list, {
         [classes.listActive]: showMenu && availableOptions.length > 0,
       })}
       >
@@ -138,7 +138,7 @@ FormFieldListBranch.propTypes = {
   ])).isRequired,
   showMenu: PropTypes.bool.isRequired,
   renderElement: PropTypes.func,
-  classNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+  className: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   onBlur: PropTypes.func.isRequired,

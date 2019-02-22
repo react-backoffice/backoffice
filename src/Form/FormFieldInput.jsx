@@ -41,7 +41,7 @@ const FormFieldInput = ({
   error,
   iconEnd,
   isDisabled,
-  classNames,
+  className,
   onFocus,
   onBlur,
   onKeyPress,
@@ -53,7 +53,7 @@ const FormFieldInput = ({
     value={value}
     multiline={isMultiline}
     onChange={handleChange(id)}
-    className={classNames.join(' ')}
+    className={className}
     helperText={helperText}
     defaultValue={defaultValue}
     select={select}
@@ -100,7 +100,7 @@ FormFieldInput.propTypes = {
   helperText: PropTypes.string,
   isRequired: PropTypes.bool,
   error: PropTypes.bool,
-  classNames: PropTypes.arrayOf(PropTypes.string),
+  className: PropTypes.string,
   handleChange: PropTypes.func,
   select: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.string),
@@ -117,7 +117,7 @@ FormFieldInput.defaultProps = {
   defaultValue: undefined,
   isMultiline: false,
   helperText: '',
-  classNames: [],
+  className: '',
   isRequired: false,
   error: false,
   rows: 1,
