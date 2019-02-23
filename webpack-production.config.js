@@ -2,9 +2,10 @@ const path = require('path')
 const webpack = require('webpack')
 
 const LIBRARY_NAME = 'backoffice'
+const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 
 module.exports = {
-  mode: 'production',
+  mode,
   entry: {
     [LIBRARY_NAME]: path.resolve(__dirname, 'index.js'),
   },
@@ -40,7 +41,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.NODE_ENV': JSON.stringify(mode),
     }),
   ],
 }
