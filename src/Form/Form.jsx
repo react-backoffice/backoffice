@@ -37,17 +37,18 @@ const withForm = Component => class Form extends React.Component {
   }
 
   componentWillMount() {
-    this.generateFields(this.props.form, this.props.data)
-    this.generateMissingData(this.props.data)
+    const { form, data } = this.props
+    this.generateFields(form, data)
+    this.generateMissingData(data)
 
     this.setState({
       data: this.fields,
     })
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.generateFields(nextProps.form, nextProps.data)
-    this.generateMissingData(nextProps.data)
+  componentWillReceiveProps({ form, data }) {
+    this.generateFields(form, data)
+    this.generateMissingData(data)
 
     this.setState({
       data: this.fields,
@@ -103,6 +104,7 @@ const withForm = Component => class Form extends React.Component {
       data,
       loading,
     } = this.state
+    const { onSubmit } = this.props
 
     const errors = Object.values(data).map(field => field.error)
 
@@ -130,11 +132,15 @@ const withForm = Component => class Form extends React.Component {
       )
     }
 
-    this.props.onSubmit(data)
+    onSubmit(data)
   }
 
   updateFieldData(fieldId, value, submitValue, error) {
-    const data = Object.assign({}, this.state.data)
+    const { onDataChanged } = this.props
+    const { data: stateData } = this.state
+    const data = {
+      ...stateData,
+    }
 
     data[fieldId] = {
       value,
@@ -142,7 +148,7 @@ const withForm = Component => class Form extends React.Component {
       error,
     }
 
-    this.props.onDataChanged(data)
+    onDataChanged(data)
 
     this.setState({
       data,

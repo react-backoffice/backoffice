@@ -53,7 +53,6 @@ const FormFieldInput = ({
     value={value}
     multiline={isMultiline}
     onChange={handleChange(id)}
-    className={className}
     helperText={helperText}
     defaultValue={defaultValue}
     select={select}
@@ -69,13 +68,14 @@ const FormFieldInput = ({
     InputProps={{
       endAdornment: (<InputEnd icon={iconEnd} />),
     }}
+    className={className}
   >
-    {options ?
-        options.map(option => (
-          <MenuItem value={option} key={option.toLowerCase().replace(/ /, '')}>
-            {option}
-          </MenuItem>
-        ))
+    {options
+      ? options.map(option => (
+        <MenuItem value={option} key={option.toLowerCase().replace(/ /, '')}>
+          {option}
+        </MenuItem>
+      ))
       : null
     }
   </TextField>

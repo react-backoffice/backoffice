@@ -73,7 +73,7 @@ const FormFieldBranch = ({
       classNames.push(classes.hidden)
     }
 
-    return classNames
+    return classnames(...classNames)
   }
 
   const classNames = getClasses()
@@ -85,21 +85,21 @@ const FormFieldBranch = ({
           {...props}
           select
           selectOptions={props.selectOptions}
-          className={classnames(classNames)}
+          className={classNames}
         />
       )
     case TYPES.LIST:
       return (
         <FormFieldList
           {...props}
-          className={classnames(classNames)}
+          className={classNames}
         />
       )
     case TYPES.MULTILINE:
       return (
         <FormFieldInput
           {...props}
-          className={classnames(classNames)}
+          className={classNames}
           isMultiline
         />
       )
@@ -126,7 +126,7 @@ const FormFieldBranch = ({
       )
     case TYPES.EMPTY:
       return (
-        <div className={classnames(classNames)} />
+        <div className={classNames} />
       )
     case TYPES.CONTENT:
       return (
@@ -139,7 +139,7 @@ const FormFieldBranch = ({
         <FormFieldInput
           {...props}
           type={type}
-          classNames={classNames}
+          className={classNames}
         />
       )
   }

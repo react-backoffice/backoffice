@@ -21,7 +21,6 @@ const styles = theme => ({
   },
 })
 
-
 const Element = ({ useFormElement, ...props }) => {
   if (useFormElement) {
     return (
@@ -85,7 +84,8 @@ const FormBranch = ({
             >
               {field.title}
             </Typography>
-            ) : ''}
+          ) : null}
+
           {generateFields(field.data, field)}
         </FormGroupWrapper>
       )

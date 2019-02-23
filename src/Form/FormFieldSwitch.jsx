@@ -28,10 +28,12 @@ class FormFieldSwitch extends React.Component {
   }
 
   handleChange(id) {
-    const func = this.props.handleChange(id)
+    const { handleChange } = this.props
+    const { value } = this.state
+    const func = handleChange(id)
 
     return () => {
-      const newValue = !this.state.value
+      const newValue = !value
 
       this.setState({
         value: newValue,
@@ -53,19 +55,20 @@ class FormFieldSwitch extends React.Component {
       isDisabled,
       className,
     } = this.props
+    const { value } = this.state
 
     return (
       <div className={className}>
         <FormControlLabel
           disabled={isDisabled}
-          control={
+          control={(
             <Switch
-              checked={this.state.value}
+              checked={value}
               onChange={this.handleChange(id)}
               value={id}
               color="primary"
             />
-          }
+          )}
           label={title}
         />
 
