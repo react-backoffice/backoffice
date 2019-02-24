@@ -8,6 +8,7 @@ import FormFieldInput from './FormFieldInput'
 import FormFieldDate from './FormFieldDate'
 import FormFieldList from './FormFieldList'
 import FormFieldSwitch from './FormFieldSwitch'
+import FormFieldHidden from './FormFieldHidden'
 
 const styles = theme => ({
   hidden: {
@@ -119,6 +120,10 @@ const FormFieldBranch = ({
           {...props}
           className={classnames(classNames, classes.fieldInline)}
         />
+      )
+    case TYPES.HIDDEN:
+      return (
+        <FormFieldHidden {...props} />
       )
     case TYPES.DIVIDER:
       return (

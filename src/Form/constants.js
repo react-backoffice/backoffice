@@ -14,6 +14,7 @@ export const TYPES = {
   CONTENT: 'content',
   DIVIDER: 'divider',
   EMPTY: 'empty',
+  HIDDEN: 'hidden',
 }
 
 export default {}
