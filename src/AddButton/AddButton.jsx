@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import {
-  Button,
   withStyles,
+  Fab,
 } from '@material-ui/core'
 import AddIcon from '@material-ui/icons/Add'
 
@@ -16,15 +16,14 @@ const styles = theme => ({
 })
 
 const AddButton = ({ onClick, classes }) => (
-  <Button
-    variant="fab"
+  <Fab
     color="secondary"
     aria-label="add"
     className={classes.button}
     onClick={onClick}
   >
     <AddIcon />
-  </Button>
+  </Fab>
 )
 
 AddButton.propTypes = {
