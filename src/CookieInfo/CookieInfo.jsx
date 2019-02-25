@@ -52,7 +52,7 @@ class CookieInfo extends React.Component {
 
   static defaultProps = {
     isOpen: false,
-    onAccept: () => { },
+    onAccept: null,
     buttonText: 'Accept',
   }
 
@@ -63,7 +63,10 @@ class CookieInfo extends React.Component {
   }
 
   handleClick() {
-    this.props.onAccept()
+    const { onAccept } = this.props
+    if (onAccept) {
+      onAccept()
+    }
 
     Cookie.setCookie(true)
   }

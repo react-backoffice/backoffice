@@ -46,15 +46,17 @@ const withBase = Component => class extends React.Component {
   }
 
   componentWillMount() {
+    const { hasCookieInfo, menuOpen } = this.props
+
     this.setState({
-      cookieInfoOpen: this.props.hasCookieInfo && Cookie.getCookie() === false,
-      open: this.props.menuOpen,
+      cookieInfoOpen: hasCookieInfo && Cookie.getCookie() === false,
+      open: menuOpen,
     })
   }
 
-  componentWillReceiveProps(nextProp) {
+  componentWillReceiveProps({ menuOpen }) {
     this.setState({
-      open: nextProp.menuOpen,
+      open: menuOpen,
     })
   }
 
@@ -75,7 +77,9 @@ const withBase = Component => class extends React.Component {
   }
 
   redirectTo(link) {
-    this.props.history.push(link)
+    const { history } = this.props
+
+    history.push(link)
   }
 
   handleCookieInfoAccept() {
@@ -85,6 +89,8 @@ const withBase = Component => class extends React.Component {
   }
 
   render() {
+    const { rightContent } = this.props
+
     return (
       <Component
         {...this.props}
@@ -94,7 +100,7 @@ const withBase = Component => class extends React.Component {
         handleDrawerClose={this.handleDrawerClose}
         onCookieInfoAccept={this.handleCookieInfoAccept}
         redirectTo={this.redirectTo}
-        rightContent={this.props.rightContent}
+        rightContent={rightContent}
       />
     )
   }
