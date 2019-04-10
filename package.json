@@ -29,7 +29,7 @@
     "init-uuid": "^1.2.0",
     "is-url": "^1.2.2",
     "isemail": "^3.0.0",
-    "jest": "^23.6.0",
+    "jest": "^24.7.1",
     "jss": "^9.5.1",
     "keycode": "^2.1.9",
     "material-ui-pickers": "^2.0.1",
@@ -52,7 +52,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
+    "babel-jest": "^24.7.1",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
