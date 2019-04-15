@@ -7,7 +7,7 @@
   "scripts": {
     "start": "yarn server",
     "server": "webpack-dev-server",
-    "js:lint": "eslint **/*.{js,jsx}",
+    "js:lint": "eslint .",
     "js:test": "jest",
     "js:test:watch": "yarn js:test --watch",
     "js:test:coverage": "yarn js:test --coverage",

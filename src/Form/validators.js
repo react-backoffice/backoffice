@@ -17,20 +17,17 @@ export const required = (value) => {
 /**
  * Check if a value is readable for machines (e.g. as identifier)
  */
-export const machinereadable = value =>
-  (value && value === encodeURIComponent(value)) || !value
+export const machinereadable = value => (value && value === encodeURIComponent(value)) || !value
 
 /**
  * Check if value is a date
  */
-export const date = value =>
-  (value && !Number.isNaN(Date.parse(value))) || !value
+export const date = value => (value && !Number.isNaN(Date.parse(value))) || !value
 
 /**
  * Check if value is email
  */
-export const email = value =>
-  (value && Isemail.validate(value)) || !value
+export const email = value => (value && Isemail.validate(value)) || !value
 
 /**
  * Check if value is url

@@ -1,4 +1,4 @@
-import * as Backoffice from '../'
+import * as Backoffice from '..'
 
 it('has all components', () => {
   expect(typeof Backoffice.AddButton).toBe('function')
