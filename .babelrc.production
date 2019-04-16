@@ -1,16 +1,9 @@
 {
   "presets": [
-    "env",
-    "react"
+    "@babel/env",
+    "@babel/react"
   ],
   "plugins": [
-    [
-      "transform-class-properties",
-      {
-        "spec": true
-      }
-    ],
-    "transform-regenerator",
-    "transform-object-rest-spread"
+    "@babel/plugin-proposal-class-properties"
   ]
 }

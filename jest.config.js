@@ -25,7 +25,9 @@ module.exports = {
   transform: {
     '^.+\\.jsx?$': 'babel-jest',
   },
-  setupTestFrameworkScriptFile: './__tests__/config.js',
+  setupFilesAfterEnv: [
+    './__tests__/config.js',
+  ],
   snapshotSerializers: [
     'enzyme-to-json/serializer',
   ],

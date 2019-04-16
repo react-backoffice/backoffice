@@ -7,47 +7,47 @@ exports[`renders correctly 1`] = `
   <div
     className="DashboardBranch-headline-2"
   >
-    <h1
-      className="MuiTypography-root-3 MuiTypography-display2-6"
+    <h3
+      className="MuiTypography-root-3 MuiTypography-h3-17"
     >
       Backoffice
-    </h1>
+    </h3>
     <p
-      className="MuiTypography-root-3 MuiTypography-body1-12"
+      className="MuiTypography-root-3 MuiTypography-body2-11"
     >
       Visual Testing for Backoffice Framework
     </p>
   </div>
   <div>
     <div
-      className="DashboardGroup-headline-28"
+      className="DashboardGroup-headline-39"
     >
-      <h1
-        className="MuiTypography-root-3 MuiTypography-headline-8"
+      <h5
+        className="MuiTypography-root-3 MuiTypography-h5-19"
       >
         Title
-      </h1>
+      </h5>
     </div>
     <div
-      className="MuiGrid-container-29 MuiGrid-spacing-xs-16-52"
+      className="MuiGrid-container-40 MuiGrid-spacing-xs-16-63"
     >
       <div
-        className="MuiGrid-item-30 MuiGrid-grid-xs-12-69 MuiGrid-grid-sm-4-75"
+        className="MuiGrid-item-41 MuiGrid-grid-xs-12-80 MuiGrid-grid-sm-4-86"
       >
         <div
-          className="MuiPaper-root-133 MuiPaper-elevation1-136 MuiPaper-rounded-134 MuiCard-root-132 DashboardCard-root-126"
+          className="MuiPaper-root-144 MuiPaper-elevation1-147 MuiPaper-rounded-145 MuiCard-root-143 DashboardCard-root-137"
           onClick={[Function]}
         >
           <div
-            className="MuiCardContent-root-160 DashboardCard-content-127"
+            className="MuiCardContent-root-171 DashboardCard-content-138"
           >
             <h2
-              className="MuiTypography-root-3 MuiTypography-headline-8 DashboardCard-title-129"
+              className="MuiTypography-root-3 MuiTypography-h5-19 DashboardCard-title-140"
             >
               title
             </h2>
             <p
-              className="MuiTypography-root-3 MuiTypography-body1-12"
+              className="MuiTypography-root-3 MuiTypography-body2-11"
             >
               desc
             </p>

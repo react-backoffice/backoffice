@@ -17,8 +17,9 @@ exports[`renders correctly 1`] = `
       onClick={[Function]}
     >
       <span
-        className="MuiButtonBase-root-30 MuiIconButton-root-24 MuiSwitchBase-root-20 MuiCheckbox-root-15 MuiCheckbox-colorPrimary-18"
+        className="MuiButtonBase-root-35 MuiIconButton-root-29 MuiPrivateSwitchBase-root-25 MuiCheckbox-root-19 MuiCheckbox-colorPrimary-23"
         onBlur={[Function]}
+        onContextMenu={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
@@ -31,12 +32,13 @@ exports[`renders correctly 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-29"
+          className="MuiIconButton-label-34"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-33"
+            className="MuiSvgIcon-root-38"
             focusable="false"
+            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -45,13 +47,14 @@ exports[`renders correctly 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiSwitchBase-input-23"
+            className="MuiPrivateSwitchBase-input-28"
+            data-indeterminate={false}
             onChange={[Function]}
             type="checkbox"
           />
         </span>
         <span
-          className="MuiTouchRipple-root-40"
+          className="MuiTouchRipple-root-47"
         />
       </span>
     </td>
@@ -90,8 +93,9 @@ exports[`renders highlighted 1`] = `
       onClick={[Function]}
     >
       <span
-        className="MuiButtonBase-root-30 MuiIconButton-root-24 MuiSwitchBase-root-20 MuiCheckbox-root-15 MuiCheckbox-colorPrimary-18 MuiSwitchBase-checked-21 MuiCheckbox-checked-16"
+        className="MuiButtonBase-root-35 MuiIconButton-root-29 MuiPrivateSwitchBase-root-25 MuiCheckbox-root-19 MuiCheckbox-colorPrimary-23 MuiPrivateSwitchBase-checked-26 MuiCheckbox-checked-20"
         onBlur={[Function]}
+        onContextMenu={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
@@ -104,12 +108,13 @@ exports[`renders highlighted 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-29"
+          className="MuiIconButton-label-34"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-33"
+            className="MuiSvgIcon-root-38"
             focusable="false"
+            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -118,13 +123,14 @@ exports[`renders highlighted 1`] = `
           </svg>
           <input
             checked={true}
-            className="MuiSwitchBase-input-23"
+            className="MuiPrivateSwitchBase-input-28"
+            data-indeterminate={false}
             onChange={[Function]}
             type="checkbox"
           />
         </span>
         <span
-          className="MuiTouchRipple-root-40"
+          className="MuiTouchRipple-root-47"
         />
       </span>
     </td>
@@ -169,8 +175,9 @@ exports[`renders selected 1`] = `
       onClick={[Function]}
     >
       <span
-        className="MuiButtonBase-root-30 MuiIconButton-root-24 MuiSwitchBase-root-20 MuiCheckbox-root-15 MuiCheckbox-colorPrimary-18 MuiSwitchBase-checked-21 MuiCheckbox-checked-16"
+        className="MuiButtonBase-root-35 MuiIconButton-root-29 MuiPrivateSwitchBase-root-25 MuiCheckbox-root-19 MuiCheckbox-colorPrimary-23 MuiPrivateSwitchBase-checked-26 MuiCheckbox-checked-20"
         onBlur={[Function]}
+        onContextMenu={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
@@ -183,12 +190,13 @@ exports[`renders selected 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-29"
+          className="MuiIconButton-label-34"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-33"
+            className="MuiSvgIcon-root-38"
             focusable="false"
+            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -197,13 +205,14 @@ exports[`renders selected 1`] = `
           </svg>
           <input
             checked={true}
-            className="MuiSwitchBase-input-23"
+            className="MuiPrivateSwitchBase-input-28"
+            data-indeterminate={false}
             onChange={[Function]}
             type="checkbox"
           />
         </span>
         <span
-          className="MuiTouchRipple-root-40"
+          className="MuiTouchRipple-root-47"
         />
       </span>
     </td>

@@ -8,11 +8,12 @@ exports[`renders correctly 1`] = `
     className="MuiFormControl-root-4 ListingSearchBranch-field-2"
   >
     <div
-      className="MuiInput-root-8 MuiInput-formControl-9 MuiInput-underline-12"
+      className="MuiInputBase-root-21 MuiInput-root-8 MuiInput-underline-12 MuiInputBase-formControl-22 MuiInput-formControl-9"
+      onClick={[Function]}
     >
       <input
         aria-invalid={false}
-        className="MuiInput-input-16 MuiInput-inputType-19 MuiInput-inputTypeSearch-20"
+        className="MuiInputBase-input-31 MuiInput-input-16 MuiInputBase-inputType-34 MuiInput-inputType-19 MuiInputBase-inputTypeSearch-35 MuiInput-inputTypeSearch-20"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
@@ -26,10 +27,11 @@ exports[`renders correctly 1`] = `
   Array [
     <button
       aria-describedby={null}
-      className="MuiButtonBase-root-34 MuiIconButton-root-28"
+      className="MuiButtonBase-root-52 MuiIconButton-root-46"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
+      onContextMenu={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
@@ -45,12 +47,13 @@ exports[`renders correctly 1`] = `
       type="button"
     >
       <span
-        className="MuiIconButton-label-33"
+        className="MuiIconButton-label-51"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-37"
+          className="MuiSvgIcon-root-55"
           focusable="false"
+          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -63,7 +66,7 @@ exports[`renders correctly 1`] = `
         </svg>
       </span>
       <span
-        className="MuiTouchRipple-root-44"
+        className="MuiTouchRipple-root-64"
       />
     </button>,
     "",
@@ -79,11 +82,12 @@ exports[`renders correctly when open 1`] = `
     className="MuiFormControl-root-4 ListingSearchBranch-field-2"
   >
     <div
-      className="MuiInput-root-8 MuiInput-formControl-9 MuiInput-underline-12"
+      className="MuiInputBase-root-21 MuiInput-root-8 MuiInput-underline-12 MuiInputBase-formControl-22 MuiInput-formControl-9"
+      onClick={[Function]}
     >
       <input
         aria-invalid={false}
-        className="MuiInput-input-16 MuiInput-inputType-19 MuiInput-inputTypeSearch-20"
+        className="MuiInputBase-input-31 MuiInput-input-16 MuiInputBase-inputType-34 MuiInput-inputType-19 MuiInputBase-inputTypeSearch-35 MuiInput-inputTypeSearch-20"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
@@ -97,10 +101,11 @@ exports[`renders correctly when open 1`] = `
   Array [
     <button
       aria-describedby={null}
-      className="MuiButtonBase-root-34 MuiIconButton-root-28"
+      className="MuiButtonBase-root-52 MuiIconButton-root-46"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
+      onContextMenu={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
@@ -116,12 +121,13 @@ exports[`renders correctly when open 1`] = `
       type="button"
     >
       <span
-        className="MuiIconButton-label-33"
+        className="MuiIconButton-label-51"
       >
         <svg
           aria-hidden="true"
-          className="MuiSvgIcon-root-37"
+          className="MuiSvgIcon-root-55"
           focusable="false"
+          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -134,7 +140,7 @@ exports[`renders correctly when open 1`] = `
         </svg>
       </span>
       <span
-        className="MuiTouchRipple-root-44"
+        className="MuiTouchRipple-root-64"
       />
     </button>,
     "",

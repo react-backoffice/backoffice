@@ -16,8 +16,9 @@ exports[`renders correctly 1`] = `
         scope="col"
       >
         <span
-          className="MuiButtonBase-root-31 MuiIconButton-root-25 MuiSwitchBase-root-21 MuiCheckbox-root-16 MuiCheckbox-colorPrimary-19 MuiSwitchBase-checked-22 MuiCheckbox-checked-17"
+          className="MuiButtonBase-root-36 MuiIconButton-root-30 MuiPrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorPrimary-24 MuiPrivateSwitchBase-checked-27 MuiCheckbox-checked-21"
           onBlur={[Function]}
+          onContextMenu={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
@@ -30,12 +31,13 @@ exports[`renders correctly 1`] = `
           tabIndex={null}
         >
           <span
-            className="MuiIconButton-label-30"
+            className="MuiIconButton-label-35"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-34"
+              className="MuiSvgIcon-root-39"
               focusable="false"
+              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -44,13 +46,14 @@ exports[`renders correctly 1`] = `
             </svg>
             <input
               checked={true}
-              className="MuiSwitchBase-input-24"
+              className="MuiPrivateSwitchBase-input-29"
+              data-indeterminate={false}
               onChange={[Function]}
               type="checkbox"
             />
           </span>
           <span
-            className="MuiTouchRipple-root-41"
+            className="MuiTouchRipple-root-61"
           />
         </span>
       </th>
@@ -62,9 +65,10 @@ exports[`renders correctly 1`] = `
         Array [
           <span
             aria-describedby={null}
-            className="MuiButtonBase-root-31 MuiTableSortLabel-root-55 MuiTableSortLabel-active-56"
+            className="MuiButtonBase-root-36 MuiTableSortLabel-root-56 MuiTableSortLabel-active-57"
             onBlur={[Function]}
             onClick={[Function]}
+            onContextMenu={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
@@ -82,8 +86,9 @@ exports[`renders correctly 1`] = `
             Name
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-34 MuiTableSortLabel-icon-57 MuiTableSortLabel-iconDirectionAsc-59"
+              className="MuiSvgIcon-root-39 MuiTableSortLabel-icon-58 MuiTableSortLabel-iconDirectionAsc-60"
               focusable="false"
+              role="presentation"
               viewBox="0 0 24 24"
             >
               <path

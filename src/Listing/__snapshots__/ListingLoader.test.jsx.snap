@@ -13,16 +13,16 @@ exports[`renders correctly 1`] = `
       colSpan={1}
     >
       <div
-        className="MuiLinearProgress-root-18 MuiLinearProgress-colorPrimary-19 ListingLoader-progress-4"
+        className="MuiLinearProgress-root-22 MuiLinearProgress-colorPrimary-23 MuiLinearProgress-indeterminate-26 ListingLoader-progress-4"
         mode="query"
         role="progressbar"
       >
         <div
-          className="MuiLinearProgress-bar-26 MuiLinearProgress-barColorPrimary-27 MuiLinearProgress-bar1Indeterminate-29"
+          className="MuiLinearProgress-bar-32 MuiLinearProgress-barColorPrimary-33 MuiLinearProgress-bar1Indeterminate-35"
           style={Object {}}
         />
         <div
-          className="MuiLinearProgress-bar-26 MuiLinearProgress-barColorPrimary-27 MuiLinearProgress-bar2Indeterminate-32"
+          className="MuiLinearProgress-bar-32 MuiLinearProgress-barColorPrimary-33 MuiLinearProgress-bar2Indeterminate-38"
           style={Object {}}
         />
       </div>

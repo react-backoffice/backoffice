@@ -2,11 +2,10 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="MuiDrawer-docked-3"
+  className="MuiDrawer-root-3 MuiDrawer-docked-4"
 >
   <div
-    className="MuiPaper-root-14 MuiPaper-elevation0-16 MuiDrawer-paper-4 Drawer-drawerPaper-1 MuiDrawer-paperAnchorLeft-5 MuiDrawer-paperAnchorDockedLeft-9"
-    direction="right"
+    className="MuiPaper-root-15 MuiPaper-elevation0-17 MuiDrawer-paper-5 Drawer-drawerPaper-1 MuiDrawer-paperAnchorLeft-6 MuiDrawer-paperAnchorDockedLeft-10"
     style={Object {}}
   >
     <div>
@@ -14,10 +13,11 @@ exports[`renders correctly 1`] = `
         className="Drawer-drawerHeader-2"
       >
         <button
-          className="MuiButtonBase-root-47 MuiIconButton-root-41"
+          className="MuiButtonBase-root-48 MuiIconButton-root-42"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
+          onContextMenu={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
@@ -31,12 +31,13 @@ exports[`renders correctly 1`] = `
           type="button"
         >
           <span
-            className="MuiIconButton-label-46"
+            className="MuiIconButton-label-47"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-50"
+              className="MuiSvgIcon-root-51"
               focusable="false"
+              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -49,23 +50,24 @@ exports[`renders correctly 1`] = `
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-57"
+            className="MuiTouchRipple-root-126"
           />
         </button>
       </div>
       <hr
-        className="MuiDivider-root-64"
+        className="MuiDivider-root-60"
       />
       <div
-        className="Menu-root-68"
+        className="Menu-root-65"
       >
         <ul
-          className="MuiList-root-69 MuiList-padding-70"
+          className="MuiList-root-66 MuiList-padding-67"
         >
           <div
-            className="MuiButtonBase-root-47 MuiListItem-root-74 MuiListItem-default-77 MuiListItem-gutters-81 MuiListItem-button-82"
+            className="MuiButtonBase-root-48 MuiListItem-root-71 MuiListItem-default-74 MuiListItem-gutters-79 MuiListItem-button-80"
             onBlur={[Function]}
             onClick={[Function]}
+            onContextMenu={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
@@ -79,22 +81,23 @@ exports[`renders correctly 1`] = `
             tabIndex="0"
           >
             <div
-              className="MuiListItemText-root-85"
+              className="MuiListItemText-root-83"
             >
               <span
-                className="MuiTypography-root-91 MuiTypography-subheading-98 MuiListItemText-primary-88"
+                className="MuiTypography-root-89 MuiTypography-subheading-96 MuiListItemText-primary-86"
               >
                 Dashboard
               </span>
             </div>
             <span
-              className="MuiTouchRipple-root-57"
+              className="MuiTouchRipple-root-126"
             />
           </div>
           <div
-            className="MuiButtonBase-root-47 MuiListItem-root-74 MuiListItem-default-77 MuiListItem-gutters-81 MuiListItem-button-82 MenuItem-isDisabled-73"
+            className="MuiButtonBase-root-48 MuiListItem-root-71 MuiListItem-default-74 MuiListItem-gutters-79 MuiListItem-button-80 MenuItem-isDisabled-70"
             onBlur={[Function]}
             onClick={[Function]}
+            onContextMenu={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
@@ -108,25 +111,26 @@ exports[`renders correctly 1`] = `
             tabIndex="0"
           >
             <div
-              className="MuiListItemText-root-85"
+              className="MuiListItemText-root-83"
             >
               <span
-                className="MuiTypography-root-91 MuiTypography-subheading-98 MuiListItemText-primary-88"
+                className="MuiTypography-root-89 MuiTypography-subheading-96 MuiListItemText-primary-86"
               >
                 New portfolio
               </span>
             </div>
             <span
-              className="MuiTouchRipple-root-57"
+              className="MuiTouchRipple-root-126"
             />
           </div>
           <hr
-            className="MuiDivider-root-64"
+            className="MuiDivider-root-60"
           />
           <div
-            className="MuiButtonBase-root-47 MuiListItem-root-74 MuiListItem-default-77 MuiListItem-gutters-81 MuiListItem-button-82"
+            className="MuiButtonBase-root-48 MuiListItem-root-71 MuiListItem-default-74 MuiListItem-gutters-79 MuiListItem-button-80"
             onBlur={[Function]}
             onClick={[Function]}
+            onContextMenu={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
@@ -139,31 +143,36 @@ exports[`renders correctly 1`] = `
             role="button"
             tabIndex="0"
           >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-50 MuiListItemIcon-root-116"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-              />
-              <path
-                d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
-              />
-            </svg>
             <div
-              className="MuiListItemText-root-85"
+              className="MuiListItemIcon-root-125"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-51"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"
+                />
+              </svg>
+            </div>
+            <div
+              className="MuiListItemText-root-83"
             >
               <span
-                className="MuiTypography-root-91 MuiTypography-subheading-98 MuiListItemText-primary-88"
+                className="MuiTypography-root-89 MuiTypography-subheading-96 MuiListItemText-primary-86"
               >
                 Report a bug
               </span>
             </div>
             <span
-              className="MuiTouchRipple-root-57"
+              className="MuiTouchRipple-root-126"
             />
           </div>
         </ul>

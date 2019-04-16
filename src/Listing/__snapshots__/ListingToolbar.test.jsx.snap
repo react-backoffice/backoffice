@@ -7,8 +7,8 @@ exports[`renders correctly 1`] = `
   <div
     className="ListingToolbar-title-5"
   >
-    <h2
-      className="MuiTypography-root-10 MuiTypography-title-16"
+    <h6
+      className="MuiTypography-root-10 MuiTypography-h6-27"
     />
   </div>
   <div
@@ -18,17 +18,18 @@ exports[`renders correctly 1`] = `
     className="ListingToolbar-actions-4"
   >
     <div
-      className="ListingSearchBranch-root-35"
+      className="ListingSearchBranch-root-46"
     >
       <div
-        className="MuiFormControl-root-38 ListingSearchBranch-field-36"
+        className="MuiFormControl-root-49 ListingSearchBranch-field-47"
       >
         <div
-          className="MuiInput-root-42 MuiInput-formControl-43 MuiInput-underline-46"
+          className="MuiInputBase-root-66 MuiInput-root-53 MuiInput-underline-57 MuiInputBase-formControl-67 MuiInput-formControl-54"
+          onClick={[Function]}
         >
           <input
             aria-invalid={false}
-            className="MuiInput-input-50 MuiInput-inputType-53 MuiInput-inputTypeSearch-54"
+            className="MuiInputBase-input-76 MuiInput-input-61 MuiInputBase-inputType-79 MuiInput-inputType-64 MuiInputBase-inputTypeSearch-80 MuiInput-inputTypeSearch-65"
             disabled={false}
             onBlur={[Function]}
             onChange={[Function]}
@@ -42,10 +43,11 @@ exports[`renders correctly 1`] = `
       Array [
         <button
           aria-describedby={null}
-          className="MuiButtonBase-root-68 MuiIconButton-root-62"
+          className="MuiButtonBase-root-97 MuiIconButton-root-91"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
+          onContextMenu={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
@@ -61,12 +63,13 @@ exports[`renders correctly 1`] = `
           type="button"
         >
           <span
-            className="MuiIconButton-label-67"
+            className="MuiIconButton-label-96"
           >
             <svg
               aria-hidden="true"
-              className="MuiSvgIcon-root-71"
+              className="MuiSvgIcon-root-100"
               focusable="false"
+              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -79,7 +82,7 @@ exports[`renders correctly 1`] = `
             </svg>
           </span>
           <span
-            className="MuiTouchRipple-root-78"
+            className="MuiTouchRipple-root-109"
           />
         </button>,
         "",

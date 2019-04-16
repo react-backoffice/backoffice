@@ -3,10 +3,11 @@
 exports[`renders correctly 1`] = `
 <button
   aria-label="add"
-  className="MuiButtonBase-root-28 MuiButton-root-2 MuiButton-fab-19 MuiButton-contained-13 MuiButton-containedSecondary-15 MuiButton-raised-16 MuiButton-raisedSecondary-18 AddButton-button-1"
+  className="MuiButtonBase-root-12 MuiFab-root-2 MuiFab-secondary-5 AddButton-button-1"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
+  onContextMenu={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
@@ -20,12 +21,13 @@ exports[`renders correctly 1`] = `
   type="button"
 >
   <span
-    className="MuiButton-label-3"
+    className="MuiFab-label-3"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-31"
+      className="MuiSvgIcon-root-15"
       focusable="false"
+      role="presentation"
       viewBox="0 0 24 24"
     >
       <path
@@ -38,7 +40,7 @@ exports[`renders correctly 1`] = `
     </svg>
   </span>
   <span
-    className="MuiTouchRipple-root-38"
+    className="MuiTouchRipple-root-24"
   />
 </button>
 `;

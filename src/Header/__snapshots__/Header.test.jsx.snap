@@ -5,17 +5,18 @@ exports[`renders correctly 1`] = `
   className="Header-root-1"
 >
   <header
-    className="MuiPaper-root-17 MuiPaper-elevation4-23 MuiAppBar-root-9 MuiAppBar-positionFixed-10 MuiAppBar-colorPrimary-15 mui-fixed Header-appBar-2 Header-appBarShift-4 Header-appBarWithCookieInfo-3"
+    className="MuiPaper-root-18 MuiPaper-elevation4-24 MuiAppBar-root-9 MuiAppBar-positionFixed-10 MuiAppBar-colorPrimary-16 mui-fixed Header-appBar-2 Header-appBarShift-4 Header-appBarWithCookieInfo-3"
   >
     <div
-      className="MuiToolbar-root-44 MuiToolbar-regular-46 MuiToolbar-gutters-45"
+      className="MuiToolbar-root-45 MuiToolbar-regular-47 MuiToolbar-gutters-46"
     >
       <button
         aria-label="open drawer"
-        className="MuiButtonBase-root-54 MuiIconButton-root-48 MuiIconButton-colorInherit-49 Header-menuButton-5 Header-hide-6"
+        className="MuiButtonBase-root-55 MuiIconButton-root-49 MuiIconButton-colorInherit-50 Header-menuButton-5 Header-hide-6"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
+        onContextMenu={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
@@ -29,12 +30,13 @@ exports[`renders correctly 1`] = `
         type="button"
       >
         <span
-          className="MuiIconButton-label-53"
+          className="MuiIconButton-label-54"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-57"
+            className="MuiSvgIcon-root-58"
             focusable="false"
+            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -47,15 +49,15 @@ exports[`renders correctly 1`] = `
           </svg>
         </span>
         <span
-          className="MuiTouchRipple-root-64"
+          className="MuiTouchRipple-root-103"
         />
       </button>
-      <h2
-        className="MuiTypography-root-71 MuiTypography-title-77 MuiTypography-colorInherit-90 Header-flex-7 Header-title-8"
+      <h6
+        className="MuiTypography-root-67 MuiTypography-h6-84 MuiTypography-colorInherit-96 Header-flex-7 Header-title-8"
         onClick={[Function]}
       >
         Header
-      </h2>
+      </h6>
     </div>
   </header>
 </div>
@@ -66,17 +68,18 @@ exports[`renders correctly with closed 1`] = `
   className="Header-root-1"
 >
   <header
-    className="MuiPaper-root-17 MuiPaper-elevation4-23 MuiAppBar-root-9 MuiAppBar-positionStatic-13 MuiAppBar-colorPrimary-15 Header-appBar-2"
+    className="MuiPaper-root-18 MuiPaper-elevation4-24 MuiAppBar-root-9 MuiAppBar-positionStatic-13 MuiAppBar-colorPrimary-16 Header-appBar-2"
   >
     <div
-      className="MuiToolbar-root-44 MuiToolbar-regular-46 MuiToolbar-gutters-45"
+      className="MuiToolbar-root-45 MuiToolbar-regular-47 MuiToolbar-gutters-46"
     >
       <button
         aria-label="open drawer"
-        className="MuiButtonBase-root-54 MuiIconButton-root-48 MuiIconButton-colorInherit-49 Header-menuButton-5"
+        className="MuiButtonBase-root-55 MuiIconButton-root-49 MuiIconButton-colorInherit-50 Header-menuButton-5"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
+        onContextMenu={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
@@ -90,12 +93,13 @@ exports[`renders correctly with closed 1`] = `
         type="button"
       >
         <span
-          className="MuiIconButton-label-53"
+          className="MuiIconButton-label-54"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-57"
+            className="MuiSvgIcon-root-58"
             focusable="false"
+            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -108,15 +112,15 @@ exports[`renders correctly with closed 1`] = `
           </svg>
         </span>
         <span
-          className="MuiTouchRipple-root-64"
+          className="MuiTouchRipple-root-103"
         />
       </button>
-      <h2
-        className="MuiTypography-root-71 MuiTypography-title-77 MuiTypography-colorInherit-90 Header-flex-7 Header-title-8"
+      <h6
+        className="MuiTypography-root-67 MuiTypography-h6-84 MuiTypography-colorInherit-96 Header-flex-7 Header-title-8"
         onClick={[Function]}
       >
         Header
-      </h2>
+      </h6>
     </div>
   </header>
 </div>

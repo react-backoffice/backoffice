@@ -5,13 +5,13 @@ exports[`renders correctly 1`] = `
   className="NoMatch-root-1"
 >
   <div>
-    <h1
-      className="MuiTypography-root-2 MuiTypography-display3-4"
+    <h2
+      className="MuiTypography-root-2 MuiTypography-h2-15"
     >
       Title
-    </h1>
+    </h2>
     <p
-      className="MuiTypography-root-2 MuiTypography-display1-6 MuiTypography-paragraph-20"
+      className="MuiTypography-root-2 MuiTypography-h4-17 MuiTypography-paragraph-30"
     >
       This URL does not exist, sorry. Please start over from the 
       <a
@@ -31,13 +31,13 @@ exports[`renders correctly with description 1`] = `
   className="NoMatch-root-1"
 >
   <div>
-    <h1
-      className="MuiTypography-root-2 MuiTypography-display3-4"
+    <h2
+      className="MuiTypography-root-2 MuiTypography-h2-15"
     >
       Title
-    </h1>
+    </h2>
     <p
-      className="MuiTypography-root-2 MuiTypography-display1-6 MuiTypography-paragraph-20"
+      className="MuiTypography-root-2 MuiTypography-h4-17 MuiTypography-paragraph-30"
     >
       <p>
         Desc

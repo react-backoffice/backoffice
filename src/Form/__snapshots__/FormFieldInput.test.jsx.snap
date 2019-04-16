@@ -6,11 +6,12 @@ exports[`renders correctly 1`] = `
   onKeyPress={[Function]}
 >
   <div
-    className="MuiInput-root-5 MuiInput-fullWidth-12 MuiInput-formControl-6 MuiInput-underline-9"
+    className="MuiInputBase-root-18 MuiInput-root-5 MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6 MuiInputBase-adornedEnd-23"
+    onClick={[Function]}
   >
     <input
       aria-invalid={false}
-      className="MuiInput-input-13"
+      className="MuiInputBase-input-28 MuiInput-input-13 MuiInputBase-inputAdornedEnd-34"
       disabled={false}
       onBlur={[Function]}
       onChange={[Function]}
@@ -30,11 +31,12 @@ exports[`renders disabled 1`] = `
   onKeyPress={[Function]}
 >
   <div
-    className="MuiInput-root-5 MuiInput-disabled-8 MuiInput-fullWidth-12 MuiInput-formControl-6 MuiInput-underline-9"
+    className="MuiInputBase-root-18 MuiInput-root-5 MuiInput-underline-9 MuiInputBase-disabled-21 MuiInput-disabled-8 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6 MuiInputBase-adornedEnd-23"
+    onClick={[Function]}
   >
     <input
       aria-invalid={false}
-      className="MuiInput-input-13 MuiInput-disabled-8"
+      className="MuiInputBase-input-28 MuiInput-input-13 MuiInputBase-disabled-21 MuiInput-disabled-8 MuiInputBase-inputAdornedEnd-34"
       disabled={true}
       onBlur={[Function]}
       onChange={[Function]}

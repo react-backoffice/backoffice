@@ -5,32 +5,32 @@ exports[`renders correctly 1`] = `
   <div
     className="DashboardGroup-headline-1"
   >
-    <h1
-      className="MuiTypography-root-2 MuiTypography-headline-7"
+    <h5
+      className="MuiTypography-root-2 MuiTypography-h5-18"
     >
       Title
-    </h1>
+    </h5>
   </div>
   <div
-    className="MuiGrid-container-27 MuiGrid-spacing-xs-16-50"
+    className="MuiGrid-container-38 MuiGrid-spacing-xs-16-61"
   >
     <div
-      className="MuiGrid-item-28 MuiGrid-grid-xs-12-67 MuiGrid-grid-sm-4-73"
+      className="MuiGrid-item-39 MuiGrid-grid-xs-12-78 MuiGrid-grid-sm-4-84"
     >
       <div
-        className="MuiPaper-root-131 MuiPaper-elevation1-134 MuiPaper-rounded-132 MuiCard-root-130 DashboardCard-root-124"
+        className="MuiPaper-root-142 MuiPaper-elevation1-145 MuiPaper-rounded-143 MuiCard-root-141 DashboardCard-root-135"
         onClick={[Function]}
       >
         <div
-          className="MuiCardContent-root-158 DashboardCard-content-125"
+          className="MuiCardContent-root-169 DashboardCard-content-136"
         >
           <h2
-            className="MuiTypography-root-2 MuiTypography-headline-7 DashboardCard-title-127"
+            className="MuiTypography-root-2 MuiTypography-h5-18 DashboardCard-title-138"
           >
             title
           </h2>
           <p
-            className="MuiTypography-root-2 MuiTypography-body1-11"
+            className="MuiTypography-root-2 MuiTypography-body2-10"
           >
             desc
           </p>

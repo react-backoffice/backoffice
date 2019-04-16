@@ -9,12 +9,12 @@ exports[`renders correctly 1`] = `
     className="MuiCardContent-root-35 DashboardCard-content-2"
   >
     <h2
-      className="MuiTypography-root-36 MuiTypography-headline-41 DashboardCard-title-4"
+      className="MuiTypography-root-36 MuiTypography-h5-52 DashboardCard-title-4"
     >
       Title
     </h2>
     <p
-      className="MuiTypography-root-36 MuiTypography-body1-45"
+      className="MuiTypography-root-36 MuiTypography-body2-44"
     >
       desc
     </p>
@@ -32,8 +32,9 @@ exports[`renders disabled 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-61 DashboardCard-icon-6"
+      className="MuiSvgIcon-root-72 DashboardCard-icon-6"
       focusable="false"
+      role="presentation"
       viewBox="0 0 24 24"
     >
       <path
@@ -45,12 +46,12 @@ exports[`renders disabled 1`] = `
       />
     </svg>
     <h2
-      className="MuiTypography-root-36 MuiTypography-headline-41 DashboardCard-title-4"
+      className="MuiTypography-root-36 MuiTypography-h5-52 DashboardCard-title-4"
     >
       Title
     </h2>
     <p
-      className="MuiTypography-root-36 MuiTypography-body1-45"
+      className="MuiTypography-root-36 MuiTypography-body2-44"
     >
       desc
     </p>
