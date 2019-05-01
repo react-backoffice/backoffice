@@ -2,7 +2,7 @@ import React from 'react'
 import MockRouter from 'react-mock-router'
 import { mount } from 'enzyme'
 
-import BackButton from './'
+import BackButton from '.'
 
 describe('Back Button', () => {
   it('renders correctly', () => {

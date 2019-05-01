@@ -7,24 +7,24 @@ import IconButton from '@material-ui/core/IconButton'
 import Button from '@material-ui/core/Button'
 import DeleteIcon from '@material-ui/icons/Delete'
 
-import Dashboard from '../../src/Dashboard'
-import dashboardData from '../data/dashboard'
+import Dashboard from '../Dashboard'
+import dashboardData from './data/dashboard'
 
-import Menu from '../../src/Menu'
-import menuData from '../data/menu'
+import Menu from '../Menu'
+import menuData from './data/menu'
 
-import Listing from '../../src/Listing'
-import listingData from '../data/listing_data'
-import listingHeaders from '../data/listing_headers'
+import Listing from '../Listing'
+import listingData from './data/listing_data'
+import listingHeaders from './data/listing_headers'
 
-import Form from '../../src/Form'
-import formData from '../data/form'
+import Form from '../Form'
+import formData from './data/form'
 
-import AddButton from '../../src/AddButton'
-import BackButton from '../../src/BackButton'
+import AddButton from '../AddButton'
+import BackButton from '../BackButton'
 
-import Tabs from '../../src/Tabs'
-import tabData from '../data/tabs'
+import Tabs from '../Tabs'
+import tabData from './data/tabs'
 
 const noop = () => {}
 

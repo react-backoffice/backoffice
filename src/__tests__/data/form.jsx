@@ -6,7 +6,7 @@ import {
   Typography,
 } from '@material-ui/core'
 
-import { TYPES } from '../../src/Form/constants'
+import { TYPES } from '../../Form/constants'
 
 export default [{
   group: true,

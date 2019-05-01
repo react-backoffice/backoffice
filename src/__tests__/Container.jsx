@@ -9,12 +9,12 @@ import Typography from '@material-ui/core/Typography'
 import indigo from '@material-ui/core/colors/indigo'
 import amber from '@material-ui/core/colors/amber'
 
-import menuData from '../data/menu'
+import menuData from './data/menu'
 
-import AppContainer from '../../src/AppContainer'
-import Base from '../../src/Base'
-import NoMatch from '../../src/NoMatch'
-import CookieInfo from '../../src/CookieInfo'
+import AppContainer from '../AppContainer'
+import Base from '../Base'
+import NoMatch from '../NoMatch'
+import CookieInfo from '../CookieInfo'
 
 import Page from './Page'
 import General from './General'
