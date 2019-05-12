@@ -17,8 +17,8 @@
     "test:codecov": "codecov",
     "lint": "yarn js:lint && yarn ts:lint",
     "build": "yarn js:build",
-    "buildbabel": "NODE_ENV=production babel src --out-dir dist",
-    "prepublishOnly": "rm -rf ./dist && yarn build"
+    "build:babel": "NODE_ENV=production babel src --out-dir dist",
+    "prepublishOnly": "rm -rf ./dist && yarn build:babel"
   },
   "dependencies": {
     "@date-io/moment": "^1.1.0",
