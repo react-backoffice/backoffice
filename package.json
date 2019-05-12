@@ -1,7 +1,7 @@
 {
   "name": "backoffice",
   "version": "2.3.0",
-  "main": "dist/backoffice.js",
+  "main": "dist/app.js",
   "author": "Hans Christian Reinl <info@drublic.de>",
   "license": "MIT",
   "scripts": {
@@ -17,6 +17,7 @@
     "test:codecov": "codecov",
     "lint": "yarn js:lint && yarn ts:lint",
     "build": "yarn js:build",
+    "buildbabel": "NODE_ENV=production babel src --out-dir dist",
     "prepublishOnly": "rm -rf ./dist && yarn build"
   },
   "dependencies": {
@@ -46,7 +47,10 @@
     "react-dom": "^16.8.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
     "babel-polyfill": "^6.26.0",
+    "babel-preset-react-app": "^9.0.0",
     "codecov": "^3.0.0",
     "concurrently": "^4.0.1",
     "enzyme": "^3.3.0",

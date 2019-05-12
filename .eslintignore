@@ -2,3 +2,4 @@ examples/
 node_modules/
 coverage/
 build/
+dist/
