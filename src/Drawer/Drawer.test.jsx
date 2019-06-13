@@ -1,12 +1,12 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
-import menuData from '../../__tests__/data/menu'
+import menuData from '../tests/data/menu'
 
-import Drawer from './'
+import Drawer from '.'
 
 it('renders correctly', () => {
-  const tree = mount(<Drawer
+  const tree = shallow(<Drawer
     isOpen
     data={menuData}
     onClose={() => {}}

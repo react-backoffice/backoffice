@@ -1,3 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `""`;
+exports[`renders correctly 1`] = `
+<WithStyles(ForwardRef(Snackbar))
+  SnackbarContentProps={
+    Object {
+      "aria-describedby": "message-id",
+    }
+  }
+  anchorOrigin={
+    Object {
+      "horizontal": "left",
+      "vertical": "bottom",
+    }
+  }
+  autoHideDuration={6000}
+  message={
+    <span
+      id="message-id"
+    >
+      Message
+    </span>
+  }
+  open={false}
+/>
+`;

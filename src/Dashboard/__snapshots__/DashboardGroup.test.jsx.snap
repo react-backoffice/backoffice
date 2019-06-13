@@ -1,42 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  <div
-    className="DashboardGroup-headline-1"
-  >
-    <h5
-      className="MuiTypography-root-2 MuiTypography-h5-18"
-    >
-      Title
-    </h5>
-  </div>
-  <div
-    className="MuiGrid-container-38 MuiGrid-spacing-xs-16-61"
-  >
-    <div
-      className="MuiGrid-item-39 MuiGrid-grid-xs-12-78 MuiGrid-grid-sm-4-84"
-    >
-      <div
-        className="MuiPaper-root-142 MuiPaper-elevation1-145 MuiPaper-rounded-143 MuiCard-root-141 DashboardCard-root-135"
-        onClick={[Function]}
-      >
-        <div
-          className="MuiCardContent-root-169 DashboardCard-content-136"
-        >
-          <h2
-            className="MuiTypography-root-2 MuiTypography-h5-18 DashboardCard-title-138"
-          >
-            title
-          </h2>
-          <p
-            className="MuiTypography-root-2 MuiTypography-body2-10"
-          >
-            desc
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<DashboardGroup
+  cards={
+    Array [
+      Object {
+        "description": "desc",
+        "title": "title",
+      },
+    ]
+  }
+  classes={
+    Object {
+      "headline": "DashboardGroup-headline-1",
+    }
+  }
+  onClick={[Function]}
+  title="Title"
+/>
 `;

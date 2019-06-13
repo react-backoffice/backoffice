@@ -1,48 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="NoMatch-root-1"
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
 >
-  <div>
-    <h2
-      className="MuiTypography-root-2 MuiTypography-h2-15"
-    >
-      Title
-    </h2>
-    <p
-      className="MuiTypography-root-2 MuiTypography-h4-17 MuiTypography-paragraph-30"
-    >
-      This URL does not exist, sorry. Please start over from the 
-      <a
-        href="/"
-        onClick={[Function]}
-      >
-        Dashboard
-      </a>
-      .
-    </p>
-  </div>
-</div>
+  <WithStyles(NoMatch)
+    title="Title"
+  />
+</Router>
 `;
 
 exports[`renders correctly with description 1`] = `
-<div
-  className="NoMatch-root-1"
->
-  <div>
-    <h2
-      className="MuiTypography-root-2 MuiTypography-h2-15"
-    >
-      Title
-    </h2>
-    <p
-      className="MuiTypography-root-2 MuiTypography-h4-17 MuiTypography-paragraph-30"
-    >
-      <p>
-        Desc
-      </p>
+<NoMatch
+  classes={
+    Object {
+      "root": "NoMatch-root-1",
+    }
+  }
+  description={
+    <p>
+      Desc
     </p>
-  </div>
-</div>
+  }
+  title="Title"
+/>
 `;

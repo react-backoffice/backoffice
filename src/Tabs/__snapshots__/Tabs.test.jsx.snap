@@ -1,134 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tabs renders correctly 1`] = `
-<div
-  className="Tabs-root-1"
->
-  <header
-    className="MuiPaper-root-10 MuiPaper-elevation4-16 MuiAppBar-root-2 MuiAppBar-positionStatic-6 MuiAppBar-colorPrimary-8"
-  >
-    <div
-      className="MuiTabs-root-37"
-    >
-      <div
-        className="MuiTabs-flexContainer-38"
-      >
-        <div
-          className="MuiTabs-scroller-40 MuiTabs-fixed-41"
-          onScroll={[Function]}
-          role="tablist"
-          style={
-            Object {
-              "marginBottom": 0,
-            }
-          }
-        >
-          <div
-            className="MuiTabs-flexContainer-38"
-          >
-            <button
-              aria-selected={true}
-              className="MuiButtonBase-root-58 MuiTab-root-46 MuiTab-textColorInherit-48 MuiTab-selected-51"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              role="tab"
-              tabIndex="0"
-              type="button"
-            >
-              <span
-                className="MuiTab-wrapper-54"
-              >
-                <span
-                  className="MuiTab-labelContainer-55"
-                >
-                  <span
-                    className="MuiTab-label-56"
-                  >
-                    Title
-                  </span>
-                </span>
-              </span>
-              <span
-                className="MuiTouchRipple-root-64"
-              />
-            </button>
-          </div>
-          <span
-            className="TabIndicator-root-61 TabIndicator-colorSecondary-63 MuiTabs-indicator-45"
-            style={
-              Object {
-                "left": 0,
-                "width": 0,
-              }
-            }
-          />
-        </div>
-      </div>
-    </div>
-  </header>
-  <div
-    className="MuiTypography-root-71 MuiTypography-body1-80"
-    style={
+<withRouter(WithStyles(Tabs))
+  data={
+    Array [
       Object {
-        "padding": 24,
-      }
-    }
-  >
-    <p>
-      Content
-    </p>
-  </div>
-</div>
+        "content": <p>
+          Content
+        </p>,
+        "title": "Title",
+      },
+    ]
+  }
+/>
 `;
 
 exports[`Tabs renders correctly if no data 1`] = `
-<div
-  className="Tabs-root-1"
->
-  <header
-    className="MuiPaper-root-10 MuiPaper-elevation4-16 MuiAppBar-root-2 MuiAppBar-positionStatic-6 MuiAppBar-colorPrimary-8"
-  >
-    <div
-      className="MuiTabs-root-37"
-    >
-      <div
-        className="MuiTabs-flexContainer-38"
-      >
-        <div
-          className="MuiTabs-scroller-40 MuiTabs-fixed-41"
-          onScroll={[Function]}
-          role="tablist"
-          style={
-            Object {
-              "marginBottom": 0,
-            }
-          }
-        >
-          <div
-            className="MuiTabs-flexContainer-38"
-          />
-          <span
-            className="TabIndicator-root-61 TabIndicator-colorSecondary-63 MuiTabs-indicator-45"
-            style={
-              Object {
-                "left": 0,
-                "width": 0,
-              }
-            }
-          />
-        </div>
-      </div>
-    </div>
-  </header>
-</div>
+<withRouter(WithStyles(Tabs))
+  data={Array []}
+/>
 `;

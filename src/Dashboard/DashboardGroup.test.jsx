@@ -1,10 +1,10 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
 import DashboardGroup from './DashboardGroup'
 
 it('renders correctly', () => {
-  const tree = mount(<DashboardGroup
+  const tree = shallow(<DashboardGroup
     title="Title"
     cards={[{
       title: 'title',

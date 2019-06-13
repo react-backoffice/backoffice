@@ -1,149 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="ListingSearchBranch-root-1"
->
-  <div
-    className="MuiFormControl-root-4 ListingSearchBranch-field-2"
-  >
-    <div
-      className="MuiInputBase-root-21 MuiInput-root-8 MuiInput-underline-12 MuiInputBase-formControl-22 MuiInput-formControl-9"
-      onClick={[Function]}
-    >
-      <input
-        aria-invalid={false}
-        className="MuiInputBase-input-31 MuiInput-input-16 MuiInputBase-inputType-34 MuiInput-inputType-19 MuiInputBase-inputTypeSearch-35 MuiInput-inputTypeSearch-20"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        placeholder="Filter"
-        required={false}
-        type="search"
-      />
-    </div>
-  </div>
-  Array [
-    <button
-      aria-describedby={null}
-      className="MuiButtonBase-root-52 MuiIconButton-root-46"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onContextMenu={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseOver={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex="0"
-      title="Search"
-      type="button"
-    >
-      <span
-        className="MuiIconButton-label-51"
-      >
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root-55"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-          />
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-          />
-        </svg>
-      </span>
-      <span
-        className="MuiTouchRipple-root-64"
-      />
-    </button>,
-    "",
-  ]
-</div>
+<WithStyles(ListingSearchBranch)
+  getSearchRef={[Function]}
+  onClick={[Function]}
+  onFilter={[Function]}
+  open={false}
+/>
 `;
 
 exports[`renders correctly when open 1`] = `
-<div
-  className="ListingSearchBranch-root-1"
->
-  <div
-    className="MuiFormControl-root-4 ListingSearchBranch-field-2"
-  >
-    <div
-      className="MuiInputBase-root-21 MuiInput-root-8 MuiInput-underline-12 MuiInputBase-formControl-22 MuiInput-formControl-9"
-      onClick={[Function]}
-    >
-      <input
-        aria-invalid={false}
-        className="MuiInputBase-input-31 MuiInput-input-16 MuiInputBase-inputType-34 MuiInput-inputType-19 MuiInputBase-inputTypeSearch-35 MuiInput-inputTypeSearch-20"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        placeholder="Filter"
-        required={false}
-        type="search"
-      />
-    </div>
-  </div>
-  Array [
-    <button
-      aria-describedby={null}
-      className="MuiButtonBase-root-52 MuiIconButton-root-46"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onContextMenu={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseOver={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex="0"
-      title="Search"
-      type="button"
-    >
-      <span
-        className="MuiIconButton-label-51"
-      >
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root-55"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-          />
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-          />
-        </svg>
-      </span>
-      <span
-        className="MuiTouchRipple-root-64"
-      />
-    </button>,
-    "",
-  ]
-</div>
+<WithStyles(ListingSearchBranch)
+  getSearchRef={[Function]}
+  onClick={[Function]}
+  onFilter={[Function]}
+  open={false}
+/>
 `;

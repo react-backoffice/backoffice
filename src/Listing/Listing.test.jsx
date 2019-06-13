@@ -1,5 +1,5 @@
 import React from 'react'
-import Enzyme, { mount, shallow } from 'enzyme'
+import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import {
   Checkbox,
@@ -7,17 +7,17 @@ import {
   IconButton,
 } from '@material-ui/core'
 
-import Listing from './'
+import Listing from '.'
 
-import headers from '../../__tests__/data/listing_headers'
-import data from '../../__tests__/data/listing_data'
+import headers from '../tests/data/listing_headers'
+import data from '../tests/data/listing_data'
 import ListingHeader from './ListingHeader'
 
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('Listing', () => {
   it('renders correctly', () => {
-    const tree = mount((
+    const tree = shallow((
       <Listing
         title="Christmas Time"
         data={data}
@@ -32,7 +32,7 @@ describe('Listing', () => {
   })
 
   it('renders correctly with Loader', () => {
-    const tree = mount((
+    const tree = shallow((
       <Listing
         title="Christmas Time"
         data={data}
@@ -172,7 +172,7 @@ describe('Listing', () => {
   })
 
   it('selects all elements when checkbox is clicked', () => {
-    const listing = mount((
+    const listing = shallow((
       <Listing
         title="Christmas Time"
         data={data}
@@ -188,7 +188,7 @@ describe('Listing', () => {
   })
 
   it('deselects all elements when checkbox is unset', () => {
-    const listing = mount((
+    const listing = shallow((
       <Listing
         title="Christmas Time"
         data={data}
@@ -204,7 +204,7 @@ describe('Listing', () => {
   })
 
   it('handles changing the no of rows per age', () => {
-    const listing = mount((
+    const listing = shallow((
       <Listing
         title="Christmas Time"
         data={data}
@@ -226,7 +226,7 @@ describe('Listing', () => {
   it('handles changing the page', () => {
     window.scrollTo = () => {}
 
-    const listing = mount((
+    const listing = shallow((
       <Listing
         title="Christmas Time"
         data={data}

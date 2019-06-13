@@ -1,5 +1,5 @@
 import React from 'react'
-import Enzyme, { mount } from 'enzyme'
+import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { ListItem, Chip } from '@material-ui/core'
 
@@ -11,7 +11,7 @@ Enzyme.configure({ adapter: new Adapter() })
 describe('Form Field', () => {
   it('handles change', () => {
     const handleChange = jest.fn()
-    const field = mount((
+    const field = shallow((
       <FormField
         id="1"
         title="Foo"
@@ -28,7 +28,7 @@ describe('Form Field', () => {
   })
 
   it('renders non-visible', () => {
-    const field = mount((
+    const field = shallow((
       <FormField
         id="2"
         title="Foo"
@@ -47,7 +47,7 @@ describe('Form Field', () => {
 
   it('renders calls beforeSubmit function, handles number', () => {
     const beforeSubmit = jest.fn()
-    const field = mount((
+    const field = shallow((
       <FormField
         id="3"
         title="Foo"
@@ -65,7 +65,7 @@ describe('Form Field', () => {
   })
 
   it('handles list', () => {
-    const field = mount((
+    const field = shallow((
       <FormField
         id="4"
         title="Foo"
@@ -83,7 +83,7 @@ describe('Form Field', () => {
   })
 
   it('handles list with allowed values', () => {
-    const field = mount((
+    const field = shallow((
       <FormField
         id="5"
         title="Foo"
@@ -107,7 +107,7 @@ describe('Form Field', () => {
   })
 
   it('handles list delete', () => {
-    const field = mount((
+    const field = shallow((
       <FormField
         id="5a"
         title="Foo"
@@ -129,7 +129,7 @@ describe('Form Field', () => {
 
   it('renders list item via function', () => {
     const renderElement = jest.fn()
-    const field = mount((
+    const field = shallow((
       <FormField
         id="5b"
         title="Foo"
@@ -146,7 +146,7 @@ describe('Form Field', () => {
   })
 
   it('does not render if there is no option', () => {
-    const field = mount((
+    const field = shallow((
       <FormField
         id="5b"
         title="Foo"
@@ -163,7 +163,7 @@ describe('Form Field', () => {
   })
 
   it('handles datetime field', () => {
-    const field = mount((
+    const field = shallow((
       <FormField
         id="6"
         title="Foo"
@@ -183,7 +183,7 @@ describe('Form Field', () => {
   })
 
   it('handles date field', () => {
-    const field = mount((
+    const field = shallow((
       <FormField
         id="6"
         title="Foo"
@@ -203,7 +203,7 @@ describe('Form Field', () => {
   })
 
   it('handles time field', () => {
-    const field = mount((
+    const field = shallow((
       <FormField
         id="6"
         title="Foo"
@@ -229,7 +229,7 @@ describe('Form Field', () => {
       message: 'Value should equal `test`',
     }
 
-    const field = mount((
+    const field = shallow((
       <FormField
         id="7"
         title="Foo"

@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
-import Dashboard from './'
+import Dashboard from '.'
 
 it('renders correctly', () => {
-  const tree = mount((
+  const tree = shallow((
     <Router>
       <Dashboard
         data={{

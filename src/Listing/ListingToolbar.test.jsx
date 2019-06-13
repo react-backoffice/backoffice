@@ -1,10 +1,10 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
 import ListingToolbar from './ListingToolbar'
 
 it('renders correctly', () => {
-  const tree = mount((
+  const tree = shallow((
     <ListingToolbar
       title=""
       numSelected={0}

@@ -1,12 +1,12 @@
 import React from 'react'
 import MockRouter from 'react-mock-router'
-import Enzyme, { mount } from 'enzyme'
+import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { Typography, IconButton, Button } from '@material-ui/core'
 
-import Base from './'
+import Base from '.'
 
-import menuData from '../../__tests__/data/menu'
+import menuData from '../tests/data/menu'
 import Header from '../Header'
 import Drawer from '../Drawer'
 import CookieInfo from '../CookieInfo'
@@ -15,7 +15,7 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe('Base', () => {
   it('renders correctly', () => {
-    const tree = mount((
+    const tree = shallow((
       <MockRouter>
         <Base
           title="Foo"
@@ -32,7 +32,7 @@ describe('Base', () => {
   })
 
   it('renders correctly without header', () => {
-    const tree = mount((
+    const tree = shallow((
       <MockRouter>
         <Base
           title="Foo"
@@ -50,7 +50,7 @@ describe('Base', () => {
   })
 
   it('renders with drawer open', () => {
-    const tree = mount((
+    const tree = shallow((
       <MockRouter>
         <Base
           isOpen
@@ -69,7 +69,7 @@ describe('Base', () => {
   })
 
   it('click on title', () => {
-    const tree = mount((
+    const tree = shallow((
       <MockRouter>
         <Base
           isOpen
@@ -89,7 +89,7 @@ describe('Base', () => {
   })
 
   it('click on menu icon if open changes state', () => {
-    const tree = mount((
+    const tree = shallow((
       <MockRouter>
         <Base
           isOpen
@@ -109,7 +109,7 @@ describe('Base', () => {
   })
 
   it('click on menu icon if closed changes state', () => {
-    const tree = mount((
+    const tree = shallow((
       <MockRouter>
         <Base
           isOpen={false}
@@ -129,7 +129,7 @@ describe('Base', () => {
   })
 
   it('call function when cookie is accepted', () => {
-    const tree = mount((
+    const tree = shallow((
       <MockRouter>
         <Base
           isOpen={false}

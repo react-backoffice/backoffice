@@ -1,10 +1,10 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
-import AddButton from './'
+import AddButton from '.'
 
 it('renders correctly', () => {
-  const tree = mount(<AddButton onClick={() => {}} />)
+  const tree = shallow(<AddButton onClick={() => {}} />)
 
   expect(tree).toMatchSnapshot()
 })

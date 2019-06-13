@@ -1,12 +1,12 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
 import Icon from '@material-ui/icons/AccessAlarm'
 
 import MenuItem from './MenuItem'
 
 it('renders correctly', () => {
-  const tree = mount(<MenuItem
+  const tree = shallow(<MenuItem
     title="Title"
     url="/"
     redirectTo={() => {}}
@@ -16,7 +16,7 @@ it('renders correctly', () => {
 })
 
 it('renders correctly with icon', () => {
-  const tree = mount(<MenuItem
+  const tree = shallow(<MenuItem
     title="Title"
     url="/"
     redirectTo={() => { }}
@@ -27,7 +27,7 @@ it('renders correctly with icon', () => {
 })
 
 it('renders correctly disabled', () => {
-  const tree = mount(<MenuItem
+  const tree = shallow(<MenuItem
     title="Title"
     url="/"
     redirectTo={() => {}}

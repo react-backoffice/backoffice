@@ -1,10 +1,10 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
-import Header from './'
+import Header from '.'
 
 it('renders correctly', () => {
-  const tree = mount((
+  const tree = shallow((
     <Header
       isOpen
       title="Header"
@@ -19,7 +19,7 @@ it('renders correctly', () => {
 })
 
 it('renders correctly with closed', () => {
-  const tree = mount((
+  const tree = shallow((
     <Header
       title="Header"
       isFixed={false}

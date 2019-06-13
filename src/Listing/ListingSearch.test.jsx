@@ -1,5 +1,5 @@
 import React from 'react'
-import Enzyme, { mount } from 'enzyme'
+import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 import { IconButton } from '@material-ui/core'
@@ -8,7 +8,7 @@ import ListingSearch from './ListingSearch'
 Enzyme.configure({ adapter: new Adapter() })
 
 it('renders correctly', () => {
-  const tree = mount((
+  const tree = shallow((
     <ListingSearch
       onClick={() => { }}
       onFilter={() => { }}
@@ -19,7 +19,7 @@ it('renders correctly', () => {
 })
 
 it('renders correctly when open', () => {
-  const tree = mount((
+  const tree = shallow((
     <ListingSearch
       open
       onClick={() => { }}
@@ -31,7 +31,7 @@ it('renders correctly when open', () => {
 })
 
 it('opens if click is triggered', () => {
-  const listingSearch = mount((
+  const listingSearch = shallow((
     <ListingSearch
       open
       onClick={() => { }}
@@ -48,7 +48,7 @@ it('opens if click is triggered', () => {
 
 it('filters if open and value changes', () => {
   const onFilter = jest.fn()
-  const listingSearch = mount((
+  const listingSearch = shallow((
     <ListingSearch
       open
       onClick={() => { }}
@@ -63,7 +63,7 @@ it('filters if open and value changes', () => {
 
 it('does not filter if not open and value changes', () => {
   const onFilter = jest.fn()
-  const listingSearch = mount((
+  const listingSearch = shallow((
     <ListingSearch
       open
       onClick={() => { }}
@@ -86,7 +86,7 @@ it('focuses search field on click', () => {
     focus: jest.fn(),
   }
 
-  const listingSearch = mount((
+  const listingSearch = shallow((
     <ListingSearch
       onClick={() => { }}
       onFilter={() => {}}

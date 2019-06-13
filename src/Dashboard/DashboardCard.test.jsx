@@ -1,10 +1,10 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
 import DashboardCard from './DashboardCard'
 
 it('renders correctly', () => {
-  const tree = mount(<DashboardCard
+  const tree = shallow(<DashboardCard
     title="Title"
     description="desc"
     handleClick={() => { }}
@@ -15,7 +15,7 @@ it('renders correctly', () => {
 
 
 it('renders disabled', () => {
-  const tree = mount((
+  const tree = shallow((
     <DashboardCard
       title="Title"
       description="desc"

@@ -1,235 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<table
-  className="MuiTable-root-1"
+<ForwardRef(Table)
+  classes={
+    Object {
+      "root": "MuiTable-root",
+    }
+  }
 >
-  <tr
-    aria-checked={false}
-    className="MuiTableRow-root-2 MuiTableRow-hover-4"
-    onKeyDown={[Function]}
-    role="checkbox"
-    tabIndex={-1}
-  >
-    <td
-      aria-sort={null}
-      className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-13"
-      onClick={[Function]}
-    >
-      <span
-        className="MuiButtonBase-root-35 MuiIconButton-root-29 MuiPrivateSwitchBase-root-25 MuiCheckbox-root-19 MuiCheckbox-colorPrimary-23"
-        onBlur={[Function]}
-        onContextMenu={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={null}
-      >
-        <span
-          className="MuiIconButton-label-34"
-        >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root-38"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-            />
-          </svg>
-          <input
-            checked={false}
-            className="MuiPrivateSwitchBase-input-28"
-            data-indeterminate={false}
-            onChange={[Function]}
-            type="checkbox"
-          />
-        </span>
-        <span
-          className="MuiTouchRipple-root-47"
-        />
-      </span>
-    </td>
-    <td
-      aria-sort={null}
-      className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
-      onClick={[Function]}
-    >
-      Leanne Graham
-    </td>
-    <td
-      aria-sort={null}
-      className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
-      onClick={[Function]}
-    >
-      Bret
-    </td>
-  </tr>
-</table>
+  <ListingLine
+    data={
+      Object {
+        "id": 1,
+        "name": "Leanne Graham",
+        "username": "Bret",
+      }
+    }
+    handleCheckClick={[Function]}
+    handleKeyDown={[Function]}
+    headers={
+      Array [
+        Object {
+          "id": "name",
+          "isPaddingDisabled": true,
+          "isSearchable": true,
+          "label": "Name",
+        },
+        Object {
+          "id": "username",
+          "isPaddingDisabled": true,
+          "isSearchable": true,
+          "label": "Username",
+        },
+      ]
+    }
+    isSelected={false}
+    onClick={[Function]}
+  />
+</ForwardRef(Table)>
 `;
 
 exports[`renders highlighted 1`] = `
-<table
-  className="MuiTable-root-1"
+<ForwardRef(Table)
+  classes={
+    Object {
+      "root": "MuiTable-root",
+    }
+  }
 >
-  <tr
-    aria-checked={true}
-    className="MuiTableRow-root-2 MuiTableRow-hover-4 MuiTableRow-selected-3"
-    onKeyDown={[Function]}
-    role="checkbox"
-    tabIndex={-1}
-  >
-    <td
-      aria-sort={null}
-      className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-13"
-      onClick={[Function]}
-    >
-      <span
-        className="MuiButtonBase-root-35 MuiIconButton-root-29 MuiPrivateSwitchBase-root-25 MuiCheckbox-root-19 MuiCheckbox-colorPrimary-23 MuiPrivateSwitchBase-checked-26 MuiCheckbox-checked-20"
-        onBlur={[Function]}
-        onContextMenu={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={null}
-      >
-        <span
-          className="MuiIconButton-label-34"
-        >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root-38"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-            />
-          </svg>
-          <input
-            checked={true}
-            className="MuiPrivateSwitchBase-input-28"
-            data-indeterminate={false}
-            onChange={[Function]}
-            type="checkbox"
-          />
-        </span>
-        <span
-          className="MuiTouchRipple-root-47"
-        />
-      </span>
-    </td>
-    <td
-      aria-sort={null}
-      className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<span style=\\"background-color: yellow;\\">Lea</span>nne Graham",
-        }
+  <ListingLine
+    data={
+      Object {
+        "id": 1,
+        "name": Object {
+          "highlight": "Lea",
+          "value": "Leanne Graham",
+        },
+        "username": Object {
+          "highlight": "Bret",
+          "value": "Leanne Graham",
+        },
       }
-      onClick={[Function]}
-    />
-    <td
-      aria-sort={null}
-      className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
-      dangerouslySetInnerHTML={
+    }
+    handleCheckClick={[Function]}
+    handleKeyDown={[Function]}
+    headers={
+      Array [
         Object {
-          "__html": "Leanne Graham",
-        }
-      }
-      onClick={[Function]}
-    />
-  </tr>
-</table>
+          "id": "name",
+          "isPaddingDisabled": true,
+          "isSearchable": true,
+          "label": "Name",
+        },
+        Object {
+          "id": "username",
+          "isPaddingDisabled": true,
+          "isSearchable": true,
+          "label": "Username",
+        },
+      ]
+    }
+    isSelected={true}
+    onClick={[Function]}
+  />
+</ForwardRef(Table)>
 `;
 
 exports[`renders selected 1`] = `
-<table
-  className="MuiTable-root-1"
+<ForwardRef(Table)
+  classes={
+    Object {
+      "root": "MuiTable-root",
+    }
+  }
 >
-  <tr
-    aria-checked={true}
-    className="MuiTableRow-root-2 MuiTableRow-hover-4 MuiTableRow-selected-3"
-    onKeyDown={[Function]}
-    role="checkbox"
-    tabIndex={-1}
-  >
-    <td
-      aria-sort={null}
-      className="MuiTableCell-root-7 MuiTableCell-paddingCheckbox-13"
-      onClick={[Function]}
-    >
-      <span
-        className="MuiButtonBase-root-35 MuiIconButton-root-29 MuiPrivateSwitchBase-root-25 MuiCheckbox-root-19 MuiCheckbox-colorPrimary-23 MuiPrivateSwitchBase-checked-26 MuiCheckbox-checked-20"
-        onBlur={[Function]}
-        onContextMenu={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={null}
-      >
-        <span
-          className="MuiIconButton-label-34"
-        >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root-38"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-            />
-          </svg>
-          <input
-            checked={true}
-            className="MuiPrivateSwitchBase-input-28"
-            data-indeterminate={false}
-            onChange={[Function]}
-            type="checkbox"
-          />
-        </span>
-        <span
-          className="MuiTouchRipple-root-47"
-        />
-      </span>
-    </td>
-    <td
-      aria-sort={null}
-      className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
-      onClick={[Function]}
-    >
-      Leanne Graham
-    </td>
-    <td
-      aria-sort={null}
-      className="MuiTableCell-root-7 MuiTableCell-paddingNone-14"
-      onClick={[Function]}
-    >
-      Bret
-    </td>
-  </tr>
-</table>
+  <ListingLine
+    data={
+      Object {
+        "id": 1,
+        "name": "Leanne Graham",
+        "username": "Bret",
+      }
+    }
+    handleCheckClick={[Function]}
+    handleKeyDown={[Function]}
+    headers={
+      Array [
+        Object {
+          "id": "name",
+          "isPaddingDisabled": true,
+          "isSearchable": true,
+          "label": "Name",
+        },
+        Object {
+          "id": "username",
+          "isPaddingDisabled": true,
+          "isSearchable": true,
+          "label": "Username",
+        },
+      ]
+    }
+    isSelected={true}
+    onClick={[Function]}
+  />
+</ForwardRef(Table)>
 `;

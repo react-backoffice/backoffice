@@ -1,11 +1,11 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
-import AppContainer from './'
+import AppContainer from '.'
 
 describe('Component Info', () => {
   it('renders correctly', () => {
-    const tree = mount((
+    const tree = shallow((
       <AppContainer>
         Foo
       </AppContainer>

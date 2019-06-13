@@ -1,17 +1,17 @@
 import React from 'react'
 import MockRouter from 'react-mock-router'
-import Enzyme, { mount } from 'enzyme'
+import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { Tab } from '@material-ui/core'
 
 import Tabs from '.'
-import tabsContent from '../__tests__/data/tabs'
+import tabsContent from '../tests/data/tabs'
 
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('Tabs', () => {
   it('renders correctly', () => {
-    const tree = mount((
+    const tree = shallow((
       <MockRouter>
         <Tabs
           data={[{
@@ -28,7 +28,7 @@ describe('Tabs', () => {
   })
 
   it('renders correctly if no data', () => {
-    const tree = mount((
+    const tree = shallow((
       <MockRouter>
         <Tabs data={[]} />
       </MockRouter>
@@ -39,7 +39,7 @@ describe('Tabs', () => {
 
   it('click second tab', () => {
     const tabAt = 1
-    const tabs = mount(<MockRouter><Tabs data={tabsContent} /></MockRouter>)
+    const tabs = shallow(<MockRouter><Tabs data={tabsContent} /></MockRouter>)
 
     expect(window.location.hash).toBe('')
     tabs.find(Tab).at(tabAt).simulate('click')
@@ -50,7 +50,7 @@ describe('Tabs', () => {
     const tabAt = 1
     window.location.hash = `#/${tabsContent[tabAt].id}`
 
-    mount(<MockRouter><Tabs data={tabsContent} /></MockRouter>)
+    shallow(<MockRouter><Tabs data={tabsContent} /></MockRouter>)
 
     expect(window.location.hash).toBe(`#/${tabsContent[tabAt].id}`)
   })

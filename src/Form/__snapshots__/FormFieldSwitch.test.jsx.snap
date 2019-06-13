@@ -4,56 +4,18 @@ exports[`renders correctly 1`] = `
 <div
   className=""
 >
-  <label
-    className="MuiFormControlLabel-root-1"
-  >
-    <span
-      className="MuiSwitch-root-7"
-    >
-      <span
-        className="MuiButtonBase-root-26 MuiIconButton-root-20 MuiPrivateSwitchBase-root-16 MuiSwitch-switchBase-10 MuiSwitch-colorPrimary-12"
-        onBlur={[Function]}
-        onContextMenu={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={null}
-      >
-        <span
-          className="MuiIconButton-label-25"
-        >
-          <span
-            className="MuiSwitch-icon-8"
-          />
-          <input
-            checked={false}
-            className="MuiPrivateSwitchBase-input-19"
-            disabled={false}
-            onChange={[Function]}
-            type="checkbox"
-            value="switch"
-          />
-        </span>
-        <span
-          className="MuiTouchRipple-root-65"
-        />
-      </span>
-      <span
-        className="MuiSwitch-bar-15"
+  <WithStyles(WithFormControlContext(ForwardRef(FormControlLabel)))
+    control={
+      <ForwardRef(WithStyles)
+        checked={false}
+        color="primary"
+        onChange={[Function]}
+        value="switch"
       />
-    </span>
-    <span
-      className="MuiTypography-root-29 MuiTypography-body1-38 MuiFormControlLabel-label-6"
-    >
-      Title
-    </span>
-  </label>
+    }
+    disabled={false}
+    label="Title"
+  />
 </div>
 `;
 
@@ -61,53 +23,18 @@ exports[`renders disabled 1`] = `
 <div
   className=""
 >
-  <label
-    className="MuiFormControlLabel-root-1 MuiFormControlLabel-disabled-5"
-  >
-    <span
-      className="MuiSwitch-root-7"
-    >
-      <span
-        className="MuiButtonBase-root-26 MuiButtonBase-disabled-27 MuiIconButton-root-20 MuiIconButton-disabled-24 MuiPrivateSwitchBase-root-16 MuiSwitch-switchBase-10 MuiSwitch-colorPrimary-12 MuiPrivateSwitchBase-disabled-18 MuiSwitch-disabled-14"
-        onBlur={[Function]}
-        onContextMenu={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex="-1"
-      >
-        <span
-          className="MuiIconButton-label-25"
-        >
-          <span
-            className="MuiSwitch-icon-8"
-          />
-          <input
-            checked={false}
-            className="MuiPrivateSwitchBase-input-19"
-            disabled={true}
-            onChange={[Function]}
-            type="checkbox"
-            value="switch"
-          />
-        </span>
-      </span>
-      <span
-        className="MuiSwitch-bar-15"
+  <WithStyles(WithFormControlContext(ForwardRef(FormControlLabel)))
+    control={
+      <ForwardRef(WithStyles)
+        checked={false}
+        color="primary"
+        onChange={[Function]}
+        value="switch"
       />
-    </span>
-    <span
-      className="MuiTypography-root-29 MuiTypography-body1-38 MuiFormControlLabel-label-6 MuiFormControlLabel-disabled-5"
-    >
-      Title
-    </span>
-  </label>
+    }
+    disabled={true}
+    label="Title"
+  />
 </div>
 `;
 
@@ -115,60 +42,22 @@ exports[`renders with helper text 1`] = `
 <div
   className=""
 >
-  <label
-    className="MuiFormControlLabel-root-1"
-  >
-    <span
-      className="MuiSwitch-root-7"
-    >
-      <span
-        className="MuiButtonBase-root-26 MuiIconButton-root-20 MuiPrivateSwitchBase-root-16 MuiSwitch-switchBase-10 MuiSwitch-colorPrimary-12"
-        onBlur={[Function]}
-        onContextMenu={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={null}
-      >
-        <span
-          className="MuiIconButton-label-25"
-        >
-          <span
-            className="MuiSwitch-icon-8"
-          />
-          <input
-            checked={false}
-            className="MuiPrivateSwitchBase-input-19"
-            disabled={false}
-            onChange={[Function]}
-            type="checkbox"
-            value="switch"
-          />
-        </span>
-        <span
-          className="MuiTouchRipple-root-65"
-        />
-      </span>
-      <span
-        className="MuiSwitch-bar-15"
+  <WithStyles(WithFormControlContext(ForwardRef(FormControlLabel)))
+    control={
+      <ForwardRef(WithStyles)
+        checked={false}
+        color="primary"
+        onChange={[Function]}
+        value="switch"
       />
-    </span>
-    <span
-      className="MuiTypography-root-29 MuiTypography-body1-38 MuiFormControlLabel-label-6"
-    >
-      Title
-    </span>
-  </label>
-  <p
-    className="MuiFormHelperText-root-72"
+    }
+    disabled={false}
+    label="Title"
+  />
+  <WithStyles(WithFormControlContext(ForwardRef(FormHelperText)))
+    disabled={false}
   >
     test
-  </p>
+  </WithStyles(WithFormControlContext(ForwardRef(FormHelperText)))>
 </div>
 `;

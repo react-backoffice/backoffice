@@ -1,40 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component Info renders correctly 1`] = `
-<div
-  className="CookieInfo-root-1"
+<CookieInfo
+  buttonText="Accept"
+  classes={
+    Object {
+      "button": "CookieInfo-button-4",
+      "content": "CookieInfo-content-3",
+      "root": "CookieInfo-root-1",
+      "rootActive": "CookieInfo-rootActive-2",
+    }
+  }
+  cookieInfoOpen={true}
+  isOpen={false}
+  onAccept={null}
 >
-  <div
-    className="CookieInfo-content-3"
-  >
-    Foo
-  </div>
-  <button
-    className="MuiButtonBase-root-31 MuiButton-root-5 MuiButton-text-7 MuiButton-flat-10 CookieInfo-button-4"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onContextMenu={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex="0"
-    type="button"
-  >
-    <span
-      className="MuiButton-label-6"
-    >
-      Accept
-    </span>
-    <span
-      className="MuiTouchRipple-root-34"
-    />
-  </button>
-</div>
+  Foo
+</CookieInfo>
 `;

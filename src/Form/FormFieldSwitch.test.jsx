@@ -1,10 +1,10 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
 import FormFieldSwitch from './FormFieldSwitch'
 
 it('renders correctly', () => {
-  const tree = mount((
+  const tree = shallow((
     <FormFieldSwitch
       id="switch"
       title="Title"
@@ -16,7 +16,7 @@ it('renders correctly', () => {
 })
 
 it('renders disabled', () => {
-  const tree = mount((
+  const tree = shallow((
     <FormFieldSwitch
       id="switch"
       title="Title"
@@ -29,7 +29,7 @@ it('renders disabled', () => {
 })
 
 it('renders with helper text', () => {
-  const tree = mount((
+  const tree = shallow((
     <FormFieldSwitch
       id="switch"
       title="Title"

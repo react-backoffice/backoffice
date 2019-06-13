@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
-import NoMatch from './'
+import NoMatch from '.'
 
 it('renders correctly', () => {
-  const tree = mount((
+  const tree = shallow((
     <Router>
       <NoMatch
         title="Title"
@@ -17,7 +17,7 @@ it('renders correctly', () => {
 })
 
 it('renders correctly with description', () => {
-  const tree = mount(<NoMatch
+  const tree = shallow(<NoMatch
     title="Title"
     description={(
       <p>Desc</p>

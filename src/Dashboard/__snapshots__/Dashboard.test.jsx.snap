@@ -1,60 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="DashboardBranch-root-1"
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
 >
-  <div
-    className="DashboardBranch-headline-2"
-  >
-    <h3
-      className="MuiTypography-root-3 MuiTypography-h3-17"
-    >
-      Backoffice
-    </h3>
-    <p
-      className="MuiTypography-root-3 MuiTypography-body2-11"
-    >
-      Visual Testing for Backoffice Framework
-    </p>
-  </div>
-  <div>
-    <div
-      className="DashboardGroup-headline-39"
-    >
-      <h5
-        className="MuiTypography-root-3 MuiTypography-h5-19"
-      >
-        Title
-      </h5>
-    </div>
-    <div
-      className="MuiGrid-container-40 MuiGrid-spacing-xs-16-63"
-    >
-      <div
-        className="MuiGrid-item-41 MuiGrid-grid-xs-12-80 MuiGrid-grid-sm-4-86"
-      >
-        <div
-          className="MuiPaper-root-144 MuiPaper-elevation1-147 MuiPaper-rounded-145 MuiCard-root-143 DashboardCard-root-137"
-          onClick={[Function]}
-        >
-          <div
-            className="MuiCardContent-root-171 DashboardCard-content-138"
-          >
-            <h2
-              className="MuiTypography-root-3 MuiTypography-h5-19 DashboardCard-title-140"
-            >
-              title
-            </h2>
-            <p
-              className="MuiTypography-root-3 MuiTypography-body2-11"
-            >
-              desc
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  <withRouter(_class)
+    data={
+      Object {
+        "description": "Visual Testing for Backoffice Framework",
+        "groups": Array [
+          Object {
+            "cards": Array [
+              Object {
+                "description": "desc",
+                "title": "title",
+              },
+            ],
+            "title": "Title",
+          },
+        ],
+        "title": "Backoffice",
+      }
+    }
+  />
+</Router>
 `;

@@ -1,15 +1,15 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 import { Table } from '@material-ui/core'
 
 import ListingLine from './ListingLine'
 
-import headers from '../../__tests__/data/listing_headers'
+import headers from '../tests/data/listing_headers'
 
 const twoHeaders = headers.slice(0, 2)
 
 it('renders correctly', () => {
-  const tree = mount((
+  const tree = shallow((
     <Table>
       <ListingLine
         headers={twoHeaders}
@@ -30,7 +30,7 @@ it('renders correctly', () => {
 })
 
 it('renders selected', () => {
-  const tree = mount((
+  const tree = shallow((
     <Table>
       <ListingLine
         headers={twoHeaders}
@@ -51,7 +51,7 @@ it('renders selected', () => {
 })
 
 it('renders highlighted', () => {
-  const tree = mount((
+  const tree = shallow((
     <Table>
       <ListingLine
         headers={twoHeaders}

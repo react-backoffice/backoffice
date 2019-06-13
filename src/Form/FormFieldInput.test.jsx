@@ -1,10 +1,10 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
 import FormFieldInput from './FormFieldInput'
 
 it('renders correctly', () => {
-  const tree = mount((
+  const tree = shallow((
     <FormFieldInput />
   ))
 
@@ -13,7 +13,7 @@ it('renders correctly', () => {
 
 
 it('renders disabled', () => {
-  const tree = mount((
+  const tree = shallow((
     <FormFieldInput
       isDisabled
     />

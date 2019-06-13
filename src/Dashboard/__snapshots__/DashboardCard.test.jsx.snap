@@ -1,60 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="MuiPaper-root-8 MuiPaper-elevation1-11 MuiPaper-rounded-9 MuiCard-root-7 DashboardCard-root-1"
-  onClick={[Function]}
->
-  <div
-    className="MuiCardContent-root-35 DashboardCard-content-2"
-  >
-    <h2
-      className="MuiTypography-root-36 MuiTypography-h5-52 DashboardCard-title-4"
-    >
-      Title
-    </h2>
-    <p
-      className="MuiTypography-root-36 MuiTypography-body2-44"
-    >
-      desc
-    </p>
-  </div>
-</div>
+<DashboardCard
+  classes={
+    Object {
+      "avatar": "DashboardCard-avatar-3",
+      "content": "DashboardCard-content-2",
+      "disabled": "DashboardCard-disabled-5",
+      "icon": "DashboardCard-icon-6",
+      "root": "DashboardCard-root-1",
+      "title": "DashboardCard-title-4",
+    }
+  }
+  description="desc"
+  handleClick={[Function]}
+  icon={null}
+  isDisabled={false}
+  title="Title"
+/>
 `;
 
 exports[`renders disabled 1`] = `
-<div
-  className="MuiPaper-root-8 MuiPaper-elevation1-11 MuiPaper-rounded-9 MuiCard-root-7 DashboardCard-root-1 DashboardCard-disabled-5"
-  onClick={[Function]}
->
-  <div
-    className="MuiCardContent-root-35 DashboardCard-content-2"
-  >
-    <svg
-      aria-hidden="true"
-      className="MuiSvgIcon-root-72 DashboardCard-icon-6"
-      focusable="false"
-      role="presentation"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M0 0h24v24H0z"
-        fill="none"
-      />
-      <path
-        d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
-      />
-    </svg>
-    <h2
-      className="MuiTypography-root-36 MuiTypography-h5-52 DashboardCard-title-4"
-    >
-      Title
-    </h2>
-    <p
-      className="MuiTypography-root-36 MuiTypography-body2-44"
-    >
-      desc
-    </p>
-  </div>
-</div>
+<DashboardCard
+  classes={
+    Object {
+      "avatar": "DashboardCard-avatar-3",
+      "content": "DashboardCard-content-2",
+      "disabled": "DashboardCard-disabled-5",
+      "icon": "DashboardCard-icon-6",
+      "root": "DashboardCard-root-1",
+      "title": "DashboardCard-title-4",
+    }
+  }
+  description="desc"
+  handleClick={[Function]}
+  icon={null}
+  isDisabled={true}
+  title="Title"
+/>
 `;

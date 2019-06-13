@@ -1,51 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+<WithStyles(ForwardRef(TextField))
+  InputProps={
+    Object {
+      "endAdornment": <InputEnd
+        icon={null}
+      />,
+    }
+  }
+  className=""
+  disabled={false}
+  error={false}
+  fullWidth={true}
+  helperText=""
+  margin="normal"
+  multiline={false}
+  onBlur={[Function]}
+  onFocus={[Function]}
   onKeyPress={[Function]}
->
-  <div
-    className="MuiInputBase-root-18 MuiInput-root-5 MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6 MuiInputBase-adornedEnd-23"
-    onClick={[Function]}
-  >
-    <input
-      aria-invalid={false}
-      className="MuiInputBase-input-28 MuiInput-input-13 MuiInputBase-inputAdornedEnd-34"
-      disabled={false}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      required={false}
-      rows={1}
-      type="text"
-      value=""
-    />
-  </div>
-</div>
+  required={false}
+  rows={1}
+  select={false}
+  type="text"
+  value=""
+/>
 `;
 
 exports[`renders disabled 1`] = `
-<div
-  className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+<WithStyles(ForwardRef(TextField))
+  InputProps={
+    Object {
+      "endAdornment": <InputEnd
+        icon={null}
+      />,
+    }
+  }
+  className=""
+  disabled={true}
+  error={false}
+  fullWidth={true}
+  helperText=""
+  margin="normal"
+  multiline={false}
+  onBlur={[Function]}
+  onFocus={[Function]}
   onKeyPress={[Function]}
->
-  <div
-    className="MuiInputBase-root-18 MuiInput-root-5 MuiInput-underline-9 MuiInputBase-disabled-21 MuiInput-disabled-8 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6 MuiInputBase-adornedEnd-23"
-    onClick={[Function]}
-  >
-    <input
-      aria-invalid={false}
-      className="MuiInputBase-input-28 MuiInput-input-13 MuiInputBase-disabled-21 MuiInput-disabled-8 MuiInputBase-inputAdornedEnd-34"
-      disabled={true}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      required={false}
-      rows={1}
-      type="text"
-      value=""
-    />
-  </div>
-</div>
+  required={false}
+  rows={1}
+  select={false}
+  type="text"
+  value=""
+/>
 `;

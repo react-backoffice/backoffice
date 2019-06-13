@@ -1,16 +1,16 @@
 import React from 'react'
-import Enzyme, { mount } from 'enzyme'
+import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { Button } from '@material-ui/core'
 
-import CookieInfo from './'
+import CookieInfo from '.'
 
 Enzyme.configure({ adapter: new Adapter() })
 
 
 describe('Component Info', () => {
   it('renders correctly', () => {
-    const tree = mount(<CookieInfo cookieInfoOpen>Foo</CookieInfo>)
+    const tree = shallow(<CookieInfo cookieInfoOpen>Foo</CookieInfo>)
 
     expect(tree).toMatchSnapshot()
   })
@@ -18,7 +18,7 @@ describe('Component Info', () => {
   it('click away', () => {
     const mockCallBack = jest.fn()
 
-    const cookieInfo = mount((
+    const cookieInfo = shallow((
       <CookieInfo
         isOpen
         onAccept={mockCallBack}

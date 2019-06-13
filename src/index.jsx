@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Container from './__tests__/Container'
+import Container from './tests/Container'
 
 const element = document.querySelector('[data-react-app]')
 

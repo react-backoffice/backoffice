@@ -1,14 +1,14 @@
 import React from 'react'
-import Enzyme, { shallow, mount } from 'enzyme'
+import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import Confirm from './'
+import Confirm from '.'
 
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('Confirm', () => {
   it('renders correctly', () => {
-    const tree = mount(<Confirm
+    const tree = shallow(<Confirm
       title="Title"
       description="Desc"
       onConfirm={() => { }}
@@ -18,7 +18,7 @@ describe('Confirm', () => {
   })
 
   it('renders correctly without close button', () => {
-    const tree = mount(<Confirm
+    const tree = shallow(<Confirm
       title="Title"
       description="Desc"
       onConfirm={() => { }}

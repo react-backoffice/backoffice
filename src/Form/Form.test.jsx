@@ -1,13 +1,13 @@
 import React from 'react'
 import { MemoryRouter } from 'react-router-dom'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
-import Form from './'
+import Form from '.'
 
-import formData from '../../__tests__/data/form'
+import formData from '../tests/data/form'
 
 it('renders correctly', () => {
-  const tree = mount((
+  const tree = shallow((
     <MemoryRouter>
       <Form
         data={{
@@ -28,7 +28,7 @@ it('renders correctly', () => {
 })
 
 it('renders correctly with content', () => {
-  const tree = mount((
+  const tree = shallow((
     <MemoryRouter>
       <Form
         data={{

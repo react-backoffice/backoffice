@@ -1,93 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="MuiToolbar-root-6 MuiToolbar-regular-8 MuiToolbar-gutters-7 ListingToolbar-root-1"
->
-  <div
-    className="ListingToolbar-title-5"
-  >
-    <h6
-      className="MuiTypography-root-10 MuiTypography-h6-27"
-    />
-  </div>
-  <div
-    className="ListingToolbar-spacer-3"
-  />
-  <div
-    className="ListingToolbar-actions-4"
-  >
-    <div
-      className="ListingSearchBranch-root-46"
-    >
-      <div
-        className="MuiFormControl-root-49 ListingSearchBranch-field-47"
-      >
-        <div
-          className="MuiInputBase-root-66 MuiInput-root-53 MuiInput-underline-57 MuiInputBase-formControl-67 MuiInput-formControl-54"
-          onClick={[Function]}
-        >
-          <input
-            aria-invalid={false}
-            className="MuiInputBase-input-76 MuiInput-input-61 MuiInputBase-inputType-79 MuiInput-inputType-64 MuiInputBase-inputTypeSearch-80 MuiInput-inputTypeSearch-65"
-            disabled={false}
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            placeholder="Filter"
-            required={false}
-            type="search"
-          />
-        </div>
-      </div>
-      Array [
-        <button
-          aria-describedby={null}
-          className="MuiButtonBase-root-97 MuiIconButton-root-91"
-          disabled={false}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onContextMenu={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex="0"
-          title="Search"
-          type="button"
-        >
-          <span
-            className="MuiIconButton-label-96"
-          >
-            <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root-100"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-              />
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-              />
-            </svg>
-          </span>
-          <span
-            className="MuiTouchRipple-root-109"
-          />
-        </button>,
-        "",
-      ]
-    </div>
-  </div>
-</div>
+<ListingToolbar
+  classes={
+    Object {
+      "actions": "ListingToolbar-actions-4",
+      "highlight": "ListingToolbar-highlight-2",
+      "root": "ListingToolbar-root-1",
+      "spacer": "ListingToolbar-spacer-3",
+      "title": "ListingToolbar-title-5",
+    }
+  }
+  numSelected={0}
+  onFilter={[Function]}
+  title=""
+/>
 `;

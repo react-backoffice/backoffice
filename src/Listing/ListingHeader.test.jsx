@@ -1,12 +1,12 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
 import { Table } from '@material-ui/core'
 
 import ListingHeader from './ListingHeader'
 
 it('renders correctly', () => {
-  const tree = mount((
+  const tree = shallow((
     <Table>
       <ListingHeader
         headers={[{
