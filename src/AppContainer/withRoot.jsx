@@ -40,7 +40,7 @@ const withRoot = (BaseComponent, props) => {
     render() {
       return (
         <JssProvider registry={context.sheetsRegistry} jss={context.jss}>
-          <MuiThemeProvider theme={props.theme} sheetsManager={context.sheetsManager}>
+          <MuiThemeProvider theme={props.theme}>
             <AppWrapper>
               <BaseComponent {...this.props} />
             </AppWrapper>

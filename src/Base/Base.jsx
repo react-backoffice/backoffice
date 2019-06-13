@@ -1,10 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withRouter } from 'react-router-dom'
-
-import BaseBranch from './BaseBranch'
 
 import Cookie from '../CookieInfo/Cookie'
+import BaseBranch from './BaseBranch'
 
 const withBase = Component => class extends React.Component {
   static propTypes = {
@@ -108,4 +106,4 @@ const withBase = Component => class extends React.Component {
 
 const WithBase = withBase(BaseBranch)
 
-export default withRouter(WithBase)
+export default WithBase

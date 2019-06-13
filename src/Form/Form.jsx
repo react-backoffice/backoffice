@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withRouter } from 'react-router-dom'
 
 import FormBranch from './FormBranch'
 import isValid from './isValid'
@@ -167,6 +166,4 @@ const withForm = Component => class Form extends React.Component {
   }
 }
 
-const newForm = withForm(FormBranch)
-
-export default withRouter(newForm)
+export default withForm(FormBranch)

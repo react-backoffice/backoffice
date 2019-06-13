@@ -12,7 +12,7 @@ import {
   DateTimePicker,
   DatePicker,
   TimePicker,
-} from 'material-ui-pickers'
+} from '@material-ui/pickers'
 
 import { TYPES } from './constants'
 
