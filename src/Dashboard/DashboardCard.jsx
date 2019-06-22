@@ -17,11 +17,11 @@ const styles = theme => ({
     cursor: 'pointer',
   },
   content: {
-    paddingBottom: `${theme.spacing.unit * 2}px !important`,
+    paddingBottom: `${theme.spacing(2)}px !important`,
   },
   avatar: {
     float: 'left',
-    marginRight: theme.spacing.unit * 2,
+    marginRight: theme.spacing(2),
     backgroundColor: theme.palette.secondary.dark,
   },
   title: {

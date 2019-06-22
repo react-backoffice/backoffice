@@ -11,12 +11,12 @@ import FormSubmitButton from './FormSubmitButton'
 
 const styles = theme => ({
   title: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
+    marginLeft: theme.spacing(),
+    marginRight: theme.spacing(),
   },
   errorMessage: {
-    marginTop: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit * 2,
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
     color: theme.palette.error.main,
   },
 })
@@ -79,7 +79,7 @@ const FormBranch = ({
         >
           {field.title ? (
             <Typography
-              variant={field.integrated ? 'subheading' : 'title'}
+              variant={field.integrated ? 'subtitle2' : 'subtitle1'}
               className={classes.title}
             >
               {field.title}
@@ -102,9 +102,11 @@ const FormBranch = ({
 
       {children}
 
-      {error ? (
-        <Typography variant="body2" className={classes.errorMessage}>{errorMessage}</Typography>
-      ) : null}
+      {error && (
+        <Typography variant="body2" className={classes.errorMessage}>
+          {errorMessage}
+        </Typography>
+      )}
 
       <FormSubmitButton
         onSubmit={handleSubmit}

@@ -24,7 +24,7 @@ const styles = theme => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     padding: '0 8px',
-    height: theme.spacing.unit * 8,
+    height: theme.spacing(8),
   },
 })
 

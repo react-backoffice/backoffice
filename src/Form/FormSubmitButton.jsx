@@ -12,13 +12,13 @@ const styles = theme => ({
   },
   fixed: {
     position: 'fixed',
-    right: theme.spacing.unit * 5,
-    bottom: theme.spacing.unit * 3,
-    marginBottom: theme.spacing.unit,
+    right: theme.spacing(5),
+    bottom: theme.spacing(3),
+    marginBottom: theme.spacing(),
   },
   button: {
-    paddingLeft: theme.spacing.unit * 6,
-    paddingRight: theme.spacing.unit * 6,
+    paddingLeft: theme.spacing(6),
+    paddingRight: theme.spacing(6),
   },
   progress: {
     color: green[500],

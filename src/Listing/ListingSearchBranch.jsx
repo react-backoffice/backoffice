@@ -13,17 +13,17 @@ import SearchIcon from '@material-ui/icons/Search'
 const styles = theme => ({
   root: {
     position: 'relative',
-    marginRight: theme.spacing.unit,
+    marginRight: theme.spacing(),
   },
   field: {
     position: 'absolute',
     right: '100%',
     width: 0,
-    marginTop: theme.spacing.unit,
+    marginTop: theme.spacing(),
     transition: 'width 0.25s',
   },
   fieldActive: {
-    width: theme.spacing.unit * 30,
+    width: theme.spacing(30),
   },
 })
 

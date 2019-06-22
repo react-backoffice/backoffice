@@ -30,7 +30,7 @@ const noop = () => {}
 
 const styles = theme => ({
   headline: {
-    marginTop: theme.spacing.unit * 4,
+    marginTop: theme.spacing(4),
   },
 })
 

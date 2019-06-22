@@ -16,12 +16,12 @@ const styles = theme => ({
   },
 
   headline: {
-    marginTop: theme.spacing.unit * 3,
+    marginTop: theme.spacing(3),
   },
 
   field: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
+    marginLeft: theme.spacing(),
+    marginRight: theme.spacing(),
     verticalAlign: 'top',
   },
 
@@ -30,25 +30,25 @@ const styles = theme => ({
   },
 
   fieldDate: {
-    marginTop: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit,
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(),
   },
 
   widthSmall: {
-    width: `calc(25% - ${theme.spacing.unit * 2}px)`,
+    width: `calc(25% - ${theme.spacing(2)}px)`,
   },
 
   widthMid: {
-    width: `calc(50% - ${theme.spacing.unit * 2}px)`,
+    width: `calc(50% - ${theme.spacing(2)}px)`,
   },
 
   widthFull: {
-    width: `calc(100% - ${theme.spacing.unit * 2}px)`,
+    width: `calc(100% - ${theme.spacing(2)}px)`,
   },
 
   divider: {
-    marginTop: theme.spacing.unit * 3,
-    marginBottom: theme.spacing.unit * 3,
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
   },
 })
 

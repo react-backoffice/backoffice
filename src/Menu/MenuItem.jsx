@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes, { any } from 'prop-types'
 import classNames from 'classnames'
 
 import {
@@ -45,7 +45,7 @@ MenuItem.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   isDisabled: PropTypes.bool,
-  icon: PropTypes.func,
+  icon: PropTypes.objectOf(any),
   classes: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 

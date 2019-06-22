@@ -9,7 +9,7 @@ import BackIcon from '@material-ui/icons/ArrowBackIos'
 
 const styles = theme => ({
   leftIcon: {
-    marginRight: theme.spacing.unit,
+    marginRight: theme.spacing(),
   },
 })
 

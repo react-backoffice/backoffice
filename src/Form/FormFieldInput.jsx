@@ -84,7 +84,7 @@ const FormFieldInput = ({
 FormFieldInput.propTypes = {
   id: PropTypes.string.isRequired,
   type: PropTypes.string,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.array,
@@ -113,6 +113,7 @@ FormFieldInput.propTypes = {
 
 FormFieldInput.defaultProps = {
   type: 'text',
+  title: undefined,
   value: '',
   defaultValue: undefined,
   isMultiline: false,

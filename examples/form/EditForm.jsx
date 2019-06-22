@@ -8,9 +8,9 @@ import data from './data'
 
 const styles = theme => ({
   root: {
-    marginTop: theme.spacing.unit * 3,
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
+    marginTop: theme.spacing(3),
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
   },
 })
 

@@ -25,7 +25,7 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
     width: '100%',
-    marginTop: theme.spacing.unit * 3,
+    marginTop: theme.spacing() * 3,
     backgroundColor: theme.palette.background.paper,
   },
 })
@@ -88,7 +88,7 @@ class Tabs extends React.Component {
             value={value}
             onChange={this.handleChange}
             indicatorColor="secondary"
-            scrollable={isScrollable}
+            variant={isScrollable ? "scrollable" : undefined}
             scrollButtons="auto"
           >
             {data.map(item => (

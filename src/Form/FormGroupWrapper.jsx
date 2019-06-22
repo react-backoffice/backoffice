@@ -6,13 +6,13 @@ import { Paper, withStyles } from '@material-ui/core'
 
 const styles = theme => ({
   group: {
-    marginTop: theme.spacing.unit,
-    marginBottom: theme.spacing.unit,
-    padding: theme.spacing.unit * 2,
-    paddingTop: theme.spacing.unit * 3,
+    marginTop: theme.spacing(),
+    marginBottom: theme.spacing(),
+    padding: theme.spacing(2),
+    paddingTop: theme.spacing(3),
   },
   groupIntegrated: {
-    paddingTop: theme.spacing.unit * 3,
+    paddingTop: theme.spacing(3),
   },
   hidden: {
     display: 'none',

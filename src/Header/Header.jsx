@@ -24,7 +24,7 @@ const styles = theme => ({
     transform: 'translate(0, 0)',
   },
   appBarWithCookieInfo: {
-    transform: `translate(0, ${theme.spacing.unit * 6}px)`,
+    transform: `translate(0, ${theme.spacing(6)}px)`,
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,

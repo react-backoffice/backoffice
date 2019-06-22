@@ -11,8 +11,8 @@ import DashboardCard from './DashboardCard'
 
 const styles = theme => ({
   headline: {
-    marginTop: theme.spacing.unit * 3,
-    marginBottom: theme.spacing.unit * 2,
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(2),
   },
 })
 
@@ -29,7 +29,7 @@ const DashboardGroup = ({
       </Typography>
     </div>
 
-    <Grid container spacing={16}>
+    <Grid container spacing={2}>
 
       {cards ? cards.map(card => (
         <Grid item xs={12} sm={4} key={`group-card-${card.id}`}>

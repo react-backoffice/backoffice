@@ -7,13 +7,13 @@ import DashboardGroup from './DashboardGroup'
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    maxWidth: theme.spacing.unit * 140,
+    maxWidth: theme.spacing(140),
     marginLeft: 'auto',
     marginRight: 'auto',
   },
   headline: {
-    marginTop: theme.spacing.unit * 3,
-    marginBottom: theme.spacing.unit * 2,
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(2),
   },
 })
 

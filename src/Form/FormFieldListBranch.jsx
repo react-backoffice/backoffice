@@ -23,7 +23,7 @@ const styles = theme => ({
   },
   list: {
     position: 'absolute',
-    top: theme.spacing.unit * 9,
+    top: theme.spacing(9),
     width: '100%',
     height: 0,
     opacity: 0,

@@ -10,8 +10,8 @@ import AddIcon from '@material-ui/icons/Add'
 const styles = theme => ({
   button: {
     position: 'fixed',
-    right: theme.spacing.unit * 3,
-    bottom: theme.spacing.unit * 3,
+    right: theme.spacing(3),
+    bottom: theme.spacing(3),
   },
 })
 

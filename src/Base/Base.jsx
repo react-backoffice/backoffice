@@ -13,7 +13,7 @@ const withBase = Component => class extends React.Component {
     isHeaderFixed: PropTypes.bool,
     hasHeader: PropTypes.bool,
     hasCookieInfo: PropTypes.bool,
-    history: PropTypes.objectOf(PropTypes.any).isRequired,
+    history: PropTypes.objectOf(PropTypes.any),
   }
 
   static defaultProps = {
@@ -22,6 +22,7 @@ const withBase = Component => class extends React.Component {
     hasCookieInfo: false,
     menuOpen: false,
     rightContent: null,
+    history: undefined,
   }
 
   constructor(props) {
@@ -77,7 +78,9 @@ const withBase = Component => class extends React.Component {
   redirectTo(link) {
     const { history } = this.props
 
-    history.push(link)
+    if (history) {
+      history.push(link)
+    }
   }
 
   handleCookieInfoAccept() {

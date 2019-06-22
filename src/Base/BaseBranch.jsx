@@ -19,20 +19,20 @@ const styles = theme => ({
     transition: '0.25s',
   },
   appFrameWithCookieInfo: {
-    marginTop: theme.spacing.unit * 6,
-    minHeight: `calc(100vh - ${theme.spacing.unit * 6}px)`,
+    marginTop: theme.spacing(6),
+    minHeight: `calc(100vh - ${theme.spacing(6)}px)`,
   },
   content: {
-    width: `calc(100vw - ${theme.spacing.unit * 3 * 2}px)`,
+    width: `calc(100vw - ${theme.spacing(3) * 2}px)`,
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing(3),
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
     height: 'calc(100% - 56px)',
-    marginTop: theme.spacing.unit * 8,
+    marginTop: theme.spacing(8),
     marginLeft: -drawerWidth,
   },
   contentShift: {
