@@ -50,8 +50,9 @@
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/preset-react": "^7.0.0",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-react-app": "^9.0.0",
     "codecov": "^3.5.0",
     "concurrently": "^4.1.0",
     "enzyme": "^3.10.0",
