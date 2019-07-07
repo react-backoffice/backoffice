@@ -9,3 +9,5 @@ jest.config.js
 ts*.json
 webpack-production.config.js
 webpack.config.js
+coverage/
+build/
