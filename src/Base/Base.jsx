@@ -44,7 +44,7 @@ const withBase = Component => class extends React.Component {
     this.onClick = this.onClick.bind(this)
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const { hasCookieInfo, menuOpen } = this.props
 
     this.setState({

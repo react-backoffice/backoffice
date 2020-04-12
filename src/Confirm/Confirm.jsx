@@ -35,7 +35,7 @@ const withConfirm = Component => class extends React.Component {
     this.handleConfirm = this.handleConfirm.bind(this)
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.setState({
       isOpen: this.props.isOpen,
     })

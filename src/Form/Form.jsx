@@ -35,7 +35,7 @@ const withForm = Component => class Form extends React.Component {
     this.updateFieldData = this.updateFieldData.bind(this)
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const { form, data } = this.props
     this.generateFields(form, data)
     this.generateMissingData(data)

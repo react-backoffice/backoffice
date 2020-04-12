@@ -51,7 +51,7 @@ class Tabs extends React.Component {
     value: 0,
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const { data } = this.props
     const hash = window.location.hash.replace('#/', '')
     let value = 0

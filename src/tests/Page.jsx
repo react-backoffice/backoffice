@@ -50,7 +50,7 @@ class Page extends React.Component {
     additionalValue: null,
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const { formData: newFormData, additionalValue } = this.state
 
     newFormData[0].data[0].getAdditionalValue = value => (

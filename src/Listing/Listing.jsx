@@ -121,7 +121,7 @@ const withListing = Component => class Listing extends React.Component {
     this.handleFilter = this.handleFilter.bind(this)
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const {
       id,
       data,
