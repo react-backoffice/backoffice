@@ -9,6 +9,6 @@ cache:
 before_install:
   - export TZ=Europe/Berlin
 before_script:
-  - yarn add react react-dom prop-types
+  - yarn add react react-dom
 script:
   - yarn test:coverage
