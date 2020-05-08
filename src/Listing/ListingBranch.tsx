@@ -107,9 +107,9 @@ const ListingBranch: React.SFC<ListingBranchProps> = ({
 
           {data
             ?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-            .map((item: any) => (
+            .map((item: any, index: number) => (
               <ListingLine
-                key={`line-${(Math.random() * 10000).toFixed(4)}`}
+                key={`line-${index}`}
                 data={item}
                 headers={headers}
                 handleCheckClick={handleCheckClick}

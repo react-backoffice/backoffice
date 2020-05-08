@@ -51,7 +51,7 @@ class ListingLine extends React.Component<ListingLineProps, {}> {
   renderCells() {
     const { headers, data, onClick } = this.props;
 
-    return headers.map((header, index) => {
+    return headers.map((header, index: number) => {
       const { content, props } = getCellContent(
         data[header.id],
         header.transformContent,
@@ -60,7 +60,7 @@ class ListingLine extends React.Component<ListingLineProps, {}> {
 
       return (
         <TableCell
-          key={`cell-${header.id}-${index}`}
+          key={`header-${header.id}-${index}`}
           padding={header.isPaddingDisabled ? "none" : "default"}
           align={header.isNumeric ? "right" : undefined}
           onClick={() => onClick(data.id)}
