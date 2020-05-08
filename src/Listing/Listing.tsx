@@ -65,12 +65,21 @@ const filterElement = (
   return newElement;
 };
 
+export type Header = {
+  id: string;
+  label: string;
+  isPaddingDisabled?: boolean;
+  isSearchable?: boolean;
+  isNumeric?: boolean;
+  transformContent?: (data: Record<string, any>) => string | React.ReactNode;
+};
+
 type ListingProps = {
   orderBy: string;
   order?: "asc" | "desc";
   hasLoader?: boolean;
   data: object[];
-  headers: object[];
+  headers: Header[];
   toolbarContent?: React.ReactNode;
   onUpdateSelection?: (...args: any[]) => any;
   id?: string;

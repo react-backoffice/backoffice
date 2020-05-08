@@ -8,10 +8,12 @@ import {
   Paper,
   withStyles,
 } from "@material-ui/core";
+import { Header } from "./Listing";
 import ListingHeader from "./ListingHeader";
 import ListingToolbar from "./ListingToolbar";
 import ListingLine from "./ListingLine";
 import ListingLoader from "./ListingLoader";
+
 const styles = (theme: any) => ({
   root: {
     width: "100%",
@@ -28,7 +30,7 @@ const styles = (theme: any) => ({
 type ListingBranchProps = {
   title?: string;
   data?: object[];
-  headers: object[];
+  headers: Header[];
   order?: "asc" | "desc";
   orderBy: string;
   selected?: string[];

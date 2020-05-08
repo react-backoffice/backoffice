@@ -1,4 +1,5 @@
 import React from "react";
+import MenuIcon from "@material-ui/icons/Menu";
 
 export default [
   {
@@ -44,5 +45,10 @@ export default [
       return "";
     },
     isSearchable: true,
+  },
+  {
+    id: "menu",
+    label: "",
+    transformContent: () => <MenuIcon />,
   },
 ];

@@ -1,11 +1,12 @@
 import React from "react";
 import { Checkbox, TableCell, TableRow } from "@material-ui/core";
 import replace from "../utils/replace";
+import { Header } from "./Listing";
 
 const getCellContent = (content: any, transformContent: any, data: any) => {
   let printableContent = content;
 
-  if (content && content.highlight) {
+  if (content?.highlight) {
     printableContent = content.value;
   }
 
@@ -36,7 +37,7 @@ const getCellContent = (content: any, transformContent: any, data: any) => {
 };
 
 type ListingLineProps = {
-  headers: object[];
+  headers: Header[];
   data: {
     [key: string]: any;
   };
@@ -49,7 +50,8 @@ type ListingLineProps = {
 class ListingLine extends React.Component<ListingLineProps, {}> {
   renderCells() {
     const { headers, data, onClick } = this.props;
-    return headers.map((header: any) => {
+
+    return headers.map((header, index) => {
       const { content, props } = getCellContent(
         data[header.id],
         header.transformContent,
@@ -58,7 +60,7 @@ class ListingLine extends React.Component<ListingLineProps, {}> {
 
       return (
         <TableCell
-          key={`cell-${(Math.random() * 10000).toFixed(4)}`}
+          key={`cell-${header.id}-${index}`}
           padding={header.isPaddingDisabled ? "none" : "default"}
           align={header.isNumeric ? "right" : undefined}
           onClick={() => onClick(data.id)}
@@ -72,6 +74,7 @@ class ListingLine extends React.Component<ListingLineProps, {}> {
 
   render() {
     const { data, isSelected, handleKeyDown, handleCheckClick } = this.props;
+
     return (
       <TableRow
         hover
