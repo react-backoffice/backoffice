@@ -6,13 +6,8 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-  withStyles,
 } from "@material-ui/core";
-const styles = (theme: any) => ({
-  primaryButton: {
-    color: theme.palette.primary.dark,
-  },
-});
+
 type ConfirmBranchProps = {
   isOpen: boolean;
   title?: string;
@@ -22,10 +17,8 @@ type ConfirmBranchProps = {
   onClose: (...args: any[]) => any;
   onConfirm: (...args: any[]) => any;
   hasCloseButton: boolean;
-  classes: {
-    [key: string]: string;
-  };
 };
+
 const ConfirmBranch: React.SFC<ConfirmBranchProps> = ({
   title,
   description,
@@ -35,7 +28,6 @@ const ConfirmBranch: React.SFC<ConfirmBranchProps> = ({
   hasCloseButton,
   onClose,
   onConfirm,
-  classes,
 }) => (
   <Dialog
     open={isOpen}
@@ -57,20 +49,11 @@ const ConfirmBranch: React.SFC<ConfirmBranchProps> = ({
         </Button>
       ) : null}
 
-      <Button
-        onClick={onConfirm}
-        color="primary"
-        autoFocus
-        className={classes.primaryButton}
-      >
+      <Button onClick={onConfirm} color="primary" variant="contained" autoFocus>
         {agreeText}
       </Button>
     </DialogActions>
   </Dialog>
 );
 
-ConfirmBranch.defaultProps = {
-  title: undefined,
-};
-
-export default withStyles(styles)(ConfirmBranch);
+export default ConfirmBranch;
