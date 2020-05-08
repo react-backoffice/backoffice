@@ -1,11 +1,12 @@
+import React from "react";
 import BugIcon from "@material-ui/icons/BugReport";
+import { MenuDataItem } from "../../Menu/Menu";
 
-export default [
+const menu: MenuDataItem[] = [
   {
     type: "link",
     url: "/",
     title: "Dashboard",
-    icon: null,
   },
   {
     type: "link",
@@ -20,6 +21,12 @@ export default [
     type: "link",
     url: "/bug",
     title: "Report a bug",
-    icon: BugIcon,
+    icon: (
+      <>
+        <BugIcon />
+      </>
+    ),
   },
 ];
+
+export default menu;

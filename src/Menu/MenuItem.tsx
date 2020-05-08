@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import classNames from "classnames";
 import {
   ListItem,
@@ -19,7 +19,7 @@ type MenuItemProps = {
   url: string;
   title: string;
   isDisabled?: boolean;
-  icon?: FunctionComponent;
+  icon?: JSX.Element;
   classes: {
     [key: string]: string;
   };
@@ -29,7 +29,7 @@ const MenuItem: React.SFC<MenuItemProps> = ({
   redirectTo,
   url,
   title,
-  icon: Icon,
+  icon,
   isDisabled,
   classes,
 }) => (
@@ -40,11 +40,7 @@ const MenuItem: React.SFC<MenuItemProps> = ({
       [classes.isDisabled]: isDisabled,
     })}
   >
-    {Icon && (
-      <ListItemIcon>
-        <Icon />
-      </ListItemIcon>
-    )}
+    {icon && <ListItemIcon>{icon}</ListItemIcon>}
 
     <ListItemText primary={title} />
   </ListItem>

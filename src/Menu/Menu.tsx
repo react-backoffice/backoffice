@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import { Divider, List, withStyles } from "@material-ui/core";
 import MenuItem from "./MenuItem";
 
@@ -15,7 +15,7 @@ type MenuItemLink = {
   url: string;
   title: string;
   isDisabled?: boolean;
-  icon?: FunctionComponent;
+  icon?: JSX.Element;
 };
 
 type MenuItemDivider = {
