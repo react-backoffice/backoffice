@@ -1,7 +1,11 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { blueGrey, orange } from "@material-ui/core/colors";
-import { withStyles, ThemeProvider } from "@material-ui/styles";
-import { createMuiTheme } from "@material-ui/core";
+import {
+  ThemeProvider,
+  createMuiTheme,
+  withStyles,
+} from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 const defaultTheme = {
   typography: {
@@ -48,6 +52,7 @@ const AppContainer: React.SFC<AppContainerProps> = ({
 }) => {
   return (
     <ThemeProvider theme={createMuiTheme(theme)}>
+      <CssBaseline />
       <BaseComponent>{children}</BaseComponent>
     </ThemeProvider>
   );
