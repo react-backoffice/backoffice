@@ -34,8 +34,8 @@ describe("Confirm", () => {
       <Confirm isOpen title="Title" description="Desc" onConfirm={onConfirm} />,
     );
 
-    expect(confirm.state().isOpen).toBe(true);
-    confirm.instance().handleConfirm();
+    expect((confirm.state() as any).isOpen).toBe(true);
+    (confirm.instance() as any).handleConfirm();
 
     expect(onConfirm).toHaveBeenCalled();
   });
@@ -52,8 +52,8 @@ describe("Confirm", () => {
       />,
     );
 
-    expect(confirm.state().isOpen).toBe(true);
-    confirm.instance().handleClose();
+    expect((confirm.state() as any).isOpen).toBe(true);
+    (confirm.instance() as any).handleClose();
 
     expect(onClose).toHaveBeenCalled();
   });

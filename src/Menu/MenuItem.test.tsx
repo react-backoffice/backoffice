@@ -15,7 +15,7 @@ it("renders correctly", () => {
 
 it("renders correctly with icon", () => {
   const tree = shallow(
-    <MenuItem title="Title" url="/" redirectTo={() => {}} icon={Icon} />,
+    <MenuItem title="Title" url="/" redirectTo={() => {}} icon={<Icon />} />,
   );
 
   expect(tree).toMatchSnapshot();

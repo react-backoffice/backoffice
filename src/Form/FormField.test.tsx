@@ -14,7 +14,6 @@ describe("Form Field", () => {
     const field = shallow(
       <FormField
         id="1"
-        title="Foo"
         type="text"
         validators={["url"]}
         isRequired
@@ -31,7 +30,6 @@ describe("Form Field", () => {
     const field = shallow(
       <FormField
         id="2"
-        title="Foo"
         type="text"
         value="http://google.de/"
         validators={["url"]}
@@ -41,9 +39,9 @@ describe("Form Field", () => {
         width="small"
       />,
     );
-    expect(field.find(FormFieldInput).props().classNames.join(" ")).toEqual(
-      expect.stringMatching(/hidden/),
-    );
+    expect(
+      (field.find(FormFieldInput).props() as any).classNames.join(" "),
+    ).toEqual(expect.stringMatching(/hidden/));
   });
 
   it("renders calls beforeSubmit function, handles number", () => {
@@ -51,7 +49,6 @@ describe("Form Field", () => {
     const field = shallow(
       <FormField
         id="3"
-        title="Foo"
         value="1"
         type="number"
         handleChange={() => {}}
@@ -67,46 +64,44 @@ describe("Form Field", () => {
 
   it("handles list", () => {
     const field = shallow(
-      <FormField id="4" title="Foo" type="list" handleChange={() => {}} />,
+      <FormField id="4" type="list" handleChange={() => {}} />,
     );
 
-    expect(field.state().listItems).toEqual([]);
+    expect((field.state() as any).listItems).toEqual([]);
 
     field.find("input").simulate("change", { target: { value: "foo" } });
     field.find("input").simulate("keyPress", { which: 13 });
 
-    expect(field.state().listItems).toEqual([{ title: "foo" }]);
+    expect((field.state() as any).listItems).toEqual([{ title: "foo" }]);
   });
 
   it("handles list with allowed values", () => {
     const field = shallow(
       <FormField
         id="5"
-        title="Foo"
         type="list"
         handleChange={() => {}}
         completeFrom={["foo"]}
       />,
     );
 
-    expect(field.state().listItems).toEqual([]);
+    expect((field.state() as any).listItems).toEqual([]);
 
     field.find("input").simulate("change", { target: { value: "_" } });
     field.find("input").simulate("keyPress", { which: 13 });
 
-    expect(field.state().listItems).toEqual([]);
+    expect((field.state() as any).listItems).toEqual([]);
 
     field.find("input").simulate("change", { target: { value: "foo" } });
     field.find(ListItem).at(0).simulate("click");
 
-    expect(field.state().listItems[0].title).toEqual("foo");
+    expect((field.state() as any).listItems[0].title).toEqual("foo");
   });
 
   it("handles list delete", () => {
     const field = shallow(
       <FormField
         id="5a"
-        title="Foo"
         type="list"
         handleChange={() => {}}
         completeFrom={[
@@ -121,7 +116,7 @@ describe("Form Field", () => {
     field.find("input").simulate("change", { target: { value: "foo" } });
     field.find(ListItem).at(0).simulate("click");
 
-    expect(field.state().listItems[0].title).toEqual("foo");
+    expect((field.state() as any).listItems[0].title).toEqual("foo");
     field.find(Chip).at(0).find("svg").simulate("click");
   });
 
@@ -130,7 +125,6 @@ describe("Form Field", () => {
     const field = shallow(
       <FormField
         id="5b"
-        title="Foo"
         type="list"
         handleChange={() => {}}
         renderElement={renderElement}
@@ -145,7 +139,7 @@ describe("Form Field", () => {
 
   it("does not render if there is no option", () => {
     const field = shallow(
-      <FormField id="5b" title="Foo" type="list" handleChange={() => {}} />,
+      <FormField id="5b" type="list" handleChange={() => {}} />,
     );
 
     field.setState({
@@ -159,7 +153,6 @@ describe("Form Field", () => {
     const field = shallow(
       <FormField
         id="6"
-        title="Foo"
         type="datetime"
         value={+new Date()}
         handleChange={() => {}}
@@ -167,12 +160,12 @@ describe("Form Field", () => {
     );
     const newDate = +new Date();
 
-    field.instance().handleChange("6")({
+    (field.instance() as any).handleChange("6")({
       _isAMomentObject: true,
       valueOf: () => newDate,
     });
 
-    expect(field.state().value).toEqual(newDate);
+    expect((field.state() as any).value).toEqual(newDate);
   });
 
   it("handles date field", () => {
@@ -187,19 +180,18 @@ describe("Form Field", () => {
     );
     const newDate = +new Date();
 
-    field.instance().handleChange("6")({
+    (field.instance() as any).handleChange("6")({
       _isAMomentObject: true,
       valueOf: () => newDate,
     });
 
-    expect(field.state().value).toEqual(newDate);
+    expect((field.state() as any).value).toEqual(newDate);
   });
 
   it("handles time field", () => {
     const field = shallow(
       <FormField
         id="6"
-        title="Foo"
         type="time"
         value={+new Date()}
         handleChange={() => {}}
@@ -207,35 +199,35 @@ describe("Form Field", () => {
     );
     const newDate = +new Date();
 
-    field.instance().handleChange("6")({
+    (field.instance() as any).handleChange("6")({
       _isAMomentObject: true,
       valueOf: () => newDate,
     });
 
-    expect(field.state().value).toEqual(newDate);
+    expect((field.state() as any).value).toEqual(newDate);
   });
 
   it("handle validator with message", () => {
     const handleChange = jest.fn();
     const validatorWithMessage = {
-      validator: (value) => value === "test",
+      validator: (value: string) => value === "test",
       message: "Value should equal `test`",
     };
 
     const field = shallow(
       <FormField
         id="7"
-        title="Foo"
         type="text"
         validators={[validatorWithMessage]}
         isRequired
+        value=""
         handleChange={handleChange}
       />,
     );
 
     field.find("input").simulate("change", { value: "a" });
 
-    const { messages } = field.instance().state;
+    const { messages } = (field.instance() as any).state as any;
 
     expect(messages).toEqual([validatorWithMessage.message]);
   });

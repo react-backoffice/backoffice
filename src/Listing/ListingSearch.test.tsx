@@ -28,11 +28,11 @@ it("opens if click is triggered", () => {
     <ListingSearch open onClick={() => {}} onFilter={() => {}} />,
   );
 
-  expect(listingSearch.instance().state.open).toEqual(false);
+  expect((listingSearch.instance().state as any).open).toEqual(false);
 
   listingSearch.find(IconButton).simulate("click");
 
-  expect(listingSearch.instance().state.open).toEqual(true);
+  expect((listingSearch.instance().state as any).open).toEqual(true);
 });
 
 it("filters if open and value changes", () => {
@@ -52,10 +52,10 @@ it("does not filter if not open and value changes", () => {
     <ListingSearch open onClick={() => {}} onFilter={onFilter} />,
   );
 
-  expect(listingSearch.instance().state.open).toEqual(false);
+  expect((listingSearch.instance().state as any).open).toEqual(false);
   listingSearch.find(IconButton).simulate("click");
 
-  expect(listingSearch.instance().state.open).toEqual(true);
+  expect((listingSearch.instance().state as any).open).toEqual(true);
 
   listingSearch.find("input").simulate("change", { value: "a" });
 

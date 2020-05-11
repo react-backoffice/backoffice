@@ -5,6 +5,7 @@ import isValid from "./isValid";
 
 type FormFieldProps = {
   id: string;
+  title?: string;
   type?: string;
   helperText?: string;
   validators?: (
@@ -19,7 +20,11 @@ type FormFieldProps = {
   handleChange: (...args: any[]) => any;
   getAdditionalValue?: (...args: any[]) => any;
   beforeSubmit?: (...args: any[]) => any;
-  value: any;
+  value?: any;
+  completeFrom?: any[];
+  width?: string;
+  isVisible?: boolean;
+  renderElement?: any;
 };
 
 type FormFieldState = {

@@ -79,13 +79,13 @@ describe("Listing", () => {
       />,
     );
 
-    expect(listing.state().data[0].username).toBe("Antonette");
+    expect((listing.state() as any).data[0].username).toBe("Antonette");
 
-    listing.instance().handleRequestSort({}, "name");
-    expect(listing.state().data[0].username).toBe("Karianne");
+    (listing.instance() as any).handleRequestSort({}, "name");
+    expect((listing.state() as any).data[0].username).toBe("Karianne");
 
-    listing.instance().handleRequestSort({}, "name");
-    expect(listing.state().data[0].username).toBe("Kamren");
+    (listing.instance() as any).handleRequestSort({}, "name");
+    expect((listing.state() as any).data[0].username).toBe("Kamren");
   });
 
   it("handles click on a checkbox", () => {
@@ -101,51 +101,27 @@ describe("Listing", () => {
       />,
     );
 
-    listing.instance().handleCheckClick("foo");
-    expect(listing.state().selected).toEqual(["foo"]);
+    (listing.instance() as any).handleCheckClick("foo");
+    expect((listing.state() as any).selected).toEqual(["foo"]);
     expect(onUpdateSelection).toHaveBeenCalled();
 
-    listing.instance().handleCheckClick("bar");
-    expect(listing.state().selected).toEqual(["foo", "bar"]);
+    (listing.instance() as any).handleCheckClick("bar");
+    expect((listing.state() as any).selected).toEqual(["foo", "bar"]);
 
-    listing.instance().handleCheckClick("baz");
-    expect(listing.state().selected).toEqual(["foo", "bar", "baz"]);
+    (listing.instance() as any).handleCheckClick("baz");
+    expect((listing.state() as any).selected).toEqual(["foo", "bar", "baz"]);
 
-    listing.instance().handleCheckClick("bar");
-    expect(listing.state().selected).toEqual(["foo", "baz"]);
+    (listing.instance() as any).handleCheckClick("bar");
+    expect((listing.state() as any).selected).toEqual(["foo", "baz"]);
 
-    listing.instance().handleCheckClick("baz");
-    expect(listing.state().selected).toEqual(["foo"]);
+    (listing.instance() as any).handleCheckClick("baz");
+    expect((listing.state() as any).selected).toEqual(["foo"]);
 
-    listing.instance().handleCheckClick("foo");
-    expect(listing.state().selected).toEqual([]);
+    (listing.instance() as any).handleCheckClick("foo");
+    expect((listing.state() as any).selected).toEqual([]);
   });
 
   it("allows to filter", () => {
-    const listing = shallow(
-      <Listing
-        title="Christmas Time"
-        data={data}
-        headers={headers}
-        orderBy="username"
-        onClick={() => {}}
-      />,
-    );
-
-    const { length } = listing.state().data;
-
-    listing.instance().handleFilter("");
-
-    expect(listing.state().data.length).toEqual(length);
-
-    listing.instance().handleFilter("f0ooasdnajsbhdhuq2871dasd");
-
-    expect(listing.state().data.length).toEqual(0);
-  });
-
-  it("allows to filter even if there are empty filters", () => {
-    data[0].name = null;
-
     const listing = shallow(
       <Listing
         title="Christmas Time"
@@ -167,6 +143,32 @@ describe("Listing", () => {
     expect((listing.state() as any).data.length).toEqual(0);
   });
 
+  it("allows to filter even if there are empty filters", () => {
+    data[0].name = null as any;
+
+    const listing = shallow(
+      <Listing
+        title="Christmas Time"
+        data={data}
+        headers={headers}
+        orderBy="username"
+        onClick={() => {}}
+      />,
+    );
+
+    const { length } = ((listing.state() as any) as any).data;
+
+    ((listing.instance() as any) as any).handleFilter("");
+
+    expect(((listing.state() as any) as any).data.length).toEqual(length);
+
+    ((listing.instance() as any) as any).handleFilter(
+      "f0ooasdnajsbhdhuq2871dasd",
+    );
+
+    expect(((listing.state() as any) as any).data.length).toEqual(0);
+  });
+
   it("selects all elements when checkbox is clicked", () => {
     const listing = shallow(
       <Listing
@@ -179,9 +181,9 @@ describe("Listing", () => {
     );
 
     const { onChange } = listing.find(ListingHeader).find(Checkbox).props();
-    onChange && onChange({}, true);
+    onChange && onChange({} as any, true);
 
-    expect((listing.state() as any).selected.length).toBe(data.length);
+    expect(((listing.state() as any) as any).selected.length).toBe(data.length);
   });
 
   it("deselects all elements when checkbox is unset", () => {
@@ -197,9 +199,9 @@ describe("Listing", () => {
 
     const { onChange } = listing.find(ListingHeader).find(Checkbox).props();
 
-    onChange && onChange({}, false);
+    onChange && onChange({} as any, false);
 
-    expect((listing.state() as any).selected.length).toBe(0);
+    expect(((listing.state() as any) as any).selected.length).toBe(0);
   });
 
   it("handles changing the no of rows per age", () => {
@@ -217,11 +219,11 @@ describe("Listing", () => {
     onChangeRowsPerPage &&
       onChangeRowsPerPage({
         target: {
-          value: 100,
+          value: "100",
         },
-      });
+      } as any);
 
-    expect(listing.state().rowsPerPage).toBe(100);
+    expect((listing.state() as any).rowsPerPage).toBe(100);
   });
 
   it("handles changing the page", () => {
@@ -239,6 +241,6 @@ describe("Listing", () => {
 
     listing.find(TablePagination).find(IconButton).last().simulate("click");
 
-    expect(listing.state().page).toBe(1);
+    expect((listing.state() as any).page).toBe(1);
   });
 });

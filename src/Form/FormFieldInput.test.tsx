@@ -4,13 +4,13 @@ import { shallow } from "enzyme";
 import FormFieldInput from "./FormFieldInput";
 
 it("renders correctly", () => {
-  const tree = shallow(<FormFieldInput />);
+  const tree = shallow(<FormFieldInput id="" />);
 
   expect(tree).toMatchSnapshot();
 });
 
 it("renders disabled", () => {
-  const tree = shallow(<FormFieldInput isDisabled />);
+  const tree = shallow(<FormFieldInput id="" isDisabled />);
 
   expect(tree).toMatchSnapshot();
 });

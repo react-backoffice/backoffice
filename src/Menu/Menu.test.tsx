@@ -10,9 +10,10 @@ it("renders correctly", () => {
     <Menu
       data={[
         {
+          type: "link",
           title: "Title",
           url: "/",
-          icon: Icon,
+          icon: <Icon />,
         },
       ]}
       redirectTo={() => {}}

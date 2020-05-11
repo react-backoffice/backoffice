@@ -48,7 +48,6 @@ describe("Base", () => {
     const tree = shallow(
       <MockRouter>
         <Base
-          isOpen
           title="Foo"
           menuData={menuData}
           hasCookieInfo
@@ -66,7 +65,7 @@ describe("Base", () => {
   it("click on title", () => {
     const tree = shallow(
       <MockRouter>
-        <Base isOpen title="Foo" menuData={menuData} hasCookieInfo menuOpen>
+        <Base title="Foo" menuData={menuData} hasCookieInfo menuOpen>
           <div>Foo</div>
         </Base>
       </MockRouter>,
@@ -80,7 +79,7 @@ describe("Base", () => {
   it("click on menu icon if open changes state", () => {
     const tree = shallow(
       <MockRouter>
-        <Base isOpen title="Foo" menuData={menuData} hasCookieInfo menuOpen>
+        <Base title="Foo" menuData={menuData} hasCookieInfo menuOpen>
           <div>Foo</div>
         </Base>
       </MockRouter>,
@@ -94,13 +93,7 @@ describe("Base", () => {
   it("click on menu icon if closed changes state", () => {
     const tree = shallow(
       <MockRouter>
-        <Base
-          isOpen={false}
-          title="Foo"
-          menuData={menuData}
-          hasCookieInfo
-          menuOpen
-        >
+        <Base title="Foo" menuData={menuData} hasCookieInfo menuOpen>
           <div>Foo</div>
         </Base>
       </MockRouter>,
@@ -114,13 +107,7 @@ describe("Base", () => {
   it("call function when cookie is accepted", () => {
     const tree = shallow(
       <MockRouter>
-        <Base
-          isOpen={false}
-          title="Foo"
-          menuData={menuData}
-          hasCookieInfo
-          menuOpen
-        >
+        <Base title="Foo" menuData={menuData} hasCookieInfo menuOpen>
           <CookieInfo />
           <div>Foo</div>
         </Base>

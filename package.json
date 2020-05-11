@@ -10,13 +10,12 @@
     "js:test:coverage": "yarn js:test --coverage",
     "js:build": "react-scripts build",
     "ts:lint": "eslint ./src/ --ext ts,tsx",
-    "ts:build": "tsc -p tsconfig.build.json",
     "test": "yarn lint && yarn js:test",
     "test:coverage": "CI=true yarn js:test:coverage && yarn test:codecov",
     "test:codecov": "codecov",
     "lint": "yarn ts:lint",
     "build": "yarn js:build",
-    "build:ts": "NODE_ENV=production yarn ts:build",
+    "build:ts": "NODE_ENV=production tsc -p tsconfig.build.json",
     "prepublishOnly": "rm -rf ./dist && yarn build:ts"
   },
   "dependencies": {

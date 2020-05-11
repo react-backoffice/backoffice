@@ -9,7 +9,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe("Component Info", () => {
   it("renders correctly", () => {
-    const tree = shallow(<CookieInfo cookieInfoOpen>Foo</CookieInfo>);
+    const tree = shallow(<CookieInfo isOpen>Foo</CookieInfo>);
 
     expect(tree).toMatchSnapshot();
   });
