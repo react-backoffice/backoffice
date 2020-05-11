@@ -5,6 +5,7 @@ exports[`renders correctly 1`] = `
   classes={
     Object {
       "root": "MuiTable-root",
+      "stickyHeader": "MuiTable-stickyHeader",
     }
   }
 >
@@ -45,6 +46,7 @@ exports[`renders highlighted 1`] = `
   classes={
     Object {
       "root": "MuiTable-root",
+      "stickyHeader": "MuiTable-stickyHeader",
     }
   }
 >
@@ -91,6 +93,7 @@ exports[`renders selected 1`] = `
   classes={
     Object {
       "root": "MuiTable-root",
+      "stickyHeader": "MuiTable-stickyHeader",
     }
   }
 >

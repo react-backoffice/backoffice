@@ -23,7 +23,7 @@ exports[`renders correctly 1`] = `
     }
   }
 >
-  <withRouter(_class)
+  <withRouter(WithDashboard)
     data={
       Object {
         "description": "Visual Testing for Backoffice Framework",

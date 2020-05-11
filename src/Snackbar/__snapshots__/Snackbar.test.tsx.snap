@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <WithStyles(ForwardRef(Snackbar))
-  SnackbarContentProps={
+  ContentProps={
     Object {
       "aria-describedby": "message-id",
     }

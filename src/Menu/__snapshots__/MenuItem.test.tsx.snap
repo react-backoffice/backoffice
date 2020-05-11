@@ -7,7 +7,6 @@ exports[`renders correctly 1`] = `
       "isDisabled": "MenuItem-isDisabled-1",
     }
   }
-  icon={null}
   isDisabled={false}
   redirectTo={[Function]}
   title="Title"
@@ -22,7 +21,6 @@ exports[`renders correctly disabled 1`] = `
       "isDisabled": "MenuItem-isDisabled-1",
     }
   }
-  icon={null}
   isDisabled={true}
   redirectTo={[Function]}
   title="Title"
@@ -37,18 +35,7 @@ exports[`renders correctly with icon 1`] = `
       "isDisabled": "MenuItem-isDisabled-1",
     }
   }
-  icon={
-    Object {
-      "$$typeof": Symbol(react.memo),
-      "compare": null,
-      "displayName": "AccessAlarmIcon",
-      "muiName": "SvgIcon",
-      "type": Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "render": [Function],
-      },
-    }
-  }
+  icon={<UNDEFINED />}
   isDisabled={false}
   redirectTo={[Function]}
   title="Title"

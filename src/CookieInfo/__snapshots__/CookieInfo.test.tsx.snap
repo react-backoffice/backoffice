@@ -2,7 +2,6 @@
 
 exports[`Component Info renders correctly 1`] = `
 <CookieInfo
-  buttonText="Accept"
   classes={
     Object {
       "button": "CookieInfo-button-4",
@@ -11,9 +10,7 @@ exports[`Component Info renders correctly 1`] = `
       "rootActive": "CookieInfo-rootActive-2",
     }
   }
-  cookieInfoOpen={true}
-  isOpen={false}
-  onAccept={null}
+  isOpen={true}
 >
   Foo
 </CookieInfo>

@@ -5,6 +5,7 @@ exports[`renders correctly 1`] = `
   classes={
     Object {
       "root": "MuiTable-root",
+      "stickyHeader": "MuiTable-stickyHeader",
     }
   }
 >

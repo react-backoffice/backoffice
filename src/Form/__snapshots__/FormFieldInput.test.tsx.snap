@@ -4,9 +4,7 @@ exports[`renders correctly 1`] = `
 <WithStyles(ForwardRef(TextField))
   InputProps={
     Object {
-      "endAdornment": <InputEnd
-        icon={null}
-      />,
+      "endAdornment": <InputEnd />,
     }
   }
   className=""
@@ -14,6 +12,7 @@ exports[`renders correctly 1`] = `
   error={false}
   fullWidth={true}
   helperText=""
+  id=""
   margin="normal"
   multiline={false}
   onBlur={[Function]}
@@ -31,9 +30,7 @@ exports[`renders disabled 1`] = `
 <WithStyles(ForwardRef(TextField))
   InputProps={
     Object {
-      "endAdornment": <InputEnd
-        icon={null}
-      />,
+      "endAdornment": <InputEnd />,
     }
   }
   className=""
@@ -41,6 +38,7 @@ exports[`renders disabled 1`] = `
   error={false}
   fullWidth={true}
   helperText=""
+  id=""
   margin="normal"
   multiline={false}
   onBlur={[Function]}

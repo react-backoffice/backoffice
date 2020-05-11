@@ -1,12 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Confirm renders correctly 1`] = `
-<WithStyles(ConfirmBranch)
-  agreeText="Agree"
+<ConfirmBranch
   description="Desc"
-  disagreeText="Disagree"
-  hasCloseButton={true}
-  isOpen={false}
   onClose={[Function]}
   onConfirm={[Function]}
   title="Title"
@@ -14,12 +10,9 @@ exports[`Confirm renders correctly 1`] = `
 `;
 
 exports[`Confirm renders correctly without close button 1`] = `
-<WithStyles(ConfirmBranch)
-  agreeText="Agree"
+<ConfirmBranch
   description="Desc"
-  disagreeText="Disagree"
   hasCloseButton={false}
-  isOpen={false}
   onClose={[Function]}
   onConfirm={[Function]}
   title="Title"

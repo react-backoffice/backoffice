@@ -14,7 +14,6 @@ exports[`renders correctly 1`] = `
   }
   description="desc"
   handleClick={[Function]}
-  icon={null}
   isDisabled={false}
   title="Title"
 />
@@ -34,7 +33,6 @@ exports[`renders disabled 1`] = `
   }
   description="desc"
   handleClick={[Function]}
-  icon={null}
   isDisabled={true}
   title="Title"
 />

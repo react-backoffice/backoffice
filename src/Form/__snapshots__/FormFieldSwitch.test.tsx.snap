@@ -1,10 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className=""
->
-  <WithStyles(WithFormControlContext(ForwardRef(FormControlLabel)))
+<div>
+  <WithStyles(ForwardRef(FormControlLabel))
     control={
       <ForwardRef(WithStyles)
         checked={false}
@@ -13,17 +11,14 @@ exports[`renders correctly 1`] = `
         value="switch"
       />
     }
-    disabled={false}
     label="Title"
   />
 </div>
 `;
 
 exports[`renders disabled 1`] = `
-<div
-  className=""
->
-  <WithStyles(WithFormControlContext(ForwardRef(FormControlLabel)))
+<div>
+  <WithStyles(ForwardRef(FormControlLabel))
     control={
       <ForwardRef(WithStyles)
         checked={false}
@@ -39,10 +34,8 @@ exports[`renders disabled 1`] = `
 `;
 
 exports[`renders with helper text 1`] = `
-<div
-  className=""
->
-  <WithStyles(WithFormControlContext(ForwardRef(FormControlLabel)))
+<div>
+  <WithStyles(ForwardRef(FormControlLabel))
     control={
       <ForwardRef(WithStyles)
         checked={false}
@@ -51,13 +44,10 @@ exports[`renders with helper text 1`] = `
         value="switch"
       />
     }
-    disabled={false}
     label="Title"
   />
-  <WithStyles(WithFormControlContext(ForwardRef(FormHelperText)))
-    disabled={false}
-  >
+  <WithStyles(ForwardRef(FormHelperText))>
     test
-  </WithStyles(WithFormControlContext(ForwardRef(FormHelperText)))>
+  </WithStyles(ForwardRef(FormHelperText))>
 </div>
 `;

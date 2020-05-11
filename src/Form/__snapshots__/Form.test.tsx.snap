@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "cj6ltz",
+          "key": "agaqcl",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -25,7 +25,7 @@ exports[`renders correctly 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "cj6ltz",
+        "key": "agaqcl",
         "pathname": "/",
         "search": "",
         "state": undefined,
@@ -127,7 +127,7 @@ exports[`renders correctly 1`] = `
             Object {
               "data": Array [
                 Object {
-                  "iconEnd": <Memo />,
+                  "iconEnd": <UNDEFINED />,
                   "id": "nested-text",
                   "title": "Nested Text",
                   "type": "text",
@@ -283,10 +283,7 @@ exports[`renders correctly 1`] = `
         },
       ]
     }
-    isFixedSubmitButton={false}
-    onDataChanged={[Function]}
     onSubmit={[Function]}
-    submitText="Save"
   />
 </Router>
 `;
@@ -302,7 +299,7 @@ exports[`renders correctly with content 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "2z6i33",
+          "key": "idzrse",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -316,7 +313,7 @@ exports[`renders correctly with content 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "2z6i33",
+        "key": "idzrse",
         "pathname": "/",
         "search": "",
         "state": undefined,
@@ -418,7 +415,7 @@ exports[`renders correctly with content 1`] = `
             Object {
               "data": Array [
                 Object {
-                  "iconEnd": <Memo />,
+                  "iconEnd": <UNDEFINED />,
                   "id": "nested-text",
                   "title": "Nested Text",
                   "type": "text",
@@ -574,8 +571,6 @@ exports[`renders correctly with content 1`] = `
         },
       ]
     }
-    isFixedSubmitButton={false}
-    onDataChanged={[Function]}
     onSubmit={[Function]}
     submitText="Save the form"
   >
