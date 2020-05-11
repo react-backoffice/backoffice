@@ -226,8 +226,9 @@ const withListing = (Component: any) =>
 
       if (checked) {
         this.setState({
-          selected: data.map((n: any) => n.id),
+          selected: data.map((n: any) => (n.id.value ? n.id.value : n.id)),
         });
+
         return;
       }
 
@@ -250,16 +251,16 @@ const withListing = (Component: any) =>
       let newSelected: string[] = [];
 
       if (selectedIndex === -1) {
-        newSelected = newSelected.concat(selected, id);
+        newSelected = [...selected, id];
       } else if (selectedIndex === 0) {
-        newSelected = newSelected.concat(selected.slice(1));
+        newSelected = [...selected.slice(1)];
       } else if (selectedIndex === selected.length - 1) {
-        newSelected = newSelected.concat(selected.slice(0, -1));
+        newSelected = [...selected.slice(0, -1)];
       } else if (selectedIndex > 0) {
-        newSelected = newSelected.concat(
-          selected.slice(0, selectedIndex),
-          selected.slice(selectedIndex + 1),
-        );
+        newSelected = [
+          ...selected.slice(0, selectedIndex),
+          ...selected.slice(selectedIndex + 1),
+        ];
       }
 
       onUpdateSelection && onUpdateSelection(newSelected);

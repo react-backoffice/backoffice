@@ -41,7 +41,7 @@ type ListingLineProps = {
   data: {
     [key: string]: any;
   };
-  onClick: (...args: any[]) => any;
+  onClick?: (...args: any[]) => any;
   isSelected: boolean;
   handleKeyDown: (...args: any[]) => any;
   handleCheckClick: (...args: any[]) => any;
@@ -63,7 +63,7 @@ class ListingLine extends React.Component<ListingLineProps, {}> {
           key={`header-${header.id}-${index}`}
           padding={header.isPaddingDisabled ? "none" : "default"}
           align={header.isNumeric ? "right" : undefined}
-          onClick={() => onClick(data.id)}
+          onClick={() => onClick && onClick(data.id)}
           {...props}
         >
           {content}

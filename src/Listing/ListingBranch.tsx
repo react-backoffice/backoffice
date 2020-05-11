@@ -38,11 +38,11 @@ type ListingBranchProps = {
   rowsPerPageOptions?: number[];
   page?: number;
   hasLoader: boolean;
-  toolbarContent: React.ReactNode;
+  renderToolbarContent: (selected: any[] | undefined) => React.ReactNode;
   handleSelectAllClick: (...args: any[]) => any;
   handleRequestSort: (...args: any[]) => any;
   handleCheckClick: (...args: any[]) => any;
-  onClick: (...args: any[]) => any;
+  onClick?: (...args: any[]) => any;
   handleKeyDown: (...args: any[]) => any;
   handleChangePage: (...args: any[]) => any;
   handleChangeRowsPerPage: (...args: any[]) => any;
@@ -65,7 +65,7 @@ const ListingBranch: React.SFC<ListingBranchProps> = ({
   rowsPerPage = 10,
   rowsPerPageOptions = [10, 25, 50, 100],
   page = 0,
-  toolbarContent,
+  renderToolbarContent,
   handleSelectAllClick,
   handleRequestSort,
   handleCheckClick,
@@ -87,7 +87,7 @@ const ListingBranch: React.SFC<ListingBranchProps> = ({
       numSelected={selected?.length}
       onFilter={onFilter}
     >
-      {toolbarContent}
+      {renderToolbarContent(selected)}
     </ListingToolbar>
 
     <div className={classes.tableWrapper}>

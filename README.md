@@ -389,7 +389,7 @@ Data-Table to display data.
 * `order?: ENUM(asc | desc)`, direction in which to sort values, default `asc`
 * `orderBy: string`, field name to use for sorting the table
 * `hasLoader?: boolean`, should a loader be displayed in table, default `false`
-* `toolbarContent?: ReactElement | null`, content to show in the toolbar (visible if content column is selected)
+* `renderToolbarContent?: (selected) => ReactElement | null`, content to show in the toolbar (visible if content column is selected)
 * `onUpdateSelection: function`, is called if a selection of a line is changed
 * `isIntegrated?: bool`, show Listing on Paper or integrated, default: false
 * `rowsPerPage: number`, number of rows to show per page, default `10`
