@@ -24,6 +24,7 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/pickers": "^3.2.10",
     "@material-ui/styles": "^4.9.13",
+    "@types/react-dom": "^16.9.8",
     "classnames": "^2.2.6",
     "init-uuid": "^1.2.0",
     "is-url": "^1.2.4",

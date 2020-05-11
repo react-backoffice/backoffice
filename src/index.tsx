@@ -5,7 +5,7 @@ import Container from "./tests/Container";
 
 const element = document.querySelector("[data-react-app]");
 
-const render = (Component) => {
+const render = (Component: any) => {
   ReactDOM.render(<Component />, element);
 };
 
