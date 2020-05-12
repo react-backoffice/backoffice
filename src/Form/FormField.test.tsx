@@ -1,5 +1,5 @@
 import React from "react";
-import Enzyme, { shallow } from "enzyme";
+import Enzyme, { shallow, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import { ListItem, Chip } from "@material-ui/core";
 
@@ -11,7 +11,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe("Form Field", () => {
   it("handles change", () => {
     const handleChange = jest.fn();
-    const field = shallow(
+    const field = mount(
       <FormField
         id="1"
         type="text"
@@ -27,7 +27,7 @@ describe("Form Field", () => {
   });
 
   it("renders non-visible", () => {
-    const field = shallow(
+    const field = mount(
       <FormField
         id="2"
         type="text"
@@ -40,13 +40,13 @@ describe("Form Field", () => {
       />,
     );
     expect(
-      (field.find(FormFieldInput).props() as any).classNames.join(" "),
+      (field.find(FormFieldInput).props() as any).classNames?.join(" "),
     ).toEqual(expect.stringMatching(/hidden/));
   });
 
   it("renders calls beforeSubmit function, handles number", () => {
     const beforeSubmit = jest.fn();
-    const field = shallow(
+    const field = mount(
       <FormField
         id="3"
         value="1"
@@ -63,7 +63,7 @@ describe("Form Field", () => {
   });
 
   it("handles list", () => {
-    const field = shallow(
+    const field = mount(
       <FormField id="4" type="list" handleChange={() => {}} />,
     );
 
@@ -76,7 +76,7 @@ describe("Form Field", () => {
   });
 
   it("handles list with allowed values", () => {
-    const field = shallow(
+    const field = mount(
       <FormField
         id="5"
         type="list"
@@ -99,7 +99,7 @@ describe("Form Field", () => {
   });
 
   it("handles list delete", () => {
-    const field = shallow(
+    const field = mount(
       <FormField
         id="5a"
         type="list"
@@ -122,7 +122,7 @@ describe("Form Field", () => {
 
   it("renders list item via function", () => {
     const renderElement = jest.fn();
-    const field = shallow(
+    const field = mount(
       <FormField
         id="5b"
         type="list"
@@ -138,7 +138,7 @@ describe("Form Field", () => {
   });
 
   it("does not render if there is no option", () => {
-    const field = shallow(
+    const field = mount(
       <FormField id="5b" type="list" handleChange={() => {}} />,
     );
 
@@ -150,7 +150,7 @@ describe("Form Field", () => {
   });
 
   it("handles datetime field", () => {
-    const field = shallow(
+    const field = mount(
       <FormField
         id="6"
         type="datetime"
@@ -169,7 +169,7 @@ describe("Form Field", () => {
   });
 
   it("handles date field", () => {
-    const field = shallow(
+    const field = mount(
       <FormField
         id="6"
         title="Foo"
@@ -189,7 +189,7 @@ describe("Form Field", () => {
   });
 
   it("handles time field", () => {
-    const field = shallow(
+    const field = mount(
       <FormField
         id="6"
         type="time"
@@ -214,7 +214,7 @@ describe("Form Field", () => {
       message: "Value should equal `test`",
     };
 
-    const field = shallow(
+    const field = mount(
       <FormField
         id="7"
         type="text"

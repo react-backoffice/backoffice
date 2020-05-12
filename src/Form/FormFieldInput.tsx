@@ -59,7 +59,7 @@ const FormFieldInput: React.SFC<FormFieldInputProps> = ({
   onKeyPress,
 }) => (
   <TextField
-    id={id}
+    id={encodeURIComponent(id)}
     type={type}
     label={title}
     value={value}

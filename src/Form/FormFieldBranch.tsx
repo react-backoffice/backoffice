@@ -46,7 +46,7 @@ type FormFieldBranchProps = {
   type?: string;
   width?: string;
   listItems?: object[];
-  selectOptions?: string[];
+  options?: string[];
   content?: React.ReactNode;
   isVisible?: boolean;
   classes: {
@@ -90,7 +90,7 @@ const FormFieldBranch: React.SFC<FormFieldBranchProps> = ({
         <FormFieldInput
           {...props}
           select
-          options={props.selectOptions}
+          options={props.options}
           className={classNames}
         />
       );
@@ -145,7 +145,7 @@ FormFieldBranch.defaultProps = {
   type: "text",
   width: "full",
   listItems: [],
-  selectOptions: [],
+  options: [],
   content: null,
   isVisible: true,
   handleChange: () => {},
