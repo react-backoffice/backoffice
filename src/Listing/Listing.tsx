@@ -92,7 +92,6 @@ type ListingState = {
   searchable: any[];
   page: number;
   rowsPerPage?: number;
-  origData: any;
   selected: any[];
   id: null;
   searchValue?: string;
@@ -104,6 +103,7 @@ const withListing = (Component: any) =>
 
     constructor(props: ListingProps, context: any) {
       super(props, context);
+
       this.state = {
         order: "asc",
         orderBy: "id",
@@ -112,9 +112,9 @@ const withListing = (Component: any) =>
         page: 0,
         rowsPerPage: 10,
         searchable: [],
-        origData: null,
         id: null,
       };
+
       this.node = React.createRef();
       this.handleRequestSort = this.handleRequestSort.bind(this);
       this.handleSelectAllClick = this.handleSelectAllClick.bind(this);
@@ -140,18 +140,17 @@ const withListing = (Component: any) =>
       });
     }
 
-    UNSAFE_componentWillReceiveProps({
-      data,
-      headers,
-      orderBy,
-      order,
-    }: ListingProps) {
-      this.setState({
-        data: this.sortData(data, orderBy, order),
-        orderBy,
-        order,
-        searchable: getSearchableHeaders(headers),
-      });
+    componentDidUpdate({ data }: ListingProps) {
+      if (data.length !== this.props.data.length) {
+        const { order, orderBy } = this.props;
+        const sortedData = this.sortData(this.props.data, orderBy, order);
+
+        this.setState({
+          data: sortedData,
+        });
+
+        this.handleFilter(this.state.searchValue);
+      }
     }
 
     sortData(data: any, orderBy: any, order: any) {
@@ -265,6 +264,7 @@ const withListing = (Component: any) =>
       if (!this.node.current) {
         return;
       }
+
       const { offsetTop } = this.node.current;
       const start = window.scrollY;
       const change = offsetTop - start;
@@ -300,48 +300,33 @@ const withListing = (Component: any) =>
     }
 
     handleFilter(value: any) {
-      const { searchable, origData, data } = this.state;
-      let searchableData;
+      const { data } = this.props;
+      const { searchable } = this.state;
 
-      if (origData && origData.constructor === Array) {
-        searchableData = [...origData];
-      } else {
-        searchableData = [...data];
-      }
-
-      if (!value) {
-        searchableData = searchableData.map((item) => {
-          const newItem = item;
-
-          Object.keys(item).forEach((key) => {
-            if (item[key]) {
-              newItem[key] = item[key];
-            }
-          });
-
-          return newItem;
-        });
-
+      if (value === undefined) {
         this.setState({
-          data: searchableData,
+          data,
         });
 
         return;
       }
-      const newData = searchableData
+
+      const newData = [...data]
         .map((element) => filterElement(element, value, searchable))
         .filter((item) => item !== undefined);
 
       this.setState({
         data: newData,
-        origData: searchableData,
-        searchValue: value.toLowerCase(),
+        searchValue: value?.toLowerCase(),
       });
     }
+
     isSelected(id: string) {
       const { selected } = this.state;
-      return selected.indexOf(id) !== -1;
+
+      return selected.includes(id);
     }
+
     render() {
       return (
         <div ref={this.node}>
