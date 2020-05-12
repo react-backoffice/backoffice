@@ -37,8 +37,7 @@
     "react-dom": "^16.13.1",
     "react-jss": "^10.1.1",
     "react-router-dom": "^5.1.2",
-    "typescript": "^3.8.3",
-    "vanilla-store": "^0.4.0"
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "react": "^16.13.1",

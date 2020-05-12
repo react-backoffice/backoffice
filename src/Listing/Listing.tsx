@@ -1,6 +1,5 @@
 import React from "react";
 import keycode from "keycode";
-import Store from "vanilla-store";
 import easeInOutQuad from "../utils/easeInOutQuad";
 import ListingBranch from "./ListingBranch";
 
@@ -128,20 +127,12 @@ const withListing = (Component: any) =>
     }
 
     componentDidMount() {
-      const { id, data, headers, order, orderBy } = this.props;
-      const storedData = Store.get("Listing", id);
+      const { data, headers, order, orderBy } = this.props;
       const newState: any = {
         data: this.sortData(data, orderBy, order),
         searchable: getSearchableHeaders(headers),
       };
-      if (storedData) {
-        if (storedData.page) {
-          newState.page = storedData.page;
-        }
-        if (storedData.rowsPerPage) {
-          newState.rowsPerPage = storedData.rowsPerPage;
-        }
-      }
+
       this.setState({
         ...newState,
         order,
@@ -280,6 +271,7 @@ const withListing = (Component: any) =>
       const increment = 20;
       const duration = 250;
       let currentTime = 0;
+
       const animateScroll = () => {
         currentTime += increment;
         const val = easeInOutQuad(currentTime, start, change, duration);
@@ -288,17 +280,11 @@ const withListing = (Component: any) =>
           setTimeout(animateScroll, increment);
         }
       };
+
       animateScroll();
     }
 
     handleChangePage(event: any, page: any) {
-      const { id } = this.props;
-      const { rowsPerPage } = this.state;
-      Store.create("Listing", {
-        id,
-        rowsPerPage,
-        page,
-      });
       this.scrollToElement();
       this.setState({
         page,
@@ -307,12 +293,7 @@ const withListing = (Component: any) =>
 
     handleChangeRowsPerPage(event: any) {
       const rowsPerPage = event.target.value;
-      const { id, page } = this.state;
-      Store.create("Listing", {
-        id,
-        page,
-        rowsPerPage,
-      });
+
       this.setState({
         rowsPerPage,
       });

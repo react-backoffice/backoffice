@@ -11417,18 +11417,6 @@ value-equal@^1.0.1:
   resolved "https://registry.yarnpkg.com/value-equal/-/value-equal-1.0.1.tgz#1e0b794c734c5c0cade179c437d356d931a34d6c"
   integrity sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw==
 
-vanilla-pubsub@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/vanilla-pubsub/-/vanilla-pubsub-1.1.2.tgz#19e180f7e01c4e9548a7349a8b2a5587f8848da7"
-  integrity sha1-GeGA9+AcTpVIpzSaiypVh/iEjac=
-
-vanilla-store@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/vanilla-store/-/vanilla-store-0.4.0.tgz#e01a6d1a6829dc3800c2cffcd612f99b8088949c"
-  integrity sha1-4BptGmgp3DgAws/81hL5m4CIlJw=
-  dependencies:
-    vanilla-pubsub "^1.1.2"
-
 vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
