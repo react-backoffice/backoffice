@@ -1,66 +1,60 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { Checkbox, TableCell, TableRow } from "@material-ui/core";
 import replace from "../utils/replace";
 import { Header } from "./Listing";
 
-const getCellContent = (content: any, transformContent: any, data: any) => {
-  let printableContent = content;
-
-  if (content?.highlight) {
-    printableContent = content.value;
-  }
-
-  if (typeof transformContent === "function") {
-    printableContent = transformContent(printableContent, data);
-  }
-
-  const props: Record<string, any> = {};
-
-  if (typeof printableContent === "string" && content.highlight) {
-    printableContent = replace(
-      printableContent,
-      content.highlight,
-      (key: any) => `<span style="background-color: yellow;">${key}</span>`,
-    );
-
-    props.dangerouslySetInnerHTML = {
-      __html: printableContent,
-    };
-
-    printableContent = undefined;
-  }
-
-  return {
-    content: printableContent,
-    props,
-  };
+const getCellContent = (content: string, match: string) => {
+  return replace(
+    content,
+    match,
+    (key: any) => `<span style="background-color: yellow;">${key}</span>`,
+  );
 };
 
-type ListingLineProps = {
+type CellProps = {
   headers: Header[];
   data: {
     [key: string]: any;
   };
   onClick?: (...args: any[]) => any;
-  isSelected: boolean;
-  handleKeyDown: (...args: any[]) => any;
-  handleCheckClick: (...args: any[]) => any;
+  searchValue?: string;
 };
 
-class ListingLine extends React.Component<ListingLineProps, {}> {
-  renderCells() {
-    const { headers, data, onClick } = this.props;
+const Cells: FunctionComponent<CellProps> = ({
+  headers,
+  data,
+  onClick,
+  searchValue,
+}) => (
+  <>
+    {headers.map((header, index: number) => {
+      let content: string | React.ReactNode | null = data[header.id];
+      let props = {};
 
-    return headers.map((header, index: number) => {
-      const { content, props } = getCellContent(
-        data[header.id],
-        header.transformContent,
-        data,
-      );
+      if (
+        header.transformContent &&
+        typeof header.transformContent === "function"
+      ) {
+        content = header.transformContent(data[header.id], data);
+      }
+
+      if (
+        header.isSearchable &&
+        searchValue !== undefined &&
+        typeof content === "string"
+      ) {
+        props = {
+          dangerouslySetInnerHTML: {
+            __html: getCellContent(content, searchValue),
+          },
+        };
+
+        content = null;
+      }
 
       return (
         <TableCell
-          key={`header-${header.id}-${index}`}
+          key={`cell-${header.id}-${index}`}
           padding={header.isPaddingDisabled ? "none" : "default"}
           align={header.isNumeric ? "right" : undefined}
           onClick={() => onClick && onClick(data.id)}
@@ -69,29 +63,52 @@ class ListingLine extends React.Component<ListingLineProps, {}> {
           {content}
         </TableCell>
       );
-    });
-  }
+    })}
+  </>
+);
 
-  render() {
-    const { data, isSelected, handleKeyDown, handleCheckClick } = this.props;
+type Props = {
+  headers: Header[];
+  data: {
+    [key: string]: any;
+  };
+  onClick?: (...args: any[]) => any;
+  isSelected: boolean;
+  handleKeyDown: (...args: any[]) => any;
+  handleCheckClick: (...args: any[]) => any;
+  searchValue?: string;
+};
 
-    return (
-      <TableRow
-        hover
-        onKeyDown={(event) => handleKeyDown(event, data.id)}
-        role="checkbox"
-        aria-checked={isSelected}
-        tabIndex={-1}
-        selected={isSelected}
-      >
-        <TableCell padding="checkbox" onClick={() => handleCheckClick(data.id)}>
-          <Checkbox color="primary" checked={isSelected} />
-        </TableCell>
+const ListingLine: FunctionComponent<Props> = ({
+  data,
+  isSelected,
+  handleKeyDown,
+  handleCheckClick,
+  onClick,
+  headers,
+  searchValue,
+}) => {
+  return (
+    <TableRow
+      hover
+      onKeyDown={(event) => handleKeyDown(event, data.id)}
+      role="checkbox"
+      aria-checked={isSelected}
+      tabIndex={-1}
+      selected={isSelected}
+    >
+      <TableCell padding="checkbox" onClick={() => handleCheckClick(data.id)}>
+        <Checkbox color="primary" checked={isSelected} />
+      </TableCell>
 
-        {this.renderCells()}
-      </TableRow>
-    );
-  }
-}
+      <Cells
+        headers={headers}
+        data={data}
+        onClick={onClick}
+        searchValue={searchValue}
+      />
+    </TableRow>
+  );
+};
 
 export default ListingLine;

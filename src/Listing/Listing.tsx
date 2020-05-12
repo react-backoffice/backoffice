@@ -15,13 +15,12 @@ const getStringContent = (content: any) => {
 };
 
 const tryToMatch = (value: any, content: any) => {
-  let initialContent = content;
+  const initialContent = content;
+
   if (!content) {
     return false;
   }
-  if (content.highlight) {
-    initialContent = content.value;
-  }
+
   const contentToSearch = getStringContent(initialContent);
   if (contentToSearch.indexOf(value) > -1) {
     return true;
@@ -43,6 +42,7 @@ const filterElement = (
   Object.keys(element).forEach((key) => {
     if (searchables.indexOf(key) > -1) {
       const matched = tryToMatch(searchValue, element[key]);
+
       if (matched) {
         newElement = element;
       }
@@ -52,12 +52,7 @@ const filterElement = (
   if (newElement) {
     Object.keys(newElement).forEach((key: any) => {
       if (newElement && newElement[key]) {
-        newElement[key] = {
-          highlight: searchValue,
-          value: newElement[key].highlight
-            ? newElement[key].value
-            : newElement[key],
-        };
+        newElement[key] = newElement[key];
       }
     });
   }
@@ -71,7 +66,10 @@ export type Header = {
   isPaddingDisabled?: boolean;
   isSearchable?: boolean;
   isNumeric?: boolean;
-  transformContent?: (data: Record<string, any>) => string | React.ReactNode;
+  transformContent?: (
+    value: string,
+    data: Record<string, any>,
+  ) => string | React.ReactNode;
 };
 
 type ListingProps = {
@@ -98,6 +96,7 @@ type ListingState = {
   origData: any;
   selected: any[];
   id: null;
+  searchValue?: string;
 };
 
 const withListing = (Component: any) =>
@@ -214,6 +213,7 @@ const withListing = (Component: any) =>
       } else {
         data = dataState.sort((a, b) => (a[orderBy] < b[orderBy] ? -1 : 1));
       }
+
       this.setState({
         data,
         order,
@@ -226,7 +226,7 @@ const withListing = (Component: any) =>
 
       if (checked) {
         this.setState({
-          selected: data.map((n: any) => (n.id.value ? n.id.value : n.id)),
+          selected: data.map((n: any) => n.id),
         });
 
         return;
@@ -321,23 +321,23 @@ const withListing = (Component: any) =>
     handleFilter(value: any) {
       const { searchable, origData, data } = this.state;
       let searchableData;
+
       if (origData && origData.constructor === Array) {
         searchableData = [...origData];
       } else {
         searchableData = [...data];
       }
+
       if (!value) {
         searchableData = searchableData.map((item) => {
           const newItem = item;
+
           Object.keys(item).forEach((key) => {
             if (item[key]) {
-              if (item[key].value) {
-                newItem[key] = item[key].value;
-              } else {
-                newItem[key] = item[key];
-              }
+              newItem[key] = item[key];
             }
           });
+
           return newItem;
         });
 
@@ -350,9 +350,11 @@ const withListing = (Component: any) =>
       const newData = searchableData
         .map((element) => filterElement(element, value, searchable))
         .filter((item) => item !== undefined);
+
       this.setState({
         data: newData,
         origData: searchableData,
+        searchValue: value.toLowerCase(),
       });
     }
     isSelected(id: string) {

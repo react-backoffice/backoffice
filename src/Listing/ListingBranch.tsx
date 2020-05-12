@@ -52,6 +52,7 @@ type ListingBranchProps = {
   classes: {
     [key: string]: string;
   };
+  searchValue?: string;
 };
 
 const ListingBranch: React.SFC<ListingBranchProps> = ({
@@ -77,6 +78,7 @@ const ListingBranch: React.SFC<ListingBranchProps> = ({
   onFilter,
   hasLoader,
   isIntegrated,
+  searchValue,
 }) => (
   <Paper
     className={isIntegrated ? undefined : classes.root}
@@ -116,6 +118,7 @@ const ListingBranch: React.SFC<ListingBranchProps> = ({
                 onClick={onClick}
                 handleKeyDown={handleKeyDown}
                 isSelected={isSelected && isSelected(item.id)}
+                searchValue={searchValue}
               />
             ))}
         </TableBody>

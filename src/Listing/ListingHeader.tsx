@@ -57,9 +57,9 @@ class ListingHeader extends React.Component<ListingHeaderProps, {}> {
           </TableCell>
 
           {headers.map(
-            (column: any) => (
+            (column: any, index: number) => (
               <TableCell
-                key={column.id}
+                key={`header-${column.id}-${index}`}
                 padding={column.isPaddingDisabled ? "none" : "default"}
                 align={column.isNumeric ? "right" : undefined}
               >
