@@ -59,7 +59,7 @@ const FormFieldInput: React.SFC<FormFieldInputProps> = ({
   onKeyPress,
 }) => (
   <TextField
-    id={encodeURIComponent(id)}
+    id={id.replace(/[\[,\]]/g, "-")}
     type={type}
     label={title}
     value={value}
