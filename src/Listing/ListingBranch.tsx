@@ -89,7 +89,7 @@ const ListingBranch: React.SFC<ListingBranchProps> = ({
       numSelected={selected?.length}
       onFilter={onFilter}
     >
-      {renderToolbarContent(selected)}
+      {renderToolbarContent && renderToolbarContent(selected)}
     </ListingToolbar>
 
     <div className={classes.tableWrapper}>
