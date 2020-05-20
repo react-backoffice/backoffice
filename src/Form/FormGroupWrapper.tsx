@@ -9,9 +9,11 @@ const styles = (theme: any) => ({
     padding: theme.spacing(2),
     paddingTop: theme.spacing(3),
   },
+
   groupIntegrated: {
     paddingTop: theme.spacing(3),
   },
+
   hidden: {
     display: "none",
   },

@@ -93,7 +93,7 @@ const FormBranch: React.SFC<FormBranchProps> = ({
           >
             {field.title ? (
               <Typography
-                variant={field.integrated ? "subtitle2" : "subtitle1"}
+                variant={field.integrated ? "h6" : "h5"}
                 className={classes.title}
               >
                 {field.title}
