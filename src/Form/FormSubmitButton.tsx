@@ -7,17 +7,23 @@ const styles = (theme: any) => ({
   root: {
     position: "relative",
     display: "inline-block",
+    marginTop: theme.spacing(2),
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
   },
+
   fixed: {
     position: "fixed",
     right: theme.spacing(5),
     bottom: theme.spacing(3),
     marginBottom: theme.spacing(),
   },
+
   button: {
     paddingLeft: theme.spacing(6),
     paddingRight: theme.spacing(6),
   },
+
   progress: {
     color: green[500],
     position: "absolute",
@@ -46,11 +52,12 @@ const FormSubmitButton: React.SFC<FormSubmitButtonProps> = ({
   classes,
   children,
 }) => {
-  const wrapperClasses = classNames(classes.root, {
-    [classes.fixed]: fixed,
-  });
   return (
-    <div className={wrapperClasses}>
+    <div
+      className={classNames(classes.root, {
+        [classes.fixed]: fixed,
+      })}
+    >
       <Button
         variant="contained"
         color="secondary"
@@ -67,6 +74,7 @@ const FormSubmitButton: React.SFC<FormSubmitButtonProps> = ({
     </div>
   );
 };
+
 FormSubmitButton.defaultProps = {
   disabled: false,
   loading: false,
