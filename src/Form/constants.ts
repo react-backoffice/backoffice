@@ -1,20 +1,27 @@
 export const TYPES = {
-  SELECT: "select",
-  LIST: "list",
-  MULTILINE: "multiline",
-  TEXT: "text",
-  DATE: "date",
-  TIME: "time",
-  DATETIME: "datetime",
-  NUMBER: "number",
-  SWITCH: "switch",
-  EMAIL: "email",
-  PASSWORD: "password",
-  URL: "url",
   CONTENT: "content",
+  DATE: "date",
+  DATETIME: "datetime",
   DIVIDER: "divider",
+  EMAIL: "email",
   EMPTY: "empty",
   HIDDEN: "hidden",
+  LIST: "list",
+  MULTILINE: "multiline",
+  NUMBER: "number",
+  PASSWORD: "password",
+  SELECT: "select",
+  SWITCH: "switch",
+  TEXT: "text",
+  TIME: "time",
+  URL: "url",
+};
+
+export const WIDTH = {
+  SMALL: "small",
+  MEDIUM: "mid",
+  LARGE: "large",
+  FULL: "full",
 };
 
 export default {};

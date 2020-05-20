@@ -1,7 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 import { withStyles } from "@material-ui/core";
-import { TYPES } from "./constants";
+import { TYPES, WIDTH } from "./constants";
 import FormFieldInput from "./FormFieldInput";
 import FormFieldDate from "./FormFieldDate";
 import FormFieldList from "./FormFieldList";
@@ -30,12 +30,19 @@ const styles = (theme: any) => ({
   widthSmall: {
     width: `calc(25% - ${theme.spacing(2)}px)`,
   },
-  widthMid: {
+
+  widthMedium: {
     width: `calc(50% - ${theme.spacing(2)}px)`,
   },
+
+  widthLarge: {
+    width: `calc(75% - ${theme.spacing(2)}px)`,
+  },
+
   widthFull: {
     width: `calc(100% - ${theme.spacing(2)}px)`,
   },
+
   divider: {
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
@@ -69,10 +76,12 @@ const FormFieldBranch: React.SFC<FormFieldBranchProps> = ({
   const getClasses = () => {
     const classNames = [classes.field];
 
-    if (width === "small") {
+    if (width === WIDTH.SMALL) {
       classNames.push(classes.widthSmall);
-    } else if (width === "mid") {
-      classNames.push(classes.widthMid);
+    } else if (width === WIDTH.MEDIUM) {
+      classNames.push(classes.widthMedium);
+    } else if (width === WIDTH.LARGE) {
+      classNames.push(classes.widthLarge);
     } else {
       classNames.push(classes.widthFull);
     }
@@ -142,8 +151,8 @@ const FormFieldBranch: React.SFC<FormFieldBranchProps> = ({
 };
 
 FormFieldBranch.defaultProps = {
-  type: "text",
-  width: "full",
+  type: TYPES.TEXT,
+  width: WIDTH.FULL,
   listItems: [],
   options: [],
   content: null,
