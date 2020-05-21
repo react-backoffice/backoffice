@@ -3,19 +3,24 @@ export default {
   description: "Visual Testing for Backoffice Framework",
   groups: [
     {
-      id: "list",
-      title: "List",
+      id: "components",
+      title: "Backoffice's Components",
       cards: [
         {
-          id: "card-1",
-          title: "Card 1",
-          description: "Manage this card’s page",
-          link: "/some-link",
-          icon: null,
+          id: "list",
+          title: "Lists",
+          description: "Have a look at list implementations",
+          link: "/list",
+        },
+        {
+          id: "forms",
+          title: "Forms",
+          description: "Have a look at form implementations",
+          link: "/form",
         },
         {
           id: "card-2",
-          title: "Card 2",
+          title: "Disabled Card",
           description: "Manage this card’s page",
           link: "/some-link",
           icon: null,

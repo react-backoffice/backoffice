@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import indigo from "@material-ui/core/colors/indigo";
 import amber from "@material-ui/core/colors/amber";
-import menuData from "./data/menu";
 import AppContainer from "../AppContainer";
-import Base from "../Base";
 import NoMatch from "../NoMatch";
 import CookieInfo from "../CookieInfo";
-import Page from "./Page";
+import Page from "./pages";
 import General from "./General";
+import List from "./pages/list";
+import FormPage from "./pages/form";
+import Layout from "./Layout";
 
 const theme = {
   palette: {
@@ -34,22 +35,42 @@ const Container = () => (
           exact
           path="/"
           render={(props) => (
-            <Base title="This is Backoffice" menuData={menuData} hasCookieInfo>
+            <Layout>
               <Page {...props} />
               <General {...props} />
-            </Base>
+            </Layout>
+          )}
+        />
+
+        <Route
+          exact
+          path="/list"
+          render={(props) => (
+            <Layout>
+              <List />
+            </Layout>
+          )}
+        />
+
+        <Route
+          exact
+          path="/form"
+          render={(props) => (
+            <Layout>
+              <FormPage />
+            </Layout>
           )}
         />
 
         <Route
           render={(props) => (
-            <Base title="This is Backoffice" menuData={menuData} hasCookieInfo>
+            <Layout>
               <NoMatch />
 
               <CookieInfo {...props}>
                 <Typography variant="body2">This is the cookie info</Typography>
               </CookieInfo>
-            </Base>
+            </Layout>
           )}
         />
       </Switch>
