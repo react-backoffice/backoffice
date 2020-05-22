@@ -1,154 +1,129 @@
-import React from "react";
-import FormBranch from "./FormBranch";
-import isValid from "./isValid";
+import React, { FunctionComponent, useCallback } from "react";
+import { Typography, makeStyles, Theme } from "@material-ui/core";
+import FormGroupWrapper from "./FormGroupWrapper";
+import FormFieldBranch from "./FormField";
+import FormSubmitButton from "./FormSubmitButton";
+import FormState from "./FormState";
+import { FormField } from ".";
 
-type FormProps = {
-  form: object[];
-  data: {
-    [key: string]: any;
+const useStyles = makeStyles((theme: Theme) => ({
+  title: {
+    marginLeft: theme.spacing(),
+    marginRight: theme.spacing(),
+  },
+
+  errorMessage: {
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    color: theme.palette.error.main,
+  },
+}));
+
+type ElementProps = {
+  useFormElement?: boolean;
+  noValidate: boolean;
+  autoComplete: string;
+};
+
+const Element: FunctionComponent<ElementProps> = ({
+  useFormElement,
+  ...props
+}) => {
+  if (useFormElement) {
+    return <form {...props} />;
+  }
+
+  return <div {...props} />;
+};
+
+type Props = {
+  form: FormField[];
+  data?: {
+    [key: string]: Record<string, any>;
   };
-  onDataChanged?: (...args: any[]) => any;
+  useFormElement?: boolean;
+  isFixedSubmitButton?: boolean;
+  errorMessage?: string;
   onSubmit: (...args: any[]) => any;
   submitText?: string;
-  isFixedSubmitButton?: boolean;
+  isLoading?: boolean;
+  showErrors?: boolean;
 };
 
-type FormState = {
-  loading: boolean;
-  error?: boolean;
-  data: {} | any;
-};
+const Form: FunctionComponent<Props> = ({
+  form,
+  onSubmit,
+  children,
+  useFormElement = true,
+  isFixedSubmitButton = false,
+  errorMessage = "An error occured. Please fill out all required fields correctly.",
+  submitText = "Save",
+  isLoading,
+  showErrors,
+}) => {
+  const classes = useStyles();
 
-const withForm = (Component: any) =>
-  class Form extends React.Component<FormProps, FormState> {
-    private fields: any;
-    private timer: any;
-
-    constructor(props: FormProps, defaultProps: any) {
-      super(props, defaultProps);
-
-      this.state = {
-        data: {},
-        loading: false,
-      };
-      this.fields = {};
-      this.timer = undefined;
-      this.handleSubmit = this.handleSubmit.bind(this);
-      this.updateFieldData = this.updateFieldData.bind(this);
-    }
-    componentDidMount() {
-      const { form, data } = this.props;
-      this.generateFields(form, data);
-      this.generateMissingData(data);
-      this.setState({
-        data: this.fields,
-      });
-    }
-    UNSAFE_componentWillReceiveProps({ form, data }: FormProps) {
-      this.generateFields(form, data);
-      this.generateMissingData(data);
-      this.setState({
-        data: this.fields,
-      });
-    }
-    componentWillUnmount() {
-      clearTimeout(this.timer);
-    }
-
-    static getInitialField(field: any, data: any) {
-      let valueName = data[field.id] && data[field.id].value;
-      let submitValue = valueName;
-      if (!valueName && field.value !== undefined) {
-        valueName = field.value;
-      }
-      if (typeof field.beforeSubmit === "function") {
-        submitValue = field.beforeSubmit(submitValue);
-      }
-      return {
-        value: valueName,
-        submitValue,
-        error: !isValid(
-          field.type,
-          field.isRequired,
-          field.validators,
-          submitValue,
-        ),
-      };
-    }
-    generateFields(fieldset: any[], data: any) {
-      fieldset.forEach((field) => {
+  const generateFields = useCallback(
+    (formData: FormField[]) =>
+      formData.map((field: any, index: number) => {
         if (field.group) {
-          this.generateFields(field.data, data);
-          return;
+          return (
+            <FormGroupWrapper
+              key={`group.${field.id}`}
+              isVisible={field.isVisible}
+              isPaper={!field.integrated}
+            >
+              {field.title && (
+                <Typography
+                  variant={field.integrated ? "h6" : "h5"}
+                  className={classes.title}
+                  gutterBottom
+                >
+                  {field.title}
+                </Typography>
+              )}
+
+              {generateFields(field.data)}
+            </FormGroupWrapper>
+          );
         }
-        this.fields[field.id] = Form.getInitialField(field, data);
-      });
-    }
-    generateMissingData(data: any) {
-      Object.keys(data).forEach((key) => {
-        if (this.fields[key]) {
-          return;
-        }
-        this.fields[key] = data[key];
-      });
-    }
-    handleSubmit() {
-      const { data, loading } = this.state;
-      const { onSubmit } = this.props;
-      const errors = Object.values(data).map((field: any) => field.error);
-      if (errors.indexOf(true) > -1) {
-        this.setState({
-          error: true,
-        });
-        return;
-      }
-      if (!loading) {
-        this.setState(
-          {
-            loading: true,
-            error: false,
-          },
-          () => {
-            this.timer = setTimeout(() => {
-              this.setState({
-                loading: false,
-              });
-            }, 1000);
-          },
+
+        return (
+          <FormState
+            Component={FormFieldBranch}
+            key={index}
+            showErrors={showErrors}
+            {...field}
+          />
         );
-      }
-      onSubmit(data);
-    }
+      }),
+    [showErrors, classes.title],
+  );
 
-    updateFieldData(fieldId: string, value: any, submitValue: any, error: any) {
-      const { onDataChanged } = this.props;
-      const { data: stateData } = this.state;
-      const data = {
-        ...stateData,
-      };
-      data[fieldId] = {
-        value,
-        submitValue,
-        error,
-      };
+  const elements = generateFields(form);
 
-      onDataChanged && onDataChanged(data);
+  return (
+    <Element useFormElement={useFormElement} noValidate autoComplete="off">
+      {elements}
 
-      this.setState({
-        data,
-      });
-    }
+      {children}
 
-    render() {
-      return (
-        <Component
-          handleSubmit={this.handleSubmit}
-          updateFieldData={this.updateFieldData}
-          {...this.props}
-          {...this.state}
-        />
-      );
-    }
-  };
+      {showErrors && (
+        <Typography variant="body2" className={classes.errorMessage}>
+          {errorMessage}
+        </Typography>
+      )}
 
-export default withForm(FormBranch);
+      <FormSubmitButton
+        onSubmit={onSubmit}
+        disabled={isLoading}
+        loading={isLoading}
+        fixed={isFixedSubmitButton}
+      >
+        {submitText}
+      </FormSubmitButton>
+    </Element>
+  );
+};
+
+export default Form;

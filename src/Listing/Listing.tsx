@@ -49,7 +49,7 @@ const filterElement = (
   });
 
   if (newElement) {
-    Object.keys(newElement).forEach((key: any) => {
+    Object.keys(element).forEach((key: any) => {
       if (newElement && newElement[key]) {
         newElement[key] = newElement[key];
       }

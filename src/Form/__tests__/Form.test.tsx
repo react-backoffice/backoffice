@@ -2,9 +2,9 @@ import React from "react";
 import { MemoryRouter } from "react-router-dom";
 import { shallow } from "enzyme";
 
-import Form from ".";
+import Form from "..";
 
-import formData from "../tests/data/form";
+import formData from "../../tests/data/form";
 
 it("renders correctly", () => {
   const tree = shallow(

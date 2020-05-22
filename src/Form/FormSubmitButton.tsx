@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import classNames from "classnames";
-import { Button, CircularProgress, withStyles } from "@material-ui/core";
+import { Button, CircularProgress, makeStyles, Theme } from "@material-ui/core";
 import { green } from "@material-ui/core/colors";
 
-const styles = (theme: any) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     position: "relative",
     display: "inline-block",
@@ -32,26 +32,24 @@ const styles = (theme: any) => ({
     marginTop: -12,
     marginLeft: -12,
   },
-});
+}));
 
-type FormSubmitButtonProps = {
+type Props = {
   onSubmit: (...args: any[]) => any;
   disabled?: boolean;
   loading?: boolean;
   fixed?: boolean;
-  classes: {
-    [key: string]: string;
-  };
 };
 
-const FormSubmitButton: React.SFC<FormSubmitButtonProps> = ({
+const FormSubmitButton: FunctionComponent<Props> = ({
   onSubmit,
-  disabled,
-  loading,
-  fixed,
-  classes,
+  disabled = false,
+  loading = false,
+  fixed = false,
   children,
 }) => {
+  const classes = useStyles();
+
   return (
     <div
       className={classNames(classes.root, {
@@ -68,17 +66,9 @@ const FormSubmitButton: React.SFC<FormSubmitButtonProps> = ({
         {children}
       </Button>
 
-      {loading ? (
-        <CircularProgress size={24} className={classes.progress} />
-      ) : null}
+      {loading && <CircularProgress size={24} className={classes.progress} />}
     </div>
   );
 };
 
-FormSubmitButton.defaultProps = {
-  disabled: false,
-  loading: false,
-  fixed: false,
-};
-
-export default withStyles(styles as any)(FormSubmitButton);
+export default FormSubmitButton;

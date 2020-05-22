@@ -1,202 +1,145 @@
-import React from "react";
-import { TYPES } from "./constants";
-import FormFieldBranch from "./FormFieldBranch";
-import isValid from "./isValid";
+import React, { FunctionComponent } from "react";
+import classnames from "classnames";
+import { makeStyles, Theme } from "@material-ui/core";
+import { TYPES, WIDTH } from "./constants";
+import Input from "./Inputs/Input";
+import DateInput from "./Inputs/DateInput";
+import List from "./Inputs/List";
+import Switch from "./Inputs/Switch";
+import Hidden from "./Inputs/Hidden";
 
-type FormFieldProps = {
+const useStyles = makeStyles((theme: Theme) => ({
+  hidden: {
+    display: "none",
+  },
+  headline: {
+    marginTop: theme.spacing(3),
+  },
+  field: {
+    marginLeft: theme.spacing(),
+    marginRight: theme.spacing(),
+    verticalAlign: "top",
+  },
+  fieldInline: {
+    display: "inline-block",
+  },
+  fieldDate: {
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(),
+  },
+  widthSmall: {
+    width: `calc(25% - ${theme.spacing(2)}px)`,
+  },
+
+  widthMedium: {
+    width: `calc(50% - ${theme.spacing(2)}px)`,
+  },
+
+  widthLarge: {
+    width: `calc(75% - ${theme.spacing(2)}px)`,
+  },
+
+  widthFull: {
+    width: `calc(100% - ${theme.spacing(2)}px)`,
+  },
+
+  divider: {
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
+  },
+}));
+
+type Props = {
+  type?: string;
+  width?: string;
+  options?: string[];
+  content?: React.ReactNode;
+  isVisible?: boolean;
   id: string;
   title?: string;
-  type?: string;
   helperText?: string;
-  validators?: (
-    | string
-    | ((...args: any[]) => any)
-    | {
-        validator?: string | ((...args: any[]) => any);
-        message?: string;
-      }
-  )[];
-  isRequired?: boolean;
-  handleChange: (...args: any[]) => any;
-  getAdditionalValue?: (...args: any[]) => any;
-  beforeSubmit?: (...args: any[]) => any;
   value?: any;
-  completeFrom?: any[];
-  width?: string;
-  isVisible?: boolean;
-  renderElement?: any;
+  onChange: (...args: any) => any;
 };
 
-type FormFieldState = {
-  value: any;
-  messages: any;
-  error?: boolean;
-  listItems?: any[];
-  isDirty: boolean;
-  completeFrom: any[];
-};
+const FormField: FunctionComponent<Props> = ({
+  type,
+  width,
+  isVisible,
+  ...props
+}) => {
+  const classes = useStyles();
+  const classNames = classnames(classes.field, {
+    [classes.widthSmall]: width === WIDTH.SMALL,
+    [classes.widthMedium]: width === WIDTH.MEDIUM,
+    [classes.widthLarge]: width === WIDTH.LARGE,
+    [classes.widthFull]:
+      !width || ![WIDTH.SMALL, WIDTH.MEDIUM, WIDTH.LARGE].includes(width),
+    [classes.hidden]: !isVisible,
+  });
 
-const withFormField = (Component: any) =>
-  class FormField extends React.Component<FormFieldProps, FormFieldState> {
-    static getCompleteFrom(completeFrom = []) {
-      return completeFrom.map((option: any) => {
-        let { title } = option;
-        if (!option.title) {
-          title = option;
-        }
-        return {
-          title,
-          tooltip: option.tooltip,
-        };
-      });
-    }
-
-    constructor(props: FormFieldProps) {
-      super(props);
-      this.handleChange = this.handleChange.bind(this);
-      this.initialize = this.initialize.bind(this);
-      this.handleAddListItem = this.handleAddListItem.bind(this);
-      this.handleRemoveListItem = this.handleRemoveListItem.bind(this);
-    }
-
-    state = {
-      listItems: [],
-      value: "",
-      isDirty: false,
-      completeFrom: [],
-      messages: [],
-    };
-
-    UNSAFE_componentWillMount() {
-      this.initialize(this.props);
-    }
-    UNSAFE_componentWillReceiveProps(nextProps: FormFieldProps) {
-      this.initialize(nextProps);
-    }
-    getAdditionalValue(value: any) {
-      if (typeof this.props.getAdditionalValue === "function") {
-        return this.props.getAdditionalValue(value);
-      }
-      return value;
-    }
-
-    getList({ value, completeFrom }: any) {
-      let listItems = this.state.listItems.map((item: any) => item.title);
-      if (this.state.isDirty === false) {
-        if (value && value.constructor === Array) {
-          listItems = [...value];
-        } else {
-          listItems = [];
-        }
-      }
-      const allCompleteFrom = FormField.getCompleteFrom(completeFrom);
-      const transformedListItems = this.getAdditionalValue(listItems);
-      listItems = transformedListItems.map((selectedValue: any) => {
-        if (allCompleteFrom.length > 0) {
-          return allCompleteFrom.filter(
-            (option) => option.title === selectedValue,
-          )[0];
-        }
-        return {
-          title: selectedValue,
-        };
-      });
-      return {
-        completeFrom: allCompleteFrom,
-        value: "",
-        isDirty: true,
-        listItems,
-      };
-    }
-
-    initialize(props: FormFieldProps) {
-      const isList = props.type === "list";
-      let state = {};
-      if (isList) {
-        state = this.getList(props);
-      } else {
-        state = {
-          value: this.getAdditionalValue(props.value),
-        };
-      }
-      this.setState(state);
-    }
-
-    isValid(value: any) {
-      const { type, isRequired, validators } = this.props;
-      return isValid(type, isRequired, validators, value);
-    }
-
-    handleChange(fieldId: string) {
-      return (event: any) => {
-        let newValue;
-
-        if (event.target) {
-          newValue = event.target.value;
-          // eslint-disable-next-line no-underscore-dangle
-        } else if (event._isAMomentObject) {
-          newValue = event.valueOf();
-        }
-
-        let submitValue = newValue;
-
-        if (typeof this.props.beforeSubmit === "function") {
-          submitValue = this.props.beforeSubmit(submitValue);
-        }
-
-        const isValidWithMessages = this.isValid(submitValue);
-        const error = !isValidWithMessages.isValid;
-
-        if (this.props.type === TYPES.NUMBER) {
-          newValue = parseFloat(newValue);
-        }
-
-        this.setState({
-          value: newValue,
-          messages: isValidWithMessages.messages || [],
-          error,
-        });
-        this.props.handleChange(fieldId, newValue, submitValue, error);
-      };
-    }
-
-    handleAddListItem(option: any) {
-      this.setState({
-        listItems: [...this.state.listItems, option],
-      });
-    }
-
-    handleRemoveListItem(option: any) {
-      const listItems = [...this.state.listItems];
-      const flatListItems = listItems.map((item: any) => item.title);
-      const index = flatListItems.indexOf(option.title);
-      if (index > -1) {
-        listItems.splice(index, 1);
-      }
-      this.setState({
-        listItems,
-      });
-    }
-
-    render() {
-      const { helperText, ...props } = this.props;
-      const { messages, ...state } = this.state;
-      let helperMessages: any[] = [];
-
-      if (helperText) {
-        helperMessages = [helperText, ...messages];
-      }
+  switch (type) {
+    case TYPES.SELECT:
       return (
-        <Component
+        <Input
           {...props}
-          {...state}
-          helperText={helperMessages.join(" ")}
-          handleChange={this.handleChange}
-          onRemoveListItem={this.handleRemoveListItem}
-          onAddListItem={this.handleAddListItem}
+          select
+          options={props.options}
+          className={classNames}
         />
       );
-    }
-  };
 
-export default withFormField(FormFieldBranch);
+    case TYPES.LIST:
+      return <List {...props} className={classNames} />;
+
+    case TYPES.MULTILINE:
+      return <Input {...props} className={classNames} isMultiline />;
+
+    case TYPES.DATE:
+    case TYPES.TIME:
+    case TYPES.DATETIME:
+      return (
+        <DateInput
+          {...props}
+          className={classnames(classNames, classes.fieldDate)}
+          type={type}
+        />
+      );
+
+    case TYPES.SWITCH:
+      return (
+        <Switch
+          {...props}
+          className={classnames(classNames, classes.fieldInline)}
+        />
+      );
+
+    case TYPES.HIDDEN:
+      return <Hidden {...props} />;
+
+    case TYPES.DIVIDER:
+      return <hr className={classnames(classNames, classes.divider)} />;
+
+    case TYPES.EMPTY:
+      return <div className={classNames} />;
+
+    case TYPES.CONTENT:
+      return (
+        <div className={classnames(classNames, classes.field)}>
+          {props.content}
+        </div>
+      );
+
+    default:
+      return <Input {...props} type={type} className={classNames} />;
+  }
+};
+
+FormField.defaultProps = {
+  type: TYPES.TEXT,
+  width: WIDTH.FULL,
+  options: [],
+  isVisible: true,
+};
+
+export default FormField;

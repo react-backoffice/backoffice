@@ -7,22 +7,16 @@ exports[`renders correctly 1`] = `
       "endAdornment": <InputEnd />,
     }
   }
-  className=""
   disabled={false}
   error={false}
   fullWidth={true}
-  helperText=""
   id=""
   margin="normal"
   multiline={false}
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyPress={[Function]}
   required={false}
   rows={1}
   select={false}
   type="text"
-  value=""
 />
 `;
 
@@ -33,21 +27,15 @@ exports[`renders disabled 1`] = `
       "endAdornment": <InputEnd />,
     }
   }
-  className=""
   disabled={true}
   error={false}
   fullWidth={true}
-  helperText=""
   id=""
   margin="normal"
   multiline={false}
-  onBlur={[Function]}
-  onFocus={[Function]}
-  onKeyPress={[Function]}
   required={false}
   rows={1}
   select={false}
   type="text"
-  value=""
 />
 `;

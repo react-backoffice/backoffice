@@ -1,7 +1,7 @@
 import * as Validators from "./validators";
-import { TYPES } from "./constants";
+import { TYPES } from "../constants";
 
-type Validator =
+export type Validator =
   | string
   | ((...args: any[]) => any)
   | {

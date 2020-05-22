@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "agaqcl",
+          "key": "a486xk",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -25,7 +25,7 @@ exports[`renders correctly 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "agaqcl",
+        "key": "a486xk",
         "pathname": "/",
         "search": "",
         "state": undefined,
@@ -71,6 +71,7 @@ exports[`renders correctly 1`] = `
             },
             Object {
               "id": "number",
+              "isRequired": true,
               "title": "Number",
               "type": "number",
               "value": 10,
@@ -81,48 +82,6 @@ exports[`renders correctly 1`] = `
               "rows": 5,
               "title": "Multiline",
               "type": "multiline",
-            },
-            Object {
-              "completeFrom": Array [
-                Object {
-                  "title": "Foo",
-                  "tooltip": "Foo-Baz",
-                },
-                "Bar",
-                Object {
-                  "title": "Baz",
-                  "tooltip": "Foo-Baz",
-                },
-                Object {
-                  "title": "Froot",
-                },
-                Object {
-                  "title": "Foobar",
-                  "tooltip": "Foo-Baz",
-                },
-                Object {
-                  "title": "Barbaz",
-                  "tooltip": "Foo-Baz",
-                },
-                Object {
-                  "title": "Foobaz",
-                },
-              ],
-              "id": "list",
-              "title": "List",
-              "type": "list",
-              "value": Array [
-                "Foo",
-                "Bar",
-                "Baz",
-              ],
-              "width": "mid",
-            },
-            Object {
-              "id": "free-list",
-              "title": "Free List",
-              "type": "list",
-              "width": "mid",
             },
             Object {
               "data": Array [
@@ -269,7 +228,13 @@ exports[`renders correctly 1`] = `
               "width": "small",
             },
             Object {
-              "helperText": "Display Helper Text",
+              "id": "switch",
+              "title": "Switch - Prefilld",
+              "type": "switch",
+              "value": true,
+              "width": "small",
+            },
+            Object {
               "id": "switch-1",
               "isDisabled": true,
               "title": "Switch - Disabled",
@@ -299,7 +264,7 @@ exports[`renders correctly with content 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "idzrse",
+          "key": "gryehk",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -313,7 +278,7 @@ exports[`renders correctly with content 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "idzrse",
+        "key": "gryehk",
         "pathname": "/",
         "search": "",
         "state": undefined,
@@ -359,6 +324,7 @@ exports[`renders correctly with content 1`] = `
             },
             Object {
               "id": "number",
+              "isRequired": true,
               "title": "Number",
               "type": "number",
               "value": 10,
@@ -369,48 +335,6 @@ exports[`renders correctly with content 1`] = `
               "rows": 5,
               "title": "Multiline",
               "type": "multiline",
-            },
-            Object {
-              "completeFrom": Array [
-                Object {
-                  "title": "Foo",
-                  "tooltip": "Foo-Baz",
-                },
-                "Bar",
-                Object {
-                  "title": "Baz",
-                  "tooltip": "Foo-Baz",
-                },
-                Object {
-                  "title": "Froot",
-                },
-                Object {
-                  "title": "Foobar",
-                  "tooltip": "Foo-Baz",
-                },
-                Object {
-                  "title": "Barbaz",
-                  "tooltip": "Foo-Baz",
-                },
-                Object {
-                  "title": "Foobaz",
-                },
-              ],
-              "id": "list",
-              "title": "List",
-              "type": "list",
-              "value": Array [
-                "Foo",
-                "Bar",
-                "Baz",
-              ],
-              "width": "mid",
-            },
-            Object {
-              "id": "free-list",
-              "title": "Free List",
-              "type": "list",
-              "width": "mid",
             },
             Object {
               "data": Array [
@@ -557,7 +481,13 @@ exports[`renders correctly with content 1`] = `
               "width": "small",
             },
             Object {
-              "helperText": "Display Helper Text",
+              "id": "switch",
+              "title": "Switch - Prefilld",
+              "type": "switch",
+              "value": true,
+              "width": "small",
+            },
+            Object {
               "id": "switch-1",
               "isDisabled": true,
               "title": "Switch - Disabled",

@@ -1,29 +1,21 @@
 import React from "react";
-import Enzyme, { shallow, mount } from "enzyme";
+import Enzyme, { mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import { ListItem, Chip } from "@material-ui/core";
 
-import FormField from "./FormField";
-import FormFieldInput from "./FormFieldInput";
+import FormField from "../FormField";
+import Input from "../Inputs/Input";
 
 Enzyme.configure({ adapter: new Adapter() });
 
 describe("Form Field", () => {
   it("handles change", () => {
-    const handleChange = jest.fn();
-    const field = mount(
-      <FormField
-        id="1"
-        type="text"
-        validators={["url"]}
-        isRequired
-        handleChange={handleChange}
-      />,
-    );
+    const onChange = jest.fn();
+    const field = mount(<FormField id="1" type="text" onChange={onChange} />);
 
     field.find("input").simulate("change", { value: "a" });
 
-    expect(handleChange).toHaveBeenCalled();
+    expect(onChange).toHaveBeenCalled();
   });
 
   it("renders non-visible", () => {
@@ -32,16 +24,14 @@ describe("Form Field", () => {
         id="2"
         type="text"
         value="http://google.de/"
-        validators={["url"]}
-        isRequired
-        handleChange={() => {}}
+        onChange={() => {}}
         isVisible={false}
         width="small"
       />,
     );
-    expect(
-      (field.find(FormFieldInput).props() as any).classNames?.join(" "),
-    ).toEqual(expect.stringMatching(/hidden/));
+    expect((field.find(Input).props() as any).classNames?.join(" ")).toEqual(
+      expect.stringMatching(/hidden/),
+    );
   });
 
   it("renders calls beforeSubmit function, handles number", () => {
@@ -51,8 +41,7 @@ describe("Form Field", () => {
         id="3"
         value="1"
         type="number"
-        handleChange={() => {}}
-        beforeSubmit={beforeSubmit}
+        onChange={() => {}}
         width="mid"
       />,
     );
@@ -63,9 +52,7 @@ describe("Form Field", () => {
   });
 
   it("handles list", () => {
-    const field = mount(
-      <FormField id="4" type="list" handleChange={() => {}} />,
-    );
+    const field = mount(<FormField id="4" type="list" onChange={() => {}} />);
 
     expect((field.state() as any).listItems).toEqual([]);
 
@@ -76,14 +63,7 @@ describe("Form Field", () => {
   });
 
   it("handles list with allowed values", () => {
-    const field = mount(
-      <FormField
-        id="5"
-        type="list"
-        handleChange={() => {}}
-        completeFrom={["foo"]}
-      />,
-    );
+    const field = mount(<FormField id="5" type="list" onChange={() => {}} />);
 
     expect((field.state() as any).listItems).toEqual([]);
 
@@ -103,13 +83,13 @@ describe("Form Field", () => {
       <FormField
         id="5a"
         type="list"
-        handleChange={() => {}}
-        completeFrom={[
-          {
-            title: "foo",
-            tooltip: "bar",
-          },
-        ]}
+        onChange={() => {}}
+        // completeFrom={[
+        //   {
+        //     title: "foo",
+        //     tooltip: "bar",
+        //   },
+        // ]}
       />,
     );
 
@@ -126,8 +106,8 @@ describe("Form Field", () => {
       <FormField
         id="5b"
         type="list"
-        handleChange={() => {}}
-        renderElement={renderElement}
+        onChange={() => {}}
+        // renderElement={renderElement}
       />,
     );
 
@@ -138,9 +118,7 @@ describe("Form Field", () => {
   });
 
   it("does not render if there is no option", () => {
-    const field = mount(
-      <FormField id="5b" type="list" handleChange={() => {}} />,
-    );
+    const field = mount(<FormField id="5b" type="list" onChange={() => {}} />);
 
     field.setState({
       listItems: [null],
@@ -155,12 +133,12 @@ describe("Form Field", () => {
         id="6"
         type="datetime"
         value={+new Date()}
-        handleChange={() => {}}
+        onChange={() => {}}
       />,
     );
     const newDate = +new Date();
 
-    (field.instance() as any).handleChange("6")({
+    (field.instance() as any).onChange("6")({
       _isAMomentObject: true,
       valueOf: () => newDate,
     });
@@ -175,12 +153,12 @@ describe("Form Field", () => {
         title="Foo"
         type="date"
         value={+new Date()}
-        handleChange={() => {}}
+        onChange={() => {}}
       />,
     );
     const newDate = +new Date();
 
-    (field.instance() as any).handleChange("6")({
+    (field.instance() as any).onChange("6")({
       _isAMomentObject: true,
       valueOf: () => newDate,
     });
@@ -190,16 +168,11 @@ describe("Form Field", () => {
 
   it("handles time field", () => {
     const field = mount(
-      <FormField
-        id="6"
-        type="time"
-        value={+new Date()}
-        handleChange={() => {}}
-      />,
+      <FormField id="6" type="time" value={+new Date()} onChange={() => {}} />,
     );
     const newDate = +new Date();
 
-    (field.instance() as any).handleChange("6")({
+    (field.instance() as any).onChange("6")({
       _isAMomentObject: true,
       valueOf: () => newDate,
     });
@@ -208,7 +181,7 @@ describe("Form Field", () => {
   });
 
   it("handle validator with message", () => {
-    const handleChange = jest.fn();
+    const onChange = jest.fn();
     const validatorWithMessage = {
       validator: (value: string) => value === "test",
       message: "Value should equal `test`",
@@ -218,10 +191,9 @@ describe("Form Field", () => {
       <FormField
         id="7"
         type="text"
-        validators={[validatorWithMessage]}
-        isRequired
+        // validators={[validatorWithMessage]}
         value=""
-        handleChange={handleChange}
+        onChange={onChange}
       />,
     );
 

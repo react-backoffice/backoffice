@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FunctionComponent, useRef, useMemo } from "react";
 import classNames from "classnames";
-import { Paper, withStyles } from "@material-ui/core";
+import { Paper, makeStyles, Theme } from "@material-ui/core";
 
-const styles = (theme: any) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   group: {
     marginTop: theme.spacing(),
     marginBottom: theme.spacing(),
@@ -17,51 +17,42 @@ const styles = (theme: any) => ({
   hidden: {
     display: "none",
   },
-});
+}));
 
-type FormGroupWrapperProps = {
+type Props = {
   isPaper?: boolean;
   isVisible?: boolean;
-  classes: {
-    [key: string]: string;
-  };
 };
 
-const FormGroupWrapper: React.SFC<FormGroupWrapperProps> = ({
-  isPaper,
-  isVisible,
-  classes,
+const FormGroupWrapper: FunctionComponent<Props> = ({
+  isPaper = true,
+  isVisible = true,
   children,
   ...rest
 }) => {
-  if (isPaper) {
-    return (
-      <Paper
-        className={classNames(classes.group, {
-          [classes.hidden]: !isVisible,
-        })}
-        {...rest}
-      >
-        {children}
-      </Paper>
-    );
-  }
+  const classes = useStyles();
+  const elementRef = useRef<FunctionComponent<{ className: string }>>(
+    (props) => <div {...props} />,
+  );
+
+  useMemo(() => {
+    if (isPaper) {
+      elementRef.current = (props: any) => <Paper {...props} />;
+    }
+  }, [isPaper]);
 
   return (
-    <div
-      className={classNames(classes.groupIntegrated, {
+    <elementRef.current
+      className={classNames({
+        [classes.group]: isPaper,
+        [classes.groupIntegrated]: !isPaper,
         [classes.hidden]: !isVisible,
       })}
       {...rest}
     >
       {children}
-    </div>
+    </elementRef.current>
   );
 };
 
-FormGroupWrapper.defaultProps = {
-  isPaper: true,
-  isVisible: true,
-};
-
-export default withStyles(styles)(FormGroupWrapper);
+export default FormGroupWrapper;

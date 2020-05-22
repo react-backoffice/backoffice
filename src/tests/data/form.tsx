@@ -3,9 +3,10 @@ import React, { Fragment } from "react";
 import Icon from "@material-ui/icons/Visibility";
 import { Divider, Typography } from "@material-ui/core";
 
-import { TYPES } from "../../Form/constants";
+import { TYPES, WIDTH } from "../../Form/constants";
+import { FormField } from "../../Form";
 
-export default [
+const form: FormField[] = [
   {
     group: true,
     title: "Form",
@@ -32,50 +33,13 @@ export default [
         type: TYPES.NUMBER,
         value: 10,
         width: "small",
+        isRequired: true,
       },
       {
         id: "multiline",
         title: "Multiline",
         type: "multiline",
         rows: 5,
-      },
-      {
-        id: "list",
-        title: "List",
-        type: TYPES.LIST,
-        width: "mid",
-        value: ["Foo", "Bar", "Baz"],
-        completeFrom: [
-          {
-            title: "Foo",
-            tooltip: "Foo-Baz",
-          },
-          "Bar",
-          {
-            title: "Baz",
-            tooltip: "Foo-Baz",
-          },
-          {
-            title: "Froot",
-          },
-          {
-            title: "Foobar",
-            tooltip: "Foo-Baz",
-          },
-          {
-            title: "Barbaz",
-            tooltip: "Foo-Baz",
-          },
-          {
-            title: "Foobaz",
-          },
-        ],
-      },
-      {
-        id: "free-list",
-        title: "Free List",
-        type: TYPES.LIST,
-        width: "mid",
       },
       {
         id: "nested",
@@ -213,16 +177,24 @@ export default [
         title: "Switch",
         type: TYPES.SWITCH,
         helperText: "Display Helper Text",
-        width: "small",
+        width: WIDTH.SMALL,
+      },
+      {
+        id: "switch",
+        title: "Switch - Prefilld",
+        type: TYPES.SWITCH,
+        value: true,
+        width: WIDTH.SMALL,
       },
       {
         id: "switch-1",
         title: "Switch - Disabled",
         type: TYPES.SWITCH,
-        helperText: "Display Helper Text",
-        width: "small",
         isDisabled: true,
+        width: WIDTH.SMALL,
       },
     ],
   },
 ];
+
+export default form;
