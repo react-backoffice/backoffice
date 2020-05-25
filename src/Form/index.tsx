@@ -84,6 +84,7 @@ type FormProps = {
   data: Record<string, any>;
   onDataChanged?: (...args: any[]) => any;
   onSubmit: (...args: any[]) => any;
+  errorMessage?: string;
   submitText?: string;
   isLoading?: boolean;
   isFixedSubmitButton?: boolean;

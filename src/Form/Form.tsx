@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   errorMessage: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
+    marginLeft: theme.spacing(1),
     color: theme.palette.error.main,
   },
 }));
