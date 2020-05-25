@@ -15,6 +15,7 @@ type Props = {
   validators?: Validator[];
   Component: FunctionComponent<any>;
   showErrors?: boolean;
+  helperText?: string;
 };
 
 const getFieldById = (
@@ -93,6 +94,9 @@ const FormState: FunctionComponent<Props> = ({
       onChange={changeField}
       value={field?.value ?? ""}
       error={showErrors && !field?.isValid}
+      helperText={
+        showErrors && !field?.isValid ? field?.messages : props.helperText
+      }
     />
   );
 };
