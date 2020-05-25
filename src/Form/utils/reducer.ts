@@ -13,7 +13,10 @@ const getDataObject = (
 ): Record<string, any> => {
   if (ids[1]) {
     return {
-      [ids[0]]: getDataObject(ids.slice(1), value, existingData?.[ids[0]]),
+      [ids[0]]: {
+        ...existingData?.[ids[0]],
+        ...getDataObject(ids.slice(1), value, existingData?.[ids[0]]),
+      },
     };
   }
 

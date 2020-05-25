@@ -27,6 +27,7 @@ const FormPage = () => {
           id: "test-id",
           select: {
             first: "Bar",
+            second: "Foo",
           },
         }}
         form={formData}

@@ -28,6 +28,14 @@ const form: FormField[] = [
         isRequired: true,
       },
       {
+        id: "select.second",
+        title: "Select",
+        type: TYPES.SELECT,
+        options: ["Foo", "Bar", "Baz"],
+        width: "small",
+        isRequired: true,
+      },
+      {
         id: "number",
         title: "Number",
         type: TYPES.NUMBER,
