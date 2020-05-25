@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Back Button renders correctly 1`] = `
-<withRouter(WithBackButton)
+<BackButton
   url="/"
 />
 `;

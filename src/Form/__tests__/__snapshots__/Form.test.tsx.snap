@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "a486xk",
+          "key": "bbaqvf",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -25,7 +25,7 @@ exports[`renders correctly 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "a486xk",
+        "key": "bbaqvf",
         "pathname": "/",
         "search": "",
         "state": undefined,
@@ -58,7 +58,19 @@ exports[`renders correctly 1`] = `
               "width": "small",
             },
             Object {
-              "id": "select",
+              "id": "select.first",
+              "isRequired": true,
+              "options": Array [
+                "Foo",
+                "Bar",
+                "Baz",
+              ],
+              "title": "Select",
+              "type": "select",
+              "width": "small",
+            },
+            Object {
+              "id": "select.second",
               "isRequired": true,
               "options": Array [
                 "Foo",
@@ -117,8 +129,8 @@ exports[`renders correctly 1`] = `
               "type": "content",
             },
             Object {
-              "beforeSubmit": [Function],
               "id": "email",
+              "onBeforeSubmit": [Function],
               "title": "Email",
               "type": "email",
               "width": "mid",
@@ -264,7 +276,7 @@ exports[`renders correctly with content 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "gryehk",
+          "key": "vozkoo",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -278,7 +290,7 @@ exports[`renders correctly with content 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "gryehk",
+        "key": "vozkoo",
         "pathname": "/",
         "search": "",
         "state": undefined,
@@ -311,7 +323,19 @@ exports[`renders correctly with content 1`] = `
               "width": "small",
             },
             Object {
-              "id": "select",
+              "id": "select.first",
+              "isRequired": true,
+              "options": Array [
+                "Foo",
+                "Bar",
+                "Baz",
+              ],
+              "title": "Select",
+              "type": "select",
+              "width": "small",
+            },
+            Object {
+              "id": "select.second",
               "isRequired": true,
               "options": Array [
                 "Foo",
@@ -370,8 +394,8 @@ exports[`renders correctly with content 1`] = `
               "type": "content",
             },
             Object {
-              "beforeSubmit": [Function],
               "id": "email",
+              "onBeforeSubmit": [Function],
               "title": "Email",
               "type": "email",
               "width": "mid",
