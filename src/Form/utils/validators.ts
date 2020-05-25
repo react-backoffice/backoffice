@@ -9,9 +9,15 @@ export const required = (value: any) => {
 
   if (typeof value === "string") {
     checkValue = value.trim();
+
+    return !!(checkValue && checkValue.length > 0);
   }
 
-  return !!(checkValue && checkValue.length > 0);
+  if (typeof value === "number") {
+    return !Number.isNaN(value);
+  }
+
+  return checkValue !== undefined;
 };
 
 /**

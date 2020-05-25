@@ -5,6 +5,7 @@ import React, {
   useEffect,
 } from "react";
 import isValid, { Validator } from "./utils/isValid";
+import { getFieldById } from "./utils/reducer";
 import FormContext from "./FormContext";
 import { TYPES } from "./constants";
 
@@ -16,17 +17,7 @@ type Props = {
   Component: FunctionComponent<any>;
   showErrors?: boolean;
   helperText?: string;
-};
-
-const getFieldById = (
-  ids: string[],
-  data?: Record<string, any>,
-): Record<string, any> => {
-  if (ids[1]) {
-    return getFieldById(ids.slice(1), data?.[ids[0]]);
-  }
-
-  return data?.[ids[0]];
+  isDisabled?: boolean;
 };
 
 const FormState: FunctionComponent<Props> = ({
@@ -34,10 +25,9 @@ const FormState: FunctionComponent<Props> = ({
   showErrors,
   ...props
 }) => {
-  const { type, id, isRequired, validators } = props;
+  const { type, id, isRequired, validators, helperText, isDisabled } = props;
   const { dispatch, state } = useContext(FormContext);
-  const splittedId = id.split(".");
-  const field = getFieldById(splittedId, state);
+  const field = getFieldById(id.split("."), state);
 
   const changeField = useCallback(
     (event: any) => {
@@ -54,12 +44,13 @@ const FormState: FunctionComponent<Props> = ({
         newValue = parseFloat(newValue);
       }
 
-      const isValidWithMessages = isValid(
+      const isValidWithMessages = isValid({
         type,
         isRequired,
         validators,
-        newValue,
-      );
+        value: newValue,
+        isDisabled,
+      });
 
       dispatch({
         type: "UPDATE_FIELD",
@@ -94,9 +85,7 @@ const FormState: FunctionComponent<Props> = ({
       onChange={changeField}
       value={field?.value ?? ""}
       error={showErrors && !field?.isValid}
-      helperText={
-        showErrors && !field?.isValid ? field?.messages : props.helperText
-      }
+      helperText={showErrors && !field?.isValid ? field?.messages : helperText}
     />
   );
 };

@@ -25,17 +25,32 @@ export const getValidator = (validator: Validator): any => {
   return validator;
 };
 
+type ValidProps = {
+  type: string;
+  isRequired?: boolean;
+  validators?: Validator[];
+  value?: any;
+  isDisabled?: boolean;
+};
+
 /**
  * Returns an object
  */
-export default (
-  type: any,
-  isRequired?: boolean,
-  validators: Validator[] = [],
-  value?: any,
-) => {
+const isValid = ({
+  type,
+  isRequired,
+  validators = [],
+  value,
+  isDisabled,
+}: ValidProps) => {
   const allValidators = [...validators];
   const messages: Validator[] = [];
+
+  if (isDisabled) {
+    return {
+      isValid: true,
+    };
+  }
 
   if (isRequired) {
     allValidators.push("required");
@@ -51,7 +66,7 @@ export default (
 
   if (allValidators.length === 0) {
     return {
-      valid: true,
+      isValid: true,
     };
   }
 
@@ -72,3 +87,5 @@ export default (
     messages: !isValid ? messages : [],
   };
 };
+
+export default isValid;

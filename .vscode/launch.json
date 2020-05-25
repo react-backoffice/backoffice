@@ -5,17 +5,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome",
+      "url": "http://localhost:3001",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
       "type": "node",
       "request": "launch",
       "name": "Jest Tests",
       "program": "${workspaceRoot}/node_modules/.bin/jest",
-      "args": [
-        "-i"
-      ],
+      "args": ["-i"],
       "internalConsoleOptions": "openOnSessionStart",
-      "outFiles": [
-        "${workspaceRoot}/dist/**/*"
-      ]
+      "outFiles": ["${workspaceRoot}/dist/**/*"]
     }
   ]
 }

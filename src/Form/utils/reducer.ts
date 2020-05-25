@@ -1,4 +1,5 @@
 import isEqual from "lodash/isEqual";
+import isObject from "./isObject";
 
 export type State = Record<string, any> | undefined;
 export type Action = {
@@ -28,10 +29,6 @@ const getDataObject = (
   };
 };
 
-const isObject = (obj: any): obj is Record<string, any> => {
-  return obj === Object(obj);
-};
-
 export const enrichInitialData = (data: Record<string, any>) => {
   const enriched = {};
 
@@ -46,6 +43,17 @@ export const enrichInitialData = (data: Record<string, any>) => {
   });
 
   return enriched;
+};
+
+export const getFieldById = (
+  ids: string[],
+  data?: Record<string, any>,
+): Record<string, any> => {
+  if (ids[1]) {
+    return getFieldById(ids.slice(1), data?.[ids[0]]);
+  }
+
+  return data?.[ids[0]];
 };
 
 const reducer = (state: State, { type, payload }: Action) => {

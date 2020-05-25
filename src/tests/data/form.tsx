@@ -85,7 +85,7 @@ const form: FormField[] = [
         title: "Email",
         type: TYPES.EMAIL,
         width: "mid",
-        beforeSubmit: (url?: string) => {
+        onBeforeSubmit: (url?: string) => {
           if (url) {
             return `${url}#top`;
           }
