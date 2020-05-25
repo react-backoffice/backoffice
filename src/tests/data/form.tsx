@@ -20,7 +20,7 @@ const form: FormField[] = [
         isRequired: true,
       },
       {
-        id: "select",
+        id: "select.first",
         title: "Select",
         type: TYPES.SELECT,
         options: ["Foo", "Bar", "Baz"],

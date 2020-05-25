@@ -23,11 +23,10 @@ const FormPage = () => {
 
       <Form
         data={{
-          text: {
-            value: "prefilled text-field",
-          },
-          id: {
-            value: "test-id",
+          text: "prefilled text-field",
+          id: "test-id",
+          select: {
+            first: "Bar",
           },
         }}
         form={formData}

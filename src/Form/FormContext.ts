@@ -1,5 +1,5 @@
 import React from "react";
-import { Action, State } from "./reducer";
+import { Action, State } from "./utils/reducer";
 
 const FormContext = React.createContext<{
   dispatch: (action: Action) => void;

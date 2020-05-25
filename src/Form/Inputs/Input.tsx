@@ -58,7 +58,7 @@ const Input: FunctionComponent<Props> = ({
       id={id.replace(/[\[,\]]/g, "-")}
       type={type}
       label={title}
-      value={value}
+      value={type === "number" && Number.isNaN(value) ? "" : value}
       multiline={isMultiline}
       onChange={onChange}
       helperText={helperText}

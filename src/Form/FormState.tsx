@@ -5,7 +5,7 @@ import React, {
   useEffect,
 } from "react";
 import isValid, { Validator } from "./utils/isValid";
-import FormContext from "./hooks/FormContext";
+import FormContext from "./FormContext";
 import { TYPES } from "./constants";
 
 type Props = {
@@ -17,11 +17,15 @@ type Props = {
   showErrors?: boolean;
 };
 
-type FieldData = {
-  type: string;
-  id: string;
-  isRequired?: boolean;
-  validators?: Validator[];
+const getFieldById = (
+  ids: string[],
+  data?: Record<string, any>,
+): Record<string, any> => {
+  if (ids[1]) {
+    return getFieldById(ids.slice(1), data?.[ids[0]]);
+  }
+
+  return data?.[ids[0]];
 };
 
 const FormState: FunctionComponent<Props> = ({
@@ -31,6 +35,8 @@ const FormState: FunctionComponent<Props> = ({
 }) => {
   const { type, id, isRequired, validators } = props;
   const { dispatch, state } = useContext(FormContext);
+  const splittedId = id.split(".");
+  const field = getFieldById(splittedId, state);
 
   const changeField = useCallback(
     (event: any) => {
@@ -59,7 +65,7 @@ const FormState: FunctionComponent<Props> = ({
         payload: {
           id,
           data: {
-            ...state?.[id],
+            ...field,
             value: newValue,
             ...isValidWithMessages,
           },
@@ -67,14 +73,14 @@ const FormState: FunctionComponent<Props> = ({
       });
     },
     // eslint-disable-next-line
-    [state, dispatch],
+    [field, dispatch],
   );
 
   useEffect(
     () =>
       changeField({
         target: {
-          value: state?.[id]?.value,
+          value: field?.value,
         },
       }),
     // eslint-disable-next-line
@@ -85,7 +91,7 @@ const FormState: FunctionComponent<Props> = ({
     <Component
       {...props}
       onChange={changeField}
-      value={state?.[id]?.value ?? ""}
+      value={field?.value ?? ""}
       error={showErrors && !state?.[id]?.isValid}
     />
   );

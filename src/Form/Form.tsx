@@ -39,7 +39,7 @@ const Element: FunctionComponent<ElementProps> = ({
 type Props = {
   form: FormField[];
   data?: {
-    [key: string]: Record<string, any>;
+    [key: string]: any;
   };
   useFormElement?: boolean;
   isFixedSubmitButton?: boolean;

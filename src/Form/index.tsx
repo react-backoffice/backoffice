@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useReducer, useState } from "react";
 import FormBranch from "./Form";
 import { Validator } from "./utils/isValid";
-import FormContext from "./hooks/FormContext";
-import reducer from "./hooks/reducer";
+import FormContext from "./FormContext";
+import reducer, { enrichInitialData } from "./utils/reducer";
 
 export type FormFieldGroup = {
   id: string;
@@ -34,11 +34,7 @@ export type FormField = FormFieldGroup | FormFieldField;
 
 type FormProps = {
   form: FormField[];
-  data: {
-    [key: string]: {
-      value: any;
-    };
-  };
+  data: Record<string, any>;
   onDataChanged?: (...args: any[]) => any;
   onSubmit: (...args: any[]) => any;
   submitText?: string;
@@ -53,7 +49,7 @@ const Form: FunctionComponent<FormProps> = ({
   ...props
 }) => {
   const [showErrors, setShowErrors] = useState(false);
-  const [state, dispatch] = useReducer(reducer, data);
+  const [state, dispatch] = useReducer(reducer, enrichInitialData(data));
 
   const onSubmit = () => {
     const validation =
