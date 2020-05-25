@@ -65,7 +65,7 @@ export default (
     return validator.validator(value);
   });
 
-  const isValid = validState.indexOf(false) === -1;
+  const isValid = !validState.includes(false);
 
   return {
     isValid,

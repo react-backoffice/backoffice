@@ -92,7 +92,7 @@ const FormState: FunctionComponent<Props> = ({
       {...props}
       onChange={changeField}
       value={field?.value ?? ""}
-      error={showErrors && !state?.[id]?.isValid}
+      error={showErrors && !field?.isValid}
     />
   );
 };
