@@ -35,6 +35,10 @@ const styles = (theme: any) => ({
     }),
     marginLeft: 0,
   },
+
+  isHeaderFixed: {
+    marginTop: theme.spacing(8),
+  },
 });
 
 type BaseBranchProps = {
@@ -94,6 +98,7 @@ const BaseBranch: React.SFC<BaseBranchProps> = ({
       <main
         className={classNames(classes.content, {
           [classes.contentShift]: open || !hasHeader,
+          [classes.isHeaderFixed]: isHeaderFixed,
         })}
       >
         {React.Children.map(children, (child) =>

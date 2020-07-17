@@ -15,8 +15,8 @@ const styles = (theme: any) => ({
   root: {
     width: "100%",
   },
+
   appBar: {
-    position: "relative",
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -31,6 +31,11 @@ const styles = (theme: any) => ({
     }),
     marginLeft: drawerWidth,
   },
+
+  isStatic: {
+    position: "relative",
+  },
+
   menuButton: {
     marginLeft: -12,
     marginRight: 20,
@@ -73,6 +78,7 @@ const Header: React.SFC<HeaderProps> = ({
     <AppBar
       className={classNames(classes.appBar, {
         [classes.appBarShift]: isOpen,
+        [classes.isStatic]: !isFixed,
       })}
       position={isFixed ? "fixed" : "static"}
     >

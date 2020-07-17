@@ -18,9 +18,10 @@ const Layout: FunctionComponent = ({ children }) => {
   const classes = useStyles();
 
   return (
-    <Base title="This is Backoffice" menuData={menuData}>
+    <Base title="This is Backoffice" menuData={menuData} isHeaderFixed>
       <div className={classes.root}>{children}</div>
     </Base>
   );
 };
+
 export default Layout;
