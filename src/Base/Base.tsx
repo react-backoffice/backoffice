@@ -1,6 +1,6 @@
 import React from "react";
-import Cookie from "../CookieInfo/Cookie";
 import BaseBranch from "./BaseBranch";
+
 type WithBaseProps = {
   title: string;
   menuOpen?: boolean;
@@ -8,14 +8,12 @@ type WithBaseProps = {
   rightContent?: React.ReactNode;
   isHeaderFixed?: boolean;
   hasHeader?: boolean;
-  hasCookieInfo?: boolean;
   history?: {
     [key: string]: any;
   };
 };
 
 type WithBaseState = {
-  cookieInfoOpen: boolean | undefined;
   open: boolean | undefined;
 };
 
@@ -25,21 +23,15 @@ const withBase = (Component: any) =>
       super(props);
       this.state = {
         open: false,
-        cookieInfoOpen: false,
       };
-      if (props.hasCookieInfo && Cookie.getCookie() === undefined) {
-        Cookie.setCookie(false);
-      }
-      this.handleCookieInfoAccept = this.handleCookieInfoAccept.bind(this);
       this.handleDrawerOpen = this.handleDrawerOpen.bind(this);
       this.handleDrawerClose = this.handleDrawerClose.bind(this);
       this.redirectTo = this.redirectTo.bind(this);
       this.onClick = this.onClick.bind(this);
     }
     componentDidMount() {
-      const { hasCookieInfo, menuOpen } = this.props;
+      const { menuOpen } = this.props;
       this.setState({
-        cookieInfoOpen: hasCookieInfo && Cookie.getCookie() === false,
         open: menuOpen,
       });
     }
@@ -67,11 +59,7 @@ const withBase = (Component: any) =>
         history.push(link);
       }
     }
-    handleCookieInfoAccept() {
-      this.setState({
-        cookieInfoOpen: false,
-      });
-    }
+
     render() {
       const { rightContent } = this.props;
       return (
@@ -81,7 +69,6 @@ const withBase = (Component: any) =>
           onClick={this.onClick}
           handleDrawerOpen={this.handleDrawerOpen}
           handleDrawerClose={this.handleDrawerClose}
-          onCookieInfoAccept={this.handleCookieInfoAccept}
           redirectTo={this.redirectTo}
           rightContent={rightContent}
         />

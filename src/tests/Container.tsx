@@ -1,11 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Typography from "@material-ui/core/Typography";
 import indigo from "@material-ui/core/colors/indigo";
 import amber from "@material-ui/core/colors/amber";
 import AppContainer from "../AppContainer";
 import NoMatch from "../NoMatch";
-import CookieInfo from "../CookieInfo";
 import Page from "./pages";
 import General from "./General";
 import List from "./pages/list";
@@ -66,10 +64,6 @@ const Container = () => (
           render={(props) => (
             <Layout>
               <NoMatch />
-
-              <CookieInfo {...props}>
-                <Typography variant="body2">This is the cookie info</Typography>
-              </CookieInfo>
             </Layout>
           )}
         />

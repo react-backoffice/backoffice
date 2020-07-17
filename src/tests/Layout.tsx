@@ -18,7 +18,7 @@ const Layout: FunctionComponent = ({ children }) => {
   const classes = useStyles();
 
   return (
-    <Base title="This is Backoffice" menuData={menuData} hasCookieInfo>
+    <Base title="This is Backoffice" menuData={menuData}>
       <div className={classes.root}>{children}</div>
     </Base>
   );

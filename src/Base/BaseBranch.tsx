@@ -16,10 +16,6 @@ const styles = (theme: any) => ({
     minHeight: "100vh",
     transition: "0.25s",
   },
-  appFrameWithCookieInfo: {
-    marginTop: theme.spacing(6),
-    minHeight: `calc(100vh - ${theme.spacing(6)}px)`,
-  },
   content: {
     width: `calc(100vw - ${theme.spacing(3) * 2}px)`,
     flexGrow: 1,
@@ -30,7 +26,6 @@ const styles = (theme: any) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     height: "calc(100% - 56px)",
-    marginTop: theme.spacing(8),
     marginLeft: -drawerWidth,
   },
   contentShift: {
@@ -47,11 +42,9 @@ type BaseBranchProps = {
   title: string;
   menuData: MenuDataItem[];
   isHeaderFixed?: boolean;
-  cookieInfoOpen?: boolean;
   onClick: (...args: any[]) => any;
   handleDrawerOpen: (...args: any[]) => any;
   handleDrawerClose: (...args: any[]) => any;
-  onCookieInfoAccept: (...args: any[]) => any;
   redirectTo: (...args: any[]) => any;
   rightContent?: JSX.Element;
   hasHeader: boolean;
@@ -66,10 +59,8 @@ const BaseBranch: React.SFC<BaseBranchProps> = ({
   menuData,
   isHeaderFixed,
   onClick,
-  cookieInfoOpen,
   handleDrawerOpen,
   handleDrawerClose,
-  onCookieInfoAccept,
   redirectTo,
   rightContent,
   hasHeader = true,
@@ -85,17 +76,12 @@ const BaseBranch: React.SFC<BaseBranchProps> = ({
         onClick={onClick}
         isOpen={open}
         isFixed={isHeaderFixed}
-        isCookieInfoOpen={cookieInfoOpen}
       >
         {rightContent || null}
       </Header>
     )}
 
-    <div
-      className={classNames(classes.appFrame, {
-        [classes.appFrameWithCookieInfo]: cookieInfoOpen,
-      })}
-    >
+    <div className={classNames(classes.appFrame)}>
       {hasHeader && (
         <Drawer
           onClose={handleDrawerClose}
@@ -112,8 +98,6 @@ const BaseBranch: React.SFC<BaseBranchProps> = ({
       >
         {React.Children.map(children, (child) =>
           React.cloneElement(child as any, {
-            isOpen: cookieInfoOpen,
-            onAccept: onCookieInfoAccept,
             ...rest,
           }),
         )}
@@ -125,7 +109,6 @@ const BaseBranch: React.SFC<BaseBranchProps> = ({
 BaseBranch.defaultProps = {
   open: false,
   isHeaderFixed: false,
-  cookieInfoOpen: false,
 };
 
 export default withStyles(styles as any)(BaseBranch);

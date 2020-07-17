@@ -97,13 +97,12 @@ Children are rendered as content.
 - `rightContent?: node`, React element that is rendered on the right side of the header
 - `isHeaderFixed?: boolean`, Is header fixed?, default `true`
 - `hasHeader?: boolean`, Is header included, default `true`
-- `hasCookieInfo?: boolean`, Is there a cookieinfo in the project, default: `false`
 
 ```javascript
 import { Base } from "backoffice";
 
 const base = () => (
-  <Base title="Foobar" menuData={[]} hasCookieInfo>
+  <Base title="Foobar" menuData={[]}>
     Content
   </Base>
 );
@@ -149,29 +148,6 @@ const confirm = ({ isOpen, onConfirm }) => (
     description="Are you sure you want to delete the entry?"
     onConfirm={onConfirm}
   />
-);
-```
-
-### CookieInfo
-
-Asks the user if they want to obey the fact that you are using cookies. Sets a cookie with the name `cookie_concent` and the value of `true` if the user accepts. Otherwise set to `false`.
-If you use CookieInfo please make sure to set the attribute `hasCookieInfo` to `Base`.
-
-Children are used as content.
-
-- `buttonText: string`, text to display on the button
-- Internal: `isOpen: boolean`, state of the cookieInfo, handled by `Base`, default `false`
-- Internal: `onAccept: function`, when accepted, provided by `Base`
-
-```javascript
-import { Base, CookieInfo } from "backoffice";
-
-const page = (props) => (
-  <Base hasCookieInfo {...props}>
-    <CookieInfo buttonText="Accept" isOpen={isOpen}>
-      This is the cookie info
-    </CookieInfo>
-  </Base>
 );
 ```
 
@@ -322,7 +298,6 @@ Header element, used by `Base` component.
 - `isOpen?: boolean`, is sidebar opened?, default `false`
 - `title: string`, title to show next to menu icon
 - `isFixed: boolean`, should the header be fixed when scrolling?
-- `isCookieInfoOpen: boolean`, is the cookie info bar visible?
 - `onDrawerOpen: function`, called when menu is toggled
 - `onClick: function`, click on title
 - `children?: Elements`, content which is shown on the right hand side of the header
@@ -337,7 +312,6 @@ const header = ({ onDrawerOpen, onClick }) => (
     onClick={onClick}
     isOpen={false}
     isFixed
-    isCookieInfoOpen={true}
   >
     Beta
   </Header>

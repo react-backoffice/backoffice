@@ -3,7 +3,6 @@ export { default as AppContainer } from "./AppContainer";
 export { default as BackButton } from "./BackButton";
 export { default as Base } from "./Base";
 export { default as Confirm } from "./Confirm";
-export { default as CookieInfo } from "./CookieInfo";
 export { default as Drawer } from "./Drawer";
 export { default as Snackbar } from "./Snackbar";
 export { default as Form } from "./Form";

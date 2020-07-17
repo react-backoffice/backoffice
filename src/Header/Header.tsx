@@ -16,14 +16,12 @@ const styles = (theme: any) => ({
     width: "100%",
   },
   appBar: {
+    position: "relative",
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
     transform: "translate(0, 0)",
-  },
-  appBarWithCookieInfo: {
-    transform: `translate(0, ${theme.spacing(6)}px)`,
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -55,7 +53,6 @@ type HeaderProps = {
   isOpen?: boolean;
   title: string;
   isFixed?: boolean;
-  isCookieInfoOpen?: boolean;
   onDrawerOpen: (...args: any[]) => any;
   onClick: (...args: any[]) => any;
   classes: {
@@ -68,7 +65,6 @@ const Header: React.SFC<HeaderProps> = ({
   isOpen,
   isFixed = false,
   onDrawerOpen,
-  isCookieInfoOpen = false,
   onClick,
   children,
   classes,
@@ -77,7 +73,6 @@ const Header: React.SFC<HeaderProps> = ({
     <AppBar
       className={classNames(classes.appBar, {
         [classes.appBarShift]: isOpen,
-        [classes.appBarWithCookieInfo]: isCookieInfoOpen,
       })}
       position={isFixed ? "fixed" : "static"}
     >
@@ -110,4 +105,4 @@ Header.defaultProps = {
   isOpen: false,
 };
 
-export default withStyles(styles)(Header);
+export default withStyles(styles as any)(Header);

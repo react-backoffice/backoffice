@@ -9,21 +9,6 @@ it("renders correctly", () => {
       isOpen
       title="Header"
       isFixed
-      isCookieInfoOpen
-      onDrawerOpen={() => {}}
-      onClick={() => {}}
-    />,
-  );
-
-  expect(tree).toMatchSnapshot();
-});
-
-it("renders correctly with closed", () => {
-  const tree = shallow(
-    <Header
-      title="Header"
-      isFixed={false}
-      isCookieInfoOpen={false}
       onDrawerOpen={() => {}}
       onClick={() => {}}
     />,
