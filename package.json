@@ -1,6 +1,6 @@
 {
   "name": "backoffice",
-  "version": "4.0.0-pre.7.1",
+  "version": "4.0.0",
   "main": "dist/app.js",
   "author": "Hans Christian Reinl <info@drublic.de>",
   "license": "MIT",
