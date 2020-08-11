@@ -56,7 +56,10 @@ export const getFieldById = (
   return data?.[ids[0]];
 };
 
-const reducer = (state: State, { type, payload }: Action) => {
+const reducer = (onDataChanged?: (...args: any[]) => any) => (
+  state: State,
+  { type, payload }: Action,
+) => {
   switch (type) {
     case "UPDATE_FIELD": {
       if (isEqual(state?.[payload.id], payload.data)) {
@@ -65,10 +68,14 @@ const reducer = (state: State, { type, payload }: Action) => {
 
       const splittedId = payload.id.split(".");
 
-      return {
+      const data = {
         ...state,
         ...getDataObject(splittedId, payload.data, state),
       };
+
+      onDataChanged && onDataChanged(data);
+
+      return data;
     }
 
     default: {

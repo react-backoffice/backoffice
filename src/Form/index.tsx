@@ -94,10 +94,14 @@ const Form: FunctionComponent<FormProps> = ({
   form,
   data,
   onSubmit: onSubmitProps,
+  onDataChanged,
   ...props
 }) => {
   const [showErrors, setShowErrors] = useState(false);
-  const [state, dispatch] = useReducer(reducer, enrichInitialData(data));
+  const [state, dispatch] = useReducer(
+    reducer(onDataChanged),
+    enrichInitialData(data),
+  );
 
   const onSubmit = useCallback(() => {
     const currentValidState = getMappedData(state, "isValid");
