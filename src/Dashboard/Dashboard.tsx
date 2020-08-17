@@ -7,7 +7,7 @@ type WithDashboardProps = {
   };
 };
 const withDashboard = (Component: any) =>
-  class WithDashboard extends React.Component<WithDashboardProps, {}> {
+  class WithDashboard extends React.Component<WithDashboardProps, any> {
     constructor(props: WithDashboardProps) {
       super(props);
 

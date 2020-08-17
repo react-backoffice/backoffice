@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import {
   Table,
   TableBody,
@@ -29,7 +29,7 @@ const styles = (theme: any) => ({
 
 type ListingBranchProps = {
   title?: string;
-  data?: object[];
+  data?: Record<string, any>[];
   headers: Header[];
   order?: "asc" | "desc";
   orderBy: string;
@@ -55,7 +55,7 @@ type ListingBranchProps = {
   searchValue?: string;
 };
 
-const ListingBranch: React.SFC<ListingBranchProps> = ({
+const ListingBranch: FunctionComponent<ListingBranchProps> = ({
   title,
   headers,
   classes,

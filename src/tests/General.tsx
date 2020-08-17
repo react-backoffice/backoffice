@@ -6,7 +6,7 @@ type GeneralState = {
   dialogOpen: boolean;
 };
 
-class General extends React.Component<{}, GeneralState> {
+class General extends React.Component<any, GeneralState> {
   constructor(props: any) {
     super(props);
 
@@ -15,6 +15,7 @@ class General extends React.Component<{}, GeneralState> {
     };
     this.handleOpenDialoge = this.handleOpenDialoge.bind(this);
   }
+
   handleOpenDialoge() {
     this.setState({
       dialogOpen: true,
@@ -23,6 +24,7 @@ class General extends React.Component<{}, GeneralState> {
 
   render() {
     const { dialogOpen } = this.state;
+
     return (
       <Fragment>
         <Typography variant="h4">Confirm</Typography>

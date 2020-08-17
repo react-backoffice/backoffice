@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core";
 
 type ListingHeaderProps = {
-  headers: object[];
+  headers: Record<string, any>[];
   numSelected?: number;
   onRequestSort: (...args: any[]) => any;
   onSelectAllClick: (...args: any[]) => any;
@@ -18,7 +18,7 @@ type ListingHeaderProps = {
   rowCount?: number;
 };
 
-class ListingHeader extends React.Component<ListingHeaderProps, {}> {
+class ListingHeader extends React.Component<ListingHeaderProps, any> {
   static defaultProps = {
     numSelected: 0,
     rowCount: 0,

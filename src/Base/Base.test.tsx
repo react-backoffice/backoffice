@@ -2,7 +2,7 @@ import React from "react";
 import MockRouter from "react-mock-router";
 import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import { Typography, IconButton, Button } from "@material-ui/core";
+import { Typography, IconButton } from "@material-ui/core";
 
 import Base from ".";
 

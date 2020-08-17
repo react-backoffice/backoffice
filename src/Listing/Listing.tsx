@@ -69,7 +69,7 @@ type ListingProps = {
   orderBy: string;
   order?: "asc" | "desc";
   hasLoader?: boolean;
-  data: object[];
+  data: Record<string, any>[];
   headers: Header[];
   toolbarContent?: React.ReactNode;
   onUpdateSelection?: (...args: any[]) => any;

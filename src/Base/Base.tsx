@@ -4,7 +4,7 @@ import BaseBranch from "./BaseBranch";
 type WithBaseProps = {
   title: string;
   menuOpen?: boolean;
-  menuData: object[];
+  menuData: Record<string, any>[];
   rightContent?: React.ReactNode;
   isHeaderFixed?: boolean;
   hasHeader?: boolean;

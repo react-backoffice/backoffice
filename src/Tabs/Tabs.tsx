@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { withRouter } from "react-router-dom";
 import {
   AppBar,
@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@material-ui/core";
 
-const TabContainer: React.SFC<{}> = (props) => {
+const TabContainer: FunctionComponent<any> = (props) => {
   return (
     <Typography component="div" style={{ padding: 8 * 3 }}>
       {props.children}
