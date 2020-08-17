@@ -169,11 +169,10 @@ const withListing = (Component: any) =>
         transformData = (values: any) => values;
       }
 
-      const transformedData = data.map((element: any) => {
-        const newElement = element;
-        newElement[orderBy] = transformData(element[orderBy]);
-        return newElement;
-      });
+      const transformedData = data.map((element: any) => ({
+        ...element,
+        [orderBy]: transformData(element[orderBy]),
+      }));
 
       const sortedData = transformedData.sort((a: any, b: any) =>
         a[orderBy] < b[orderBy] ? -1 : 1,
@@ -194,10 +193,12 @@ const withListing = (Component: any) =>
       } = this.state;
       const orderBy = property;
       let order = "desc";
+      let data;
+
       if (orderByState === property && orderState === "desc") {
         order = "asc";
       }
-      let data;
+
       if (order === "desc") {
         data = dataState.sort((a, b) => (b[orderBy] < a[orderBy] ? -1 : 1));
       } else {
