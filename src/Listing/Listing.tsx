@@ -43,18 +43,12 @@ const filterElement = (
       const matched = tryToMatch(searchValue, element[key]);
 
       if (matched) {
-        newElement = element;
+        newElement = {
+          ...element,
+        };
       }
     }
   });
-
-  if (newElement) {
-    Object.keys(element).forEach((key: any) => {
-      if (newElement && newElement[key]) {
-        newElement[key] = newElement[key];
-      }
-    });
-  }
 
   return newElement;
 };
@@ -104,18 +98,24 @@ const withListing = (Component: any) =>
     constructor(props: ListingProps, context: any) {
       super(props, context);
 
+      const { data, orderBy, order, headers } = props;
+      const sorting = {
+        order: order || "asc",
+        orderBy: orderBy || "id",
+      };
+
       this.state = {
-        order: "asc",
-        orderBy: "id",
+        ...sorting,
         selected: [],
-        data: [],
+        data: this.sortData(data, sorting.orderBy, sorting.order) || [],
         page: 0,
         rowsPerPage: 10,
-        searchable: [],
+        searchable: getSearchableHeaders(headers) || [],
         id: null,
       };
 
       this.node = React.createRef();
+
       this.handleRequestSort = this.handleRequestSort.bind(this);
       this.handleSelectAllClick = this.handleSelectAllClick.bind(this);
       this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -126,27 +126,12 @@ const withListing = (Component: any) =>
       this.handleFilter = this.handleFilter.bind(this);
     }
 
-    componentDidMount() {
-      const { data, headers, order, orderBy } = this.props;
-      const newState: any = {
-        data: this.sortData(data, orderBy, order),
-        searchable: getSearchableHeaders(headers),
-      };
-
-      this.setState({
-        ...newState,
-        order,
-        orderBy,
-      });
-    }
-
     componentDidUpdate({ data }: ListingProps) {
       if (data.length !== this.props.data.length) {
         const { order, orderBy } = this.props;
-        const sortedData = this.sortData(this.props.data, orderBy, order);
 
         this.setState({
-          data: sortedData,
+          data: this.sortData(this.props.data, orderBy, order),
         });
 
         this.handleFilter(this.state.searchValue);
@@ -275,8 +260,11 @@ const withListing = (Component: any) =>
 
       const animateScroll = () => {
         currentTime += increment;
+
         const val = easeInOutQuad(currentTime, start, change, duration);
+
         window.scrollTo(0, val);
+
         if (currentTime < duration) {
           setTimeout(animateScroll, increment);
         }
