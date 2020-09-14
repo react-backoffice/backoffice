@@ -5,41 +5,17 @@ exports[`renders correctly 1`] = `
   classes={
     Object {
       "appBar": "Header-appBar-2",
-      "appBarShift": "Header-appBarShift-4",
-      "appBarWithCookieInfo": "Header-appBarWithCookieInfo-3",
+      "appBarShift": "Header-appBarShift-3",
       "flex": "Header-flex-7",
       "hide": "Header-hide-6",
+      "isStatic": "Header-isStatic-4",
       "menuButton": "Header-menuButton-5",
       "root": "Header-root-1",
       "title": "Header-title-8",
     }
   }
-  isCookieInfoOpen={true}
   isFixed={true}
   isOpen={true}
-  onClick={[Function]}
-  onDrawerOpen={[Function]}
-  title="Header"
-/>
-`;
-
-exports[`renders correctly with closed 1`] = `
-<Header
-  classes={
-    Object {
-      "appBar": "Header-appBar-2",
-      "appBarShift": "Header-appBarShift-4",
-      "appBarWithCookieInfo": "Header-appBarWithCookieInfo-3",
-      "flex": "Header-flex-7",
-      "hide": "Header-hide-6",
-      "menuButton": "Header-menuButton-5",
-      "root": "Header-root-1",
-      "title": "Header-title-8",
-    }
-  }
-  isCookieInfoOpen={false}
-  isFixed={false}
-  isOpen={false}
   onClick={[Function]}
   onDrawerOpen={[Function]}
   title="Header"

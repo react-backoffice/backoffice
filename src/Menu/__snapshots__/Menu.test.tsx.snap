@@ -59,7 +59,7 @@ exports[`renders correctly 1`] = `
               <MenuItem
                 classes={
                   Object {
-                    "isDisabled": "MenuItem-isDisabled-6",
+                    "isDisabled": "MenuItem-isDisabled-2",
                   }
                 }
                 icon={<UNDEFINED />}

@@ -2,7 +2,6 @@
 
 exports[`Base renders correctly 1`] = `
 <WithBase
-  hasCookieInfo={true}
   menuData={
     Array [
       Object {
@@ -40,7 +39,6 @@ exports[`Base renders correctly 1`] = `
 
 exports[`Base renders correctly without header 1`] = `
 <WithBase
-  hasCookieInfo={true}
   hasHeader={false}
   menuData={
     Array [
@@ -79,7 +77,6 @@ exports[`Base renders correctly without header 1`] = `
 
 exports[`Base renders with drawer open 1`] = `
 <WithBase
-  hasCookieInfo={true}
   hasHeader={false}
   menuData={
     Array [
