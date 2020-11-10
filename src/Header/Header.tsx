@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import classNames from "classnames";
 import {
   AppBar,
@@ -12,10 +12,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 const drawerWidth = 280;
 
 const styles = (theme: any) => ({
-  root: {
-    width: "100%",
-  },
-
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
@@ -65,16 +61,16 @@ type HeaderProps = {
   };
 };
 
-const Header: React.SFC<HeaderProps> = ({
+const Header: FunctionComponent<HeaderProps> = ({
   title,
-  isOpen,
+  isOpen = false,
   isFixed = false,
   onDrawerOpen,
   onClick,
   children,
   classes,
 }) => (
-  <div className={classes.root}>
+  <>
     <AppBar
       className={classNames(classes.appBar, {
         [classes.appBarShift]: isOpen,
@@ -104,11 +100,7 @@ const Header: React.SFC<HeaderProps> = ({
         {children}
       </Toolbar>
     </AppBar>
-  </div>
+  </>
 );
-
-Header.defaultProps = {
-  isOpen: false,
-};
 
 export default withStyles(styles as any)(Header);

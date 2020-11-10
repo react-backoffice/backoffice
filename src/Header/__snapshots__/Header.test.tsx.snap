@@ -4,14 +4,13 @@ exports[`renders correctly 1`] = `
 <Header
   classes={
     Object {
-      "appBar": "Header-appBar-2",
-      "appBarShift": "Header-appBarShift-3",
-      "flex": "Header-flex-7",
-      "hide": "Header-hide-6",
-      "isStatic": "Header-isStatic-4",
-      "menuButton": "Header-menuButton-5",
-      "root": "Header-root-1",
-      "title": "Header-title-8",
+      "appBar": "Header-appBar-1",
+      "appBarShift": "Header-appBarShift-2",
+      "flex": "Header-flex-6",
+      "hide": "Header-hide-5",
+      "isStatic": "Header-isStatic-3",
+      "menuButton": "Header-menuButton-4",
+      "title": "Header-title-7",
     }
   }
   isFixed={true}

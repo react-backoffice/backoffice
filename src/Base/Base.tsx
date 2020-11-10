@@ -1,10 +1,11 @@
 import React from "react";
+import { MenuDataItem } from "../Menu/Menu";
 import BaseBranch from "./BaseBranch";
 
 type WithBaseProps = {
   title: string;
   menuOpen?: boolean;
-  menuData: Record<string, any>[];
+  menuData: MenuDataItem[];
   rightContent?: React.ReactNode;
   isHeaderFixed?: boolean;
   hasHeader?: boolean;
@@ -61,10 +62,11 @@ const withBase = (Component: any) =>
     }
 
     render() {
-      const { rightContent } = this.props;
+      const { rightContent, menuOpen, ...rest } = this.props;
+
       return (
         <Component
-          {...this.props}
+          {...rest}
           {...this.state}
           onClick={this.onClick}
           handleDrawerOpen={this.handleDrawerOpen}
@@ -75,5 +77,5 @@ const withBase = (Component: any) =>
       );
     }
   };
-const WithBase = withBase(BaseBranch);
-export default WithBase;
+
+export default withBase(BaseBranch);

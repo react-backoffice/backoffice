@@ -20,7 +20,7 @@ exports[`Base renders correctly 1`] = `
       },
       Object {
         "icon": <React.Fragment>
-          <UNDEFINED />
+          <Memo(BugReportIcon) />
         </React.Fragment>,
         "title": "Report a bug",
         "type": "link",
@@ -58,7 +58,7 @@ exports[`Base renders correctly without header 1`] = `
       },
       Object {
         "icon": <React.Fragment>
-          <UNDEFINED />
+          <Memo(BugReportIcon) />
         </React.Fragment>,
         "title": "Report a bug",
         "type": "link",
@@ -96,7 +96,7 @@ exports[`Base renders with drawer open 1`] = `
       },
       Object {
         "icon": <React.Fragment>
-          <UNDEFINED />
+          <Memo(BugReportIcon) />
         </React.Fragment>,
         "title": "Report a bug",
         "type": "link",

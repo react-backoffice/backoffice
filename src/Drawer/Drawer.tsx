@@ -11,10 +11,9 @@ import { MenuDataItem } from "../Menu/Menu";
 const drawerWidth = 280;
 const styles = (theme: any) => ({
   drawerPaper: {
-    position: "relative",
-    height: "100%",
     width: drawerWidth,
   },
+
   drawerHeader: {
     display: "flex",
     alignItems: "center",
@@ -36,7 +35,7 @@ type DrawerProps = {
 
 const Drawer: React.SFC<DrawerProps> = ({
   data,
-  isOpen,
+  isOpen = false,
   onClose,
   redirectTo,
   classes,
@@ -62,7 +61,5 @@ const Drawer: React.SFC<DrawerProps> = ({
     </div>
   </MaterialDrawer>
 );
-Drawer.defaultProps = {
-  isOpen: false,
-};
+
 export default withStyles(styles as any)(Drawer);
