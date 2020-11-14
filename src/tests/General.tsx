@@ -1,42 +1,28 @@
-import React, { Fragment } from "react";
+import React, { FunctionComponent, useState } from "react";
 import { Typography, Button } from "@material-ui/core";
 import Confirm from "../Confirm";
 
-type GeneralState = {
-  dialogOpen: boolean;
+type Props = {
+  location: any;
+  history: any;
 };
 
-class General extends React.Component<any, GeneralState> {
-  constructor(props: any) {
-    super(props);
+const General: FunctionComponent<Props> = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
 
-    this.state = {
-      dialogOpen: false,
-    };
-    this.handleOpenDialoge = this.handleOpenDialoge.bind(this);
-  }
+  return (
+    <>
+      <Typography variant="h4">Confirm</Typography>
 
-  handleOpenDialoge() {
-    this.setState({
-      dialogOpen: true,
-    });
-  }
+      <Button onClick={() => setDialogOpen(true)}>Open Dialog</Button>
 
-  render() {
-    const { dialogOpen } = this.state;
-
-    return (
-      <Fragment>
-        <Typography variant="h4">Confirm</Typography>
-        <Button onClick={this.handleOpenDialoge}>Open Dialog</Button>
-        <Confirm
-          isOpen={dialogOpen}
-          description="Are you sure you want to delete the entry?"
-          onConfirm={() => {}}
-        />
-      </Fragment>
-    );
-  }
-}
+      <Confirm
+        isOpen={dialogOpen}
+        description="Are you sure you want to delete the entry?"
+        onConfirm={() => {}}
+      />
+    </>
+  );
+};
 
 export default General;
