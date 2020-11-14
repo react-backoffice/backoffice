@@ -10,6 +10,29 @@ const menu: MenuDataItem[] = [
   },
   {
     type: "link",
+    url: "/list",
+    title: "List",
+  },
+  {
+    type: "link",
+    url: "/form",
+    title: "Form",
+    items: [
+      {
+        type: "link",
+        url: "/form",
+        title: "Form Subitem",
+      },
+      {
+        type: "link",
+        url: "/form",
+        title: "Form Subitem Disabled",
+        isDisabled: true,
+      },
+    ],
+  },
+  {
+    type: "link",
     url: "/portfolio",
     title: "New portfolio",
     isDisabled: true,
@@ -21,11 +44,7 @@ const menu: MenuDataItem[] = [
     type: "link",
     url: "/bug",
     title: "Report a bug",
-    icon: (
-      <>
-        <BugIcon />
-      </>
-    ),
+    icon: <BugIcon />,
   },
 ];
 

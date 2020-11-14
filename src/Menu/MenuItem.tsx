@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import classNames from "classnames";
 import {
   ListItem,
@@ -23,20 +23,22 @@ type MenuItemProps = {
   classes: {
     [key: string]: string;
   };
+  className?: string;
 };
 
-const MenuItem: React.SFC<MenuItemProps> = ({
+const MenuItem: FunctionComponent<MenuItemProps> = ({
   redirectTo,
   url,
   title,
   icon,
-  isDisabled,
+  isDisabled = false,
   classes,
+  className,
 }) => (
   <ListItem
     button
     onClick={() => redirectTo(url)}
-    className={classNames({
+    className={classNames(className, {
       [classes.isDisabled]: isDisabled,
     })}
   >
@@ -45,9 +47,5 @@ const MenuItem: React.SFC<MenuItemProps> = ({
     <ListItemText primary={title} />
   </ListItem>
 );
-
-MenuItem.defaultProps = {
-  isDisabled: false,
-};
 
 export default withStyles(styles as any)(MenuItem);
