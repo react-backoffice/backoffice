@@ -3,13 +3,15 @@ import {
   Drawer as MaterialDrawer,
   Divider,
   IconButton,
-  withStyles,
+  Theme,
 } from "@material-ui/core";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import Menu from "../Menu";
 import { MenuDataItem } from "../Menu/Menu";
+import { makeStyles } from "@material-ui/styles";
+
 const drawerWidth = 280;
-const styles = (theme: any) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   drawerPaper: {
     width: drawerWidth,
   },
@@ -21,16 +23,13 @@ const styles = (theme: any) => ({
     padding: "0 8px",
     height: theme.spacing(8),
   },
-});
+}));
 
 type DrawerProps = {
   data: MenuDataItem[];
   isOpen?: boolean;
   onClose: (...args: any[]) => any;
   redirectTo: (...args: any[]) => any;
-  classes: {
-    [key: string]: string;
-  };
 };
 
 const Drawer: React.SFC<DrawerProps> = ({
@@ -38,17 +37,18 @@ const Drawer: React.SFC<DrawerProps> = ({
   isOpen = false,
   onClose,
   redirectTo,
-  classes,
-}) => (
-  <MaterialDrawer
-    variant="persistent"
-    classes={{
-      paper: classes.drawerPaper,
-    }}
-    anchor="left"
-    open={isOpen}
-  >
-    <div className={classes.drawerInner}>
+}) => {
+  const classes = useStyles();
+
+  return (
+    <MaterialDrawer
+      variant="persistent"
+      classes={{
+        paper: classes.drawerPaper,
+      }}
+      anchor="left"
+      open={isOpen}
+    >
       <div className={classes.drawerHeader}>
         <IconButton onClick={onClose}>
           <ChevronLeftIcon />
@@ -58,8 +58,8 @@ const Drawer: React.SFC<DrawerProps> = ({
       <Divider />
 
       <Menu data={data} redirectTo={redirectTo} />
-    </div>
-  </MaterialDrawer>
-);
+    </MaterialDrawer>
+  );
+};
 
-export default withStyles(styles as any)(Drawer);
+export default Drawer;

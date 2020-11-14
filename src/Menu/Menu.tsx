@@ -1,11 +1,5 @@
-import React, { FunctionComponent } from "react";
-import {
-  Divider,
-  List,
-  makeStyles,
-  Theme,
-  withStyles,
-} from "@material-ui/core";
+import React, { Fragment, FunctionComponent } from "react";
+import { Divider, List, makeStyles, Theme } from "@material-ui/core";
 import classNames from "classnames";
 import MenuItem from "./MenuItem";
 
@@ -60,9 +54,8 @@ const Menu: FunctionComponent<MenuProps> = ({
               return <Divider key={`menu-${index}`} />;
             default:
               return (
-                <>
+                <Fragment key={`menu-${index}`}>
                   <MenuItem
-                    key={`menu-${index}`}
                     redirectTo={redirectTo}
                     url={item.url}
                     title={item.title}
@@ -73,7 +66,7 @@ const Menu: FunctionComponent<MenuProps> = ({
                   {item.items && (
                     <Menu data={item.items} redirectTo={redirectTo} isDense />
                   )}
-                </>
+                </Fragment>
               );
           }
         })}

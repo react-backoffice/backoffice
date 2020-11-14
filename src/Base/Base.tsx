@@ -1,81 +1,35 @@
-import React from "react";
+import React, { FunctionComponent, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { MenuDataItem } from "../Menu/Menu";
 import BaseBranch from "./BaseBranch";
 
-type WithBaseProps = {
+type BaseProps = {
   title: string;
   menuOpen?: boolean;
   menuData: MenuDataItem[];
-  rightContent?: React.ReactNode;
-  isHeaderFixed?: boolean;
   hasHeader?: boolean;
-  history?: {
-    [key: string]: any;
-  };
+  isHeaderFixed?: boolean;
 };
 
-type WithBaseState = {
-  open: boolean | undefined;
-};
+const Base: FunctionComponent<BaseProps> = ({ menuOpen, ...rest }) => {
+  const [isOpen, setIsOpen] = useState(Boolean(menuOpen));
+  const history = useHistory();
 
-const withBase = (Component: any) =>
-  class WithBase extends React.Component<WithBaseProps, WithBaseState> {
-    constructor(props: WithBaseProps) {
-      super(props);
-      this.state = {
-        open: false,
-      };
-      this.handleDrawerOpen = this.handleDrawerOpen.bind(this);
-      this.handleDrawerClose = this.handleDrawerClose.bind(this);
-      this.redirectTo = this.redirectTo.bind(this);
-      this.onClick = this.onClick.bind(this);
-    }
-    componentDidMount() {
-      const { menuOpen } = this.props;
-      this.setState({
-        open: menuOpen,
-      });
-    }
-    UNSAFE_componentWillReceiveProps({ menuOpen }: WithBaseProps) {
-      this.setState({
-        open: menuOpen,
-      });
-    }
-    onClick() {
-      this.redirectTo("/");
-    }
-    handleDrawerOpen() {
-      this.setState({
-        open: true,
-      });
-    }
-    handleDrawerClose() {
-      this.setState({
-        open: false,
-      });
-    }
-    redirectTo(link: string) {
-      const { history } = this.props;
-      if (history) {
-        history.push(link);
-      }
-    }
-
-    render() {
-      const { rightContent, menuOpen, ...rest } = this.props;
-
-      return (
-        <Component
-          {...rest}
-          {...this.state}
-          onClick={this.onClick}
-          handleDrawerOpen={this.handleDrawerOpen}
-          handleDrawerClose={this.handleDrawerClose}
-          redirectTo={this.redirectTo}
-          rightContent={rightContent}
-        />
-      );
-    }
+  const redirectTo = (link: string) => {
+    history.push(link);
+    window.scrollTo(0, 0);
   };
 
-export default withBase(BaseBranch);
+  return (
+    <BaseBranch
+      {...rest}
+      isOpen={isOpen}
+      onClick={() => redirectTo("/")}
+      onDrawerOpen={() => setIsOpen(true)}
+      onDrawerClose={() => setIsOpen(false)}
+      redirectTo={redirectTo}
+    />
+  );
+};
+
+export default Base;

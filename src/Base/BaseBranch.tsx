@@ -1,13 +1,17 @@
 import React from "react";
 import classNames from "classnames";
-import { withStyles } from "@material-ui/core";
 import Drawer from "../Drawer";
 import Header from "../Header";
 import { MenuDataItem } from "../Menu/Menu";
+import { makeStyles } from "@material-ui/core";
 
 const drawerWidth = 280;
 
-const styles = (theme: any) => ({
+const useStyles = makeStyles((theme: any) => ({
+  "@global html": {
+    scrollBehavior: "smooth",
+  },
+
   appFrame: {
     display: "flex",
   },
@@ -35,80 +39,75 @@ const styles = (theme: any) => ({
   isHeaderFixed: {
     marginTop: theme.spacing(8),
   },
-});
+}));
 
 type BaseBranchProps = {
-  open?: boolean;
+  isOpen?: boolean;
   title: string;
   menuData: MenuDataItem[];
   menuOpen?: boolean;
   isHeaderFixed?: boolean;
   onClick: (...args: any[]) => any;
-  handleDrawerOpen: (...args: any[]) => any;
-  handleDrawerClose: (...args: any[]) => any;
+  onDrawerOpen: (...args: any[]) => any;
+  onDrawerClose: (...args: any[]) => any;
   redirectTo: (...args: any[]) => any;
   rightContent?: JSX.Element;
-  hasHeader: boolean;
-  classes: {
-    [key: string]: string;
-  };
+  hasHeader?: boolean;
 };
 
 const BaseBranch: React.SFC<BaseBranchProps> = ({
-  open,
+  isOpen = false,
   title,
   menuData,
-  isHeaderFixed,
+  isHeaderFixed = false,
   onClick,
-  handleDrawerOpen,
-  handleDrawerClose,
+  onDrawerOpen,
+  onDrawerClose,
   redirectTo,
   rightContent,
   hasHeader = true,
-  classes,
   children,
   ...rest
-}) => (
-  <div className={classNames(classes.appFrame)}>
-    {hasHeader && (
-      <>
-        <Header
-          title={title}
-          onDrawerOpen={handleDrawerOpen}
-          onClick={onClick}
-          isOpen={open}
-          isFixed={isHeaderFixed}
-        >
-          {rightContent || null}
-        </Header>
+}) => {
+  const classes = useStyles();
 
-        <Drawer
-          onClose={handleDrawerClose}
-          redirectTo={redirectTo}
-          isOpen={open}
-          data={menuData}
-        />
-      </>
-    )}
+  return (
+    <div className={classNames(classes.appFrame)}>
+      {hasHeader && (
+        <>
+          <Header
+            title={title}
+            onDrawerOpen={onDrawerOpen}
+            onClick={onClick}
+            isOpen={isOpen}
+            isFixed={isHeaderFixed}
+          >
+            {rightContent || null}
+          </Header>
 
-    <main
-      className={classNames(classes.content, {
-        [classes.contentIsOpen]: open || !hasHeader,
-        [classes.isHeaderFixed]: isHeaderFixed,
-      })}
-    >
-      {React.Children.map(children, (child) =>
-        React.cloneElement(child as any, {
-          ...rest,
-        }),
+          <Drawer
+            onClose={onDrawerClose}
+            redirectTo={redirectTo}
+            isOpen={isOpen}
+            data={menuData}
+          />
+        </>
       )}
-    </main>
-  </div>
-);
 
-BaseBranch.defaultProps = {
-  open: false,
-  isHeaderFixed: false,
+      <main
+        className={classNames(classes.content, {
+          [classes.contentIsOpen]: isOpen || !hasHeader,
+          [classes.isHeaderFixed]: isHeaderFixed,
+        })}
+      >
+        {React.Children.map(children, (child) =>
+          React.cloneElement(child as any, {
+            ...rest,
+          }),
+        )}
+      </main>
+    </div>
+  );
 };
 
-export default withStyles(styles as any)(BaseBranch);
+export default BaseBranch;

@@ -4,15 +4,15 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  withStyles,
+  makeStyles,
 } from "@material-ui/core";
 
-const styles = {
+const useStyles = makeStyles(() => ({
   isDisabled: {
     opacity: 0.5,
     pointerEvents: "none",
   },
-};
+}));
 
 type MenuItemProps = {
   redirectTo: (...args: any[]) => any;
@@ -20,9 +20,6 @@ type MenuItemProps = {
   title: string;
   isDisabled?: boolean;
   icon?: JSX.Element;
-  classes: {
-    [key: string]: string;
-  };
   className?: string;
 };
 
@@ -32,20 +29,23 @@ const MenuItem: FunctionComponent<MenuItemProps> = ({
   title,
   icon,
   isDisabled = false,
-  classes,
   className,
-}) => (
-  <ListItem
-    button
-    onClick={() => redirectTo(url)}
-    className={classNames(className, {
-      [classes.isDisabled]: isDisabled,
-    })}
-  >
-    {icon && <ListItemIcon>{icon}</ListItemIcon>}
+}) => {
+  const classes = useStyles();
 
-    <ListItemText primary={title} />
-  </ListItem>
-);
+  return (
+    <ListItem
+      button
+      onClick={() => redirectTo(url)}
+      className={classNames(className, {
+        [classes.isDisabled]: isDisabled,
+      })}
+    >
+      {icon && <ListItemIcon>{icon}</ListItemIcon>}
 
-export default withStyles(styles as any)(MenuItem);
+      <ListItemText primary={title} />
+    </ListItem>
+  );
+};
+
+export default MenuItem;

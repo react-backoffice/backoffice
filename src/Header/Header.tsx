@@ -3,15 +3,16 @@ import classNames from "classnames";
 import {
   AppBar,
   IconButton,
+  makeStyles,
+  Theme,
   Toolbar,
   Typography,
-  withStyles,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
 const drawerWidth = 280;
 
-const styles = (theme: any) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
@@ -48,7 +49,7 @@ const styles = (theme: any) => ({
       textDecoration: "underline",
     },
   },
-});
+}));
 
 type HeaderProps = {
   isOpen?: boolean;
@@ -56,9 +57,6 @@ type HeaderProps = {
   isFixed?: boolean;
   onDrawerOpen: (...args: any[]) => any;
   onClick: (...args: any[]) => any;
-  classes: {
-    [key: string]: string;
-  };
 };
 
 const Header: FunctionComponent<HeaderProps> = ({
@@ -68,9 +66,10 @@ const Header: FunctionComponent<HeaderProps> = ({
   onDrawerOpen,
   onClick,
   children,
-  classes,
-}) => (
-  <>
+}) => {
+  const classes = useStyles();
+
+  return (
     <AppBar
       className={classNames(classes.appBar, {
         [classes.appBarShift]: isOpen,
@@ -100,7 +99,7 @@ const Header: FunctionComponent<HeaderProps> = ({
         {children}
       </Toolbar>
     </AppBar>
-  </>
-);
+  );
+};
 
-export default withStyles(styles as any)(Header);
+export default Header;
