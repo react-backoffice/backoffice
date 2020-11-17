@@ -1,44 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<MenuItem
-  classes={
-    Object {
-      "isDisabled": "MenuItem-isDisabled-1",
-    }
-  }
-  isDisabled={false}
-  redirectTo={[Function]}
-  title="Title"
-  url="/"
-/>
+<WithStyles(ForwardRef(ListItem))
+  button={true}
+  className=""
+  onClick={[Function]}
+>
+  <WithStyles(ForwardRef(ListItemText))
+    primary="Title"
+  />
+</WithStyles(ForwardRef(ListItem))>
 `;
 
 exports[`renders correctly disabled 1`] = `
-<MenuItem
-  classes={
-    Object {
-      "isDisabled": "MenuItem-isDisabled-1",
-    }
-  }
-  isDisabled={true}
-  redirectTo={[Function]}
-  title="Title"
-  url="/"
-/>
+<WithStyles(ForwardRef(ListItem))
+  button={true}
+  className="makeStyles-isDisabled-1"
+  onClick={[Function]}
+>
+  <WithStyles(ForwardRef(ListItemText))
+    primary="Title"
+  />
+</WithStyles(ForwardRef(ListItem))>
 `;
 
 exports[`renders correctly with icon 1`] = `
-<MenuItem
-  classes={
-    Object {
-      "isDisabled": "MenuItem-isDisabled-1",
-    }
-  }
-  icon={<UNDEFINED />}
-  isDisabled={false}
-  redirectTo={[Function]}
-  title="Title"
-  url="/"
-/>
+<WithStyles(ForwardRef(ListItem))
+  button={true}
+  className=""
+  onClick={[Function]}
+>
+  <WithStyles(ForwardRef(ListItemIcon))>
+    <AccessAlarmIcon />
+  </WithStyles(ForwardRef(ListItemIcon))>
+  <WithStyles(ForwardRef(ListItemText))
+    primary="Title"
+  />
+</WithStyles(ForwardRef(ListItem))>
 `;

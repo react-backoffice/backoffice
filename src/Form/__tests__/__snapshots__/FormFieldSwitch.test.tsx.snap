@@ -4,7 +4,7 @@ exports[`renders correctly 1`] = `
 <div>
   <WithStyles(ForwardRef(FormControlLabel))
     control={
-      <ForwardRef(WithStyles)
+      <WithStyles(ForwardRef(Switch))
         color="primary"
         onChange={[Function]}
         value="switch"
@@ -19,7 +19,7 @@ exports[`renders disabled 1`] = `
 <div>
   <WithStyles(ForwardRef(FormControlLabel))
     control={
-      <ForwardRef(WithStyles)
+      <WithStyles(ForwardRef(Switch))
         color="primary"
         onChange={[Function]}
         value="switch"
@@ -35,7 +35,7 @@ exports[`renders with helper text 1`] = `
 <div>
   <WithStyles(ForwardRef(FormControlLabel))
     control={
-      <ForwardRef(WithStyles)
+      <WithStyles(ForwardRef(Switch))
         color="primary"
         onChange={[Function]}
         value="switch"

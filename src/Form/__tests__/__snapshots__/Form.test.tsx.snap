@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "h1hvip",
+          "key": "lonc7p",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -25,7 +25,7 @@ exports[`renders correctly 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "h1hvip",
+        "key": "lonc7p",
         "pathname": "/",
         "search": "",
         "state": undefined,
@@ -98,7 +98,7 @@ exports[`renders correctly 1`] = `
             Object {
               "data": Array [
                 Object {
-                  "iconEnd": <UNDEFINED />,
+                  "iconEnd": <Memo(VisibilityIcon) />,
                   "id": "nested-text",
                   "title": "Nested Text",
                   "type": "text",
@@ -118,12 +118,12 @@ exports[`renders correctly 1`] = `
             },
             Object {
               "content": <React.Fragment>
-                <ForwardRef(WithStyles)
+                <WithStyles(ForwardRef(Typography))
                   variant="h5"
                 >
                   Content
-                </ForwardRef(WithStyles)>
-                <ForwardRef(WithStyles) />
+                </WithStyles(ForwardRef(Typography))>
+                <WithStyles(ForwardRef(Divider)) />
               </React.Fragment>,
               "id": "content",
               "type": "content",
@@ -276,7 +276,7 @@ exports[`renders correctly with content 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "bctekt",
+          "key": "sujqef",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -290,7 +290,7 @@ exports[`renders correctly with content 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "bctekt",
+        "key": "sujqef",
         "pathname": "/",
         "search": "",
         "state": undefined,
@@ -363,7 +363,7 @@ exports[`renders correctly with content 1`] = `
             Object {
               "data": Array [
                 Object {
-                  "iconEnd": <UNDEFINED />,
+                  "iconEnd": <Memo(VisibilityIcon) />,
                   "id": "nested-text",
                   "title": "Nested Text",
                   "type": "text",
@@ -383,12 +383,12 @@ exports[`renders correctly with content 1`] = `
             },
             Object {
               "content": <React.Fragment>
-                <ForwardRef(WithStyles)
+                <WithStyles(ForwardRef(Typography))
                   variant="h5"
                 >
                   Content
-                </ForwardRef(WithStyles)>
-                <ForwardRef(WithStyles) />
+                </WithStyles(ForwardRef(Typography))>
+                <WithStyles(ForwardRef(Divider)) />
               </React.Fragment>,
               "id": "content",
               "type": "content",

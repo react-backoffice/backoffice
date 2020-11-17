@@ -1,22 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<Header
-  classes={
-    Object {
-      "appBar": "Header-appBar-1",
-      "appBarShift": "Header-appBarShift-2",
-      "flex": "Header-flex-6",
-      "hide": "Header-hide-5",
-      "isStatic": "Header-isStatic-3",
-      "menuButton": "Header-menuButton-4",
-      "title": "Header-title-7",
-    }
-  }
-  isFixed={true}
-  isOpen={true}
-  onClick={[Function]}
-  onDrawerOpen={[Function]}
-  title="Header"
-/>
+<WithStyles(ForwardRef(AppBar))
+  className="makeStyles-appBar-1 makeStyles-appBarShift-2"
+  position="fixed"
+>
+  <WithStyles(ForwardRef(Toolbar))>
+    <WithStyles(ForwardRef(IconButton))
+      aria-label="open drawer"
+      className="makeStyles-menuButton-4 makeStyles-hide-5"
+      color="inherit"
+      onClick={[Function]}
+    >
+      <MenuIcon />
+    </WithStyles(ForwardRef(IconButton))>
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-flex-6 makeStyles-title-7"
+      color="inherit"
+      onClick={[Function]}
+      variant="h6"
+    >
+      Header
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Toolbar))>
+</WithStyles(ForwardRef(AppBar))>
 `;
