@@ -1,12 +1,12 @@
 import React from "react";
-import { mount } from "enzyme";
+import { shallow } from "enzyme";
 
 import Icon from "@material-ui/icons/AccessAlarm";
 
 import Menu from ".";
 
 it("renders correctly", () => {
-  const tree = mount(
+  const tree = shallow(
     <Menu
       data={[
         {

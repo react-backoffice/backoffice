@@ -1,5 +1,5 @@
 import React from "react";
-import Enzyme, { shallow } from "enzyme";
+import Enzyme, { shallow, ShallowWrapper } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
 import { IconButton } from "@material-ui/core";
@@ -23,16 +23,28 @@ it("renders correctly when open", () => {
   expect(tree).toMatchSnapshot();
 });
 
-it("opens if click is triggered", () => {
-  const listingSearch = shallow(
-    <ListingSearch open onClick={() => {}} onFilter={() => {}} />,
-  );
+describe("Given a listing search", () => {
+  let listingSearch: ShallowWrapper;
 
-  expect((listingSearch.instance().state as any).open).toEqual(false);
+  beforeAll(() => {
+    listingSearch = shallow(
+      <ListingSearch open onClick={() => {}} onFilter={() => {}} />,
+    );
+  });
 
-  listingSearch.find(IconButton).simulate("click");
+  it("state is set to closed", () => {
+    expect((listingSearch.instance().state as any).open).toEqual(false);
+  });
 
-  expect((listingSearch.instance().state as any).open).toEqual(true);
+  describe("when click is triggered", () => {
+    beforeEach(() => {
+      listingSearch.find(IconButton).simulate("click");
+    });
+
+    it("state is set to closed", () => {
+      expect((listingSearch.instance().state as any).open).toEqual(true);
+    });
+  });
 });
 
 it("filters if open and value changes", () => {
