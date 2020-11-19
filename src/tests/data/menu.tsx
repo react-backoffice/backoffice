@@ -8,33 +8,27 @@ const menu: MenuDataItem[] = [
     url: "/",
     title: "Dashboard",
   },
+
   {
-    type: "link",
-    url: "/list",
-    title: "List",
-  },
-  {
-    type: "link",
-    url: "/form",
-    title: "Form",
+    type: "label",
+    title: "Components",
     items: [
       {
         type: "link",
-        url: "/form",
-        title: "Form Subitem",
+        url: "/list",
+        title: "List",
       },
       {
         type: "link",
         url: "/form",
-        title: "Form Subitem Disabled",
-        isDisabled: true,
+        title: "Form",
       },
     ],
   },
   {
     type: "link",
     url: "/portfolio",
-    title: "New portfolio",
+    title: "Disabled Link",
     isDisabled: true,
   },
   {

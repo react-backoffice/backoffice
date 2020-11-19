@@ -5,21 +5,32 @@ import {
   ListItemIcon,
   ListItemText,
   makeStyles,
+  Theme,
 } from "@material-ui/core";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme: Theme) => ({
   isDisabled: {
     opacity: 0.5,
     pointerEvents: "none",
+  },
+
+  button: {
+    cursor: "pointer",
+    transition: "background-color 0.15s",
+
+    "&:hover": {
+      backgroundColor: theme.palette.grey[200],
+    },
   },
 }));
 
 type MenuItemProps = {
   redirectTo: (...args: any[]) => any;
-  url: string;
+  url?: string;
   title: string;
-  isDisabled?: boolean;
   icon?: JSX.Element;
+  isButton?: boolean;
+  isDisabled?: boolean;
   className?: string;
 };
 
@@ -35,9 +46,9 @@ const MenuItem: FunctionComponent<MenuItemProps> = ({
 
   return (
     <ListItem
-      button
-      onClick={() => redirectTo(url)}
+      onClick={url ? () => redirectTo(url) : undefined}
       className={classNames(className, {
+        [classes.button]: !!url,
         [classes.isDisabled]: isDisabled,
       })}
     >

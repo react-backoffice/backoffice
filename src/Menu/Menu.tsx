@@ -13,34 +13,46 @@ const useStyles = makeStyles((theme: Theme) => ({
   submenu: {
     paddingTop: 0,
   },
+
+  subitem: {
+    paddingLeft: theme.spacing(4),
+  },
 }));
 
-type MenuItemLink = {
-  type: "link";
-  url: string;
+type MenuItemBase = {
   title: string;
   isDisabled?: boolean;
   icon?: JSX.Element;
   items?: MenuItemLink[];
+};
+type MenuItemLabel = MenuItemBase & {
+  type: "label";
+};
+
+type MenuItemLink = MenuItemBase & {
+  type: "link";
+  url: string;
 };
 
 type MenuItemDivider = {
   type: "divider";
 };
 
-export type MenuDataItem = MenuItemLink | MenuItemDivider;
+export type MenuDataItem = MenuItemLink | MenuItemLabel | MenuItemDivider;
 
 type MenuProps = {
   redirectTo: (...args: any[]) => any;
   data: MenuDataItem[];
   className?: string;
   isDense?: boolean;
+  menuItemClassName?: string;
 };
 
 const Menu: FunctionComponent<MenuProps> = ({
   data,
   redirectTo,
   isDense = false,
+  menuItemClassName,
   className,
 }) => {
   const classes = useStyles();
@@ -57,14 +69,21 @@ const Menu: FunctionComponent<MenuProps> = ({
                 <Fragment key={`menu-${index}`}>
                   <MenuItem
                     redirectTo={redirectTo}
-                    url={item.url}
+                    url={(item as any).url}
                     title={item.title}
+                    isButton={item.type === "link"}
                     isDisabled={item.isDisabled}
                     icon={item.icon}
+                    className={menuItemClassName}
                   />
 
                   {item.items && (
-                    <Menu data={item.items} redirectTo={redirectTo} isDense />
+                    <Menu
+                      data={item.items}
+                      redirectTo={redirectTo}
+                      isDense
+                      menuItemClassName={classes.subitem}
+                    />
                   )}
                 </Fragment>
               );
