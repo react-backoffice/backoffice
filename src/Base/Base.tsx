@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState } from "react";
-import { useHistory } from "react-router-dom";
+import * as H from "history";
 import { MenuDataItem } from "../Menu/Menu";
 import BaseBranch from "./BaseBranch";
 
@@ -9,11 +9,16 @@ type BaseProps = {
   menuData: MenuDataItem[];
   hasHeader?: boolean;
   isHeaderFixed?: boolean;
+  history:
+    | H.History
+    | {
+        push: (link: string) => void;
+        [key: string]: unknown;
+      };
 };
 
-const Base: FunctionComponent<BaseProps> = ({ menuOpen, ...rest }) => {
+const Base: FunctionComponent<BaseProps> = ({ menuOpen, history, ...rest }) => {
   const [isOpen, setIsOpen] = useState(Boolean(menuOpen));
-  const history = useHistory();
 
   const redirectTo = (link: string) => {
     history.push(link);

@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import { useHistory } from "react-router-dom";
 import Base from "../Base";
 import menuData from "./data/menu";
 import { makeStyles, Theme } from "@material-ui/core";
@@ -16,9 +17,15 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 const Layout: FunctionComponent = ({ children }) => {
   const classes = useStyles();
+  const history = useHistory();
 
   return (
-    <Base title="This is Backoffice" menuData={menuData} isHeaderFixed>
+    <Base
+      title="This is Backoffice"
+      menuData={menuData}
+      isHeaderFixed
+      history={history}
+    >
       <div className={classes.root}>{children}</div>
     </Base>
   );
