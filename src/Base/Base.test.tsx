@@ -16,7 +16,12 @@ describe("Base", () => {
   it("renders correctly", () => {
     const tree = shallow(
       <MockRouter>
-        <Base title="Foo" menuData={menuData} menuOpen>
+        <Base
+          title="Foo"
+          menuData={menuData}
+          menuOpen
+          history={{ push: () => {} }}
+        >
           <div>Foo</div>
         </Base>
       </MockRouter>,
@@ -28,7 +33,13 @@ describe("Base", () => {
   it("renders correctly without header", () => {
     const tree = shallow(
       <MockRouter>
-        <Base title="Foo" menuData={menuData} hasHeader={false} menuOpen>
+        <Base
+          title="Foo"
+          menuData={menuData}
+          hasHeader={false}
+          menuOpen
+          history={{ push: () => {} }}
+        >
           <div>Foo</div>
         </Base>
       </MockRouter>,
@@ -40,7 +51,13 @@ describe("Base", () => {
   it("renders with drawer open", () => {
     const tree = shallow(
       <MockRouter>
-        <Base title="Foo" menuData={menuData} hasHeader={false} menuOpen>
+        <Base
+          title="Foo"
+          menuData={menuData}
+          hasHeader={false}
+          menuOpen
+          history={{ push: () => {} }}
+        >
           <div>Foo</div>
         </Base>
       </MockRouter>,
@@ -52,7 +69,12 @@ describe("Base", () => {
   it("click on title", () => {
     const tree = shallow(
       <MockRouter>
-        <Base title="Foo" menuData={menuData} menuOpen>
+        <Base
+          title="Foo"
+          menuData={menuData}
+          menuOpen
+          history={{ push: () => {} }}
+        >
           <div>Foo</div>
         </Base>
       </MockRouter>,
@@ -66,7 +88,12 @@ describe("Base", () => {
   it("click on menu icon if open changes state", () => {
     const tree = shallow(
       <MockRouter>
-        <Base title="Foo" menuData={menuData} menuOpen>
+        <Base
+          title="Foo"
+          menuData={menuData}
+          menuOpen
+          history={{ push: () => {} }}
+        >
           <div>Foo</div>
         </Base>
       </MockRouter>,
@@ -80,7 +107,12 @@ describe("Base", () => {
   it("click on menu icon if closed changes state", () => {
     const tree = shallow(
       <MockRouter>
-        <Base title="Foo" menuData={menuData} menuOpen>
+        <Base
+          title="Foo"
+          menuData={menuData}
+          menuOpen
+          history={{ push: () => {} }}
+        >
           <div>Foo</div>
         </Base>
       </MockRouter>,
