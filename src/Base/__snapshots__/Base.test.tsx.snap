@@ -2,39 +2,52 @@
 
 exports[`Base renders correctly 1`] = `
 <Base
+  history={
+    Object {
+      "push": [Function],
+    }
+  }
   menuData={
     Array [
       Object {
-        "title": "Dashboard",
+        "title": "Overview",
         "type": "link",
         "url": "/",
       },
       Object {
-        "title": "List",
-        "type": "link",
-        "url": "/list",
-      },
-      Object {
         "items": Array [
           Object {
-            "title": "Form Subitem",
+            "title": "Dashboard",
+            "type": "link",
+            "url": "/dashboard",
+          },
+          Object {
+            "title": "List",
+            "type": "link",
+            "url": "/list",
+          },
+          Object {
+            "title": "Form",
             "type": "link",
             "url": "/form",
           },
           Object {
-            "isDisabled": true,
-            "title": "Form Subitem Disabled",
+            "title": "Menu",
             "type": "link",
-            "url": "/form",
+            "url": "/menu",
+          },
+          Object {
+            "title": "Dialog",
+            "type": "link",
+            "url": "/dialog",
           },
         ],
-        "title": "Form",
-        "type": "link",
-        "url": "/form",
+        "title": "Components",
+        "type": "label",
       },
       Object {
         "isDisabled": true,
-        "title": "New portfolio",
+        "title": "Disabled Link",
         "type": "link",
         "url": "/portfolio",
       },
@@ -61,39 +74,52 @@ exports[`Base renders correctly 1`] = `
 exports[`Base renders correctly without header 1`] = `
 <Base
   hasHeader={false}
+  history={
+    Object {
+      "push": [Function],
+    }
+  }
   menuData={
     Array [
       Object {
-        "title": "Dashboard",
+        "title": "Overview",
         "type": "link",
         "url": "/",
       },
       Object {
-        "title": "List",
-        "type": "link",
-        "url": "/list",
-      },
-      Object {
         "items": Array [
           Object {
-            "title": "Form Subitem",
+            "title": "Dashboard",
+            "type": "link",
+            "url": "/dashboard",
+          },
+          Object {
+            "title": "List",
+            "type": "link",
+            "url": "/list",
+          },
+          Object {
+            "title": "Form",
             "type": "link",
             "url": "/form",
           },
           Object {
-            "isDisabled": true,
-            "title": "Form Subitem Disabled",
+            "title": "Menu",
             "type": "link",
-            "url": "/form",
+            "url": "/menu",
+          },
+          Object {
+            "title": "Dialog",
+            "type": "link",
+            "url": "/dialog",
           },
         ],
-        "title": "Form",
-        "type": "link",
-        "url": "/form",
+        "title": "Components",
+        "type": "label",
       },
       Object {
         "isDisabled": true,
-        "title": "New portfolio",
+        "title": "Disabled Link",
         "type": "link",
         "url": "/portfolio",
       },
@@ -120,39 +146,52 @@ exports[`Base renders correctly without header 1`] = `
 exports[`Base renders with drawer open 1`] = `
 <Base
   hasHeader={false}
+  history={
+    Object {
+      "push": [Function],
+    }
+  }
   menuData={
     Array [
       Object {
-        "title": "Dashboard",
+        "title": "Overview",
         "type": "link",
         "url": "/",
       },
       Object {
-        "title": "List",
-        "type": "link",
-        "url": "/list",
-      },
-      Object {
         "items": Array [
           Object {
-            "title": "Form Subitem",
+            "title": "Dashboard",
+            "type": "link",
+            "url": "/dashboard",
+          },
+          Object {
+            "title": "List",
+            "type": "link",
+            "url": "/list",
+          },
+          Object {
+            "title": "Form",
             "type": "link",
             "url": "/form",
           },
           Object {
-            "isDisabled": true,
-            "title": "Form Subitem Disabled",
+            "title": "Menu",
             "type": "link",
-            "url": "/form",
+            "url": "/menu",
+          },
+          Object {
+            "title": "Dialog",
+            "type": "link",
+            "url": "/dialog",
           },
         ],
-        "title": "Form",
-        "type": "link",
-        "url": "/form",
+        "title": "Components",
+        "type": "label",
       },
       Object {
         "isDisabled": true,
-        "title": "New portfolio",
+        "title": "Disabled Link",
         "type": "link",
         "url": "/portfolio",
       },

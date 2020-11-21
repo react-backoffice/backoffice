@@ -1,5 +1,7 @@
 import React, { FunctionComponent } from "react";
 import classNames from "classnames";
+import { fade } from "@material-ui/core/styles/colorManipulator";
+
 import {
   ListItem,
   ListItemIcon,
@@ -16,10 +18,10 @@ const useStyles = makeStyles((theme: Theme) => ({
 
   button: {
     cursor: "pointer",
-    transition: "background-color 0.15s",
+    transition: "background-color 0.15s, opacity 0.15s",
 
     "&:hover": {
-      backgroundColor: theme.palette.grey[200],
+      backgroundColor: fade(theme.palette.grey.A100, 0.1),
     },
   },
 }));

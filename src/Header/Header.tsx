@@ -9,8 +9,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-
-const drawerWidth = 280;
+import { DRAWER_WIDTH } from "../Drawer/Drawer";
 
 const useStyles = makeStyles((theme: Theme) => ({
   appBar: {
@@ -20,13 +19,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     }),
     transform: "translate(0, 0)",
   },
+
   appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
+    width: `calc(100% - ${DRAWER_WIDTH}px)`,
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
-    marginLeft: drawerWidth,
+    marginLeft: DRAWER_WIDTH,
   },
 
   isStatic: {
@@ -43,7 +43,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   flex: {
     flex: 1,
   },
+
   title: {
+    paddingLeft: theme.spacing(2),
     cursor: "pointer",
     "&:hover": {
       textDecoration: "underline",
@@ -90,7 +92,7 @@ const Header: FunctionComponent<HeaderProps> = ({
         <Typography
           variant="h6"
           color="inherit"
-          className={`${classes.flex} ${classes.title}`}
+          className={classNames(classes.flex, classes.title)}
           onClick={onClick}
         >
           {title}

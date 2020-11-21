@@ -1,6 +1,6 @@
 import React, { Fragment, FunctionComponent } from "react";
 import { Divider, List, makeStyles, Theme } from "@material-ui/core";
-import classNames from "classnames";
+import classnames from "classnames";
 import MenuItem from "./MenuItem";
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -16,6 +16,11 @@ const useStyles = makeStyles((theme: Theme) => ({
 
   subitem: {
     paddingLeft: theme.spacing(4),
+  },
+
+  divider: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
   },
 }));
 
@@ -58,12 +63,17 @@ const Menu: FunctionComponent<MenuProps> = ({
   const classes = useStyles();
 
   return (
-    <div className={classNames(classes.root, className)}>
-      <List dense={isDense} className={isDense ? classes.submenu : ""}>
+    <div className={classnames(classes.root, className)}>
+      <List
+        dense={isDense}
+        className={classnames({ [classes.submenu]: isDense })}
+      >
         {data.map((item, index) => {
           switch (item.type) {
             case "divider":
-              return <Divider key={`menu-${index}`} />;
+              return (
+                <Divider key={`menu-${index}`} className={classes.divider} />
+              );
             default:
               return (
                 <Fragment key={`menu-${index}`}>

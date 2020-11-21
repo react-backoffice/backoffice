@@ -2,8 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <WithStyles(ForwardRef(ListItem))
-  button={true}
-  className=""
+  className="makeStyles-button-2"
   onClick={[Function]}
 >
   <WithStyles(ForwardRef(ListItemText))
@@ -14,8 +13,7 @@ exports[`renders correctly 1`] = `
 
 exports[`renders correctly disabled 1`] = `
 <WithStyles(ForwardRef(ListItem))
-  button={true}
-  className="makeStyles-isDisabled-1"
+  className="makeStyles-button-2 makeStyles-isDisabled-1"
   onClick={[Function]}
 >
   <WithStyles(ForwardRef(ListItemText))
@@ -26,8 +24,7 @@ exports[`renders correctly disabled 1`] = `
 
 exports[`renders correctly with icon 1`] = `
 <WithStyles(ForwardRef(ListItem))
-  button={true}
-  className=""
+  className="makeStyles-button-2"
   onClick={[Function]}
 >
   <WithStyles(ForwardRef(ListItemIcon))>

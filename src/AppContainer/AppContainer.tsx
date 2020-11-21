@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { blueGrey, orange } from "@material-ui/core/colors";
 import {
   ThemeProvider,
@@ -6,6 +6,7 @@ import {
   withStyles,
 } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import { useMediaQuery } from "@material-ui/core";
 
 const defaultTheme = {
   typography: {
@@ -25,7 +26,7 @@ const defaultTheme = {
   },
 };
 
-type AppContainerProps = {
+type Props = {
   theme?: {
     [key: string]: any;
   };
@@ -46,12 +47,25 @@ const styles = (theme: any) => ({
 });
 
 const BaseComponent = withStyles(styles)((props) => props.children as any);
-const AppContainer: React.SFC<AppContainerProps> = ({
+const AppContainer: FunctionComponent<Props> = ({
   theme = defaultTheme,
   children,
 }) => {
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const initialTheme = React.useMemo(
+    () =>
+      createMuiTheme({
+        ...theme,
+        palette: {
+          ...theme.palette,
+          type: prefersDarkMode ? "dark" : "light",
+        },
+      }),
+    [prefersDarkMode],
+  );
+
   return (
-    <ThemeProvider theme={createMuiTheme(theme)}>
+    <ThemeProvider theme={initialTheme}>
       <CssBaseline />
       <BaseComponent>{children}</BaseComponent>
     </ThemeProvider>

@@ -9,9 +9,24 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginRight: "auto",
     marginLeft: "auto",
     maxWidth: "80rem",
-    paddingLeft: theme.spacing(3),
-    paddingRight: theme.spacing(3),
+    paddingLeft: 0,
+    paddingRight: 0,
     paddingBottom: theme.spacing(5),
+
+    [theme.breakpoints.up("sm")]: {
+      paddingLeft: theme.spacing(1),
+      paddingRight: theme.spacing(1),
+    },
+
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: theme.spacing(5),
+      paddingRight: theme.spacing(5),
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      paddingLeft: theme.spacing(5),
+      paddingRight: theme.spacing(5),
+    },
   },
 }));
 

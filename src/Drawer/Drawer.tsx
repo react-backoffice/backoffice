@@ -10,10 +10,10 @@ import Menu from "../Menu";
 import { MenuDataItem } from "../Menu/Menu";
 import { makeStyles } from "@material-ui/styles";
 
-const drawerWidth = 280;
+export const DRAWER_WIDTH = 240;
 const useStyles = makeStyles((theme: Theme) => ({
   drawerPaper: {
-    width: drawerWidth,
+    width: DRAWER_WIDTH,
   },
 
   drawerHeader: {

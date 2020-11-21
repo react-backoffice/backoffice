@@ -6,13 +6,18 @@ const menu: MenuDataItem[] = [
   {
     type: "link",
     url: "/",
-    title: "Dashboard",
+    title: "Overview",
   },
 
   {
     type: "label",
     title: "Components",
     items: [
+      {
+        type: "link",
+        url: "/dashboard",
+        title: "Dashboard",
+      },
       {
         type: "link",
         url: "/list",
@@ -22,6 +27,16 @@ const menu: MenuDataItem[] = [
         type: "link",
         url: "/form",
         title: "Form",
+      },
+      {
+        type: "link",
+        url: "/menu",
+        title: "Menu",
+      },
+      {
+        type: "link",
+        url: "/dialog",
+        title: "Dialog",
       },
     ],
   },
