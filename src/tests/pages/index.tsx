@@ -1,9 +1,7 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import Typography from "@material-ui/core/Typography";
-import withStyles from "@material-ui/core/styles/withStyles";
-
-import Dashboard from "../../Dashboard";
-import dashboardData from "../data/dashboard";
+import { makeStyles } from "@material-ui/styles";
+import { Theme } from "@material-ui/core";
 
 import Menu from "../../Menu";
 import menuData from "../data/menu";
@@ -15,48 +13,54 @@ import tabData from "../data/tabs";
 
 const noop = () => {};
 
-const styles = (theme: any) => ({
+const useStyles = makeStyles((theme: Theme) => ({
+  hero: {
+    maxWidth: "40rem",
+    marginTop: "3rem",
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
   headline: {
     marginTop: theme.spacing(4),
   },
-});
+}));
 
-interface Props {
-  classes: {
-    [key: string]: string;
-  };
-}
+const Page: FunctionComponent<any> = ({ ...props }) => {
+  const classes = useStyles();
 
-class Page extends React.Component<Props> {
-  render() {
-    const { classes, ...props } = this.props;
-
-    return (
-      <>
-        <Dashboard data={dashboardData} {...props} />
-
-        <Typography variant="h4" className={classes.headline}>
-          Tabs
+  return (
+    <>
+      <div className={classes.hero}>
+        <Typography variant="h1">Backoffice</Typography>
+        <Typography>
+          Backoffice is a Framework based on{" "}
+          <a href="https://material-ui.io">Material UI</a>, a Material Design
+          React implementation that provides a couple of components you might
+          want to use in a backoffice app.
         </Typography>
+      </div>
 
-        <Tabs data={tabData} />
+      <Typography variant="h4" className={classes.headline}>
+        Tabs
+      </Typography>
 
-        <Typography variant="h4" className={classes.headline}>
-          Menu
-        </Typography>
+      <Tabs data={tabData} />
 
-        <Menu data={menuData} redirectTo={noop} {...props} />
+      <Typography variant="h4" className={classes.headline}>
+        Menu
+      </Typography>
 
-        <AddButton onClick={noop} />
+      <Menu data={menuData} redirectTo={noop} {...props} />
 
-        <Typography variant="h4" className={classes.headline}>
-          Back Button
-        </Typography>
+      <AddButton onClick={noop} />
 
-        <BackButton url="/root" />
-      </>
-    );
-  }
-}
+      <Typography variant="h4" className={classes.headline}>
+        Back Button
+      </Typography>
 
-export default withStyles(styles)(Page);
+      <BackButton url="/root" />
+    </>
+  );
+};
+
+export default Page;

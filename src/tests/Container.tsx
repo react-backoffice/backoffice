@@ -8,6 +8,7 @@ import Page from "./pages";
 import General from "./General";
 import List from "./pages/list";
 import FormPage from "./pages/form";
+import Dashboard from "./pages/dashboard";
 import Layout from "./Layout";
 
 const theme = {
@@ -36,6 +37,16 @@ const Container = () => (
             <Layout>
               <Page {...props} />
               <General {...props} />
+            </Layout>
+          )}
+        />
+
+        <Route
+          exact
+          path="/dashboard"
+          render={(props) => (
+            <Layout>
+              <Dashboard />
             </Layout>
           )}
         />

@@ -1,10 +1,10 @@
 export default {
-  title: "Backoffice",
-  description: "Visual Testing for Backoffice Framework",
+  title: "Dashboard Component",
+  description: "Component to show content for dashboards",
   groups: [
     {
       id: "components",
-      title: "Backoffice's Components",
+      title: "Dashboard Cards",
       cards: [
         {
           id: "list",
