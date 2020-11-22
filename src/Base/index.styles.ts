@@ -1,5 +1,5 @@
 import { makeStyles, Theme } from "@material-ui/core";
-import { DRAWER_WIDTH } from "../Drawer/Drawer";
+import { DRAWER_WIDTH } from "../Drawer";
 
 const useStyles = makeStyles((theme: Theme) => ({
   "@global html": {

@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
 import * as H from "history";
 import classNames from "classnames";
-import { MenuDataItem } from "../Menu/Menu";
+import { MenuDataItem } from "../Menu";
 import Drawer from "../Drawer";
 import Header from "../Header";
 import useStyles from "./index.styles";

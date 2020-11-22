@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import { DRAWER_WIDTH } from "../Drawer/Drawer";
+import { DRAWER_WIDTH } from "../Drawer";
 
 const useStyles = makeStyles((theme: Theme) => ({
   appBar: {

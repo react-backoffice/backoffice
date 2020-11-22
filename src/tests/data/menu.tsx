@@ -1,6 +1,6 @@
 import React from "react";
 import BugIcon from "@material-ui/icons/BugReport";
-import { MenuDataItem } from "../../Menu/Menu";
+import { MenuDataItem } from "../../Menu";
 
 const menu: MenuDataItem[] = [
   {
