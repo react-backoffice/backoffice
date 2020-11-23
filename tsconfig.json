@@ -7,7 +7,7 @@
       "dom"
     ],
     "sourceMap": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "strictNullChecks": true,
