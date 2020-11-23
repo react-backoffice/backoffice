@@ -5,7 +5,7 @@ import Adapter from "enzyme-adapter-react-16";
 import { Tab } from "@material-ui/core";
 
 import Tabs from ".";
-import tabsContent from "../tests/data/tabs";
+import tabsContent from "../__visual__/data/tabs";
 
 Enzyme.configure({ adapter: new Adapter() });
 

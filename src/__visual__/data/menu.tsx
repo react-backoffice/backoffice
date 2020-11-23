@@ -38,6 +38,11 @@ const menu: MenuDataItem[] = [
         url: "/dialog",
         title: "Dialog",
       },
+      {
+        type: "link",
+        url: "/tabs",
+        title: "Tabs",
+      },
     ],
   },
   {

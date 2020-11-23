@@ -4,7 +4,7 @@ import { shallow } from "enzyme";
 
 import Form from "..";
 
-import formData from "../../tests/data/form";
+import formData from "../../__visual__/data/form";
 
 it("renders correctly", () => {
   const tree = shallow(

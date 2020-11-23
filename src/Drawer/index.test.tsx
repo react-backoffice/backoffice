@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import menuData from "../tests/data/menu";
+import menuData from "../__visual__/data/menu";
 
 import Drawer from ".";
 

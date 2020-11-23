@@ -5,8 +5,8 @@ import { Checkbox, TablePagination, IconButton } from "@material-ui/core";
 
 import Listing from ".";
 
-import headers from "../tests/data/listing_headers";
-import data from "../tests/data/listing_data";
+import headers from "../__visual__/data/listing_headers";
+import data from "../__visual__/data/listing_data";
 import ListingHeader from "./ListingHeader";
 
 Enzyme.configure({ adapter: new Adapter() });

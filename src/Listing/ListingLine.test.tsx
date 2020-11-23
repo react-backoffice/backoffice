@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 import { Table } from "@material-ui/core";
 import { Header } from "./Listing";
 import ListingLine from "./ListingLine";
-import headers from "../tests/data/listing_headers";
+import headers from "../__visual__/data/listing_headers";
 
 const twoHeaders = headers.slice(0, 2) as Header[];
 

@@ -6,7 +6,7 @@ import { Typography, IconButton } from "@material-ui/core";
 
 import Base from ".";
 
-import menuData from "../tests/data/menu";
+import menuData from "../__visual__/data/menu";
 import Header from "../Header";
 import Drawer from "../Drawer";
 

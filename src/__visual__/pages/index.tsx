@@ -8,9 +8,6 @@ import menuData from "../data/menu";
 import AddButton from "../../AddButton";
 import BackButton from "../../BackButton";
 
-import Tabs from "../../Tabs";
-import tabData from "../data/tabs";
-
 const noop = () => {};
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -43,8 +40,6 @@ const Page: FunctionComponent<any> = ({ ...props }) => {
       <Typography variant="h4" className={classes.headline}>
         Tabs
       </Typography>
-
-      <Tabs data={tabData} />
 
       <Typography variant="h4" className={classes.headline}>
         Menu
