@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<WithStyles(ForwardRef(Fab))
+  aria-label="add"
+  className="makeStyles-button-1"
+  color="secondary"
+  onClick={[Function]}
+>
+  <AddIcon />
+</WithStyles(ForwardRef(Fab))>
+`;

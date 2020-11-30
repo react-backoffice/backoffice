@@ -28,7 +28,7 @@ const Layout: FunctionComponent = ({ children }) => {
 
   return (
     <Base
-      title="This is Backoffice"
+      title="Backoffice"
       menuData={menuData}
       isHeaderFixed
       history={history}
