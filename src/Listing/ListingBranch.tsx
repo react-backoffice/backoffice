@@ -6,15 +6,16 @@ import {
   TablePagination,
   TableRow,
   Paper,
-  withStyles,
+  Theme,
+  makeStyles,
 } from "@material-ui/core";
-import { Header } from "./Listing";
+import { Header } from ".";
 import ListingHeader from "./ListingHeader";
 import ListingToolbar from "./ListingToolbar";
 import ListingLine from "./ListingLine";
 import ListingLoader from "./ListingLoader";
 
-const styles = (theme: any) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: "100%",
     marginTop: theme.spacing(3),
@@ -25,9 +26,9 @@ const styles = (theme: any) => ({
   tableWrapper: {
     overflowX: "auto",
   },
-});
+}));
 
-type ListingBranchProps = {
+type Props = {
   title?: string;
   data?: Record<string, any>[];
   headers: Header[];
@@ -37,8 +38,8 @@ type ListingBranchProps = {
   rowsPerPage?: number;
   rowsPerPageOptions?: number[];
   page?: number;
-  hasLoader: boolean;
-  renderToolbarContent: (selected: any[] | undefined) => React.ReactNode;
+  hasLoader?: boolean;
+  renderToolbarContent?: (selected: any[]) => React.ReactNode;
   handleSelectAllClick: (...args: any[]) => any;
   handleRequestSort: (...args: any[]) => any;
   handleCheckClick: (...args: any[]) => any;
@@ -49,20 +50,16 @@ type ListingBranchProps = {
   isSelected?: (...args: any[]) => any;
   onFilter?: (...args: any[]) => any;
   isIntegrated?: boolean;
-  classes: {
-    [key: string]: string;
-  };
   searchValue?: string;
 };
 
-const ListingBranch: FunctionComponent<ListingBranchProps> = ({
-  title,
+const ListingBranch: FunctionComponent<Props> = ({
+  title = "",
   headers,
-  classes,
-  data,
+  data = [],
   order = "asc",
   orderBy,
-  selected,
+  selected = [],
   rowsPerPage = 10,
   rowsPerPageOptions = [10, 25, 50, 100],
   page = 0,
@@ -74,78 +71,74 @@ const ListingBranch: FunctionComponent<ListingBranchProps> = ({
   handleKeyDown,
   handleChangePage,
   handleChangeRowsPerPage,
-  isSelected,
-  onFilter,
+  isSelected = () => {},
+  onFilter = () => {},
   hasLoader,
-  isIntegrated,
+  isIntegrated = false,
   searchValue,
-}) => (
-  <Paper
-    className={isIntegrated ? undefined : classes.root}
-    elevation={isIntegrated ? 0 : 4}
-  >
-    <ListingToolbar
-      title={title}
-      numSelected={selected?.length}
-      onFilter={onFilter}
+}) => {
+  const classes = useStyles();
+
+  return (
+    <Paper
+      className={isIntegrated ? undefined : classes.root}
+      elevation={isIntegrated ? 0 : 4}
     >
-      {renderToolbarContent && renderToolbarContent(selected)}
-    </ListingToolbar>
+      <ListingToolbar
+        title={title}
+        numSelected={selected?.length}
+        onFilter={onFilter}
+      >
+        {renderToolbarContent && renderToolbarContent(selected)}
+      </ListingToolbar>
 
-    <div className={classes.tableWrapper}>
-      <Table className={classes.table}>
-        <ListingHeader
-          headers={headers}
-          numSelected={selected?.length || 0}
-          order={order}
-          orderBy={orderBy}
-          onSelectAllClick={handleSelectAllClick}
-          onRequestSort={handleRequestSort}
-          rowCount={data?.length}
-        />
+      <div className={classes.tableWrapper}>
+        <Table className={classes.table}>
+          <ListingHeader
+            headers={headers}
+            numSelected={selected?.length || 0}
+            order={order}
+            orderBy={orderBy}
+            onSelectAllClick={handleSelectAllClick}
+            onRequestSort={handleRequestSort}
+            rowCount={data?.length}
+          />
 
-        <TableBody>
-          {hasLoader ? <ListingLoader cols={headers.length + 1} /> : null}
+          <TableBody>
+            {hasLoader && <ListingLoader cols={headers.length + 1} />}
 
-          {data
-            ?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-            .map((item: any, index: number) => (
-              <ListingLine
-                key={`line-${index}`}
-                data={item}
-                headers={headers}
-                handleCheckClick={handleCheckClick}
-                onClick={onClick}
-                handleKeyDown={handleKeyDown}
-                isSelected={isSelected && isSelected(item.id)}
-                searchValue={searchValue}
+            {data
+              ?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((item: any, index: number) => (
+                <ListingLine
+                  key={`line-${index}`}
+                  data={item}
+                  headers={headers}
+                  handleCheckClick={handleCheckClick}
+                  onClick={onClick}
+                  handleKeyDown={handleKeyDown}
+                  isSelected={isSelected && isSelected(item.id)}
+                  searchValue={searchValue}
+                />
+              ))}
+          </TableBody>
+
+          <TableFooter>
+            <TableRow>
+              <TablePagination
+                count={data?.length ?? 0}
+                rowsPerPage={rowsPerPage}
+                rowsPerPageOptions={rowsPerPageOptions}
+                page={page}
+                onChangePage={handleChangePage}
+                onChangeRowsPerPage={handleChangeRowsPerPage}
               />
-            ))}
-        </TableBody>
-        <TableFooter>
-          <TableRow>
-            <TablePagination
-              count={data?.length ?? 0}
-              rowsPerPage={rowsPerPage}
-              rowsPerPageOptions={rowsPerPageOptions}
-              page={page}
-              onChangePage={handleChangePage}
-              onChangeRowsPerPage={handleChangeRowsPerPage}
-            />
-          </TableRow>
-        </TableFooter>
-      </Table>
-    </div>
-  </Paper>
-);
-
-ListingBranch.defaultProps = {
-  title: "",
-  data: [],
-  selected: [],
-  onFilter: () => {},
-  isSelected: () => {},
-  isIntegrated: false,
+            </TableRow>
+          </TableFooter>
+        </Table>
+      </div>
+    </Paper>
+  );
 };
 
-export default withStyles(styles as any)(ListingBranch);
+export default ListingBranch;

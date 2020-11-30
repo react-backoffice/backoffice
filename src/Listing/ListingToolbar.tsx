@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import classNames from "classnames";
-import { Toolbar, Typography, withStyles } from "@material-ui/core";
+import { makeStyles, Theme, Toolbar, Typography } from "@material-ui/core";
 import ListingSearch from "./ListingSearch";
 
-const toolbarStyles = (theme: any) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     paddingRight: 2,
   },
@@ -26,46 +26,46 @@ const toolbarStyles = (theme: any) => ({
   title: {
     flex: "0 0 auto",
   },
-});
+}));
 
 type ListingToolbarProps = {
-  title: string;
-  numSelected: number;
-  onFilter: (...args: any[]) => any;
-  classes: {
-    [key: string]: string;
-  };
+  title?: string;
+  numSelected?: number;
+  onFilter?: (...args: any[]) => any;
 };
 
-const ListingToolbar: React.SFC<ListingToolbarProps> = ({
+const ListingToolbar: FunctionComponent<ListingToolbarProps> = ({
   title,
-  numSelected,
+  numSelected = 0,
   onFilter,
-  classes,
   children,
-}) => (
-  <Toolbar
-    className={classNames(classes.root, {
-      [classes.highlight]: numSelected > 0,
-    })}
-  >
-    <div className={classes.title}>
-      {numSelected > 0 ? (
-        <Typography variant="subtitle1">
-          {numSelected}
-          &nbsp;selected
-        </Typography>
-      ) : (
-        <Typography variant="h6">{title}</Typography>
-      )}
-    </div>
+}) => {
+  const classes = useStyles();
 
-    <div className={classes.spacer} />
+  return (
+    <Toolbar
+      className={classNames(classes.root, {
+        [classes.highlight]: numSelected > 0,
+      })}
+    >
+      <div className={classes.title}>
+        {numSelected > 0 ? (
+          <Typography variant="subtitle1">
+            {numSelected}
+            &nbsp;selected
+          </Typography>
+        ) : (
+          <Typography variant="h6">{title}</Typography>
+        )}
+      </div>
 
-    <div className={classes.actions}>
-      {numSelected > 0 ? children : <ListingSearch onFilter={onFilter} />}
-    </div>
-  </Toolbar>
-);
+      <div className={classes.spacer} />
 
-export default withStyles(toolbarStyles as any)(ListingToolbar) as any;
+      <div className={classes.actions}>
+        {numSelected > 0 ? children : <ListingSearch onFilter={onFilter} />}
+      </div>
+    </Toolbar>
+  );
+};
+
+export default ListingToolbar;

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <WithStyles(ForwardRef(TextField))
+    className="makeStyles-field-2"
+    inputRef={
+      Object {
+        "current": undefined,
+      }
+    }
+    onChange={[Function]}
+    type="search"
+  />
+  <WithStyles(ForwardRef(Tooltip))
+    title="Search"
+  >
+    <WithStyles(ForwardRef(IconButton))
+      onClick={[Function]}
+    >
+      <SearchIcon />
+    </WithStyles(ForwardRef(IconButton))>
+  </WithStyles(ForwardRef(Tooltip))>
+</div>
+`;
+
+exports[`renders correctly when open 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <WithStyles(ForwardRef(TextField))
+    className="makeStyles-field-2 makeStyles-fieldActive-3"
+    inputRef={
+      Object {
+        "current": undefined,
+      }
+    }
+    onChange={[Function]}
+    type="search"
+  />
+  <WithStyles(ForwardRef(Tooltip))
+    title="Search"
+  >
+    <WithStyles(ForwardRef(IconButton))
+      onClick={[Function]}
+    >
+      <SearchIcon />
+    </WithStyles(ForwardRef(IconButton))>
+  </WithStyles(ForwardRef(Tooltip))>
+</div>
+`;

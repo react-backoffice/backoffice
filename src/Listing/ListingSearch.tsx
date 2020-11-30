@@ -1,71 +1,89 @@
-import React from "react";
-import ListingSearchBranch from "./ListingSearchBranch";
+import React, { FunctionComponent, useEffect, useRef, useState } from "react";
+import classNames from "classnames";
+import {
+  TextField,
+  Tooltip,
+  IconButton,
+  makeStyles,
+  Theme,
+} from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
 
-type WithListingSearchProps = {
-  onFilter: (...args: any[]) => any;
+const useStyles = makeStyles((theme: Theme) => ({
+  root: {
+    position: "relative",
+    marginRight: theme.spacing(),
+  },
+  field: {
+    position: "absolute",
+    right: "100%",
+    width: 0,
+    marginTop: theme.spacing(),
+    transition: "width 0.25s",
+  },
+  fieldActive: {
+    width: theme.spacing(30),
+  },
+}));
+
+type Props = {
+  isOpen?: boolean;
+  placeholder?: string;
+  onFilter?: (...args: any[]) => any;
 };
 
-type WithListingSearchState = {
-  open: boolean;
-};
+const ListingSearch: FunctionComponent<Props> = ({
+  isOpen: isOpenProp,
+  placeholder,
+  onFilter,
+}) => {
+  const searchRef = useRef<HTMLInputElement>();
+  const [isOpen, setIsOpen] = useState(isOpenProp);
+  const classes = useStyles();
 
-const withListing = (Component: any) =>
-  class WithListingSearch extends React.Component<
-    WithListingSearchProps,
-    WithListingSearchState
-  > {
-    private searchRef: any;
-
-    constructor(props: WithListingSearchProps) {
-      super(props);
-
-      this.handleClick = this.handleClick.bind(this);
-      this.handleFilter = this.handleFilter.bind(this);
-      this.getSearchRef = this.getSearchRef.bind(this);
+  useEffect(() => {
+    if (isOpen) {
+      searchRef.current?.focus();
     }
-    state = {
-      open: false,
-    };
+  }, [isOpen]);
 
-    getSearchRef(node: any) {
-      this.searchRef = node;
+  const handleFilter = (event: any) => {
+    if (!onFilter) {
+      return;
     }
 
-    handleClick() {
-      const { open } = this.state;
-      const { onFilter } = this.props;
-      const newOpen = !open;
-      if (this.searchRef && newOpen) {
-        this.searchRef.focus();
-      }
-      this.setState({
-        open: newOpen,
-      });
+    const { value } = event.target;
+
+    onFilter(isOpen ? value : undefined);
+  };
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+
+    if (onFilter) {
       onFilter(undefined);
-    }
-
-    handleFilter(event: any) {
-      const { open } = this.state;
-      const { onFilter } = this.props;
-      const { value } = event.target;
-      if (open) {
-        onFilter(value);
-      } else {
-        onFilter(undefined);
-      }
-    }
-
-    render() {
-      return (
-        <Component
-          {...this.props}
-          {...this.state}
-          onClick={this.handleClick}
-          onFilter={this.handleFilter}
-          getSearchRef={this.getSearchRef}
-        />
-      );
     }
   };
 
-export default withListing(ListingSearchBranch) as any;
+  return (
+    <div className={classes.root}>
+      <TextField
+        type="search"
+        placeholder={placeholder}
+        className={classNames(classes.field, {
+          [classes.fieldActive]: isOpen,
+        })}
+        onChange={handleFilter}
+        inputRef={searchRef}
+      />
+
+      <Tooltip title="Search">
+        <IconButton onClick={handleClick}>
+          <SearchIcon />
+        </IconButton>
+      </Tooltip>
+    </div>
+  );
+};
+
+export default ListingSearch;

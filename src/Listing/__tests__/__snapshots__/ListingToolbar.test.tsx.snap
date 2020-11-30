@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<WithStyles(ForwardRef(Toolbar))
+  className="makeStyles-root-1"
+>
+  <div
+    className="makeStyles-title-5"
+  >
+    <WithStyles(ForwardRef(Typography))
+      variant="h6"
+    />
+  </div>
+  <div
+    className="makeStyles-spacer-3"
+  />
+  <div
+    className="makeStyles-actions-4"
+  >
+    <ListingSearch
+      onFilter={[Function]}
+    />
+  </div>
+</WithStyles(ForwardRef(Toolbar))>
+`;

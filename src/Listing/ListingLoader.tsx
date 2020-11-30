@@ -1,12 +1,12 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import {
   TableCell,
   TableRow,
   LinearProgress,
-  withStyles,
+  makeStyles,
 } from "@material-ui/core";
 
-const styles = {
+const useStyles = makeStyles(() => ({
   row: {
     height: "auto",
   },
@@ -17,25 +17,22 @@ const styles = {
   progress: {
     width: "100%",
   },
-};
+}));
 
 type ListingLoaderProps = {
   cols?: number;
-  classes: {
-    [key: string]: string;
-  };
 };
 
-const ListingLoader: React.SFC<ListingLoaderProps> = ({ cols, classes }) => (
-  <TableRow className={classes.row}>
-    <TableCell padding="none" colSpan={cols} className={classes.cell}>
-      <LinearProgress variant="query" className={classes.progress} />
-    </TableCell>
-  </TableRow>
-);
+const ListingLoader: FunctionComponent<ListingLoaderProps> = ({ cols = 1 }) => {
+  const classes = useStyles();
 
-ListingLoader.defaultProps = {
-  cols: 1,
+  return (
+    <TableRow className={classes.row}>
+      <TableCell padding="none" colSpan={cols} className={classes.cell}>
+        <LinearProgress variant="query" className={classes.progress} />
+      </TableCell>
+    </TableRow>
+  );
 };
 
-export default withStyles(styles)(ListingLoader);
+export default ListingLoader;

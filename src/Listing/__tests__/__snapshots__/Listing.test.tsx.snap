@@ -2,7 +2,7 @@
 
 exports[`Listing renders correctly 1`] = `
 <div>
-  <WithStyles(ListingBranch)
+  <ListingBranch
     data={
       Array [
         Object {
@@ -307,23 +307,13 @@ exports[`Listing renders correctly 1`] = `
         },
       ]
     }
-    id={null}
     isSelected={[Function]}
     onClick={[Function]}
     onFilter={[Function]}
-    onUpdateSelection={[Function]}
     order="asc"
     orderBy="username"
     page={0}
     rowsPerPage={10}
-    searchable={
-      Array [
-        "name",
-        "username",
-        "phone",
-        "company",
-      ]
-    }
     selected={Array []}
     title="Christmas Time"
   />
@@ -332,7 +322,7 @@ exports[`Listing renders correctly 1`] = `
 
 exports[`Listing renders correctly with Loader 1`] = `
 <div>
-  <WithStyles(ListingBranch)
+  <ListingBranch
     data={
       Array [
         Object {
@@ -638,23 +628,13 @@ exports[`Listing renders correctly with Loader 1`] = `
         },
       ]
     }
-    id={null}
     isSelected={[Function]}
     onClick={[Function]}
     onFilter={[Function]}
-    onUpdateSelection={[Function]}
     order="asc"
     orderBy="username"
     page={0}
     rowsPerPage={10}
-    searchable={
-      Array [
-        "name",
-        "username",
-        "phone",
-        "company",
-      ]
-    }
     selected={Array []}
     title="Christmas Time"
   />

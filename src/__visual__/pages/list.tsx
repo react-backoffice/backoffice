@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -15,7 +15,12 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 const List = () => {
+  const [hasLoader, setHasLoader] = useState(true);
   const classes = useStyles();
+
+  setTimeout(() => {
+    setHasLoader(false);
+  }, 3000);
 
   return (
     <>
@@ -30,7 +35,7 @@ const List = () => {
         data={listingData}
         headers={listingHeaders}
         orderBy="username"
-        hasLoader
+        hasLoader={hasLoader}
         onUpdateSelection={(selection: any) => {
           console.log(selection);
         }}

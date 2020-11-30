@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import { Table } from "@material-ui/core";
 
-import ListingHeader from "./ListingHeader";
+import ListingHeader from "../ListingHeader";
 
 it("renders correctly", () => {
   const tree = shallow(

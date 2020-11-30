@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import {
   Checkbox,
   TableCell,
@@ -8,7 +8,7 @@ import {
   Tooltip,
 } from "@material-ui/core";
 
-type ListingHeaderProps = {
+type Props = {
   headers: Record<string, any>[];
   numSelected?: number;
   onRequestSort: (...args: any[]) => any;
@@ -18,72 +18,54 @@ type ListingHeaderProps = {
   rowCount?: number;
 };
 
-class ListingHeader extends React.Component<ListingHeaderProps, any> {
-  static defaultProps = {
-    numSelected: 0,
-    rowCount: 0,
-  };
+const ListingHeader: FunctionComponent<Props> = ({
+  onSelectAllClick,
+  order,
+  orderBy,
+  numSelected = 0,
+  rowCount = 0,
+  headers,
+  onRequestSort,
+}) => {
+  const createSortHandler = (property: any) => (event: any) =>
+    onRequestSort(event, property);
 
-  createSortHandler(property: any) {
-    const { onRequestSort } = this.props;
+  return (
+    <TableHead>
+      <TableRow>
+        <TableCell padding="checkbox">
+          <Checkbox
+            color="primary"
+            indeterminate={numSelected > 0 && numSelected < rowCount}
+            checked={numSelected === rowCount}
+            onChange={onSelectAllClick}
+          />
+        </TableCell>
 
-    return (event: any) => {
-      onRequestSort(event, property);
-    };
-  }
-
-  render() {
-    const {
-      onSelectAllClick,
-      order,
-      orderBy,
-      numSelected,
-      rowCount,
-      headers,
-    } = this.props;
-
-    return (
-      <TableHead>
-        <TableRow>
-          <TableCell padding="checkbox">
-            <Checkbox
-              color="primary"
-              indeterminate={
-                (numSelected || 0) > 0 && (numSelected || 0) < (rowCount || 0)
-              }
-              checked={numSelected === rowCount}
-              onChange={onSelectAllClick}
-            />
-          </TableCell>
-
-          {headers.map(
-            (column: any, index: number) => (
-              <TableCell
-                key={`header-${column.id}-${index}`}
-                padding={column.isPaddingDisabled ? "none" : "default"}
-                align={column.isNumeric ? "right" : undefined}
+        {headers.map((column: any, index: number) => (
+          <TableCell
+            key={`header-${column.id}-${index}`}
+            padding={column.isPaddingDisabled ? "none" : "default"}
+            align={column.isNumeric ? "right" : undefined}
+          >
+            <Tooltip
+              title="Sort"
+              placement={column.numeric ? "bottom-end" : "bottom-start"}
+              enterDelay={300}
+            >
+              <TableSortLabel
+                active={orderBy === column.id}
+                direction={order}
+                onClick={createSortHandler(column.id)}
               >
-                <Tooltip
-                  title="Sort"
-                  placement={column.numeric ? "bottom-end" : "bottom-start"}
-                  enterDelay={300}
-                >
-                  <TableSortLabel
-                    active={orderBy === column.id}
-                    direction={order}
-                    onClick={this.createSortHandler(column.id)}
-                  >
-                    {column.label}
-                  </TableSortLabel>
-                </Tooltip>
-              </TableCell>
-            ),
-            this,
-          )}
-        </TableRow>
-      </TableHead>
-    );
-  }
-}
+                {column.label}
+              </TableSortLabel>
+            </Tooltip>
+          </TableCell>
+        ))}
+      </TableRow>
+    </TableHead>
+  );
+};
 
 export default ListingHeader;

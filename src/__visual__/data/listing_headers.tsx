@@ -37,8 +37,8 @@ export default [
     id: "company",
     isPaddingDisabled: true,
     label: "Company",
-    transformContent: (company: Record<string, string>) => {
-      if (company.name) {
+    transformContent: (id: string, company?: Record<string, string>) => {
+      if (company && company.name) {
         return company.name;
       }
 

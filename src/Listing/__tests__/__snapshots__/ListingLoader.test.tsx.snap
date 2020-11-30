@@ -9,7 +9,7 @@ exports[`renders correctly 1`] = `
     }
   }
 >
-  <WithStyles(ListingLoader)
+  <ListingLoader
     cols={1}
   />
 </ForwardRef(Table)>

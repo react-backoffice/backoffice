@@ -27,7 +27,7 @@ export default [{
   id: 'company',
   isPaddingDisabled: true,
   label: 'Company',
-  transformContent: (company) => {
+  transformContent: (id, company) => {
     if (company.name) {
       return company.name
     }

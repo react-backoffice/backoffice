@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import ListingToolbar from "./ListingToolbar";
+import ListingToolbar from "../ListingToolbar";
 
 it("renders correctly", () => {
   const tree = shallow(

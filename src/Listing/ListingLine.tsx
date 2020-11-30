@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { Checkbox, TableCell, TableRow } from "@material-ui/core";
 import replace from "../utils/replace";
-import { Header } from "./Listing";
+import { Header } from ".";
 
 const getCellContent = (content: string, match: string) => {
   return replace(

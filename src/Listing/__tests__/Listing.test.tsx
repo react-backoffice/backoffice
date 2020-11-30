@@ -3,11 +3,11 @@ import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import { Checkbox, TablePagination, IconButton } from "@material-ui/core";
 
-import Listing from ".";
+import Listing from "..";
 
-import headers from "../__visual__/data/listing_headers";
-import data from "../__visual__/data/listing_data";
-import ListingHeader from "./ListingHeader";
+import headers from "../../__visual__/data/listing_headers";
+import data from "../../__visual__/data/listing_data";
+import ListingHeader from "../ListingHeader";
 
 Enzyme.configure({ adapter: new Adapter() });
 
