@@ -16,11 +16,13 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 const List = () => {
   const [hasLoader, setHasLoader] = useState(true);
+  const [data, setData] = useState<any[]>([]);
   const classes = useStyles();
 
   setTimeout(() => {
+    setData(listingData);
     setHasLoader(false);
-  }, 3000);
+  }, 1000);
 
   return (
     <>
@@ -32,7 +34,7 @@ const List = () => {
 
       <Listing
         title="Christmas Time"
-        data={listingData}
+        data={data}
         headers={listingHeaders}
         orderBy="username"
         hasLoader={hasLoader}

@@ -37,7 +37,7 @@ const ListingHeader: FunctionComponent<Props> = ({
           <Checkbox
             color="primary"
             indeterminate={numSelected > 0 && numSelected < rowCount}
-            checked={numSelected === rowCount}
+            checked={numSelected > 0 && numSelected === rowCount}
             onChange={onSelectAllClick}
           />
         </TableCell>

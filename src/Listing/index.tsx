@@ -4,6 +4,7 @@ import easeInOutQuad from "../utils/easeInOutQuad";
 import ListingBranch from "./ListingBranch";
 import filterElement from "./utils/filterElement";
 import sortData from "./utils/sortData";
+import { isEqual } from "lodash";
 
 export type Header = {
   id: string;
@@ -49,9 +50,7 @@ const Listing: FunctionComponent<Props> = ({
   const [selected, setSelected] = useState<string[]>([]);
   const [order, setOrder] = useState<"asc" | "desc">(orderProp || "asc");
   const [orderBy, setOrderBy] = useState<string>(orderByProp || "id");
-  const [data, setData] = useState<any[]>(
-    sortData(headers, dataProp, orderBy, order) || [],
-  );
+  const [data, setData] = useState<any[]>([]);
   const isSelected = (id: string) => selected.includes(id);
   const searchable = getSearchableHeaders(headers) || [];
   const [searchValue, setSearchValue] = useState();
@@ -65,12 +64,14 @@ const Listing: FunctionComponent<Props> = ({
   }, [dataProp, orderProp, orderByProp, headers]);
 
   useEffect(() => {
-    if (order === "desc") {
-      setData(data.sort((a, b) => (b[orderBy] < a[orderBy] ? -1 : 1)));
-    } else {
-      setData(data.sort((a, b) => (a[orderBy] < b[orderBy] ? -1 : 1)));
-    }
+    setData(sortData(headers, data, orderBy, order));
   }, [order, orderBy]);
+
+  useEffect(() => {
+    if (!isEqual(dataProp, data)) {
+      setData(sortData(headers, dataProp, orderBy, order));
+    }
+  }, [dataProp]);
 
   const handleRequestSort = (event: any, property: string) => {
     setOrderBy(property);
