@@ -1,12 +1,13 @@
 import React, { FunctionComponent } from "react";
+import { TextField } from "@material-ui/core";
 import KeyboardArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import DateRangeIcon from "@material-ui/icons/DateRange";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import { BasePickerProps } from "@material-ui/pickers/typings/BasePicker";
-import MomentUtils from "@date-io/moment";
+import DateFnsUtils from "@material-ui/pickers/adapter/date-fns";
 import {
-  MuiPickersUtilsProvider,
+  LocalizationProvider,
   DateTimePicker,
   DatePicker,
   TimePicker,
@@ -21,7 +22,10 @@ type BaseElementProps = {
   required?: boolean;
 };
 
-type ElementProps = BasePickerProps & BaseElementProps;
+type ElementProps = BasePickerProps &
+  BaseElementProps & {
+    renderInput: (props: any) => any;
+  };
 
 const Element: FunctionComponent<ElementProps> = ({ type, ...props }) => {
   switch (type) {
@@ -70,18 +74,22 @@ const DateInput: FunctionComponent<Props> = ({
   isRequired = false,
   value,
   onChange,
+  className,
 }) => {
   return (
-    <MuiPickersUtilsProvider utils={MomentUtils}>
+    <LocalizationProvider dateAdapter={DateFnsUtils}>
       <Element
         type={type}
         label={title}
-        clearable
+        renderInput={(props: any) => (
+          <TextField className={className} {...props} />
+        )}
         value={value && new Date(value)}
         onChange={onChange}
+        clearable
         required={isRequired}
       />
-    </MuiPickersUtilsProvider>
+    </LocalizationProvider>
   );
 };
 

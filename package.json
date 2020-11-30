@@ -19,13 +19,13 @@
     "prepublishOnly": "rm -rf ./dist && yarn build:ts"
   },
   "dependencies": {
-    "@date-io/moment": "^2.10.6",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
-    "@material-ui/pickers": "^3.2.10",
+    "@material-ui/pickers": "4.0.0-alpha.12",
     "@material-ui/styles": "^4.10.0",
     "@types/react-dom": "^17.0.0",
     "classnames": "^2.2.6",
+    "date-fns": "^2.16.1",
     "init-uuid": "^1.2.0",
     "is-url": "^1.2.4",
     "isemail": "^3.2.0",

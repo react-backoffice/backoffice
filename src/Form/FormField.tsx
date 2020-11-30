@@ -63,9 +63,10 @@ type Props = {
 };
 
 const FormField: FunctionComponent<Props> = ({
-  type,
-  width,
-  isVisible,
+  type = TYPES.TEXT,
+  width = WIDTH.FULL,
+  isVisible = true,
+  options = [],
   ...props
 }) => {
   const classes = useStyles();
@@ -81,12 +82,7 @@ const FormField: FunctionComponent<Props> = ({
   switch (type) {
     case TYPES.SELECT:
       return (
-        <Input
-          {...props}
-          select
-          options={props.options}
-          className={classNames}
-        />
+        <Input {...props} select options={options} className={classNames} />
       );
 
     case TYPES.LIST:
@@ -133,13 +129,6 @@ const FormField: FunctionComponent<Props> = ({
     default:
       return <Input {...props} type={type} className={classNames} />;
   }
-};
-
-FormField.defaultProps = {
-  type: TYPES.TEXT,
-  width: WIDTH.FULL,
-  options: [],
-  isVisible: true,
 };
 
 export default FormField;
