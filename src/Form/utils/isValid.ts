@@ -42,7 +42,10 @@ const isValid = ({
   validators = [],
   value,
   isDisabled,
-}: ValidProps) => {
+}: ValidProps): {
+  isValid: boolean;
+  messages?: Validator[];
+} => {
   const allValidators = [...validators];
   const messages: Validator[] = [];
 

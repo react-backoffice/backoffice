@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "kjpl0b",
+          "key": "stas8q",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -25,7 +25,7 @@ exports[`renders correctly 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "kjpl0b",
+        "key": "stas8q",
         "pathname": "/",
         "search": "",
         "state": undefined,
@@ -276,7 +276,7 @@ exports[`renders correctly with content 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "x2xfzv",
+          "key": "f4lvuf",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -290,7 +290,7 @@ exports[`renders correctly with content 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "x2xfzv",
+        "key": "f4lvuf",
         "pathname": "/",
         "search": "",
         "state": undefined,
