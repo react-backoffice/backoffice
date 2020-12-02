@@ -75,6 +75,7 @@ const DateInput: FunctionComponent<Props> = ({
   value,
   onChange,
   className,
+  ...rest
 }) => {
   return (
     <LocalizationProvider dateAdapter={DateFnsUtils}>
@@ -82,7 +83,7 @@ const DateInput: FunctionComponent<Props> = ({
         type={type}
         label={title}
         renderInput={(props: any) => (
-          <TextField className={className} {...props} />
+          <TextField className={className} {...props} {...rest} />
         )}
         value={value && new Date(value)}
         onChange={onChange}

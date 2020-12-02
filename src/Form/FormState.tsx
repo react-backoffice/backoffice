@@ -35,9 +35,8 @@ const FormState: FunctionComponent<Props> = ({
 
       if (event.target) {
         newValue = event.target.value;
-        // eslint-disable-next-line no-underscore-dangle
-      } else if (event._isAMomentObject) {
-        newValue = event.valueOf();
+      } else if (event instanceof Date) {
+        newValue = event.getTime();
       }
 
       if (type === TYPES.NUMBER) {
