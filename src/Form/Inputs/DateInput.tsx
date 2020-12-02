@@ -75,6 +75,7 @@ const DateInput: FunctionComponent<Props> = ({
   value,
   onChange,
   className,
+  format,
   ...rest
 }) => {
   return (
@@ -82,6 +83,7 @@ const DateInput: FunctionComponent<Props> = ({
       <Element
         type={type}
         label={title}
+        inputFormat={format}
         renderInput={(props: any) => (
           <TextField className={className} {...props} {...rest} />
         )}

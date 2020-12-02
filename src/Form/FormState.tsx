@@ -33,7 +33,7 @@ const FormState: FunctionComponent<Props> = ({
     (event: any) => {
       let newValue;
 
-      if (event.target) {
+      if (event?.target) {
         newValue = event.target.value;
       } else if (event instanceof Date) {
         newValue = event.getTime();
