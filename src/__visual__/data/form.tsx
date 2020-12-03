@@ -85,13 +85,6 @@ const form: FormField[] = [
         title: "Email",
         type: TYPES.EMAIL,
         width: "mid",
-        onBeforeSubmit: (url?: string) => {
-          if (url) {
-            return `${url}#top`;
-          }
-
-          return url;
-        },
       },
       {
         id: "password",
@@ -111,6 +104,13 @@ const form: FormField[] = [
             message: "Please add a trailing slash to your URL",
           },
         ],
+        onBeforeSubmit: (url?: string) => {
+          if (url) {
+            return `${url}#top`;
+          }
+
+          return url;
+        },
       },
       {
         id: "empty",
@@ -188,8 +188,8 @@ const form: FormField[] = [
         width: WIDTH.SMALL,
       },
       {
-        id: "switch",
-        title: "Switch - Prefilld",
+        id: "switch-refilled",
+        title: "Switch - Prefilled",
         type: TYPES.SWITCH,
         value: true,
         width: WIDTH.SMALL,

@@ -90,10 +90,38 @@ type FormProps = {
   isFixedSubmitButton?: boolean;
 };
 
+const fieldIsField = (
+  field: FormFieldGroup | FormFieldField | undefined,
+): field is FormFieldField => {
+  return !!field && !(field as any).group;
+};
+
+const fieldIsGroup = (
+  field: FormFieldGroup | FormFieldField | undefined,
+): field is FormFieldGroup => {
+  return !!field && (field as any).group;
+};
+
+const findFields = (fields: FormField[], key: string): FormFieldField[] => {
+  const matchingFields = fields.flatMap((field) => {
+    if (fieldIsGroup(field)) {
+      return findFields(field.data, key);
+    }
+
+    if (field.id === key) {
+      return [field];
+    }
+
+    return [];
+  });
+
+  return matchingFields;
+};
+
 const Form: FunctionComponent<FormProps> = ({
   form,
   data,
-  onSubmit: onSubmitProps,
+  onSubmit: onSubmitProp,
   onDataChanged,
   ...props
 }) => {
@@ -113,10 +141,26 @@ const Form: FunctionComponent<FormProps> = ({
       return;
     }
 
-    const response = getMappedData(state);
+    const mappedResponse = getMappedData(state);
+    const response = { ...mappedResponse };
 
-    onSubmitProps(response);
-  }, [form, state, onSubmitProps]);
+    Object.entries(mappedResponse).map(([key, value]) => {
+      const matchingField = findFields(form, key)?.[0];
+
+      if (fieldIsField(matchingField) && matchingField?.onBeforeSubmit) {
+        console.log({
+          onBeforeSubmit: matchingField.onBeforeSubmit(value),
+          key,
+        });
+        response[key] = matchingField.onBeforeSubmit(value);
+
+        return;
+      }
+
+      response[key] = value;
+    });
+    onSubmitProp(response);
+  }, [form, state, onSubmitProp]);
 
   return (
     <FormContext.Provider value={{ state, dispatch }}>

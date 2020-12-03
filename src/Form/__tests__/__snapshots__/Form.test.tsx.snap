@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "stas8q",
+          "key": "ws74gx",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -25,7 +25,7 @@ exports[`renders correctly 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "stas8q",
+        "key": "ws74gx",
         "pathname": "/",
         "search": "",
         "state": undefined,
@@ -130,7 +130,6 @@ exports[`renders correctly 1`] = `
             },
             Object {
               "id": "email",
-              "onBeforeSubmit": [Function],
               "title": "Email",
               "type": "email",
               "width": "mid",
@@ -144,6 +143,7 @@ exports[`renders correctly 1`] = `
             Object {
               "helperText": "Should be URL with trailing slash",
               "id": "url",
+              "onBeforeSubmit": [Function],
               "title": "URL",
               "type": "url",
               "validators": Array [
@@ -167,7 +167,7 @@ exports[`renders correctly 1`] = `
         Object {
           "data": Array [
             Object {
-              "format": "DD.MM.YYYY",
+              "format": "dd.MM.yyyy",
               "id": "date",
               "title": "Date",
               "type": "date",
@@ -189,7 +189,7 @@ exports[`renders correctly 1`] = `
               "width": "small",
             },
             Object {
-              "format": "DD.MM.YYYY, hh:mm a",
+              "format": "dd.MM.yyyy, hh:mm a",
               "id": "datetime",
               "title": "Datetime",
               "type": "datetime",
@@ -240,8 +240,8 @@ exports[`renders correctly 1`] = `
               "width": "small",
             },
             Object {
-              "id": "switch",
-              "title": "Switch - Prefilld",
+              "id": "switch-refilled",
+              "title": "Switch - Prefilled",
               "type": "switch",
               "value": true,
               "width": "small",
@@ -276,7 +276,7 @@ exports[`renders correctly with content 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "f4lvuf",
+          "key": "ur51sp",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -290,7 +290,7 @@ exports[`renders correctly with content 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "f4lvuf",
+        "key": "ur51sp",
         "pathname": "/",
         "search": "",
         "state": undefined,
@@ -395,7 +395,6 @@ exports[`renders correctly with content 1`] = `
             },
             Object {
               "id": "email",
-              "onBeforeSubmit": [Function],
               "title": "Email",
               "type": "email",
               "width": "mid",
@@ -409,6 +408,7 @@ exports[`renders correctly with content 1`] = `
             Object {
               "helperText": "Should be URL with trailing slash",
               "id": "url",
+              "onBeforeSubmit": [Function],
               "title": "URL",
               "type": "url",
               "validators": Array [
@@ -432,7 +432,7 @@ exports[`renders correctly with content 1`] = `
         Object {
           "data": Array [
             Object {
-              "format": "DD.MM.YYYY",
+              "format": "dd.MM.yyyy",
               "id": "date",
               "title": "Date",
               "type": "date",
@@ -454,7 +454,7 @@ exports[`renders correctly with content 1`] = `
               "width": "small",
             },
             Object {
-              "format": "DD.MM.YYYY, hh:mm a",
+              "format": "dd.MM.yyyy, hh:mm a",
               "id": "datetime",
               "title": "Datetime",
               "type": "datetime",
@@ -505,8 +505,8 @@ exports[`renders correctly with content 1`] = `
               "width": "small",
             },
             Object {
-              "id": "switch",
-              "title": "Switch - Prefilld",
+              "id": "switch-refilled",
+              "title": "Switch - Prefilled",
               "type": "switch",
               "value": true,
               "width": "small",
