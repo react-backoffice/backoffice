@@ -85,11 +85,8 @@ class Tabs extends React.Component<TabsProps, TabsState> {
             variant={isScrollable ? "scrollable" : undefined}
             scrollButtons="auto"
           >
-            {data.map((item) => (
-              <Tab
-                key={`tab-${(Math.random() * 10000).toFixed(4)}`}
-                label={item.title}
-              />
+            {data.map((item, index) => (
+              <Tab key={`tab-${index}`} label={item.title} />
             ))}
           </MaterialTabs>
         </AppBar>
@@ -97,9 +94,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
         {data.map((item, index) => {
           if (value === index) {
             return (
-              <TabContainer
-                key={`tabcontainer-${(Math.random() * 10000).toFixed(4)}`}
-              >
+              <TabContainer key={`tabcontainer-${index}`}>
                 {item.content}
               </TabContainer>
             );
