@@ -148,10 +148,6 @@ const Form: FunctionComponent<FormProps> = ({
       const matchingField = findFields(form, key)?.[0];
 
       if (fieldIsField(matchingField) && matchingField?.onBeforeSubmit) {
-        console.log({
-          onBeforeSubmit: matchingField.onBeforeSubmit(value),
-          key,
-        });
         response[key] = matchingField.onBeforeSubmit(value);
 
         return;
