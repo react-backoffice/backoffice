@@ -328,6 +328,8 @@ Data-Table to display data.
 - `data: any[]`, data to display in table
 - `order?: ENUM(asc | desc)`, direction in which to sort values, default `asc`
 - `orderBy: string`, field name to use for sorting the table
+- `page?: number`, page to show in current listing, default `0`
+- `rowsPerPage?: number`, number of rows per page to show, default `10`
 - `hasLoader?: boolean`, should a loader be displayed in table, default `false`
 - `renderToolbarContent?: (selected) => ReactElement | null`, content to show in the toolbar (visible if content column is selected)
 - `onUpdateSelection: function`, is called if a selection of a line is changed

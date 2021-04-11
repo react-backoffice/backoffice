@@ -30,6 +30,8 @@ type Props = {
   hasLoader?: boolean;
   data: Record<string, any>[];
   headers: Header[];
+  page?: number;
+  rowsPerPage?: number;
   toolbarContent?: React.ReactNode;
   onUpdateSelection?: (...args: any[]) => any;
   onClick?: (...args: any[]) => any;
@@ -42,11 +44,13 @@ const Listing: FunctionComponent<Props> = ({
   order: orderProp,
   headers,
   onUpdateSelection,
+  page: pageProp = 0,
+  rowsPerPage: rowsPerPageProp = 10,
   ...rest
 }) => {
   const node = useRef<any>();
-  const [page, setPage] = useState<number>(0);
-  const [rowsPerPage, setRowsPerPage] = useState<number>(10);
+  const [page, setPage] = useState<number>(pageProp);
+  const [rowsPerPage, setRowsPerPage] = useState<number>(rowsPerPageProp);
   const [selected, setSelected] = useState<string[]>([]);
   const [order, setOrder] = useState<"asc" | "desc">(orderProp || "asc");
   const [orderBy, setOrderBy] = useState<string>(orderByProp || "id");
